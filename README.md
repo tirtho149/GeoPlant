@@ -89,32 +89,48 @@ Each item carries: `image` (Bugwood URL + attribution), `grounding`, `dialogue`
 (F1–F4 / E1–E4), grounded `cot[]`, `gold`, a `counterfactual` region swap, the
 `lookalike.evidence` (web quote + CLIP lane), and its `split`.
 
-## Running the full pipeline
+## Running it
 
-Every step is **one command = one `.slurm` file** in `geophyto_qa/slurm/`
-(full dataset). Submit from the repo root; logs land in `geophyto_qa/logs/`.
+Two entry points. Every job writes `geophyto_qa/logs/<step>_%j.{out,err}`.
+
+### A. 10-sample smoke run (one batch, ~1 min, no GPU/LLM)
+
+Sanity-check the whole deterministic path on 10 items, reusing the upstream
+artifacts already in the repo (confirmed pairs + graphs + VLM labels). Writes to
+`*_smoke10.*`, so the real dataset is untouched.
 
 ```bash
-# build the dataset (Phase A–C)
-sbatch geophyto_qa/slurm/step01_mine_pairs.slurm
-sbatch geophyto_qa/slurm/step02_identify_pairs.slurm
-#  S03 web-confirm + S06 graph-gen generate a Workflow script that you then run in
-#  the Claude Code Workflow engine (see geophyto_qa/slurm/README.md) — not pure batch.
-sbatch geophyto_qa/slurm/step04_clip_sweep.slurm      # GPU
-sbatch geophyto_qa/slurm/step05_verify_pairs.slurm
-sbatch geophyto_qa/slurm/step07_vlm_label.slurm       # GPU
-sbatch geophyto_qa/slurm/step08_build.slurm
-
-# prior-validation audit + corrected rebuild (Phase D–F), chained with afterok deps:
-bash geophyto_qa/slurm/submit_audit_chain.sh          # S09 -> S10 -> S11 -> S12 -> S15 -> S16
+sbatch geophyto_qa/slurm/run_smoke10.slurm
+# -> builds geophyto_qa_smoke10.jsonl (10 items) + runs resolve -> score -> split-check
 ```
 
-Or run a step directly without SLURM, e.g.:
+Or run it inline without SLURM:
 
 ```bash
 python -m geophyto_qa.build --csv BugWood_Diseases_enriched.csv --min-imgs 12 \
-    --seed 20260613 --report --out geophyto_qa.jsonl
-python -m geophyto_qa.audit.check_splits --jsonl geophyto_qa.jsonl
+    --seed 20260613 --max 10 --report --out geophyto_qa_smoke10.jsonl
+python -m geophyto_qa.audit.check_splits --jsonl geophyto_qa_smoke10.jsonl
+```
+
+### B. Full sweep (full dataset)
+
+Every step is **one command = one `.slurm` file** in `geophyto_qa/slurm/`, run in order:
+
+```bash
+# --- build the dataset (Phase A–C) ---
+sbatch geophyto_qa/slurm/step01_mine_pairs.slurm
+sbatch geophyto_qa/slurm/step02_identify_pairs.slurm
+#  S03 web-confirm + S06 graph-gen only GENERATE a Workflow script that you then run
+#  in the Claude Code Workflow engine (see geophyto_qa/slurm/README.md) — not pure batch.
+sbatch geophyto_qa/slurm/step03_web_confirm_gen.slurm   # -> Workflow -> persist_sweep
+sbatch geophyto_qa/slurm/step04_clip_sweep.slurm        # GPU
+sbatch geophyto_qa/slurm/step05_verify_pairs.slurm
+sbatch geophyto_qa/slurm/step06_graph_gen.slurm         # -> Workflow -> persist_lay
+sbatch geophyto_qa/slurm/step07_vlm_label.slurm         # GPU
+sbatch geophyto_qa/slurm/step08_build.slurm             # -> geophyto_qa.jsonl
+
+# --- prior-validation audit + corrected rebuild (Phase D–F) ---
+bash geophyto_qa/slurm/submit_audit_chain.sh            # S09 -> S10 -> S11 -> S12 -> S15 -> S16
 ```
 
 The full step table (nodes, I/O contracts, dependency DAG) is in
