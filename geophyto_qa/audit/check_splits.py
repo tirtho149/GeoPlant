@@ -30,16 +30,13 @@ def main():
             r = json.loads(line); n += 1
             im = (r.get("image", {}) or {}).get("image_number")
             sp = r.get("split", "?")
-            lane = (r.get("lookalike", {}) or {}).get("clip_lane_hint") or r.get("lane", "?")
             splits[sp] += 1
-            lane_split[(sp, lane)] += 1
             if im:
                 img_splits[im].add(sp)
 
     leaks = {im: sorted(s) for im, s in img_splits.items() if len(s) > 1}
     print(f"items: {n}  distinct images: {len(img_splits)}")
     print(f"splits: {dict(splits)}")
-    print(f"lane x split: {dict(lane_split)}")
     if leaks:
         print(f"\nFAIL: {len(leaks)} images span >1 split (image-level leakage):")
         for im, s in list(leaks.items())[:20]:

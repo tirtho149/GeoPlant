@@ -1,4 +1,4 @@
-# SLURM runbook — GeoPhyto-QA full-dataset pipeline
+# SLURM runbook — look-alike diagnosis pipeline
 
 One `.slurm` per step (full dataset). Submit from the repo root:
 `sbatch geophyto_qa/slurm/stepNN_*.slurm`. Every job writes both stdout and stderr
@@ -7,35 +7,25 @@ Full design + I/O contracts: `../../GEOPHYTO_QA_README.md`.
 
 | step | file | node | what |
 |------|------|------|------|
-| S01 | `step01_mine_pairs.slurm` | CPU | mine candidate pairs |
-| S02 | `step02_identify_pairs.slurm` | CPU | pair manifest + web work-list |
-| S03 | `step03_web_confirm_gen.slurm` | CPU→**Workflow** | generate web-confirm workflow ⚠ |
-| S04 | `step04_clip_sweep.slurm` | **GPU** | CLIP cross-kNN router |
-| S05 | `step05_verify_pairs.slurm` | CPU | apply gate+router → confirmed pairs |
-| S06 | `step06_graph_gen.slurm` | CPU→**Workflow** | generate graph/lay workflow ⚠ |
-| S07 | `step07_vlm_label.slurm` | **GPU** | per-image lane labels |
-| S08 | `step08_build.slurm` | CPU | build dataset (initial) |
-| S09 | `step09_resolve_pathogens.slurm` | CPU | resolve pathogens + claims |
-| S10 | `step10_research_ranges.slurm` | CPU (LLM/web) | cited US ranges (claude CLI) |
-| S11 | `step11_score_prior.slurm` | CPU | score the prior |
-| S12 | `step12_apply_audit.slurm` | CPU | corrections table |
-| S15 | `step15_rebuild.slurm` | CPU | rebuild with corrections |
-| S16 | `step16_check_splits.slurm` | CPU | split-hygiene gate |
+| 1 | `step01_mine_pairs.slurm` | CPU | mine candidate look-alike pairs |
+| 2 | `step02_identify_pairs.slurm` | CPU | pair manifest + web work-list |
+| 3 | `step03_web_confirm_gen.slurm` | CPU→**Workflow** | generate web-confirm workflow ⚙ |
+| 4 | `step04_clip_sweep.slurm` | **GPU** | CLIP confusability |
+| 5 | `step05_verify_pairs.slurm` | CPU | confirm pairs (web gate) |
+| 6 | `step06_graph_gen.slurm` | CPU→**Workflow** | generate graph/lay workflow ⚙ |
+| 7 | `step07_vlm_label.slurm` | **GPU** | per-image sign-visibility labels |
+| 8 | `step08_build.slurm` | CPU | build dataset |
+| 9 | `step09_check_splits.slurm` | CPU | split-hygiene gate |
+| — | `run_smoke10.slurm` | CPU | one-batch 10-sample smoke (build + check) |
 
-**S13 / S14** are code fixes (swap + text-leakage), already applied in
-`geo_oracle.py` / `render_two_lane.py`; they take effect at the S15 rebuild — no
-separate job.
-
-⚠ **S03 and S06** only *generate* a Workflow script in this batch. The actual
-per-pair LLM work runs in the Claude Code Workflow engine (not sbatch):
+⚙ **Steps 3 and 6** only *generate* a Workflow script in this batch. The per-pair
+LLM work runs in the Claude Code Workflow engine (not sbatch):
 `Workflow({scriptPath:"…/sweep_workflow_full.js"})` then `persist_sweep`; likewise
-`lay_workflow_full.js` then `persist_lay`. The chain is not unattended across these.
+`lay_workflow_full.js` then `persist_lay`.
 
 ## Run order
 
-- **Full build from scratch:** S01 → S02 → (S03⟶Workflow⟶persist) → S04 → S05 →
-  (S06⟶Workflow⟶persist) → S07 → S08, then the audit chain below.
-- **Prior audit + corrected rebuild (automatable):** `bash geophyto_qa/slurm/submit_audit_chain.sh`
-  submits S09→S10→S11→S12→S15→S16 with `afterok` dependencies.
+Full build: 1 → 2 → (3 ⟶ Workflow ⟶ persist) → 4 → 5 → (6 ⟶ Workflow ⟶ persist)
+→ 7 → 8 → 9. Steps 3/4 and 5 can overlap; 7 needs the images; 8 needs 4+5+6+7.
 
-Adjust `--partition` (`nova` CPU / `scavenger` GPU), `--time`, `--mem` to your cluster.
+Adjust `--partition` (`nova` CPU / `scavenger` GPU), `--time`, `--mem` per cluster.
