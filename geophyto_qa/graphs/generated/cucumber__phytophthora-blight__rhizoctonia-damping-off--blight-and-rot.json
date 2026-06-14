@@ -1,0 +1,63 @@
+{
+  "pair_id": "cucumber__phytophthora-blight__rhizoctonia-damping-off--blight-and-rot",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Phytophthora Blight",
+  "member_b_label": "Rhizoctonia Damping-Off, Blight And Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne pathogens that cause seedling damping-off, crown/stem collapse, and fruit rot on cucumber, so the early field picture of wilting seedlings and rotting fruit overlaps heavily.",
+    "shared_presentation": "Sudden seedling collapse with stem lesions at or near the soil line, wilting/dying plants in patches, and rotting fruit in contact with the soil \u2014 symptoms that look identical until you examine the lesion texture, sporulation, and the soil-moisture context.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What were the soil-moisture conditions when the outbreak appeared?",
+        "a_signal": "Flares after heavy rain, irrigation, or in low/poorly drained spots where water pools \u2014 disease tracks standing/flowing water and saturated soil.",
+        "b_signal": "Appears in warm, moderately moist (not waterlogged) soil; not tied to flooding or low wet spots and can occur in well-drained beds.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "Across which growth stages is the field showing damage?",
+        "a_signal": "Damaging at all stages \u2014 seedling damping-off plus crown rot and devastating fruit rot on mature plants, often wiping out low areas late in the season.",
+        "b_signal": "Heaviest at the seedling/pre- and post-emergence stage as damping-off; on older plants mainly limited to stem cankers and ground-contact belly rot of fruit.",
+        "weight": "weak"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the stem/crown lesion look like and how moist is it?",
+        "a_signal": "Dark, water-soaked, soft girdling lesion at the crown/stem; tissue is mushy and the plant collapses with a wet rot.",
+        "b_signal": "Sunken, dry, reddish-brown to brown firm canker/constriction at the soil line; the lesion is dry and corky rather than water-soaked.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "How does the fruit rot present?",
+        "a_signal": "Fruit rot on any surface (not just where it touches soil), starting water-soaked and softening into a wet, collapsing rot.",
+        "b_signal": "Dry, firm 'belly rot' confined to where the fruit rests on the soil \u2014 brown, sunken, sometimes cracked corky lesions.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What pathogen sign develops on the rotted tissue under humid conditions, and does it produce swimming spores?",
+        "a_signal": "A dense white, powdery to yeasty-looking cottony growth (sporangia) coats the rotting fruit/crown; in water it releases motile zoospores \u2014 an oomycete water mold.",
+        "b_signal": "Coarse, brown to tan web-like mycelial strands (and occasionally brown sclerotia) on the lesion; never any white powdery bloom and no swimming spores \u2014 a true fungus.",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Phytophthora blight (Phytophthora capsici) is a water-mold (oomycete) that explodes after heavy rain or over-irrigation, especially in low, poorly drained field spots where water collects. It attacks cucumber at every stage: seedling damping-off, dark water-soaked crown and stem rot causing rapid wet collapse, and a catastrophic fruit rot. The diagnostic giveaway is the dense white, powdery-to-yeasty sporangial growth that blankets rotting fruit and crowns in humid weather, and the production of motile zoospores that swim and spread through surface water.",
+    "narrative_b": "Rhizoctonia (Rhizoctonia solani) is a true soilborne fungus that thrives in warm, moderately moist soil rather than saturated conditions. Its hallmark on cucumber is pre- and post-emergence damping-off, with a sunken, dry, reddish-brown firm canker constricting the stem at the soil line. On mature plants it causes 'belly rot' \u2014 a dry, firm, brown sunken lesion only where the fruit rests on the ground. Look for coarse brown web-like mycelial strands on lesions (and sometimes brown sclerotia); there is never a white powdery bloom and no swimming spores.",
+    "management_a": "Improve drainage and avoid planting in low spots; never plant on previously flooded ground without a long rotation away from cucurbits and solanaceous hosts. Use raised beds, avoid overhead/excess irrigation, and harvest fruit before contact with wet soil. Apply oomycete-specific fungicides (e.g., mefenoxam, with care for resistance, plus protectants like copper, dimethomorph, or cyazofamid) preventively, and rogue/destroy infected fruit promptly.",
+    "management_b": "Plant high-quality, fungicide-treated seed into warm, well-drained soil at the right depth to speed emergence; avoid deep planting and crusting. Use seed treatments and in-furrow fungicides effective on Rhizoctonia (e.g., azoxystrobin, PCNB/quintozene, or thiophanate-methyl). Rotate with non-host crops, manage residue, and use plastic mulch or trellising to keep fruit off the soil to prevent belly rot.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My cucumber seedlings are suddenly flopping over and dying in patches, with rotted, pinched-in stems right where they meet the soil. Plants are wilting and collapsing, and any fruit lying on the ground is turning to mush.",
+      "decisive_lay_a": "A dense white powdery-to-cottony fuzz, almost like a frosting of mold, coating the rotting fruit or the base of the plant. It tends to show up in wet, soggy, poorly drained spots, and the rotted fruit looks slimy or \"yeasty.\"",
+      "decisive_lay_b": "Coarse, brown-to-tan web-like threads or strands woven across the rotted stem or sore spots (and sometimes tiny brown seed-like specks), with no white powdery fuzz at all. Often shows up in drier conditions.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

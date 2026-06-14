@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__southern-bacterial-wilt__verticillium-wilts",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Southern Bacterial Wilt",
+  "member_b_label": "Verticillium Wilts",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne vascular wilt pathogens of tomato that cause wilting and vascular discoloration, so a quick look at a wilting plant with browned vascular tissue can be ascribed to either. They diverge sharply on speed of collapse, the presence of a bacterial sign (ooze/streaming), the color and longitudinal extent of vascular browning, and the temperature/region in which each thrives.",
+    "shared_presentation": "A field or greenhouse tomato showing wilting of foliage and stunting, with brown discoloration visible in the vascular ring when the stem or root crown is cut. Lower leaves may yellow and the plant declines, leading to confusion between a bacterial and a fungal vascular wilt.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Cut a section of the lower stem and suspend it in a clear glass of water for a few minutes (streaming test). Do milky bacterial threads ooze from the cut vascular tissue?",
+        "a_signal": "Spontaneous milky-white bacterial ooze streams from the cut stem into the water within minutes (positive Ralstonia streaming test); cut surface may exude sticky bacterial slime",
+        "b_signal": "No bacterial ooze or streaming; water stays clear because Verticillium is a fungus with no bacterial exudate",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast did the plant collapse and was there leaf yellowing first?",
+        "a_signal": "Rapid wilt and collapse over a few days, often with green (non-yellowed) leaves still attached; whole plant can die quickly in hot weather",
+        "b_signal": "Slow, progressive decline over weeks with marked yellowing and lower/older leaves dying first; plant lingers",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the color and vertical extent of the vascular discoloration in a split stem?",
+        "a_signal": "Yellowish-brown to dark, water-soaked vascular streaking, often with slimy pith and discoloration extending well up the stem; roots may be dark/rotted",
+        "b_signal": "Tan to light-brown vascular discoloration usually confined to the lower stem (often no higher than ~30 cm / 12 in), dry pith, no slime",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is the wilting/yellowing pattern on leaflets symmetrical or one-sided, and are there V-shaped lesions?",
+        "a_signal": "Wilting tends to involve the whole plant or upper foliage uniformly; no characteristic V-shaped chlorotic lesions",
+        "b_signal": "Often one-sided (one side of leaf or plant) yellowing with classic V-shaped (wedge) chlorotic/necrotic lesions on lower leaflets pointing inward from the margin",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What soil temperatures accompanied the outbreak?",
+        "a_signal": "Symptoms flare in hot, wet conditions with warm soils (about 30-35 C / 85-95 F); worse after heavy rain or flooding",
+        "b_signal": "Favored by cooler soils (about 21-27 C / 70-80 F); often most apparent in spring or in cooler northern conditions and during fruit load",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Do adventitious roots, water-soaked lesions, or brown streaks appear on the outside of the lower stem?",
+        "a_signal": "Outer lower stem may show water-soaked or brown elongated streaks and proliferation of adventitious roots; cut roots brown and slimy",
+        "b_signal": "External stem typically normal; discoloration is internal only, no slimy roots or external water-soaked streaking",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Southern bacterial wilt, caused by Ralstonia solanacearum, is a soilborne bacterium that invades roots and colonizes the xylem, plugging vessels and causing rapid wilting. Classic clues are sudden collapse of an apparently healthy, still-green plant in hot wet weather, yellow-brown slimy vascular tissue extending up the stem, and the hallmark positive streaming test where milky bacterial ooze pours from a cut stem suspended in water. Roots and lower stem may show water-soaking and adventitious rooting.",
+    "narrative_b": "Verticillium wilt, caused by the soilborne fungi Verticillium dahliae and V. albo-atrum, also colonizes the xylem but acts more slowly. It produces a gradual decline with yellowing that starts on older, lower leaves, often one-sided, with characteristic V-shaped chlorotic lesions on leaflets. The vascular discoloration is a light tan-brown, dry, and typically limited to the lower stem (rarely above 12 inches). It is favored by cooler soils and shows no bacterial ooze, distinguishing it definitively from bacterial wilt.",
+    "management_a": "No effective curative chemistry; manage by removing and destroying infected plants, avoiding fields with a history of bacterial wilt, improving drainage, rotating away from solanaceous crops, sanitizing tools, and using grafted plants on resistant rootstocks. Avoid moving infested soil or water.",
+    "management_b": "Plant resistant tomato cultivars (designated V or VFN) which is the primary control; rotate with non-host crops, manage soil to reduce inoculum (solarization where feasible), maintain balanced fertility and even moisture to reduce stress, and remove crop debris. Fungicides are not effective against the established vascular infection.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My tomato plants are wilting and look stunted, and the lower leaves are turning yellow before the whole plant goes downhill. When I cut the stem or root crown open, I can see a brown ring of discoloration in the tissue.",
+      "decisive_lay_a": "Cut the stem off near the base and dangle the cut end in a clear glass of water. If you see milky-white, cloudy threads of slime streaming out from the cut into the water within a few minutes, that's the bacterial sign. The cut surface may also feel sticky or ooze a milky goo.",
+      "decisive_lay_b": "Do the same glass-of-water test, but with this fungal one the water stays clear, with no milky streaming or sticky ooze coming from the cut stem.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

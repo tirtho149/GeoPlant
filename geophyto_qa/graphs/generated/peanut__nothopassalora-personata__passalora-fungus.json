@@ -1,0 +1,70 @@
+{
+  "pair_id": "peanut__nothopassalora-personata__passalora-fungus",
+  "kind": "disease",
+  "crop": "Peanut",
+  "member_a_label": "Nothopassalora Personata",
+  "member_b_label": "Passalora Fungus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "These are the two classic peanut foliar leaf spots: Nothopassalora personata (late leaf spot) and Passalora arachidicola (early leaf spot, formerly Cercospora arachidicola). Both produce roughly circular dark foliar lesions on the same crop, frequently co-occur on the same plant and even the same leaflet, and field workers routinely conflate them because the gross lesion appearance overlaps. They are separated reliably only by sporulation surface/color, halo, lesion underside color, and timing.",
+    "shared_presentation": "Subcircular necrotic leaf spots (2-10 mm) on peanut leaflets, petioles, and stems, progressing to coalescence, premature defoliation, and yield loss. Both intensify with warm, humid, frequently wet foliage conditions and overlap in mid-to-late season, so a single dark spot on a leaflet does not by itself separate them.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "At what point in the season did the first spots appear, and on which leaves?",
+        "a_signal": "Onset later in the season; lesions concentrated and most severe on lower/older canopy first, becoming dominant during pod fill and toward harvest",
+        "b_signal": "Onset relatively early (can be seen ~30 days after planting) on the oldest lower leaves, often the first leaf spot noticed in the field",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is there a conspicuous bright-yellow chlorotic halo around the spot on the upper leaf surface?",
+        "a_signal": "Halo absent or faint; spots dark brown to nearly black, often with a narrow or no chlorotic margin",
+        "b_signal": "Prominent bright-yellow halo ringing a brown to reddish-brown spot on the upper surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Compare the color of the lesion as seen from the LOWER (abaxial) leaf surface.",
+        "a_signal": "Lesion appears dark brown to black on the underside, nearly the same dark color as on top",
+        "b_signal": "Lesion appears lighter, tan to light brown on the underside, paler than the upper-surface spot",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "With a hand lens, on which leaf surface does the fungus sporulate and what color/arrangement are the conidiophores/conidia?",
+        "a_signal": "Dark sporulation predominantly on the ABAXIAL (lower) surface, with conidiophores in concentric rings/tufts (rosettes) giving a velvety dark appearance; conidia dark olivaceous-brown",
+        "b_signal": "Sporulation predominantly on the ADAXIAL (upper) surface; conidiophores lighter, not in tight concentric rosettes; conidia hyaline to pale, longer and more tapered",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under the microscope, what are the conidial shape and septation?",
+        "a_signal": "Conidia shorter, cylindrical to obclavate, fewer septa (commonly 1-7), darker pigmentation, with an inconspicuous hilum",
+        "b_signal": "Conidia longer, slender, acicular/obclavate and tapering, multiseptate, hyaline to subhyaline",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How aggressive is defoliation and how readily is the disease controlled?",
+        "a_signal": "More aggressive defoliator; spots more numerous and harder to control, driving heavy late-season leaf drop",
+        "b_signal": "Generally less aggressive and somewhat easier to manage, though still capable of significant defoliation",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Nothopassalora personata (late leaf spot; syn. Cercosporidium personatum, Phaeoisariopsis personata) typically becomes dominant in the mid-to-late season and is the more aggressive defoliator. Spots are dark brown to black, with little or no yellow halo, and the underside of the lesion is also dark. The diagnostic clincher is sporulation on the ABAXIAL (lower) surface: dark conidiophores arranged in concentric rings/tufts (rosettes), bearing short, darker, few-septate conidia. Flipping the leaflet and examining the underside with a hand lens for dark, lower-surface, rosette sporulation resolves it from early leaf spot.",
+    "narrative_b": "Passalora arachidicola (early leaf spot; formerly Cercospora arachidicola) usually appears earlier in the season on the oldest lower leaves. Spots are brown to reddish-brown on the upper surface surrounded by a conspicuous bright-yellow halo; the lesion underside is lighter (tan). It sporulates mainly on the ADAXIAL (upper) surface, and its conidia are longer, slender, tapering, multiseptate, and hyaline to pale. The bright halo plus upper-surface, pale sporulation distinguish it from late leaf spot.",
+    "management_a": "Manage with a season-long fungicide program timed by leaf-spot advisories (e.g., chlorothalonil rotated with DMI and QoI/SDHI chemistries, alternating modes of action to limit resistance), 3-4 year rotation away from peanut, deep burial of residue, and resistant/tolerant cultivars. Because late leaf spot is the more aggressive defoliator and harder to control, prioritize protectant coverage and tighter spray intervals during humid pod-fill conditions.",
+    "management_b": "Use advisory-based fungicide programs (chlorothalonil and systemic DMI/strobilurin/SDHI products), crop rotation of at least 2-3 years, bury infected residue by tillage where appropriate, plant partially resistant cultivars, and avoid prolonged leaf wetness through irrigation timing. Early-season scouting of lower leaves lets growers initiate sprays before the canopy bridges and inoculum builds.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My peanut leaves are getting small round dark brown spots, about the size of a pinhead up to a pencil eraser, on the leaflets and even running down onto the stems. As more spots show up they run together and the leaves start dropping off early, so the plants are thinning out and I'm worried about losing yield. It's been warm and the foliage stays wet a lot, and the spots just keep spreading.",
+      "decisive_lay_a": "Turn the leaflet over and look at the UNDERSIDE of the spots: with late leaf spot you'll see a dark, dusty, velvety coating sitting mostly on the bottom of the leaf, often arranged in little rings or tufts. A hand lens helps confirm it, but the dark fuzz on the underside is the tell.",
+      "decisive_lay_b": "Look at the TOP side of the spots: with this one the gray-to-light dusty growth shows up mostly on the upper surface of the leaf rather than the underside, and it looks lighter and more scattered, not packed into tight rings. A hand lens helps you see the fuzzy growth on top.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

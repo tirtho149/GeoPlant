@@ -1,0 +1,63 @@
+{
+  "pair_id": "highbush-blueberry__anthracnose__phomopsis-cankers-and-twig-blights",
+  "kind": "disease",
+  "crop": "Highbush Blueberry",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Phomopsis Cankers And Twig Blights",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both fungi cause twig dieback and shoot blight on highbush blueberry and both produce fruit rot, so spring shoot/twig death and ripening-fruit rot look superficially identical. They diverge on which tissue is the primary target, the nature of the cankers, and the diagnostic spore signs (salmon-orange acervuli vs black pycnidia).",
+    "shared_presentation": "Wilting, browning, and dieback of one-year-old shoots/twigs in spring, plus a soft rot of ripening and harvested berries. Both overwinter in dead wood/mummified tissue, spread by rain-splashed conidia in warm wet weather, and cause economic loss mainly as post-harvest fruit rot. From a distance, a bush with scattered dead flagging shoots and some rotting fruit could be either.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where does the dieback initiate on the cane?",
+        "a_signal": "Fruit and floral/fruit-cluster infections dominate; twig dieback is secondary and tied to fruiting wood and flower buds",
+        "b_signal": "Twigs and stems are the primary target, with blight beginning at shoot tips or buds and progressing down into woody canes forming cankers",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is there a true sunken stem canker on older wood?",
+        "a_signal": "No well-defined perennial stem canker; lesions are mostly girdling of small twigs and fruit-cluster bases",
+        "b_signal": "Distinct elongate cankers on stems with flattened/sunken, gray-tan girdling lesions that kill canes above them",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "What does the shoot wilt look like as it develops?",
+        "a_signal": "Tip dieback associated with blighted flower clusters and blighted fruit, often after bloom",
+        "b_signal": "Classic 'flagging' \u2014 sudden wilting of the shoot tip with leaves curling, turning brown and bending into a shepherd's-crook/candy-cane, early-season",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Did the damage follow a winter-injury/wounding event?",
+        "a_signal": "Onset tracks warm, wet bloom-to-harvest weather and ripening fruit, not winter injury",
+        "b_signal": "Outbreaks strongly tied to winter cold injury, frost cracks, and mechanical wounds that serve as infection courts",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What fruiting bodies/spore masses appear on the killed tissue under a hand lens (or in a humid chamber)?",
+        "a_signal": "Salmon to orange, gelatinous spore masses (acervuli) ooze from infected fruit and lesions in wet conditions \u2014 Colletotrichum",
+        "b_signal": "Small black, embedded flask-shaped pycnidia stud the dead bark/twig, exuding cream-colored spore tendrils when wet \u2014 Phomopsis",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Anthracnose (Colletotrichum spp., e.g. C. fioriniae/acutatum) is fundamentally a fruit and flower-cluster disease on blueberry. Infections of flower buds and developing clusters cause some twig dieback, but the signature and economic damage is ripe-rot: firm berries soften, sink, and in humid weather exude glistening salmon-orange spore masses (acervuli) at the calyx end \u2014 often appearing after harvest. Disease pressure peaks in warm, wet conditions from bloom through ripening. Twig involvement is secondary and centered on fruiting wood rather than producing distinct perennial stem cankers.",
+    "narrative_b": "Phomopsis (Diaporthe/Phomopsis vaccinii) is primarily a stem and twig pathogen. It causes a vivid early-season twig blight \u2014 shoot tips suddenly wilt and 'flag,' leaves browning and curling into a shepherd's-crook \u2014 and forms elongate, sunken gray-tan cankers on canes that girdle and kill the wood above. The fungus exploits winter cold injury, frost cracks, and wounds as infection courts, so damage is worst after harsh winters or on stressed bushes. Dead bark becomes studded with tiny black pycnidia. It also causes a soft fruit rot, but its hallmark is the canker/twig-blight complex on woody tissue.",
+    "management_a": "Sanitation: remove mummified/rotted fruit and prune out infected fruiting wood to reduce inoculum; improve air movement and avoid dense canopies. Time fungicides (e.g. QoI/strobilurins, SDHIs, captan) from bloom through pre-harvest where ripe-rot pressure is high, rotating FRAC groups to manage resistance. Harvest promptly, cool berries rapidly, and minimize bruising to limit post-harvest breakdown. Choose less ripe-rot-prone cultivars where available.",
+    "management_b": "Prune out and destroy cankered/blighted canes well below visible lesions during dry weather; remove dead wood that harbors pycnidia. Prevent infection courts by avoiding winter injury (site selection, proper hardening-off, balanced fertility \u2014 avoid late-season nitrogen) and minimizing mechanical wounds. Apply protectant fungicides at bud break/early shoot growth during wet springs. Maintain vigor and good drainage; favor cold-hardy, less susceptible cultivars in cold regions.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "I've got scattered shoots and young twigs on the bushes that wilted, turned brown, and died back this spring, and some of the ripening and just-picked berries are going soft and rotting. From across the row it just looks like patchy dead flagging and some fruit breaking down.",
+      "decisive_lay_a": "Look for salmon-pink to orange slimy ooze or gummy spore blobs sitting on rotting berries and dead spots, especially after rain or in humid weather.",
+      "decisive_lay_b": "Look on the dead bark and dead twigs for tiny black pimple-like specks embedded in the wood, which push out cream or tan-colored squiggly threads of ooze when it's wet.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

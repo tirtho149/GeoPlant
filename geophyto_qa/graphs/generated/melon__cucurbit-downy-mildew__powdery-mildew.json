@@ -1,0 +1,70 @@
+{
+  "pair_id": "melon__cucurbit-downy-mildew__powdery-mildew",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Powdery Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are common foliar diseases of melon that produce leaf chlorosis/yellowing and a \"mildew\" sign, and growers often lump them as \"mildew.\" But the lesion architecture, sign color, and leaf surface affected differ decisively: downy is an oomycete producing angular vein-bounded lesions with gray-purple sporulation on the LOWER surface, while powdery is a fungus producing white powdery colonies on BOTH surfaces unconstrained by veins.",
+    "shared_presentation": "Yellowing/chlorotic blotches on melon (cucurbit) leaves with a visible \"mildew\" growth and progressive leaf decline that can defoliate the canopy and reduce fruit quality. At a glance both produce yellow patches and a whitish-to-grayish coating, leading to confusion in the field.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Which leaf surface bears the sporulation/colonies, and are upper-surface lesions present?",
+        "a_signal": "Sporulation confined to the LOWER (abaxial) leaf surface beneath chlorotic spots; upper surface shows yellow blotches without fuzz",
+        "b_signal": "White powdery colonies on BOTH upper and lower surfaces, often starting and most obvious on the UPPER surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and margin of the leaf lesions?",
+        "a_signal": "Angular, blocky chlorotic-to-necrotic lesions sharply bounded by leaf veins (vein-limited mosaic pattern)",
+        "b_signal": "Roughly circular, diffuse white powdery patches that spread across and ignore the veins, coalescing over the blade",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What is the color and texture of the mildew growth under a hand lens?",
+        "a_signal": "Sparse gray-to-purple/violet downy sporulation (sporangiophores) in humid conditions, hard to rub off",
+        "b_signal": "Dense white-to-tan talc-like powder (conidial chains) that wipes off readily with a finger",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what moisture/humidity does the disease intensify?",
+        "a_signal": "Favored by leaf wetness, rain, dew, high humidity and cooler nights; needs free moisture for infection",
+        "b_signal": "Thrives in warm, dry conditions with high ambient humidity but no leaf wetness; suppressed by rain/overhead irrigation",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease move through the canopy and over the season?",
+        "a_signal": "Spreads rapidly during humid spells, advancing from older lower leaves upward, with quick blighting after long-distance sporangia dispersal",
+        "b_signal": "Often starts on shaded older/crown leaves and stems, builds steadily; petioles/stems also colonized",
+        "weight": "weak"
+      },
+      {
+        "axis": "morphology",
+        "question": "Are stems and petioles colonized by the growth?",
+        "a_signal": "Stems and petioles remain free of sporulation; sign is restricted to leaf undersides",
+        "b_signal": "White mycelial growth commonly extends onto petioles and stems, not just leaf blades",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Cucurbit downy mildew (Pseudoperonospora cubensis), an obligate oomycete, appears as pale-green to yellow angular spots on the upper leaf surface that are sharply limited by the leaf veins, giving a blocky mosaic. In humid, dewy weather the corresponding lower surface bears sparse gray-purple downy sporulation. Lesions coalesce and turn brown, and rapid defoliation can occur within days of a humid period because sporangia disperse long distances on wind. It is an annually invading, weather-driven epidemic in much of the US.",
+    "narrative_b": "Powdery mildew (Podosphaera fuliginea/xanthii) produces white, talc-like powdery colonies of mycelium and conidia on both surfaces of leaves and on petioles and stems, typically most visible on the upper surface and on older, shaded crown leaves first. The powder wipes off easily, and patches are round and spread without regard to veins. It favors warm, dry days with high humidity but no leaf wetness, eventually yellowing and killing leaves, exposing fruit to sunscald and reducing quality.",
+    "management_a": "Use resistant/tolerant cultivars and monitor the cucurbit downy mildew forecast (ipmPIPE) for regional sporangia arrival; apply targeted oomycete-specific fungicides (e.g., cyazofamid, oxathiapiprolin, mandipropamid, fluopicolide) on a preventive/forecast-triggered schedule. Improve airflow, avoid extended leaf wetness, and time overhead irrigation to allow rapid drying. Rotate FRAC groups to avoid resistance.",
+    "management_b": "Scout undersides and crown leaves early, plant resistant cultivars, and space plants for airflow and light penetration. Apply fungicides at first sign rotating modes of action (DMIs, QoIs, SDHIs) plus contact materials, and integrate biologicals, sulfur (where crop/temperature-safe), or potassium bicarbonate. Avoid excess nitrogen and dense canopies; powdery mildew tolerates dry weather so don't rely on rain to suppress it.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My melon leaves are getting yellow blotches and a whitish-grayish coating, and the older leaves are slowly drying up and dying off. It's spreading through the canopy and I'm worried about the fruit quality.",
+      "decisive_lay_a": "Look on the underside of the yellow patches for a sparse gray-to-purplish fuzzy or downy growth that clings tight and won't rub off with your finger. It tends to show up after damp, humid weather or heavy dew.",
+      "decisive_lay_b": "Look for a dense white-to-tan powdery coating, like spilled talc or flour, mostly on the top of the leaves; it smears and wipes right off when you rub it with a finger.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

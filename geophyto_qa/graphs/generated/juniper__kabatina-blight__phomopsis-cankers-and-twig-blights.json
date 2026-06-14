@@ -1,0 +1,63 @@
+{
+  "pair_id": "juniper__kabatina-blight__phomopsis-cankers-and-twig-blights",
+  "kind": "disease",
+  "crop": "Juniper",
+  "member_a_label": "Kabatina Blight",
+  "member_b_label": "Phomopsis Cankers And Twig Blights",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause dieback of juniper shoot tips with browning/graying foliage and small black fruiting bodies on killed tissue, and both produce a sharp lesion at the junction of dead and living wood. They are routinely mistaken for one another, and the single most reliable separator is the timing/location of infection: Phomopsis attacks young succulent new growth, while Kabatina kills one-year-old (previous season's) wood through wounds.",
+    "shared_presentation": "Dieback of juniper twig tips; foliage turns dull green to yellow then reddish-brown and finally ash-gray, with a distinct lesion/canker marking the boundary between dead and healthy wood. Small black fruiting bodies (pycnidia) erupt through the bark/scales of the killed tissue. Both are most severe on stressed or wounded plants and favor moist conditions.",
+    "forks": [
+      {
+        "axis": "progression",
+        "question": "What time of year do the symptoms first appear and become conspicuous?",
+        "a_signal": "Tips found already dead in late winter/early spring (Mar-May); browning is noticed as growth resumes, not during active summer flushing",
+        "b_signal": "New dieback appears through spring into summer and continues during wet weather of the growing season as new flushes are infected",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "What age of tissue is killed at the dead/living junction?",
+        "a_signal": "One-year-old wood (previous season's growth) is girdled and killed; the current-season tip beyond may remain, dieback is of older shoot segments",
+        "b_signal": "Current-season succulent new growth and tips are killed; youngest, tender shoots blight first",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is there a wound, insect injury, or mechanical damage at the base of the dead segment?",
+        "a_signal": "A wound is typically present; Kabatina is a wound/stress invader and requires injured tissue to enter",
+        "b_signal": "No wound needed; Phomopsis infects healthy succulent tissue directly during wet weather",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "How do the black fruiting bodies (pycnidia) on the killed tissue appear under a hand lens?",
+        "a_signal": "Pycnidia of Kabatina juniperi; conidia mostly aseptate, fruiting bodies on year-old wood lesions",
+        "b_signal": "Pycnidia of Phomopsis producing two conidial types (alpha and beta spores); scattered on recently killed young shoots",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Does the disease form perennial sunken stem cankers that enlarge over years?",
+        "a_signal": "No persistent enlarging trunk cankers; damage limited to girdled one-year shoots that often fall away",
+        "b_signal": "Can form perennial sunken cankers on larger stems/branches that expand and may girdle whole branches over time",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Kabatina blight (Kabatina juniperi) is a wound-and-stress pathogen that kills one-year-old (previous season's) juniper shoots. Symptoms are noticed in late winter to early spring as overwintered tips that have turned dull green, then yellow-brown, then ash-gray, with a silvery-gray lesion at the base of the dead segment and small black pycnidia erupting from it. Because it requires injury to enter, damage concentrates where insects, hail, or pruning have wounded the prior year's growth. It generally does not produce expanding perennial cankers; killed shoot segments often break off. It is most damaging on young nursery plants and stressed landscape junipers.",
+    "narrative_b": "Phomopsis cankers and twig blight (Phomopsis juniperovora and related spp.) attacks the youngest, succulent new growth during wet weather of the growing season, infecting healthy tissue without a wound. Newly killed tips fade from green to reddish-brown, with a lesion at the junction of dead and living wood and scattered black pycnidia that produce two spore types (alpha and beta). Unlike Kabatina, it does not depend on the previous year's wood and can progress into larger stems to form sunken perennial cankers that enlarge over successive seasons, potentially girdling branches. It is a major nursery and seedbed disease of juniper.",
+    "management_a": "Prune out and destroy dead one-year shoots during dry weather; minimize wounding from shearing, hail exposure, and insect feeding. Reduce plant stress through proper spacing, irrigation timing (avoid prolonged foliage wetness), and fertility. Protective fungicides (e.g., copper or thiophanate-methyl) are best timed to protect wounded/older tissue in late summer and fall when infection of one-year wood occurs. Choose resistant cultivars where available.",
+    "management_b": "Protect new growth during wet spring/summer weather with fungicides (e.g., mancozeb, copper, or thiophanate-methyl) applied as flushes emerge and repeated during wet periods. Prune out blighted tips and perennial cankers well below symptoms in dry weather, sanitizing tools. Avoid overhead irrigation and crowding to shorten leaf-wetness periods, especially in nurseries and seedbeds. Plant resistant juniper species/cultivars; rogue infected seedlings.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "The tips of my juniper branches are dying back; the foliage first goes dull green, then yellow, then a reddish-brown, and finally an ash-gray color. There's a sunken, discolored mark where the dead wood meets the still-green healthy wood, and I can see tiny black specks dotting the dead, killed parts. It's worst on plants that have been stressed or banged up, especially after wet weather.",
+      "decisive_lay_a": "Look at WHICH part of the branch dies. With this one, the killed wood is the OLDER segment from last year's growth (the wood behind the very tip). The dieback is on these one-year-old, slightly more woody shoot sections, and sometimes the very newest tender tip past the dead part can still be alive or green. So the death is set back from the tip, on the previous season's growth.",
+      "decisive_lay_b": "Look at WHICH part of the branch dies. With this one, it's the brand-new, soft, tender growth and the very youngest tips that die FIRST. The freshest, most succulent new shoots are the ones that blight and turn brown right at the growing tips, rather than the older wood behind them.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

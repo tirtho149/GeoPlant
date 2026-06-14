@@ -1,0 +1,70 @@
+{
+  "pair_id": "oak__leaf-spot__oak-wilt",
+  "kind": "disease",
+  "crop": "Oak",
+  "member_a_label": "Leaf Spot",
+  "member_b_label": "Oak Wilt",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce browning/discoloration of oak foliage and premature leaf drop in summer, so a homeowner or scout seeing \"dying leaves on my oak\" may conflate a cosmetic foliar fungus (Tubakia leaf spot) with a lethal vascular wilt (oak wilt). The distinction matters enormously because one is trivial and one kills the tree, yet early symptoms on individual leaves can superficially overlap (brown blotches, marginal browning).",
+    "shared_presentation": "Brown to dark discoloration of oak leaves with premature defoliation appearing in mid-to-late summer; both can show leaf necrosis and leaf drop and both affect oaks (often red oak group), prompting concern about a \"dying\" tree.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the canopy dieback localized to scattered leaves/lower limbs (foliar) or does it sweep through whole branches and the crown (systemic wilt)?",
+        "a_signal": "Spotting and browning confined to individual leaves, often heaviest on lower/interior canopy; tree retains overall vigor and leafs out fine the next year",
+        "b_signal": "Rapid wilting, bronzing and defoliation progressing through entire branches and crown over days to weeks, frequently killing the tree the same or following season",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the pattern of discoloration on an affected leaf?",
+        "a_signal": "Discrete rounded reddish-brown to dark-brown spots/blotches (often with a darker margin or zonate look), sometimes coalescing; veins not the organizing feature",
+        "b_signal": "Bronzing/browning that starts at the leaf tip and margins and advances inward toward the midrib, often with a sharp line between green and dead tissue (veinal/water-conducting pattern)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the tree decline and does it recover?",
+        "a_signal": "Slow, chronic, cosmetic; defoliation builds over weeks but tree recovers and re-flushes normally",
+        "b_signal": "Explosive \u2014 a healthy red oak can go from full canopy to dead in 2-8 weeks; once symptomatic it does not recover",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When you peel the bark of a symptomatic branch (especially red oaks), is there vascular staining and/or a fungal mat?",
+        "a_signal": "Sapwood is clean and white; no vascular streaking; no fruiting mat under bark",
+        "b_signal": "Brown to greenish-black vascular streaking in the outer sapwood, and in red oaks fragrant fungal pressure pads/mats forming under and cracking the bark",
+        "weight": "decisive"
+      },
+      {
+        "axis": "habit",
+        "question": "Are symptomatic trees isolated, or spreading in an expanding cluster between adjacent oaks?",
+        "a_signal": "Affected trees scattered randomly; no expanding pocket of mortality",
+        "b_signal": "Mortality forms an enlarging pocket/ring radiating outward through root-grafted neighbors year over year",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which species and tissues are involved, and is there leaf-petiole color?",
+        "a_signal": "Many oak species and other hosts; brown spots may extend onto petiole/twig but no whole-crown collapse",
+        "b_signal": "Red/black oak group most lethal; on living shed leaves a distinctive half-green/half-brown (tip-bronzed) appearance is common",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Tubakia (formerly Actinopelte) leaf spot is a generally cosmetic fungal disease causing discrete reddish- to dark-brown rounded spots and blotches on oak leaves, often most severe on lower/interior foliage and on stressed trees during warm, wet summers. Spots may coalesce and cause some premature leaf drop, but the sapwood remains clean, there is no vascular streaking, the tree re-flushes normally, and mortality does not occur from the disease itself. It is favored by leaf wetness and is essentially a foliar, non-systemic problem.",
+    "narrative_b": "Oak wilt, caused by the vascular fungus Bretziella fagacearum, is a lethal systemic disease that plugs the water-conducting tissue. Symptoms begin as tip/margin bronzing and wilting of leaves that advances inward, with rapid branch-by-branch crown collapse and heavy defoliation of leaves that are often half-green/half-brown. Red oak group members can die within weeks. Diagnostic signs are brown-to-black vascular streaking in the outer sapwood and, in red oaks, fragrant fungal mats forming pressure pads beneath the bark. It spreads overland via sap-feeding nitidulid beetles to fresh wounds and, critically, belowground through root grafts, producing expanding pockets of dead trees.",
+    "management_a": "Manage as a low-priority foliar disease: improve tree vigor (proper watering, mulching, avoid drought stress), rake and remove fallen infected leaves to reduce inoculum, prune to improve air circulation, and ensure good light penetration. Fungicides are rarely warranted on landscape oaks; if used on high-value trees, protectant applications timed to budbreak/leaf expansion in wet springs are an option. No tree removal needed \u2014 the disease is not life-threatening.",
+    "management_b": "Treat as a high-priority emergency. Confirm via lab (vascular streaking culture / fungal mats / molecular ID). Do NOT prune or wound oaks during the high-risk season (roughly April\u2013July in much of the range) when beetles are active; paint any unavoidable wounds immediately. Disrupt root grafts between the infected tree and neighbors by trenching/vibratory plowing 4-5 ft deep to halt belowground spread. Remove and properly dispose of (debark, chip, or burn \u2014 do not move infected red oak firewood with intact bark) symptomatic red oaks that can form mats. High-value uninfected oaks near a center can be protected with propiconazole macro-infusion. Report to state forestry/extension where oak wilt is regulated.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My oak's leaves are turning brown and dark, and a bunch of them are dropping off in the middle of summer like it's already fall. The tree looks like it might be dying.",
+      "decisive_lay_a": "Peel back a bit of bark on a dying branch and the wood just under it is clean and white, with no dark streaks running through it and no fuzzy pad or mat growing under the bark.",
+      "decisive_lay_b": "Cut into a dying branch and you see brown to greenish-black streaks in the wood just under the bark; on red oaks you may also find a sweet-smelling fungal pad or mat growing under the bark that cracks the bark open.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

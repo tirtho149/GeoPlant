@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__early-blight__verticillium-wilts",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Early Blight",
+  "member_b_label": "Verticillium Wilts",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause yellowing and dieback of lower/older tomato foliage that progresses upward, and growers commonly lump any \"lower-leaf yellowing with browning\" together. Early blight, however, is a foliar/fruit lesion disease with distinctive target-spot leaf necrosis, while Verticillium is a soilborne vascular wilt producing V-shaped marginal chlorosis, generalized wilting, and internal stem vascular browning with no leaf lesions or spores. The overlap in early-season lower-canopy decline makes them confusable at first glance, but the defining signs diverge sharply.",
+    "shared_presentation": "Yellowing and browning that begins on the oldest, lowest leaves and advances up the plant during fruit development, often with partial defoliation, reduced vigor, and sun-exposed fruit. Both are favored by stressed plants and can appear mid- to late-season, leading to a generic \"the bottom of my tomatoes is dying\" complaint.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Are there discrete leaf spots, or is the yellowing diffuse/marginal without defined lesions?",
+        "a_signal": "Distinct brown necrotic spots with concentric rings (target/bullseye pattern) and a yellow halo on the leaf blade",
+        "b_signal": "Diffuse interveinal/marginal yellowing, often wedge- or V-shaped from the leaf edge inward, with no discrete spots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the geometry of the leaf necrosis?",
+        "a_signal": "Concentric-ring 'bullseye' lesions 3-10 mm enlarging into angular blotches bounded by veins",
+        "b_signal": "V-shaped chlorotic/necrotic sectors pointing inward from leaf margins; whole leaflets yellow then scorch",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Do affected tissues produce visible fungal sporulation?",
+        "a_signal": "Dark, velvety/sooty sporulation visible in lesion centers under humidity (Alternaria conidia)",
+        "b_signal": "No sporulation or surface fungal growth on leaves; pathogen is internal/vascular only",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are stem and fruit lesions present, or is the stem externally clean?",
+        "a_signal": "Dark sunken collar-rot lesions on stem and concentric leathery lesions on stem-end of fruit",
+        "b_signal": "Stem exterior clean with no lesions; symptoms are wilting and foliar discoloration only",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do symptoms behave through a hot afternoon?",
+        "a_signal": "Leaves stay turgid; damage is fixed dead spots that do not recover or wilt diurnally",
+        "b_signal": "Plant wilts in midday heat and may partially recover overnight (vascular water-stress pattern), often one-sided",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "When you split the lower stem or taproot lengthwise, is the internal vascular tissue discolored?",
+        "a_signal": "Vascular (xylem) tissue is clean and white/green; no internal browning",
+        "b_signal": "Tan-to-brown vascular streaking in the xylem of the lower stem and roots (vascular discoloration)",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Early blight (Alternaria solani) is a foliar and fruit disease. It starts on the oldest leaves as small dark spots that enlarge into characteristic concentric-ring \"target\" or \"bullseye\" lesions surrounded by yellow halos; lesions coalesce, leaflets yellow and drop, and defoliation moves up the plant. Dark velvety sporulation appears in lesion centers under humid conditions. The fungus also causes dark sunken collar-rot lesions at the stem base/transplant zone and leathery concentric lesions at the stem-end of fruit. Critically, the vascular system stays clean \u2014 splitting the stem reveals no internal browning. It is splash- and wind-dispersed, favored by warm, wet/humid weather with leaf wetness, and worsens on nutritionally stressed or fruit-laden plants.",
+    "narrative_b": "Verticillium wilt (Verticillium dahliae/albo-atrum) is a soilborne vascular disease. The fungus invades roots and colonizes the xylem, restricting water flow. Lower leaves develop V-shaped chlorotic-then-necrotic wedges from the margins inward, plants wilt during midday heat (sometimes one-sided) and may recover overnight, and overall growth is stunted with no leaf spots and no surface sporulation. The diagnostic hallmark is tan-to-brown vascular discoloration seen when the lower stem or root is split lengthwise \u2014 typically limited to a band a foot or so up the stem in tomato. It is favored by cooler soils and is monocyclic, building in soil over years. Modern hybrid tomatoes often carry the \"V\" resistance gene (race 1), so disease is more common on heirlooms/susceptible cultivars.",
+    "management_a": "Use resistant/tolerant cultivars; rotate out of solanaceous crops 2-3 years; stake/mulch to reduce soil splash; remove lower infected foliage and improve airflow; maintain balanced nitrogen and steady fertility (deficiency aggravates it); apply protectant fungicides (chlorothalonil, mancozeb) or systemics (azoxystrobin, difenoconazole, boscalid) on a preventive schedule under warm wet conditions; sanitize debris at season end.",
+    "management_b": "No in-season cure once vascular colonization occurs. Plant resistant cultivars carrying the V gene (the primary control); practice long rotations with non-host crops (avoid other solanaceous and many broadleaf hosts) since microsclerotia persist for years; remove and destroy infected plants; manage soil for vigor and adequate moisture to mask symptoms; consider soil solarization in warm regions for high-pressure fields; do not rely on fungicides, which are ineffective against this soilborne vascular pathogen.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "The bottom leaves on my tomatoes are turning yellow and then brown and dying off, and it's slowly creeping up the plant while the fruit is setting. The plants look weak and tired, a lot of leaves have dropped, and now some of the fruit is getting sunburned because there's no cover left.",
+      "decisive_lay_a": "Slice the lower stem open lengthwise near the base: if it's early blight, the inside is clean and white or greenish all the way through, with no brown streaking running up the stem.",
+      "decisive_lay_b": "Slice the lower stem (and check the roots) lengthwise near the base: if it's Verticillium, you'll see tan-to-brown streaks staining the inside of the stem and roots, running up from the bottom.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

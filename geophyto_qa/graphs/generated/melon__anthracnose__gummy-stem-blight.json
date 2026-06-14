@@ -1,0 +1,70 @@
+{
+  "pair_id": "melon__anthracnose__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are fungal diseases of melon attacking leaves, stems, and fruit, both produce small dark fruiting bodies (acervuli vs pycnidia) in lesions, both cause leaf spots that coalesce into blights, both cause stem cankers, and both rot fruit. Field diagnosis is frequently confused because the early leaf spotting and the speckled black bodies in dead tissue look superficially alike to the naked eye. They are reliably separated only by the presence/absence of stem gumming and by the spore-mass color (salmon/pink acervuli vs hyaline/dark pycnidia exudate).",
+    "shared_presentation": "Tan-to-brown necrotic leaf spots that enlarge, coalesce, and cause leaf blighting; stem lesions/cankers; sunken fruit rot lesions; and tiny dark embedded fruiting bodies (pepper-spot speckling) in killed tissue. Both favor warm, wet/humid conditions and spread by splashing rain and overhead irrigation.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the most diagnostic damage concentrated?",
+        "a_signal": "Leaf spots and especially sunken, circular, water-soaked-margined fruit lesions dominate; stem involvement is secondary",
+        "b_signal": "Stem nodes and crown show prominent cankers; the disease is named for and centers on stem damage, with leaf and fruit lesions also present",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Split or examine a fresh stem canker \u2014 does it ooze gum?",
+        "a_signal": "No amber gummy exudate; stem lesions are dry, elongate, tan-to-brown without a beaded resin",
+        "b_signal": "Reddish-brown to amber gummy ooze (gummosis) beads from the cracked stem canker, often at nodes",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens, what color is the spore mass produced from the dark fruiting bodies in wet lesions?",
+        "a_signal": "Salmon-pink to orange gelatinous spore masses (acervuli) ooze from lesions when humid",
+        "b_signal": "Spore masses are creamy/hyaline to dark, not salmon-pink; pycnidia exude colorless-to-tan tendrils",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and margin character of the fruit lesion?",
+        "a_signal": "Distinctly circular, sunken (cratered) lesions with concentric rings and a darker firm margin; classic anthracnose 'bullseye' pitting",
+        "b_signal": "Lesions less sharply sunken/circular; fruit rot more diffuse with associated gumming and black speckling rather than deep craters",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Do leaf spots show angular vs rounded geometry and shot-holing?",
+        "a_signal": "Roughly circular brown spots that may dry and tear, leaving ragged shot-holes; spots can have a yellow halo",
+        "b_signal": "Spots often start at leaf margin as wedge/V-shaped tan necrosis with concentric zonation and a dark-speckled border (water-soaked V from the edge inward)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the lesion advance into the vine?",
+        "a_signal": "Lesions stay relatively localized on leaf/fruit; vine collapse less typical from stem alone",
+        "b_signal": "Canker girdles the stem/crown leading to wilting and death of the runner beyond the lesion (vine dieback)",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Anthracnose of melon, caused by Colletotrichum orbiculare, produces roughly circular tan-to-brown leaf spots (often with yellow halos) that dry and shot-hole, and its hallmark is on the fruit: deeply sunken, circular, cratered lesions with concentric rings. In humid weather these lesions exude salmon-pink to orange gelatinous spore masses from acervuli, the single most distinctive sign. Stem lesions occur but are dry and elongate, without gumming. The fungus overwinters in residue and on seed and spreads via splashing rain. Watermelon and muskmelon are classically affected.",
+    "narrative_b": "Gummy Stem Blight, caused by Stagonosporopsis cucurbitacearum (the foliar phase is sometimes called black rot on fruit), is defined by stem and crown cankers that crack and ooze a reddish-brown to amber gum (gummosis). Leaves develop tan, often marginal V-shaped or roundish spots with concentric zonation and a peppering of small black pycnidia. Girdling cankers cause runners to wilt and die back. Fruit rot ('black rot') shows dark speckling and gumming rather than deep salmon-filled craters. It survives in residue and on seed and is strongly favored by prolonged leaf wetness and humidity.",
+    "management_a": "Use disease-free/treated seed and resistant cultivars where available; rotate out of cucurbits 2-3 years; bury or remove infected debris; avoid overhead irrigation and working plants when wet. Apply protectant fungicides (chlorothalonil, mancozeb) preventively, alternating with strobilurin (QoI) or other site-specific chemistries on a tight schedule during warm wet periods, observing resistance-management rotation of FRAC groups.",
+    "management_b": "Plant pathogen-free/treated seed (seed-borne is key) and tolerant cultivars; rotate 2-3 years away from cucurbits; promptly destroy infected vines and crowns; improve airflow and avoid extended leaf wetness. Spray protectants (chlorothalonil, mancozeb) plus targeted materials (e.g., difenoconazole/DMI, boscalid/SDHI, or QoI) in rotation; note this pathogen has well-documented resistance to QoIs and some DMIs/benzimidazoles, so rotate FRAC groups strictly and prioritize multisite protectants.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My melon leaves have tan-to-brown spots that keep getting bigger and running together until whole leaves brown out and die, and I'm seeing dark cankers on the stems and sunken rotten patches on the fruit, with tiny dark specks peppered through the dead spots. It's been hot and muggy and the trouble seems worse after rain and overhead watering.",
+      "decisive_lay_a": "On the stem cankers there is NO sticky gummy ooze at all. The stem damage is dry, stretched-out, and tan-to-brown, with no beads of sap or gum forming on it.",
+      "decisive_lay_b": "Look for reddish-brown to amber sticky gum or sap beading up and oozing out of the cracked stem cankers, often right at the joints (nodes) where leaves attach.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

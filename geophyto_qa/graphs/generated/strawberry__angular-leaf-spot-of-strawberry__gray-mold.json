@@ -1,0 +1,70 @@
+{
+  "pair_id": "strawberry__angular-leaf-spot-of-strawberry__gray-mold",
+  "kind": "disease",
+  "crop": "Strawberry",
+  "member_a_label": "Angular Leaf Spot Of Strawberry",
+  "member_b_label": "Gray Mold",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce dark, water-soaked-looking lesions and can blight tissue under cool, wet conditions, and both can affect fruit and calyx; growers often lump \"spots/rot under wet weather\" together. However, angular leaf spot is primarily a foliar bacterial disease defined by vein-limited angular translucent lesions with bacterial ooze, while gray mold is a fungal rot defined by fuzzy gray sporulation on flowers and fruit. The overlap in early water-soaked appearance and shared cool-wet trigger makes them genuinely confusable in early or mixed presentations.",
+    "shared_presentation": "Dark, water-soaked or browning lesions appearing on strawberry foliage and fruit/calyx during cool, wet, humid spring weather; both spread by splashing water/overhead irrigation and can cause tissue collapse, leading growers to attribute general \"wet-weather rot and spotting\" to a single cause.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Which plant part shows the primary, most severe symptoms?",
+        "a_signal": "Lesions concentrated on lower leaf surface, leaflets, and along calyx/sepals; little to no fruit decay",
+        "b_signal": "Soft rot and decay centered on flowers (blossom blight) and ripening/ripe fruit, often starting at the stem end or where fruit touches soil/another fruit",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion geometry and texture on the leaf?",
+        "a_signal": "Small angular, vein-delimited water-soaked spots that stay confined between veins, giving a geometric/blocky outline",
+        "b_signal": "Diffuse, irregular brown rotting blotches with no vein limitation; tissue becomes soft and mushy rather than spotted",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "How do the leaf lesions appear when the leaf is backlit (held up to light)?",
+        "a_signal": "Lesions are translucent/water-soaked and glassy when viewed against light (transmitted light), classic angular appearance",
+        "b_signal": "Affected area is opaque and necrotic, not translucent; no glassy windowpane effect",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What sign appears on the affected tissue when examined closely or after incubation in a humid chamber?",
+        "a_signal": "Viscous, glistening bacterial ooze (exudate) on the lower leaf surface that dries to a whitish scaly/varnished film; NO fuzzy growth",
+        "b_signal": "Abundant fuzzy gray-brown mold (conidiophores/spores) covering rotted flowers and fruit, dusty when disturbed",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease progress over time and after harvest?",
+        "a_signal": "Lesions enlarge into reddish-brown angular necrotic patches with chlorotic halos; foliar and calyx damage, can systemically blight but does not turn fruit to gray fuzz",
+        "b_signal": "Rapid soft rot that engulfs fruit; continues to rot and sporulate after harvest, spreading fruit-to-fruit in the clamshell/cooler",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather drives outbreaks?",
+        "a_signal": "Cool nights with rain or overhead irrigation and high daytime humidity; favored by low night temperatures around frost periods",
+        "b_signal": "Prolonged cool, wet, humid conditions especially during bloom and at harvest; dense canopy and free moisture on flowers",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Angular leaf spot, caused by the bacterium Xanthomonas fragariae, first appears as tiny water-soaked spots on the lower leaf surface. These spots are sharply angular because the bacterium is confined by the small leaf veins, producing a geometric, blocky outline. When a leaf is held up to the light, the lesions look translucent and glassy. Under humid conditions, viscous bacterial ooze exudes from the lesions on the underside and dries to a whitish, scaly, varnished film, a diagnostic bacterial sign with no fungal fuzz. Lesions later coalesce into reddish-brown angular necrotic areas, sometimes with chlorotic halos, and the bacterium can infect the calyx, downgrading fruit. It spreads via splashing rain and overhead irrigation and is favored by cool nights and wet, humid days.",
+    "narrative_b": "Gray mold, caused by the fungus Botrytis cinerea, is primarily a disease of flowers and fruit. Infection often begins at bloom, blighting blossoms, then moves into developing and ripening fruit, where it causes a rapid soft brown rot. The hallmark sign is abundant fuzzy gray-brown sporulation that covers the rotting tissue and puffs into a dusty cloud when disturbed. The fungus thrives in cool, wet, humid weather with dense canopies and persists on dead plant tissue. Critically, it continues to rot and sporulate after harvest, spreading fruit-to-fruit in clamshells and cold storage, making it a major postharvest problem. Unlike angular leaf spot, leaf symptoms are diffuse rotting blotches without vein limitation, and there is never bacterial ooze.",
+    "management_a": "Use certified disease-free transplants since the bacterium is introduced on planting stock and survives in crop debris. Avoid overhead irrigation; switch to drip to reduce leaf wetness and splash dispersal. Remove and destroy infected debris, rotate away from strawberries, and avoid working fields when foliage is wet. Copper-based bactericides give only limited suppression and can cause phytotoxicity with repeated use; they are a supplement, not a cure. No highly resistant cultivars are widely available, so prevention and clean stock are central.",
+    "management_b": "Improve air circulation through proper plant spacing, canopy management, and drip rather than overhead irrigation to reduce flower and fruit wetness. Remove senescing leaves, blighted blossoms, and rotting fruit promptly to lower inoculum. Time fungicide applications to protect open flowers during bloom (the key infection window), rotating FRAC groups to manage resistance, which is common in Botrytis. Harvest frequently, handle fruit gently, and cool rapidly to suppress postharvest rot; discard infected berries before packing to prevent fruit-to-fruit spread.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "During the cool, wet spring my strawberries are showing dark, water-soaked patches and browning spots on the leaves, and the fruit and the green caps are starting to rot and collapse. It got worse after a stretch of rain and overhead watering, and it seems to be splashing from plant to plant.",
+      "decisive_lay_a": "Flip the leaves over and look at the underside: you'll see a sticky, shiny, slimy ooze that dries down into a whitish, scaly, varnished-looking crust or film. There is NO fuzzy growth at all.",
+      "decisive_lay_b": "Look at the rotting flowers and fruit for a thick fuzzy gray-to-brown mold coating, like dusty fur, that puffs up in a cloud of dust when you bump or touch it.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

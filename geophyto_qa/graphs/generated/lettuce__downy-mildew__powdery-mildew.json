@@ -1,0 +1,63 @@
+{
+  "pair_id": "lettuce__downy-mildew__powdery-mildew",
+  "kind": "disease",
+  "crop": "Lettuce",
+  "member_a_label": "Downy Mildew",
+  "member_b_label": "Powdery Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce whitish fungal-appearing growth on lettuce foliage and cause chlorotic-to-necrotic leaf decline, so a grower seeing \"white mold on the leaves\" can easily mistake one for the other. They are separated reliably by the location, color, and structure of the sporulation and by the angular vs. diffuse nature of the lesions.",
+    "shared_presentation": "Pale to yellow patches on lettuce leaves accompanied by a whitish/grayish surface bloom, progressing to leaf yellowing, browning, and reduced marketability, typically on older/outer wrapper leaves first.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "On the upper leaf surface, are the chlorotic areas sharply angular (bounded by veins) or diffuse/irregular?",
+        "a_signal": "Pale-green to yellow angular blotches on the upper surface, delimited by leaf veins, giving a blocky mosaic-like pattern",
+        "b_signal": "Diffuse, irregular yellowing or whitish surface patches not confined by veins",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "On which leaf surface does the visible mold growth predominantly occur?",
+        "a_signal": "Growth on the underside (abaxial) of the leaf, directly beneath the upper yellow blotches",
+        "b_signal": "Growth on the upper (adaxial) surface, and often both surfaces, as a superficial film",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what conditions did the outbreak intensify?",
+        "a_signal": "Cool, wet, humid weather with prolonged leaf wetness, dew, fog, or overhead irrigation",
+        "b_signal": "Warm, dry conditions with high humidity but dry leaf surfaces; little free water needed",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the mold under a hand lens: is it a white-to-gray downy growth or a white-to-gray powdery dust?",
+        "a_signal": "Fluffy, downy, gray-white sporulation (tree-like sporangiophores) confined beneath the angular lesions",
+        "b_signal": "Dry, white, powdery, dusty mycelial mat that can be rubbed off, spread superficially over the surface",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How do affected tissues age and decline?",
+        "a_signal": "Yellow blotches turn brown/tan and papery; necrosis follows the angular pattern, predisposing to soft rot in the head",
+        "b_signal": "Whitened areas yellow and dry; leaves may become chlorotic and senesce but lesions stay diffuse",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Lettuce downy mildew (Bremia lactucae) is an oomycete favored by cool, moist, humid conditions. It produces angular, vein-delimited yellow blotches on the upper leaf surface with a corresponding fluffy gray-white downy sporulation on the underside. Lesions turn tan and papery, often starting on outer wrapper leaves, and necrotic tissue invites secondary soft-rot bacteria. It is a major coastal and cool-season problem.",
+    "narrative_b": "Lettuce powdery mildew (Golovinomyces cichoracearum) is a true fungus producing a superficial, dry, white powdery mat of mycelium and conidia on the upper leaf surface (and sometimes both surfaces) that can be wiped off. It is favored by warm conditions with high ambient humidity but does not require free water/leaf wetness. Affected leaves yellow and senesce; lesions are diffuse rather than angular. It is generally less common and less destructive than downy mildew on lettuce.",
+    "management_a": "Use resistant cultivars (note race-specific Bremia resistance shifts), improve air circulation and reduce leaf wetness duration, avoid overhead irrigation/time it to allow rapid drying, and apply oomycete-targeted fungicides (e.g., phosphonates, mandipropamid, mefenoxam where not resistant) on a preventive schedule under cool wet forecasts.",
+    "management_b": "Promote airflow and avoid dense canopies, manage humidity, and apply powdery-mildew-active fungicides (sulfur, DMIs, strobilurins, or biologicals/oils) when first detected; rotate FRAC groups. Resistance is less developed in commercial lettuce, so cultural sanitation and early detection are key.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My lettuce has pale yellow patches on the leaves, mostly on the older outer wrapper leaves, with a faint whitish-grayish bloom or haze over those areas. Over time the patches turn yellow then brown, and the heads are looking too ugly to sell.",
+      "decisive_lay_a": "Flip the leaf over and look at the underside of the yellow patches: you'll see a fuzzy, downy gray-white growth (like soft fluff or felt) that stays on the bottom side, lining up underneath the pale spots on top.",
+      "decisive_lay_b": "Look at the top surface for a dry, dusty white powdery coating, like someone sprinkled flour or talc on the leaf, that sits on top and smears or wipes off easily when you rub it with your finger.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pair_id": "soybean__bacterial-blight__septoria-leaf-spot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bacterial Blight",
+  "member_b_label": "Septoria Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-irregular brown foliar lesions on soybean, often appearing early-to-mid season, and both can show chlorotic halos and lesion coalescence that scouts routinely confuse from a distance.",
+    "shared_presentation": "Small brown-to-dark angular/irregular leaf spots, frequently with a yellow halo, that enlarge and coalesce into larger necrotic blotches and can cause tattering or premature defoliation. Both favor wet conditions and can co-occur on the same plant, making leaf-level distinction difficult at a glance.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the canopy do lesions first concentrate and progress?",
+        "a_signal": "Begins and spreads in the upper/younger canopy, favoring new growth after storms; vertical spread is wind-rain driven",
+        "b_signal": "Begins in the lower canopy on oldest leaves and progresses upward over the season",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the texture and margin of the lesion?",
+        "a_signal": "Water-soaked angular spots bounded by leaf veins, with a translucent water-soaked margin and a surrounding yellow-green halo; centers turn dark reddish-brown and dry",
+        "b_signal": "Discrete angular-to-irregular brown spots, NOT water-soaked, often with tan/gray necrotic centers as they age",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "What happens to dead lesion tissue as it ages?",
+        "a_signal": "Dead centers dry, become brittle, and frequently fall out leaving a ragged, shot-hole / torn appearance",
+        "b_signal": "Lesions stay intact, darken and coalesce into large brown blotches causing leaves to yellow and drop without classic shot-holing",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens, are fungal fruiting bodies (pycnidia) present in the lesion centers?",
+        "a_signal": "No fruiting bodies; centers are clean necrotic tissue. Cut margin may exude bacterial ooze in a water mount (streaming test)",
+        "b_signal": "Tiny dark brown-black pinprick pycnidia embedded in the tan lesion centers, exuding cirri of spores under moisture",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather precedes a flare-up?",
+        "a_signal": "Cool, wet, windy weather (60-80F) with driving rain that wounds and spreads the bacterium; declines in hot dry weather",
+        "b_signal": "Warm, prolonged leaf wetness and high humidity; intensifies through warm rainy mid-to-late season",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial blight (Pseudomonas savastanoi pv. glycinea) produces small water-soaked angular spots in the upper, younger canopy after cool wet windy storms. Lesions are vein-delimited (angular), have a translucent water-soaked margin and a chlorotic yellow-green halo; centers dry to dark reddish-brown, become brittle, and drop out giving a ragged shot-hole look. There are no fungal fruiting bodies; a cut-lesion water mount can show bacterial streaming. It is a wound/splash-spread bacterium that fades in hot dry weather.",
+    "narrative_b": "Septoria leaf spot / brown spot (Septoria glycines) is typically the first foliar disease seen, starting on unifoliate and lower oldest leaves and climbing the canopy. It makes discrete angular-to-irregular brown spots (not water-soaked) that coalesce into large blotches, driving lower-canopy yellowing and premature defoliation. The diagnostic sign is tiny dark pycnidia embedded in the tan aging lesion centers, visible under a hand lens. It favors warm, humid, prolonged-leaf-wetness conditions and intensifies through the warm rainy season.",
+    "management_a": "Bacterial; fungicides do NOT control it. Use pathogen-free/treated seed, resistant varieties, rotation away from soybean, and tillage to bury residue. Avoid cultivating or scouting when foliage is wet to limit wound-spread. Copper bactericides give only marginal suppression and are rarely economical; most cases need no rescue treatment as it subsides in hot dry weather.",
+    "management_b": "Fungal; manage with crop rotation and residue burial to reduce inoculum, resistant/tolerant varieties, and balanced fertility. Foliar fungicides (e.g., QoI/strobilurin + DMI/triazole mixes such as those targeting brown spot) at R3-R5 protect the upper canopy and yield when disease is climbing and weather is favorable. Scout lower canopy early to time sprays.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "I'm seeing lots of small brown to dark, kind of angular spots on the leaves, a lot of them with a yellow ring around the edge. They're spreading and running together into bigger dead patches, and some leaves are getting ragged and dropping early. It got worse after all the wet, rainy weather.",
+      "decisive_lay_a": "Slice across the edge of a spot and look at the cut surface in a drop of water: if you see a cloudy, milky stuff slowly streaming out of the cut, that points to this one. The spot centers stay clean dead tissue with no little bumps or specks on them.",
+      "decisive_lay_b": "Look closely (with a hand lens) at the tan centers of the spots for tiny dark, almost black pinprick dots scattered in them. When wet, those dots push out little curly threads of spore goo.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

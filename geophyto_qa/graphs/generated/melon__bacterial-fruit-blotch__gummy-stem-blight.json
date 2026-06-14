@@ -1,0 +1,63 @@
+{
+  "pair_id": "melon__bacterial-fruit-blotch__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Bacterial Fruit Blotch",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce dark, water-soaked to necrotic lesions on melon foliage and fruit in warm, wet conditions, and both can cause seedling blight and fruit rot. Early foliar specks and fruit-surface lesions look similar to the naked eye, leading growers to confuse a bacterial disease with a fungal one. The decisive separation is the pathogen sign: bacterial ooze and water-soaked margins versus black pycnidia and gummy stem exudate.",
+    "shared_presentation": "Dark, often water-soaked leaf spots and necrotic fruit lesions on melon during warm, humid, rainy weather; both cause damping-off/seedling blight from infected seed or splash, and both can rot maturing fruit in the field, producing irregular dark blotches.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the primary damage concentrated - on the fruit rind/foliage surface or on the main stem and crown?",
+        "a_signal": "Damage centers on the fruit rind (greasy water-soaked blotch) and cotyledon/leaf lesions; the main vine stem is rarely the focus",
+        "b_signal": "Damage prominently involves the main stem and crown with cankers and dieback, in addition to leaves and fruit",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the character of the leaf lesion margin and shape?",
+        "a_signal": "Angular, water-soaked dark lesions following leaf veins, often with a chlorotic halo and oily/greasy appearance",
+        "b_signal": "Roundish tan-to-brown necrotic spots, often starting at leaf margins, with concentric zonation and no greasy water-soaking",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the fruit lesion develop over time?",
+        "a_signal": "Begins as a small water-soaked spot on the upper rind that rapidly spreads into a large olive-green to brown greasy blotch; skin cracks and amber bacterial ooze may exude while internal flesh can still look firm initially",
+        "b_signal": "Fruit rot develops more slowly as a sunken dark lesion that becomes covered with black fruiting bodies and may exude a gummy brown substance",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When a fresh lesion is examined (cut stem in water, or hand-lens on lesion surface), what sign is present - milky bacterial streaming and ooze, or black pycnidia and gummy exudate?",
+        "a_signal": "Cut tissue placed in clear water shows milky bacterial streaming; lesions are bacterial with water-soaked margins and amber ooze, no fungal fruiting bodies",
+        "b_signal": "Lesion surface bears numerous tiny black pycnidia/perithecia (specks) and the cracked stem oozes a reddish-brown to amber GUMMY exudate; microscopy shows fungal spores",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and inoculum source preceded the outbreak?",
+        "a_signal": "High temperatures with rain/overhead irrigation and a history of infected seed or volunteer cucurbits; explosive on watermelon/melon in hot wet weather",
+        "b_signal": "Prolonged leaf wetness and moderate-to-warm humid conditions; survives on crop debris and infected seed, often worsening with dense canopy and poor air flow",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial Fruit Blotch (Acidovorax citrulli) is a seedborne bacterial disease most damaging on the fruit. Early on, cotyledons and leaves show small angular water-soaked lesions, sometimes with chlorotic halos, that follow the veins. The hallmark is on maturing fruit: a small water-soaked spot on the upper rind rapidly enlarges into an irregular olive-green to brown greasy blotch; the rind cracks and exudes amber bacterial ooze, and secondary organisms then collapse the flesh. A simple diagnostic is the ooze/streaming test - cut symptomatic tissue and suspend in clear water to see milky bacterial streaming. There are no fungal fruiting bodies. It explodes under hot, wet, overhead-irrigated conditions and spreads from infected seed, transplants, and volunteers.",
+    "narrative_b": "Gummy Stem Blight (Stagonosporopsis cucurbitacearum; the systemic phase on fruit is called black rot) is a fungal disease that attacks all above-ground parts but is distinguished by its main-stem and crown involvement. Leaf spots are roundish tan-to-brown, often with concentric rings, frequently starting at the leaf margin. The diagnostic sign is on the stem: water-soaked-to-tan cankers crack and exude a characteristic reddish-brown GUMMY ooze, and the lesion surface becomes peppered with tiny black pycnidia and perithecia visible with a hand lens. Fruit rot (black rot) develops as sunken dark lesions covered with the same black fruiting bodies. It favors prolonged leaf wetness, dense humid canopies, and survives on crop debris and seed.",
+    "management_a": "Use certified pathogen-tested seed and treat seed (e.g., acid or peroxyacetic/heat treatments); inspect and rogue symptomatic transplants. Avoid overhead irrigation and working fields when foliage is wet; control volunteer cucurbits and weeds. Apply copper-based bactericides preventively beginning at early fruit set under warm wet conditions; rotate away from cucurbits and remove infected debris. There is no cure once fruit are infected, so prevention and seed health are paramount.",
+    "management_b": "Plant disease-free, treated seed and rotate at least 2 years away from cucurbits to reduce debris-borne inoculum; bury or remove crop residue. Improve air movement with wider spacing and trellising, and avoid extended leaf wetness. Apply protectant and systemic fungicides (e.g., chlorothalonil plus QoI/SDHI or DMI products) on a preventive schedule, rotating FRAC groups to manage resistance, with special attention to protecting stems and crowns. Scout for stem cankers and gummy ooze early.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My melons have dark, wet-looking spots on the leaves and irregular dark blotches rotting the fruit, and it's been getting worse in this warm, rainy, humid stretch. Some young seedlings damped off and collapsed too.",
+      "decisive_lay_a": "Cut a piece of the affected tissue and drop it in a clear glass of water. If you see milky, cloudy threads streaming out from the cut, that points to the bacterial problem. The spots tend to look greasy and water-soaked at the edges, sometimes weeping a clear amber drop, with no specks or fuzzy growth.",
+      "decisive_lay_b": "Look closely at the spots and especially the cracked stem: you'll see lots of tiny black specks dotting the surface, and the split stem oozes a sticky, gummy reddish-brown to amber goo (like dried sap or gum).",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__cercospora-blight__frogeye-leaf-spot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Cercospora Blight",
+  "member_b_label": "Frogeye Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are foliar diseases of soybean caused by Cercospora species (C. kikuchii vs C. sojina) and the names invite confusion, but their classic field presentations diverge sharply: Cercospora blight is a late-season, upper-canopy purpling/bronzing disease that also discolors seed (purple seed stain), whereas frogeye produces discrete circular lesions with gray centers and reddish-brown margins at any canopy level. Overlap occurs early when both can produce small leaf spots, and on seed/petiole symptoms, so misdiagnosis is plausible before signature signs develop.",
+    "shared_presentation": "Both are Cercospora-induced foliar diseases of soybean producing leaf spots/discoloration, both favor warm humid weather, both sporulate on lesions, both can affect upper-canopy leaves during reproductive stages, and both are reported across the same soybean-growing regions. Early small lesions of either can look similar before diagnostic features emerge.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the leaf symptom a diffuse reddish-purple bronzing/blighting of the upper canopy, or discrete circular spots scattered across the leaf?",
+        "a_signal": "Diffuse reddish-purple to bronze leathery discoloration concentrated on uppermost, sun-exposed leaves; interveinal blotching rather than well-defined spots",
+        "b_signal": "Numerous small, discrete, circular-to-angular spots distributed over the leaf blade regardless of canopy position",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does an individual lesion look like up close?",
+        "a_signal": "Lesions, when present, are irregular, angular, reddish-purple blotches without a sharply demarcated pale center",
+        "b_signal": "Lesion has a distinctive 'frogeye' bullseye: gray-to-tan necrotic center surrounded by a dark reddish-brown to purple ring",
+        "weight": "decisive"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "When in the season do symptoms peak?",
+        "a_signal": "Late reproductive stages (R5-R7), intensifying as the crop matures; classic late-season blight",
+        "b_signal": "Can appear from vegetative through reproductive stages; often noticed at R1-R5 on younger upper leaves",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Beyond leaves, where else does disease show?",
+        "a_signal": "Petioles and pods develop reddish-purple discoloration, and seed shows purple seed stain (pink-to-purple blotches on the seed coat)",
+        "b_signal": "Lesions may occur on stems and pods, and seed infection causes light-to-dark gray/brown sunken seed blemishes (not purple)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What do conidia/conidiophores look like under magnification of sporulating tissue?",
+        "a_signal": "Conidiophores arise from purple leaf/petiole tissue; C. kikuchii produces the purple pigment cercosporin",
+        "b_signal": "Sporulation in the gray lesion center yields conidiophores in fascicles typical of C. sojina; no purple field bronzing",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "Does the symptom pattern follow sun exposure and canopy top?",
+        "a_signal": "Strongly tied to sun-exposed upper canopy (light-driven cercosporin toxicity), worst on top leaves",
+        "b_signal": "Distribution not strongly tied to sun exposure; spots occur throughout the canopy on susceptible tissue",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Cercospora blight (Cercospora kikuchii) is a late-season disease most evident at R5-R7. The hallmark is a diffuse reddish-purple to bronze, leathery discoloration of the uppermost, sun-exposed leaves rather than discrete spots, because the cercosporin toxin is light-activated. Petioles and pods also turn purplish, and infected seed develops the characteristic purple seed stain. As blighting advances, top leaves may become brittle and drop, giving the canopy a scorched appearance from above.",
+    "narrative_b": "Frogeye leaf spot (Cercospora sojina) produces numerous discrete circular lesions with gray-to-tan centers ringed by a dark reddish-brown to purple margin, the classic 'frogeye' bullseye. Spots appear on leaves throughout the canopy and can develop from vegetative stages onward, coalescing in severe cases. Stems, pods, and seeds can also be infected, with seed showing gray-to-brown blemishes rather than purple. Race-specific resistance and QoI fungicide resistance are key management concerns.",
+    "management_a": "Plant pathogen-free, treated seed and rotate away from soybean to reduce residue inoculum. Manage with foliar fungicides (e.g., triazoles/strobilurins) applied around R3-R5 when conditions favor disease, and select varieties with better tolerance. Reducing purple seed stain protects seed quality and germination.",
+    "management_b": "Use resistant varieties (Rcs3 and other resistance genes) as the foundation, rotate crops, and bury residue. Apply foliar fungicides at R3 if disease pressure is present, but ROTATE fungicide modes of action because C. sojina has widespread resistance to QoI (strobilurin) fungicides in many US regions; tank-mix or use triazole-containing products.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My soybeans have spots and discoloration showing up on the upper leaves, mostly during the warm, humid stretch while the plants are setting pods. The leaves are getting blotchy and off-color, and it seems to be spreading across the field, but I can't tell exactly what's going on.",
+      "decisive_lay_a": "Look for irregular, ragged-edged reddish-purple blotches on the leaves that just blend into the leaf and do NOT have a clear, pale or light-colored middle.",
+      "decisive_lay_b": "Look for spots that have a bullseye or \"target\" look: a gray-to-tan dead center surrounded by a dark reddish-brown to purple ring around the edge.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

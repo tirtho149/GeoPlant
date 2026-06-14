@@ -1,0 +1,70 @@
+{
+  "pair_id": "squash__anthracnose__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Squash",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause rapidly enlarging water-soaked-to-necrotic lesions on squash foliage and fruit and both can rot fruit in the field, so growers frequently confuse early fruit and leaf symptoms. They diverge sharply in their signature sign (acervuli with pink spore masses vs. white cottony sporangial growth), their preferred plant part and tissue, and their dependence on standing water/poor drainage.",
+    "shared_presentation": "On squash, both produce expanding necrotic-to-water-soaked lesions on leaves and fruit, can cause defoliation, and lead to fruit rot in warm, wet weather, especially mid-to-late season after rain or overhead irrigation. Both spread by splashing water and favor humid canopies.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where does the disease concentrate and how does it begin?",
+        "a_signal": "Begins as foliar leaf spots and runner/petiole lesions; fruit lesions are sunken, dry, circular pits",
+        "b_signal": "Often begins at the soil line, on crown/stem and on fruit resting on wet soil; foliage blight is secondary",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the lesion surface under a hand lens or after incubation in a moist chamber: what fruiting structures appear?",
+        "a_signal": "Salmon-to-pink slimy spore masses (acervuli) oozing in concentric rings within sunken lesions",
+        "b_signal": "Dense white cottony/fuzzy growth (sporangia) coating the lesion surface, especially on fruit",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and color of fruit rot?",
+        "a_signal": "Firm, sunken, dry pitted lesions with dark margins that stay relatively localized",
+        "b_signal": "Soft, watery, collapsing rot that spreads rapidly and covers fruit in white mold",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What do leaf lesions look like as they expand?",
+        "a_signal": "Roundish tan-to-brown spots with darker borders that may tear/shothole; concentric appearance",
+        "b_signal": "Large irregular water-soaked patches that brown and collapse the whole leaf rapidly",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What field conditions and drainage are associated with the outbreak?",
+        "a_signal": "Develops across the field with warm wet humid weather; not tied to low spots",
+        "b_signal": "Worst in poorly drained low spots, after flooding or saturated soil; spreads from wet areas outward",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does plant collapse occur after symptoms appear?",
+        "a_signal": "Gradual leaf-spotting and slow fruit decline over days to weeks",
+        "b_signal": "Rapid wilting and plant/crown collapse, sometimes within days regardless of leaf spots",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Anthracnose on squash, caused by the fungus Colletotrichum orbiculare, is primarily a foliar and fruit-spotting disease. Leaf lesions start as small water-soaked spots that enlarge into roundish tan-to-brown spots, often with darker borders, and the dead tissue may crack or shothole. Petioles, stems, and runners can develop elongate sunken lesions. On fruit, the diagnostic sign is firm, sunken, circular pits; in humid conditions these lesions exude salmon-to-pink, slimy spore masses (acervuli) arranged in concentric rings. Spread is by splashing rain and overhead irrigation, favored by warm, wet, humid weather. It overwinters on crop debris and seed.",
+    "narrative_b": "Phytophthora Blight, caused by the oomycete Phytophthora capsici, is an aggressive water-mold disease that thrives in saturated soils and poorly drained low areas of the field. It frequently strikes at the crown and soil line, causing rapid wilting and plant collapse, and rots fruit lying on wet soil. The hallmark sign is a dense white, cottony coating of sporangia over soft, watery, collapsing fruit rot. Foliar blight appears as large irregular water-soaked patches that brown and collapse quickly. Motile zoospores swim in films of water and splash onto fruit and foliage, so disease often radiates outward from flooded or low spots after heavy rain or irrigation.",
+    "management_a": "Use disease-free or treated seed and resistant varieties where available; rotate out of cucurbits 2-3 years; bury or remove infected debris. Avoid overhead irrigation and working plants when wet. Apply protectant fungicides (chlorothalonil, mancozeb) and strobilurin/QoI or other targeted fungicides on a preventive schedule during warm wet periods, rotating modes of action to manage resistance.",
+    "management_b": "Manage water first: improve drainage, plant on raised beds/domed rows, avoid low spots, and never over-irrigate; do not move soil or water from infested fields. Rotate 3-4 years away from cucurbits, peppers, and tomatoes. Use oomycete-specific fungicides (mefenoxam where not resistance-compromised, dimethomorph, mandipropamid, cyazofamid, fluopicolide, phosphorous acid) applied preventively and rotated. Harvest fruit before contact with wet soil and remove infected plants/fruit promptly.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My squash leaves and fruit have spreading dark, water-soaked patches that started after a stretch of warm, wet weather and overhead watering. The spots keep growing and some of the leaves are dropping, and now the fruit is starting to rot, mostly on plants in the thickest, most humid part of the canopy.",
+      "decisive_lay_a": "Look in the sunken, dark spots for a salmon-to-pink slimy ooze that forms in faint ring or bullseye patterns inside the spot, especially in damp weather.",
+      "decisive_lay_b": "Look for a dense white cottony or fuzzy growth coating the surface of the rotting spots, especially on the fruit, that looks like cotton candy or mold sitting on top.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

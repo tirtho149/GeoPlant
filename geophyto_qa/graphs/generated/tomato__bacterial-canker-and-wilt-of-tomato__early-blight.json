@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__early-blight",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Bacterial Canker And Wilt Of Tomato",
+  "member_b_label": "Early Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce marginal/interveinal leaf browning and lower-leaf decline that can read as a generic foliar blight at a glance, and both cause progressive collapse of foliage on field and high-tunnel tomatoes. Early-season foliar lesions of bacterial canker (small spots, leaf-margin necrosis, \"firing\") are routinely mistaken for early blight, especially before the diagnostic wilt, vascular discoloration, or target-board lesions develop.",
+    "shared_presentation": "Lower and mid-canopy leaves develop brown necrotic areas with marginal/interveinal browning and yellowing, leaflets curl and die, and the plant looks progressively scorched from the bottom up. Both can appear in warm humid weather on staked field or tunnel tomatoes and lead to defoliation and reduced yield.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the foliar decline a true vascular WILT (one-sided/whole-plant flagging that does not recover overnight) or a discrete LEAF-SPOT/blight that progresses leaf by leaf?",
+        "a_signal": "Unilateral leaf wilting, often only leaflets on one side of the petiole curl and droop ('firing'); whole shoots flag while soil is moist",
+        "b_signal": "No primary wilt; distinct necrotic leaf spots enlarge and coalesce, oldest/lowest leaves first, plant turgid otherwise",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What do the leaf lesions look like up close?",
+        "a_signal": "Small dark spots sometimes with pale halos, plus marginal necrosis with a sharp yellow zone ('firing'); no concentric rings",
+        "b_signal": "Brown lesions with CONCENTRIC rings (target/bullseye) surrounded by a yellow halo, often angular and vein-bounded",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are there stem and fruit signs beyond the leaves?",
+        "a_signal": "Light-colored open stem cankers/longitudinal cracks; 'bird's-eye' fruit spots = small raised lesions with white halo and tan center",
+        "b_signal": "Dark sunken stem lesions near soil ('collar rot'); fruit rot at the stem-end calyx with dark concentric rings, leathery",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the wilt/decline spread through the plant over days?",
+        "a_signal": "Systemic from within: marginal wilt, then collapse, then internal browning; can kill the whole plant from a single infection point",
+        "b_signal": "From the outside in / bottom up by repeated external infection cycles in wet weather; defoliation but plant rarely systemically wilts",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "DECISIVE: Cut the lower stem/petiole longitudinally and examine the vascular tissue (and squeeze a cut stem in water).",
+        "a_signal": "Brown, yellow, or reddish discolored vascular ring; pith may be mealy/cavitated; cloudy bacterial ooze (positive stream test) from cut stem",
+        "b_signal": "Vascular tissue stays clean/white-green; no ooze; if incubated in moist chamber, dark velvety fungal sporulation forms on leaf lesions",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Bacterial canker (Clavibacter michiganensis ssp. michiganensis) is a systemic vascular bacterial disease. Classic early signs are unilateral leaflet wilting ('firing') with marginal necrosis, often a sharp yellow band at the dying margin. As the bacterium moves in the xylem it causes brown to reddish vascular discoloration visible when the stem is split, open light-colored stem cankers and cracks, and a mealy or hollowed pith. Fruit show diagnostic 'bird's-eye' spots (raised lesions with a white halo and tan center). A cut stem suspended in clean water yields cloudy bacterial streaming. It is seedborne and spreads by water-splash, pruning, and contaminated tools/transplants; once systemic, individual plants often cannot be saved.",
+    "narrative_b": "Early blight (Alternaria solani / A. linariae) is a foliar and fruit fungal disease that starts on the oldest, lowest leaves. The hallmark is brown lesions with concentric rings (target/bullseye) ringed by a chlorotic yellow halo; lesions coalesce, leaves yellow and drop, and defoliation moves up the plant. It also causes dark sunken collar rot on stems and a leathery, concentric-ringed stem-end fruit rot. The plant remains turgid (no vascular wilt) and vascular tissue stays clean. In a moist chamber, lesions produce dark velvety conidiophores. It is favored by warm, humid, wet-foliage conditions and alternating wet/dry cycles, and survives in soil/debris and on volunteers.",
+    "management_a": "Start with certified pathogen-free, treated seed and clean transplants; this disease is primarily introduced. Rogue and destroy symptomatic plants, disinfest tools, stakes, and hands between plants, and avoid working plants when wet. Rotate out of solanaceous crops 2-3 years, control volunteers/nightshade weeds, and manage overhead irrigation to reduce splash. Copper-based bactericides give only partial suppression and do not cure systemic plants; emphasis is exclusion and sanitation.",
+    "management_b": "Reduce leaf wetness with drip irrigation, wider spacing, staking, and pruning of lowest leaves; mulch to block soil splash. Rotate 2-3 years out of solanaceous crops and bury/remove debris and volunteers. Use resistant/tolerant cultivars where available. Begin protectant fungicides (chlorothalonil, mancozeb) and rotate with QoI/SDHI or DMI products at first symptoms or by disease-forecast threshold, maintaining lower-canopy coverage.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My tomato plants are browning and dying from the bottom up. The lower and middle leaves get brown dead patches with yellowing around the edges and between the veins, then the leaflets curl, scorch, and die. It's been warm and humid, and the plants just keep looking more burnt-up the longer it goes, with leaves dropping off.",
+      "decisive_lay_a": "Cut a wilting stem across and look inside: you'll see a brown, yellowish, or reddish stained ring just under the skin, and the soft center may look mushy or hollowed out. If you set the cut stem in a clear glass of water, you'll see cloudy, milky threads ooze and stream out of the cut into the water.",
+      "decisive_lay_b": "Cut the stem across and the inside stays clean and white-green with no stain ring, and nothing oozes out into a glass of water. To confirm, seal a spotted leaf in a closed container with a damp paper towel for a day or two and watch for dark, velvety fuzzy growth to form right on the brown spots.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "pair_id": "tomato__anthracnose__septoria-leaf-spot",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Septoria Leaf Spot",
+  "source": "llm-generated (validated)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small dark spots with tiny embedded fruiting bodies on tomato, and both flare in warm wet weather.",
+    "shared_presentation": "Small dark leaf spots, some bearing tiny dark specks in the center.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are ripe fruit affected, or only leaves?",
+        "a_signal": "Ripe fruit develop sunken circular lesions; foliar spotting is secondary.",
+        "b_signal": "Spots are on the leaves; fruit is rarely affected.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Where on the plant does it start and how fast does it defoliate?",
+        "a_signal": "Fruit rot appears late; foliage stays relatively intact.",
+        "b_signal": "Starts on the oldest, lowest leaves and moves up, causing heavy defoliation.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Look closely inside the lesions for fruiting bodies and spore color.",
+        "a_signal": "Concentric sunken fruit lesions oozing salmon-pink spore masses (acervuli).",
+        "b_signal": "Small tan leaf spots with dark margins and tiny black pycnidia speckling the center.",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Because the diagnostic lesions are sunken, concentric fruit rots oozing salmon-pink spores, I classify this as anthracnose rather than Septoria leaf spot.",
+    "narrative_b": "Because the leaves carry small tan spots with dark borders and black pycnidia and the plant is defoliating from the bottom up, I classify this as Septoria leaf spot rather than anthracnose.",
+    "management_a": "Anthracnose: harvest fruit promptly, avoid overripe fruit in the field, rotate, and apply labeled fungicides protecting the fruit.",
+    "management_b": "Septoria leaf spot: remove lower infected leaves, mulch to cut splash, rotate, and apply labeled foliar fungicides on a protective schedule.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My tomato plants have a bunch of small dark spots showing up on the leaves, and if I look close some of those spots have teeny dark specks right in the middle. It's starting to spread and I'm worried about losing the plants.",
+      "decisive_lay_a": "Look at the fruit, not just the leaves: sunken, circular dark spots on ripe tomatoes that have ring-like dents and ooze a pinkish-salmon slime when the weather is wet.",
+      "decisive_lay_b": "Look at the center of the leaf spots: tan or gray centers with a dark edge, peppered with tiny black pinhead specks scattered across the middle.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__southern-bacterial-wilt__southern-blight",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Southern Bacterial Wilt",
+  "member_b_label": "Southern Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause sudden, dramatic wilting and collapse of tomato plants in hot weather, often killing the plant within days while leaves stay green at onset. Both attack the lower stem/crown at or near the soil line and are favored by warm, wet southern conditions, so a grower seeing a rapidly wilting tomato with a damaged stem base can easily confuse them. The resolution lies in distinct pathogen signs: bacterial ooze versus white fungal mycelium and tan sclerotia.",
+    "shared_presentation": "Rapid, often unilateral-then-total wilting of an otherwise green tomato plant during hot, humid weather, with the lower stem/crown area showing discoloration or lesions at the soil line and eventual plant death.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What soil moisture and temperature conditions preceded the collapse?",
+        "a_signal": "Warm, wet, poorly drained or saturated soil; high soil temperatures (above 75F) with abundant moisture; common in low spots after rain/irrigation",
+        "b_signal": "Warm soil with high organic matter/mulch or crop debris at the base; humid but the disease thrives on moist debris contact rather than waterlogging per se",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where exactly is the damage on the plant and is it above or below the soil line?",
+        "a_signal": "No external lesion required; lower stem may look normal externally while the plant wilts, with vascular tissue inside the stem affected",
+        "b_signal": "A distinct lesion/girdle at the stem base right at the soil line, often with a water-soaked then brown rotted, sunken crown collar",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the wilt progress over the day and across the plant?",
+        "a_signal": "Initial wilting of upper/younger leaves during heat of day with partial recovery at night early on, then irreversible whole-plant wilt with leaves remaining green (no yellowing)",
+        "b_signal": "Sudden wilt of the whole plant following girdling of the stem base; leaves may yellow as the girdled stem cuts off the whole top at once",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is the lower stem internally discolored (vascular) or externally rotted with a soft girdle?",
+        "a_signal": "Cut stem reveals browning of the vascular ring and a slimy, water-soaked pith; internal/vascular discoloration is the hallmark",
+        "b_signal": "External cortical rot and girdling; the surface tissue at the crown is destroyed while internal vascular browning is not the primary feature",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What pathogen sign appears at the stem base, and what happens when a cut stem is suspended in clear water?",
+        "a_signal": "No fungal growth; a cut stem section suspended in clear water exudes milky white bacterial streaming (ooze) within minutes from the cut vascular tissue",
+        "b_signal": "Conspicuous white, fan-like (cottony) mycelium on the stem base and adjacent soil, bearing round tan-to-brown sclerotia the size of mustard seeds; no bacterial streaming",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Southern bacterial wilt (Ralstonia solanacearum) is a vascular bacterial disease. The pathogen invades and plugs the water-conducting xylem, so the plant wilts rapidly in heat with foliage staying green; there is no yellowing, no external lesion, and no fungal growth. The diagnostic signature is internal: cutting the lower stem reveals a brown, slimy vascular ring and a water-soaked pith, and a stem section placed in clear water produces threads of milky white bacterial ooze streaming from the cut surface within minutes.",
+    "narrative_b": "Southern blight (Athelia/Sclerotium rolfsii) is a soilborne fungal disease that attacks the stem at the soil line. The fungus produces a water-soaked then brown, sunken lesion that girdles the crown, causing sudden whole-plant wilt. Its unmistakable signs are coarse white fan-shaped mycelium spreading over the stem base and surrounding soil, studded with numerous round, tan-to-reddish-brown sclerotia resembling mustard seeds. The rot is external/cortical rather than vascular, and there is no bacterial streaming.",
+    "management_a": "No effective chemical cure exists. Remove and destroy infected plants; avoid moving soil/water from infested areas; rotate out of solanaceous and other host crops for several years; use grafted plants on resistant rootstocks and resistant varieties where available; improve drainage and sanitize tools. Note this is the non-Race 3 Biovar 2 strain (Race 3 Biovar 2 is a federal select agent requiring regulatory reporting).",
+    "management_b": "Reduce inoculum by deep plowing to bury sclerotia, removing crop debris and excess mulch from the stem base, and rotating with non-host crops such as small grains/corn. Avoid mounding soil or organic matter against stems. Solarization can reduce sclerotia in soil; fungicide drenches (e.g., flutolanil, PCNB-type or biological products) applied to the crown can provide protection in high-risk fields.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "A green, healthy-looking tomato plant suddenly wilted fast in the hot, muggy weather, often one side first and then the whole plant, even though the leaves stayed green. The lower stem right at the soil line looks discolored and damaged, and the plant ended up dying.",
+      "decisive_lay_a": "Cut off a piece of the lower stem and hang it in a glass of clear water. Within a few minutes you'll see milky white threads of ooze streaming out of the cut end into the water. There's no fuzzy or cottony growth on the stem.",
+      "decisive_lay_b": "Look at the base of the stem and the soil right around it for white, cottony, fan-shaped growth, dotted with small round tan-to-brown balls about the size of mustard seeds. There's no milky ooze when you put a cut stem in water.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

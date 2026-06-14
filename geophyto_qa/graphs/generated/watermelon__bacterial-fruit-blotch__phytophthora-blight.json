@@ -1,0 +1,70 @@
+{
+  "pair_id": "watermelon__bacterial-fruit-blotch__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Bacterial Fruit Blotch",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both can produce rapidly spreading, water-soaked fruit lesions on mature watermelon in hot, wet weather, and field reports often confuse the two when growers see \"rotting fruit in the patch.\" However, the underlying signs (bacterial ooze vs. white sporangial mold), the parts attacked (seedling/foliage/fruit surface vs. crown/root/fruit contact-rot), and the spread pattern differ enough to resolve them.",
+    "shared_presentation": "Mid-to-late season collapse of watermelon with water-soaked, dark, rapidly enlarging lesions on the fruit during hot, humid, rainy periods; both can cause sudden fruit rot in the field and both are favored by overhead moisture and warm temperatures, leading growers to lump them as \"fruit rot / fruit blight.\"",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "At what crop stage do the first symptoms appear?",
+        "a_signal": "Often starts in the seedbed/transplant stage with seedling damping-off and seed-borne cotyledon/leaf lesions, then carries to fruit",
+        "b_signal": "Typically appears later, after vining and especially at fruit set/maturity, tied to saturated soil and crown/root infection",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which plant parts show the primary damage?",
+        "a_signal": "Foliar lesions plus a fruit-SURFACE blotch on the upper (sun-exposed) rind; vines themselves stay relatively healthy",
+        "b_signal": "Crown, lower stem, roots, and the fruit UNDERSIDE in contact with wet soil; causes vine wilt and crown rot, not just fruit",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the early fruit lesion look like on the rind?",
+        "a_signal": "A small dark-green water-soaked spot on the upper rind that expands into an irregular olive/brown blotch; rind cracks and oozes, flesh often intact early",
+        "b_signal": "A soft, water-soaked mushy rot starting where fruit meets soil, collapsing the whole fruit; depressed lesion that quickly liquefies",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease move through the field?",
+        "a_signal": "Spreads from seed-borne foci and splashing; foliar and fruit symptoms tied to early-season inoculum, blotch enlarges over days",
+        "b_signal": "Spreads along drainage patterns and low/wet spots, advancing as soil-line/crown rot and rapid fruit collapse after rain events",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What pathogen sign appears on a lesion held in humidity?",
+        "a_signal": "Bacterial streaming/ooze (milky exudate from cut lesion in water); cracked rind with sticky amber bacterial ooze, NO mold",
+        "b_signal": "White, cottony/powdery mold (sporangia) coating the rotting fruit surface in humid conditions",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What field conditions precede the outbreak?",
+        "a_signal": "Warm, humid weather with overhead irrigation/rain splash; strongly linked to contaminated seed lots regardless of soil drainage",
+        "b_signal": "Heavy rainfall, flooded/poorly drained soil, ponding in low spots; standing water is the key driver",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial fruit blotch (Acidovorax citrulli) is a seed-borne and seedling-transmitted disease. It often begins in transplant production as water-soaked cotyledon and leaf lesions and seedling damping-off, then is carried to the field. On fruit, infection of the rind through the developing fruit surface produces a small dark-green, water-soaked spot on the upper, sun-exposed rind that expands into a large irregular olive-to-brown blotch; the rind eventually cracks and exudes a sticky bacterial ooze, while the underlying flesh may initially appear sound. The diagnostic confirmation is bacterial streaming from a cut lesion suspended in water and the absence of any mold. Foliage may show angular, vein-delimited water-soaked spots, but vines do not collapse the way they do with crown rots.",
+    "narrative_b": "Phytophthora blight (Phytophthora capsici) is a soilborne oomycete disease driven by saturated soil. It infects crowns, lower stems, and roots, causing vine wilt and crown rot, and infects fruit where they rest on wet ground, producing a soft, water-soaked mushy rot that collapses the fruit. Under humid conditions the rotting fruit becomes coated with white, cottony sporangial mold, the defining sign. Outbreaks track field drainage: low, ponded, and poorly drained areas decline first and the disease advances along water-movement patterns after heavy rains. Unlike bacterial fruit blotch, the lesion produces visible white mold rather than bacterial ooze, and the disease attacks the whole plant (crown/root) rather than just the fruit surface.",
+    "management_a": "Plant certified pathogen-free (seed-health-tested) seed and transplants; rogue and discard symptomatic seedlings in the greenhouse. Use sub-irrigation or avoid overhead watering in transplant houses, sanitize trays/benches, and rotate copper-based bactericides with mancozeb in the field starting before fruit set. Avoid working fields when foliage is wet, and rotate away from cucurbits 2-3 years.",
+    "management_b": "Improve drainage and avoid low/ponding areas; plant on raised beds and never let watermelon sit in saturated soil. Use long rotations (3-4+ years) out of cucurbits, peppers, and other hosts; apply oomycete-targeted fungicides (e.g., mefenoxam where not resistant, plus mandipropamid, oxathiapiprolin, cyazofamid) preventively and rotate FRAC groups. Manage irrigation to prevent water movement of inoculum across the field.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Out in the patch during this hot, wet stretch, my melons started going bad fast. They've got dark, water-soaked patches on the rind that keep spreading by the day, and the fruit is collapsing and rotting right in the field where the rain and humidity sit on them.",
+      "decisive_lay_a": "Cut into the bad spot and look for a sticky, milky or amber goo oozing out, and a cracked rind with that gummy seepage, but NO fuzzy mold on the surface. Setting a cut piece in clear water and seeing cloudy, milky streams drift out is the tell.",
+      "decisive_lay_b": "Look for a white, cottony or powdery fuzzy growth coating the rotting surface of the fruit, like a layer of mold sitting on top, especially when it's damp and humid.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

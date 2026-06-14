@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__charcoal-rot__root-and-stem-rot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Charcoal Rot",
+  "member_b_label": "Root And Stem Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause root and lower-stem rot leading to wilting, stunting, and premature death of soybean, often appearing in patches in the field during the reproductive stages. Both produce a discoloration of the lower stem/taproot and can kill plants outright, so a quick field look at a wilting, dying plant with a rotted stem base can be ascribed to either. They are reliably separated only by the moisture conditions that favor them and by the diagnostic signs inside the split stem (microsclerotia vs none) and the pattern of stem discoloration.",
+    "shared_presentation": "Patchy wilting, stunting, premature yellowing/death of plants during reproductive stages, with rot and discoloration of the lower stem and root system; affected plants often retain dead leaves attached, and dieback can occur in pockets within the field.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What soil-moisture and temperature conditions preceded the outbreak?",
+        "a_signal": "Symptoms flare under hot, dry, drought-stressed conditions (high temperatures, low soil moisture)",
+        "b_signal": "Symptoms flare under wet, saturated, poorly drained soils after heavy rain or in low-lying compacted areas",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At what stage and how fast did decline appear?",
+        "a_signal": "Decline becomes obvious at mid-to-late reproductive stages as the crop matures and drought stress accumulates",
+        "b_signal": "Can kill from seed/seedling damping-off through any stage, including early vegetative, with rapid collapse after wet spells",
+        "weight": "weak"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the external lower-stem lesion look like?",
+        "a_signal": "Light gray to silvery discoloration of the lower stem and taproot surface, with no sharp upper margin",
+        "b_signal": "Dark brown to chocolate-brown lesion girdling the stem at the soil line and extending several inches UP the stem with a distinct margin",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "What is the condition of the root cortex and pith versus the stem canker?",
+        "a_signal": "Taproot and lower stem show gray internal staining; tissue dry and shredded",
+        "b_signal": "Rotted roots are soft and brown; a chocolate-brown stem canker runs upward from the soil line, often with brown vascular discoloration",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When you split the lower stem/taproot, are tiny black specks (microsclerotia) embedded in the tissue?",
+        "a_signal": "Abundant minute black microsclerotia pepper the gray vascular and pith tissue, giving a dusty charcoal-gray appearance",
+        "b_signal": "No microsclerotia present; tissue is brown and rotted with no peppered black specks (oospores not visible to naked eye)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the wilt and leaf retention progress?",
+        "a_signal": "Gradual wilting and yellowing as plants run out of water; dead leaves remain attached",
+        "b_signal": "Rapid wilting/collapse of the whole plant; leaves yellow then plant dies with persistent attached leaves following stem girdling",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Charcoal rot is a warm-season, drought-driven disease caused by the soilborne fungus Macrophomina phaseolina. It infects roots early but expresses most severely when plants are stressed by heat and low soil moisture during pod fill. The hallmark is a light gray to silvery discoloration of the lower stem and taproot; when the stem is split, the gray vascular and pith tissue is peppered with countless tiny black microsclerotia, giving the charcoal-dust appearance that names the disease. Affected plants wilt, mature prematurely, and die in patches, often on the drier, sandier, or compacted parts of a field.",
+    "narrative_b": "Phytophthora root and stem rot, caused by the oomycete Phytophthora sojae, is a wet-soil disease. It thrives in saturated, poorly drained, or compacted soils after heavy rains and can kill plants from seed germination (damping-off) through the reproductive stages. The diagnostic feature is a dark chocolate-brown lesion that girdles the lower stem at the soil line and extends distinctly upward, accompanied by soft brown root rot. Plants wilt rapidly and die with leaves remaining attached. Severity depends on field drainage and on the level of race-specific (Rps gene) and partial resistance in the variety planted.",
+    "management_a": "Manage drought and heat stress: maintain adequate plant available water through irrigation where possible, avoid excessive seeding rates that increase competition for water, reduce soil compaction, and follow balanced fertility. Rotate to non-host crops, though the pathogen has a wide host range. Choose tolerant varieties and manage residue; no highly effective in-season chemical control exists, so cultural mitigation of stress is primary.",
+    "management_b": "Improve soil drainage and reduce compaction (tile drainage, avoid working wet soils). Plant Phytophthora-resistant varieties carrying appropriate Rps genes matched to local races, plus high levels of partial (field) resistance. Use seed treatments and in-furrow fungicides effective against oomycetes (e.g., metalaxyl/mefenoxam, ethaboxam, oxathiapiprolin) especially in high-risk fields, and consider raised beds or delayed planting until soils warm and drain.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Plants in scattered patches are wilting, stunted, and turning yellow and dying early, usually right around pod fill, with dead leaves still hanging on. When I split open the lower stem and roots they're rotted and discolored, and the dieback shows up in pockets across the field.",
+      "decisive_lay_a": "When you split the lower stem or root lengthwise, the inside looks dusty gray to charcoal-gray, like someone sprinkled fine black pepper or soot through the tissue.",
+      "decisive_lay_b": "The inside of the stem and root is just plain brown and rotted, with no peppery black specks or sooty gray dusting at all.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

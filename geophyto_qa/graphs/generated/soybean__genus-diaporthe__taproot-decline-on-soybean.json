@@ -1,0 +1,63 @@
+{
+  "pair_id": "soybean__genus-diaporthe__taproot-decline-on-soybean",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Genus Diaporthe",
+  "member_b_label": "Taproot Decline On Soybean",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both can produce interveinal chlorosis/necrosis with premature death at reproductive stages and both attack the lower stem/root with black surface fungal structures, so foliar scouting alone routinely confuses taproot decline with Diaporthe stem canker (and both sit in the broader \"interveinal chlorosis, it's not just SDS\" differential).",
+    "shared_presentation": "Reproductive-stage (R3-R6) soybean plants showing interveinal chlorosis progressing to necrosis, premature death with leaves often retained, lower-stem/root discoloration, and black fungal structures on the lower stem or root surface.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the primary lesion/discoloration concentrated?",
+        "a_signal": "Lesions and dark zone lines on the aboveground lower stem, often originating at a node, with reddish-brown stem/cankers",
+        "b_signal": "Blackening centered on the taproot and lower stem base extending into the root system",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What fungal signs appear on the affected tissue surface?",
+        "a_signal": "Tiny black raised pycnidia/perithecia, frequently in parallel rows or as stromata embedded in canker tissue late in season",
+        "b_signal": "Charcoal-colored thin stromatic crust on taproot/lateral roots, with upright finger-like Xylaria stromata emerging from roots/debris",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "When and how did foliar symptoms set in relative to growth stage?",
+        "a_signal": "Lower-stem reddening can begin in vegetative stages; canker girdles stem and kills plant in patches",
+        "b_signal": "Foliar interveinal chlorosis driven by root-produced toxins, typically appearing at pod fill (R4-R6)",
+        "weight": "weak"
+      },
+      {
+        "axis": "morphology",
+        "question": "Split the lower stem and taproot lengthwise: what is inside?",
+        "a_signal": "Pith may be gray near the canker but the taproot interior is essentially normal in color with NO white mycelial mat",
+        "b_signal": "Taproot/lower stem is black, dry and brittle and the inner pith is packed with robust white mycelium",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture/structure of the dead lower stem and root?",
+        "a_signal": "Sunken canker lesion with dark margins on an otherwise firm stem",
+        "b_signal": "Brittle, dry, crumbly blackened taproot that snaps easily",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Genus Diaporthe on soybean (notably the stem canker pathogens D. caulivora/D. aspalathi and the pod-and-stem-blight/Phomopsis complex) colonizes aboveground tissue. Stem canker shows reddish-brown lesions and dark zone lines on the lower stem, often starting at a node, that can girdle and kill plants, with withered leaves retained on petioles. Late-season pod-and-stem-blight produces characteristic black pycnidia in parallel rows on stems and scattered on pods. Critically, when the lower stem and taproot are split, the taproot interior stays normal-colored with no white mycelial mat in the pith.",
+    "narrative_b": "Taproot decline, caused by Xylaria necrophora (formerly reported as Xylaria sp./X. arbuscula), is a root-and-crown disease of the southern U.S. The fungus colonizes the taproot and lower stem, which become black, dry, and brittle, and produces soybean-specific secondary metabolites that translocate up to cause interveinal chlorosis and necrosis at pod fill. The diagnostic hallmark is robust white mycelium filling the inner pith of the blackened taproot, plus charcoal-colored stromatic crusts and upright Xylaria stromata emerging from roots and crop debris.",
+    "management_a": "Use resistant varieties (strong for stem canker), rotate out of soybean, manage residue by tillage where appropriate, plant high-quality seed, and apply foliar fungicides timed for the pod-and-stem-blight/Phomopsis complex to protect seed quality; harvest promptly to limit seed decay.",
+    "management_b": "No highly resistant varieties exist; manage with crop rotation away from soybean (especially to non-host crops), residue management to reduce stromatic inoculum, avoiding stressed/continuous-soybean fields, and tillage to bury infested debris; fungicides are not reliably effective because the toxin-driven foliar symptoms originate from root colonization.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "During pod fill my beans started yellowing between the veins and then browned up and died early, but a lot of the dead leaves are still hanging on the plants instead of dropping. The lower stems and roots are discolored and I'm seeing some dark fungus-looking specks down near the base.",
+      "decisive_lay_a": "Split the main root open: the center stays mostly normal-colored (maybe a little gray up near the stem), and there is NO white fuzzy mat packed inside it.",
+      "decisive_lay_b": "Split the main root and lower stem open: it's black, dry and snaps easily, and the center is stuffed full of thick white fuzzy growth.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

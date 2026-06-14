@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__gray-mold__sclerotinia-timber-rot",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Gray Mold",
+  "member_b_label": "Sclerotinia Timber Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are cool, wet-weather fungal stem and fruit rots of tomato that produce light brown to tan stem cankers, cause wilting and plant collapse, and develop fluffy white mycelium on affected tissue. In high-humidity greenhouses and dense field canopies they attack the same wounded stems, pruning scars, and senescing flowers, so early lesions look nearly identical until sporulation or sclerotia appear.",
+    "shared_presentation": "Light brown to tan, water-soaked cankers girdling the main stem (often at pruning wounds, leaf axils, or the soil line), wilting of foliage above the lesion, plant collapse, and white cottony mycelial growth on stems and rotting fruit under cool, humid conditions.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Split the cankered stem lengthwise and examine the inside and surface: are there hard black resting bodies (sclerotia) the size of rat droppings within the pith/on the surface, or is the surface covered in a fuzzy gray spore mass?",
+        "a_signal": "No internal sclerotia; lesion surface develops a velvety GRAY-BROWN powdery mold (conidiophores) that releases dust clouds of spores when disturbed",
+        "b_signal": "Stem interior is hollowed/shredded and packed with large (3-10 mm) hard, irregular BLACK sclerotia; surface mycelium is dense white cotton with no gray sporulation",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the color and texture of the surface mold on the lesion?",
+        "a_signal": "Dusty, gray to grayish-brown, sporulating mass (gives 'gray mold' its name)",
+        "b_signal": "Pure white, fluffy, cottony mycelium with no gray dusting",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Where on the plant does the rot concentrate, and how does the internal stem tissue appear?",
+        "a_signal": "Lesions favor senescing flowers, fruit, wounded leaves and stem surfaces; tissue stays relatively intact, surface-colonized; 'ghost spot' halos on green fruit",
+        "b_signal": "Rot is a soft, watery, bleached white decay that hollows and disintegrates the stem pith from the inside ('timber rot' / stems snap like dry wood when dead)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Did the infection start from a flower/fruit/leaf scar at the surface, or from the soil line and main stem crown?",
+        "a_signal": "Often initiates on blighted blossoms, calyxes, and fruit (blossom-end and contact rots), then spreads to stems via dead floral tissue",
+        "b_signal": "Frequently initiates at or near the soil line/lower stem and main branch crotches where ascospores or sclerotia-germinated mycelium contact the stem",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature and crop setting accompanied the outbreak?",
+        "a_signal": "Cool and very humid; classic in greenhouses/high tunnels and post-harvest storage; thrives 18-23 C with free moisture and poor air circulation",
+        "b_signal": "Cool, wet field conditions; strongly tied to fields with prior history of white mold on broadleaf rotation crops (bean, sunflower, canola, lettuce) supplying soil sclerotia",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Gray Mold (Botrytis cinerea) is an opportunistic, wound- and senescence-loving necrotroph. It colonizes dead and dying tissue first - aborted blossoms, leaf stubs from pruning, the calyx, and ripening fruit - then advances into healthy stems, producing tan-to-gray girdling cankers. The diagnostic hallmark is the dusty gray-brown layer of conidiophores and conidia that puffs into the air when touched, and the 'ghost spot' (a pale halo with a small necrotic center) it stamps on green fruit. It does NOT form large black sclerotia inside the stem (it may form small dark sclerotia on tissue surfaces under prolonged conditions, but not the rat-dropping bodies inside a hollowed stem). It is a major greenhouse, high-tunnel, and postharvest problem wherever cool, saturated, stagnant air persists.",
+    "narrative_b": "Sclerotinia Timber Rot / white mold (Sclerotinia sclerotiorum) produces a soft, watery, bleached decay that hollows the main stem - hence 'timber rot,' since dead stems become dry, fibrous, and brittle like weathered lumber. Its unmistakable signatures are dense white cottony mycelium and large, hard, irregular black sclerotia (3-10 mm) formed inside the pith and on lesion surfaces. Infection often begins at the soil line or in branch crotches from soilborne sclerotia that either germinate into mycelium or, under cool wet weather, produce tiny mushroom-like apothecia that shoot ascospores onto senescing flowers and wounds. Its severity is tightly linked to field history of susceptible broadleaf rotation crops (beans, sunflower, lettuce, canola) that build up soil sclerotia.",
+    "management_a": "Improve air circulation and lower humidity (ventilation, plant spacing, leaf removal, avoid overhead/evening irrigation); promptly remove blighted blossoms, prunings, and infected fruit; prune in dry conditions and avoid leaving stubs. Apply botryticides (e.g., fenhexamid, cyprodinil+fludioxonil, boscalid, fluopyram) on rotation to manage resistance; sanitize greenhouse surfaces and manage postharvest temperature/humidity. Resistance management is critical because B. cinerea develops fungicide resistance rapidly.",
+    "management_b": "Rotate away from susceptible broadleaf hosts (beans, sunflower, lettuce, canola, crucifers) to non-hosts like cereals/corn to reduce soil sclerotia; deep-bury sclerotia and avoid moving infested soil. Promote canopy drying through wider spacing, staking, and drip irrigation. Remove and destroy infected plants before sclerotia mature and drop. Apply targeted fungicides (boscalid, fluopyram+prothioconazole-type SDHIs, or thiophanate-methyl) at bloom under conducive weather; consider biocontrol (Coniothyrium minitans) applied to soil to parasitize sclerotia.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomato plants have light brown, tan, water-soaked rotted spots that wrap all the way around the main stem, often right at a pruning cut, a leaf joint, or near the soil. The leaves above that spot wilt, and in cool damp weather I see white cottony growth on the stems and on rotting fruit. Some plants are just collapsing.",
+      "decisive_lay_a": "Look for a velvety gray-brown dusty mold coating the rotted area; when you bump or brush it, it puffs up a little cloud of dust (spores). No hard pellets inside the stem.",
+      "decisive_lay_b": "Slice open the stem: it's hollow, stringy and shredded inside and packed with hard, irregular black lumps the size of small seeds to a pea (about 1/8 to 3/8 inch). The white growth is thick cotton with no gray dusty mold.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

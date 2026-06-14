@@ -1,0 +1,70 @@
+{
+  "pair_id": "apple__black-rot__fire-blight",
+  "kind": "disease",
+  "crop": "Apple",
+  "member_a_label": "Black Rot",
+  "member_b_label": "Fire Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce dark, dying (\"blighted\") shoot and leaf tissue plus cankers on apple wood and can kill spurs and twigs, so growers often lump them as a generic \"blight/dieback.\" Confusion peaks in spring/early summer when both attack succulent tissue, and a brown collapsing shoot tip can superficially read either way before the diagnostic signs (concentric-ring leaf frogeye + mummified fruit vs. bacterial ooze + shepherd's-crook) develop.",
+    "shared_presentation": "Brown-to-black necrotic tissue on twigs, leaves, and fruit; cankers on woody parts; rapid death of shoots and spurs; both favored by wounds and can appear in the same orchard during the same warm, wet spring window. Both can produce wilting/blackened shoot tips that lead a scout toward a generic \"twig blight\" call.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Is there milky-to-amber bacterial ooze on the affected shoots, fruit, or cankers in warm, humid weather?",
+        "a_signal": "No ooze; instead pycnidia (tiny black fungal fruiting bodies) erupt on cankers and mummified fruit",
+        "b_signal": "Sticky bacterial ooze droplets exude from infected shoots, fruitlets, and canker margins under warm humid conditions",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and pattern of the leaf lesions?",
+        "a_signal": "Circular spots that develop concentric rings with a purple margin \u2014 classic 'frogeye leaf spot'",
+        "b_signal": "Whole leaf and petiole blacken and shrivel from the tip/margin inward; no concentric rings",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does the killed shoot tip look like?",
+        "a_signal": "Shoot dieback is straight; tip stays roughly upright, often back to a girdling canker",
+        "b_signal": "Wilted tip bends sharply into a 'shepherd's crook' and stays attached, leaves clinging",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "How does the fruit respond?",
+        "a_signal": "Fruit develops firm brown rot with concentric color bands, mummifies and clings to spur",
+        "b_signal": "Young fruitlets shrivel, blacken, ooze, and remain attached but are not concentrically ringed",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the infection move down the shoot and what season?",
+        "a_signal": "Slow canker expansion over months/seasons; classic on stressed/dead wood and older cankers",
+        "b_signal": "Explosive progression within days during bloom/early shoot growth; sunken, water-soaked margin",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions triggered the outbreak?",
+        "a_signal": "Linked to drought/winter-injury/borer stress and dead wood; weather-temperature less critical",
+        "b_signal": "Triggered by warm (>65F) wet bloom; hail/wind wounds; succulent vigorous growth",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Black Rot is a fungal disease (Botryosphaeria obtusa) presenting as a three-part complex: frogeye leaf spot (circular lesions with concentric rings and purple borders), limb cankers, and fruit rot. The fruit rot is firm and brown with concentric banding, eventually mummifying and clinging to the spur. Cankers form on stressed or winter-injured wood and bear pycnidia (small black fruiting bodies) \u2014 never bacterial ooze. It is a stress/wound pathogen that colonizes weakened and dead tissue, expanding slowly over seasons.",
+    "narrative_b": "Fire Blight is a bacterial disease (Erwinia amylovora) that infects through blossoms and succulent shoot tips during warm, wet spring weather. Hallmarks are the wilted \"shepherd's-crook\" shoot tip, water-soaked then blackened/scorched-looking leaves and shoots that remain attached, sunken cankers with a sharp margin, and\u2014diagnostically\u2014milky-to-amber bacterial ooze on shoots, fruitlets, and canker edges. It spreads explosively (days, not weeks), moving from blossoms into spurs, shoots, and limbs, and is dispersed by insects, rain, and wind.",
+    "management_a": "Prune out cankers and dead/mummified wood 6-8 in below visible margin during dry weather; remove mummified fruit and ground litter to cut inoculum. Reduce host stress (irrigation, winter-injury and borer management, balanced fertility). Apply captan/thiophanate-methyl-type fungicide programs from petal fall through summer where pressure is high. Sanitation of dead wood is the central lever.",
+    "management_b": "Remove strikes by pruning 8-12 in below visible margin, ideally in dry weather, disinfecting tools between cuts (or \"ugly stub\" method). Apply bactericides (copper at silver tip/green tip; streptomycin during bloom timed by infection-risk models such as MaryBlyt/CougarBlight). Avoid excess nitrogen and aggressive summer pruning that stimulates susceptible succulent growth; plant resistant cultivars/rootstocks. Do not prune actively oozing tissue in wet weather.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My apple shoots and spurs are turning brown to black and dying back fast, and I'm seeing dark sunken patches on the woody branches plus brown rotting spots on some leaves and fruit. It looks like the twig tips are just blackening and wilting after this warm, wet spring.",
+      "decisive_lay_a": "Look on the dead bark patches and on the dried-up shriveled \"mummy\" fruit for clusters of tiny black pimple-like dots speckled across the surface. There is no ooze or wetness at all, just hard black bumps dotting the dead tissue.",
+      "decisive_lay_b": "Look for sticky, gummy droplets of cream-colored to amber ooze seeping out of the blackened shoot tips, young fruitlets, and the edges of the bark cankers, especially on warm, muggy days. The droplets are wet and slimy, like tiny beads of sap or honey.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

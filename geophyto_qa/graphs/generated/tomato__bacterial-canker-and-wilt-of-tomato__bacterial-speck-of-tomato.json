@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__bacterial-speck-of-tomato",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Bacterial Canker And Wilt Of Tomato",
+  "member_b_label": "Bacterial Speck Of Tomato",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are bacterial diseases of tomato that produce dark leaf spots and can occur together in cool, wet conditions; in early/foliar stages small necrotic specks and marginal leaf lesions look similar, and both are seed- and splash-borne, so growers frequently confuse them before systemic or fruit signs develop.",
+    "shared_presentation": "Small dark brown-to-black necrotic leaf lesions, leaflet marginal scorching, foliar blighting, and fruit blemishes; both favored by cool wet weather and overhead irrigation, both seedborne and spread by water splash, and both can cause early-season leaf flecking that mimics the other.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the disease systemic (vascular wilt) or strictly localized to spots/specks?",
+        "a_signal": "Progressive one-sided wilting, leaf curling and unilateral leaflet collapse indicating a systemic vascular infection",
+        "b_signal": "Strictly localized, discrete leaf and fruit specks with no wilting; plant remains turgid",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the size and halo of the leaf lesions?",
+        "a_signal": "Marginal leaf scorch and larger blotchy necrosis ('firing' of leaflet edges), bird's-eye fruit spots with raised white halo",
+        "b_signal": "Tiny (1-2 mm) dark brown-black specks, often with a narrow yellow chlorotic halo, scattered over leaflet and fruit surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "What do the fruit lesions look like?",
+        "a_signal": "Bird's-eye spots: raised white halo surrounding a tan-brown center, slightly larger",
+        "b_signal": "Numerous tiny black superficial specks (under 1 mm), slightly sunken, never raised halo",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Does the plant decline and die from a wilt, or just accumulate cosmetic spots?",
+        "a_signal": "Plant progressively wilts and dies; petiole/stem cankers and cavities develop; yield loss from plant death",
+        "b_signal": "Plant survives; damage is cosmetic spotting and defoliation only, no plant death from wilt",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Cut the stem longitudinally near the soil line and inspect the vascular tissue and pith.",
+        "a_signal": "Yellow-to-reddish-brown vascular discoloration, mealy/disintegrating pith, internal cavities, and creamy bacterial ooze from the cut xylem (Clavibacter is systemic in the xylem)",
+        "b_signal": "Clean white vascular tissue with no discoloration, no cankers, no ooze (Pseudomonas speck never invades the vascular system)",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Bacterial canker (Clavibacter michiganensis ssp. michiganensis) is a systemic, xylem-invading bacterium. Early symptoms can mimic foliar bacterial diseases with leaf-margin necrosis ('firing'), but it characteristically causes one-sided wilting, leaflet curling, stem cankers and internal pith cavities, and yellow-brown vascular discoloration. Fruit show diagnostic 'bird's-eye' spots (tan center, raised white halo). It is highly destructive because infected plants commonly die. Splitting the stem reveals vascular browning and creamy bacterial streaming, the definitive sign.",
+    "narrative_b": "Bacterial speck (Pseudomonas syringae pv. tomato) is a foliar/superficial disease that produces tiny (1-2 mm) dark brown-to-black specks with narrow yellow halos on leaves, plus numerous tiny superficial black specks on fruit. It is strongly favored by cool (around 18-24 C), wet conditions. It is non-systemic: it never invades the vascular system, never causes wilt, cankers, or pith breakdown, and rarely kills the plant. Damage is cosmetic spotting, leaf blighting, and reduced fruit marketability.",
+    "management_a": "Use certified pathogen-free seed and transplants; hot-water or acid seed treatment. Rogue and destroy infected plants (systemic, not curable). Rotate 3+ years out of solanaceous crops, sanitize stakes/tools and greenhouse surfaces. Avoid overhead irrigation and working plants when wet. Copper sprays give only limited suppression of secondary spread; emphasis is on exclusion and sanitation.",
+    "management_b": "Plant pathogen-free certified seed (hot-water treat seed); avoid overhead irrigation and reduce leaf wetness duration. Apply preventive copper plus mancozeb (copper + EBDC synergy) on a protective schedule, especially during cool wet periods; rotate copper chemistries and monitor for copper resistance. Rotate out of solanaceous crops and incorporate/destroy crop debris. Because it is cosmetic and non-lethal, focus is on protecting fruit quality during favorable weather windows.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomato plants have small dark brown-to-black spots on the leaves, and the leaf edges are browning and looking scorched, with some overall leaf die-back and a few blemishes on the fruit. It got worse during the cool wet spell and after overhead watering.",
+      "decisive_lay_a": "Cut the stem lengthwise: look for a yellow-to-reddish-brown stained streak running up the inside of the stem, a dry mealy or crumbly center, hollow pockets inside, and a creamy white ooze that seeps out of the cut. The plant also tends to wilt.",
+      "decisive_lay_b": "Cut the stem open and look inside: it stays clean and white all the way through, with no brown staining, no dead crumbly center, and no ooze seeping out. The trouble stays on the leaves and fruit only.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "pair_id": "soybean__iron-deficiency-chlorosis__soybean-cyst-nematode",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Iron Deficiency Chlorosis",
+  "member_b_label": "Soybean Cyst Nematode",
+  "source": "gold (docx exemplar)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause patchy yellowing of soybean that foliage and field pattern alone cannot definitively separate; roots are the decisive evidence.",
+    "shared_presentation": "Yellowing/chlorosis appearing in patches across the field, sometimes with stunting.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "When do symptoms appear and on what soils?",
+        "a_signal": "Early (V1-V3) on high-pH, calcareous, often poorly drained or saline-prone spots.",
+        "b_signal": "Known SCN history, soybean-soybean rotations, lighter soils, with symptoms possibly later or under stress.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Are the youngest leaves showing sharp interveinal chlorosis with green veins?",
+        "a_signal": "Youngest leaves with clear interveinal chlorosis and sometimes necrotic margins (classic IDC).",
+        "b_signal": "Yellowing more generalized or variable, not strictly the youngest leaves with a sharp interveinal pattern.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How are the chlorotic patches distributed in the field, and do they shift year to year?",
+        "a_signal": "Patches tightly tied to high-pH / carbonate / saline zones, sometimes improving later in the season.",
+        "b_signal": "Oval or circular patches expanding or shifting slightly each year along tillage lines.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Dig plants from chlorotic and healthy zones, wash roots, and look for cysts.",
+        "a_signal": "Nodules present, roots otherwise normal to slightly stunted, no visible cysts, symptoms match high-pH zones.",
+        "b_signal": "Small white-to-yellow lemon-shaped cysts or females on the roots (mid-to-late season).",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Because chlorosis on the youngest leaves is tied to high-pH, poorly drained zones and washed roots bear nodules but no cysts, I classify this as iron deficiency chlorosis rather than SCN.",
+    "narrative_b": "Because washed roots show small white-to-yellow lemon-shaped cysts and patches expand along tillage lines, I classify this as soybean cyst nematode rather than iron deficiency chlorosis; a soil SCN egg count confirms it.",
+    "management_a": "Use IDC-tolerant varieties, companion seeding, and avoid stressing high-pH/saline soils; foliar iron is only a partial fix.",
+    "management_b": "Confirm with a soil SCN egg count, then manage with resistant varieties, rotation, and seed treatments.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false
+  }
+}

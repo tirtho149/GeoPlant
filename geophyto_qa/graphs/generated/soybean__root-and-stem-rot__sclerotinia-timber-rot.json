@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__root-and-stem-rot__sclerotinia-timber-rot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Root And Stem Rot",
+  "member_b_label": "Sclerotinia Timber Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce wilting and stem rot/lesions on soybean that can kill plants in patches, so a field scout seeing dead or dying plants with stem discoloration may confuse them. They diverge sharply in growth stage, canopy position of the lesion, environment, and the diagnostic sign (white cottony mycelium plus black sclerotia for Sclerotinia versus a dry brown root/lower-stem rot for Phytophthora).",
+    "shared_presentation": "Wilting, dying soybean plants occurring in patches with stem rot/discoloration and eventual plant death; both can cause stand loss and are associated with cool, wet conditions and poorly drained or dense areas of the field.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "At what crop stage do symptoms appear?",
+        "a_signal": "Damping-off of seedlings and pre-/post-emergence death, plus stem rot any time from emergence through mid-season, often in young vegetative plants",
+        "b_signal": "Symptoms appear after canopy closure, typically at flowering (R1-R3) and beyond on larger reproductive-stage plants",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the rot centered?",
+        "a_signal": "Rot originates at the roots and lower stem/taproot, progressing upward from the soil line",
+        "b_signal": "Rot/lesions develop on the mid-to-upper stem and at branch nodes within the canopy, often well above the soil line",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the stem lesion look like?",
+        "a_signal": "Chocolate-brown to dark, dry rot forming a continuous lesion creeping up from the soil line; root system rotted; persistent foliage often stays attached",
+        "b_signal": "Tan-to-bleached/gray, water-soaked then bleached white lesion girdling the stem; pith may shred; plants bleach and die in arcing patches",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What field/weather conditions favor it?",
+        "a_signal": "Saturated, poorly drained, compacted soils after heavy rain; warm wet soil drives root infection",
+        "b_signal": "Cool, humid, dense canopies with extended leaf wetness during flowering; favored by high yield/lush canopy and prolonged moisture",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the dead area expand in the field?",
+        "a_signal": "Scattered or patchy death following low/wet spots and soil-drainage patterns; individual or small groups of plants",
+        "b_signal": "Expanding circular-to-arcing patches as the fungus spreads plant-to-plant via mycelium across the touching canopy",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Split/examine the lower vs upper stem: what signs are present?",
+        "a_signal": "No fungal growth; internal stem and root tissue is brown and rotted with no white mold or hard black bodies",
+        "b_signal": "Fluffy white cottony mycelium on stem surface and hard black sclerotia (resembling rat droppings) inside the pith or on the stem",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Phytophthora root and stem rot is a soil-borne oomycete disease that strikes at or below the soil line. It causes seed rot, pre- and post-emergence damping-off, and a characteristic chocolate-brown lesion that creeps upward from the soil line on the lower stem, with a rotted root system. Wilting plants often retain their dead leaves. It is driven by saturated, poorly drained soils after heavy rain and shows clear racial/cultivar interactions managed by Rps resistance genes. The defining feature is a dry brown root-and-lower-stem rot with no fungal signs.",
+    "narrative_b": "Sclerotinia stem rot (timber rot/white mold) is a fungal disease of the upper canopy that appears after canopy closure during flowering. Infection of senescing flowers leads to water-soaked, then bleached tan-to-white lesions on the mid and upper stem and at nodes, girdling and killing branches. The unmistakable diagnostic signs are fluffy white cottony mycelium on the stem and hard black sclerotia formed on and inside the stem. It thrives in cool, humid, dense high-yield canopies with prolonged leaf wetness and spreads plant-to-plant across the touching canopy.",
+    "management_a": "Plant Phytophthora-resistant varieties (Rps genes plus partial/field resistance), improve soil drainage and reduce compaction, avoid overly wet seedbeds, and use effective oomycete seed treatments (e.g., mefenoxam/metalaxyl, ethaboxam, oxathiapiprolin). Rotate and manage to reduce inoculum in chronically wet fields.",
+    "management_b": "Reduce canopy density (wider rows, lower seeding rates, avoid excess nitrogen/irrigation), select less susceptible/lodging-resistant varieties, rotate with non-host crops, and apply foliar fungicides at R1-R3 in high-risk cool/humid seasons. Manage sclerotia with deep burial avoidance and consider biocontrol (Coniothyrium minitans). Control broadleaf weeds that are alternate hosts.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "I've got patches of soybeans wilting and dying, mostly in the low, wet, poorly drained spots and the thicker areas of the field. The stems are discolored and rotting near the base and the plants are going down and dying off, leaving thin or bare patches in the stand.",
+      "decisive_lay_a": "Cut the stem and root open: the inside is brown and rotted clear through, but there's no white fuzzy growth on the surface and no hard black pellets inside. It's just plain mushy, brown, dead tissue.",
+      "decisive_lay_b": "Look for fluffy white cottony growth on the outside of the stem, and split the stem open to find hard black lumps inside that look like rat droppings or mouse turds.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

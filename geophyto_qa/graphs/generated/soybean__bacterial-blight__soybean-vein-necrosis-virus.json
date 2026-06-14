@@ -1,0 +1,63 @@
+{
+  "pair_id": "soybean__bacterial-blight__soybean-vein-necrosis-virus",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bacterial Blight",
+  "member_b_label": "Soybean Vein Necrosis Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-irregular foliar lesions with necrosis that can be vein-associated, often appearing in the upper canopy during the same mid-to-late vegetative/reproductive window. Early SVNV vein-clearing/necrosis and the dark necrotic spots of bacterial blight are routinely mixed up in the field, especially before chlorotic halos or full vein-line necrosis develop. Both spread under their favorable conditions and lack obvious fruiting bodies, so they are commonly misdiagnosed for each other on leaf appearance alone.",
+    "shared_presentation": "Foliar necrotic lesions on soybean leaflets, frequently in the upper/younger canopy, with necrosis that can follow or sit adjacent to veins. Neither produces visible fungal fruiting structures or spore masses, both can be associated with chlorosis/yellowing around affected tissue, and both can appear scattered across a field rather than in a tight focus.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Are the early lesions discrete angular dark-brown spots with water-soaked margins, or diffuse vein-clearing/vein-reddening that precedes necrosis?",
+        "a_signal": "Small angular water-soaked spots turning dark brown/black, delimited by leaf veins, with a yellow-green halo",
+        "b_signal": "Initial clearing or reddening/bronzing along the veins (intervein or vein-net) before any spotting, often near the leaf base",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do lesions evolve and coalesce over time?",
+        "a_signal": "Necrotic centers dry, tear out and drop, leaving a tattered, ragged 'shot-hole' appearance after wind/rain",
+        "b_signal": "Necrosis spreads along and out from the veins into a feathery vein-net pattern, with progressive bronzing and reddish-brown leaf scorch",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which leaves and what canopy position are affected, and is the pattern systemic?",
+        "a_signal": "Youngest expanding leaves at the top after storms; lesions limited to leaf blade tissue between veins",
+        "b_signal": "Symptoms systemic on multiple leaves, often mid-to-upper canopy, tracking the vascular/vein architecture across the whole leaflet",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather preceded symptom onset?",
+        "a_signal": "Onset right after cool, wet, windy/storm weather that drives bacterial splash and wounding",
+        "b_signal": "Onset during warm conditions with active thrips populations; tied to vector pressure rather than rain events",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Definitive test: streaming/ELISA for bacteria vs thrips-vectored Tospovirus detection.",
+        "a_signal": "Bacterial streaming from a cut lesion in water under microscope and/or positive for Pseudomonas savastanoi pv. glycinea; no virus detected",
+        "b_signal": "No bacterial ooze; positive RT-PCR/ELISA for Soybean vein necrosis virus (Orthotospovirus), with Neohydatothrips variabilis thrips present",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Bacterial blight, caused by Pseudomonas savastanoi pv. glycinea, is a cool, wet-weather disease that flares after storms drive bacteria into leaf wounds. It begins as small angular water-soaked spots, vein-delimited, that turn dark brown to black with a translucent yellow-green halo. Lesions coalesce and the dead centers fall out, giving leaves a ragged, shot-hole, tattered look. It is favored by temperatures around 70-80F with frequent rain and survives in crop residue and seed.",
+    "narrative_b": "Soybean vein necrosis virus (an Orthotospovirus, formerly Tospovirus) is vectored by soybean thrips (Neohydatothrips variabilis). Symptoms start as vein clearing or reddening/bronzing along the leaf veins, then develop into necrosis that radiates along the vascular network, producing a feathery vein-net pattern and reddish-brown scorch. It is systemic, tied to thrips activity in warm weather, and is now one of the most widespread soybean viruses across US production regions, though yield impact is generally modest.",
+    "management_a": "Plant pathogen-free, high-quality certified seed and resistant/tolerant varieties; rotate away from soybean and incorporate residue to reduce inoculum. Avoid working fields when foliage is wet to limit mechanical spread. Foliar bactericides (copper) are rarely economical; cultural practices are the mainstay. Most infections cause minimal yield loss.",
+    "management_b": "No curative treatment for the virus; management targets the thrips vector and inoculum. Use any available tolerant varieties, manage weed and volunteer hosts, and monitor thrips populations. Insecticides for thrips are generally not justified for SVNV alone because spread is hard to interrupt and yield effects are usually limited. Confirm with RT-PCR/ELISA before action.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "I'm seeing brown to dead patches on the leaves up in the younger top growth, often running along or right next to the veins, with some yellowing around the edges. There's no fuzz, powder, or mold on them, and they're scattered here and there across the field instead of in one hot spot.",
+      "decisive_lay_a": "Cut a fresh spot from a leaf and set the cut edge in a glass of clear water. Watch for a milky, cloudy stream oozing out of the cut into the water (you really need a lab or microscope to see it clearly), or send a sample to the lab and it comes back showing the bacterial culprit and no virus.",
+      "decisive_lay_b": "No milky ooze comes out when you cut a spot into water, but you spot tiny slender pale insects (thrips) crawling on the plants, and a lab test confirms the virus is present.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

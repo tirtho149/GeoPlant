@@ -1,0 +1,70 @@
+{
+  "pair_id": "watermelon__phytophthora-blight__pythium-diseases",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Phytophthora Blight",
+  "member_b_label": "Pythium Diseases",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are oomycete (water mold) pathogens that thrive in saturated, poorly drained soils and produce water-soaked, soft, mushy rots on watermelon. Both cause damping-off of seedlings and crown/fruit rot, share an affinity for the same wet-field microenvironments, and produce white cottony mycelium under high humidity. Field diagnosis is frequently confused because early lesions look identical and the two can co-occur in the same waterlogged patch.",
+    "shared_presentation": "Sudden wilting, water-soaked soft rot, and white cottony growth on watermelon plants growing in wet, low spots after heavy rain or over-irrigation. Both can kill seedlings (damping-off) and rot the crown, roots, and fruit, especially where fruit contacts saturated soil.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Which plant structures show the primary disease activity?",
+        "a_signal": "Affects ABOVE-ground parts broadly: crown lesions, stem/runner blight, leaf blight, and conspicuous fruit rot on the upper/contact surface of full-sized fruit",
+        "b_signal": "Concentrated on BELOW-ground/soil-line parts: feeder roots, root tips, seed, hypocotyl, and lower crown; aerial blighting is minimal",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At what crop stage does the damage predominate?",
+        "a_signal": "Damaging across all stages but notably destructive on established/fruiting plants, causing whole-vine collapse and fruit rot near harvest",
+        "b_signal": "Most destructive at germination and seedling stage (pre- and post-emergence damping-off); on older plants causes chronic root pruning and stunting rather than rapid collapse",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the character of the fruit/crown rot and its spread?",
+        "a_signal": "Aggressive expanding lesion with dense white cottony mold; fruit rot is firm-to-leathery initially then collapses; rapid plant-to-plant spread along rows in wet weather (foliar/aerial sporangia)",
+        "b_signal": "Soft, wet, often leaky/mushy cottony rot tied to soil contact; spreads through soil/water, not by aerial dispersal; lesions stay near the wet zone",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast and how far does the epidemic move through the field?",
+        "a_signal": "Explosive: entire fields can blight within days after a rain event because sporangia are splashed and wind-driven to foliage and fruit",
+        "b_signal": "Slower, patchy decline following drainage patterns and waterlogged spots; root rot/stunting develops gradually without aerial blighting",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Microscopic examination of the pathogen's asexual fruiting bodies (sporangia) and oospores from a fresh lesion",
+        "a_signal": "Phytophthora capsici: large, papillate (nipple-like), deciduous (caducous) sporangia borne on long pedicels; lemon-shaped, readily detaching and dispersing aerially",
+        "b_signal": "Pythium spp.: non-papillate sporangia that are often filamentous, lobate, or globose and produce a vesicle in which zoospores form; sporangia are NOT caducous/aerially deciduous",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What is the precise micro-site and moisture trigger?",
+        "a_signal": "Triggered by free water and warm temperatures; thrives both in saturated soil AND on wet foliage/fruit surfaces, enabling canopy spread",
+        "b_signal": "Strictly tied to waterlogged soil and standing water in the root zone; needs soil saturation, does not blight the canopy",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Phytophthora Blight (Phytophthora capsici) is the more aggressive, multi-organ pathogen of watermelon. It attacks the crown, stems, runners, leaves, and especially fruit, and can move explosively through a field after rain because its papillate, caducous sporangia detach and are splashed and wind-dispersed onto the canopy and fruit. Expect rapid vine collapse and white cottony fruit rot near harvest, often radiating from wet low spots but quickly spreading along rows. The decisive confirmation is microscopy: P. capsici produces large, papillate, long-pedicelled deciduous (caducous) lemon-shaped sporangia, distinct from Pythium.",
+    "narrative_b": "Pythium Diseases on watermelon are primarily soilborne, root- and seedling-focused. Pythium causes pre- and post-emergence damping-off, feeder-root rot, and a soft, leaky cottony rot where seed, hypocotyl, or fruit contacts saturated soil. Decline is patchy and follows drainage patterns; older plants are stunted from root pruning rather than killed by aerial blight. There is no canopy epidemic because Pythium does not produce caducous, aerially dispersed sporangia. Under the scope, Pythium shows non-papillate, filamentous/lobate or globose sporangia that release zoospores through a vesicle, and its sporangia are not deciduous.",
+    "management_a": "Improve drainage and avoid low/ponding areas; use raised beds with plastic mulch to keep fruit off wet soil. Rotate out of cucurbits and other hosts (peppers, tomatoes, eggplant) for 3+ years since P. capsici has a very wide host range and long-lived oospores. Apply oomycete-targeted fungicides (e.g., mefenoxam/metalaxyl rotated with mandipropamid, oxathiapiprolin, cyazofamid, or phosphonates) and rotate FRAC groups to manage resistance. Avoid overhead irrigation and field operations when foliage/soil are wet to limit splash dispersal; promptly rogue and remove infected plants and rotted fruit.",
+    "management_b": "Focus on seed and soil: plant high-quality seed treated with mefenoxam/metalaxyl or strobilurin seed treatments, sow into warm, well-drained soil, and avoid early planting into cold wet ground. Use raised beds and improve drainage to eliminate root-zone saturation; avoid over-irrigation. Soil-applied or in-furrow oomycete fungicides (mefenoxam, ethaboxam, oxathiapiprolin) protect emerging seedlings and roots. Maintain good soil structure and avoid compaction; rotation helps but Pythium is broad and persistent, so cultural water management is the main lever.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My watermelon plants in the low, wet part of the field suddenly went limp and started dying after all that rain, and the seedlings keep flopping over and rotting at the soil line. The crown and roots have a mushy, water-soaked soft rot, and there's white cottony growth on the stems and on the fruit that's been sitting on the wet ground.",
+      "decisive_lay_a": "Look closely (hand lens) at the white growth for tiny lemon-shaped or teardrop spore sacs, each with a little nipple-like bump on the tip, sitting on long thin stalks. They break off easily and blow around in the air, which lets the disease spread to leaves and fruit above the ground, not just through the soil.",
+      "decisive_lay_b": "Under a hand lens or microscope the spore-making bodies are NOT lemon-shaped and have no nipple bump; instead they look stringy, irregular/lobed, or round and swell into a little blister-like sac where the swimming spores form. These stay put and do not break off to drift through the air, so spread is mainly through wet soil and water.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "cabbage__bacterial-soft-rot__black-rot-of-crucifers",
+  "kind": "disease",
+  "crop": "Cabbage",
+  "member_a_label": "Bacterial Soft Rot",
+  "member_b_label": "Black Rot Of Crucifers",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are bacterial diseases of cabbage that cause rotting and tissue collapse in the head and outer leaves, and in the field they frequently co-occur because soft rot bacteria readily colonize the V-shaped lesions and blackened vascular tissue already opened up by black rot. Late-stage cabbage with a slimy, foul-smelling rotting head can be the endpoint of either pathogen, so growers and scouts commonly confuse them, especially once secondary soft rot invades black rot lesions.",
+    "shared_presentation": "Rotting, water-soaked-to-necrotic tissue on cabbage leaves and head; both can cause head and outer-leaf breakdown, wilting, and an offensive odor in advanced stages; both favored by warm, wet conditions and spread by water, wounds, and handling; both can collapse a head in the field or in storage.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the dominant lesion type and texture of the affected tissue?",
+        "a_signal": "Soft, mushy, wet, macerated tissue that disintegrates to a slimy mass; rot is diffuse with no defined margin and tissue can be pressed into liquid",
+        "b_signal": "Firm, dry, necrotic tissue early on; lesions are defined and the leaf does not turn to slime until secondary soft rot invades",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the SHAPE and location of the leaf lesions?",
+        "a_signal": "No characteristic shape; rot starts at wounds, leaf bases, or the head core and spreads diffusely without following any pattern",
+        "b_signal": "Classic V-shaped (wedge) chlorotic-to-necrotic lesions starting at the leaf margin and pointing inward toward a vein, often beginning at hydathodes",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When you cut across the petiole/midrib or stem, are the vascular bundles (veins) blackened?",
+        "a_signal": "Veins remain normal-colored; rot is in the soft parenchyma, not confined to the vascular system; cut tissue oozes slimy liquid",
+        "b_signal": "Veins/vascular ring are distinctly blackened or browned (black veins), and bacterial ooze appears from cut vascular bundles; blackening progresses through the vascular system",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What is the odor of the affected tissue?",
+        "a_signal": "Strong, foul, putrid, sulfurous rotten smell present even at moderate stages (a hallmark of soft rot maceration)",
+        "b_signal": "Little to no offensive odor in early/typical lesions; bad smell appears only later when secondary soft rot bacteria move in",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How and where does the disease begin and spread on the plant?",
+        "a_signal": "Begins at wounds or the head/core and spreads rapidly outward, often most severe in dense head interior; very fast collapse in warm humid conditions",
+        "b_signal": "Begins at leaf margins/hydathodes and moves systemically inward through veins toward the stem; slower, directional, vascular spread that can stunt and one-side the plant",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At what stage and setting is damage most apparent?",
+        "a_signal": "Most damaging on mature heads and especially in storage/transit and post-harvest; thrives in wet, poorly ventilated conditions",
+        "b_signal": "Can attack from seedling through maturity; seedling infection causes blackened veins, yellowing, and dwarfing; seedborne and systemic from the start",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial soft rot (Pectobacterium carotovorum) is a wound-and-water disease: the bacteria enter through cuts, insect damage, frost injury, or growth cracks and secrete pectolytic enzymes that dissolve the middle lamella, turning tissue into a soft, watery, slimy mass. The hallmark is rapid maceration with a strong putrid odor and no defined lesion margin and no vascular blackening. It is most destructive on mature heads and in storage, where warmth and free moisture let it liquefy a head within days. There is no V-shaped pattern; rot is opportunistic and diffuse, often starting in the dense, poorly drained head interior.",
+    "narrative_b": "Black rot (Xanthomonas campestris pv. campestris) is the most serious bacterial disease of crucifers worldwide. It is seedborne and systemic: bacteria enter primarily through leaf-margin hydathodes (and wounds), producing the diagnostic V-shaped chlorotic-to-necrotic lesions at the leaf edge that point inward. The pathogen then invades the vascular system, blackening the veins and vascular ring in petioles and stems, causing one-sided growth, stunting, and leaf drop. Early lesions are firm and relatively odorless; a foul smell and mushy texture appear only when secondary soft-rot bacteria colonize the dead vascular tissue. Cutting the stem to reveal a blackened vascular ring with ooze is the resolving observation.",
+    "management_a": "Minimize wounding during cultivation, harvest, and handling; control insects and avoid harvesting wet. Promote drainage and air circulation; avoid overhead irrigation late in the day. Harvest dry, cool promptly, and store at low temperature with good ventilation and low humidity. Rotate away from susceptible crops, and cull and remove infected/rotting plant material. No effective curative chemical control once maceration begins; sanitation and post-harvest cold-chain are key.",
+    "management_b": "Use certified pathogen-free or hot-water-treated seed and disease-free transplants (the most important step, since it is seedborne). Rotate 2-3 years out of crucifers, control cruciferous weeds, and avoid working fields when foliage is wet to limit splash and contact spread. Sanitize equipment and trays; destroy crop residue and infected plants. Copper-based bactericides give only partial, preventive suppression. Resistant or tolerant cultivars are available and recommended where black rot is a recurring problem.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My cabbage leaves and heads are turning mushy and water-soaked, breaking down into a slimy mess, and some plants are wilting and starting to collapse. It smells really bad, and it seems to get worse fast in warm, wet weather.",
+      "decisive_lay_a": "Cut into the rotting part: the veins look normal-colored (not darkened), the soft inner flesh has turned to slimy, soupy mush, and squeezing or cutting it lets out a slimy, wet ooze.",
+      "decisive_lay_b": "Cut across the stem or leaf base: the veins and the ring inside the stem are turned black or brown (black veins running through the plant), and pressing the cut spots pushes out a bit of ooze right from those darkened veins.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

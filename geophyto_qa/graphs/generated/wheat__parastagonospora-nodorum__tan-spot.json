@@ -1,0 +1,63 @@
+{
+  "pair_id": "wheat__parastagonospora-nodorum__tan-spot",
+  "kind": "disease",
+  "crop": "Wheat",
+  "member_a_label": "Parastagonospora Nodorum",
+  "member_b_label": "Tan Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are necrotrophic fungal foliar diseases of wheat that produce tan-to-brown lesions surrounded by chlorotic (yellow) halos, often co-occurring in the same \"leaf spot complex.\" Early lenticular lesions with yellow margins look nearly identical in the field, and both are favored by wheat residue and wet conditions, making them routinely confused without close inspection of fruiting bodies and lesion morphology.",
+    "shared_presentation": "Tan to brown foliar lesions on wheat leaves, each typically surrounded by a chlorotic yellow halo, beginning on lower/older leaves and progressing upward. Both diseases are residue-borne (overwinter on wheat stubble), spread by splash/wind during warm wet weather, and can cause premature leaf senescence and yield loss. In their early stages each forms small lens-shaped (lenticular) spots that enlarge and coalesce, and both are part of the septoria/tan-spot leaf-blotch complex frequently found together in the same field and even the same leaf.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and structure of the early lesion and its halo?",
+        "a_signal": "Small lens-shaped lesions that are dark brown in the center, often with a chocolate-brown necrotic core and a narrow chlorotic margin; lesions tend to stay more discrete and brown.",
+        "b_signal": "Tan, oval-to-diamond (lenticular) lesions with a characteristic small dark-brown spot (the conidial 'pinpoint' / dark fleck) at the center and a broad bright-yellow chlorotic halo extending well beyond the necrosis.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Does the disease readily move onto the glumes/heads as well as leaves?",
+        "a_signal": "Strongly colonizes heads, producing glume blotch \u2014 dark brown to purplish-gray discoloration on the glumes and chaff (this is the classic 'Stagonospora/Septoria nodorum blotch' on the head).",
+        "b_signal": "Largely confined to the leaf blade; glume/head infection is minor or absent, so disease is essentially a leaf-spotting disease.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What fruiting bodies form in the lesion, and how do conidia/spores appear under a hand lens or after incubation in a moist chamber?",
+        "a_signal": "Lesions bear pycnidia \u2014 small embedded brown/black flask-shaped fruiting bodies that, when wet, exude cream-to-pinkish cirrhi of multicelled, slightly curved conidia; pycnidia are visible as tiny dots within the brown necrotic tissue.",
+        "b_signal": "No pycnidia; instead dark conidiophores produce large cylindrical, multi-septate conidia with a snake-head basal cell, and the sexual stage forms black raised pseudothecia on residue. The center shows a dark conidial fleck rather than embedded pycnidia.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the chlorosis behave as lesions expand?",
+        "a_signal": "Necrosis dominates; chlorotic halo is comparatively narrow and the lesion turns brown/necrotic quickly with less surrounding yellowing.",
+        "b_signal": "Extensive yellow chlorosis (tan-spot toxin-induced) spreads well beyond the necrotic spot; in toxin-sensitive cultivars large areas of leaf yellow and the small tan lesions sit within broad yellow zones.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What residue and temperature conditions preceded the outbreak?",
+        "a_signal": "Favored by warm, wet/humid conditions (slightly warmer optimum ~20-27C) with frequent rain splash; severe in intensive wheat with overhead moisture.",
+        "b_signal": "Develops over a broad temperature range including cooler conditions and is especially severe in continuous no-till wheat-on-wheat where abundant standing stubble carries the overwintering pseudothecia.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Parastagonospora nodorum (Septoria/Stagonospora nodorum blotch, SNB) is a necrotrophic ascomycete causing both a leaf blotch and a distinctive glume blotch. Leaf lesions begin as small water-soaked spots that become lens-shaped chocolate-brown necrotic flecks with a narrow yellow margin, often expanding and coalescing under warm humid weather. The diagnostic signs are embedded pycnidia within the brown necrotic tissue that ooze cream-pink cirrhi of curved, multicelled conidia in wet conditions. Unlike tan spot, P. nodorum aggressively colonizes the head, producing dark brown to grayish-purple glume blotch that directly reduces grain quality and weight. It overwinters on residue and infected seed, and epidemics build with rain-splash dispersal during grain fill.",
+    "narrative_b": "Tan spot, caused by Pyrenophora tritici-repentis (anamorph Drechslera tritici-repentis), is a residue-borne necrotrophic disease producing tan oval-to-diamond lesions each marked by a small dark-brown conidial fleck at the center and a broad bright-yellow chlorotic halo driven by host-selective toxins (Ptr ToxA, ToxB, ToxC). On toxin-sensitive cultivars extensive yellowing and tan necrosis can blight whole leaves. It is overwhelmingly a leaf disease, sparing the head. The pathogen lacks pycnidia; instead black raised pseudothecia form on wheat stubble over winter and release ascospores in spring as primary inoculum, with cylindrical multiseptate conidia from dark conidiophores driving secondary spread. It is especially severe in continuous no-till wheat-on-wheat systems with heavy standing residue.",
+    "management_a": "Manage with clean/treated certified seed and seed-treatment fungicides since P. nodorum is seedborne; rotate away from wheat and bury or reduce residue to cut overwintering inoculum. Plant moderately resistant varieties and avoid excessive nitrogen and dense canopies that prolong leaf wetness. Scout the upper canopy and glumes from flag-leaf emergence through heading; apply foliar triazole/SDHI fungicides at flag leaf to early heading (Feekes 8-10.5) when conditions favor disease, prioritizing protection of the flag leaf and head against glume blotch.",
+    "management_b": "The cornerstone is residue management: tillage to bury stubble or rotation to non-host crops for 1-2 years dramatically reduces the pseudothecia that supply primary ascospore inoculum, making tan spot largely a tillage/rotation-driven disease in no-till systems. Plant cultivars with resistance to the relevant Ptr toxins (insensitivity to ToxA in particular). Foliar fungicides (triazoles, SDHIs, strobilurins) applied from flag-leaf emergence protect upper leaves when disease pressure is high and the crop is at risk during grain fill. Because it is not seedborne in the same way, seed treatment is less central than for SNB.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My wheat has tan-to-brown spots on the leaves, each ringed with a yellow halo. They started on the lower, older leaves and are creeping up the plant, and the small lens-shaped spots are getting bigger and running together so the leaves are browning off early.",
+      "decisive_lay_a": "Look closely (a hand lens helps) at the brown dead tissue for tiny embedded brown-to-black dots, like specks of pepper sunk into the spot. When the weather is wet, these dots ooze a cream-to-pinkish gummy droplet.",
+      "decisive_lay_b": "There are no embedded pepper-like dots oozing pink; instead the center of the spot shows a small dark fleck or smudge. On old wheat stubble lying in the field you may also see tiny raised black bumps.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

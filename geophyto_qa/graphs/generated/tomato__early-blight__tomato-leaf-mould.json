@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__early-blight__tomato-leaf-mould",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Early Blight",
+  "member_b_label": "Tomato Leaf Mould",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce yellowing and brown-to-tan foliar lesions on tomato leaves, typically starting on lower/older foliage, and both can cause defoliation, leading growers to confuse them on the upper leaf surface before signs are examined.",
+    "shared_presentation": "Yellow blotches and necrotic patches on tomato leaves, beginning on older lower foliage, progressing upward, with eventual chlorosis, leaf death, and defoliation; both favored by extended leaf wetness and humidity.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What growing environment and humidity regime is the crop in?",
+        "a_signal": "Field-grown or any setting; lesions worsen with warm wet weather, alternating wet/dry, and stressed/older plants; not requiring sustained high humidity",
+        "b_signal": "Greenhouse, high tunnel, or densely planted humid conditions with persistent leaf wetness and poor air circulation (>85% RH)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and pattern of the necrotic lesions on the upper leaf surface?",
+        "a_signal": "Dark brown to black lesions with sharp concentric rings (target/bullseye pattern), often surrounded by a yellow halo",
+        "b_signal": "Diffuse pale-green to yellow blotches with indistinct margins, no concentric rings, often angular and bounded by veins",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaf over: what sign is present on the underside beneath the lesion?",
+        "a_signal": "No fuzzy growth on underside; lesions necrotic on both faces, may show dark sporulation but no felty mold layer",
+        "b_signal": "Distinctive olive-green to grayish-brown velvety/felty mold (sporulation) on the underside directly beneath the yellow upper-surface blotch",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Does the disease affect stems and fruit, or remain on leaves?",
+        "a_signal": "Also produces target-spot lesions on stems (collar rot at base of seedlings) and dark sunken concentric lesions on fruit at stem end",
+        "b_signal": "Largely confined to leaves; fruit and stem infection rare, and when present appears as a black leathery rot rather than concentric lesions",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the dead leaf tissue behave as the disease advances?",
+        "a_signal": "Lesions enlarge and coalesce; whole leaves yellow, brown, and dry from the bottom up, often dropping off",
+        "b_signal": "Yellow blotches turn brown and the leaf curls, withers, and dies but mold layer persists; defoliation in humid canopy",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Early Blight (Alternaria solani) is a warm-weather fungal disease that starts on the oldest, lowest leaves as small dark spots that expand into characteristic target-like lesions with concentric rings and a yellow halo. It thrives on stressed plants and under alternating wet/dry conditions, attacking leaves, stems (including seedling collar rot), and fruit (dark sunken stem-end rot). The pathogen overwinters on debris and is favored by warm temperatures (24-29C) with periods of leaf wetness.",
+    "narrative_b": "Tomato Leaf Mould (Fulvia fulva, syn. Cladosporium fulvum / Passalora fulva) is primarily a problem of high-humidity environments like greenhouses and high tunnels. It appears as pale yellow-green diffuse blotches on the upper leaf surface, with the diagnostic olive-green to grayish-brown velvety sporulation developing directly underneath on the leaf underside. It rarely affects fruit or stems and is driven by sustained high relative humidity and poor air movement.",
+    "management_a": "Rotate crops (2-3 yr), remove and destroy infected debris, stake/mulch to reduce soil splash, avoid overhead irrigation, maintain plant vigor with adequate nitrogen, and apply protectant fungicides (chlorothalonil, mancozeb) or QoI/SDHI products on a preventive schedule starting at first lower-leaf symptoms.",
+    "management_b": "Lower humidity through ventilation, heating, wider spacing, and reduced leaf wetness in greenhouses/tunnels; prune lower foliage for airflow; remove infected leaves; plant resistant cultivars (Cf resistance genes); and apply fungicides where labeled, noting that humidity control is the primary lever.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My older, lower tomato leaves are turning yellow in patches and developing dead brown spots, and it's slowly creeping up the plant. The worst leaves are drying up and dropping off, and it got bad after a stretch of damp, humid weather with the leaves staying wet.",
+      "decisive_lay_a": "Flip the leaf over: the dead patches look dry and brown on BOTH the top and bottom, with no fuzzy or felty mold layer underneath. You might see some dark, sooty-looking darkening in the spots, but no soft velvety fuzz.",
+      "decisive_lay_b": "Flip the leaf over: right under each yellow blotch you'll find a patch of olive-green to grayish-brown velvety, felt-like fuzzy growth on the underside.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

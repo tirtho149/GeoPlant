@@ -1,0 +1,63 @@
+{
+  "pair_id": "melon__bacterial-wilt__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Bacterial Wilt",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce abrupt, severe wilting and collapse of melon (cucurbit) vines that can take down a whole plant quickly, so a grower seeing a suddenly flagging vine in the field cannot tell them apart by the wilt symptom alone. They diverge sharply on the underlying sign: bacterial wilt is a vascular/insect-vectored disease driven by cucumber beetles with no rot or mold, whereas Phytophthora blight is a soilborne water-mold causing crown/root rot, water-soaked stem lesions, fruit rot, and white mold under wet conditions.",
+    "shared_presentation": "Sudden, dramatic wilting and collapse of melon vines, often starting with individual runners and progressing to whole-plant death; can appear midseason on otherwise healthy-looking plants and be mistaken for drought stress or generic vine decline.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What field conditions and weather preceded the wilt onset?",
+        "a_signal": "Wilt appears in warm dry-to-normal weather, scattered individual plants, correlated with cucumber beetle activity; not tied to wet soil or low/flooded areas",
+        "b_signal": "Wilt follows heavy rain, irrigation, or flooding; clustered in low spots, poorly drained areas, and along the wettest parts of the field",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant does the failure originate \u2014 vascular foliage or the crown/roots at the soil line?",
+        "a_signal": "Crown and roots look firm and healthy; problem is in the vines/leaves with no basal rot",
+        "b_signal": "Crown, lower stem, and roots show a dark, soft, water-soaked rot at or near the soil line; plant can be pushed over",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Are there stem and fruit lesions or rot, or only flaccid wilting?",
+        "a_signal": "Leaves wilt and dry while still green-ish then brown; no lesions, no soft rot of stem or fruit",
+        "b_signal": "Water-soaked, expanding dark lesions on crown/stem; fruit develops sunken, soft rot often near soil contact",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is the disease associated with cucumber beetles, or with white mold / sporulation under humidity?",
+        "a_signal": "Striped or spotted cucumber beetles present and feeding; chewing scars on leaves; no mold or sporulation",
+        "b_signal": "White, cottony mold (sporangia) develops on rotting stems and fruit in humid/wet conditions; no insect association",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Cut a wilting stem near the crown and slowly draw the two cut ends apart \u2014 does sticky bacterial ooze string out?",
+        "a_signal": "Viscous, white-to-clear bacterial slime strings between the cut stem ends (positive ooze/string test), confirming Erwinia in the xylem",
+        "b_signal": "No bacterial stringing; cut tissue is rotted/water-soaked or firm with no ooze (string test negative)",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Bacterial wilt of melon is caused by Erwinia tracheiphila, which lives in and is transmitted by striped and spotted cucumber beetles. Bacteria enter through beetle feeding wounds, multiply in the xylem, and plug the water-conducting vessels, causing leaves and then entire vines to wilt rapidly even though soil moisture is adequate. The crown and roots remain firm with no rotting. The hallmark diagnostic is the stem ooze (string) test: cutting a wilting stem and slowly separating the cut ends draws out sticky, fine strands of bacterial slime. Melon is generally less susceptible than cucumber but can still be killed. Disease pressure tracks beetle populations and feeding rather than soil wetness.",
+    "narrative_b": "Phytophthora blight of melon is caused by the soilborne oomycete Phytophthora capsici, favored by warm, saturated soils after heavy rain, irrigation, or flooding. It attacks the crown, roots, lower stem, and fruit, producing dark, water-soaked lesions and a soft rot that causes sudden wilting and collapse; affected plants are often clustered in low, poorly drained portions of the field. Under humid conditions white cottony sporulation appears on rotting tissue, and fruit in contact with wet soil develop sunken soft rot covered with white mold. There is no insect vector and no bacterial ooze. The pathogen produces swimming zoospores that spread in surface water, so the disease moves with water flow across the field.",
+    "management_a": "Manage the cucumber beetle vector: scout early, use row covers until flowering, apply targeted insecticides at beetle thresholds, and consider perimeter trap crops. Remove and destroy infected plants promptly to reduce inoculum reservoirs. There is no cure once a plant is infected, so prevention through vector control is primary. Choose less-susceptible cultivars where available.",
+    "management_b": "Improve drainage and avoid planting in low, flood-prone areas; use raised beds and well-drained sites. Rotate away from cucurbits and other hosts (peppers, tomatoes, eggplant) for several years, avoid overhead and excess irrigation, and prevent movement of contaminated soil/water between fields. Apply targeted oomycete fungicides (e.g., mefenoxam/metalaxyl alternated with other modes of action, mindful of resistance) preventively under wet conditions, and keep fruit off wet soil. Remove and destroy infected plants and fruit.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My melon vines are suddenly wilting and collapsing, sometimes just one runner at a time and then the whole plant goes down, even though the plants looked healthy a day or two ago. At first I thought it was drought stress, but watering doesn't bring them back and they keep dying off across the patch.",
+      "decisive_lay_a": "Cut through a wilted stem near the base, press the two cut ends together, then slowly pull them apart: if you see fine, sticky white-to-clear slimy threads stringing out between the pieces like spit or stretched glue, that points to this one.",
+      "decisive_lay_b": "Cut the wilted stem and do the same press-and-pull test: if NO sticky strings form and instead the inside looks rotted, mushy, and water-soaked (or just firm and dry with no ooze), that points to this one.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

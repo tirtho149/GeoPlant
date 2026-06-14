@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__gray-mold__late-blight",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Gray Mold",
+  "member_b_label": "Late Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce expanding brown-to-gray necrotic lesions on tomato leaves, stems, and fruit under cool, wet, humid conditions, and both can bear visible surface mold/sporulation, leading to confusion in field and greenhouse settings. Gray mold and late blight overlap in season (cool, wet weather), in plant parts attacked, and in producing fuzzy growth on lesions, so early or rapidly progressing lesions are easily misattributed.",
+    "shared_presentation": "Rapidly enlarging brown necrotic lesions on leaves, stems, and fruit during cool, humid, wet weather; both can show a visible fuzzy/moldy growth on affected tissue and can cause collapse of foliage and fruit rot, especially in greenhouses or during prolonged leaf-wetness periods.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What temperature/moisture regime preceded the outbreak?",
+        "a_signal": "Cool and persistently humid/high-condensation greenhouse or dense canopy conditions; thrives 15-25C with stagnant moist air and wounded/senescing tissue",
+        "b_signal": "Cool, wet, rainy outdoor weather with prolonged leaf wetness (10-20C, frequent fog/rain); explosive after cool moist fronts",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where did lesions originate and what tissue is preferentially attacked?",
+        "a_signal": "Often begins at wounds, pruning scars, senescing flowers/petals, and damaged or aging tissue; classic flower-end and stem-cankering",
+        "b_signal": "Attacks healthy young growth indiscriminately - leaf margins/tips, upper canopy, petioles, and green fruit without needing a wound",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion appearance and margin character?",
+        "a_signal": "Tan to grayish-brown soft rot lesions, sometimes with concentric zonation; tissue becomes soft and water-soaked then dry; stem lesions girdle and bleach",
+        "b_signal": "Greasy, water-soaked dark green-to-brown blotches with diffuse pale-green halo, often starting at leaf tips/edges; firm-then-collapsing; rapid blackening",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast and in what pattern does it spread plant-to-plant?",
+        "a_signal": "Steady local spread from infection courts and wounds; less explosive field-wide; favored by handling/pruning wounds",
+        "b_signal": "Extremely fast, field-wide epidemic spread over days; entire plantings can collapse and turn black within a week",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the sporulation under hand lens / after incubation in a humid chamber - what does the mold look like and where?",
+        "a_signal": "Abundant dusty GRAY-BROWN fuzzy mold (conidiophores) that puffs out as a smoky cloud when disturbed; grows on dead/necrotic tissue surface, often on stems and old lesions",
+        "b_signal": "Fine WHITE downy fuzz (sporangiophores) confined to the lesion margin / undersurface of leaf and fruit, appearing in a delicate band where living meets dead tissue, only under high humidity",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "On firm green fruit, what does the rot look like?",
+        "a_signal": "Ghost spots (pale haloed rings) from failed infections, or soft watery decay with gray fuzz at wound/calyx",
+        "b_signal": "Firm, greasy, olive-to-brown greasy-bronze blotches with a marbled/lumpy surface on shoulders of green fruit, becoming hard and corrugated",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Gray mold (Botrytis cinerea) is an opportunistic necrotroph that exploits wounds, pruning scars, senescing flowers, and aging or stressed tissue, making it especially troublesome in greenhouses, high tunnels, and dense humid canopies. Lesions are tan-to-grayish-brown soft rots; stem cankers girdle and bleach the stem, and infected flowers/fruit develop a watery decay. The diagnostic hallmark is abundant dusty gray-brown fuzzy sporulation that releases a smoky cloud of conidia when disturbed, growing on the surface of necrotic tissue. On green fruit it can cause characteristic pale haloed ghost spots from aborted infections.",
+    "narrative_b": "Late blight (Phytophthora infestans) is an aggressive oomycete pathogen that attacks healthy, unwounded tissue and drives explosive, field-wide epidemics under cool, wet conditions. Lesions begin as greasy, water-soaked dark green-to-brown blotches, frequently at leaf tips and margins, ringed by a diffuse pale-green halo, and rapidly blacken and collapse. Under high humidity a delicate band of fine WHITE downy sporulation appears at the lesion margin, often on the leaf underside; green fruit develop firm, greasy olive-bronze, marbled blotches on the shoulders. Whole plantings can turn black within a week. It is a federally significant, weather-driven epidemic disease.",
+    "management_a": "Reduce humidity and leaf wetness (ventilation, heating to avoid condensation, wider spacing); remove senescing flowers, prune debris, and avoid creating wounds during handling. Sanitize and remove infected plant material promptly. Rotate protectant/botryticide fungicides (e.g., fenhexamid, fludioxonil/cyprodinil, boscalid) noting Botrytis's high resistance risk; manage greenhouse climate as the primary lever.",
+    "management_b": "Act preemptively under conducive weather: apply protectant fungicides (chlorothalonil, mancozeb) on a tight schedule and oomycete-specific materials (mandipropamid, cymoxanil, fluopicolide) when risk is high; follow regional late blight forecasting/alerts. Destroy infected plants and volunteer/cull tomatoes and potatoes, eliminate cull piles and overwintering tubers, plant resistant varieties, and improve airflow. Report outbreaks to extension - it is a community/regional epidemic concern.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomatoes have brown rotting patches spreading fast on the leaves, stems, and fruit, and it's gotten way worse during this cool, damp, rainy stretch. The bad spots are getting bigger by the day and some leaves are collapsing, with a bit of moldy fuzz showing up on the rotted parts, especially in the greenhouse where it stays humid.",
+      "decisive_lay_a": "Look for a heavy, dusty gray-brown fuzzy mold sitting on top of the dead, rotted tissue (often on stems and old brown spots) that puffs up like a little cloud of smoke when you bump or brush the plant.",
+      "decisive_lay_b": "Look for a fine white downy fuzz, like a thin band of frost or cobweb, right along the edge of the brown spot where the living green tissue meets the dead part, and on the underside of leaves and fruit, showing up mainly when it's very humid or wet.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

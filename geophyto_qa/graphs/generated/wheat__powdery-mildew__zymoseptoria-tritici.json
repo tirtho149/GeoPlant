@@ -1,0 +1,49 @@
+{
+  "pair_id": "wheat__powdery-mildew__zymoseptoria-tritici",
+  "kind": "disease",
+  "crop": "Wheat",
+  "member_a_label": "Powdery Mildew",
+  "member_b_label": "Zymoseptoria Tritici",
+  "source": "llm-generated (validated)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both colonize the lower wheat canopy in cool, moist conditions and dapple the leaves with pale lesions.",
+    "shared_presentation": "Pale lower-canopy leaf lesions in a dense, moist wheat stand.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion outline and tissue state?",
+        "a_signal": "Fluffy fungal colonies with chlorosis beneath, tissue still intact.",
+        "b_signal": "Tan-gray irregular blotches of dead tissue, often bounded by veins, with a yellow halo.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is the growth superficial, or are fruiting bodies embedded in the tissue?",
+        "a_signal": "White-to-gray superficial powdery growth that wipes off.",
+        "b_signal": "Tiny black pycnidia embedded in the dead blotches, visible as dark specks.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What spread the disease up the canopy?",
+        "a_signal": "Cool humid air and a dense high-nitrogen canopy; free water not required.",
+        "b_signal": "Rain splash carrying spores from the lower leaves upward over a wet period.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Because the growth is white, powdery, and wipes off the living tissue, I classify this as powdery mildew rather than Septoria tritici blotch.",
+    "narrative_b": "Because the dead blotches carry embedded black pycnidia and spread by rain splash, I classify this as Septoria tritici blotch (Zymoseptoria tritici) rather than powdery mildew.",
+    "management_a": "Powdery mildew: use resistant varieties, avoid excess nitrogen and dense stands, and apply a labeled fungicide if it climbs to the upper canopy.",
+    "management_b": "Septoria tritici blotch: use resistant varieties and residue management, and time labeled fungicides to protect the upper leaves during wet stem-elongation weather.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "The lower leaves down in the thick, damp part of the canopy are turning pale and washed-out with off-color patches, and it's worse where the stand is dense and stays wet.",
+      "decisive_lay_a": "A white-to-gray powdery coating sitting on top of the leaf that you can rub or wipe off with your finger, leaving the leaf surface underneath.",
+      "decisive_lay_b": "Tiny black specks, like ground pepper or pinpricks, set down inside the dead pale-brown blotches; you usually need a hand lens to be sure they're embedded in the dead tissue.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

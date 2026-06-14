@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__southern-bacterial-wilt",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Bacterial Canker And Wilt Of Tomato",
+  "member_b_label": "Southern Bacterial Wilt",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are systemic vascular bacterial diseases of tomato that cause wilting, vascular discoloration, and plant death, and both can present with one-sided or generalized wilt with brown internal stem tissue. In the field a wilting tomato with discolored vascular tissue could be either, so they are routinely confused at first glance.",
+    "shared_presentation": "Wilting tomato plants with vascular (xylem) discoloration visible when the stem is cut, leading to decline and death. Both can show stunting and yellowing, and both produce brown-to-tan streaking in the vascular ring of the lower stem.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What temperature/region conditions accompany the outbreak?",
+        "a_signal": "Occurs across cool-to-moderate seasons and northern/temperate production; not strictly heat-driven, often seed/transplant-introduced",
+        "b_signal": "Favored by hot, wet conditions and saturated warm soils; clusters in the South and warm low-lying or flooded fields",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is the early wilt one-sided/marginal-scorch type or a rapid full-plant flaccid collapse?",
+        "a_signal": "Slower decline; unilateral wilting of leaflets, marginal leaf scorch with yellow halo ('bird's-eye' fruit spots), and one side of leaf/plant affected first",
+        "b_signal": "Rapid, often complete wilting of the whole plant while foliage stays green; little marginal scorch before collapse",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are there external stem cankers, streaks, or fruit lesions?",
+        "a_signal": "Light-colored stem streaks/cankers that crack open, adventitious roots, and raised white-haloed 'bird's-eye' spots on fruit",
+        "b_signal": "No true cankers or bird's-eye fruit spots; stem may show water-soaking and dark vascular streaks but remains intact externally",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Does a cut stem section suspended in clear water produce a spontaneous milky bacterial streaming column (Ralstonia ooze test)?",
+        "a_signal": "No spontaneous milky streaming; xylem yellow-brown but does not exude a self-streaming bacterial plume (Clavibacter is Gram-positive, ooze test negative)",
+        "b_signal": "Cut stem suspended in water releases a spontaneous milky-white bacterial stream/ooze within minutes (positive Ralstonia streaming test)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the plant go from first symptom to death?",
+        "a_signal": "Chronic, progressive over weeks; partial wilt, recovery at night early on, gradual dieback",
+        "b_signal": "Acute collapse within days once symptoms appear, especially in heat",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Cut the lower stem crosswise: is the pith hollow/discolored with a slimy gray-brown core or a firm yellow-brown vascular ring?",
+        "a_signal": "Vascular ring yellow-to-brown, pith may become mealy/cavity but not slimy gray ooze",
+        "b_signal": "Pith and vascular tissue water-soaked, gray-brown and slimy, often with bacterial droplets on the cut face",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Bacterial canker (Clavibacter michiganensis ssp. michiganensis) is a Gram-positive, seed- and transplant-borne vascular pathogen that produces a more chronic, asymmetric disease. Classic clues are unilateral wilting and marginal leaf scorch (firing) with a yellow margin, light-colored stem streaks that crack into open cankers, adventitious rooting, and pathognomonic raised white-haloed 'bird's-eye' spots on the fruit. Internal vascular tissue turns yellow to brown and the pith can become mealy or cavitated, but a cut stem in water does NOT throw a spontaneous milky bacterial stream.",
+    "narrative_b": "Southern bacterial wilt (Ralstonia solanacearum) is a hot-climate, soilborne, Gram-negative pathogen that invades the xylem and causes rapid, often complete wilting while leaves remain green. There are no true cankers or bird's-eye fruit spots; instead the lower stem shows water-soaking and dark vascular streaks, and the pith becomes gray-brown, water-soaked and slimy. The defining sign is the streaming test: a cut stem suspended in clear water releases a spontaneous milky-white plume of bacteria within minutes. It is favored by hot, wet, saturated soils.",
+    "management_a": "Use certified pathogen-free seed and transplants; hot-water or acid seed treatment. Rogue and destroy infected plants, sanitize tools/stakes/greenhouse surfaces (it survives on equipment and debris). Rotate 2-3 years out of solanaceous/host crops, manage volunteers and weed hosts, avoid overhead irrigation and worker handling of wet plants. No effective curative; copper sprays only suppress secondary spread.",
+    "management_b": "Manage soil and water: avoid planting in infested or poorly drained warm soils, improve drainage, and prevent movement of contaminated soil/water/equipment. Use grafted plants on resistant rootstocks (e.g., 'Hawaii 7996'-derived) where available and resistant/tolerant varieties. Long rotations with non-hosts, solarization in warm regions, rogue infected plants. No chemical cure; sanitation and resistant rootstock grafting are the mainstays.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomato plants are wilting and going downhill even though the soil has moisture, and some are stunted and yellowing. When I cut a lower stem open, I can see brown-to-tan streaking inside the ring of the stem, and the plants keep declining and dying.",
+      "decisive_lay_a": "When you cut the stem and hang it in a clear glass of water, NO milky white cloud comes streaming out on its own. The inside of the stem looks yellow-brown but it does not bleed out a self-running plume into the water.",
+      "decisive_lay_b": "Cut a piece of the wilted stem and dangle it in a clear glass of water; within a few minutes you see a milky-white thread or cloud of ooze streaming down from the cut end all by itself, without you squeezing it.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

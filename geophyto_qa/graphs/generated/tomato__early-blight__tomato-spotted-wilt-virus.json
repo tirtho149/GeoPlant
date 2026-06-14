@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__early-blight__tomato-spotted-wilt-virus",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Early Blight",
+  "member_b_label": "Tomato Spotted Wilt Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce dark necrotic/concentric-ringed spots on tomato foliage and both can cause leaf bronzing, blighting, and fruit lesions, so early-stage spotting is genuinely mistaken in the field. The concentric rings of early blight superficially resemble the ringed/zonate necrosis and bronzing of TSWV, and both can start on lower/older foliage in stressed plants.",
+    "shared_presentation": "Dark brown to black foliar spots, some with concentric ring patterns; leaf yellowing/bronzing progressing to necrosis and defoliation; necrotic flecking; and necrotic/ringed lesions on green-to-ripe fruit. General decline and reduced vigor occur in both.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Do you see fungal signs (concentric target-ring lesions with dark sporulation) versus evidence of thrips/systemic viral spread?",
+        "a_signal": "Distinct 'target-board' concentric dark rings on leaf spots with olive-to-black velvety sporulation; lesions discrete on leaflets, often surrounded by a yellow halo",
+        "b_signal": "No fungal sporulation; instead bronze/purplish cast, distorted growth, and presence of thrips (vector); often one-sided or systemic pattern through the plant",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where in the canopy and on what parts do symptoms first concentrate?",
+        "a_signal": "Begins on oldest, lowest leaves near the soil and moves upward; collar rot/stem lesions at soil line and dark sunken stem-end fruit lesions",
+        "b_signal": "Affects growing points and young upper foliage with terminal bud necrosis and one-sided plant symptoms; fruit show distinctive concentric chlorotic/red ringspots scattered over the surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Are symptoms purely necrotic spotting, or accompanied by systemic color/growth change?",
+        "a_signal": "Necrotic leaf spots and defoliation only; no plant distortion or color mottling beyond chlorotic halos",
+        "b_signal": "Systemic chlorosis/bronzing, leaf cupping and distortion, stunting, wilting of one side or whole top, plus necrotic streaks on petioles and stems",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the fine pattern within the lesion and on fruit?",
+        "a_signal": "Concentric rings are tightly spaced and raised with sporulation; fruit lesions leathery, dark, concentric, at stem end",
+        "b_signal": "Fruit show raised concentric ring patterns with alternating red/yellow/green halos; leaf lesions are flat bronze flecks, not sporulating target rings",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease spread plant-to-plant and within the field?",
+        "a_signal": "Gradual upward progression on individual plants, favored by warm wet/humid weather and overhead irrigation; spreads via splash and wind to neighbors",
+        "b_signal": "Scattered individual plants affected across the field following thrips movement; abrupt systemic collapse of single plants rather than slow bottom-up blighting",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and pest activity accompany onset?",
+        "a_signal": "Onset after periods of leaf wetness, high humidity, warm temperatures, and on stressed/old or nutrient-poor plants",
+        "b_signal": "Onset correlated with thrips populations (western flower thrips), nearby weed/ornamental reservoirs, and warm-season vector activity",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Early blight (Alternaria solani) is a foliar and fruit fungal disease that begins on the oldest, lowest leaves as small dark spots that enlarge into the classic concentric 'target-board' rings, often ringed by a yellow halo. Severe infection causes lower-leaf yellowing and progressive defoliation upward, exposing fruit to sunscald. The fungus also produces dark sunken collar-rot lesions at the stem base of seedlings/transplants and leathery concentric lesions at the stem end of fruit. It is favored by warm temperatures, high humidity, leaf wetness, and plant stress, and overwinters in residue and on solanaceous weeds. The defining sign is olive-to-black sporulation within the concentric-ringed lesions.",
+    "narrative_b": "Tomato spotted wilt virus (TSWV, a tospovirus) is a thrips-transmitted systemic virus. Symptoms include bronzing or purpling of young leaves, dark necrotic flecks and streaks on leaves, petioles, and stems, terminal bud death, cupping/distortion, marked stunting, and frequently one-sided wilting of the plant. The hallmark is on fruit: distinctive concentric chlorotic ringspots with alternating red, yellow, and green zones that render fruit unmarketable. Because spread depends on viable thrips vectors (especially western flower thrips) moving from weed and ornamental reservoirs, affected plants typically appear scattered individually across a field rather than spreading by foliar contact. There is no fungal sporulation and no soil-line collar rot.",
+    "management_a": "Use crop rotation away from solanaceous hosts (2-3 yr), remove/destroy infected residue, stake/mulch to reduce splash, avoid overhead irrigation and prolonged leaf wetness, fertilize adequately to avoid stress, and apply protectant fungicides (chlorothalonil, mancozeb) or QoI/SDHI products on a preventive schedule; plant resistant/tolerant cultivars and use clean transplants.",
+    "management_b": "There is no cure for infected plants\u2014rogue and destroy them promptly. Manage the thrips vector with reflective mulches, insecticides/biologicals targeting thrips, and weed/reservoir host removal around fields. Plant TSWV-resistant cultivars carrying the Sw-5 gene, use virus-free transplants, control thrips in greenhouse production, and isolate new plantings from infected ornamentals and weeds.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomato plants have dark brown to black spots on the leaves, some with a ring pattern inside them, and the leaves are yellowing and turning bronze before drying up and dropping. The fruit has dark sunken spots with rings too, and the whole plant is looking weak and rundown.",
+      "decisive_lay_a": "Look for spots that have a clear \"target\" or \"bull's-eye\" pattern of dark rings, with a dusty olive-green to black velvety coating in the center, and a yellow ring around the outside of each spot. The spots stay separate from each other on the leaflets.",
+      "decisive_lay_b": "Look for a bronze or purplish tint to the leaves with twisted, stunted, or distorted new growth (no fuzzy or velvety coating in the spots), and check for tiny slender insects (thrips) on the plant. The damage often shows up on just one side of the plant or spreads through the whole plant.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

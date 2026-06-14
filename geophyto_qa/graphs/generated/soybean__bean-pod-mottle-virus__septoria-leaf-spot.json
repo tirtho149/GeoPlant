@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__bean-pod-mottle-virus__septoria-leaf-spot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bean Pod Mottle Virus",
+  "member_b_label": "Septoria Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both can produce green-and-yellow mottling/chlorotic-and-necrotic foliar patterns and stunting that field scouts conflate, especially when BPMV mosaic is mistaken for the chlorotic halos of early Septoria or vice versa. The decisive split is etiology: BPMV is a systemic viral mottle with no visible pathogen sign and pod/seed effects, whereas Septoria produces discrete tan-to-brown necrotic spots bearing pycnidia that begin on unifoliate leaves and progress upward.",
+    "shared_presentation": "Yellow-green discoloration of soybean foliage with chlorotic and mottled leaf tissue, sometimes accompanied by reduced plant vigor; both are commonly noticed during vegetative-to-early-reproductive stages and can give leaves a blotchy, uneven coloration when scouted from a distance.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the foliar pattern a diffuse green/yellow mosaic-mottle of otherwise-intact tissue, or discrete necrotic spots with definable margins?",
+        "a_signal": "Systemic light-and-dark green mottle/mosaic, leaf rugosity (puckering) and distortion, no individual necrotic lesions",
+        "b_signal": "Discrete angular-to-irregular tan/brown necrotic spots (1-4 mm) with yellow halos, tissue death within each spot",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the symptom move through the canopy over time?",
+        "a_signal": "Systemic from the start \u2014 appears in newest/youngest top leaves first as plant grows, terminal leaves most distorted",
+        "b_signal": "Starts on lowest unifoliate and lower trifoliate leaves and climbs upward through the canopy as season advances",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are pods and seeds affected?",
+        "a_signal": "Pods can be mottled/deformed; seed coat shows mottling/bleeding hilum discoloration",
+        "b_signal": "Lesions essentially confined to leaves (and sometimes petioles/stems); seeds not mottled",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine a lesion under a hand lens \u2014 are fungal fruiting bodies present, and is a vector associated?",
+        "a_signal": "No fungal signs at all; associated with bean leaf beetle feeding/transmission (chewing damage may be present)",
+        "b_signal": "Dark pinpoint pycnidia visible within necrotic spots; no insect vector required, spreads by rain-splashed spores",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions precede the outbreak?",
+        "a_signal": "Tied to overwintered bean leaf beetle activity and early-season beetle pressure, not to leaf wetness",
+        "b_signal": "Favored by warm, wet, humid weather and extended leaf-wetness periods (rainy spells, dense canopy)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does the leaf surface texture/shape look like?",
+        "a_signal": "Leaves puckered, blistered, crinkled and reduced/distorted (viral malformation) but not perforated",
+        "b_signal": "Spots may coalesce, centers dry and tear out leaving a tattered/shot-hole look; heavy defoliation from bottom up",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bean Pod Mottle Virus is a systemic comovirus presenting as a light-and-dark green mosaic/mottle on upper, younger foliage with characteristic leaf rugosity, puckering and distortion. Crucially there are no fungal signs; symptoms are most pronounced in cool early-season growth and are tied to bean leaf beetle transmission. Pod deformation and seed-coat mottling (and bleeding hilum) are hallmark downstream effects. If you see a mosaic without discrete necrotic spots or pycnidia, and beetle feeding is present, suspect BPMV.",
+    "narrative_b": "Septoria Leaf Spot (brown spot) is a fungal disease producing discrete, small (1-4 mm) angular tan-to-brown necrotic lesions with yellow halos that initiate on the lowest unifoliate leaves and progress upward through the canopy. Under a hand lens, dark pycnidia are visible within the spots \u2014 the decisive sign. It is favored by warm, wet, humid conditions and spreads by rain-splashed spores. Spots may coalesce, causing premature defoliation of lower leaves. Absence of any mottle/mosaic and presence of fruiting bodies confirm Septoria over BPMV.",
+    "management_a": "Manage the bean leaf beetle vector: scout for overwintered beetles, use insecticide seed treatments or foliar insecticides when early-season beetle pressure is high, and consider delayed planting to avoid the first beetle generation. Plant virus-tested/clean seed and resistant or tolerant varieties where available. There is no cure for infected plants; control is preventive via vector and inoculum reduction.",
+    "management_b": "Use crop rotation (1-2 years out of soybean) and tillage to bury infected residue, since the fungus overwinters on debris and seed. Plant high-quality, disease-free seed and tolerant varieties. Foliar fungicides (e.g., strobilurin/triazole) at R3-R5 can manage yield-limiting infections in wet seasons; improve airflow and avoid excessive canopy density. Manage from the lower canopy upward where the disease begins.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My soybean leaves are looking blotchy with patches of yellow-green, like the color is uneven and mottled across the leaf. From the edge of the field the canopy looks splotchy and the plants don't seem as vigorous as they should be this time of year.",
+      "decisive_lay_a": "No fuzzy growth, powdery coating, or any spots with mold on them at all. Instead, look for chewing damage on the leaves and small beetles (bean leaf beetles) feeding on the plants, since this trouble rides along with those bugs.",
+      "decisive_lay_b": "Tiny dark brown to grayish dead spots on the leaves, and right inside those dead spots you can spot tiny black pinpoint dots, like someone dotted them with a fine-tip pen. It spreads when rain splashes, so no bugs are needed.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

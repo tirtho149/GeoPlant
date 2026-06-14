@@ -1,0 +1,63 @@
+{
+  "pair_id": "melon__charcoal-rot__fusarium-wilts--blights--rots-and-damping-off",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Charcoal Rot",
+  "member_b_label": "Fusarium Wilts, Blights, Rots And Damping-Off",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne fungal diseases of melon that cause vascular/root crown infection leading to wilting, vine decline, and plant collapse, often mid-to-late season. Both produce internal vascular discoloration and can kill plants outright, so foliar wilt symptoms alone are ambiguous. They are separable by the diagnostic SIGN inside affected tissue: Macrophomina produces tiny black microsclerotia peppering the crown/root, while Fusarium produces salmon-pink/white mycelium and conidia and classic one-sided vascular browning.",
+    "shared_presentation": "Mid- to late-season melon plants showing progressive wilting, yellowing/decline of vines, and eventual collapse; cutting the lower stem or crown reveals internal vascular/cortical discoloration, and affected roots/crowns show rot. Both favor stressed plants and warm soils, and both can be mistaken for drought or other vine-decline complexes.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What soil temperature and moisture regime preceded symptom onset?",
+        "a_signal": "Hot (28-35C), dry soils and drought/heat-stressed plants; symptoms flare under high-temperature water stress",
+        "b_signal": "Warm but more moderate soils; symptoms appear across a wider moisture range and can worsen with adequate-to-high moisture",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How quickly do plants decline and is wilt one-sided?",
+        "a_signal": "Often rapid collapse of whole plant during heat, frequently near fruit load; wilt typically affects the whole plant",
+        "b_signal": "Slower, progressive wilt that often begins one-sided (single runners/leaves yellow first) before whole-plant decline",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where is the primary lesion concentrated?",
+        "a_signal": "Crown and lower stem/taproot at/below soil line, with dry shredded cortex",
+        "b_signal": "Lower stem/crown with vascular streaking extending up the stem and into runners",
+        "weight": "weak"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the cut vascular/cortical tissue look like in color and texture?",
+        "a_signal": "Grayish-black to silvery dry rot of the cortex and stele; tissue ashy and brittle",
+        "b_signal": "Tan to reddish-brown vascular browning, often a continuous streak up one side; tissue not ashy",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Split the crown/lower stem and examine the tissue and rot surface with a hand lens for the pathogen sign.",
+        "a_signal": "Abundant tiny (pinpoint, ~0.1mm) jet-black microsclerotia peppered through and on the gray tissue, giving a 'charcoal'/sooty speckled appearance",
+        "b_signal": "No black specks; salmon-pink to white fungal mycelium/sporodochia on the surface under humidity, with brown vascular streaking",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Charcoal rot (Macrophomina phaseolina) on melon is a hot-weather, stress-driven disease. It infects the crown, lower stem, and taproot, producing a dry gray-to-silvery cortical rot. Plants often collapse suddenly during periods of high temperature and drought, frequently as fruit load increases. The diagnostic feature is the dense pepper-like dusting of minute jet-black microsclerotia embedded in and on the ashy tissue, visible with a hand lens or even the naked eye, which gives the disease its 'charcoal' name. Diagnosis is confirmed by splitting the crown/root and observing this sooty black speckling against gray, brittle tissue.",
+    "narrative_b": "Fusarium (Fusarium oxysporum f. sp. melonis and related species) causes wilt, crown/root rot, and damping-off in melon. Wilt commonly begins one-sided, with individual runners or leaves yellowing and wilting before the whole plant declines, and is associated with tan-to-reddish-brown vascular streaking visible when the stem is split lengthwise. Under humid conditions, salmon-pink to white mycelium and spore masses (sporodochia) may form on infected stem surfaces. There are NO black microsclerotia. Fusarium can also kill seedlings (damping-off) and is strongly governed by host race and resistance genetics. Confirmation rests on the brown vascular streak plus pink/white fungal signs and absence of charcoal speckling.",
+    "management_a": "Manage water/heat stress through adequate irrigation scheduling to avoid drought during fruit fill; avoid plant stress and over-fruiting. Rotate away from other susceptible hosts (Macrophomina is broad-host), incorporate residue to reduce inoculum, and maintain balanced fertility. No strong genetic resistance is available, so cultural stress reduction and soil moisture management are primary; soil solarization can reduce microsclerotia in some regions.",
+    "management_b": "Use Fusarium-resistant melon cultivars matched to the local pathogen race (primary tool). Rotate out of cucurbits for several years, use clean/treated seed and pathogen-free transplants, plant into well-drained warm soils, and avoid moving infested soil. Grafting onto resistant rootstocks and soil fumigation/solarization help in high-pressure fields. Manage seedbeds to prevent damping-off with sanitation and seed treatment.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My melon vines are wilting and going downhill in the heat of mid- to late-season, with leaves yellowing and the plants slowly collapsing. When I slice open the lower stem or crown, the inside is discolored and streaky, and the roots and crown look rotted.",
+      "decisive_lay_a": "Look at the gray, dried-out inner stem tissue for a fine peppering of tiny jet-black specks that look like someone dusted it with sooty charcoal or ground pepper. The black flecks are pinpoint-sized, scattered through and over the grayish tissue.",
+      "decisive_lay_b": "No black sooty specks. Instead, after sitting in a humid spot (like a closed bag), the rotted stem or crown grows a salmon-pink to creamy-white fuzzy or moldy film on the surface, and the streaks running up inside the stem are brown.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

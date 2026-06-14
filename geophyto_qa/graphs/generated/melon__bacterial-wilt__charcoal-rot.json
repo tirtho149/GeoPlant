@@ -1,0 +1,70 @@
+{
+  "pair_id": "melon__bacterial-wilt__charcoal-rot",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Bacterial Wilt",
+  "member_b_label": "Charcoal Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause sudden, progressive wilting and collapse of melon vines, often with whole-runner or whole-plant death during hot weather, and both can leave foliage attached while the plant dies. A grower seeing a wilting, dying melon plant cannot tell them apart from canopy symptoms alone; resolution requires examining the crown/stem internally and looking for specific signs (bacterial ooze vs. microsclerotia).",
+    "shared_presentation": "A melon plant or individual runner that flags and wilts, often abruptly, with leaves first drooping during the heat of the day and eventually dying. Both can kill plants from mid-season into fruiting, both are favored by warm temperatures, and in both the foliage may remain green-to-tan and clinging as the vine collapses, so the aboveground picture (a wilting, dying, but not obviously rotted plant) looks nearly identical.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What soil-moisture and temperature conditions preceded the wilt?",
+        "a_signal": "Wilt appears under normal/adequate moisture and moderate-to-warm conditions; often follows striped/spotted cucumber beetle activity",
+        "b_signal": "Wilt is triggered or worsened by hot, dry, drought-stressed conditions and high soil temperatures",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is the striped or spotted cucumber beetle present and feeding on the crop?",
+        "a_signal": "Cucumber beetles present; beetle feeding scars common, since the beetle is the obligate vector that introduces the bacterium",
+        "b_signal": "Beetles not required and not associated; disease arrives from soilborne inoculum independent of insects",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the wilt progress across the plant and respond to night/watering?",
+        "a_signal": "Begins on one leaf or one runner, often recovers at night early on, then spreads vine-by-vine until the whole plant wilts and dies",
+        "b_signal": "Steady, irreversible decline radiating from the crown; lower leaves yellow then the whole plant collapses without nighttime recovery",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the lower stem/crown look like externally?",
+        "a_signal": "Stem stays firm and green; no defined rot lesion, just wilting tissue",
+        "b_signal": "Lower stem and crown show a tan-to-silvery-gray, dry, often shredding lesion at and below the soil line",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Cut the stem, press the cut ends together for 5-10 seconds and slowly pull apart; what emerges?",
+        "a_signal": "Sticky, milky-white bacterial ooze strings out between the two cut ends (positive ooze test)",
+        "b_signal": "No bacterial ooze; instead pith/vascular tissue is peppered with tiny black specks (microsclerotia) giving a charcoal-dusted appearance",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under a hand lens, what are the black specks in the affected stem/root tissue?",
+        "a_signal": "None present; vascular tissue may be discolored but lacks discrete black bodies",
+        "b_signal": "Numerous pinpoint, smooth black microsclerotia embedded in the cortex, pith, and root, like ground charcoal or black pepper",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Bacterial wilt of melon is caused by Erwinia tracheiphila and is vectored by striped and spotted cucumber beetles that introduce the bacterium during feeding. The pathogen multiplies in and plugs the xylem vessels, so wilting is a vascular-occlusion event rather than a rot. Symptoms typically start on a single leaf or runner that wilts during the day and may recover at night, then progress vine by vine until the entire plant collapses, frequently before or during fruiting. The hallmark diagnostic is the bacterial ooze test: cutting a wilted stem and slowly drawing the cut surfaces apart pulls out sticky, milky-white threads of bacterial slime. Melon is generally less susceptible than cucumber and muskmelon, but losses can still be significant where beetle pressure is high.",
+    "narrative_b": "Charcoal rot is caused by the soilborne fungus Macrophomina phaseolina, which survives as microsclerotia in soil and crop debris and attacks plants stressed by heat and drought. On melon it infects the crown and lower stem and root, producing a tan-to-silvery-gray dry lesion at and below the soil line and a steady, irreversible wilt that radiates from the crown without nighttime recovery. The defining feature is the abundance of tiny, smooth black microsclerotia embedded in the cortex, pith, and root tissue, giving cut surfaces a charcoal-dusted or black-pepper appearance under a hand lens. Disease is strongly tied to hot, dry conditions and water-stressed plants, often flaring as the crop nears maturity and carries fruit load.",
+    "management_a": "Manage the cucumber beetle vector: monitor early and use insecticides, row covers (removed at flowering for pollination), perimeter trap cropping, or beetle-resistant practices to keep beetle feeding below threshold. Promptly rogue and remove symptomatic plants to reduce inoculum spread within the field. Choose less-susceptible cultivars where available. Because the bacterium does not survive well outside the beetle and host, vector control is the primary lever rather than soil treatment.",
+    "management_b": "Reduce plant stress that triggers the fungus: maintain consistent soil moisture with adequate irrigation, especially during fruit set and hot spells, and avoid drought stress. Use long rotations (3+ years) away from cucurbits and other susceptible hosts (e.g., legumes, sorghum, sunflower) to lower microsclerotial soil populations, incorporate residue to speed decomposition, and avoid excessive plant density and over-fertilization that drive stress. There are no effective in-season fungicides; management is cultural and preventive, centered on irrigation and rotation.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My melon vines are suddenly flopping over and wilting, worst in the afternoon heat. The leaves droop and then dry up while the plant slowly dies, but the stems and leaves still look green-to-tan and aren't obviously rotted or mushy. It's hitting healthy-looking plants from mid-season into when the fruit is setting.",
+      "decisive_lay_a": "Cut a wilting stem near the base, hold the two cut ends together for a few seconds, then slowly pull them apart. If thin, sticky, milky-white strings or threads of ooze stretch between the cut ends like glue or spit, that points to this one.",
+      "decisive_lay_b": "Split a wilting stem or the base open lengthwise and look at the inner woody part and pith. If there's no sticky ooze and instead the inside is dusted or peppered with tiny black specks, like someone sprinkled fine charcoal or black pepper dust inside, that points to this one.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

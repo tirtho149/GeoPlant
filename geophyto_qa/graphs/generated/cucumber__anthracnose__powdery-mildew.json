@@ -1,0 +1,70 @@
+{
+  "pair_id": "cucumber__anthracnose__powdery-mildew",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Powdery Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce foliar lesions/patches on cucumber leaves and are common in the same growing season, and scouts often lump any pale/spotting leaf symptom together. But they belong to different symptom classes (necrotic spots vs. surface fungal growth) and their pathogen signs are completely different, so a close look separates them readily.",
+    "shared_presentation": "Both affect cucumber foliage during the main growing season, can cause leaves to appear discolored, blotchy, or to decline and die, and reduce canopy and yield. From a distance an infected leaf with pale patches and dead tissue can be hard to assign without a hand-lens look at the lesion surface and margins.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "On the affected leaf area, is there a white-to-gray powdery fungal coating that can be rubbed off, or are there discrete sunken/necrotic spots with no superficial bloom?",
+        "a_signal": "No surface powder; tissue shows defined necrotic lesions, signs are within/on the dead tissue (acervuli), not a wipeable coating",
+        "b_signal": "White-to-gray powdery, talc-like fungal growth on the leaf surface that smears when rubbed",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the basic lesion character on the leaf?",
+        "a_signal": "Water-soaked spots enlarging to tan-to-brown roughly circular necrotic lesions, often with a yellow halo, that may tear/fall out leaving shot-holes",
+        "b_signal": "Diffuse white powdery colonies, later chlorosis and general yellowing/browning of leaf with no discrete bordered spots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are stems and fruit affected, and how?",
+        "a_signal": "Yes; elongated tan-brown lesions on stems/petioles and characteristic sunken, circular, water-soaked sunken cankers on fruit, often with pinkish-orange spore masses",
+        "b_signal": "Largely confined to leaves, petioles and stems; fruit rarely shows powdery growth and develops no sunken fruit cankers",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under a hand lens, what fruiting structures are present in the lesion?",
+        "a_signal": "Dark acervuli with setae producing salmon/pink slimy spore masses when wet",
+        "b_signal": "Chains of dry powdery conidia on superficial mycelium; late season may show tiny dark chasmothecia (cleistothecia)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather has favored the outbreak?",
+        "a_signal": "Warm, wet, rainy/high-rainfall periods with extended leaf wetness and splashing water",
+        "b_signal": "Moderate temperatures with high humidity but dry leaf surfaces; thrives even without free water and in shaded, crowded canopies",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the patch spread across the leaf and canopy?",
+        "a_signal": "Expands from discrete enlarging spots that coalesce; spreads via splash, worse after rain",
+        "b_signal": "Starts as small colonies that radiate outward and coalesce into a continuous felt; spreads on air currents, often older/shaded leaves first",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Cucumber anthracnose (Colletotrichum orbiculare) is a warm, wet-weather disease. Leaf symptoms begin as small water-soaked spots that enlarge into roughly circular tan-to-brown necrotic lesions, frequently bordered by a yellow halo; the dead centers may dry, crack, and drop out leaving shot-holes. It is not confined to leaves: elongated lesions form on petioles and stems, and fruit develop diagnostic circular, sunken, water-soaked cankers that exude salmon-to-pink spore masses in humid conditions. Under a lens the lesions bear dark acervuli with setae. The pathogen spreads by splashing water and is favored by rain and prolonged leaf wetness; it is seedborne and survives on infected debris.",
+    "narrative_b": "Cucumber powdery mildew (Podosphaera fuliginea, syn. Sphaerotheca fuliginea) presents as superficial white-to-gray, talc-like powdery colonies on leaf surfaces and petioles. The growth is on the surface and can be wiped/smeared off, distinguishing it from any embedded necrotic lesion. Colonies enlarge and coalesce into a felt-like coating; affected leaves yellow, then brown and die, often beginning on older or shaded leaves in dense canopies. Unlike most foliar fungi it does not require free water and can develop vigorously in dry, humid, warm-to-moderate conditions. Fruit are rarely colonized and do not form sunken cankers. Late in the season tiny dark chasmothecia may dot the powdery mat.",
+    "management_a": "Use disease-free/treated seed and resistant cultivars; rotate out of cucurbits 2+ years and bury or remove infected debris. Avoid overhead irrigation and working plants when wet to limit splash dispersal. Apply protectant/systemic fungicides (e.g., chlorothalonil, plus strobilurin or DMI products) on a preventive schedule timed to warm, wet weather; scout fruit and stems, not just leaves.",
+    "management_b": "Plant resistant/tolerant varieties and space plants for airflow to lower humidity in the canopy. Scout undersides and shaded older leaves early. Apply fungicides at first sign, rotating modes of action to manage resistance (DMI, strobilurin/QoI, SDHI), and incorporate biologicals, oils, or potassium bicarbonate; sulfur is effective but watch for crop phytotoxicity and avoid on sulfur-sensitive cultivars or in high heat.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My cucumber leaves have pale, blotchy patches and some areas that have turned brown and dried up. The plants are looking ragged and rundown, the canopy is thinning out, and I'm worried it's going to cut into my yield.",
+      "decisive_lay_a": "Look for distinct brown, dead spots or patches with clear edges on the leaves, with nothing you can wipe off the surface. The trouble sits down in the dead tissue itself rather than as a coating on top. Up close the dead spots may show tiny specks, and on the fruit you can get sunken spots with a pinkish ooze in the center.",
+      "decisive_lay_b": "Look for a white-to-gray powdery, dusty coating on the leaf surface that looks like someone sprinkled talc or flour on it, and that smears or rubs off when you wipe it with your finger.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

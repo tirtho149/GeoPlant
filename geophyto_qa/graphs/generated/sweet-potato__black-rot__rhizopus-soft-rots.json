@@ -1,0 +1,70 @@
+{
+  "pair_id": "sweet-potato__black-rot__rhizopus-soft-rots",
+  "kind": "disease",
+  "crop": "Sweet Potato",
+  "member_a_label": "Black Rot",
+  "member_b_label": "Rhizopus Soft Rots",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are storage/postharvest rots of sweet potato roots that cause decay during curing and storage, and growers often lump \"the roots are rotting in storage\" together. Early lesions on a single root can be ambiguous, and the two can even co-occur (Rhizopus frequently follows wounding or other infections). The resolving features are the rot texture (dry/firm vs. wet/mushy), the smell, and the diagnostic signs (gray-black ringed lesions and dark fungal stroma vs. coarse gray-black \"whiskery\" sporangial mold).",
+    "shared_presentation": "Decaying sweet potato storage roots, often appearing during or after curing/storage, with darkening tissue and a soft or rotted feel to the affected root, leading growers to report generic \"root rot in storage.\"",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the rot firm and relatively dry, or wet, soft, and mushy?",
+        "a_signal": "Firm, fairly dry, dark greenish-black to brown rot; flesh stays comparatively solid and the root may dry/mummify rather than collapse",
+        "b_signal": "Soft, watery, mushy rot that quickly collapses; root becomes a wet, leaking, stringy mass",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the whole root break down?",
+        "a_signal": "Relatively slow-spreading; circular cankers enlarge over days to weeks and may remain localized on the root surface and into flesh",
+        "b_signal": "Very rapid; an entire root and adjacent roots can liquefy within a few days, spreading root-to-root in the crate",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does the surface mold/sign look like under good light or a hand lens?",
+        "a_signal": "Dark, gray-black lesion with concentric zonation; later fine dark fungal stroma and long-necked perithecia (flask-shaped fruiting bodies) producing sticky spore masses; no coarse whiskers",
+        "b_signal": "Coarse, whiskery gray-to-black mold with visible pinhead sporangia (black dots on white-gray stalks), like bread mold, often bridging between roots",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the smell and any liquid associated with the decay?",
+        "a_signal": "Comparatively mild or musty odor; little free liquid; tissue darkens uniformly",
+        "b_signal": "Strong sour/fermented (yeasty, alcoholic-vinegary) odor with abundant watery exudate",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Beyond the storage root, are there field/transplant symptoms on stems, slips, or below-soil stem (collar)?",
+        "a_signal": "Yes; Ceratocystis also causes black lesions on underground stems, blackening of slips/sprouts and 'black shank'-like collar lesions, and can move on infected seed roots and slips",
+        "b_signal": "No true field phase; Rhizopus is essentially a wound-entry postharvest rot of harvested roots and does not produce slip/stem disease in the field",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and wounds preceded the outbreak?",
+        "a_signal": "Favored by infected seed roots/slips and storage; spreads via contaminated handling, can infect with less obvious wounding and persists in soil/storage houses",
+        "b_signal": "Strongly tied to bruising/wounding at harvest or washing plus warm, humid storage and poor curing; chilling injury and skinning predispose roots",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Black rot, caused by the fungus Ceratocystis fimbriata, produces firm, dark greenish-black to brown circular lesions on storage roots that often show concentric ring zonation. The rot stays comparatively dry and the flesh remains fairly solid, sometimes mummifying. Under a hand lens the lesion surface develops dark fungal stroma and long-necked, flask-shaped perithecia exuding sticky spore masses. Importantly, black rot has a field/transplant phase: it discolors and bitters the flesh, blackens underground stems and slips, and is readily carried on infected seed roots and plant beds, making sanitation and clean seed central to control.",
+    "narrative_b": "Rhizopus soft rot (\"ring rot\" or whiskery soft rot), caused by Rhizopus species, is a wound-entry postharvest disease. Spores germinate in bruises, skinning injuries, or cut surfaces and rapidly turn the root into a soft, watery, mushy mass that leaks fluid and gives off a strong sour, fermented (yeasty/alcoholic) odor. A coarse gray-to-black whiskery mold with pinhead black sporangia grows over and between roots like bread mold, allowing fast root-to-root spread within a crate. It is favored by warm, humid storage, poor curing, and rough handling; there is no true field disease phase.",
+    "management_a": "Plant only certified, disease-free seed roots and bed clean (non-infested) plant beds; cut slips above the soil line rather than pulling to avoid carrying the pathogen on root tissue. Rotate out of sweet potato for 2-3+ years, sanitize storage houses and handling equipment, and discard/cull infected roots. Cure properly and keep storage clean; consider approved seed-root or slip treatments and resistant-tolerant cultivars where available.",
+    "management_b": "Minimize wounding and bruising at harvest, washing, and grading; handle roots gently and avoid skinning. Cure promptly and correctly (about 29-32 C, ~85-90% RH for several days) to heal wounds, then store cool (~13-16 C) and avoid chilling injury. Maintain good ventilation and sanitation, remove rotting roots quickly, and use registered postharvest fungicide dips (e.g., dicloran where labeled) on wash water/handling lines when needed.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "Some of my stored sweet potatoes are rotting. The skin and flesh are turning dark and the bad spots feel soft and mushy, and it's been showing up after I cured and put them away for storage.",
+      "decisive_lay_a": "Look for dark gray-to-black sunken patches that have ring-like circles in them, often with a sticky, gummy goo, but NO coarse whiskers or fuzz standing up off the root.",
+      "decisive_lay_b": "Look for coarse, whiskery gray-to-black mold (like the fuzzy mold on old bread) with tiny black pinheads on white-gray stalks; it often grows strands that bridge from one root to the next.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "sweet-potato__southern-blight__streptomyces-soil-rot",
+  "kind": "disease",
+  "crop": "Sweet Potato",
+  "member_a_label": "Southern Blight",
+  "member_b_label": "Streptomyces Soil Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne sweet potato diseases that cause stem/root decay and stand loss, and growers often lump them as \"soil rot\" or root/crown rot problems. They overlap in warm-soil field settings and can co-occur, but Southern Blight is a foliar/crown-girdling rot with conspicuous fungal signs while Streptomyces soil rot is a below-ground actinomycete disease that pits and constricts roots without aerial mycelium, so careful examination separates them cleanly.",
+    "shared_presentation": "Stunted, wilting or yellowing plants in patches within a warm sweet potato field, with decay at or below the soil line and reduced/deformed storage root yield. Both can produce sunken, rotted tissue and are favored by warm soils, leading a grower to call either one a \"soil rot.\"",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the primary damage \u2014 at the stem/crown and soil line, or on the developing storage roots and fibrous feeder roots below ground?",
+        "a_signal": "Lesion girdles the stem base/crown right at the soil line; wilt follows rapid stem girdling above ground",
+        "b_signal": "Damage is on storage roots and fibrous roots underground \u2014 surface pitting and root constriction with little stem-base rot",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "At the crown/soil line, do you see coarse white fan-like fungal mycelium with tan-to-brown mustard-seed sclerotia?",
+        "a_signal": "Conspicuous white cottony mycelial fans and round 1-3 mm tan/brown sclerotia (resembling mustard seeds) on stem and adjacent soil/debris",
+        "b_signal": "No aerial mycelium and no sclerotia; only sunken corky pits and lesions on root surfaces",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture of the storage-root lesion \u2014 soft watery rot, or dry firm pitting/cankering?",
+        "a_signal": "Soft, watery brown rot spreading from the crown; tissue collapses and mycelium often visible",
+        "b_signal": "Dry, dark, sunken pits and corky lesions; roots become constricted/girdled and misshapen (\"pox\") without watery breakdown",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does the storage root shape/surface look like at harvest?",
+        "a_signal": "Roots rotted from the proximal (stem) end inward, often with surface mycelium and a foul soft decay",
+        "b_signal": "Roots show numerous dark surface pits and deep constrictions/cracks, giving a pinched, deformed \"pox\" appearance",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What soil pH and moisture favor the problem?",
+        "a_signal": "Favored by warm, moist soils high in organic/crop debris; not strongly pH-dependent",
+        "b_signal": "Strongly favored by dry, alkaline soils (high pH, ~5.2 and above); severity drops in acidic, wet soils",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease move through the planting over the season?",
+        "a_signal": "Rapid above-ground collapse \u2014 a plant wilts and dies within days once the crown is girdled",
+        "b_signal": "Slow, chronic below-ground decline; feeder-root pruning causes gradual stunting and quality loss recognized mainly at harvest",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Southern Blight (Athelia/Sclerotium rolfsii) attacks the stem base and crown at the soil line, producing a characteristic mat of coarse white mycelial fans and abundant round, tan-to-brown sclerotia the size of mustard seeds on the stem, lower leaves, and surrounding soil and debris. The fungus girdles the stem, causing sudden wilt and a soft, watery rot that can extend into the proximal end of storage roots. It thrives in warm, moist soils rich in organic residue. The decisive call is finding the white mycelium plus sclerotia at the crown.",
+    "narrative_b": "Streptomyces Soil Rot (pox), caused by the actinomycete Streptomyces ipomoeae, is strictly a below-ground disease of fibrous feeder roots and storage roots. It produces dark, dry, sunken pits and constrictions that deform storage roots into a pinched, cracked \"pox\" appearance, and it prunes feeder roots, causing chronic stunting and yield/quality loss. There is no aerial mycelium and no sclerotia. It is strongly favored by dry, alkaline soils (high pH), which is the key environmental and management distinction.",
+    "management_a": "Reduce inoculum by deep-plowing to bury sclerotia and crop debris, rotate away from susceptible hosts, avoid moving infested soil, and improve drainage; fungicide/biological soil treatments and good sanitation of transplants help. Solarization can lower sclerotial loads in affected fields.",
+    "management_b": "Lower soil pH into the acidic range (e.g., with sulfur) since the pathogen is suppressed below ~pH 5.2, plant resistant/tolerant cultivars, rotate with non-hosts, and avoid liming sweet potato ground. Maintain adequate soil moisture, as dry alkaline conditions worsen pox.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "I've got patches of stunted, wilting, yellowing sweet potato plants in a warm part of the field, and they're rotting right at or just below the soil line. The storage roots that do form are smaller and misshapen, with sunken, rotted areas.",
+      "decisive_lay_a": "Look at the stem base and the soil and dead leaves right around it for a white cottony or fan-shaped fuzzy growth, dotted with tiny round tan-to-brown balls about the size of mustard seeds.",
+      "decisive_lay_b": "Look at the surface of the roots for sunken, corky pits and rough scabby spots, with NO white fuzzy growth and NO little mustard-seed-sized balls anywhere on the stem or soil.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "cucumber__cucurbit-downy-mildew__powdery-mildew",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Powdery Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are common foliar diseases of cucumber that cause chlorotic/yellow blotching on leaves and can defoliate vines. Growers often lump them as \"mildew.\" The key separators are the leaf surface affected, the angular vs diffuse lesion shape, and the color/texture of the sporulation (gray-purple sporangia on the underside vs white powdery growth on top). On a quick top-side glance early lesions can look similar, but the signs are diagnostic.",
+    "shared_presentation": "Yellow to chlorotic patches on mature cucurbit leaves, leaf bronzing/necrosis, premature defoliation, and reduced fruit quality. Both spread rapidly in dense canopies and are favored by humidity, so early symptomatic leaves can appear similar from the top of the canopy.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaf over and examine the underside of a fresh lesion with a hand lens in early morning \u2014 is there a fuzzy gray-to-purple sporulation confined to the underside, or a white powdery mat on the upper surface?",
+        "a_signal": "Gray-to-violet downy sporangial growth on the LOWER leaf surface only, beneath the chlorotic spot",
+        "b_signal": "White-to-gray powdery, talc-like fungal growth on the UPPER (and eventually both) leaf surface that rubs off",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape of the chlorotic/yellow lesions on the top of the leaf?",
+        "a_signal": "Angular yellow lesions sharply bounded by the leaf veins (vein-limited, blocky)",
+        "b_signal": "Diffuse, rounded white-to-yellow patches not limited by veins",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Can the surface growth be rubbed or wiped off with a finger?",
+        "a_signal": "No discrete powder to wipe; sporulation is felt-like fuzz on underside",
+        "b_signal": "White growth wipes off readily, leaving green tissue beneath",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What moisture conditions preceded the outbreak?",
+        "a_signal": "Prolonged leaf wetness, fog, dew, or rain with high humidity drives it",
+        "b_signal": "High humidity but DRY leaf surfaces; tolerates drier conditions and moderate temps",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the lesion progress and what does old tissue look like?",
+        "a_signal": "Angular spots coalesce, turn brown/necrotic, leaf curls upward and dies; rapid blight from bottom up",
+        "b_signal": "Powdery colonies expand and merge, leaves yellow then brown and stay brittle; whole-plant decline",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are stems and petioles colonized in addition to leaves?",
+        "a_signal": "Largely restricted to foliage; stems/petioles rarely show sporulation",
+        "b_signal": "White growth commonly extends onto petioles and stems as well as leaves",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Cucurbit downy mildew is caused by the obligate oomycete Pseudoperonospora cubensis. It produces angular, vein-limited chlorotic lesions on the upper leaf surface that correspond to gray-to-purple sporangial fuzz on the lower surface, visible with a hand lens during humid mornings. It requires leaf wetness and is dispersed as airborne sporangia, often arriving on regional wind currents. Lesions coalesce into necrotic blight, defoliating vines from the crown outward and exposing fruit to sunscald.",
+    "narrative_b": "Powdery mildew of cucurbits (Podosphaera fuliginea / P. xanthii) is a true fungus that forms white, talc-like colonies on the upper leaf surface, petioles, and stems. Unlike downy mildew it does not need free water and thrives in warm, humid-but-dry-canopy conditions with shaded, dense growth. The white powder is mycelium and conidial chains that wipe off; infected leaves yellow, become brittle, and die prematurely, reducing photosynthesis, yield, and fruit sugar content.",
+    "management_a": "Use resistant/tolerant cultivars and forecast-driven scouting (e.g., the cucurbit downy mildew ipmPIPE/forecast network). Improve airflow and avoid prolonged leaf wetness. Apply oomycete-targeted fungicides (e.g., cyazofamid, fluopicolide, oxathiapiprolin, mandipropamid) on a protectant schedule once disease is forecast or detected, rotating FRAC groups to manage resistance.",
+    "management_b": "Plant resistant varieties, space plants for airflow, and avoid excess nitrogen. Scout upper leaf surfaces and treat early with sulfur, potassium bicarbonate, or mineral/horticultural oils; for heavier pressure use DMI, SDHI, or QoI fungicides in rotation. Resistance is widespread, so rotate FRAC groups and incorporate biologicals/oils to preserve efficacy.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My cucumber leaves are showing yellow patches that are spreading fast through the dense part of the planting, and the older leaves are turning brown and crispy and dropping early. It's been humid, the fruit quality is going down, and from the top of the canopy I can't tell what's causing it.",
+      "decisive_lay_a": "Flip the leaf over and look at the underside, right beneath the yellow patches: you'll see a grayish to purple-violet fuzzy or downy coating that shows up only on the bottom side of the leaf.",
+      "decisive_lay_b": "Look at the top side of the leaf for a white to gray powdery, talc-like dusting that you can rub off with your finger; it starts on the upper surface and later shows up on both sides.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

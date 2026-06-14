@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__genus-diaporthe__root-and-stem-rot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Genus Diaporthe",
+  "member_b_label": "Root And Stem Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce stem lesions/cankers and can cause wilting, stand loss, and plant death in soybean, and a brown stem discoloration is common to both. In the field a grower seeing dead/dying plants with discolored stems can easily mistake Diaporthe stem canker for Phytophthora root and stem rot, especially mid-to-late season. They diverge on the location and pattern of the canker (node-anchored aerial canker vs. soil-line/root rot), the presence of fungal fruiting bodies (pycnidia/perithecia) vs. none, and root-system involvement.",
+    "shared_presentation": "Soybean plants showing brown stem discoloration, wilting, premature death, and stand loss. Both can scatter dead plants through a field and produce a brown internal/external stem lesion, leading to confusion between an aerial fungal canker and a soil-borne oomycete root/stem rot.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the primary lesion anchored \u2014 aerial stem/node above the soil, or the root system and stem base at the soil line?",
+        "a_signal": "Lesion begins on the aerial stem, typically centered at a lower node or leaf scar, and elongates up and down the stem; roots often remain functional.",
+        "b_signal": "Rot originates in the taproot and lateral roots and progresses up the stem from the soil line; root system is rotted and discolored.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion morphology \u2014 a defined sunken canker with margins, or a soft/firm diffuse rot?",
+        "a_signal": "Reddish-brown to dark, sunken elongated canker with a defined margin, often slightly girdling the stem at a node.",
+        "b_signal": "Chocolate-brown discoloration extending continuously from rotted roots up the stem as a diffuse rot rather than a discrete margined canker.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the discoloration move \u2014 does brown stem streaking start low and climb, and is there an upper-stem girdle?",
+        "a_signal": "Canker girdles at a node and kills the stem above it; leaves above the canker wilt while remaining attached (flagging).",
+        "b_signal": "Continuous chocolate-brown stripe runs upward from the soil line and roots; whole-plant wilt with leaves staying attached.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "After incubation in a moist chamber, do small black fruiting bodies (pycnidia/perithecia) erupt through the lesion surface?",
+        "a_signal": "Tiny black pycnidia/perithecia (sometimes in rows or with beaks) emerge from dead stem tissue and pods/seed \u2014 a fungal sign.",
+        "b_signal": "No fruiting bodies form; Phytophthora is an oomycete producing only microscopic oospores/zoospores in tissue, nothing visible erupting from the surface.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What soil/site conditions preceded the outbreak \u2014 poorly drained, saturated/compacted ground after heavy rain, or general warm-wet canopy conditions?",
+        "a_signal": "Favored by warm, wet weather affecting the canopy and senescing tissue; not specifically tied to soil saturation or drainage.",
+        "b_signal": "Strongly tied to poorly drained, compacted, saturated soils and low field areas; flares after heavy rainfall and waterlogging.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At what stage do plants first collapse \u2014 early seedling damping-off, or mostly reproductive-stage adult plants?",
+        "a_signal": "Stem canker typically appears on adult plants during reproductive stages (R3-R6); not a seedling damping-off agent.",
+        "b_signal": "Can kill at any stage including pre/post-emergence seedling damping-off, plus mid-season root rot of older plants.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Genus Diaporthe on soybean (including Diaporthe stem canker from D. caulivora/aspalathi, plus pod and stem blight and Phomopsis seed decay) is an aerial fungal disease. Stem canker presents as a reddish-brown to dark, sunken, margined lesion anchored at a lower node or leaf scar that elongates and may girdle the stem, causing leaves above to wilt and flag while staying attached. The diagnostic hallmark is the eventual eruption of black fungal fruiting bodies \u2014 pycnidia and perithecia \u2014 through dead stem and pod tissue, often in rows, with pod/seed infection producing shriveled, chalky seed. It is favored by warm, wet weather and typically affects reproductive-stage plants. Roots remain largely healthy.",
+    "narrative_b": "Phytophthora sojae causes root and stem rot, a soil-borne oomycete disease. It rots the taproot and lateral roots and produces a characteristic continuous chocolate-brown discoloration that extends from the rotted roots and soil line up the lower stem, causing whole-plant wilt with leaves remaining attached. It strikes hardest in poorly drained, compacted, saturated soils and low spots, flaring after heavy rain and waterlogging. It can kill at any stage, from pre- and post-emergence damping-off of seedlings to mid-season collapse of adult plants. Critically, it forms no visible fruiting bodies \u2014 only microscopic oospores in tissue. Race structure interacts with host Rps resistance genes and partial (field/tolerance) resistance.",
+    "management_a": "Use disease-free, high-quality seed and resistant/tolerant varieties for stem canker; rotate away from soybean and bury residue with tillage to reduce inoculum. Manage to avoid prolonged canopy wetness; foliar fungicides at early reproductive stages can help in high-pressure fields. Harvest promptly and dry seed to limit Phomopsis seed decay.",
+    "management_b": "Deploy Rps-gene resistant varieties matched to local race population plus high partial (field) resistance. Improve drainage, reduce compaction, and avoid planting susceptible varieties in low wet ground. Use oomycete-specific seed treatments (mefenoxam/metalaxyl, ethaboxam, oxathiapiprolin) for seedling protection; avoid early planting into cold saturated soils.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Scattered soybean plants across the field are wilting, dying early, and the stems have turned brown both inside and out, leaving thin spots in the stand. The browning runs up the lower stems and the plants just quit on me before they should have.",
+      "decisive_lay_a": "Look on the dead stems and pods for lots of tiny black specks or pimple-like bumps poking out of the dead tissue, sometimes lined up in rows or with little beak-like points. These are the fungus's fruiting bumps and mean it's the stem/pod fungus.",
+      "decisive_lay_b": "There are NO black specks or bumps of any kind erupting from the stem surface. The browning and rot is there but the stem stays smooth and bare with nothing visible growing out of it, which points to the soil-borne root and stem rot.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pair_id": "sweet-potato__java-black-rot__rhizopus-soft-rots",
+  "kind": "disease",
+  "crop": "Sweet Potato",
+  "member_a_label": "Java Black Rot",
+  "member_b_label": "Rhizopus Soft Rots",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are postharvest storage/transit rots of sweet potato roots that begin at wounds or the broken stem end and produce a softening, darkening decay. In early stages both yield a soft, moist rot of the root flesh and external discoloration, so a grower seeing a collapsing root in storage can easily confuse them. They diverge in the speed of breakdown, the type and color of fungal signs produced, the texture of the rotted tissue, and temperature/moisture preferences.",
+    "shared_presentation": "Postharvest decay of harvested sweet potato storage roots, typically entering through wounds, cut/broken ends, or bruises sustained at digging or handling. Affected roots show softening, internal discoloration, and external decay during curing, storage, or transit, often spreading root-to-root in the bin.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where does the decay originate and concentrate on the root?",
+        "a_signal": "Often begins at the stem (proximal) end or a wound, producing a firm-to-spongy darkening that advances inward",
+        "b_signal": "Begins at any wound and rapidly engulfs the whole root, frequently water-soaked at the broken/cut ends",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the root break down once symptoms appear?",
+        "a_signal": "Slower, more controlled rot; tissue dries and hardens (mummifies) over days to weeks",
+        "b_signal": "Very rapid 'leak' \u2014 root collapses to a soft, wet, dripping mass within 1-3 days",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and moisture of the rotted flesh?",
+        "a_signal": "Firm, leathery to dry rot; cut surface shows brown-to-black, relatively cohesive tissue",
+        "b_signal": "Watery, mushy soft rot; tissue disintegrates and exudes liquid with a sour, fermented odor",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What storage temperature/humidity favors the decay?",
+        "a_signal": "Favored by warm storage; a heat- and stress-associated wound pathogen, less explosive at cool curing temps",
+        "b_signal": "Favored by warm, humid conditions; markedly suppressed by proper curing and cool (~55-60F) storage",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What fungal signs appear on or just under the root surface (examine with a hand lens)?",
+        "a_signal": "Black, embedded pycnidia (pimple-like fruiting bodies) in dark stromatic tissue; thin gray-to-black mycelium, NO tall pin-heads",
+        "b_signal": "Coarse gray-white whiskery aerial mycelium bearing black sporangial 'pinheads' (Rhizopus 'whiskers') spanning root to root",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Java black rot, caused by Lasiodiplodia theobromae, is a warm-climate wound and stress pathogen that infects sweet potato roots through injuries and often the stem end. The rot advances more slowly than Rhizopus, turning flesh brown to black and producing a firm, leathery to dry mummified texture rather than a wet collapse. The diagnostic sign is the formation of black, embedded pycnidia in dark stromatic tissue beneath and on the periderm; under magnification these appear as black pimple-like fruiting bodies, and there is no tall whiskery aerial growth. It is more of a problem in hot southern production and during warm storage.",
+    "narrative_b": "Rhizopus soft rot ('ring rot' or 'leak'), caused by Rhizopus stolonifer and related species, is the classic rapid postharvest soft rot of sweet potato. Spores enter wounds and broken ends, and under warm, humid conditions the root liquefies within a day or two into a soft, watery, foul-smelling mass that drips and spreads contact-to-contact through a bin. The unmistakable sign is the coarse gray-white aerial mycelium with black sporangial pinheads ('whiskers') that grow over the root surface and bridge adjacent roots. Proper curing of wounds and prompt cool storage dramatically reduce losses.",
+    "management_a": "Minimize wounding at harvest and handling; promptly cure roots (about 85F, 90% RH for 4-7 days) to heal injuries, then hold at 55-60F. Avoid harvesting under hot, stressed conditions, sanitize storage bins and handling lines, and cull infected roots. Manage temperature to avoid prolonged warm storage that favors Lasiodiplodia.",
+    "management_b": "Prevention is centered on wound avoidance and curing: handle gently to limit bruising, cure promptly to heal wounds, then store cool (55-60F) and dry to suppress Rhizopus. Sanitize bins, water, and lines; remove and discard leaking roots immediately to stop contact spread; some operations use postharvest fungicide dips (e.g., dicloran-type) and chlorinated wash water.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "After digging, some of my stored sweet potatoes are turning soft and rotting, with the insides darkening. The decay seems to start at cut or bruised ends and is spreading from root to root in the bin during curing and storage.",
+      "decisive_lay_a": "Look for tiny black pimple-like bumps embedded in firm, dark, dried-out tissue, with only a thin gray-to-black film and no tall pin-headed whiskers standing up off the root.",
+      "decisive_lay_b": "Look for coarse gray-white whiskery fuzz standing up off the roots, tipped with tiny black pinheads, often bridging from one root to the next.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

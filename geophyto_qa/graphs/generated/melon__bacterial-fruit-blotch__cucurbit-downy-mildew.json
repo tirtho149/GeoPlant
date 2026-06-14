@@ -1,0 +1,63 @@
+{
+  "pair_id": "melon__bacterial-fruit-blotch__cucurbit-downy-mildew",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Bacterial Fruit Blotch",
+  "member_b_label": "Cucurbit Downy Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both can produce angular, vein-delimited foliar lesions on melon early in their courses, and both spread rapidly under warm, wet/humid conditions, so a scout seeing dark angular leaf spots can mistake one for the other. The confusion is mostly at the seedling/early-foliar stage; once fruit symptoms or sporulation appear the two diverge sharply.",
+    "shared_presentation": "Angular, water-soaked to dark brown foliar lesions bounded by leaf veins, appearing during warm wet weather and spreading quickly through a field, sometimes with a yellow halo and eventual leaf necrosis.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the most damaging/diagnostic symptom expressed?",
+        "a_signal": "Fruit rind develops greasy water-soaked blotches that enlarge, crack, and ooze; foliar lesions are secondary",
+        "b_signal": "Damage is confined to leaves; fruit is not directly infected (only sunburn/quality loss from defoliation)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and boundary character of the leaf lesions?",
+        "a_signal": "Irregular dark brown lesions, often along the midrib/veins, water-soaked margins, no powdery growth",
+        "b_signal": "Sharply angular yellow-to-brown lesions tightly delimited by minor veins forming a blocky mosaic",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and seedling history precede the outbreak?",
+        "a_signal": "Hot weather plus overhead moisture; often traceable to contaminated seed or transplants with seedling cotyledon lesions",
+        "b_signal": "Cool-to-moderate temps with prolonged leaf wetness/dew and high humidity; arrives on wind-blown spores from southern sources",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease move through the planting?",
+        "a_signal": "Patchy, tied to seed lots/transplant trays and splash; can be limited to certain plant clusters",
+        "b_signal": "Sweeps across the field rapidly following regional spore showers and wetness fronts, often whole-field within days",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does the underside of a lesion show in the morning when leaf is wet/under humidity chamber?",
+        "a_signal": "No fungal growth; a milky bacterial ooze streams from cut tissue in water (positive bacterial streaming)",
+        "b_signal": "Fuzzy gray-to-purple downy sporulation (sporangiophores) on the lower leaf surface within the angular lesion",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Bacterial Fruit Blotch (Acidovorax citrulli) is a seedborne bacterial disease. It often starts as water-soaked lesions on cotyledons and true leaves of seedlings, then the economically devastating phase appears on fruit: greasy, dark water-soaked blotches on the upper rind that enlarge, crack, and exude bacterial ooze, with internal rot following. Leaf lesions are irregular and vein-associated rather than crisply angular, and there is never any fungal growth. A simple cut-and-streaming test (milky bacterial exudate from cut tissue in water) confirms a bacterial cause.",
+    "narrative_b": "Cucurbit Downy Mildew (Pseudoperonospora cubensis) is an obligate oomycete foliar pathogen. It produces sharply angular, vein-delimited lesions that are yellow (chlorotic) at first then brown, giving leaves a blocky mosaic appearance; lesions never cross major veins. The diagnostic sign is fuzzy gray-to-purple downy sporulation on the lower leaf surface under humid/dewy conditions. It does not infect fruit directly, but severe defoliation reduces yield and causes sunburn and poor fruit quality. The pathogen does not overwinter in most of the US and arrives via wind-dispersed sporangia from southern overwintering sites.",
+    "management_a": "Plant certified pathogen-tested seed and inspect transplants; rogue symptomatic seedlings. Avoid overhead irrigation and working fields when wet. Apply copper-based bactericides preventively under hot wet conditions; rotate out of cucurbits and sanitize equipment and greenhouse surfaces. There is no cure once fruit are infected, so prevention via clean seed is paramount.",
+    "management_b": "Monitor the regional cucurbit downy mildew forecast (ipmPIPE/CDM forecasting) and begin protectant fungicides ahead of arrival. Use targeted oomycete-specific fungicides (e.g., FRAC-rotated products such as cyazofamid, oxathiapiprolin, mandipropamid) once risk is high, rotating modes of action to manage resistance. Improve airflow and reduce leaf wetness duration; choose tolerant cultivars where available.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My melon leaves have these dark, water-soaked angular spots that seem to be hemmed in by the leaf veins, some with a yellow ring around them, and it showed up fast during the warm muggy weather and is spreading across the field. The worst-hit leaves are starting to brown and die back.",
+      "decisive_lay_a": "No fuzzy growth at all on the spots. If you cut into the affected tissue and put it in a clear glass of water, you'll see a milky, cloudy stream oozing out from the cut piece into the water.",
+      "decisive_lay_b": "Flip the leaf over and look at the underside of the spots in the early morning: you'll see a fuzzy gray-to-purple downy coating sitting inside those angular spots.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

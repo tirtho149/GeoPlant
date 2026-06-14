@@ -1,0 +1,63 @@
+{
+  "pair_id": "soybean__charcoal-rot__genus-diaporthe",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Charcoal Rot",
+  "member_b_label": "Genus Diaporthe",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are mid-to-late-season soybean diseases that cause foliar wilt, premature death with retained leaves, and internal stem/root discoloration, and both produce tiny black fruiting structures visible on dead tissue. Field scouts frequently confuse the dark microsclerotia of charcoal rot with the black perithecia/pycnidia of Diaporthe, especially since both strike stressed plants near maturity and leave standing dead plants with petioles still attached.",
+    "shared_presentation": "Premature foliar wilting and chlorosis advancing to brown, dead leaves that remain attached to the plant; reduced vigor and yield; internal vascular/pith discoloration when the stem is split; tiny black specks on the surface of dead lower stem and root tissue. Both typically appear from R3 onward and are favored by plant stress.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What weather/soil conditions preceded symptom onset?",
+        "a_signal": "Hot, dry, drought-stressed conditions; symptoms flare during reproductive stages in droughty, high-temperature fields",
+        "b_signal": "Warm, wet, humid conditions with frequent rainfall; symptoms worsen after prolonged moisture and dense canopy",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the primary damage concentrated?",
+        "a_signal": "Lower stem and taproot/crown; infection is root- and basal-stem-centered",
+        "b_signal": "Can affect pods, seeds, upper stem and nodes (pod & stem blight / stem canker) as well as lower stem depending on species",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the external lower stem/epidermis look like?",
+        "a_signal": "Silvery-gray to ash-gray discoloration of the epidermis and subepidermal tissue (the 'charcoal' look) on the lower stem and taproot",
+        "b_signal": "Tan to brown stem cankers, or rows of black pycnidia in linear arrangement on stems and pods, without a gray ashy cast",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the black specks in the lower stem/root tissue under magnification: what are they and where do they sit?",
+        "a_signal": "Innumerable, dust-like, uniformly tiny black microsclerotia peppered densely in the pith and vascular tissue, giving a gray-black 'ground pepper' appearance when the stem is split",
+        "b_signal": "Larger, discrete black flask-shaped perithecia (or pycnidia) embedded in/erupting from the epidermis, often in linear rows on the stem surface, sometimes with cirri (spore tendrils) when wet",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the internal stem discoloration distribute as you split the stem?",
+        "a_signal": "Microsclerotia concentrated in the lower stem pith and root, fading upward; diffuse gray-black peppering",
+        "b_signal": "Discrete brown cankers or internal browning that may originate at nodes/pods (depending on species) rather than a uniform peppered pith",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Charcoal rot is a soilborne disease caused by Macrophomina phaseolina, a fungus that thrives in hot, dry conditions. It infects roots early but typically expresses during reproductive stages under drought and heat stress. The diagnostic hallmark is the massive proliferation of tiny black microsclerotia in the lower stem pith, vascular tissue, and taproot, which gives the split stem a gray-to-black 'peppered' or ash-gray appearance\u2014hence 'charcoal' rot. Affected plants wilt, mature prematurely, and die with leaves retained.",
+    "narrative_b": "Diaporthe (anamorph Phomopsis) encompasses a complex of soybean diseases including pod and stem blight, Phomopsis seed decay, and stem canker. These fungi favor warm, wet, humid weather and dense canopies. Signs are larger, discrete black fruiting bodies\u2014perithecia and pycnidia\u2014often arranged in conspicuous linear rows on dead stems and pods, and may produce spore tendrils (cirri) in moist conditions. Symptoms include stem cankers, blighted pods, moldy/cracked seed, and premature plant death.",
+    "management_a": "Manage stress: irrigate where possible to avoid drought, avoid excessive plant populations that increase water competition, and maintain balanced fertility. Rotate with non-host crops (note wide host range limits this), select tolerant varieties, and reduce compaction to promote deep rooting. No effective in-season fungicide; focus on water management and reducing reproductive-stage stress.",
+    "management_b": "Use high-quality, disease-free certified seed and seed treatments to reduce seedborne Phomopsis. Plant resistant/tolerant varieties, rotate with non-hosts (corn, small grains), and incorporate residue to speed decomposition of overwintering inoculum. Timely harvest reduces seed decay; foliar fungicides at R3-R5 can manage pod and stem blight in high-rainfall years. Avoid delayed harvest in wet conditions.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My beans started wilting and turning yellow earlier than they should have, then the leaves went brown and died but stayed hanging on the plant instead of dropping. The plants look weak and stunted, and when I split open the lower stems they're discolored inside, with tiny black specks showing up on the dead lower stems and roots.",
+      "decisive_lay_a": "When you split the lower stem, the inside (the pith and the wood just under the bark) looks like someone dusted it with fine black-gray ground pepper - countless super-tiny black specks packed densely and evenly throughout, giving it an overall gray-black smudged look rather than a few separate dots.",
+      "decisive_lay_b": "On the surface of the dead lower stem you see larger, separate, distinct black bumps (like little black pinheads) poking out through the skin of the stem, often lined up in rows; when it's wet you may notice tiny tan or cream-colored ooze threads or curls squeezing out of those bumps.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

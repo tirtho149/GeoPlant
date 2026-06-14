@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__bacterial-wilt__verticillium-wilts",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Bacterial Wilt",
+  "member_b_label": "Verticillium Wilts",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause wilting of tomato plants, but bacterial wilt (Ralstonia) produces rapid, often green wilting without leaf yellowing and is confirmed by bacterial streaming, whereas Verticillium causes slower, lower-to-upper progressive yellowing/V-shaped chlorosis with vascular browning confined to the outer wood.",
+    "shared_presentation": "A tomato plant showing wilting foliage with reduced vigor, plus brown discoloration of the internal vascular tissue when the stem is cut, leading to confusion between a bacterial vascular pathogen and a fungal vascular pathogen.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What is the regional and temperature context where wilting appeared?",
+        "a_signal": "Hot, humid conditions; warm wet soils (often >24C); concentrated in the southeastern US, Gulf Coast, and warm greenhouses",
+        "b_signal": "Cooler conditions; symptoms favored by moderate temperatures (around 21-24C) and common in cooler/temperate growing regions nationwide",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast did the wilt develop and is it accompanied by yellowing?",
+        "a_signal": "Sudden, rapid wilting of the whole plant while foliage often stays green; collapse within days",
+        "b_signal": "Slow, progressive decline starting as yellowing/chlorosis of older lower leaves moving upward over weeks",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What pattern do the leaf lesions/discoloration take?",
+        "a_signal": "Little to no distinct leaf chlorosis pattern; leaves wilt while green, lower leaves may droop first",
+        "b_signal": "Characteristic V-shaped yellow lesions at leaf margins/tips and interveinal chlorosis, often one-sided on the plant",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "When the stem is cut, how far up does the vascular browning extend and what color is it?",
+        "a_signal": "Vascular browning extends well up the stem; pith may become brown/water-soaked, dark and slimy",
+        "b_signal": "Light tan-to-brown vascular discoloration confined mostly to lower stem/roots, limited to the outer xylem ring",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When a freshly cut lower stem is suspended in clear water, does milky ooze stream from the cut?",
+        "a_signal": "Spontaneous milky-white bacterial streaming threads flow from the cut vascular tissue within minutes (positive ooze test)",
+        "b_signal": "No bacterial streaming; water stays clear (diagnosis requires culturing/microscopy for fungal microsclerotia/conidia)",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Bacterial wilt caused by Ralstonia solanacearum is a fast, devastating vascular disease favored by hot, humid weather and warm, wet soils. Infected tomato plants wilt suddenly, often while the leaves remain green, and can collapse within a few days. Cutting the lower stem reveals brown, water-soaked vascular tissue and a discolored pith, and suspending the cut stem in clear water produces a telltale stream of milky bacterial ooze. The bacterium is soilborne and spreads through water, soil, contaminated tools, and root contact.",
+    "narrative_b": "Verticillium wilt is caused by soilborne fungi (Verticillium dahliae/albo-atrum) that invade the xylem and cause a slow, progressive decline. Symptoms typically begin as yellowing of the older, lower leaves, often with characteristic V-shaped yellow lesions at leaf margins and interveinal chlorosis, sometimes affecting one side of the plant. Wilting is gradual and plants may survive but yield poorly. Cutting the stem shows light tan vascular discoloration limited to the lower stem and outer wood, with no bacterial ooze; confirmation requires lab culture revealing microsclerotia or conidiophores. The fungus survives in soil for years and is favored by cooler temperatures.",
+    "management_a": "No effective cure once infected; rogue and destroy symptomatic plants. Use grafted resistant rootstocks, long crop rotation away from solanaceous and other hosts, sanitation of tools and equipment, well-drained soil, and avoidance of moving infested soil/water. Bactericides are not effective. Soil solarization and clean transplants help reduce inoculum.",
+    "management_b": "Plant resistant cultivars (look for the \"V\" in VFN designations), practice multi-year rotation with non-hosts, maintain good fertility and avoid plant stress, and use soil solarization in warm regions to reduce microsclerotia. Remove and destroy infected debris. Fungicides are not effective against vascular Verticillium; management is cultural and host-resistance based.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My tomato plants are drooping and look weak even though the soil seems fine, and when I cut a stem open the inside is streaked brown instead of healthy green.",
+      "decisive_lay_a": "Cut the stem and stand it in a clear glass of water; if cloudy milky-white threads start oozing and streaming out of the cut within a few minutes on their own, that points to this one.",
+      "decisive_lay_b": "Cut the stem and put it in a clear glass of water; if the water stays clear with no milky ooze, it's likely this one, but you'd need a lab to grow it out and confirm the fungus under a scope.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

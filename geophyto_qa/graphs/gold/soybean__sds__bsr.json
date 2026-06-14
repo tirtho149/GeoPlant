@@ -1,0 +1,49 @@
+{
+  "pair_id": "soybean__sudden-death-syndrome__brown-stem-rot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Sudden Death Syndrome",
+  "member_b_label": "Brown Stem Rot",
+  "source": "gold (docx exemplar)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce late-season interveinal chlorosis and necrosis with green veins on soybean foliage, so leaves alone do not separate them.",
+    "shared_presentation": "Interveinal chlorosis and necrosis between green veins on upper leaves during the reproductive stages.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "What is the growth stage and field history when symptoms appear?",
+        "a_signal": "Foliar symptoms from early-to-mid reproductive (R3-R4), in fields with SDS history, early planting into cool/wet soils, or SCN issues.",
+        "b_signal": "Symptoms mainly mid-to-late reproductive (R5-R7) in cooler, moist seasons, with a history of brown stem rot.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "How dramatic is the foliar collapse and do petioles stay attached as bare skeletons?",
+        "a_signal": "Rapid defoliation with petioles remaining attached to the stem (bare-petiole skeletons).",
+        "b_signal": "Less dramatic yellowing/necrosis with fewer bare-petiole skeletons.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Split the lower stem and examine the pith versus the outer vascular tissue.",
+        "a_signal": "Pith stays white while the outer vascular tissue/cortex is brown to gray.",
+        "b_signal": "Pith is brown, often continuous and cardboard-like, through the internodes.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine roots and crown for rot and fungal growth.",
+        "a_signal": "Roots rotted, sometimes with bluish fungal growth or blue spore masses near the crown/taproot.",
+        "b_signal": "Roots relatively sound compared with the severe stem pith browning.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Because foliar interveinal chlorosis plus a white pith with brown outer vascular tissue and root rot bearing bluish growth match SDS, I classify this as Sudden Death Syndrome rather than Brown Stem Rot.",
+    "narrative_b": "Because foliar symptoms plus a continuous brown, cardboard-like pith with relatively healthy roots match BSR, I classify this as Brown Stem Rot rather than Sudden Death Syndrome.",
+    "management_a": "No effective in-season rescue; manage with SDS-tolerant varieties, improved drainage, SCN control, and avoiding early planting into cold, wet soils.",
+    "management_b": "Manage with resistant varieties and rotation away from soybean; foliar fungicides do not control brown stem rot.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true
+  }
+}

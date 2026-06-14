@@ -1,0 +1,70 @@
+{
+  "pair_id": "potato__bacterial-soft-rot__phytophthora-root-and-stem-rot",
+  "kind": "disease",
+  "crop": "Potato",
+  "member_a_label": "Bacterial Soft Rot",
+  "member_b_label": "Phytophthora Root And Stem Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause a wet, mushy rot of potato tubers and lower stems with collapse and wilting, and Phytophthora-infected (pink rot) tissue is very commonly invaded secondarily by Pectobacterium, so the final field/storage appearance can be nearly identical: soft, decayed, foul-smelling tubers and rotting stem bases. Distinguishing them on rotted tissue alone is genuinely difficult without the cut-tuber color reaction and odor cues.",
+    "shared_presentation": "Wilting, lower-stem/crown decay, and a soft, watery breakdown of belowground tissue. Affected tubers become mushy and discolored; aboveground plants wilt and may collapse. Both are favored by wet, poorly drained, waterlogged soils and warm-to-moderate temperatures, and both progress rapidly in storage.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "When the rotted tuber tissue is cut and exposed to air for 20-30 minutes, does the cut surface change color?",
+        "a_signal": "No distinctive color change; tissue is cream to tan, slimy and structureless, with sharp demarcation but no pink/red reaction",
+        "b_signal": "Cut tissue turns salmon-pink to brick-red within ~20-30 min of air exposure, then darkens to brown/black (the classic 'pink rot' reaction)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and odor of the rotted tissue?",
+        "a_signal": "Wet, slimy, macerated to a structureless mush; characteristically strong foul/putrid odor (often only when secondarily invaded the smell intensifies)",
+        "b_signal": "Initially firm and spongy/rubbery with a leathery rot; sometimes a slightly alcoholic or earthy smell unless secondarily colonized by bacteria",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the rot margin advance and demarcate from healthy tissue?",
+        "a_signal": "Soft, slimy macerated zone with a sharp line between rotted and sound tissue; collapse is rapid and complete",
+        "b_signal": "Rot advances from stolon/heel end inward with a darkening boundary; tissue stays comparatively intact/spongy before final breakdown",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under moist incubation or microscopy, are fungal/oomycete structures present?",
+        "a_signal": "No mycelium or sporangia; only bacterial ooze/slime, confirmable by Gram-negative rods",
+        "b_signal": "Coenocytic (aseptate) oomycete mycelium present; oospores/sporangia of Phytophthora can be detected in tissue",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where does stem/crown rot originate and how does it appear?",
+        "a_signal": "Blackleg-type inky-black, slimy soft rot ascending from the seed piece up the stem base (when stem-borne)",
+        "b_signal": "Brown, water-soaked decay of the stem base and roots near the soil line; reddish-brown internal vascular/cortex discoloration",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What field/soil conditions preceded the outbreak?",
+        "a_signal": "Bruising/wounding plus warm, wet, low-oxygen conditions (flooded storage, mechanical injury); favored by warm temperatures",
+        "b_signal": "Saturated, poorly drained, low-lying field areas with cool-to-moderate soil temps; recurs in the same wet spots year to year",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial soft rot, caused by Pectobacterium carotovorum ssp. carotovorum, is a wound- and water-driven maceration of fleshy potato tissue. The bacterium produces pectolytic enzymes that dissolve the middle lamella, turning tubers (and stem bases, as blackleg) into a wet, cream-to-tan, slimy mush with a sharp boundary to healthy tissue and a characteristic foul, putrid odor. It thrives under warm temperatures, free water, bruising/wounding, and low-oxygen conditions such as flooded soil or poorly ventilated, condensation-prone storage. Cut tissue shows no diagnostic pink color reaction; only bacterial ooze is present, with no mycelium or sporangia.",
+    "narrative_b": "Phytophthora erythroseptica causes pink rot, a root, stolon, and stem-base disease of potato favored by saturated, poorly drained soils. Infection typically enters at the stolon/heel end and advances inward; the most reliable hallmark is the cut-surface color reaction: exposed rotted tissue turns salmon-pink to brick-red over about 20-30 minutes, then darkens to brown/black. Affected tubers are initially firm, spongy, and rubbery with a leathery rot and a relatively intact margin, distinguishing them from the immediate slimy collapse of bacterial soft rot. Aseptate oomycete mycelium and oospores can be found in tissue. Because pink-rotted tubers are readily invaded by Pectobacterium, late-stage lesions often become secondarily soft and malodorous, masking the diagnosis.",
+    "management_a": "Minimize tuber wounding and bruising at harvest and handling; harvest mature, well-su!cured tubers (rapid wound healing/suberization with good aeration, ~50-60F and high humidity initially). Avoid harvesting wet fields and flooded soils; provide drainage. In storage, keep pulp dry, well-ventilated, and cool to suppress bacterial growth; cull rotting tubers. Sanitize equipment, water (avoid contaminated wash/hydrocooling water), and storage surfaces. There are no effective curative chemicals; control is sanitation and environment.",
+    "management_b": "Improve field drainage and avoid planting in low, wet areas; lengthen rotations out of potato (3-4+ years) to reduce oospore inoculum. Manage irrigation to prevent saturation, especially late season near maturity. Apply oomycete-targeted fungicides (e.g., mefenoxam/metalaxyl, where not resistance-compromised; phosphorous acid products) as soil/foliar or post-harvest treatments per label. Harvest mature tubers, avoid harvesting from wet spots, and store cool and dry to limit spread; monitor for and resolve mefenoxam resistance in local populations.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My plants are wilting and starting to flop over, and down at the base of the stems and on the roots the tissue has gone soft, wet, and mushy. The tubers are turning to a watery, discolored mush, and it's spreading fast in the wet, soggy parts of the field and getting worse in storage.",
+      "decisive_lay_a": "When you cut into the rotted tuber or stem, the slimy, mushy tissue stays a plain cream-to-tan color and never changes shade. There's a clean, sharp edge between the rotted part and the healthy part, but no pink, red, or salmon color shows up as it sits in the air.",
+      "decisive_lay_b": "Cut open the rotted tuber or stem and watch it for about 20 to 30 minutes: the freshly cut surface slowly turns salmon-pink to brick-red, then darkens to brown or black. That pink-to-red color change in the open air is the giveaway.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

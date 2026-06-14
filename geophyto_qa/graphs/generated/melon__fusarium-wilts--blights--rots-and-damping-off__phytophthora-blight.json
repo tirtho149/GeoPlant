@@ -1,0 +1,63 @@
+{
+  "pair_id": "melon__fusarium-wilts--blights--rots-and-damping-off__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Fusarium Wilts, Blights, Rots And Damping-Off",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both attack melon and can cause seedling damping-off, crown/root rot, vine collapse, and fruit rot, producing overlapping \"sudden wilt\" presentations. In the field a grower seeing a wilted, collapsing melon plant with a rotted crown cannot reliably tell a Fusarium vascular wilt from a Phytophthora crown/root rot without examining vascular tissue, checking for water-mold signs, and noting the water/drainage pattern of spread.",
+    "shared_presentation": "Wilting and collapse of melon plants, seedling damping-off, crown and root rot, and rot of fruit in contact with soil. Both can kill plants rapidly and both are favored by warm soils, so a field showing scattered to patchy wilting with rotted lower stems looks similar at first glance.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What is the spatial/drainage pattern of affected plants in the field?",
+        "a_signal": "Scattered individual wilting plants distributed across the field regardless of low spots; tied to where the soilborne Fusarium inoculum and susceptible host occur, worsens on stressed plants but not water-driven",
+        "b_signal": "Plants collapse in patches following low spots, wheel tracks, furrows and after heavy rain/irrigation; disease spreads downslope and along water flow (water-mold, splash- and water-dispersed)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "How does the wilt express through the day and over time?",
+        "a_signal": "Often one-sided/progressive wilt with yellowing of older leaves first, plants may recover turgor at night early on; chronic decline over days to weeks",
+        "b_signal": "Rapid, whole-plant flaccid wilt with green tissue collapsing; little recovery, plants die quickly once crown is girdled",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Is there a distinct rotted lesion at the crown/lower stem versus mainly root and vascular involvement?",
+        "a_signal": "Crown may show dry brown decay and the taproot/lower stem darkens, but damage is largely internal vascular browning rather than a soft girdling lesion",
+        "b_signal": "Dark, water-soaked, often constricted/girdling lesion at the crown and lower stem at the soil line; stem may collapse and shrivel at that point",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does fruit rot look like when fruit contacts the soil?",
+        "a_signal": "Fruit rot less characteristic; if present, tends to be firmer/drier decay associated with wounds, no conspicuous surface mold bloom",
+        "b_signal": "Soft, water-soaked fruit rot covered by a dense white, sugary/yeast-like cottony mold (sporangia) on the fruit surface, especially on the soil-contact side",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When you split the lower stem/crown lengthwise, what do the internal tissues show?",
+        "a_signal": "Continuous reddish-brown to chocolate vascular (xylem) discoloration streaking up the stem from the roots, with internal tissue otherwise intact (a true vascular wilt)",
+        "b_signal": "Brown, water-soaked soft rot of the cortex and pith with NO confined vascular streak; under humidity the surface produces white sporangial growth (water mold) rather than vascular browning",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Fusarium (Fusarium oxysporum f. sp. melonis and related Fusarium spp.) is a soilborne fungus that infects through roots and colonizes the xylem, causing a true vascular wilt plus damping-off, root/crown rot. Hallmarks are progressive, often one-sided wilting with older-leaf yellowing, chronic decline, scattered distribution of affected plants, and the diagnostic continuous reddish-brown internal vascular streaking seen when the stem is split. It persists for years as chlamydospores and is largely host-specialized; warm soils favor it.",
+    "narrative_b": "Phytophthora capsici is an oomycete (water mold) causing crown/root rot, rapid wilt, damping-off, and fruit rot on melon and many other crops. It is driven by free water: outbreaks follow heavy rain and saturated soils, spreading in patches along low spots and water flow. Look for dark water-soaked girdling lesions at the crown, soft cortical/pith rot WITHOUT a confined vascular streak, and white cottony sporangial bloom on rotted crowns and soil-contact fruit. It produces persistent oospores and has a wide host range.",
+    "management_a": "Use resistant/tolerant melon cultivars and resistant rootstocks (grafting), long rotations away from cucurbits, clean seed and transplants, and avoid moving infested soil. Manage soil pH and nutrition, avoid plant stress, and consider soil solarization/biofumigation in heavily infested ground. Fungicide options are limited; rely on resistance, sanitation, and rotation since chlamydospores persist for years.",
+    "management_b": "Improve drainage and avoid waterlogging: plant on raised beds/domed rows, use drip rather than furrow irrigation, avoid overwatering, and prevent water movement from infested areas. Rotate with non-host crops (grasses/cereals), avoid planting in low or poorly drained spots, and apply oomycete-specific fungicides (e.g., mefenoxam, with care for resistance, plus phosphonates and other modes of action) preventively before/around rain events.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Plants are wilting and collapsing in scattered to patchy spots across the field, with some seedlings flopping over and dying. The lower stems and crowns near the soil line look rotted, and melons lying on the ground are rotting where they touch the dirt. It hits fast in warm weather.",
+      "decisive_lay_a": "Slice the stem open lengthwise near the base: look for reddish-brown to chocolate-colored streaks running up the inside of the stem from the roots, while the rest of the stem tissue still looks fairly firm and normal (the rot is mainly in the \"plumbing\" streaks).",
+      "decisive_lay_b": "The lower stem and crown feel soft, mushy, and water-soaked all the way through (not just streaky), and in humid or wet weather you may see a white, cottony or moldy growth on the surface of the rotted area, with no clear brown streak confined to the inner plumbing.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

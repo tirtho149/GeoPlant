@@ -1,0 +1,70 @@
+{
+  "pair_id": "potato__bacterial-soft-rot__rhizoctonia-damping-off--blight-and-rot",
+  "kind": "disease",
+  "crop": "Potato",
+  "member_a_label": "Bacterial Soft Rot",
+  "member_b_label": "Rhizoctonia Damping-Off, Blight And Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both rot potato tubers/stems and cause stand loss, and Rhizoctonia-injured tissue is frequently invaded secondarily by Pectobacterium, so a wet rotting tuber or collapsed sprout can be attributed to either. The diseases co-occur in cool wet soils and both produce below-ground decay, making field calls ambiguous without examining odor, texture, and sclerotia.",
+    "shared_presentation": "Rotting/decaying potato tissue below or near the soil line: pre-emergence sprout death, stem girdling/cankers, and tuber breakdown, often in cool, wet, poorly drained soil, leading to gappy stands and reduced vigor.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and odor of the rotting tissue?",
+        "a_signal": "Soft, wet, mushy, slimy macerated tissue with a characteristic foul/fishy putrid odor; tissue collapses to a creamy mass",
+        "b_signal": "Firm, dry, brown sunken cankers and lesions; rot is corky/dry without the slimy mush or strong putrid smell",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant are the primary lesions located?",
+        "a_signal": "Lenticels, wounds, and the whole tuber/stem interior macerating from the inside out, often starting at injuries",
+        "b_signal": "Reddish-brown sunken cankers girdling underground stems and stolons, plus pruned sprouts; classic stem canker at/below soil line",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Are hard black sclerotia ('dirt that won't wash off') present on the tuber surface?",
+        "a_signal": "No sclerotia; tuber surface clean or slimy, decay is internal maceration with bacterial ooze",
+        "b_signal": "Black, hard, irregular sclerotia (black scurf) firmly stuck to tuber skin that cannot be washed off; white mycelial mat in humid conditions",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Does the cut/squeezed tissue exude bacterial slime versus show fungal mycelium?",
+        "a_signal": "Milky bacterial ooze/slime streams from cut surface; no fungal threads",
+        "b_signal": "Brown-tan fungal mycelial growth and dry lesion margins; may see white web-blight mycelium on lower stems in humidity",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the decay advance after onset?",
+        "a_signal": "Rapid, often within days; tuber liquefies quickly especially in warm humid storage/anaerobic conditions",
+        "b_signal": "Slow, chronic; cankers and black scurf develop over weeks, sprouts pruned early but plant may compensate",
+        "weight": "weak"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What above-ground foliar symptom accompanies the below-ground problem?",
+        "a_signal": "Sudden wilt/blackleg-like collapse, slimy black stem base, plant topples",
+        "b_signal": "Aerial tubers, rolled/purpled upper leaves, stunting from girdled stem; foliage symptoms reflect chronic stress not slime",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Bacterial soft rot, caused by Pectobacterium carotovorum ssp. carotovorum, is a wound- and lenticel-entry bacterium that produces pectolytic enzymes degrading the middle lamella, causing rapid wet maceration. Affected tubers turn into a soft, creamy, foul-smelling mush; stems may show a slimy blackleg-type collapse. It thrives under warm, wet, low-oxygen conditions (waterlogged soil, condensation in storage) and spreads readily through bruised or cut tissue. The hallmark is a wet, slimy, putrid-smelling rot with bacterial ooze and no fungal structures.",
+    "narrative_b": "Rhizoctonia disease, caused by Rhizoctonia solani (AG-3 on potato), produces pre-emergence damping-off, pruning of sprouts and stolons, reddish-brown sunken stem cankers at/below the soil line, and the diagnostic black scurf: hard black sclerotia adhering to the tuber skin. In humid weather a white mycelial collar ('white mold' web blight) can form on lower stems. Symptoms are firm and dry rather than slimy, develop slowly, and the chronic stem girdling causes aerial tubers, leaf rolling, and stunting. The sclerotia that cannot be washed off are the unambiguous sign.",
+    "management_a": "Avoid wounding and bruising; harvest in dry conditions and cure tubers properly to suberize lenticels. Improve drainage, avoid over-irrigation and waterlogging, and ensure good storage ventilation with low humidity and temperature. Use clean, certified, disease-free seed; disinfect cutting knives and equipment; reject and discard slimy lots. No effective chemical cure once maceration begins; sanitation and moisture/temperature control are primary.",
+    "management_b": "Plant certified seed free of black scurf; avoid planting into cold, wet soils and plant shallow so sprouts emerge quickly. Use crop rotation (3+ years out of potato), promote rapid emergence, and harvest promptly after vine kill to limit sclerotia formation on tubers. Seed-piece and in-furrow fungicide treatments (e.g., azoxystrobin, flutolanil, fludioxonil/pencycuron seed treatments) reduce stem canker and black scurf. Manage soil moisture and warm the soil before planting.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "Some of my potato plants never came up or died as young sprouts, and the ones that made it look weak and patchy. Down at the soil line the stems are sunken and rotting, and some of the tubers underground are breaking down into mush, especially in the cool, wet, low spots of the field.",
+      "decisive_lay_a": "The rotted tuber feels wet and slimy and breaks down inside into a soft, mushy mess that may ooze, but the outside skin stays smooth and clean with no hard bits stuck to it.",
+      "decisive_lay_b": "Hard, black, lumpy crusts that look like dirt clods or specks of soil are glued tight to the potato skin and won't scrub or wash off; in damp conditions you may also see a white cottony coating.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

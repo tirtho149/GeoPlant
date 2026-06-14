@@ -1,0 +1,63 @@
+{
+  "pair_id": "cucumber__anthracnose__cucurbit-downy-mildew",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Cucurbit Downy Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce foliar lesions on cucumber leaves that early on appear as small water-soaked or yellow/tan spots, and growers frequently conflate them in the field before signs develop. They diverge sharply on lesion shape (irregular/round vs. angular vein-bounded), the underside sporulation sign, and the presence of fruit/stem lesions, making careful inspection necessary to separate them.",
+    "shared_presentation": "Early-season chlorotic to tan/brown foliar spots on cucumber leaves that can coalesce, cause leaf blighting and defoliation, and reduce yield. From a distance both can look like a generalized leaf spot/blight, especially in warm, wet, humid weather with leaf wetness favoring both pathogens.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are lesions confined to leaves only, or do fruit and stems also show lesions?",
+        "a_signal": "Sunken, circular, water-soaked to dark lesions on fruit (often with salmon/pink spore masses) plus stem and petiole lesions are common",
+        "b_signal": "Symptoms restricted to foliage; fruit and stems are not directly infected (fruit may be small/poor from defoliation but lacks lesions)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and boundary of the leaf lesions?",
+        "a_signal": "Lesions roughly circular to irregular, tan to brown, often with a yellow halo, may tear/shothole, and cross leaf veins",
+        "b_signal": "Lesions sharply angular, bounded by leaf veins, yellow then tan, giving a blocky mosaic-like pattern",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What sign appears on the underside of a lesion under humid conditions or after a dew period?",
+        "a_signal": "Pink to salmon-orange gelatinous spore masses (acervuli with setae) form, especially on fruit and stem lesions; no downy growth",
+        "b_signal": "A fuzzy gray-to-purple downy sporulation (sporangiophores) develops on the lower leaf surface directly beneath the angular spot",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease spread and progress across the canopy?",
+        "a_signal": "Spreads by rain-splash and water; lesions enlarge and coalesce, with strong fruit-rot phase in harvest",
+        "b_signal": "Spreads rapidly by wind-borne sporangia; foliage can blight and collapse field-wide within days under favorable cool-wet weather",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature and moisture regime is driving the outbreak?",
+        "a_signal": "Favored by warm (24-30 C), wet/rainy conditions with extended leaf wetness",
+        "b_signal": "Favored by cool to moderate (15-23 C) temperatures with high humidity, fog, dew, and overcast skies",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Anthracnose (Colletotrichum orbiculare) attacks all above-ground parts of cucumber. Leaf lesions begin as water-soaked spots that enlarge into roughly circular to irregular tan-brown areas, often with a yellow halo; centers may dry, crack, and fall out (shothole). The diagnostic hallmark is on fruit and stems: circular, sunken, dark lesions that under humid conditions ooze pink to salmon-orange spore masses (acervuli, sometimes with dark setae). It spreads by rain-splash and contaminated water/equipment and thrives in warm, wet weather, with a damaging fruit-rot phase at harvest.",
+    "narrative_b": "Cucurbit downy mildew (Pseudoperonospora cubensis) is a foliage-only disease. Lesions are sharply angular, delimited by the leaf veins, appearing as pale-yellow blocks that turn tan and necrotic, giving the leaf a mosaic-like pattern. The decisive sign is on the underside directly beneath the spot: a fuzzy gray-to-purple downy sporulation visible after dew or in high humidity. The wind-dispersed sporangia move regionally, and under cool-to-moderate, humid, overcast conditions the disease can blight whole fields within days. Fruit and stems are not infected, but heavy defoliation yields small, sunscalded, poor-quality fruit.",
+    "management_a": "Use pathogen-free seed and resistant varieties; rotate out of cucurbits 2-3 years; avoid working in wet fields and overhead irrigation to limit splash; bury or remove crop debris. Apply protectant fungicides (chlorothalonil, mancozeb) on a preventive schedule, rotating in QoI/SDHI chemistries per resistance-management guidelines.",
+    "management_b": "Plant resistant/tolerant cultivars and monitor regional forecasts (e.g., the Cucurbit Downy Mildew ipmPIPE) for incoming inoculum. Promote canopy drying via spacing, orientation, and avoiding overhead irrigation. Begin targeted oomycete-specific fungicides (e.g., cyazofamid, oxathiapiprolin, mandipropamid, fluopicolide) ahead of or at first regional alert, rotating modes of action; protectants like chlorothalonil add a base.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My cucumber leaves are breaking out in yellowish to tan-brown spots that are running together into bigger dead patches, and some leaves are browning and dropping off. It started in the warm, muggy, wet stretch we've had, and the plants are looking rough with the leaves going downhill fast.",
+      "decisive_lay_a": "Look for a pink to salmon-orange slimy or jelly-like ooze in the spots, especially on the fruit and stems. The spots tend to sink in and that pinkish goo sits right in the center.",
+      "decisive_lay_b": "Flip the leaves over and look on the underside, right under the spots, for a fuzzy gray-to-purplish growth that shows up on damp mornings.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

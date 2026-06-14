@@ -1,0 +1,70 @@
+{
+  "pair_id": "cucumber__anthracnose__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce water-soaked sunken lesions on cucumber fruit and can cause foliar/runner collapse, so a grower seeing rotting fruit and dying vines may mistake one for the other. They diverge sharply in where they start, the texture and color of the sporulation sign, and their response to free water and drainage.",
+    "shared_presentation": "Sunken, water-soaked lesions on cucumber fruit plus leaf spotting and vine/runner dieback; both worsen in warm, wet weather and can rot fruit in the field or in transit.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant and where in the canopy do the first/worst symptoms appear?",
+        "a_signal": "Lesions begin on leaves and on the upper, exposed parts of fruit; foliar leaf spots are common and conspicuous before fruit rot.",
+        "b_signal": "Symptoms concentrate at the soil line, crown, and on fruit resting on or near wet ground; foliar leaf spotting is minor relative to crown/fruit and runner collapse.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the character of the leaf symptom?",
+        "a_signal": "Discrete tan-to-brown angular-to-circular leaf spots that enlarge, dry, and tear out leaving shot-hole/ragged margins; lesions follow veins.",
+        "b_signal": "Large irregular water-soaked blighted areas and sudden wilting of runners rather than crisp defined leaf spots; foliage often collapses with vine death.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the planting decline and in what pattern?",
+        "a_signal": "Gradual, lesion-by-lesion spread over days to weeks; individual spots coalesce slowly.",
+        "b_signal": "Rapid, often explosive collapse of plants in low/wet spots after heavy rain or flooding; whole sections wilt and die within days.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What field micro-conditions are driving the outbreak?",
+        "a_signal": "Spreads with warm temperatures and prolonged leaf wetness/rain-splash anywhere in the canopy; not tied specifically to standing water.",
+        "b_signal": "Tied to saturated soil, poor drainage, flooded low spots, and ponding; outbreak foci map to the wettest parts of the field.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Place the lesion in a humid chamber (or examine fresh): what sign develops on the rotting fruit surface?",
+        "a_signal": "Sunken lesion produces salmon-to-pink, gelatinous spore masses (acervuli with sticky conidia), often in concentric rings, in the center of the sunken spot.",
+        "b_signal": "Lesion is covered by a white, dense, powdery/cottony mold (sporangiophores and sporangia) like a 'powdered-sugar' or yeast-like bloom, especially on fruit on wet soil.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under the microscope, what spore/structure is produced?",
+        "a_signal": "Hyaline, single-celled curved/oblong conidia in acervuli, often with dark setae; no motile spores.",
+        "b_signal": "Lemon-shaped papillate sporangia on branched sporangiophores releasing swimming zoospores; oospores in tissue.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Anthracnose (Colletotrichum orbiculare) typically announces itself first in the foliage and on exposed fruit. Leaves develop discrete water-soaked spots that turn tan to brown, become angular to circular, and dry out so the dead tissue cracks and falls away, giving a shot-hole or ragged appearance; lesions often track the veins. On fruit, lesions are dark, circular, and sunken, and under humid conditions the centers ooze characteristic salmon-to-pink, gelatinous spore masses (acervuli), frequently in concentric rings. The disease spreads steadily by rain-splash and prolonged leaf wetness in warm weather rather than exploding overnight, and it is not specifically tied to standing water. The clincher is the pink/orange sticky sporulation in the sunken lesion plus hyaline curved conidia and dark setae under the scope.",
+    "narrative_b": "Phytophthora Blight (Phytophthora capsici) is a water-mold disease that hits hardest where soil stays saturated. Symptoms concentrate at the crown, soil line, and on fruit lying on or near wet ground; runners wilt and whole sections of the planting can collapse within days after heavy rain or flooding, with outbreak foci mapping to the lowest, wettest parts of the field. Rather than crisp defined leaf spots, you see large irregular water-soaked blighted areas and sudden vine death. The diagnostic sign on rotting fruit is a white, dense, powdery-to-cottony bloom (sporangiophores and lemon-shaped papillate sporangia) resembling powdered sugar, distinct from anthracnose's pink ooze. Microscopically it produces papillate sporangia that release swimming zoospores, plus oospores in infected tissue.",
+    "management_a": "Use disease-free/treated seed and resistant varieties where available; rotate out of cucurbits 2-3 years; promote airflow and avoid working plants when wet to limit splash spread. Apply protectant fungicides (e.g., chlorothalonil) and FRAC-rotated systemics on a preventive schedule timed to warm, wet periods; remove and destroy infected debris.",
+    "management_b": "Manage water first: improve drainage, plant on raised beds/domed rows, avoid overhead/over-irrigation, and never let fruit sit in standing water. Rotate away from all hosts (cucurbits, peppers, tomatoes, eggplant) for 3+ years since oospores persist in soil. Apply oomycete-specific materials (e.g., mefenoxam, cyazofamid, mandipropamid, phosphonates) in rotation, and scout/rogue collapsing low-spot foci immediately to slow zoospore spread.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My cucumbers are getting sunken, wet-looking dented spots on the fruit, plus some spotting on the leaves, and a few vines and runners are wilting and dying back. It's been warm and rainy, and the rot is spreading fast both in the field and after I pick them.",
+      "decisive_lay_a": "Look in the middle of the sunken spot for a pinkish-to-salmon, jelly-like ooze or sticky goo, often arranged in rings like a target.",
+      "decisive_lay_b": "Look for a white, dense, powdery or cottony coating over the rotted area that looks like the fruit was dusted with powdered sugar, especially on fruit lying on wet ground.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

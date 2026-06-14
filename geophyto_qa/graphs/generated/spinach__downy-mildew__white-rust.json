@@ -1,0 +1,63 @@
+{
+  "pair_id": "spinach__downy-mildew__white-rust",
+  "kind": "disease",
+  "crop": "Spinach",
+  "member_a_label": "Downy Mildew",
+  "member_b_label": "White Rust",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are oomycete foliar diseases of spinach that begin as pale/chlorotic angular-to-irregular spots on the upper leaf surface with corresponding growth on the underside, and both thrive under cool, wet, humid conditions. In early stages a grower sees yellowing patches on the upper surface and white-to-pale fungal-looking growth beneath, making them easy to mistake from the top. The resolving difference is the nature of the sign on the lower surface: a grayish-purple downy mold (downy mildew) versus raised, glistening white blister-like pustules that rupture to release powdery spores (white rust).",
+    "shared_presentation": "Cool-season foliar disease producing chlorotic/pale-yellow patches on the upper leaf surface (often angular and vein-delimited), with sporulation or pustules on the corresponding lower surface. Both spread under cool temperatures, high humidity, leaf wetness, and dense canopies; both can cause leaf distortion and render leaves unmarketable for fresh/processing spinach.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Turn the leaf over and examine the growth on the lower surface under the chlorotic spots: is it a soft moldy down or a raised hard blister?",
+        "a_signal": "Grayish-violet to purplish, fuzzy/cottony downy mold (sporangiophores) coating the underside; smears when rubbed",
+        "b_signal": "Raised, smooth, glistening white-to-creamy blister-like pustules (sori) that are firm and later rupture to shed white powdery spores",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the upper-surface lesion look like as it ages?",
+        "a_signal": "Irregular chlorotic patches that turn tan-brown and necrotic; leaf often puckers but lesions stay flat",
+        "b_signal": "Yellow spots directly opposite the white pustules; infected tissue may thicken; systemic infection causes swelling, blistering and white-coated distortion",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Is the host tissue distorted/hypertrophied or merely discolored?",
+        "a_signal": "Minimal hypertrophy; mostly chlorosis and later necrosis, leaf cupping from differential growth",
+        "b_signal": "Pronounced hypertrophy/hyperplasia: thickened, warty, blistered, curled leaves and swollen stems/seed stalks when systemic",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which tissues carry the diagnostic signs?",
+        "a_signal": "Primarily lamina (leaf blades), lower surface sporulation; rarely deforms stems",
+        "b_signal": "Pustules on leaves, petioles, stems, and especially deformed/galled flowering stalks and bracts in systemic plants",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what conditions did the outbreak intensify?",
+        "a_signal": "Prolonged leaf wetness, cool nights, fog/dew; explosive in dense irrigated fields and high tunnels",
+        "b_signal": "Cool, moist conditions but pustule eruption and spread favored by warm days following cool wet nights; classic in spring/fall",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Spinach downy mildew (blue mold), caused by the obligate oomycete Peronospora farinosa f. sp. spinaciae (Peronospora effusa), is the most economically important spinach disease. It first appears as irregular pale-green to yellow patches on the upper leaf surface. Flipping the leaf reveals a grayish-violet to purplish fuzzy mold (sporangiophores and sporangia) on the underside beneath the chlorotic areas. Affected tissue eventually turns tan and necrotic, and leaves may cup or pucker. It is highly destructive in cool, humid, wet conditions and spreads rapidly via airborne sporangia; many physiological races exist, driving resistance-breaking cycles.",
+    "narrative_b": "Spinach white rust, caused by the oomycete Albugo occidentalis, produces yellow chlorotic spots on the upper leaf surface that correspond to raised, glistening white blister-like pustules (sori) on the lower surface. The pustules are firm and smooth, eventually rupturing to release a white powdery mass of sporangia (distinct from a soft down). Systemic infection causes marked tissue hypertrophy and distortion: thickened, blistered, curled leaves and swollen, deformed stems and seed stalks. It favors cool, moist conditions and is geographically concentrated, historically severe in the south-central US (notably Texas and Oklahoma) spinach-production regions.",
+    "management_a": "Plant resistant cultivars (track current race designations, e.g., Pfs races) and rotate genetics as new races emerge. Improve airflow with wider spacing/lower seeding density, manage irrigation to minimize leaf wetness duration (avoid overhead/evening watering), and ensure good drainage. Apply preventive oomycete-targeted fungicides (e.g., mefenoxam/metalaxyl, mandipropamid, oxathiapiprolin, fosetyl-Al/phosphonates) on protective schedules, rotating FRAC groups to avoid resistance. Remove crop debris and volunteers; rotate away from spinach. Use clean, treated seed.",
+    "management_b": "Use resistant cultivars where available and rotate out of spinach for 2-3 years in fields with history. Reduce leaf wetness and humidity through spacing and irrigation timing. Apply oomycete-active fungicides (phosphonates/fosetyl-Al, mefenoxam, mandipropamid, oxathiapiprolin) preventively, especially in known white-rust regions during cool moist spring/fall windows. Destroy infected debris and volunteer spinach and weedy hosts to reduce inoculum, and avoid moving infested residue between fields.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My spinach has pale yellow blotches on the top of the leaves, kind of angular like they're boxed in by the veins, and the leaves are starting to pucker and curl. When I flip the leaves over there's something going on underneath. It showed up during the cool, damp weather and the thick part of the field is hit worst, and these leaves won't pass for sale.",
+      "decisive_lay_a": "Flip the leaf over: look for a soft grayish-purple to violet fuzzy or cottony coating on the underside, right under the yellow patches. It smears or smudges when you rub it with your finger.",
+      "decisive_lay_b": "Flip the leaf over: look for raised, smooth, shiny white-to-cream blister-like bumps that feel firm. Later they crack open and release a white, powdery dust.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

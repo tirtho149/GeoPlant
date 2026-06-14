@@ -1,0 +1,63 @@
+{
+  "pair_id": "corn__anthracnose__gray-leaf-spot",
+  "kind": "disease",
+  "crop": "Corn",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Gray Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce foliar lesions on corn and both can be confused in early-to-mid season scouting, especially when anthracnose leaf blight produces elongate tan-to-brown lesions on lower leaves at the same time gray leaf spot is initiating. Both favor warm humid conditions and surface residue, and both start low in the canopy, so a quick visual pass can mistake one for the other. They diverge sharply on lesion geometry, spore-structure signs, and the stalk-rot phase unique to anthracnose.",
+    "shared_presentation": "Elongate to oval necrotic lesions on lower/older corn leaves during warm, humid weather, often associated with corn residue from no-till or continuous-corn fields. Both can produce tan-to-brown discoloration with chlorotic margins and both spread upward through the canopy as the season progresses, leading to blighting of leaf tissue and potential yield loss under heavy pressure.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Is the disease confined to leaves, or does it also involve the stalk/rind with rot and lodging?",
+        "a_signal": "Anthracnose has a distinct STALK ROT and top-dieback phase: shiny black blotches on the rind and shredded, rotted pith late season",
+        "b_signal": "Gray leaf spot is essentially leaf-only; it does not produce a stalk rot or characteristic rind blackening",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and boundary of the leaf lesion?",
+        "a_signal": "Anthracnose lesions are oval to spindle-shaped (eyespot-like), tan with reddish-brown to purple borders, not bounded by veins",
+        "b_signal": "Gray leaf spot lesions are narrow, RECTANGULAR/BLOCKY, gray-to-tan and strictly delimited by the leaf veins (parallel-sided)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Are lesions vein-limited and processsing the classic 'matchstick' rectangle as they mature?",
+        "a_signal": "Anthracnose lesions enlarge irregularly and may coalesce without respecting veins, often with a water-soaked then tan center",
+        "b_signal": "Gray leaf spot lesions stay confined between veins, elongating into long gray rectangles that give the leaf a striped, gray-blighted look",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under hand lens/incubation, what fruiting structures and spores appear on the lesion?",
+        "a_signal": "Anthracnose shows black ACERVULI bearing stiff dark SETAE (bristles) and falcate (sickle-shaped, curved) hyaline conidia",
+        "b_signal": "Gray leaf spot shows gray fuzzy CONIDIOPHORES emerging from stomata bearing long, straight, multi-septate Cercospora conidia (no setae)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What residue/rotation and weather conditions precede the outbreak?",
+        "a_signal": "Anthracnose is favored by surface residue plus stress; leaf blight can appear early on seedlings and recur with the stalk phase late",
+        "b_signal": "Gray leaf spot is strongly tied to prolonged leaf wetness/high humidity in river-bottom and continuous-corn no-till fields, building from mid-season up",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Anthracnose (Colletotrichum graminicola) is a polycyclic disease with multiple phases: seedling blight, mid-season leaf blight, top dieback, and a destructive stalk rot. Leaf lesions are oval to spindle-shaped, tan with reddish-brown/purple borders and yellow halos, often coalescing irregularly without respecting veins. The diagnostic signs are black acervuli studded with dark stiff setae (bristles), producing curved, sickle-shaped (falcate) conidia. The hallmark stalk phase shows shiny blackened streaks/blotches on the rind and a rotted, shredded pith that causes premature death (top dieback) and lodging. Favored by warm wet weather, surface residue, continuous corn, and plant stress.",
+    "narrative_b": "Gray Leaf Spot (Cercospora zeae-maydis) is a foliar-only disease that is one of the most yield-limiting corn diseases in humid regions. Lesions begin as small necrotic flecks with chlorotic halos and mature into long, narrow, rectangular gray-to-tan lesions that are sharply confined by leaf veins, giving heavily infected leaves a striped, gray, blighted appearance. The pathogen produces gray conidiophores emerging through stomata bearing long, straight, multi-septate conidia (no setae, no acervuli). It thrives under extended leaf wetness and high humidity, building from the lower canopy upward in no-till, continuous-corn, and river-bottom fields. Severe blighting before grain fill cuts yield and predisposes plants to stalk rots.",
+    "management_a": "Manage anthracnose with resistant/tolerant hybrids (especially for stalk rot), crop rotation away from corn, and tillage to bury residue. Reduce plant stress (balanced fertility, avoid potassium deficiency, manage other diseases and insects) since stalk rot follows stress. Scout for early top dieback; foliar fungicides (QoI/DMI/SDHI classes) at tasseling can suppress leaf blight but do not reliably prevent the stalk-rot phase. Harvest stalk-rot-prone fields early to limit lodging losses.",
+    "management_b": "Manage gray leaf spot primarily with resistant hybrids, which is the most economical tool. Rotate out of corn and use tillage to reduce surface residue inoculum in high-risk fields. Apply foliar fungicides (strobilurin/triazole/SDHI premixes) timed from VT/R1 when disease is present on lower leaves and conditions favor spread; scout the ear leaf and below at tasseling to make spray decisions based on lesion presence and hybrid susceptibility. Avoid continuous no-till corn in chronically affected river-bottom fields.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My older, lower corn leaves are getting long tan-to-brown dead streaks with yellowish edges, and it's been hot and humid. The damage is creeping up the plant, worst in my no-till continuous-corn ground with a lot of old stalk residue still on the surface.",
+      "decisive_lay_a": "Look for tiny black specks or bumps in the dead tissue, and under a hand lens those bumps have stiff little dark hairs or bristles sticking up out of them.",
+      "decisive_lay_b": "Look for a fine grayish fuzzy growth on the dead spots (best seen on the underside in the early morning when dew is on the leaves), with the streaks running in straight rectangular shapes boxed in by the leaf veins.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

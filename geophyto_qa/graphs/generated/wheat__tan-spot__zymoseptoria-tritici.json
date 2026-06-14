@@ -1,0 +1,63 @@
+{
+  "pair_id": "wheat__tan-spot__zymoseptoria-tritici",
+  "kind": "disease",
+  "crop": "Wheat",
+  "member_a_label": "Tan Spot",
+  "member_b_label": "Zymoseptoria Tritici",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are foliar leaf-blotch diseases of wheat producing tan-to-brown necrotic lesions, often co-occur in the same canopy under wet conditions, and early lesions of both can show chlorotic haloes. Field scouts routinely confuse them; the reliable separation is microscopic/sign-based (pycnidia vs. conidiophores) plus lesion morphology.",
+    "shared_presentation": "Tan-to-brown elliptical/oval necrotic foliar lesions on wheat leaves, frequently surrounded by a yellow chlorotic halo, favored by extended leaf wetness and humid spring weather, both capable of progressing up the canopy from lower to upper leaves and reducing green leaf area and yield.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and internal structure of the necrotic lesion?",
+        "a_signal": "Tan, lens/diamond-shaped (eye-spot) lesions, often with a small dark brown pinpoint (the spot) at the center and a diffuse yellow halo",
+        "b_signal": "Irregular to oval grayish-tan to brown blotches with discrete margins, frequently delimited by leaf veins giving a more rectangular/blocky outline",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine mature lesions under a hand lens (10-20x): what fruiting bodies are embedded in the dead tissue?",
+        "a_signal": "No black pycnidia; sporulation is sparse dark conidiophores/conidia on the surface, no discrete embedded black dots",
+        "b_signal": "Abundant tiny black pycnidia embedded in rows within the gray necrotic tissue, visible as pepper-grain dots that ooze cirrhi when wet",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast do symptoms appear after infection (latent period) and how does the season influence them?",
+        "a_signal": "Short latent period (a few days), lesions appear quickly after warm wet weather and from stubble-borne ascospores early",
+        "b_signal": "Long latent period (roughly 2-4 weeks), symptoms lag well behind infection and build slowly through cool wet conditions",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature regime and inoculum source are driving the epidemic?",
+        "a_signal": "Favored by warmer wet weather; primary inoculum from infested wheat stubble/residue (ascospores from pseudothecia), strong reduced-tillage association",
+        "b_signal": "Favored by cooler, prolonged wet/humid conditions; splash-dispersed pycnidiospores moving up the canopy from lower leaves",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Is there a tan-spot toxin reaction visible as extensive chlorosis?",
+        "a_signal": "Necrotrophic effector (ToxA/ToxB) reactions can cause extensive yellowing/chlorosis disproportionate to necrosis on susceptible cultivars",
+        "b_signal": "Chlorosis is more limited and tied closely to expanding necrotic blotch margins, not a diffuse toxin-driven yellowing",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Tan Spot (Pyrenophora tritici-repentis) produces tan, lens- or diamond-shaped lesions, classically with a tiny dark center spot and a yellow halo, and on toxin-sensitive cultivars an extensive chlorosis. It overwinters on wheat residue, releasing ascospores from pseudothecia on stubble that initiate early-season infection, so it is strongly tied to continuous wheat and reduced/no-till systems. It has a short latent period and is favored by warm, wet weather. Critically, lesions lack embedded black pycnidia.",
+    "narrative_b": "Zymoseptoria tritici (Septoria tritici blotch, STB) causes irregular grayish-tan to brown blotches that are often vein-delimited and blocky, characterized diagnostically by numerous tiny black pycnidia embedded in rows within the dead tissue. It has a long latent period (about 2-4 weeks), favors cool, prolonged wet/humid weather, and spreads by rain-splashed spores moving progressively up the canopy from lower leaves. The pycnidia, which exude cream-colored cirrhi of spores when wet, are the hallmark that separates it from tan spot.",
+    "management_a": "Manage residue (tillage or rotation away from wheat for 1-2 years) to reduce stubble-borne ascospore inoculum; plant tan-spot-resistant/tolerant (insensitive to ToxA/ToxB) cultivars; apply foliar fungicides (e.g., DMIs/triazoles, QoIs, or SDHIs) targeted to protect the flag leaf around heading when conditions favor disease.",
+    "management_b": "Use resistant cultivars and avoid excessively early sowing; fungicides timed to protect upper leaves (flag-leaf/GS37-39) are key because of the long latent period; be alert to QoI (strobilurin) and DMI/SDHI resistance/insensitivity in Z. tritici populations and rotate/mix modes of action accordingly; rotation and residue management reduce inoculum.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My wheat leaves have tan-to-brown oval spots, a lot of them with a yellow ring or halo around the edge, and they're creeping up from the lower leaves toward the top of the plant after all this wet, humid spring weather. It's killing off the green and I'm worried about my yield.",
+      "decisive_lay_a": "No tiny black dots sitting inside the spots. If you look close, the dead tissue stays fairly clean-looking, maybe with just a faint dusting or darkening on the surface, but there are no distinct pepper-grain specks buried in it.",
+      "decisive_lay_b": "Lots of tiny black specks, like ground pepper or poppy seeds, dotted in little rows right inside the gray dead patches. When the leaf is wet they can push out a tiny bead of ooze.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

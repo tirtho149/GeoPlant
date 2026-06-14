@@ -1,0 +1,63 @@
+{
+  "pair_id": "cucumber__anthracnose__corynespora-leaf-spot",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Corynespora Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce roughly circular tan-to-brown foliar leaf spots on cucumber that can develop yellow halos and coalesce, and both are warm-wet-favored fungal diseases that defoliate vines\u2014so early or mid-stage lesions on leaves are easily mistaken in the field without close inspection of spot margins, fruit, and sporulation signs.",
+    "shared_presentation": "Circular to angular tan/brown necrotic leaf spots, often 5-15 mm, that may show concentric or chlorotic halos and coalesce into large blighted areas causing premature defoliation on cucumber foliage during warm humid weather.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are characteristic lesions present on the fruit as well as the leaves, or essentially leaves only?",
+        "a_signal": "Anthracnose readily infects fruit, producing sunken, circular, water-soaked dark depressions (cankers) that develop salmon/pink spore masses\u2014fruit symptoms are a hallmark.",
+        "b_signal": "Corynespora is overwhelmingly a foliar disease; fruit lesions are rare/minor, so symptoms are concentrated on leaves (and sometimes stems/petioles).",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Do leaf spots have a shot-hole/cracked center and a definite dark margin, or do they enlarge into irregular ragged water-soaked blotches?",
+        "a_signal": "Anthracnose spots enlarge into water-soaked, then dry, brown irregular areas; centers often tear out giving a ragged shot-hole, lesions tend to follow veins less rigidly.",
+        "b_signal": "Corynespora spots are typically more uniformly circular with a tan center, dark border, and frequent concentric (target-like) zonation and a yellow halo.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under hand lens/incubation, what fruiting structures and spores appear in the lesion?",
+        "a_signal": "Acervuli with dark setae and salmon-colored masses of curved/cylindrical hyaline conidia (Colletotrichum); slimy spore ooze in moist conditions.",
+        "b_signal": "Sparse gray-olive tufts of erect conidiophores bearing large, multi-septate (pseudoseptate), obclavate Corynespora conidia\u2014no setae, no salmon ooze.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "Is this in a high-humidity protected greenhouse/high-tunnel cucumber crop or an open-field crop after rainfall?",
+        "a_signal": "Anthracnose is strongly rain-splash driven and common in open field/wet foliage with overhead irrigation and frequent rain.",
+        "b_signal": "Corynespora leaf spot is especially destructive in warm, very humid greenhouse/high-tunnel cucumber production though it also occurs in field.",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the epidemic spread spatially and what defoliation pattern emerges?",
+        "a_signal": "Anthracnose spreads in splash gradients from initial foci; rapid blighting with fruit rot driving major losses at harvest.",
+        "b_signal": "Corynespora causes rapid lower-to-upper canopy defoliation with target-spot leaves dropping, often sparing fruit but collapsing the canopy.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Cucumber anthracnose (Colletotrichum orbiculare) begins as small water-soaked spots that enlarge into circular tan-brown leaf lesions whose brittle centers crack and tear out (shot-hole). Its diagnostic signature is fruit involvement: sunken, circular, water-soaked depressions that in moist weather exude salmon-to-pink masses of conidia from acervuli (which bear dark setae). The pathogen is rain- and irrigation-splash dispersed, thrives in warm wet open-field conditions, overwinters in debris and on/in seed, and can blight foliage while severely damaging fruit quality at and after harvest.",
+    "narrative_b": "Corynespora leaf spot (Corynespora cassiicola) is primarily a foliar disease of cucumber, especially damaging in warm, humid greenhouses and high tunnels. Lesions are circular tan spots with dark borders, a yellow halo, and frequently concentric target-like zonation; they coalesce and cause rapid defoliation that progresses up the canopy. Signs are sparse gray-olive sporulation of erect conidiophores bearing large, obclavate, multi-pseudoseptate conidia\u2014no setae and no salmon spore ooze. Fruit is usually spared. It survives in crop debris and spreads by airborne and splashed conidia under prolonged leaf wetness.",
+    "management_a": "Use pathogen-free/treated seed and resistant cultivars; rotate 2-3 years out of cucurbits; bury or remove debris; avoid overhead irrigation and working wet foliage. Protect with chlorothalonil or mancozeb and rotate FRAC groups (e.g., QoI/strobilurins, DMIs) per resistance-management guidance; emphasize coverage on fruit and foliage during warm wet periods.",
+    "management_b": "Reduce greenhouse/high-tunnel humidity and leaf wetness through venting, spacing, and drip irrigation; sanitize and remove infected debris; use tolerant cultivars where available; rotate out of cucurbits. Apply protectant fungicides (chlorothalonil, mancozeb) and rotate systemic FRAC groups (QoI, DMI, SDHI)\u2014note C. cassiicola has documented QoI/strobilurin resistance, so avoid solo QoI use and rotate aggressively.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My cucumber leaves have round-to-angular tan and brown spots, roughly a quarter to half inch across, some with yellow or ringed halos. In the warm muggy weather they're spreading and merging into big dead blotches, and the plants are dropping leaves early.",
+      "decisive_lay_a": "In wet or humid weather, look in the center of the spots for a slimy, salmon-pink to orange ooze or gummy film. Up close the spots may also show tiny dark bristly specks.",
+      "decisive_lay_b": "On the underside of the spots, look for a sparse, fine gray-to-olive fuzzy growth standing up out of the dead tissue, with no pink ooze and no bristles.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

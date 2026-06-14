@@ -1,0 +1,63 @@
+{
+  "pair_id": "dogwood__dogwood-anthracnose__powdery-mildew",
+  "kind": "disease",
+  "crop": "Dogwood",
+  "member_a_label": "Dogwood Anthracnose",
+  "member_b_label": "Powdery Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are common foliar diseases of flowering dogwood (Cornus florida) that produce leaf spots/blotches and can cause leaf distortion, premature defoliation, and twig dieback. Early-season leaf symptoms overlap, and both are favored by shade and reduced air movement, so a casual observer can confuse blotchy, scorched, or curled foliage. They differ decisively in the diagnostic sign (white mildew colonies vs. tan/purple-bordered necrotic blotches) and in disease severity and lethality.",
+    "shared_presentation": "Distorted, discolored dogwood leaves with marginal scorch, blotches, and premature leaf drop; both more common on plants in shaded, humid, poorly ventilated sites and both can affect new shoots, giving overlapping early-summer foliar symptoms.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Examine the leaf surface (especially upper side and new growth) for a superficial white-to-grayish powdery fungal coating that can be rubbed off.",
+        "a_signal": "No powdery coating; symptoms are necrotic tissue with no removable surface growth (at most tiny dark fruiting bodies within dead tissue).",
+        "b_signal": "White, powdery, cobwebby mycelium dusts the leaf surface and shoot tips, wiping off and leaving green/yellowed tissue beneath; classic powdery mildew sign.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Characterize the leaf lesions themselves.",
+        "a_signal": "Tan-to-medium-brown necrotic blotches with distinct purple-to-reddish borders, often starting at leaf margins/tips and coalescing into large dead areas ('leaf scorch' look).",
+        "b_signal": "Diffuse yellowing, reddish-purple discoloration, scorched margins, and crinkled/cupped leaves with patchy chlorosis, often without sharply bordered necrotic blotches early on.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Track where the disease moves beyond the leaf over the season.",
+        "a_signal": "Progresses from leaves into petioles, twigs, and main branches causing cankers, epicormic 'water sprouts,' and progressive limb/whole-tree dieback that can kill the tree.",
+        "b_signal": "Largely confined to leaves and succulent shoots; causes stunting, distortion, and premature defoliation but rarely cankers or tree death.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Check the flower bracts and lower/interior canopy vs. tender new shoots.",
+        "a_signal": "Bract spotting and blighting plus lower/interior shaded leaves affected first, with cankers forming on twigs and trunk sprouts.",
+        "b_signal": "Newest, youngest expanding leaves and shoot tips are preferentially colonized; tender flush is most heavily coated.",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "Consider the moisture conditions that drove the outbreak.",
+        "a_signal": "Favored by cool, wet, prolonged-leaf-wetness springs and rainy seasons; worsens in wet years and shaded, moist understory sites.",
+        "b_signal": "Favored by warm days with high humidity but DRY leaf surfaces (no free water needed); thrives in dry-canopy, shaded, low-airflow conditions.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Dogwood anthracnose, caused by Discula destructiva, is a destructive disease primarily of Cornus florida and C. nuttallii. It begins as tan leaf blotches and spots with purple borders, often at margins, that expand to scorch leaves; bracts may also be spotted. Critically, the fungus moves from leaves into petioles and twigs, forming cankers and stimulating epicormic water sprouts along the trunk and lower limbs. These sprouts become infected and provide a pathway into larger branches and the trunk, leading to progressive dieback and frequently tree death, especially on stressed, shaded, understory trees at higher elevations and in cool, wet springs. Tiny acervuli (fruiting bodies) form in dead tissue. Disease is most severe in moist, shaded, cool sites.",
+    "narrative_b": "Powdery mildew of dogwood, caused mainly by Erysiphe pulchra (anamorph Oidium), is a near-ubiquitous foliar disease of flowering dogwood, particularly cultivars of C. florida. It produces a white-to-grayish superficial powdery mycelium on leaf surfaces and shoot tips, which can be subtle on dogwood and accompanied by yellowing, reddish-purple blotching, marginal scorch, and crinkled, cupped, or stunted leaves. It is favored by warm temperatures and high humidity but does not require leaf wetness, thriving in shaded, crowded, poorly ventilated plantings. Though it causes cosmetic damage, premature defoliation, reduced vigor, and poor growth on young trees, it is rarely lethal. Resistant cultivars (e.g., 'Appalachian' series) and improved airflow greatly reduce it.",
+    "management_a": "Plant resistant/tolerant species or cultivars (Cornus kousa and resistant C. florida x kousa hybrids such as 'Stellar' series). Improve tree vigor: plant in sites with morning sun and good air movement, mulch, water during drought, avoid wounding and stress. Prune out and destroy cankered/dead twigs and remove water sprouts during dry weather; rake and destroy fallen leaves. Avoid overhead irrigation. Protective fungicides (e.g., chlorothalonil, mancozeb, or propiconazole) applied at budbreak and during leaf expansion in cool wet springs protect high-value trees. Avoid transplanting wild understory dogwoods.",
+    "management_b": "Select resistant cultivars (C. florida 'Appalachian Spring' and the mildew-resistant 'Appalachian' series; many C. kousa types). Increase air circulation and sunlight by proper spacing and selective pruning; avoid excess nitrogen that pushes succulent susceptible growth. Rake fallen leaves. Where needed on high-value or nursery stock, apply fungicides at first sign and on new flush: horticultural oils, potassium bicarbonate, sulfur, myclobutanil, propiconazole, or trifloxystrobin, rotating modes of action. Because it is rarely lethal, cultural control plus resistant cultivars is usually sufficient for landscape trees.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My dogwood leaves are looking rough \u2014 they're twisted and discolored with brown, scorched edges and blotchy dead patches, and a bunch of them are dropping early. The new shoots look affected too. It's worst on the trees in the shady, damp corner of the yard where the air doesn't move much.",
+      "decisive_lay_a": "No powdery or dusty film on the leaves at all. The damage is just brown, dead, dried-out tissue that does NOT rub or wipe off. If you look very closely you might see only a few tiny dark specks sitting down in the dead brown areas, but nothing fuzzy or removable on the surface.",
+      "decisive_lay_b": "A white or grayish powdery, cobwebby coating dusting the top of the leaves and shoot tips, like someone sprinkled flour or talc on them. It wipes or rubs off with your finger, leaving green or slightly yellowed leaf underneath.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

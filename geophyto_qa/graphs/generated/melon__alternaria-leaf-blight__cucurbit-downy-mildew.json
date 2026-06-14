@@ -1,0 +1,63 @@
+{
+  "pair_id": "melon__alternaria-leaf-blight__cucurbit-downy-mildew",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Alternaria Leaf Blight",
+  "member_b_label": "Cucurbit Downy Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce foliar lesions on melon leaves that begin as small chlorotic/yellow spots and expand, causing blighting and defoliation under warm, humid conditions. Growers and scouts frequently confuse the early angular-to-rounded yellowing of both, and both can devastate canopies mid-to-late season, so the pair is genuinely confusable until lesion shape and the underside sign are examined.",
+    "shared_presentation": "Yellow to chlorotic foliar spots on older leaves first, progressing to brown necrosis, leaf blighting, premature defoliation, and reduced fruit quality (sunscald, poor sugar). Both favor warm, wet, humid weather with extended leaf wetness and both spread by wind and rain-splash through the canopy.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are lesions bounded by leaf veins (angular) or do they cross veins?",
+        "a_signal": "Spots are roughly circular to irregular, expanding across veins, not confined to vein boundaries",
+        "b_signal": "Lesions are angular and blocky, sharply delimited by the smallest leaf veins, giving a mosaic-like pattern",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Do enlarged lesions show concentric target-like rings?",
+        "a_signal": "Mature spots develop dark concentric (zonate) rings, a bullseye target-spot pattern",
+        "b_signal": "Angular yellow patches turn uniformly tan-brown with no concentric ringing",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What sign appears on the leaf UNDERSIDE in early-morning humidity?",
+        "a_signal": "Sparse dark olive-brown to black powdery/velvety mold (conidia) on top or underside of necrotic tissue, no fuzzy down",
+        "b_signal": "Fine grayish-purple to dark downy (felty) sporulation in a layer on the underside beneath each angular yellow spot",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the epidemic move through the field?",
+        "a_signal": "Builds steadily over weeks, worse on stressed/older foliage and after fruit set",
+        "b_signal": "Explosive, sweeping the field in days under cool nights with heavy dew or rain",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Which temperature/moisture regime drives sporulation?",
+        "a_signal": "Favored by warm temperatures (~25-32C) with leaf wetness; tolerates hotter, drier spells",
+        "b_signal": "Favored by cooler, very wet conditions (~15-23C) with prolonged dew, fog, and high humidity",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Alternaria leaf blight is a fungal disease that starts on the oldest, crown leaves as small tan to brown flecks that enlarge into roughly circular spots, often developing characteristic dark concentric (target/zonate) rings as they mature. Lesions coalesce and the leaf curls upward and dies, with blighting moving outward from the crown. The fungus survives in crop debris and seed and produces olive-brown to black powdery conidia on dead tissue rather than a felty down. It is most aggressive on plants stressed by heavy fruit load, low fertility, or hot humid weather, and severe defoliation exposes fruit to sunscald.",
+    "narrative_b": "Cucurbit downy mildew is an oomycete (water-mold) disease, not a true fungus. It produces pale green to yellow lesions on the upper leaf surface that are sharply angular because they are confined by the leaf veins, creating a blocky mosaic. The diagnostic feature is the grayish-purple to dark, fuzzy downy sporulation on the leaf underside beneath each lesion, visible in humid early mornings. The pathogen does not overwinter in most of the US and arrives on wind-blown sporangia from southern overwintering sites, sweeping fields explosively under cool, wet, dewy conditions and causing rapid blighting with little fruit infection.",
+    "management_a": "Rotate out of cucurbits 2+ years, use pathogen-free/treated seed and resistant varieties, improve air movement and avoid overhead irrigation, maintain balanced fertility to reduce stress, and remove crop debris. Apply protectant fungicides (chlorothalonil, mancozeb) on a preventive schedule, rotating in QoI/SDHI or other targeted FRAC groups for resistance management; time sprays to the warm-humid period and fruit set.",
+    "management_b": "Monitor the cucurbit Downy Mildew ipmPIPE forecast for inbound sporangia and begin protectant sprays ahead of arrival. Use chlorothalonil/mancozeb as a base plus oomycete-specific fungicides (cyazofamid, mandipropamid, oxathiapiprolin, fluopicolide, propamocarb) in rotation by FRAC group, since the pathogen resists older mefenoxam/strobilurins. Promote air flow, avoid extended leaf wetness, plant tolerant varieties, and scout undersides at dawn.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My older melon leaves down low are showing yellow spots that turn brown and crispy, and the worst leaves are drying up and dropping off. It got going during that warm, muggy, wet stretch, and now I'm worried about the fruit getting sunburned and not sweetening up.",
+      "decisive_lay_a": "On the dead brown patches, look for a sparse dark olive-brown to black dusty or velvety mold growing right on the spot (top or bottom of the leaf), but with no soft fuzzy down underneath.",
+      "decisive_lay_b": "Flip the leaf over and look under each yellow, blocky spot for a fine grayish-purple to dark felt-like fuzzy down coating the underside.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

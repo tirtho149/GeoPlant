@@ -1,0 +1,70 @@
+{
+  "pair_id": "potato__late-blight__tomato-spotted-wilt-virus",
+  "kind": "disease",
+  "crop": "Potato",
+  "member_a_label": "Late Blight",
+  "member_b_label": "Tomato Spotted Wilt Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both can produce dark, irregular necrotic blotches and chlorosis on potato foliage that a scout may lump together as \"blight/spotting.\" Early TSWV foliar necrosis and bronzing can superficially mimic late blight lesions, and both can cause rapid foliage decline and affect tubers, prompting field confusion before signs are examined.",
+    "shared_presentation": "Dark necrotic to chlorotic foliar lesions with associated leaf death, stem involvement, possible wilting/collapse of shoots, and internal tuber discoloration/necrosis that can lead a grower to suspect a single foliar \"blight\" complex.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Under humidity (early morning or after a leaf is bagged overnight), does white sporulation appear at lesion margins on the leaf underside?",
+        "a_signal": "White, downy sporangiophore growth ('white mold ring') at the lesion edge on the underside of the leaf, especially in cool wet weather",
+        "b_signal": "No fungal/oomycete sporulation ever; lesions stay dry. Thrips (vector) may be found in growing points",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Are lesions water-soaked, rapidly spreading and greasy, or are they patterned with concentric rings, ringspots and bronzing?",
+        "a_signal": "Water-soaked, greasy, rapidly enlarging brown-black blotches with pale halo, no ring patterns",
+        "b_signal": "Concentric chlorotic/necrotic ringspots, line patterns, bronzing and mottling on leaves",
+        "weight": "supporting"
+      },
+      {
+        "axis": "habit",
+        "question": "Is the symptomatic plant distribution a spreading focus/patch, or scattered single plants across the field?",
+        "a_signal": "Expanding focal patches that enlarge downwind from an initial infection point during cool wet spells",
+        "b_signal": "Randomly scattered individual plants reflecting independent thrips-vectored infections",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "Does the whole plant show systemic stunting, top necrosis and apical dieback, or localized leaf/stem lesions on otherwise normal canopy?",
+        "a_signal": "Localized lesions on leaves and stems of a vigorous canopy that coalesce; not systemic stunting",
+        "b_signal": "Systemic one-sided stunting, distorted top growth, apical necrosis ('spotted wilt') and chlorosis",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "What does the tuber internal symptom look like when cut?",
+        "a_signal": "Reddish-brown granular dry rot spreading irregularly inward from the skin, often invaded by secondary soft rot",
+        "b_signal": "Necrotic arcs, flecks, concentric rings or net-necrosis in the tuber flesh; surface may show raised/sunken rings",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Are symptoms tied to cool, wet, high-humidity weather, or to hot, dry conditions with high thrips pressure?",
+        "a_signal": "Outbreaks follow cool nights, leaf wetness, fog and rain (10-24C, RH>90%)",
+        "b_signal": "Worsens with warm, dry weather favoring thrips activity and movement",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Late blight is an explosive oomycete disease driven by cool, wet weather. Look for water-soaked, greasy brown-black lesions that enlarge rapidly, often with a pale yellow-green halo. The diagnostic clincher is the delicate white downy sporulation that forms on the underside of leaf lesions at their margins under high humidity. Disease appears as spreading foci that race through a canopy and move to tubers, causing a firm reddish-brown granular dry rot beneath the skin. Stems develop dark, brittle lesions. The whole field can collapse within days in conducive weather.",
+    "narrative_b": "Tomato spotted wilt is a thrips-vectored tospovirus producing systemic, plant-wide symptoms rather than spreading lesions. Affected plants are scattered randomly because each results from an independent thrips feeding event. Foliage shows bronzing, concentric chlorotic/necrotic ringspots, line patterns and mottling, with one-sided stunting and apical (top) necrosis and dieback. There is never any sporulation or surface mold. Tubers, when affected, show necrotic arcs, concentric rings and net-like internal necrosis. Confirm by ELISA/PCR for the virus and by finding thrips in the growing points.",
+    "management_a": "Apply protectant and systemic late-blight fungicides preventively on a weather/forecast-driven schedule (DSV/Blitecast), use resistant cultivars and certified seed, destroy cull piles and volunteers, improve canopy drying, kill vines before harvest, and harvest tubers dry to limit tuber rot.",
+    "management_b": "There is no cure for infected plants; rogue and destroy symptomatic plants, manage thrips populations and weed/volunteer reservoirs that host the virus and vector, use virus-tested seed, control thrips with insecticides/reflective mulches, and avoid planting near infected ornamentals/vegetables.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My potato plants have dark, dead-looking blotches on the leaves that turn brown and die off, and some of the shoots are wilting and collapsing. When I dig up tubers, a few have dark, off-color flesh inside. It looks like some kind of blight running through the patch.",
+      "decisive_lay_a": "On the underside of the leaf, right at the edge of the dead brown blotch, look for a fuzzy white ring or downy white mold growth. It shows up best in cool, wet, foggy weather or early morning when leaves are damp.",
+      "decisive_lay_b": "The dead spots stay completely dry with no white fuzz or any growth on them, ever. Also check the tender new growing tips for tiny slender insects (thrips) crawling in the buds.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pair_id": "oak__anthracnose__oak-wilt",
+  "kind": "disease",
+  "crop": "Oak",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Oak Wilt",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce browning/discoloration of oak foliage and premature leaf drop in spring-summer, so a homeowner seeing dead-looking leaves and defoliation may suspect either. They diverge sharply in lethality, the vascular vs. leaf-tissue nature of the damage, and the diagnostic signs (fungal acervuli along veins vs. xylem streaking and fungal mats), making them confusable at first glance but cleanly separable on closer inspection.",
+    "shared_presentation": "Discolored/browning oak leaves with premature leaf drop in spring through early summer, often alarming the observer into thinking the tree is dying.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Is the damage confined to leaves/twigs or does it involve the whole-canopy and vascular system?",
+        "a_signal": "Damage limited to foliage and small twigs, often on lower/interior canopy; tree overall vigorous",
+        "b_signal": "Whole-branch and whole-crown decline progressing through the canopy, indicating systemic vascular involvement",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the pattern of leaf discoloration?",
+        "a_signal": "Irregular brown blotches/lesions following along and between leaf veins, leaves curled/distorted",
+        "b_signal": "Leaves bronze/brown from the margins and tip inward (water-soaked then necrotic), often half-green/half-brown, leaves shed while still partly green",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast and in what direction does the disease move?",
+        "a_signal": "Slow, cosmetic, recurs in cool wet springs; tree leafs out again and recovers",
+        "b_signal": "Rapid wilt and defoliation over weeks; in red oaks the whole tree can die in a single season, spreading tree-to-tree via root grafts",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Which oak group is affected and how severely?",
+        "a_signal": "White and red oak groups both affected, damage minor",
+        "b_signal": "Red oak group (pointed lobes) killed rapidly; white oak group resists, declining slowly branch-by-branch",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Split a wilting branch and peel the bark, and inspect leaf veins under a lens: what signs are present?",
+        "a_signal": "Tiny dark fungal fruiting bodies (acervuli) on dead vein tissue of leaves; NO vascular streaking in sapwood",
+        "b_signal": "Brown/black streaking or discoloration in the outer sapwood (xylem) of wilting branches; pressure pads/fungal mats may form under bark with a fruity odor",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Oak anthracnose, caused by Discula species, is a foliar/twig disease favored by cool, wet spring weather as leaves expand. It produces irregular brown blotches and lesions that follow leaf veins, with leaf curling, shoot blight, and defoliation of lower and interior branches. Damage is largely cosmetic; trees refoliate and remain healthy. The diagnostic sign is tiny acervuli (fungal fruiting bodies) on necrotic vein tissue, with no discoloration of the sapwood.",
+    "narrative_b": "Oak wilt, caused by the fungus Bretziella fagacearum, is a lethal systemic vascular wilt. The fungus plugs the xylem, causing leaves to bronze from the margins inward and drop while still partly green, with rapid crown-wide wilting. Red oaks often die within a single season; white oaks decline more slowly, branch by branch. It spreads overland by sap-feeding (nitidulid) beetles attracted to fresh wounds and pheromonal fungal mats, and locally through interconnected root grafts. The hallmark is brown streaking in the outer sapwood of wilting branches and, on red oaks, fungal pressure mats beneath the bark.",
+    "management_a": "Manage as a low-priority cosmetic problem: rake and destroy fallen leaves, prune out dead twigs, and improve air circulation and tree vigor (water during drought, mulch). Fungicides are rarely warranted on landscape oaks except for high-value specimens, applied at bud break in chronically severe sites.",
+    "management_b": "Treat as a destructive, regulated disease. Do NOT prune oaks during the growing season (typically avoid April-July, region-dependent) to prevent beetle-vectored infection; paint any unavoidable wounds immediately. Sever root grafts via trenching/vibratory plow between infected and healthy oaks. Promptly remove and properly dispose of (chip, debark, or burn; never store as firewood with bark) red oaks that die, since they form spore mats. High-value white/live oaks can be treated with macroinfusion of propiconazole. Confirm via lab culture or molecular testing.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My oak's leaves are turning brown and looking scorched, and the tree is dropping a lot of leaves way too early this spring. It's worrying me because it almost looks like the whole tree might be dying.",
+      "decisive_lay_a": "Look closely along the dead brown veins on the leaves for very tiny dark specks or pinhead bumps, while the wood under the bark of the branches stays normal-colored (no streaking inside).",
+      "decisive_lay_b": "Peel back the bark on a wilting branch and look for brown or black streaks running through the wood just under the bark; you may also find flat fungal pads under the bark that give off a sweet, fruity, fermented smell.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

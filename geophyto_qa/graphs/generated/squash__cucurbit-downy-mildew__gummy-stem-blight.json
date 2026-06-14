@@ -1,0 +1,70 @@
+{
+  "pair_id": "squash__cucurbit-downy-mildew__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Squash",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-irregular chlorotic/necrotic leaf lesions on squash foliage during warm, humid weather and can defoliate plants rapidly, so early lesions on the leaf blade look alike. They diverge on lesion geometry, sporulation signs on the underside, and\u2014decisively\u2014gummy stem blight's stem cankers with amber gum exudate and black pycnidia, which downy mildew never produces.",
+    "shared_presentation": "Yellow-to-brown angular or irregular leaf spots that coalesce, leading to leaf scorching and defoliation under warm, wet, humid conditions; both reduce canopy and yield and appear mid-to-late season.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are symptoms confined to the leaf blade, or do they also involve stems, crowns, and fruit?",
+        "a_signal": "Strictly foliar\u2014lesions only on leaf laminae; stems and fruit remain unaffected by the pathogen itself",
+        "b_signal": "Affects leaves AND stems/crowns and fruit; look for stem cankers and fruit rot in addition to leaf spots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and boundary of the leaf lesion?",
+        "a_signal": "Sharply angular lesions delimited by leaf veins, giving a blocky mosaic appearance (vein-bounded)",
+        "b_signal": "Roughly circular to irregular tan/brown lesions often starting at the leaf margin, not strictly vein-limited, sometimes with concentric zonation",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What sign appears on the underside of a lesion held in humidity?",
+        "a_signal": "Fine downy gray-to-purple sporulation (sporangiophores) on the lower leaf surface beneath the lesion",
+        "b_signal": "No downy growth; instead tiny black pycnidia (pepper-grain dots) embedded in necrotic tissue, often on both surfaces",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Does the stem show a canker with amber gummy exudate and black fruiting bodies when examined?",
+        "a_signal": "No stem canker and no gum; the pathogen is an obligate biotroph restricted to living leaf tissue with downy sporulation only",
+        "b_signal": "Tan-to-dark stem/crown canker that oozes amber-brown gummy droplets and is studded with black pycnidia/perithecia\u2014diagnostic",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the epidemic spread through the planting?",
+        "a_signal": "Rapid regional spread via airborne sporangia, often arriving as a community-wide front tracked by forecasting networks",
+        "b_signal": "Spreads from infested debris, seed, and splash; advances within and between adjacent plants, often worse where vines are crowded or wounded",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions favor the disease?",
+        "a_signal": "Cool-to-moderate temps with extended leaf wetness, dew, and high humidity; favored by overcast wet spells",
+        "b_signal": "Warm, wet, humid conditions; favored by dense canopies, overhead irrigation, wounding, and stress",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Cucurbit downy mildew is caused by the obligate oomycete Pseudoperonospora cubensis. On squash it is an exclusively foliar disease: vein-delimited angular chlorotic lesions appear on the upper leaf surface and, under humidity, the lower surface beneath each lesion shows a downy gray-to-purplish mat of sporangiophores. The pathogen cannot infect stems or fruit and does not overwinter in most of the US, instead arriving each season as wind-dispersed sporangia from southern overwintering sites\u2014movement that is monitored by regional forecasting networks. Lesions coalesce, leaves brown and curl, and severe defoliation can collapse the canopy within days.",
+    "narrative_b": "Gummy stem blight, caused by Stagonosporopsis cucurbitacearum (anamorph Phoma cucurbitacearum; the black-rot phase on fruit), is a fungal disease attacking leaves, stems, crowns, and fruit. Foliar symptoms are circular-to-irregular tan/brown spots, often beginning at leaf margins with concentric zonation and water-soaking. The diagnostic feature is on the stem and crown: tan-to-dark cankers that exude amber-to-reddish-brown gummy droplets and become peppered with black pycnidia and perithecia. The fungus is seedborne and survives in crop debris, spreading by rain splash and entering through wounds; warm, wet, crowded conditions accelerate it, and fruit infection (black rot) causes major postharvest loss.",
+    "management_a": "Use resistant/tolerant cultivars where available and follow regional downy mildew forecasting/IPM alerts to time sprays. Apply oomycete-targeted fungicides (e.g., cyazofamid, fluopicolide, oxathiapiprolin, mandipropamid) preventively before forecasted arrival, rotating FRAC groups; protectants like chlorothalonil/mancozeb provide a base. Improve airflow and reduce leaf wetness duration; avoid overhead irrigation late in day. Scout lower leaf surfaces for downy sporulation.",
+    "management_b": "Plant pathogen-free/treated seed and resistant varieties; rotate out of cucurbits 2-3 years and bury or remove debris. Avoid plant wounding and overhead irrigation; promote canopy drying and manage with proper spacing. Apply fungicides (e.g., FRAC 11 strobilurins where not resistant, plus tebuconazole/difenoconazole, boscalid/fluopyram, or chlorothalonil) on a preventive schedule, rotating modes of action. Manage insect/mechanical wounds that create entry points and steam/sanitize greenhouse surfaces.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My squash leaves are getting yellow-to-brown spots with kind of jagged, angular edges that keep spreading and running together until whole leaves look scorched and dry up. It's been warm, wet, and humid, and the plants are starting to thin out and drop leaves, mostly on the older growth, which has me worried about losing yield.",
+      "decisive_lay_a": "Flip the leaf over and look at the underside of those spots: you'll see a faint fuzzy or downy gray-to-purple coating, but the stems and crown stay clean with no oozing or cracking. The trouble lives only in the leaves.",
+      "decisive_lay_b": "Check the main stems and the crown at the base: look for tan-to-dark sunken cracked areas that weep sticky amber-brown gummy droplets, often peppered with tiny black specks. That gummy, oozing stem damage is the giveaway.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

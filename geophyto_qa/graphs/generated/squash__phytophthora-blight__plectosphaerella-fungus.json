@@ -1,0 +1,63 @@
+{
+  "pair_id": "squash__phytophthora-blight__plectosphaerella-fungus",
+  "kind": "disease",
+  "crop": "Squash",
+  "member_a_label": "Phytophthora Blight",
+  "member_b_label": "Plectosphaerella Fungus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne pathogens of squash that produce crown/collar rot, vascular involvement, wilting, and vine collapse, so in the field a plant that wilts and dies from a rotted base can be attributed to either. The overlap is greatest when only the wilted, collapsing plant with a brown crown is examined without looking for surface signs or assessing speed.",
+    "shared_presentation": "A squash plant that wilts and collapses associated with rot at the soil line. Both cause crown/collar/root rot, water-soaked-to-brown basal tissue, vascular discoloration, and eventual death of the vine, and both originate from soilborne inoculum.",
+    "forks": [
+      {
+        "axis": "progression",
+        "question": "How fast does the plant go from healthy to collapsed?",
+        "a_signal": "Explosive, sudden wilt and collapse within days, often following heavy rain or flooding; plants down in patches almost overnight",
+        "b_signal": "Slow, chronic decline with stunting and gradual vine deterioration, typically late-season yield decline rather than rapid death",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What were the moisture and weather conditions preceding symptoms?",
+        "a_signal": "Warm, saturated soil, standing water, low spots in field, heavy rainfall or irrigation just before outbreak",
+        "b_signal": "Stress-associated chronic decline not tied to a flooding event; often cooler-season or accumulated stress, soilborne complex",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are the fruit affected, especially fruit in contact with soil?",
+        "a_signal": "Fruit develop large soft-rot lesions, especially on the soil-contact side, that rapidly rot the whole fruit",
+        "b_signal": "Disease centers on roots, crown, and vascular tissue; fruit not characteristically rotted with surface mold",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and character of the basal/crown rot?",
+        "a_signal": "Soft, watery, water-soaked rot of crown and stem that collapses quickly",
+        "b_signal": "Firmer rot/discoloration of crown and roots with vascular browning and stunting; dry decline rather than soft watery collapse",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What sign appears on the rotted crown or fruit surface under humid conditions (examine the surface)?",
+        "a_signal": "Abundant dense white, powdery-sugar-like sporulation (sporangia of an oomycete) coats infected crown and fruit",
+        "b_signal": "No white powdery oomycete bloom; at most sparse pale/cream fungal growth, with diagnosis requiring culture/microscopy of acervuli and slimy conidial masses",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Phytophthora Blight (Phytophthora capsici) is an aggressive oomycete that strikes after warm, saturated-soil conditions. Plants in low or flooded areas wilt and collapse rapidly, often in expanding patches following rain. The crown and stem show soft, water-soaked rot, and fruit touching the soil develop large soft-rot lesions. The hallmark sign is abundant dense white, powdered-sugar-like sporulation (sporangia) on rotted crowns and fruit under humid conditions.",
+    "narrative_b": "Plectosphaerella Fungus (Plectosphaerella cucumerina) is a soilborne ascomycete associated with chronic root, crown, and collar rot and late-season vine decline in squash. It causes stunting, vascular discoloration, and gradual collapse rather than explosive death, and it is frequently part of a soilborne fungal complex contributing to yield decline. It lacks the conspicuous white oomycete bloom; confirmation typically requires culturing and microscopic identification of its acervuli and slimy conidial masses.",
+    "management_a": "Improve drainage and avoid planting in low/wet spots; use raised beds, rotate out of cucurbits/solanaceous hosts for several years, avoid moving soil/water between fields, and apply oomycete-specific fungicides (e.g., mefenoxam/oxathiapiprolin) preventively. Do not harvest or leave infected fruit that sporulate.",
+    "management_b": "Manage as a soilborne decline complex: rotate with non-host crops, reduce plant stress, improve soil health and drainage, use clean transplants and sanitation, and remove crop debris. Confirm by lab culture/microscopy since it co-occurs with Fusarium and other soil fungi; broad-spectrum soilborne fungicide programs and resistant/tolerant cultivars where available help.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My squash plant suddenly wilted and flopped over, and down at the soil line the stem went soft and rotted, turning water-soaked and then brown. The vine is dying back and the rot seems to have started right at the base near the ground.",
+      "decisive_lay_a": "Look for a heavy, bright-white powdery or sugar-like fuzzy coating blanketing the rotted crown and any infected fruit, especially in humid or wet weather.",
+      "decisive_lay_b": "No white powdery bloom at all; at most a thin, sparse pale or cream-colored growth. You really can't tell it apart by eye and would need a lab to look at the tiny spore structures and slimy spore goo under a microscope.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

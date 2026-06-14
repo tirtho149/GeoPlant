@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__bacterial-pustule-of-soybean-disease__frogeye-leaf-spot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bacterial Pustule Of Soybean Disease",
+  "member_b_label": "Frogeye Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small, discrete foliar lesions on soybean leaflets during the vegetative-to-reproductive transition and can co-occur, leading scouts to confuse early angular/spotty lesions. They differ fundamentally in causal agent (bacterium vs fungus), giving distinct signs (pustule with bacterial ooze vs fungal sporulation) and lesion architecture that resolve the pair.",
+    "shared_presentation": "Small, scattered tan-to-brown foliar lesions on soybean leaflets, often appearing mid-to-late season on the upper canopy, sometimes with a yellow halo, that can give leaves a speckled or spotty appearance and cause premature defoliation when severe.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Examine the underside of a fresh lesion with a hand lens: is there a small raised bacterial pustule/blister (often erumpent through the epidermis) with no fungal growth, or are there fine gray-to-dark fungal tufts (conidiophores/conidia) emerging from the dead center?",
+        "a_signal": "Raised pale pustule (blister-like) erupting from lower leaf surface, no fungal threads; pustule center may show a tiny tan crater, frequently bacterial",
+        "b_signal": "Velvety gray fungal sporulation visible in the lesion center, especially on the underside under humidity; tufts of conidiophores, no raised pustule",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and center of a mature lesion?",
+        "a_signal": "Small angular-to-irregular lesions, often coalescing, with a minute raised pustule and a tan center; margin tends to be irregular and water-soaked early",
+        "b_signal": "Circular to oval spots with a distinct gray-to-light-brown center and a reddish-brown to dark purple ring/border (classic 'frogeye')",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Does the lesion appear water-soaked/translucent when held to light (backlit) in its early stage?",
+        "a_signal": "Early lesions are water-soaked, translucent, pale-green to yellow flecks before turning brown (bacterial infiltration)",
+        "b_signal": "Early lesions are dry, well-defined small dark spots that enlarge into discrete circular eyespots; no water-soaking",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what weather/canopy conditions did the outbreak intensify?",
+        "a_signal": "Favored by warm, humid weather with wind-driven rain, overhead irrigation, and storm injury that spreads bacteria through wounds and stomata",
+        "b_signal": "Favored by warm, humid weather with prolonged leaf wetness; spreads from infected residue and seed; worsens in continuous-soybean fields with susceptible varieties",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Beyond leaves, where else are lesions found?",
+        "a_signal": "Largely confined to leaves; may produce streaks on petioles/stems but rarely distinct lesions on pods or seed",
+        "b_signal": "Can also infect stems (elongated dark lesions), pods, and seeds (gray-to-brown blotches), a hallmark not typical of bacterial pustule",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do lesions develop and what happens to the lesion center over time?",
+        "a_signal": "Lesions enlarge and coalesce into ragged necrotic blotches; centers may tear but no tissue drops out cleanly",
+        "b_signal": "Necrotic gray center may become brittle and the dead tissue can fall out leaving a shot-hole appearance; spots stay discrete and rounded",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial pustule, caused by Xanthomonas axonopodis pv. glycines, begins as small pale-green to yellow flecks that are water-soaked and translucent when backlit. The diagnostic feature is a small raised pustule (blister) that erupts from the lower leaf surface, often with a minute tan crater at the apex. Lesions are angular to irregular, tend to coalesce into ragged necrotic areas, and may have a narrow yellow halo. There is no fungal sporulation in the lesion. The disease is favored by warm, humid conditions and wind-driven rain that spread the bacterium through stomata and wounds, and it can be confused with bacterial blight (which produces angular water-soaked spots but no pustule).",
+    "narrative_b": "Frogeye leaf spot, caused by the fungus Cercospora sojina, produces circular to oval spots with a distinct gray-to-light-brown center surrounded by a reddish-brown to dark purple border, the classic 'frogeye' appearance. Under humid conditions, gray fungal sporulation (conidiophores and conidia) is visible in the lesion center, especially on the leaf underside. Necrotic centers can become brittle and drop out, giving a shot-hole look. Unlike bacterial pustule, C. sojina also infects stems, pods, and seeds, and survives in residue and infected seed, making continuous soybean with susceptible varieties especially vulnerable. Strobilurin (QoI) fungicide resistance is widespread in many US populations.",
+    "management_a": "Plant resistant or tolerant cultivars (the Rxp gene confers resistance). Use clean, certified seed and rotate away from soybean to reduce inoculum on residue. Avoid working fields when foliage is wet to limit mechanical spread. Foliar fungicides do NOT control this bacterial disease; copper-based bactericides give only limited suppression and are rarely economical. Manage canopy and irrigation to reduce prolonged leaf wetness.",
+    "management_b": "Plant resistant varieties (Rcs3 confers broad resistance to C. sojina races), rotate at least one year out of soybean, and bury or manage infected residue with tillage where appropriate. Use disease-free seed. Apply foliar fungicides at R3-R5 when conditions favor disease, but AVOID QoI/strobilurin-only products where resistance is documented; use mixtures with DMI/SDHI modes of action and rotate FRAC groups to manage resistance.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My soybean leaves have small scattered tan-to-brown spots, mostly up in the top of the canopy this late in the season. Some spots have a yellowish ring around them, and the leaves are looking speckled and starting to drop early where it's bad.",
+      "decisive_lay_a": "Look at the underside of the spot for a tiny raised pale bump or blister, like a little pimple poking up out of the leaf. There's no fuzzy growth on it, and the center of the bump may have a tiny tan dip or crater. (This blister comes from a bacteria, not a fungus.)",
+      "decisive_lay_b": "Look in the center of the spot, especially on the underside on a humid morning, for a soft velvety gray fuzz or whiskery growth. There's no raised blister-like bump, just the gray fuzzy patch in the middle of the spot.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

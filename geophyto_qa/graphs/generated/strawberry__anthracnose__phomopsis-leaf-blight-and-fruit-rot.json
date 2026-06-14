@@ -1,0 +1,63 @@
+{
+  "pair_id": "strawberry__anthracnose__phomopsis-leaf-blight-and-fruit-rot",
+  "kind": "disease",
+  "crop": "Strawberry",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Phomopsis Leaf Blight And Fruit Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are fungal diseases of strawberry that attack fruit and can produce dark/sunken lesions, and both are favored by warm, wet conditions. On ripening fruit especially, anthracnose fruit rot and Phomopsis fruit rot can both present as soft, darkening sunken areas, and both produce small fruiting structures, so casual inspection of fruit symptoms can be misleading. Definitive separation requires examining the dominant tissue affected (fruit/crown/runner vs. older leaves) and the microscopic spore/fruiting-body morphology.",
+    "shared_presentation": "Dark, sunken or discolored lesions that can appear on fruit during warm, humid weather, accompanied by small dark fruiting bodies and the potential for fruit rot and yield loss. Both spread by splashing rain/overhead irrigation and overwinter in plant debris.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Which tissue shows the primary, most aggressive damage?",
+        "a_signal": "Lesions on fruit, petioles, runners (stolons), and crown; girdling lesions on stolons/petioles and crown rot collapse whole plants",
+        "b_signal": "Earliest and most conspicuous damage on OLDER, mature leaves as a distinctive blight; fruit rot is secondary/later",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "On leaves, what is the lesion pattern?",
+        "a_signal": "Anthracnose rarely makes showy leaf blotches; instead small dark spots or, more typically, lesions on petioles/runners that girdle and wilt",
+        "b_signal": "Characteristic V-shaped or angular reddish-purple to brown lesions starting at the leaf margin/tip, often with a target-like zonation, enlarging along major veins",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the firm fruit lesion look like?",
+        "a_signal": "Firm, circular, sunken, water-soaked tan-to-dark-brown spots that develop salmon/orange spore masses (acervuli) when wet",
+        "b_signal": "Soft brown rot often beginning at the calyx/cap end, browning that spreads; lacks the bright salmon spore ooze",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease move through the planting?",
+        "a_signal": "Rapid, can cause sudden runner/petiole girdling, crown rot, and plant collapse; severe in nurseries and during fruiting in warm climates",
+        "b_signal": "Slower; foliar blight builds on older leaves through the season, weakening plants before fruit rot appears in late season",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under the microscope, what spores/fruiting bodies are present?",
+        "a_signal": "Acervuli with hyaline, one-celled, curved-to-cylindrical conidia (often with setae); salmon/pink spore masses; Colletotrichum",
+        "b_signal": "Pycnidia producing two spore types: hyaline fusiform alpha-conidia and long filiform/curved beta-conidia; Phomopsis (Phomopsis obscurans)",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Anthracnose (Colletotrichum spp., commonly C. acutatum/C. gloeosporioides complex) is an aggressive, broad-host pathogen attacking multiple strawberry tissues. Look for firm, circular, sunken tan-to-dark-brown lesions on fruit that ooze salmon-to-orange spore masses (acervuli) under humid conditions. It also girdles petioles and runners, causes dark sunken lesions, and produces a destructive crown rot that wilts and kills whole plants, especially in nurseries and transplants. It thrives in hot, wet weather and spreads explosively by splashing water. Confirm with curved/cylindrical one-celled conidia in salmon-colored acervuli.",
+    "narrative_b": "Phomopsis leaf blight and fruit rot (Phomopsis obscurans) is primarily a foliar disease of older leaves that secondarily rots fruit late in the season. The hallmark is a leaf lesion that begins as a small reddish-purple spot and enlarges into a V-shaped or angular brown blotch radiating from the leaf margin along major veins, often with concentric (target-like) zonation; heavy infection blights and weakens lower foliage. Fruit rot, when it occurs, is a soft brown rot frequently starting at the cap/calyx end. The fungus forms pycnidia and is confirmed by its two-spore Phomopsis morphology: hyaline fusiform alpha-conidia and long filiform beta-conidia.",
+    "management_a": "Plant certified disease-free transplants and resistant cultivars; avoid overhead irrigation, use drip and plastic mulch to limit splash; rotate away from strawberry and remove infected debris; scout transplants and nursery stock. Apply protectant fungicides (e.g., captan) plus targeted materials during bloom and fruiting, rotating FRAC groups to avoid resistance (Colletotrichum readily develops QoI resistance). Promptly rogue collapsing plants.",
+    "management_b": "Remove and destroy old/infected leaves (renovation mowing in matted-row systems) to reduce inoculum on older foliage; promote air movement and avoid prolonged leaf wetness with drip irrigation and proper spacing; clean up debris. Maintain plant vigor with balanced nutrition. Apply protectant fungicides (e.g., captan) targeting foliage from early in the season; renovation timing sprays help in perennial systems. Choose less susceptible cultivars where available.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "During the warm, muggy weather I'm seeing dark, sunken, discolored spots showing up on my strawberries, and some of the fruit is starting to rot. There are tiny dark specks dotting those spots, and it seems to spread fast after rain or overhead watering.",
+      "decisive_lay_a": "Look for a salmon-pink or orangish slimy ooze sitting on top of the dark sunken spots, especially in damp weather. That pinkish, gooey spore mass on the fruit points to anthracnose.",
+      "decisive_lay_b": "Look for tiny dark, pimple-like bumps embedded in the dead tissue (often more on older leaves with V-shaped or reddish-to-brown blighted areas) WITHOUT any pink ooze. These small dark fruiting bumps with no salmon color point to Phomopsis.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

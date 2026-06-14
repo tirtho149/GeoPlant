@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__bacterial-speck-of-tomato__septoria-leaf-spot",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Bacterial Speck Of Tomato",
+  "member_b_label": "Septoria Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce numerous small dark brown to black leaf spots on tomato foliage that can appear in similar numbers during cool, wet weather, and growers frequently conflate the two early-season \"spotting\" diseases on lower leaves.",
+    "shared_presentation": "Many small (1-3 mm) dark brown to black necrotic spots scattered across leaflets, often most abundant on lower/older foliage, favored by cool to moderate temperatures with leaf wetness, with chlorotic yellowing and leaf drop as spots coalesce.",
+    "forks": [
+      {
+        "axis": "morphology",
+        "question": "What is the internal structure and size of the individual spots when examined closely?",
+        "a_signal": "Tiny (under 3 mm) dark specks, often irregular/angular, lacking a defined tan center, frequently with a yellow halo; spots may be slightly raised or sunken but solid dark.",
+        "b_signal": "Small circular spots (1.5-3 mm) with distinct pale tan to gray centers and a darker brown margin, giving a clear target-like appearance.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are spots and lesions present on fruit, stems, and flower parts, or confined to leaves?",
+        "a_signal": "Yes - produces tiny raised black specks on green fruit (superficial flecks), plus spots on stems, petioles, and flower parts.",
+        "b_signal": "Largely confined to leaves, petioles, and stems; fruit infection is rare to absent.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "When in the season and at what growth stage does the disease typically first appear and accelerate?",
+        "a_signal": "Early season on young transplants during cool (60-75 F), wet weather; stalls as temperatures rise above ~75 F.",
+        "b_signal": "Develops as plants mature and set fruit, intensifying in warm-humid mid to late season; favored by moderate-warm (60-80 F) wet conditions.",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens, do the spot centers bear tiny black fruiting bodies (pycnidia) or are they sign-free bacterial lesions?",
+        "a_signal": "No fungal fruiting bodies; lesions are bacterial with no pycnidia. A bacterial streaming test (lesion in water) shows cloudy ooze; surface specks lack embedded structures.",
+        "b_signal": "Tan/gray spot centers contain numerous pinpoint black pycnidia (visible as dark dots in the lesion center under a hand lens), often exuding pale cirrhi when wet.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature regime accompanied the outbreak relative to rainfall/overhead irrigation?",
+        "a_signal": "Cool, wet, windblown-rain conditions early in the season; spread by splashing and contaminated seed/transplants.",
+        "b_signal": "Warm and consistently wet/humid conditions with prolonged leaf wetness during fruiting; spread by splash from infested debris.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial speck (Pseudomonas syringae pv. tomato) is a cool-weather bacterial disease producing very small (under 3 mm) dark brown to black, often angular specks on leaves, typically surrounded by yellow halos. Critically, it also speckles green fruit with tiny raised black flecks and affects stems, petioles, and flower parts. Lesions contain no fungal fruiting bodies; the pathogen is seedborne and splash-dispersed, thriving at 60-75 F with leaf wetness and stalling in warm weather.",
+    "narrative_b": "Septoria leaf spot (Septoria lycopersici) is a fungal disease producing numerous small circular spots with characteristic pale tan to gray centers ringed by a darker brown margin. The diagnostic feature is the presence of tiny black pycnidia embedded in the spot centers, visible with a hand lens. It is largely leaf-limited (rarely on fruit), starts on lower foliage as plants mature, and progresses upward under warm, humid, wet conditions, causing severe defoliation that exposes fruit to sunscald.",
+    "management_a": "Use pathogen-free certified seed and transplants; hot-water or bleach seed treatment. Avoid overhead irrigation and working plants when wet. Apply copper-based bactericides (often tank-mixed with mancozeb) preventively, beginning early in cool wet periods. Rotate out of tomato/pepper for 2+ years, bury or remove debris, and control volunteer/weedy hosts.",
+    "management_b": "Remove and destroy infected lower leaves and crop debris (overwinters on residue and solanaceous weeds). Rotate 2-3 years away from tomato. Stake/space plants and avoid overhead watering to reduce leaf wetness. Apply protectant fungicides (chlorothalonil, mancozeb) or copper at first sign and on a regular schedule during warm wet weather; mulch to reduce soil splash.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My tomato plants have lots of tiny dark brown to black spots, about pinhead to match-head size, scattered all over the leaflets. It's worst on the older, lower leaves, and as the spots run together the leaves turn yellow and start dropping. It seems to have taken off during the cool, damp, wet-leaf weather we've had.",
+      "decisive_lay_a": "Cut or pull off a spotted bit of leaf and swish it in a clear glass of water for a minute. If you see a faint cloudy, milky haze drifting out into the water (and the surface specks are just plain dark dots with nothing buried inside them), it points to the bacterial kind.",
+      "decisive_lay_b": "Look hard at the centers of the tan or gray spots, ideally with a magnifying glass. If you see lots of teeny pinpoint black dots peppered in the spot center (and a tiny bit of pale ooze creeping from them when the leaf is wet), that points to Septoria.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

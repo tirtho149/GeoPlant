@@ -1,0 +1,70 @@
+{
+  "pair_id": "potato__bacterial-soft-rot__late-blight",
+  "kind": "disease",
+  "crop": "Potato",
+  "member_a_label": "Bacterial Soft Rot",
+  "member_b_label": "Late Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce rapidly expanding, wet/dark rotting lesions on potato tubers and lower stems, and late blight tuber infections are very frequently invaded secondarily by Pectobacterium, producing a soft-rot smell and breakdown that masks the original blight. In the field both can cause collapsing, water-soaked stems; in storage both cause mushy tuber decay. The overlap of wet rot, foul odor (in advanced soft rot) and rapid collapse drives confusion, especially once secondary bacteria colonize blighted tissue.",
+    "shared_presentation": "Water-soaked, dark, rapidly spreading lesions on tubers and/or lower stems; wet decay of internal tuber tissue; field plants showing collapsing, darkened stems and a generally wet, rotting appearance in humid or wet conditions.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "On the underside of foliar lesions in cool, humid mornings, is there a sporulating mold growth versus none?",
+        "a_signal": "No fungal-like growth on leaves; soft rot is bacterial and produces no surface sporulation, only ooze and slime on rotting tissue",
+        "b_signal": "A delicate white-to-grayish downy/fuzzy sporulation ring at the margin of leaf lesions on the underside, visible especially after dew or high humidity",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where does the disease primarily manifest first?",
+        "a_signal": "Soft rot is centered on tubers, lower stem, and succulent tissues, often starting at wounds, lenticels, or stem ends; foliage is rarely the primary site",
+        "b_signal": "Late blight typically begins on leaves and stems (foliar) with lesions, then progresses to tubers via spores washed into soil",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and smell of rotting tissue?",
+        "a_signal": "Wet, mushy, slimy, cream-colored macerated tissue that collapses to a soft mass with a characteristic foul, putrid odor",
+        "b_signal": "Initially firm, granular, reddish-brown to coppery dry-ish rot extending irregularly from the tuber surface inward; foul odor only after secondary bacterial invasion",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does a cut tuber lesion margin look like?",
+        "a_signal": "A diffuse, soft, watery boundary between rotted and healthy tissue with no firm reddish discoloration",
+        "b_signal": "A reddish-brown, granular, dry necrotic zone with a tan-to-purplish corky margin extending in a marbled pattern from the skin inward",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what conditions did the disease explode?",
+        "a_signal": "Warm temperatures with free water, poor aeration, flooding, or wet storage; thrives in warm, anaerobic, wounded conditions",
+        "b_signal": "Cool, moist weather (roughly 50-78F) with prolonged leaf wetness, fog, or rain; classic explosive spread during cool wet spells",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the lesion spread across the plant and field?",
+        "a_signal": "Localized maceration radiating from wounds/lenticels; spreads plant-to-plant mainly via contaminated water, equipment, and handling rather than airborne",
+        "b_signal": "Rapid airborne polycyclic spread; entire fields can blight within days under favorable cool-wet conditions, with lesions advancing across leaves and down stems",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial soft rot, caused by Pectobacterium carotovorum ssp. carotovorum, is a wound- and lenticel-entry bacterial maceration disease. It thrives under warm, wet, low-oxygen conditions (waterlogged soil, wet harvest, poorly ventilated storage). The bacteria secrete pectolytic enzymes that dissolve the middle lamella, turning tubers and succulent stems into a wet, slimy, cream-colored mush with a notorious putrid odor. There is no fungal sporulation, no firm granular dry rot, and no airborne spread. It is frequently a secondary colonizer of tissue already damaged by other agents, including late blight.",
+    "narrative_b": "Late blight, caused by the oomycete Phytophthora infestans, is the historically devastating, airborne, polycyclic disease of potato (and tomato). It begins as water-soaked foliar lesions that expand into brown-black necrosis, with a diagnostic white downy sporulation ring on the leaf underside under cool, humid conditions. Spores wash into the soil and infect tubers, producing a firm-then-granular reddish-brown rot that marbles inward from a corky surface margin. It spreads explosively during cool, wet weather and can destroy a crop within days. Blighted tubers are commonly invaded secondarily by soft-rot bacteria, which is the chief source of confusion.",
+    "management_a": "Prevent injury during harvest and handling; harvest mature tubers under dry conditions; cure and store at low temperature with good ventilation and low humidity to keep lenticels closed. Avoid waterlogging and flooding; improve field drainage. Sanitize equipment, wash/grading water, and storage facilities. No effective curative chemical control exists; management is cultural and sanitation-based. Discard rotting tubers promptly to prevent spread.",
+    "management_b": "Use certified disease-free seed and resistant cultivars where available; destroy cull piles and volunteer potatoes that serve as inoculum. Apply protectant fungicides (e.g., chlorothalonil, mancozeb) preventively and oomycete-specific products (e.g., cymoxanil, mandipropamid, oxathiapiprolin) during high-risk periods guided by forecasting tools like blight units/Blitecast. Promote canopy drying, kill vines before harvest to reduce tuber infection, and follow regional late blight alerts. Hill soil well to limit spore movement to tubers.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My potato plants are collapsing with dark, wet, almost soaked-looking patches on the lower stems, and the tubers are turning into a dark, slimy, rotting mess inside. It's spreading fast and everything looks wet and mushy, especially after all this humid, rainy weather.",
+      "decisive_lay_a": "No fuzzy or moldy growth anywhere on the leaves or rotting tissue at all. The rot is just wet, slimy, and oozing, with a slick mushy feel and no surface coating of any kind. Often there's a foul smell.",
+      "decisive_lay_b": "A delicate white-to-grayish fuzzy fringe right at the edge of the dead spots on the underside of the leaves, showing up best in the early morning after dew or in damp, humid air.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

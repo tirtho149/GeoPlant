@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__bacterial-blight__soybean-rust",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bacterial Blight",
+  "member_b_label": "Soybean Rust",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small angular-to-irregular foliar lesions on soybean that begin as water-soaked or chlorotic flecks and can develop tan/brown necrotic centers with yellow halos, so early scouting from the leaf-top surface can confuse the two. They diverge sharply on the lower leaf surface (rust pustules vs. bacterial ooze/none), on weather drivers (cool wet vs. warm humid), and on season/geography (early-season bacterial blight nationwide vs. late-season tropical rust).",
+    "shared_presentation": "Small foliar lesions on soybean leaflets, initially angular to irregular, often with a chlorotic (yellow) halo and a tan-to-brown necrotic center, that can coalesce, cause leaf tattering/blighting, and trigger premature defoliation under favorable moisture.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the leaf do lesions concentrate and is the canopy position lower or upper?",
+        "a_signal": "Lesions favor younger upper-canopy leaves and expanding leaflets; new growth at the top is most affected after storms/wind-driven rain",
+        "b_signal": "Lesions and yellowing begin in the lower, shaded inner canopy and progress upward as the season advances",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaflet and examine the UNDERSIDE of the lesion with a hand lens \u2014 what sign is present?",
+        "a_signal": "No fungal structures; only necrotic/water-soaked tissue, sometimes with a glistening bacterial ooze or papery dried exudate on the underside",
+        "b_signal": "Raised tan-to-reddish-brown volcano-like uredinia (pustules) that rupture and release masses of dusty urediniospores",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the earliest lesion appearance and is it water-soaked or pustular?",
+        "a_signal": "Small water-soaked angular spots delimited by veins, turning brown with a translucent water-soaked margin and a yellow-green halo",
+        "b_signal": "Tiny gray-green to tan angular flecks that quickly raise into pustules; halo less pronounced early",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Do older lesions tear out to give a ragged 'shot-hole'/tattered look, or stay intact and pustuled?",
+        "a_signal": "Dead centers drop out and lesions coalesce, leaving a ragged, tattered, shot-hole appearance after wind",
+        "b_signal": "Lesions remain intact with persistent pustules; angular lesions bounded by veins give a mosaic of small tan spots, leaves yellow and drop without tearing",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather preceded the outbreak?",
+        "a_signal": "Cool, wet, windy weather and driving/hail-damaged rain early in the season (optimal ~70-80F with leaf wetness and wounding)",
+        "b_signal": "Warm, humid weather with extended dew/leaf-wetness, typically mid-to-late season with prolonged moisture",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "At what crop growth stage and season did symptoms appear, and how fast did defoliation follow?",
+        "a_signal": "Appears early (V-stages through early reproductive), often after a storm, then stalls in hot dry weather and rarely causes major yield loss",
+        "b_signal": "Appears later (often R-stages/reproductive) and can explode rapidly, causing severe defoliation in weeks under continued humidity",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Bacterial blight, caused by Pseudomonas savastanoi pv. glycinea, is a cool-weather, early-season disease spread by wind-driven rain and entering through wounds and stomata. The hallmark is small angular, water-soaked lesions delimited by leaf veins, with a yellow-green halo and a translucent water-soaked margin. As lesions age, the necrotic centers turn brown, fall out, and coalesce, giving a ragged, tattered, shot-hole appearance, especially after wind or hail. It favors the upper, younger canopy and storm-damaged tissue. Crucially, there are NO fungal pustules on the leaf underside \u2014 only necrotic tissue and, at most, a glistening or dried bacterial ooze. The disease typically stalls when weather turns hot and dry and seldom causes significant yield loss.",
+    "narrative_b": "Soybean rust, caused by the obligate fungus Phakopsora pachyrhizi, is a warm, humid, often late-season disease that begins in the lower, shaded inner canopy and moves upward. Early symptoms are tiny gray-green to tan angular flecks bounded by veins, which rapidly raise into characteristic tan-to-reddish-brown volcano-shaped uredinia (pustules) on the leaf underside; these rupture to release masses of dusty urediniospores \u2014 the single decisive, definitive sign. Lesions stay intact (no shot-holing), leaves yellow and drop, and under sustained leaf wetness the disease can explode, causing rapid, severe defoliation and major yield loss. Spores blow in long distances each season rather than overwintering in most of the US.",
+    "management_a": "Use pathogen-free, certified seed and resistant/tolerant varieties; rotate away from soybean and incorporate residue to reduce inoculum. Avoid field operations when foliage is wet to limit mechanical spread. Foliar bactericides (copper) give limited, generally uneconomical control; the disease usually self-limits in hot dry weather, so fungicides are NOT effective and should not be applied for it. Accurate diagnosis matters precisely to avoid unnecessary fungicide sprays.",
+    "management_b": "Scout the lower canopy from early reproductive stages and use regional sentinel-plot/monitoring networks to time action. Apply effective foliar fungicides (triazoles, QoIs, SDHIs, and premixes) preventively or at first detection, as soybean rust responds strongly to timely fungicide protection. Plant earlier-maturing varieties where feasible and follow regional advisories; resistance is limited, so chemical management plus monitoring is the mainstay.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My soybean leaves have small angular brownish spots with a yellow ring around them, and the centers are turning tan and dying. The spots are running together and the leaves look ragged and torn, and some plants are dropping leaves early after all this wet weather.",
+      "decisive_lay_a": "Look at the spots and the underside of the leaf: with bacterial blight you'll see only dead, papery brown tissue that may look water-soaked, sometimes with a shiny wet ooze or a dried crusty film on the underside, but NO raised bumps or powdery fuzz.",
+      "decisive_lay_b": "Flip the leaf over and look for tiny raised tan-to-reddish-brown bumps like little volcanoes that break open and release a dusty, rusty powder that rubs off on your fingers.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

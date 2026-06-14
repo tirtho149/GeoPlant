@@ -1,0 +1,70 @@
+{
+  "pair_id": "oak__botryosphaeria-rots-and-cankers__oak-wilt",
+  "kind": "disease",
+  "crop": "Oak",
+  "member_a_label": "Botryosphaeria Rots And Cankers",
+  "member_b_label": "Oak Wilt",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce branch/crown dieback and wilting foliage on oak, and both can cause vascular discoloration (streaking) in affected wood, so a quick glance at a declining oak with browning leaves and dead branches can point either way. The resolution lies in the pattern and speed of the wilt, the species group affected, the presence of cankers/fruiting bodies versus fungal mats, and the systemic vs. localized nature of the vascular streaking.",
+    "shared_presentation": "A mature oak showing dieback with browning, wilting leaves and discolored sapwood streaking in symptomatic branches; dead twigs and branches in the crown with reduced vigor.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the wilt rapid and systemic (whole-tree leaf browning over weeks) or is the dieback localized to individual stressed branches with sunken bark?",
+        "a_signal": "Dieback is branch-by-branch and localized; sunken, discolored cankers form on twigs/branches, often associated with drought or wounds; tree declines slowly over seasons",
+        "b_signal": "Rapid, progressive wilting often moving through the crown; in red oaks whole tree can brown and die within weeks to a single season",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Does the bark/branch show a defined sunken canker with cracked margins, or is the symptom an internal vascular brown streaking without a surface canker?",
+        "a_signal": "Distinct sunken, dark, often cracked cankers on bark; cankered wood is discolored and dead beneath the lesion",
+        "b_signal": "No discrete bark canker; symptom is internal brown/tan streaking in the outer sapwood of wilting branches",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What fruiting structures/signs are present on or under the bark?",
+        "a_signal": "Small black pycnidia (pimple-like fruiting bodies) erupting through the bark surface of cankered wood",
+        "b_signal": "Sweet-smelling fungal pressure pads / mats forming beneath the bark (especially on red oaks), cracking the bark; attracts sap/nitidulid beetles",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Examine leaf drop pattern: are leaves retained on dead branches, or shed with a characteristic margin-inward bronzing?",
+        "a_signal": "Leaves on a girdled/cankered branch wilt and often remain attached; symptom tied to the specific affected limb",
+        "b_signal": "Leaves bronze/brown from tip and margins inward (often along veins), wilt and drop rapidly, frequently with green leaves falling",
+        "weight": "weak"
+      },
+      {
+        "axis": "morphology",
+        "question": "Cut a symptomatic branch in cross-section and inspect the outer sapwood ring for vascular streaking and its continuity toward the trunk.",
+        "a_signal": "Discoloration is confined to and radiates from the localized canker; sapwood streaking does not run continuously as a systemic ring toward the root system",
+        "b_signal": "Continuous brown/black streaking in the outermost sapwood (current ring) running systemically through branches toward the trunk and root grafts",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "Is the affected oak part of a cluster of declining trees expanding outward over time, or an isolated stressed individual?",
+        "a_signal": "Typically isolated, drought- or wound-stressed individual trees; not spreading tree-to-tree in an expanding pocket",
+        "b_signal": "Often an expanding pocket of dying trees spreading through interconnected root grafts, especially in red oak stands",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Botryosphaeria rots and cankers are opportunistic fungal diseases that attack stressed oaks, particularly trees weakened by drought, heat, transplant shock, or wounds. The fungus colonizes the bark and cambium, producing sunken, discolored cankers on twigs and branches. Tiny black pycnidia erupt through the bark of dead tissue. Dieback is localized and branch-by-branch, with leaves on girdled limbs wilting and often remaining attached. Discoloration radiates from the canker rather than running systemically. Decline is gradual over multiple seasons, and the disease is essentially a stress-follower rather than an aggressive primary killer.",
+    "narrative_b": "Oak wilt, caused by Bretziella fagacearum, is an aggressive systemic vascular disease. The fungus invades the water-conducting xylem, triggering tyloses and gums that plug vessels and cause rapid wilting. Red oak group species are most susceptible and can die within weeks to a single season; white oaks decline more slowly. Leaves bronze from the tip and margins inward and drop, often while still partly green. Cross-sections reveal continuous brown streaking in the outermost sapwood. Beneath the bark of red oaks, sweet-smelling fungal mats form, cracking the bark and attracting sap beetles that vector the spores. The pathogen also spreads underground through interconnected root grafts, producing expanding pockets of dead and dying trees.",
+    "management_a": "Manage by reducing tree stress: water deeply during drought, mulch to conserve moisture, avoid wounding, and maintain vigor through proper fertilization and pruning. Prune out cankered/dead branches well below the lesion during dry weather, disinfecting tools between cuts. No effective fungicide cures established cankers; prevention via stress reduction is primary. Remove severely declined trees.",
+    "management_b": "Disrupt both spread pathways. Sever root grafts via trenching/vibratory plowing around infection centers to stop underground movement. Avoid pruning or wounding oaks during the spring/early-summer high-risk vector period; paint all wounds immediately if cutting is unavoidable. Promptly remove and properly dispose of (debark, chip, or destroy) infected red oaks before fungal mats form to deny beetles spore sources. Propiconazole injections can protect high-value white oaks and may suppress symptoms in early-infected trees. Report to state forestry/extension where oak wilt is regulated.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My mature oak is going downhill fast. Whole branches up in the crown are wilting with brown, scorched-looking leaves, and there are dead twigs and dying limbs throughout the top. When I cut into the affected branches the wood underneath shows dark brown streaking, and the tree just doesn't have the vigor it used to.",
+      "decisive_lay_a": "When you peel the bark or slice into the limb, the brown staining is tied to a sunken dead patch on the branch and only spreads out a short way from that one wound or canker. The dark streaking stays local around that dead spot and does NOT run in a continuous brown line down the branch toward the trunk and roots.",
+      "decisive_lay_b": "Cut into the outer ring of wood just under the bark and you find a continuous brown-to-black streak that runs without stopping, traveling through the branch toward the trunk and down toward the roots, as if the staining is moving systemically through the whole tree's plumbing rather than staying around one wound.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

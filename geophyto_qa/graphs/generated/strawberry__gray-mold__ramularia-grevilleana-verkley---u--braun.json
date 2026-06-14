@@ -1,0 +1,70 @@
+{
+  "pair_id": "strawberry__gray-mold__ramularia-grevilleana-verkley---u--braun",
+  "kind": "disease",
+  "crop": "Strawberry",
+  "member_a_label": "Gray Mold",
+  "member_b_label": "Ramularia Grevilleana Verkley & U. Braun",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce leaf spots/lesions on strawberry and both are fungal, and the names can co-occur on the same plant. However, the classic presentations differ sharply: Gray Mold is overwhelmingly a fruit/flower rot with conspicuous gray sporulation, while Ramularia (the asexual leaf-spot stage of strawberry common leaf spot, Mycosphaerella fragariae) causes discrete purple-bordered white-centered leaf spots. Confusion arises mainly on senescing or wet foliage and on flower/petal lesions, and because both are gray/white when sporulating, so a non-specialist examining leaf lesions or fuzzy growth can mix them up.",
+    "shared_presentation": "On strawberry, both can appear as light/gray to whitish lesions on leaf tissue, petals, or senescing plant parts under cool, wet conditions, and both sporulate to produce a pale fuzzy or powdery look that draws the eye. In humid weather either can be found colonizing weakened or dying foliage and flower parts, giving overlapping initial impressions of a \"spotty leaf with grayish growth.\"",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Which plant part bears the primary, most damaging lesions?",
+        "a_signal": "Ripening and ripe fruit (and blossoms/petals) are the main target, with soft brown rot and collapse; foliage involvement is minor and usually on dying tissue",
+        "b_signal": "Leaves (and sometimes petioles, runners, calyx, fruit caps) are the main target with discrete spots; fruit flesh rot is not the hallmark",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion morphology on the affected tissue?",
+        "a_signal": "Soft, watery brown rot that spreads and collapses the tissue (especially fruit), no sharply defined small spots",
+        "b_signal": "Small (1-6 mm), round, discrete spots with a defined deep purple to reddish-brown border and a tan-to-white/gray center (classic common leaf spot)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does the sporulation look like under hand lens / on the lesion surface?",
+        "a_signal": "Abundant fuzzy, dusty GRAY mold (mycelium plus grape-like clusters of conidiophores) coating the rotted surface, easily dislodged as a smoky puff",
+        "b_signal": "Sparse whitish tufts of conidiophores emerging mainly from leaf-spot centers/lower surface; not a thick gray fuzzy mat over rotted flesh",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease progress and where does it concentrate?",
+        "a_signal": "Rapid post-bloom/post-harvest collapse; nesting rot spreading fruit-to-fruit by contact; thrives on stored/transit fruit",
+        "b_signal": "Slow accumulation of leaf spots through the season; severe infection causes leaf necrosis and yield loss via reduced photosynthetic area, not fruit collapse",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "On older lesions, are persistent fruiting structures visible?",
+        "a_signal": "Black, hard, irregular sclerotia may form on rotted tissue overwinter; no neat black dots within crisp spots",
+        "b_signal": "Tiny black fruiting bodies (perithecia of Mycosphaerella fragariae / specks) can develop within the white spot centers on overwintered leaves",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and timing favor the disease?",
+        "a_signal": "Cool, wet, humid bloom-to-harvest periods; rain at flowering and dense canopy; major in protected/field fruit during wet springs",
+        "b_signal": "Prolonged leaf wetness and moderate temperatures favor leaf-spot cycles; perennates on infected leaves/debris, building over successive seasons",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Gray Mold (Botrytis cinerea) is primarily a blossom and fruit disease. Infection typically begins at flowering, with the fungus colonizing senescing petals and stamens, then moving into the developing receptacle. The signature finding is ripe or ripening fruit turning soft and light brown, rapidly covered by a dense, dusty GRAY fuzzy mold that puffs into a smoky cloud when disturbed. Rot spreads by contact, creating \"nests\" of rotted berries in the field and devastating losses in storage and transit. Foliar involvement is secondary, usually limited to dead or dying tissue. Overwinter, hard black sclerotia may form on rotted debris. Diagnosis hinges on the thick gray sporulating mat over collapsed, watery fruit tissue.",
+    "narrative_b": "Ramularia grevilleana is the asexual (Ramularia/Cylindrosporium) state of the strawberry common leaf spot pathogen Mycosphaerella fragariae. It is fundamentally a foliar disease: small, round spots first appear as deep purple to reddish flecks that enlarge to 1-6 mm with a characteristic dark purple border and a tan, gray, or white center. Spots occur on upper leaf surfaces and can also affect petioles, runners, fruit caps, and calyces. Sporulation is modest, whitish tufts of conidiophores from spot centers, not a thick gray fuzzy mat. Heavy infection coalesces spots and necrotizes foliage, reducing photosynthetic area and yield, but it does not cause the soft watery fruit collapse of gray mold. On overwintered leaves, tiny black fruiting bodies may develop in the white spot centers.",
+    "management_a": "Improve air circulation by proper spacing, weed control, and avoiding excess nitrogen and dense canopies; use drip rather than overhead irrigation and avoid wetting blossoms. Remove and dispose of infected/overripe fruit promptly and harvest frequently to reduce inoculum and nesting. Time protectant/botryticide fungicides (rotating FRAC groups to manage resistance, which is common in B. cinerea) to the bloom period when most infections initiate. Rapid post-harvest cooling and careful handling limit storage rot.",
+    "management_b": "Plant certified disease-free transplants and resistant cultivars where available. Remove and destroy heavily infected old leaves at renovation in matted-row systems to reduce overwintering inoculum on debris. Promote rapid leaf drying through spacing, weed management, and drip irrigation rather than overhead watering. Apply protectant foliar fungicides when leaf-spot pressure and conducive wet weather warrant, focusing on protecting new foliage; sanitation of crop debris reduces season-to-season carryover.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My strawberry leaves and a few of the flowers and older lower leaves have pale gray to whitish spots, and in this cool, wet weather there's a faint fuzzy or powdery look to them. The weakened and dying leaf parts seem to be picking it up worst, and it's spreading on the soft, tired-looking tissue.",
+      "decisive_lay_a": "A thick, dusty gray fuzzy coating blanketing rotted, mushy berry or plant tissue; if you tap or brush it, it puffs up like a little cloud of smoke or dust.",
+      "decisive_lay_b": "Only thin, sparse whitish little tufts or whiskers poking out, mainly from the centers of the leaf spots and on the underside of the leaf, NOT a thick gray fuzzy mat over rotted flesh.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

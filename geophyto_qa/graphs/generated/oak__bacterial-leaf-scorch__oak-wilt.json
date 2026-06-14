@@ -1,0 +1,70 @@
+{
+  "pair_id": "oak__bacterial-leaf-scorch__oak-wilt",
+  "kind": "disease",
+  "crop": "Oak",
+  "member_a_label": "Bacterial Leaf Scorch",
+  "member_b_label": "Oak Wilt",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce marginal/interveinal leaf browning and crown decline on oaks and are frequently confused, especially mid-to-late summer. The classic discriminators are the pace of decline (chronic over years vs. rapid death in weeks), the host group affected (red oaks die fast from wilt; many shade oaks like pin/red/scarlet/willow/bur get BLS), the leaf pattern (a thin chlorotic/reddish halo separating green from scorched tissue in BLS vs. abrupt bronzing from leaf tip/margin inward in wilt), and definitive signs (vascular streaking + fungal mats/pressure pads under bark for oak wilt vs. xylem-limited bacterium detectable only by lab assay for BLS). Misdiagnosis matters greatly because oak wilt is lethal, spreads via root grafts/sap beetles, and demands quarantine-style management while BLS is a slow chronic decline.",
+    "shared_presentation": "Mature oaks showing marginal/interveinal leaf browning (\"scorch\"), thinning canopy, and progressive branch dieback during summer. Both are xylem/vascular diseases that disrupt water movement, so foliage looks drought-stressed even with adequate soil moisture. Early symptoms on both can appear on a single branch or one side of the crown before generalizing, making them easy to confuse at a distance.",
+    "forks": [
+      {
+        "axis": "progression",
+        "question": "How fast does the tree decline once symptoms appear?",
+        "a_signal": "Chronic, recurring decline over multiple years; same tree leafs out and re-scorches each summer, dieback advances slowly branch by branch",
+        "b_signal": "Rapid wilting and death, often within weeks to a few months; red oaks can die the same season symptoms appear",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the leaf browning pattern and is there a transition zone?",
+        "a_signal": "Scorch confined to leaf margins/tips with a distinct yellow or reddish-brown chlorotic band separating dead margin from inner green tissue",
+        "b_signal": "Bronzing/browning starts at leaf tip and margins and progresses inward/downward, often with a water-soaked dull-green to bronze cast and no clean halo; leaves drop while still partly green",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which oak group is affected and how is the canopy involved?",
+        "a_signal": "Common on red, pin, scarlet, willow, bur, and white oaks as well as elm/sycamore/maple; affects scattered shade trees, often urban, declining over years",
+        "b_signal": "Red oak group (northern red, pin, scarlet, black) most susceptible and dies fastest; white oak group resists/declines slowly; classic rapid one-branch-then-whole-crown collapse",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Cut under the bark of a wilting branch/trunk \u2014 is there vascular streaking and a fungal mat?",
+        "a_signal": "No fungal mats; xylem may show little or no discrete brown streaking; only a lab xylem assay (PCR/ELISA) detects the bacterium",
+        "b_signal": "Brown/black streaking or discoloration in the outer sapwood (especially in red oaks); fungal pressure pads/mats may form under the bark, sometimes cracking it, with a sweet fruity odor",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What organism and transmission route is involved?",
+        "a_signal": "Xylem-limited bacterium (Xylella fastidiosa) spread by xylem-feeding leafhoppers/spittlebugs; no underground graft spread emphasized",
+        "b_signal": "Fungus (Bretziella fagacearum) spread by sap/nitidulid beetles to fresh wounds and, critically, root-to-root through grafts forming expanding mortality centers",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Does the dieback spread to immediately adjacent same-species trees forming a widening pocket?",
+        "a_signal": "Affected trees scattered individually; no expanding radial mortality pocket among neighbors",
+        "b_signal": "Adjacent oaks die in sequence outward from an initial tree, producing an enlarging circular pocket of dead/dying trees (root-graft spread)",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Bacterial Leaf Scorch is a chronic disease caused by the xylem-limited bacterium Xylella fastidiosa, transmitted by xylem-feeding leafhoppers and spittlebugs. It clogs water-conducting vessels, producing marginal leaf scorch that characteristically shows a narrow yellow-to-reddish chlorotic band between the dead margin and the remaining green tissue. Symptoms recur and intensify each year, usually appearing in mid-to-late summer, and decline advances slowly over many years, branch by branch, rather than killing the tree in one season. It affects a broad host range (pin, red, scarlet, willow, bur, white oaks plus elm, sycamore, maple) and is a particular problem on landscape and street trees. There are no fungal mats or reliable visible vascular signs; confirmation requires a laboratory xylem assay (ELISA or PCR).",
+    "narrative_b": "Oak Wilt is a lethal vascular disease caused by the fungus Bretziella fagacearum. It induces rapid wilting: leaves bronze or brown from the tip and margins inward, often with a water-soaked dull cast, and drop while still partially green. Red oak group species (northern red, pin, scarlet, black) are most susceptible and can die within weeks to a few months of first symptoms; white oak group species are more resistant and decline slowly. The fungus is spread two ways \u2014 overland by sap-feeding nitidulid beetles attracted to fresh wounds and fungal mats, and underground through interconnected root grafts, which causes mortality to spread to adjacent trees and form expanding circular pockets of dead oaks. Diagnostic signs include brown/black streaking in the outer sapwood and fungal pressure pads (mats) beneath the bark, sometimes with a fruity odor.",
+    "management_a": "Manage as a chronic decline: there is no cure. Maintain tree vigor with proper watering, mulching, and avoiding stress; prune out dead/declining branches to reduce hazard and improve aesthetics. Antibiotic (oxytetracycline) trunk injections can temporarily suppress symptoms in high-value trees but do not eliminate the bacterium and must be repeated. Confirm by lab assay before committing to long-term management, and plan eventual replacement with non-susceptible species. No quarantine or root-graft severing is needed.",
+    "management_b": "Treat as an emergency in red oaks. Do NOT prune or wound oaks during the high-risk warm season (roughly April-July in much of the range); paint any unavoidable wounds immediately. Disrupt root-graft spread by trenching/vibratory plowing 4-5 ft deep between infected and healthy oaks before removal. Remove and properly dispose of (debark, chip, or dry) infected red oaks to eliminate fungal mat/beetle inoculum; do not move unseasoned oak firewood. Propiconazole fungicide injection can protect high-value uninfected or early white oaks. Confirm with sapwood culture/PCR. Report to local extension where oak wilt is regulated.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My mature oak's leaves are turning brown around the edges and between the veins like they're sun-scorched, the canopy is thinning out, and branches are slowly dying back over the summer. It looks drought-stressed even though the soil has plenty of moisture, and it started on just one side of the tree before spreading.",
+      "decisive_lay_a": "There's no fuzzy growth or pad under the bark, and if you cut into the wood you see little or no brown streaking. The only sure way to confirm it is to send a wood sample to a lab for a test, because the cause is a germ too small to see.",
+      "decisive_lay_b": "Peel back the bark and look for a flat fungal pad or mat pressing against the wood that can crack the bark open, often giving off a sweet, fruity smell. Cutting into the outer wood (especially on red oaks) shows brown-to-black streaks or discoloration.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

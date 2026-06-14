@@ -1,0 +1,70 @@
+{
+  "pair_id": "cucumber__anthracnose__pythium-diseases",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Pythium Diseases",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both can produce water-soaked, sunken, rotting lesions and both attack fruit in contact with wet soil, so a collapsing/rotting cucumber fruit or seedling can be misassigned. Confusion is real but limited: anthracnose is primarily a foliar/fruit disease of established plants with distinctive signs, while Pythium is overwhelmingly a soil/water-line damping-off and root/fruit rot. They overlap mainly on fruit rot and on young-tissue collapse during wet conditions.",
+    "shared_presentation": "Water-soaked, sunken, soft to firm rotting lesions on cucumber tissue, especially fruit resting on wet soil, with rapid expansion in warm, humid/rainy weather. Both can cause tissue collapse and secondary rot, and both are favored by extended leaf/fruit wetness and overhead irrigation.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Which part of the plant shows the primary lesions?",
+        "a_signal": "Leaves, stems, petioles, and mature fruit above the soil line are affected; foliar lesions are common and conspicuous",
+        "b_signal": "Roots, lower stem/crown at the soil line, and fruit in direct soil contact; foliage is rarely primarily attacked",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At what growth stage does the disease strike?",
+        "a_signal": "Mostly established/fruiting plants; foliar and fruit phase prominent on mature tissue",
+        "b_signal": "Seeds, seedlings, and young transplants (pre- and post-emergence damping-off), plus root rot at any age",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the character of the lesion on a leaf?",
+        "a_signal": "Discrete circular-to-angular tan/brown leaf spots that dry, crack, and tear out, leaving shot-hole; lesions have defined margins",
+        "b_signal": "No true leaf spots; instead seedling stem pinch/collapse, soft root decay, and wilting from the base up",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the seedling decline?",
+        "a_signal": "Seedlings less commonly killed; if affected, develop spotting then dieback rather than a soil-line pinch",
+        "b_signal": "Classic damping-off: water-soaked pinched stem at soil line, seedling topples and collapses suddenly",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does the fruit lesion produce when examined closely (hand lens) under humidity?",
+        "a_signal": "Sunken circular lesions bearing salmon-pink to orange spore masses (acervuli) in concentric rings; gelatinous pink ooze",
+        "b_signal": "Soft watery rot with no colored spore masses; under high humidity a white cottony cobweb-like mycelium grows over the surface",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and site favor the outbreak?",
+        "a_signal": "Warm, wet foliage with splashing rain/overhead water spreading spores plant-to-plant across the canopy",
+        "b_signal": "Saturated, poorly drained soil, low spots, and overwatering; disease clusters in wet pockets of the field/bed",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Cucumber anthracnose (Colletotrichum orbiculare) is a foliage-and-fruit disease of established plants. It starts as small water-soaked spots that enlarge into circular-to-angular tan/brown leaf lesions with defined margins; centers dry, crack, and fall out (shot-hole), and lesions also strike petioles and stems. On mature fruit it forms sunken, circular lesions that, under humidity, develop characteristic salmon-pink to orange spore masses (acervuli) often arranged in concentric rings. It is splash- and rain-dispersed across the canopy and is seedborne.",
+    "narrative_b": "Pythium diseases of cucumber are soil/water-borne oomycete problems centered on roots, the crown/soil line, and soil-contact fruit. The signature expression is damping-off: seed rot, failure to emerge, or a water-soaked pinched stem at the soil line causing young seedlings to topple. Older plants show soft brown root rot, poor vigor, and wilting; fruit lying on wet soil develops a soft, watery rot (\"cottony leak\") that under humidity is covered by white, cobweb-like mycelium with no colored spores. It thrives in saturated, poorly drained, overwatered soil.",
+    "management_a": "Use disease-free or treated seed and resistant cultivars; rotate away from cucurbits 2-3 years; avoid overhead irrigation and working plants when wet; remove infected debris. Apply protectant fungicides (chlorothalonil, mancozeb) or strobilurins/QoI on a preventive schedule during warm wet weather, rotating FRAC groups.",
+    "management_b": "Improve soil drainage and avoid overwatering and low/wet spots; plant in raised, warm, well-drained beds; do not plant cold-wet soil; use fungicide-treated seed and high-quality transplants. Apply oomycete-specific products (mefenoxam/metalaxyl, phosphonates, ethaboxam) as soil/in-furrow or drench treatments; mulch or trellis to keep fruit off wet soil.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "I've got cucumbers with soft, sunken, water-soaked spots that are rotting and spreading fast, especially on fruit lying on wet ground after all this warm, rainy weather. The bad spots keep getting bigger and the tissue is caving in and going mushy.",
+      "decisive_lay_a": "Look for sunken, round spots with salmon-pink to orange slimy ooze or gummy pink stuff sitting in the center, often arranged in ring-like circles.",
+      "decisive_lay_b": "Look for a plain soft, watery, mushy rot with NO colored ooze, and in muggy conditions a white cottony, cobweb-like fuzzy growth creeping over the surface.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

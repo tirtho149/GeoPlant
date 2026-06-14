@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__genus-diaporthe__sclerotinia-timber-rot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Genus Diaporthe",
+  "member_b_label": "Sclerotinia Timber Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both attack the soybean stem in mid-to-late season, kill plants in patches, and produce conspicuous fungal structures on/in the stem that growers lump together as \"white mold/stem rot.\" Diaporthe (stem canker / pod & stem blight / Phomopsis) and Sclerotinia (timber rot, a.k.a. white mold) both cause wilting, bleached dead stems, and small black bodies in or on the stem, so the diagnosis often hinges on whether the black bodies are pycnidia embedded in tissue versus loose sclerotia plus white cottony mold.",
+    "shared_presentation": "Scattered or patchy dead/wilting plants in the canopy from flowering through pod fill, with bleached tan-to-gray dead stems standing among green plants, premature death, reduced pod set, and dark fungal fruiting bodies associated with the stem.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "On and inside the stem, are the black bodies tiny pinhead pycnidia embedded in the tissue surface, or are they large irregular hard black sclerotia (mouse-dropping size) sitting loose in the pith/on the surface?",
+        "a_signal": "Numerous minute black pycnidia, often in linear rows on dead stems and pod sutures, firmly embedded in the epidermis (scrape with a fingernail and they stay).",
+        "b_signal": "Large (2-10 mm) irregular hard black sclerotia, easily dislodged, found loose inside the hollowed stem pith and on the surface.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Is there cottony white fluffy mycelium ('cotton') growing on the stem surface, especially at nodes after humid weather?",
+        "a_signal": "No conspicuous cottony growth; signs are dark pycnidia, and any mycelium is sparse and not fluffy-white.",
+        "b_signal": "Abundant dense white cottony mycelium ('white mold') on stems, nodes, and pods during humid/cool weather.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion/canker character on the lower-to-mid stem?",
+        "a_signal": "Reddish-brown to dark sunken canker, often starting at a node, sometimes girdling (northern stem canker) with brittle dead tissue.",
+        "b_signal": "Water-soaked to bleached gray-white lesion that becomes shredded and stringy ('timber'/rotted-wood look), often at mid-canopy node where flowers lodged.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather and canopy conditions preceded the outbreak?",
+        "a_signal": "Favored by warm, wet weather and extended periods of leaf wetness; common in humid late-season conditions, worse with early rains during pod fill.",
+        "b_signal": "Favored by cool, wet weather (60-70F) with dense, closed canopy that stays humid during flowering.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant are the diagnostic signs concentrated, and what happens to the pith?",
+        "a_signal": "Pith remains intact; signs concentrate on outer stem surface, pod sutures, and lower stem nodes.",
+        "b_signal": "Pith is bleached, dry, shredded, and hollowed, frequently containing sclerotia inside.",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How do affected plants die and stand in the field?",
+        "a_signal": "Gradual canker girdling causes wilt and death; leaves often remain attached on dead plant.",
+        "b_signal": "Rapid wilt above the stem lesion; upper plant dies and bleaches while bridging mycelium spreads plant-to-plant in patches.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Genus Diaporthe on soybean encompasses the Diaporthe/Phomopsis complex: stem canker (D. caulivora / D. aspalathi), pod and stem blight (D. longicolla and others), and Phomopsis seed decay. Hallmarks are dark reddish-brown sunken stem cankers (often node-originating and girdling in stem canker), and especially abundant minute black pycnidia arranged in rows along dead stems and pod sutures. The pith stays intact. Infection is favored by warm, wet conditions and extended leaf wetness, with disease pressure building during pod fill; seed quality losses (moldy, cracked, shriveled seed) are a downstream signature. Pycnidia exude tendrils of conidia in moisture, but there is no large hard sclerotium and no fluffy white cottony mold.",
+    "narrative_b": "Sclerotinia timber rot (white mold, Sclerotinia sclerotiorum) infects through senescing flowers during cool, wet weather under a dense closed canopy at flowering (R1-R3). It produces dense white cottony mycelium on stems, nodes, and pods, followed by large, hard, irregular black sclerotia formed both on the surface and inside the bleached, shredded, hollowed stem pith (the 'timber rot' appearance). Plants wilt rapidly above the lesion and die in patches as mycelium bridges between adjacent plants. Sclerotia survive years in soil and germinate to apothecia that release ascospores. The combination of white cotton plus mouse-dropping-sized loose sclerotia is unmistakable and distinguishes it from the embedded pycnidia of Diaporthe.",
+    "management_a": "Use disease-free/treated certified seed and resistant varieties (especially for stem canker); rotate away from soybean and incorporate residue since the fungus overwinters in stem debris; avoid harvest delays to protect seed quality; manage to reduce extended canopy wetness; foliar fungicides (e.g., at R3-R5) can help where pod & stem blight pressure is high, and harvest promptly when mature.",
+    "management_b": "Reduce canopy density (wider rows, lower seeding rates, avoid excess N/irrigation at flowering) to limit humidity; rotate with non-hosts (corn, small grains) for several years; avoid fields with white mold history and infested seed lots; apply flowering-timed fungicides (R1-R2) where risk models indicate; consider the biocontrol Coniothyrium minitans on sclerotia; plant less susceptible varieties and control broadleaf weed hosts.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "I've got scattered dead and wilting plants mixed in with the green ones, starting around flowering and on through pod fill. The dead plants have bleached, tan-to-gray stems standing up in the canopy, they died early, set fewer pods, and there's some dark fungus stuff showing up on the stems.",
+      "decisive_lay_a": "Lots of tiny black specks, almost like ground pepper, packed onto the dead stems and along the pod seams, often lined up in neat rows. They're stuck in the skin of the stem, so if you scrape them with your fingernail they stay put and don't flick off.",
+      "decisive_lay_b": "Hard, irregular black lumps about the size of a small seed or mouse dropping (roughly an eighth to a half inch). You'll find them loose, both sitting on the stem surface and rattling around inside the hollowed-out, dried-up center of the stem when you split it open. They knock off easily.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

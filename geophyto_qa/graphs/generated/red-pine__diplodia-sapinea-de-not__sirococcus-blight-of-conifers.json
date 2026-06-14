@@ -1,0 +1,63 @@
+{
+  "pair_id": "red-pine__diplodia-sapinea-de-not__sirococcus-blight-of-conifers",
+  "kind": "disease",
+  "crop": "Red Pine",
+  "member_a_label": "Diplodia Sapinea De Not.",
+  "member_b_label": "Sirococcus Blight Of Conifers",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are fungal shoot/tip blights that kill current-year candles and needles of red pine, producing browning, stunted shoots, resin flow, and small black fruiting bodies on dead tissue. On a casual field look both present as scattered dead brown shoot tips in the spring-flush canopy, so they are routinely confused without examining needle position of dieback, fruiting-body type, and conidial morphology.",
+    "shared_presentation": "Brown, killed current-year shoots and needles on red pine, often with a sharp transition from healthy to dead tissue, resin exudation at the base of blighted shoots, shoot tips bending or drooping, and tiny black fruiting structures (pycnidia) emerging on dead needles, shoots, or cone scales. Damage concentrates on the new flush and lower/interior crown, and both can cause repeated annual tip dieback.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the shoot does the needle browning begin and concentrate?",
+        "a_signal": "Browning kills the entire new shoot/candle from the base outward; whole elongating candles collapse, needles at the base of the new growth die first along with the shoot",
+        "b_signal": "Browning often starts at needle tips or affects scattered needles and the distal shoot, with dieback frequently in the lower and inner crown on shaded/lower branches",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What stand/site and weather conditions preceded the outbreak?",
+        "a_signal": "Favored by hail wounds, drought stress, and hot dry weather on stressed or off-site red pine; worsens after wounding events and on mature/stressed trees",
+        "b_signal": "Favored by cool, wet, humid spring conditions and shaded, dense lower-crown microsites; common in nurseries and on regeneration/seedlings",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "Which age class and crown position is most heavily hit?",
+        "a_signal": "Damages trees of all ages but is notably destructive on older/mature plantation pines and large trees, especially after wounding",
+        "b_signal": "Especially damaging to seedlings, nursery stock, and young regeneration, and to lower shaded branches of larger trees",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "On dead needles/cones, what do the pycnidia and exuded conidia look like en masse?",
+        "a_signal": "Black pycnidia erupt through needle epidermis and on cone scales; produce dark brown, smoky conidial masses; spore tendrils dark",
+        "b_signal": "Pycnidia produce conidia that ooze in pale to amber/pinkish-tan tendrils, lighter colored masses on the wet needle surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under the microscope, what is the conidial shape, septation, and pigmentation?",
+        "a_signal": "Conidia large, oblong-ellipsoid, thick-walled, dark brown, mostly aseptate (rarely 1-septate), roughly 30-45 x 10-16 um",
+        "b_signal": "Conidia small, hyaline to pale, two-celled (1-septate) with unequal cells, club/spindle-shaped, roughly 12-18 x 3-6 um",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Diplodia sapinea (formerly Sphaeropsis sapinea) is a Diplodia tip blight that kills current-year shoots of red and other hard pines. Infection of elongating candles causes the whole new shoot to brown and die from the base, with stunted, resin-soaked shoots and needles that turn brown and remain short. It is strongly associated with stress, drought, and especially hail or other wounding, and is most destructive on mature plantation and ornamental pines. Diagnostic signs are black pycnidia erupting through the needle epidermis and on the undersides of cone scales, releasing large, dark brown, thick-walled, mostly aseptate conidia.",
+    "narrative_b": "Sirococcus conigenus (Sirococcus blight) is a shoot blight favored by cool, wet spring weather and shaded, humid microsites. It is particularly damaging in nurseries, on seedlings, and in regeneration, and attacks the lower and inner crown of larger trees. Needles brown (often from the tips) and droop, shoots curl, and a sharp margin separates dead from living tissue. The diagnostic sign is small pycnidia producing hyaline to pale, two-celled (1-septate), spindle-shaped conidia that ooze in light-colored tendrils, distinct from Diplodia's large dark spores.",
+    "management_a": "Reduce tree stress: maintain vigor, avoid wounding, and prune/destroy infected shoots and cones during dry weather to lower inoculum. Avoid planting susceptible pines off-site. Protectant fungicides (e.g., copper or thiophanate-methyl, propiconazole) timed at bud break and during shoot elongation protect new growth; remove severely affected trees and infected cones that harbor pycnidia.",
+    "management_b": "Improve air movement and reduce humidity by widening spacing and managing shade, especially in nurseries and dense regeneration. Remove and destroy blighted shoots and infected cones/seed sources. Protectant fungicide sprays during cool, wet spring flush protect new shoots; use disease-free seed and nursery stock since the fungus is seedborne and can move on contaminated seedlings.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "The new shoots and needles on my red pines are turning brown and dying back, with a sharp line where healthy green meets dead tissue, and I can see sticky sap oozing at the base of the dead tips. The shoot tips are bending and drooping, the damage is worst on the new growth low and inside the tree, and there are tiny black specks showing up on the dead needles and shoots. It keeps coming back and killing tips year after year.",
+      "decisive_lay_a": "Inside the tiny black specks are large, fat, oblong spores that are dark brown and thick-walled, mostly with no internal cross-wall. They are big and dark compared to the other disease's spores. You would need a hand lens or microscope to see them.",
+      "decisive_lay_b": "Inside the tiny black specks are small, nearly colorless to pale spores shaped like little clubs or spindles, each pinched into two unequal halves by a single cross-wall. They are much smaller and lighter than the other disease's spores. You would need a microscope to see them.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

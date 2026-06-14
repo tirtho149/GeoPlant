@@ -1,0 +1,70 @@
+{
+  "pair_id": "corn__common-corn-rust__southern-corn-rust",
+  "kind": "disease",
+  "crop": "Corn",
+  "member_a_label": "Common Corn Rust",
+  "member_b_label": "Southern Corn Rust",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are foliar corn rusts producing raised pustules (urediniospores) on leaves; from a distance and in early stages they look nearly identical and are routinely confused in scouting. The distinction matters enormously because southern rust is far more aggressive and yield-damaging, so accurate species ID drives fungicide decisions.",
+    "shared_presentation": "Circular-to-oval raised pustules erupting through the leaf epidermis on corn, ranging from cinnamon-brown to orange, scattered across the leaf surface; both can be present mid-to-late season and both spread via wind-blown urediniospores moving up from southern overwintering regions.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "What is the color of the urediniospore pustules on the leaf?",
+        "a_signal": "Cinnamon-brown to brick-red, darker rust color",
+        "b_signal": "Light orange to golden-orange, brighter and more vivid",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "On which leaf surface do the pustules predominantly form?",
+        "a_signal": "Pustules form roughly equally on BOTH upper and lower leaf surfaces",
+        "b_signal": "Pustules form predominantly on the UPPER leaf surface",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and distribution pattern of individual pustules?",
+        "a_signal": "Larger, more elongate-oval pustules, more sparsely and randomly scattered",
+        "b_signal": "Smaller, more circular pustules, densely clustered in compact groups",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Do dark brownish-black telia (teliospore pustules) appear as the season progresses?",
+        "a_signal": "Yes, dark brown-black angular telia commonly develop on senescing tissue late season",
+        "b_signal": "Telia are rare/seldom seen in the field; remains predominantly orange uredinia",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature and humidity regime favors the outbreak?",
+        "a_signal": "Favored by cooler temperatures (60-77F / 16-25C) and moderate moisture",
+        "b_signal": "Favored by hot, humid conditions (80F+ / 27C+) with high humidity",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are pustules confined to leaves or do they extend to husks, sheaths, and stalks?",
+        "a_signal": "Largely confined to leaf blades",
+        "b_signal": "Readily spreads onto leaf sheaths, husks, and stalks under heavy pressure",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Common rust (Puccinia sorghi) produces cinnamon-brown to brick-red, somewhat elongate-oval pustules scattered on BOTH the upper and lower leaf surfaces. It is favored by cooler temperatures (60-77F) and tends to appear earlier and in cooler northern environments or early in the season. As tissue senesces, it forms dark brown-to-black telia. It is generally far less economically damaging than southern rust, and many dent corn hybrids carry adequate resistance, so it rarely justifies fungicide on its own.",
+    "narrative_b": "Southern rust (Puccinia polysora) produces small, circular, bright light-orange to golden pustules densely clustered and concentrated on the UPPER leaf surface, and under heavy pressure spreads onto sheaths, husks, and stalks. It thrives in hot, humid weather (80F+) and is the more aggressive, yield-robbing of the two, capable of rapid defoliation. Because it does not overwinter in most of the US, it arrives on wind currents from the tropics/Gulf and intensifies through summer; timely identification often triggers fungicide protection of the ear leaf and above.",
+    "management_a": "Usually does not require action; select resistant hybrids where chronic. Fungicide only rarely warranted on susceptible sweet corn/seed corn or under very heavy early pressure. Scout but treat as low-priority relative to southern rust.",
+    "management_b": "High-priority. Scout the upper canopy from tasseling onward, especially in hot humid conditions. Apply a triazole/strobilurin fungicide protectively at first detection on the ear leaf or above, particularly VT-R3, since rapid spread can cause major yield and stalk-integrity loss. Track regional rust-tracker reports for arrival timing.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My corn leaves have a bunch of little raised rusty bumps scattered all over them, kind of brownish to orange, like someone sprinkled cinnamon or rust dust on the plants. They started showing up later in the season and seem to be spreading across the field.",
+      "decisive_lay_a": "Flip the leaves over and check both sides: with this one you'll find about the same number of rusty bumps on the top of the leaf AND on the underside.",
+      "decisive_lay_b": "Flip the leaves over and check both sides: with this one the rusty bumps are mostly on the top side of the leaf, with few or none on the underside.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

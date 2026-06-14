@@ -1,0 +1,63 @@
+{
+  "pair_id": "cucumber__anthracnose__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce roughly circular tan-to-brown foliar lesions on cucumber that bear dark fungal fruiting bodies and frequent pycnidial/acervular exudate, and both can blight stems and rot fruit. In the field a grower seeing spotted leaves and a cankered, oozing stem can easily attribute either to the other, especially mid-season under warm wet conditions when both are active.",
+    "shared_presentation": "Circular to angular tan/brown necrotic leaf lesions that may coalesce, dark pycnidia/acervuli within lesions, water-soaked margins early, stem cankers, and fruit rot. Both favor warm, humid, rainy weather and spread by splashing rain/overhead irrigation, and both survive in residue and on cucurbit seed.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the most severe and characteristic damage concentrated \u2014 on the leaf blade and fruit, or on the crown/main stem at nodes?",
+        "a_signal": "Damage centers on leaves and fruit; stem involvement is secondary and forms elongate streaks rather than a defined crown canker",
+        "b_signal": "A defined canker at the crown or main-stem nodes is prominent, often girdling and wilting whole vines from a single point",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and behavior of the mature leaf lesion?",
+        "a_signal": "Roughly circular spots that enlarge, turn tan with a dark/water-soaked border, become brittle and shot-hole, often vein-delimited and angular on cucumber",
+        "b_signal": "Lesions begin at leaf margins or as larger irregular wedge-shaped tan blights that spread inward, often with concentric zonation",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "On the fruit, what does the rot and its fruiting structures look like?",
+        "a_signal": "Sunken, circular, water-soaked fruit lesions producing salmon-pink to orange spore masses (acervuli) in moist gelatinous droplets",
+        "b_signal": "Black rot of fruit with internal/external darkening and black pycnidia, lacking the salmon-pink ooze",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Split the cankered stem and examine the surface exudate and fruiting bodies under a hand lens: is there amber gum, and are the bodies pycnidia or acervuli?",
+        "a_signal": "Stem lesions bear acervuli (often with setae) and salmon spore ooze; no copious amber gummy exudate from the stem",
+        "b_signal": "Stem canker exudes characteristic reddish-brown to amber gummy beads and is studded with black pycnidia (and pseudothecia)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Microscopically, what are the spores and structures?",
+        "a_signal": "Acervuli with dark setae releasing hyaline, single-celled, curved/oblong conidia (Colletotrichum)",
+        "b_signal": "Pycnidia releasing hyaline conidia that are mostly one- to two-celled (Stagonosporopsis/Didymella teleomorph)",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Anthracnose (Colletotrichum orbiculare) is primarily a foliar and fruit disease on cucumber. Leaf spots start as small water-soaked areas that enlarge into circular tan-to-brown lesions with darker, water-soaked margins; centers become brittle and drop out to give a shot-hole appearance, and on cucumber the lesions are often somewhat angular and vein-delimited. The diagnostic sign is on the fruit and lesions: salmon-pink to orange gelatinous spore masses (acervuli, frequently bearing dark setae) ooze from sunken, circular, water-soaked fruit lesions in humid weather. Stems and petioles develop elongate streaks rather than a single girdling crown canker. The pathogen overwinters in residue and on/in seed and spreads by splashing rain and workers moving through wet foliage.",
+    "narrative_b": "Gummy Stem Blight (Stagonosporopsis cucurbitacearum, teleomorph Didymella bryoniae) is most damaging as a stem/crown disease, though it also blights leaves and rots fruit (the \"black rot\" phase). The hallmark is a stem canker\u2014often at the crown or a node\u2014that exudes characteristic reddish-brown to amber gummy beads and is densely studded with tiny black pycnidia (and dark pseudothecia/perithecia). Such cankers girdle vines and cause sudden wilting from a single point. Leaf lesions tend to begin at the margins or as larger irregular wedge-shaped tan blights with concentric zonation, again peppered with black pycnidia. Fruit develop a black rot with black fruiting bodies and lack the salmon ooze of anthracnose. It is residue- and seed-borne and favors warm, wet, dense canopies.",
+    "management_a": "Use pathogen-free or hot-water/fungicide-treated seed and resistant cucumber cultivars where available; rotate out of cucurbits 2-3 years and bury or remove infected residue. Avoid working in wet fields and use drip rather than overhead irrigation to limit splash dispersal. Preventive protectant fungicides (chlorothalonil, mancozeb) on a 7-10 day schedule under warm wet conditions, rotated with QoI/strobilurin or DMI products with attention to resistance management, give good control. Improve canopy airflow with proper spacing.",
+    "management_b": "Plant clean, treated seed (D. bryoniae is strongly seedborne) and rotate at least 2-3 years away from all cucurbits, destroying crop debris and volunteer cucurbits. Manage greenhouse/high-tunnel humidity, avoid leaf wetness, prune for airflow, and avoid overhead irrigation. Protectant and systemic fungicides (chlorothalonil, mancozeb, plus tebuconazole/difenoconazole DMIs and boscalid/fluopyram SDHIs) are used preventively; rotate FRAC groups because resistance to QoIs and some DMIs/SDHIs is widespread in this pathogen. Sanitize tools and avoid stem wounding during trellising.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My cucumber plants have round to angular tan and brown dead spots on the leaves that are running together into bigger blotches, with the edges looking wet and water-soaked when they first show up. I'm also seeing dark cankers on the stems and some rotting fruit. It got bad after all this warm, rainy, humid weather and overhead watering.",
+      "decisive_lay_a": "Look at the stem sores closely: with anthracnose you'll see a pinkish or salmon-colored slimy ooze coming out of the spots, and there is NO thick amber or gummy sap. The spots may also have tiny dark stiff hairs or bristles in them.",
+      "decisive_lay_b": "Look at the stem canker closely: with gummy stem blight the crack on the stem oozes a sticky reddish-brown to amber gummy sap (like dried beads of gum), and the canker is peppered with tiny black dots.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "pair_id": "apple__apple-scab__black-rot",
+  "kind": "disease",
+  "crop": "Apple",
+  "member_a_label": "Apple Scab",
+  "member_b_label": "Black Rot",
+  "source": "llm-generated (validated)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both spot apple leaves and lesion the fruit, so early foliar and fruit symptoms overlap.",
+    "shared_presentation": "Leaf spots and fruit lesions on apple.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What do the leaf lesions look like?",
+        "a_signal": "Olive-green to brown velvety, fuzzy blotches with diffuse edges.",
+        "b_signal": "Discrete 'frogeye' spots with tan centers and purple margins.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are there cankers on the limbs?",
+        "a_signal": "No limb cankers; damage is on leaves and fruit only.",
+        "b_signal": "Reddish-brown sunken cankers on limbs accompany the leaf and fruit symptoms.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the fruit lesions' texture and pattern.",
+        "a_signal": "Corky, scabby olive-brown lesions on the fruit surface.",
+        "b_signal": "Firm black fruit rot with concentric rings, often starting at the calyx.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and tissue favored it?",
+        "a_signal": "Cool, wet spring with primary infection from overwintered leaf litter.",
+        "b_signal": "Warm summer weather acting on stressed wood and dead/cankered tissue.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Because leaf blotches are velvety olive-brown and fruit lesions are corky scabs without limb cankers, I classify this as apple scab rather than black rot.",
+    "narrative_b": "Because the fruit shows firm black concentric-ringed rot with frogeye leaf spots and limb cankers, I classify this as black rot rather than apple scab.",
+    "management_a": "Apple scab: sanitize leaf litter, use resistant cultivars, and apply protectant fungicides on a wetting-period schedule in spring.",
+    "management_b": "Black rot: prune out cankers and dead wood, remove mummified fruit, reduce tree stress, and apply labeled fungicides in summer.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false
+  }
+}

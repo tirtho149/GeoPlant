@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__bacterial-speck-of-tomato__tomato-spotted-wilt-virus",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Bacterial Speck Of Tomato",
+  "member_b_label": "Tomato Spotted Wilt Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce dark, small leaf spots/lesions on tomato foliage and can show necrotic flecking, so early-stage scattered dark spots are easily mistaken. However TSWV is a systemic vector-borne virus with chlorotic/bronzed rings, growing-point dieback, and characteristic fruit ringspots, while bacterial speck is a foliar/fruit bacterial disease driven by cool wet weather with tiny raised black specks haloed in yellow.",
+    "shared_presentation": "Small dark brown-to-black spots and necrotic flecks on tomato leaves, sometimes with surrounding yellowing, plus blemishes on green fruit, leading growers to confuse the two early in the season.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Is the disease associated with thrips activity and systemic spread, or with free moisture and bacterial ooze in cool wet conditions?",
+        "a_signal": "No vector; favored by cool (<24C/75F), wet, splashing-rain conditions; bacterial, no thrips needed",
+        "b_signal": "Spread by thrips (especially western flower thrips); insect feeding scars and thrips present; systemic viral infection",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the dominant lesion character on leaves?",
+        "a_signal": "Tiny (1-2 mm) dark brown to black specks, often slightly raised, each surrounded by a bright yellow halo; spots stay small and discrete",
+        "b_signal": "Bronzing, chlorotic and necrotic concentric ringspots, line patterns, and bronzed/purplish cast over larger leaf areas",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Is the whole plant systemically affected including the growing point, or are symptoms confined to leaf/fruit surfaces?",
+        "a_signal": "Symptoms limited to foliage, petioles, stems and fruit surface; growing tip remains healthy; no systemic wilt",
+        "b_signal": "Systemic: terminal growing point shows dieback, one-sided stunting, drooping/wilting of young growth and apical necrosis",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What do the fruit symptoms look like?",
+        "a_signal": "Numerous tiny raised black specks scattered on the fruit surface, superficial, no rings",
+        "b_signal": "Distinctive chlorotic/necrotic concentric rings and blotches with raised bumpy uneven ripening on fruit",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the spread pattern appear in the field?",
+        "a_signal": "Clusters of affected plants following rain/overhead irrigation and splash, spreading along rows over time",
+        "b_signal": "Scattered individual plants amid healthy ones (random distribution following thrips landing), expanding with thrips flights",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Decisive confirmation: does the lesion react to a test that distinguishes bacterial ooze versus viral presence?",
+        "a_signal": "Crushed lesion under microscope shows bacterial streaming/ooze; lesions test positive for P. syringae (Pst), no virus detected",
+        "b_signal": "No bacterial ooze; immunostrip/ELISA/RT-PCR is positive for Tomato spotted wilt virus, confirming systemic Tospovirus",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Bacterial speck of tomato, caused by Pseudomonas syringae pv. tomato, is a cool-wet-weather bacterial disease. It produces very small (1-2 mm) dark brown to black, often slightly raised specks on leaves, each typically ringed by a bright yellow halo; heavy infection causes leaves to look peppered and can lead to marginal necrosis. Petioles and stems may show dark streaks, and green fruit develop numerous tiny, superficial raised black specks. The pathogen spreads by water splash from rain or overhead irrigation and is favored by temperatures below about 24C (75F) and prolonged leaf wetness. It is seedborne and can be introduced on transplants. The growing point and plant architecture remain normal; there is no systemic wilt or dieback.",
+    "narrative_b": "Tomato spotted wilt virus (TSWV, a Tospovirus) is a systemic, thrips-transmitted virus, vectored primarily by western flower thrips and other thrips species that acquire it as larvae. Infected plants show bronzing of young leaves, chlorotic and necrotic concentric ringspots, line patterns, and a purplish-bronze cast, with dieback of the terminal growing point, one-sided stunting, and drooping of young growth. Fruit develop diagnostic chlorotic and necrotic concentric rings with uneven, bumpy ripening. Distribution in the field tends to be of scattered individual plants reflecting thrips landing behavior rather than splash-driven clusters. Because it is systemic and viral, infected plants cannot be cured and serve as reservoirs.",
+    "management_a": "Use certified pathogen-free seed and transplants; hot-water or bleach seed treatment where appropriate. Avoid overhead irrigation and working plants when wet; promote canopy drying and rotate away from solanaceous residue. Apply protectant copper-based bactericides (often tank-mixed with mancozeb to improve efficacy) preventively during cool wet periods, monitoring for copper resistance. Remove infected debris and volunteers.",
+    "management_b": "Manage the thrips vector and virus reservoirs: use TSWV-resistant cultivars (Sw-5 gene) where available, reflective/UV mulches to deter thrips, and insecticide programs targeting thrips (rotating modes of action, noting thrips resistance). Rogue and remove infected plants promptly to reduce inoculum, control weed and ornamental reservoir hosts, and use thrips-excluding screens and clean transplants in greenhouses/high tunnels. There is no cure once a plant is infected.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomato plants have small dark brown-to-black spots and little dead specks scattered on the leaves, with some yellowing around them, and I'm seeing blemishes showing up on the green fruit too.",
+      "decisive_lay_a": "If you crush a spotted leaf in a drop of clear water and watch it, you'll see a cloudy, milky stream of bacteria leaking out, and a lab test comes back positive for the speck bacteria with no virus found.",
+      "decisive_lay_b": "No milky bacterial ooze comes out of a crushed spot, but a quick test strip or a lab test comes back positive for spotted wilt virus, showing the whole plant is infected with the virus (often with bronzed, cupped new growth and ringed spots).",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

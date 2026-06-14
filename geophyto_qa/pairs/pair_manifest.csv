@@ -1,0 +1,854 @@
+pair_id,crop,member_a,member_b,n_imgs_total,lookalike_prior,web_checked,web_verified,confirmed,clip_scored,matched_cross_knn,clip_lane_hint,needs_web
+squash__cucurbit-downy-mildew__phytophthora-blight,Squash,Cucurbit Downy Mildew,Phytophthora Blight,343,8.1,True,True,True,True,0.0423,image_decisive,False
+watermelon__gummy-stem-blight__phytophthora-blight,Watermelon,Gummy Stem Blight,Phytophthora Blight,243,8.1,True,True,True,True,0.0476,image_decisive,False
+squash__cucurbit-downy-mildew__powdery-mildew,Squash,Cucurbit Downy Mildew,Powdery Mildew,131,7.2,True,True,True,True,0.129,image_decisive,False
+cucumber__anthracnose__cucurbit-downy-mildew,Cucumber,Anthracnose,Cucurbit Downy Mildew,410,7.2,True,True,True,True,0.2242,image_ambiguous,False
+squash__phytophthora-blight__powdery-mildew,Squash,Phytophthora Blight,Powdery Mildew,298,7.1,False,False,False,True,0.0755,image_decisive,True
+watermelon__anthracnose__gummy-stem-blight,Watermelon,Anthracnose,Gummy Stem Blight,168,6.4,False,False,False,True,0.1045,image_decisive,True
+tomato__anthracnose__septoria-leaf-spot,Tomato,Anthracnose,Septoria Leaf Spot,38,6.3,True,True,True,True,0.0357,image_decisive,False
+wheat__powdery-mildew__wheat-leaf-rust,Wheat,Powdery Mildew,Wheat Leaf Rust,67,6.3,True,False,False,True,0.2727,image_ambiguous,False
+squash__anthracnose__cucurbit-downy-mildew,Squash,Anthracnose,Cucurbit Downy Mildew,117,6.2,False,False,False,True,0.0179,image_decisive,True
+cucumber__anthracnose__powdery-mildew,Cucumber,Anthracnose,Powdery Mildew,139,6.2,True,True,True,True,0.1754,image_decisive,False
+cucumber__corynespora-leaf-spot__cucurbit-downy-mildew,Cucumber,Corynespora Leaf Spot,Cucurbit Downy Mildew,317,6.2,True,True,True,True,0.2531,image_ambiguous,False
+wheat__powdery-mildew__zymoseptoria-tritici,Wheat,Powdery Mildew,Zymoseptoria Tritici,91,6.2,True,True,True,True,0.1111,image_decisive,False
+elm__black-spot-of-elm__dutch-elm-disease,Elm,Black Spot Of Elm,Dutch Elm Disease,35,6.2,False,False,False,True,0.0,image_decisive,True
+apple__apple-scab__black-rot,Apple,Apple Scab,Black Rot,55,6.2,True,False,False,True,0.0741,image_decisive,False
+squash__anthracnose__phytophthora-blight,Squash,Anthracnose,Phytophthora Blight,284,6.1,False,False,False,True,0.114,image_decisive,True
+squash__anthracnose__plectosphaerella-fungus,Squash,Anthracnose,Plectosphaerella Fungus,59,6.1,False,False,False,True,0.0546,image_decisive,True
+squash__cucurbit-downy-mildew__plectosphaerella-fungus,Squash,Cucurbit Downy Mildew,Plectosphaerella Fungus,118,6.1,False,False,False,True,0.0192,image_decisive,True
+squash__phytophthora-blight__plectosphaerella-fungus,Squash,Phytophthora Blight,Plectosphaerella Fungus,285,6.1,False,False,False,True,0.0465,image_decisive,True
+squash__plectosphaerella-fungus__powdery-mildew,Squash,Plectosphaerella Fungus,Powdery Mildew,73,6.1,False,False,False,True,0.0535,image_decisive,True
+watermelon__anthracnose__phytophthora-blight,Watermelon,Anthracnose,Phytophthora Blight,231,6.1,False,False,False,True,0.0781,image_decisive,True
+watermelon__anthracnose__powdery-mildew,Watermelon,Anthracnose,Powdery Mildew,123,6.1,False,False,False,True,0.1132,image_decisive,True
+cucumber__anthracnose__corynespora-leaf-spot,Cucumber,Anthracnose,Corynespora Leaf Spot,157,6.1,True,True,True,True,0.295,image_ambiguous,False
+cucumber__cucurbit-downy-mildew__phytophthora-blight,Cucumber,Cucurbit Downy Mildew,Phytophthora Blight,362,6.1,False,False,False,True,0.0677,image_decisive,True
+cucumber__cucurbit-downy-mildew__powdery-mildew,Cucumber,Cucurbit Downy Mildew,Powdery Mildew,299,6.1,True,True,True,True,0.1713,image_decisive,False
+boxwood__boxwood-blight__pseudonectria-buxi-b-o--dodge,Boxwood,Boxwood Blight,Pseudonectria Buxi B.O. Dodge,58,6.1,False,False,False,True,0.0645,image_decisive,True
+eggplant__diaporthe-vexans-gratz__phytophthora-blight,Eggplant,Diaporthe Vexans Gratz,Phytophthora Blight,94,6.1,False,False,False,False,,,True
+blue-spruce__rhizosphaera-needle-cast__spruce-needle-rusts,Blue Spruce,Rhizosphaera Needle Cast,Spruce Needle Rusts,29,6.1,True,False,False,True,0.2174,image_ambiguous,False
+highbush-blueberry__anthracnose__blueberry-leaf-rust,Highbush Blueberry,Anthracnose,Blueberry Leaf Rust,37,6.1,True,False,False,True,0.125,image_decisive,False
+juniper__diaporthe-juniperivora-sacc__kabatina-blight,Juniper,Diaporthe Juniperivora Sacc.,Kabatina Blight,41,6.1,True,True,True,True,0.1714,image_decisive,False
+juniper__diaporthe-juniperivora-sacc__phomopsis-cankers-and-twig-blights,Juniper,Diaporthe Juniperivora Sacc.,Phomopsis Cankers And Twig Blights,31,6.1,True,True,True,True,0.3704,image_ambiguous,False
+juniper__kabatina-blight__phomopsis-cankers-and-twig-blights,Juniper,Kabatina Blight,Phomopsis Cankers And Twig Blights,36,6.1,True,True,True,True,0.2812,image_ambiguous,False
+balsam-fir__fir-fern-rust__rhizosphaera-needle-cast,Balsam Fir,Fir-Fern Rust,Rhizosphaera Needle Cast,29,6.1,True,False,False,True,0.2222,image_ambiguous,False
+melon__cucurbit-downy-mildew__monosporascus-root-rot,Melon,Cucurbit Downy Mildew,Monosporascus Root Rot,72,6.0,False,False,False,True,0.1034,image_decisive,True
+tomato__early-blight__late-blight,Tomato,Early Blight,Late Blight,167,5.6,False,False,False,True,0.0794,image_decisive,True
+tomato__early-blight__tomato-leaf-mould,Tomato,Early Blight,Tomato Leaf Mould,87,5.5,False,False,False,True,0.1142,image_decisive,True
+wheat__powdery-mildew__stripe-rust,Wheat,Powdery Mildew,Stripe Rust,78,5.5,True,True,True,True,0.1667,image_decisive,False
+tomato__early-blight__septoria-leaf-spot,Tomato,Early Blight,Septoria Leaf Spot,73,5.4,True,True,True,True,0.1604,image_decisive,False
+tomato__late-blight__septoria-leaf-spot,Tomato,Late Blight,Septoria Leaf Spot,144,5.4,False,False,False,True,0.1087,image_decisive,True
+tomato__late-blight__tomato-leaf-mould,Tomato,Late Blight,Tomato Leaf Mould,158,5.4,False,False,False,True,0.0,image_decisive,True
+tomato__septoria-leaf-spot__tomato-leaf-mould,Tomato,Septoria Leaf Spot,Tomato Leaf Mould,64,5.4,True,False,False,True,0.2334,image_ambiguous,False
+wheat__fusarium-graminearum-schwabe__stripe-rust,Wheat,Fusarium Graminearum Schwabe,Stripe Rust,70,5.4,False,False,False,True,0.0609,image_decisive,True
+wheat__fusarium-graminearum-schwabe__wheat-stem-rust,Wheat,Fusarium Graminearum Schwabe,Wheat Stem Rust,48,5.4,True,False,False,True,0.1215,image_decisive,False
+wheat__fusarium-graminearum-schwabe__zymoseptoria-tritici,Wheat,Fusarium Graminearum Schwabe,Zymoseptoria Tritici,83,5.4,False,False,False,True,0.0806,image_decisive,True
+wheat__stripe-rust__zymoseptoria-tritici,Wheat,Stripe Rust,Zymoseptoria Tritici,87,5.4,False,False,False,True,0.1162,image_decisive,True
+tomato__anthracnose__early-blight,Tomato,Anthracnose,Early Blight,61,5.3,False,False,False,True,0.0769,image_decisive,True
+tomato__early-blight__gray-mold,Tomato,Early Blight,Gray Mold,70,5.3,False,False,False,True,0.1085,image_decisive,True
+soybean__cercospora-blight__downy-mildew,Soybean,Cercospora Blight,Downy Mildew,89,5.3,False,False,False,True,0.0343,image_decisive,True
+watermelon__bacterial-fruit-blotch__gummy-stem-blight,Watermelon,Bacterial Fruit Blotch,Gummy Stem Blight,148,5.3,False,False,False,True,0.0189,image_decisive,True
+lettuce__downy-mildew__sclerotinia-timber-rot,Lettuce,Downy Mildew,Sclerotinia Timber Rot,206,5.3,False,False,False,True,0.0166,image_decisive,True
+corn__common-corn-rust__corn-smut,Corn,Common Corn Rust,Corn Smut,75,5.3,False,False,False,True,0.069,image_decisive,True
+corn__corn-smut__white-ear-rot-and-seedling-blight-of-maize,Corn,Corn Smut,White Ear Rot And Seedling Blight Of Maize,87,5.3,False,False,False,True,0.0798,image_decisive,True
+wheat__fusarium-graminearum-schwabe__tan-spot,Wheat,Fusarium Graminearum Schwabe,Tan Spot,53,5.3,True,False,False,True,0.1353,image_decisive,False
+wheat__fusarium-graminearum-schwabe__wheat-leaf-rust,Wheat,Fusarium Graminearum Schwabe,Wheat Leaf Rust,59,5.3,False,False,False,True,0.1191,image_decisive,True
+wheat__powdery-mildew__tan-spot,Wheat,Powdery Mildew,Tan Spot,61,5.3,True,False,False,True,0.1556,image_decisive,False
+wheat__stripe-rust__tan-spot,Wheat,Stripe Rust,Tan Spot,57,5.3,True,False,False,True,0.1902,image_decisive,False
+wheat__stripe-rust__wheat-leaf-rust,Wheat,Stripe Rust,Wheat Leaf Rust,63,5.3,True,True,True,True,0.2251,image_ambiguous,False
+tomato__anthracnose__late-blight,Tomato,Anthracnose,Late Blight,132,5.2,False,False,False,False,,,True
+tomato__anthracnose__tomato-leaf-mould,Tomato,Anthracnose,Tomato Leaf Mould,52,5.2,False,False,False,True,0.0968,image_decisive,True
+tomato__gray-mold__tomato-leaf-mould,Tomato,Gray Mold,Tomato Leaf Mould,61,5.2,True,True,True,True,0.1315,image_decisive,False
+soybean__cercospora-blight__soybean-rust,Soybean,Cercospora Blight,Soybean Rust,86,5.2,False,False,False,True,0.0,image_decisive,True
+strawberry__anthracnose__gray-mold,Strawberry,Anthracnose,Gray Mold,104,5.2,False,False,False,True,0.0653,image_decisive,True
+strawberry__anthracnose__ramularia-grevilleana-verkley---u--braun,Strawberry,Anthracnose,Ramularia Grevilleana Verkley & U. Braun,119,5.2,False,False,False,True,0.0505,image_decisive,True
+watermelon__anthracnose__bacterial-fruit-blotch,Watermelon,Anthracnose,Bacterial Fruit Blotch,136,5.2,False,False,False,True,0.037,image_decisive,True
+watermelon__bacterial-fruit-blotch__phytophthora-blight,Watermelon,Bacterial Fruit Blotch,Phytophthora Blight,211,5.2,True,True,True,True,0.1571,image_decisive,False
+lettuce__downy-mildew__rhizoctonia-damping-off--blight-and-rot,Lettuce,Downy Mildew,"Rhizoctonia Damping-Off, Blight And Rot",79,5.2,False,False,False,True,0.0714,image_decisive,True
+lettuce__rhizoctonia-damping-off--blight-and-rot__sclerotinia-timber-rot,Lettuce,"Rhizoctonia Damping-Off, Blight And Rot",Sclerotinia Timber Rot,151,5.2,False,False,False,False,,,True
+corn__common-corn-rust__white-ear-rot-and-seedling-blight-of-maize,Corn,Common Corn Rust,White Ear Rot And Seedling Blight Of Maize,40,5.2,False,False,False,True,0.0857,image_decisive,True
+grape__black-rot__downy-mildew,Grape,Black Rot,Downy Mildew,70,5.2,False,False,False,True,0.0858,image_decisive,True
+sweet-potato__bread-mold__rhizopus-soft-rots,Sweet Potato,Bread Mold,Rhizopus Soft Rots,82,5.2,True,True,True,True,0.172,image_decisive,False
+cucumber__anthracnose__phytophthora-blight,Cucumber,Anthracnose,Phytophthora Blight,202,5.2,False,False,False,True,0.0909,image_decisive,True
+cucumber__cucurbit-downy-mildew__pythium-diseases,Cucumber,Cucurbit Downy Mildew,Pythium Diseases,307,5.2,False,False,False,True,0.0444,image_decisive,True
+wheat__fusarium-graminearum-schwabe__powdery-mildew,Wheat,Fusarium Graminearum Schwabe,Powdery Mildew,74,5.2,False,False,False,True,0.1087,image_decisive,True
+wheat__loose-smut-of-wheat-or-barley__zymoseptoria-tritici,Wheat,Loose Smut Of Wheat Or Barley,Zymoseptoria Tritici,71,5.2,False,False,False,True,0.1154,image_decisive,True
+wheat__parastagonospora-nodorum__stripe-rust,Wheat,Parastagonospora Nodorum,Stripe Rust,54,5.2,False,False,False,True,0.0593,image_decisive,True
+wheat__parastagonospora-nodorum__zymoseptoria-tritici,Wheat,Parastagonospora Nodorum,Zymoseptoria Tritici,67,5.2,True,True,True,True,0.1258,image_decisive,False
+wheat__stripe-rust__wheat-stem-rust,Wheat,Stripe Rust,Wheat Stem Rust,52,5.2,False,False,False,True,0.0916,image_decisive,True
+wheat__tan-spot__wheat-leaf-rust,Wheat,Tan Spot,Wheat Leaf Rust,46,5.2,True,False,False,True,0.2583,image_ambiguous,False
+wheat__tan-spot__wheat-stem-rust,Wheat,Tan Spot,Wheat Stem Rust,35,5.2,True,False,False,True,0.1468,image_decisive,False
+wheat__wheat-leaf-rust__wheat-stem-rust,Wheat,Wheat Leaf Rust,Wheat Stem Rust,41,5.2,True,True,True,True,0.1476,image_decisive,False
+wheat__wheat-stem-rust__zymoseptoria-tritici,Wheat,Wheat Stem Rust,Zymoseptoria Tritici,65,5.2,False,False,False,True,0.0423,image_decisive,True
+gourd__phytophthora-blight__powdery-mildew,Gourd,Phytophthora Blight,Powdery Mildew,40,5.2,True,False,False,True,0.1933,image_decisive,False
+douglas-fir__rhabdocline-needlecasts__swiss-needle-cast,Douglas-Fir,Rhabdocline Needlecasts,Swiss Needle Cast,30,5.2,False,False,False,True,0.0,image_decisive,True
+tomato__anthracnose__gray-mold,Tomato,Anthracnose,Gray Mold,35,5.1,False,False,False,True,0.0476,image_decisive,True
+tomato__anthracnose__rhizopus-soft-rots,Tomato,Anthracnose,Rhizopus Soft Rots,28,5.1,False,False,False,True,0.0,image_decisive,True
+tomato__early-blight__rhizopus-soft-rots,Tomato,Early Blight,Rhizopus Soft Rots,63,5.1,True,False,False,True,0.2143,image_ambiguous,False
+tomato__gray-mold__late-blight,Tomato,Gray Mold,Late Blight,141,5.1,False,False,False,True,0.08,image_decisive,True
+tomato__gray-mold__rhizopus-soft-rots,Tomato,Gray Mold,Rhizopus Soft Rots,37,5.1,False,False,False,True,0.087,image_decisive,True
+tomato__gray-mold__septoria-leaf-spot,Tomato,Gray Mold,Septoria Leaf Spot,47,5.1,True,False,False,True,0.1712,image_decisive,False
+tomato__rhizopus-soft-rots__septoria-leaf-spot,Tomato,Rhizopus Soft Rots,Septoria Leaf Spot,40,5.1,False,False,False,True,0.0333,image_decisive,True
+tomato__rhizopus-soft-rots__tomato-leaf-mould,Tomato,Rhizopus Soft Rots,Tomato Leaf Mould,54,5.1,False,False,False,True,0.0303,image_decisive,True
+soybean__downy-mildew__soybean-rust,Soybean,Downy Mildew,Soybean Rust,67,5.1,False,False,False,True,0.0727,image_decisive,True
+strawberry__anthracnose__phomopsis-leaf-blight-and-fruit-rot,Strawberry,Anthracnose,Phomopsis Leaf Blight And Fruit Rot,102,5.1,False,False,False,True,0.0634,image_decisive,True
+strawberry__phomopsis-leaf-blight-and-fruit-rot__ramularia-grevilleana-verkley---u--braun,Strawberry,Phomopsis Leaf Blight And Fruit Rot,Ramularia Grevilleana Verkley & U. Braun,45,5.1,True,True,True,True,0.3021,image_ambiguous,False
+melon__anthracnose__fusarium-wilts--blights--rots-and-damping-off,Melon,Anthracnose,"Fusarium Wilts, Blights, Rots And Damping-Off",39,5.1,False,False,False,True,0.0417,image_decisive,True
+melon__anthracnose__gummy-stem-blight,Melon,Anthracnose,Gummy Stem Blight,76,5.1,False,False,False,True,0.1179,image_decisive,True
+melon__anthracnose__sour-rot,Melon,Anthracnose,Sour Rot,54,5.1,False,False,False,True,0.0,image_decisive,True
+melon__fusarium-wilts--blights--rots-and-damping-off__sour-rot,Melon,"Fusarium Wilts, Blights, Rots And Damping-Off",Sour Rot,39,5.1,False,False,False,True,0.0697,image_decisive,True
+melon__monosporascus-root-rot__powdery-mildew,Melon,Monosporascus Root Rot,Powdery Mildew,58,5.1,False,False,False,True,0.0,image_decisive,True
+rhododendrons-and-azaleas__guignardia-blotch__pestalotiopsis-leaf-spot,Rhododendrons And Azaleas,Guignardia Blotch,Pestalotiopsis Leaf Spot,28,5.1,False,False,False,True,0.08,image_decisive,True
+oak__anthracnose__coryneum-twig-blight,Oak,Anthracnose,Coryneum Twig Blight,24,5.1,False,False,False,True,0.05,image_decisive,True
+oak__anthracnose__leaf-spot,Oak,Anthracnose,Leaf Spot,25,5.1,False,False,False,True,0.0952,image_decisive,True
+oak__anthracnose__oak-wilt,Oak,Anthracnose,Oak Wilt,35,5.1,False,False,False,True,0.0714,image_decisive,True
+oak__botryosphaeria-rots-and-cankers__coryneum-twig-blight,Oak,Botryosphaeria Rots And Cankers,Coryneum Twig Blight,42,5.1,False,False,False,True,0.1,image_decisive,True
+oak__botryosphaeria-rots-and-cankers__nectria-canker,Oak,Botryosphaeria Rots And Cankers,Nectria Canker,44,5.1,False,False,False,True,0.119,image_decisive,True
+oak__coryneum-twig-blight__leaf-spot,Oak,Coryneum Twig Blight,Leaf Spot,25,5.1,True,False,False,True,0.1304,image_decisive,False
+squash__anthracnose__powdery-mildew,Squash,Anthracnose,Powdery Mildew,72,5.1,False,False,False,True,0.1,image_decisive,True
+squash__cucurbit-downy-mildew__gummy-stem-blight,Squash,Cucurbit Downy Mildew,Gummy Stem Blight,102,5.1,False,False,False,False,,,True
+squash__gummy-stem-blight__phytophthora-blight,Squash,Gummy Stem Blight,Phytophthora Blight,269,5.1,False,False,False,False,,,True
+squash__gummy-stem-blight__powdery-mildew,Squash,Gummy Stem Blight,Powdery Mildew,57,5.1,False,False,False,True,0.0,image_decisive,True
+squash__gummy-stem-blight__southern-blight,Squash,Gummy Stem Blight,Southern Blight,28,5.1,False,False,False,True,0.0385,image_decisive,True
+watermelon__bacterial-fruit-blotch__cucurbit-downy-mildew,Watermelon,Bacterial Fruit Blotch,Cucurbit Downy Mildew,104,5.1,False,False,False,True,0.0,image_decisive,True
+watermelon__gummy-stem-blight__powdery-mildew,Watermelon,Gummy Stem Blight,Powdery Mildew,135,5.1,False,False,False,True,0.0385,image_decisive,True
+watermelon__phytophthora-blight__powdery-mildew,Watermelon,Phytophthora Blight,Powdery Mildew,198,5.1,False,False,False,True,0.0204,image_decisive,True
+lettuce__lettuce-chlorosis-virus__mirafiori-lettuce-big-vein-virus,Lettuce,Lettuce Chlorosis Virus,Mirafiori Lettuce Big-Vein Virus,41,5.1,False,False,False,True,0.0628,image_decisive,True
+grape__black-rot__grape-anthracnose,Grape,Black Rot,Grape Anthracnose,49,5.1,False,False,False,True,0.0368,image_decisive,True
+grape__downy-mildew__grape-anthracnose,Grape,Downy Mildew,Grape Anthracnose,45,5.1,True,False,False,True,0.1327,image_decisive,False
+sweet-potato__bacteria-wilt-and-soft-rot__bread-mold,Sweet Potato,Bacteria Wilt And Soft Rot,Bread Mold,88,5.1,False,False,False,True,0.0667,image_decisive,True
+sweet-potato__bacteria-wilt-and-soft-rot__fusarium-lateritium-nees,Sweet Potato,Bacteria Wilt And Soft Rot,Fusarium Lateritium Nees,57,5.1,False,False,False,True,0.05,image_decisive,True
+sweet-potato__bacteria-wilt-and-soft-rot__rhizopus-soft-rots,Sweet Potato,Bacteria Wilt And Soft Rot,Rhizopus Soft Rots,78,5.1,False,False,False,True,0.1111,image_decisive,True
+sweet-potato__bread-mold__penicillium-fungi,Sweet Potato,Bread Mold,Penicillium Fungi,133,5.1,False,False,False,True,0.1156,image_decisive,True
+sweet-potato__bread-mold__scurf,Sweet Potato,Bread Mold,Scurf,107,5.1,False,False,False,True,0.0816,image_decisive,True
+sweet-potato__bread-mold__sour-rot,Sweet Potato,Bread Mold,Sour Rot,80,5.1,False,False,False,True,0.0653,image_decisive,True
+sweet-potato__bread-mold__streptomyces-soil-rot,Sweet Potato,Bread Mold,Streptomyces Soil Rot,102,5.1,False,False,False,True,0.087,image_decisive,True
+sweet-potato__penicillium-fungi__scurf,Sweet Potato,Penicillium Fungi,Scurf,148,5.1,False,False,False,True,0.0357,image_decisive,True
+sweet-potato__sour-rot__streptomyces-soil-rot,Sweet Potato,Sour Rot,Streptomyces Soil Rot,90,5.1,False,False,False,True,0.0635,image_decisive,True
+spinach__cladosporium-leaf-spot__downy-mildew,Spinach,Cladosporium Leaf Spot,Downy Mildew,60,5.1,False,False,False,True,0.0303,image_decisive,True
+cucumber__anthracnose__gummy-stem-blight,Cucumber,Anthracnose,Gummy Stem Blight,151,5.1,True,True,True,True,0.2532,image_ambiguous,False
+cucumber__corynespora-leaf-spot__gummy-stem-blight,Cucumber,Corynespora Leaf Spot,Gummy Stem Blight,58,5.1,True,False,False,True,0.141,image_decisive,False
+cucumber__corynespora-leaf-spot__powdery-mildew,Cucumber,Corynespora Leaf Spot,Powdery Mildew,46,5.1,True,False,False,True,0.1813,image_decisive,False
+cucumber__cucurbit-downy-mildew__gummy-stem-blight,Cucumber,Cucurbit Downy Mildew,Gummy Stem Blight,311,5.1,True,True,True,True,0.184,image_decisive,False
+cucumber__gummy-stem-blight__powdery-mildew,Cucumber,Gummy Stem Blight,Powdery Mildew,40,5.1,False,False,False,True,0.1534,image_decisive,True
+cucumber__phytophthora-blight__powdery-mildew,Cucumber,Phytophthora Blight,Powdery Mildew,91,5.1,False,False,False,True,0.0907,image_decisive,True
+cucumber__phytophthora-blight__pythium-diseases,Cucumber,Phytophthora Blight,Pythium Diseases,99,5.1,True,True,True,True,0.1694,image_decisive,False
+wheat__fusarium-graminearum-schwabe__parastagonospora-nodorum,Wheat,Fusarium Graminearum Schwabe,Parastagonospora Nodorum,50,5.1,False,False,False,True,0.1499,image_decisive,True
+wheat__powdery-mildew__wheat-stem-rust,Wheat,Powdery Mildew,Wheat Stem Rust,56,5.1,True,False,False,True,0.1395,image_decisive,False
+wheat__tan-spot__zymoseptoria-tritici,Wheat,Tan Spot,Zymoseptoria Tritici,70,5.1,True,True,True,True,0.2548,image_ambiguous,False
+wheat__wheat-leaf-rust__zymoseptoria-tritici,Wheat,Wheat Leaf Rust,Zymoseptoria Tritici,76,5.1,True,False,False,True,0.1202,image_decisive,False
+apple__apple-scab__cedar-apple-rust,Apple,Apple Scab,Cedar-Apple Rust,59,5.1,False,False,False,True,0.0498,image_decisive,True
+apple__black-rot__cedar-apple-rust,Apple,Black Rot,Cedar-Apple Rust,34,5.1,False,False,False,True,0.0952,image_decisive,True
+norway-maple__anthracnose__cristulariella-leaf-spot,Norway Maple,Anthracnose,Cristulariella Leaf Spot,32,5.1,True,False,False,True,0.1923,image_decisive,False
+eastern-white-pine__needle-cast__stem-rot,Eastern White Pine,Needle Cast,Stem Rot,30,5.1,False,False,False,True,0.1,image_decisive,True
+witch-hazel__gonatobotryum-fungus__phyllosticta-leaf-spots,Witch-Hazel,Gonatobotryum Fungus,Phyllosticta Leaf Spots,30,5.1,True,False,False,True,0.1481,image_decisive,False
+plum-and-cherry__blumeriella-leaf-spot-of-cherry-and-plum__brown-rots,Plum and Cherry,Blumeriella Leaf Spot Of Cherry And Plum,Brown Rots,51,5.1,True,False,False,True,0.2602,image_ambiguous,False
+blue-spruce__ceropsora-weirii__rhizosphaera-needle-cast,Blue Spruce,Ceropsora Weirii,Rhizosphaera Needle Cast,28,5.1,True,False,False,True,0.2144,image_ambiguous,False
+blue-spruce__ceropsora-weirii__spruce-needle-rusts,Blue Spruce,Ceropsora Weirii,Spruce Needle Rusts,31,5.1,False,False,False,True,0.1154,image_decisive,True
+common-lilac__anthracnose__cladosporium-fungi,Common Lilac,Anthracnose,Cladosporium Fungi,28,5.1,True,False,False,True,0.1304,image_decisive,False
+highbush-blueberry__anthracnose__phomopsis-cankers-and-twig-blights,Highbush Blueberry,Anthracnose,Phomopsis Cankers And Twig Blights,34,5.1,True,True,True,True,0.1818,image_decisive,False
+highbush-blueberry__blueberry-leaf-rust__phomopsis-cankers-and-twig-blights,Highbush Blueberry,Blueberry Leaf Rust,Phomopsis Cankers And Twig Blights,33,5.1,True,False,False,True,0.2414,image_ambiguous,False
+highbush-blueberry__blueberry-leaf-rust__twig-canker,Highbush Blueberry,Blueberry Leaf Rust,Twig Canker,30,5.1,False,False,False,True,0.0769,image_decisive,True
+phlox__downy-mildew__powdery-mildew,Phlox,Downy Mildew,Powdery Mildew,48,5.1,False,False,False,True,0.0682,image_decisive,True
+tomato__late-blight__rhizopus-soft-rots,Tomato,Late Blight,Rhizopus Soft Rots,134,5.0,False,False,False,False,,,True
+melon__monosporascus-root-rot__sour-rot,Melon,Monosporascus Root Rot,Sour Rot,68,5.0,False,False,False,True,0.0,image_decisive,True
+oak__coryneum-twig-blight__oak-wilt,Oak,Coryneum Twig Blight,Oak Wilt,35,5.0,False,False,False,True,0.0,image_decisive,True
+oak__leaf-spot__oak-wilt,Oak,Leaf Spot,Oak Wilt,36,5.0,False,False,False,True,0.0,image_decisive,True
+spinach__cladosporium-leaf-spot__white-rust,Spinach,Cladosporium Leaf Spot,White Rust,28,5.0,False,False,False,True,0.0476,image_decisive,True
+spinach__downy-mildew__white-rust,Spinach,Downy Mildew,White Rust,56,5.0,False,False,False,True,0.0714,image_decisive,True
+wheat__parastagonospora-nodorum__powdery-mildew,Wheat,Parastagonospora Nodorum,Powdery Mildew,58,5.0,False,False,False,True,0.0667,image_decisive,True
+wheat__parastagonospora-nodorum__tan-spot,Wheat,Parastagonospora Nodorum,Tan Spot,37,5.0,False,False,False,True,0.0515,image_decisive,True
+wheat__parastagonospora-nodorum__wheat-leaf-rust,Wheat,Parastagonospora Nodorum,Wheat Leaf Rust,43,5.0,False,False,False,True,0.0785,image_decisive,True
+wheat__parastagonospora-nodorum__wheat-stem-rust,Wheat,Parastagonospora Nodorum,Wheat Stem Rust,32,5.0,False,False,False,True,0.1,image_decisive,True
+hydrangea__cercospora-fungi__gray-molds,Hydrangea,Cercospora Fungi,Gray Molds,29,5.0,False,False,False,True,0.0455,image_decisive,True
+plum-and-cherry__blumeriella-leaf-spot-of-cherry-and-plum__phloeosporella-fungus,Plum and Cherry,Blumeriella Leaf Spot Of Cherry And Plum,Phloeosporella Fungus,41,5.0,False,False,False,True,0.1176,image_decisive,True
+plum-and-cherry__brown-rots__phloeosporella-fungus,Plum and Cherry,Brown Rots,Phloeosporella Fungus,38,5.0,False,False,False,True,0.0714,image_decisive,True
+soybean__cercospora-blight__frogeye-leaf-spot,Soybean,Cercospora Blight,Frogeye Leaf Spot,77,4.5,False,False,False,True,0.0,image_decisive,True
+tomato__early-blight__southern-blight,Tomato,Early Blight,Southern Blight,84,4.4,False,False,False,True,0.0265,image_decisive,True
+tomato__southern-blight__tomato-leaf-mould,Tomato,Southern Blight,Tomato Leaf Mould,75,4.4,False,False,False,True,0.0267,image_decisive,True
+soybean__cercospora-blight__root-and-stem-rot,Soybean,Cercospora Blight,Root And Stem Rot,70,4.4,False,False,False,True,0.0,image_decisive,True
+soybean__root-and-stem-rot__sclerotinia-timber-rot,Soybean,Root And Stem Rot,Sclerotinia Timber Rot,75,4.4,False,False,False,False,,,True
+wheat__barley-yellow-dwarf-virus__wheat-streak-mosaic-virus,Wheat,Barley Yellow Dwarf Virus,Wheat Streak Mosaic Virus,37,4.4,True,True,True,True,0.2286,image_ambiguous,False
+wheat__fusarium-graminearum-schwabe__loose-smut-of-wheat-or-barley,Wheat,Fusarium Graminearum Schwabe,Loose Smut Of Wheat Or Barley,54,4.4,True,False,False,True,0.129,image_decisive,False
+wheat__loose-smut-of-wheat-or-barley__wheat-leaf-rust,Wheat,Loose Smut Of Wheat Or Barley,Wheat Leaf Rust,47,4.4,True,False,False,True,0.1708,image_decisive,False
+tomato__early-blight__sclerotinia-timber-rot,Tomato,Early Blight,Sclerotinia Timber Rot,67,4.3,False,False,False,True,0.0689,image_decisive,True
+tomato__gray-mold__southern-blight,Tomato,Gray Mold,Southern Blight,58,4.3,False,False,False,True,0.0512,image_decisive,True
+tomato__late-blight__southern-blight,Tomato,Late Blight,Southern Blight,155,4.3,False,False,False,True,0.0172,image_decisive,True
+pepper__phytophthora-blight__southern-blight,Pepper,Phytophthora Blight,Southern Blight,118,4.3,False,False,False,True,0.1091,image_decisive,True
+soybean__cercospora-blight__genus-diaporthe,Soybean,Cercospora Blight,Genus Diaporthe,66,4.3,False,False,False,True,0.025,image_decisive,True
+soybean__cercospora-blight__sclerotinia-timber-rot,Soybean,Cercospora Blight,Sclerotinia Timber Rot,113,4.3,False,False,False,True,0.0213,image_decisive,True
+soybean__downy-mildew__frogeye-leaf-spot,Soybean,Downy Mildew,Frogeye Leaf Spot,58,4.3,False,False,False,True,0.0321,image_decisive,True
+soybean__frogeye-leaf-spot__genus-diaporthe,Soybean,Frogeye Leaf Spot,Genus Diaporthe,35,4.3,False,False,False,True,0.0,image_decisive,True
+soybean__frogeye-leaf-spot__root-and-stem-rot,Soybean,Frogeye Leaf Spot,Root And Stem Rot,39,4.3,False,False,False,True,0.0,image_decisive,True
+soybean__genus-diaporthe__root-and-stem-rot,Soybean,Genus Diaporthe,Root And Stem Rot,28,4.3,True,True,True,True,0.3333,image_ambiguous,False
+peanut__nothopassalora-personata__southern-blight,Peanut,Nothopassalora Personata,Southern Blight,44,4.3,False,False,False,True,0.0,image_decisive,True
+corn__common-corn-rust__goss--bacterial-wilt,Corn,Common Corn Rust,Goss' Bacterial Wilt,30,4.3,False,False,False,False,,,True
+corn__common-corn-rust__southern-corn-rust,Corn,Common Corn Rust,Southern Corn Rust,29,4.3,True,True,True,True,0.3077,image_ambiguous,False
+corn__corn-smut__goss--bacterial-wilt,Corn,Corn Smut,Goss' Bacterial Wilt,77,4.3,False,False,False,True,0.0294,image_decisive,True
+corn__goss--bacterial-wilt__southern-corn-rust,Corn,Goss' Bacterial Wilt,Southern Corn Rust,31,4.3,False,False,False,False,,,True
+corn__goss--bacterial-wilt__white-ear-rot-and-seedling-blight-of-maize,Corn,Goss' Bacterial Wilt,White Ear Rot And Seedling Blight Of Maize,42,4.3,False,False,False,True,0.2778,image_ambiguous,True
+wheat__loose-smut-of-wheat-or-barley__powdery-mildew,Wheat,Loose Smut Of Wheat Or Barley,Powdery Mildew,62,4.3,True,False,False,True,0.1373,image_decisive,False
+wheat__loose-smut-of-wheat-or-barley__stripe-rust,Wheat,Loose Smut Of Wheat Or Barley,Stripe Rust,58,4.3,False,False,False,True,0.0919,image_decisive,True
+tomato__gray-mold__sclerotinia-timber-rot,Tomato,Gray Mold,Sclerotinia Timber Rot,41,4.2,True,True,True,True,0.1612,image_decisive,False
+tomato__late-blight__sclerotinia-timber-rot,Tomato,Late Blight,Sclerotinia Timber Rot,138,4.2,False,False,False,True,0.0217,image_decisive,True
+tomato__sclerotinia-timber-rot__southern-blight,Tomato,Sclerotinia Timber Rot,Southern Blight,55,4.2,False,False,False,True,0.0871,image_decisive,True
+tomato__sclerotinia-timber-rot__tomato-leaf-mould,Tomato,Sclerotinia Timber Rot,Tomato Leaf Mould,58,4.2,True,False,False,True,0.1634,image_decisive,False
+tomato__septoria-leaf-spot__southern-blight,Tomato,Septoria Leaf Spot,Southern Blight,61,4.2,False,False,False,True,0.0629,image_decisive,True
+soybean__cercospora-blight__charcoal-rot,Soybean,Cercospora Blight,Charcoal Rot,80,4.2,False,False,False,True,0.0326,image_decisive,True
+soybean__cercospora-blight__southern-blight,Soybean,Cercospora Blight,Southern Blight,73,4.2,False,False,False,True,0.0391,image_decisive,True
+soybean__charcoal-rot__frogeye-leaf-spot,Soybean,Charcoal Rot,Frogeye Leaf Spot,49,4.2,False,False,False,True,0.0,image_decisive,True
+soybean__charcoal-rot__root-and-stem-rot,Soybean,Charcoal Rot,Root And Stem Rot,42,4.2,False,False,False,True,0.0345,image_decisive,True
+soybean__charcoal-rot__soybean-rust,Soybean,Charcoal Rot,Soybean Rust,58,4.2,False,False,False,True,0.0,image_decisive,True
+soybean__downy-mildew__genus-diaporthe,Soybean,Downy Mildew,Genus Diaporthe,47,4.2,False,False,False,True,0.0,image_decisive,True
+soybean__downy-mildew__root-and-stem-rot,Soybean,Downy Mildew,Root And Stem Rot,51,4.2,False,False,False,True,0.0,image_decisive,True
+soybean__frogeye-leaf-spot__sclerotinia-timber-rot,Soybean,Frogeye Leaf Spot,Sclerotinia Timber Rot,82,4.2,False,False,False,True,0.0,image_decisive,True
+soybean__frogeye-leaf-spot__southern-blight,Soybean,Frogeye Leaf Spot,Southern Blight,42,4.2,False,False,False,True,0.0231,image_decisive,True
+soybean__frogeye-leaf-spot__soybean-rust,Soybean,Frogeye Leaf Spot,Soybean Rust,55,4.2,False,False,False,True,0.0345,image_decisive,True
+soybean__genus-diaporthe__sclerotinia-timber-rot,Soybean,Genus Diaporthe,Sclerotinia Timber Rot,71,4.2,False,False,False,False,,,True
+peanut__nothopassalora-personata__passalora-fungus,Peanut,Nothopassalora Personata,Passalora Fungus,40,4.2,False,False,False,True,0.0625,image_decisive,True
+peanut__passalora-fungus__southern-blight,Peanut,Passalora Fungus,Southern Blight,50,4.2,False,False,False,False,,,True
+melon__alternaria-leaf-blight__anthracnose,Melon,Alternaria Leaf Blight,Anthracnose,76,4.2,True,False,False,True,0.1326,image_decisive,False
+melon__anthracnose__phytophthora-blight,Melon,Anthracnose,Phytophthora Blight,77,4.2,False,False,False,True,0.0172,image_decisive,True
+squash__choanephora-fruit-rot__cucurbit-downy-mildew,Squash,Choanephora Fruit Rot,Cucurbit Downy Mildew,122,4.2,False,False,False,False,,,True
+watermelon__anthracnose__cucurbit-downy-mildew,Watermelon,Anthracnose,Cucurbit Downy Mildew,124,4.2,False,False,False,True,0.1316,image_decisive,True
+watermelon__anthracnose__pythium-diseases,Watermelon,Anthracnose,Pythium Diseases,93,4.2,False,False,False,True,0.0263,image_decisive,True
+watermelon__cucurbit-downy-mildew__gummy-stem-blight,Watermelon,Cucurbit Downy Mildew,Gummy Stem Blight,136,4.2,False,False,False,True,0.1351,image_decisive,True
+watermelon__gummy-stem-blight__pythium-diseases,Watermelon,Gummy Stem Blight,Pythium Diseases,105,4.2,False,False,False,True,0.0496,image_decisive,True
+watermelon__powdery-mildew__pythium-diseases,Watermelon,Powdery Mildew,Pythium Diseases,60,4.2,False,False,False,True,0.0435,image_decisive,True
+lettuce__downy-mildew__gray-mold,Lettuce,Downy Mildew,Gray Mold,89,4.2,False,False,False,True,0.0227,image_decisive,True
+lettuce__gray-mold__rhizoctonia-damping-off--blight-and-rot,Lettuce,Gray Mold,"Rhizoctonia Damping-Off, Blight And Rot",34,4.2,False,False,False,False,,,True
+lettuce__gray-mold__sclerotinia-timber-rot,Lettuce,Gray Mold,Sclerotinia Timber Rot,161,4.2,False,False,False,True,0.0,image_decisive,True
+corn__corn-smut__fusarium-graminearum-schwabe,Corn,Corn Smut,Fusarium Graminearum Schwabe,74,4.2,True,True,True,True,0.2414,image_ambiguous,False
+corn__corn-smut__southern-corn-rust,Corn,Corn Smut,Southern Corn Rust,76,4.2,False,False,False,True,0.0345,image_decisive,True
+corn__southern-corn-rust__white-ear-rot-and-seedling-blight-of-maize,Corn,Southern Corn Rust,White Ear Rot And Seedling Blight Of Maize,41,4.2,False,False,False,True,0.0,image_decisive,True
+grape__downy-mildew__powdery-mildew,Grape,Downy Mildew,Powdery Mildew,79,4.2,False,False,False,True,0.0411,image_decisive,True
+sweet-potato__java-black-rot__southern-blight,Sweet Potato,Java Black Rot,Southern Blight,66,4.2,False,False,False,True,0.1138,image_decisive,True
+potato__bacterial-soft-rot__late-blight,Potato,Bacterial Soft Rot,Late Blight,73,4.2,False,False,False,True,0.0426,image_decisive,True
+potato__bacterial-soft-rot__phytophthora-root-and-stem-rot,Potato,Bacterial Soft Rot,Phytophthora Root And Stem Rot,40,4.2,False,False,False,True,0.0357,image_decisive,True
+cucumber__corynespora-leaf-spot__pythium-diseases,Cucumber,Corynespora Leaf Spot,Pythium Diseases,54,4.2,False,False,False,True,0.0286,image_decisive,True
+wheat__fusarium-graminearum-schwabe__fusarium-wilts--blights--rots-and-damping-off,Wheat,Fusarium Graminearum Schwabe,"Fusarium Wilts, Blights, Rots And Damping-Off",62,4.2,False,False,False,True,0.1304,image_decisive,True
+wheat__fusarium-wilts--blights--rots-and-damping-off__wheat-stem-rust,Wheat,"Fusarium Wilts, Blights, Rots And Damping-Off",Wheat Stem Rust,44,4.2,False,False,False,True,0.0857,image_decisive,True
+wheat__loose-smut-of-wheat-or-barley__tan-spot,Wheat,Loose Smut Of Wheat Or Barley,Tan Spot,41,4.2,True,False,False,True,0.174,image_decisive,False
+tomato__anthracnose__southern-blight,Tomato,Anthracnose,Southern Blight,49,4.1,False,False,False,True,0.037,image_decisive,True
+tomato__bacterial-wilt__southern-bacterial-wilt,Tomato,Bacterial Wilt,Southern Bacterial Wilt,27,4.1,False,False,False,True,0.1111,image_decisive,True
+tomato__rhizopus-soft-rots__southern-blight,Tomato,Rhizopus Soft Rots,Southern Blight,51,4.1,False,False,False,True,0.1034,image_decisive,True
+tomato__sclerotinia-timber-rot__septoria-leaf-spot,Tomato,Sclerotinia Timber Rot,Septoria Leaf Spot,44,4.1,True,False,False,True,0.1895,image_decisive,False
+soybean__cercospora-blight__taproot-decline-on-soybean,Soybean,Cercospora Blight,Taproot Decline On Soybean,68,4.1,False,False,False,True,0.0,image_decisive,True
+soybean__charcoal-rot__downy-mildew,Soybean,Charcoal Rot,Downy Mildew,61,4.1,False,False,False,True,0.0,image_decisive,True
+soybean__charcoal-rot__genus-diaporthe,Soybean,Charcoal Rot,Genus Diaporthe,38,4.1,False,False,False,True,0.04,image_decisive,True
+soybean__charcoal-rot__sclerotinia-timber-rot,Soybean,Charcoal Rot,Sclerotinia Timber Rot,85,4.1,False,False,False,True,0.0204,image_decisive,True
+soybean__charcoal-rot__southern-blight,Soybean,Charcoal Rot,Southern Blight,45,4.1,False,False,False,True,0.0501,image_decisive,True
+soybean__charcoal-rot__taproot-decline-on-soybean,Soybean,Charcoal Rot,Taproot Decline On Soybean,40,4.1,False,False,False,True,0.0,image_decisive,True
+soybean__downy-mildew__sclerotinia-timber-rot,Soybean,Downy Mildew,Sclerotinia Timber Rot,94,4.1,False,False,False,True,0.0,image_decisive,True
+soybean__downy-mildew__southern-blight,Soybean,Downy Mildew,Southern Blight,54,4.1,False,False,False,True,0.0158,image_decisive,True
+soybean__frogeye-leaf-spot__taproot-decline-on-soybean,Soybean,Frogeye Leaf Spot,Taproot Decline On Soybean,37,4.1,False,False,False,True,0.0,image_decisive,True
+soybean__genus-diaporthe__southern-blight,Soybean,Genus Diaporthe,Southern Blight,31,4.1,False,False,False,True,0.0526,image_decisive,True
+soybean__genus-diaporthe__soybean-rust,Soybean,Genus Diaporthe,Soybean Rust,44,4.1,False,False,False,True,0.0333,image_decisive,True
+soybean__root-and-stem-rot__soybean-rust,Soybean,Root And Stem Rot,Soybean Rust,48,4.1,False,False,False,True,0.0,image_decisive,True
+soybean__southern-blight__soybean-rust,Soybean,Southern Blight,Soybean Rust,51,4.1,False,False,False,True,0.0163,image_decisive,True
+soybean__southern-blight__taproot-decline-on-soybean,Soybean,Southern Blight,Taproot Decline On Soybean,33,4.1,False,False,False,True,0.0476,image_decisive,True
+soybean__soybean-rust__taproot-decline-on-soybean,Soybean,Soybean Rust,Taproot Decline On Soybean,46,4.1,False,False,False,True,0.0,image_decisive,True
+strawberry__gray-mold__phomopsis-leaf-blight-and-fruit-rot,Strawberry,Gray Mold,Phomopsis Leaf Blight And Fruit Rot,30,4.1,False,False,False,True,0.0,image_decisive,True
+strawberry__gray-mold__ramularia-grevilleana-verkley---u--braun,Strawberry,Gray Mold,Ramularia Grevilleana Verkley & U. Braun,47,4.1,False,False,False,True,0.0,image_decisive,True
+melon__alternaria-leaf-blight__cucurbit-downy-mildew,Melon,Alternaria Leaf Blight,Cucurbit Downy Mildew,80,4.1,False,False,False,True,0.119,image_decisive,True
+melon__alternaria-leaf-blight__gummy-stem-blight,Melon,Alternaria Leaf Blight,Gummy Stem Blight,98,4.1,False,False,False,True,0.0772,image_decisive,True
+melon__anthracnose__charcoal-rot,Melon,Anthracnose,Charcoal Rot,45,4.1,False,False,False,True,0.0,image_decisive,True
+melon__charcoal-rot__fusarium-wilts--blights--rots-and-damping-off,Melon,Charcoal Rot,"Fusarium Wilts, Blights, Rots And Damping-Off",30,4.1,False,False,False,True,0.0,image_decisive,True
+melon__charcoal-rot__sour-rot,Melon,Charcoal Rot,Sour Rot,45,4.1,False,False,False,True,0.0,image_decisive,True
+melon__cucurbit-downy-mildew__sour-rot,Melon,Cucurbit Downy Mildew,Sour Rot,58,4.1,False,False,False,True,0.0,image_decisive,True
+melon__fusarium-wilts--blights--rots-and-damping-off__gummy-stem-blight,Melon,"Fusarium Wilts, Blights, Rots And Damping-Off",Gummy Stem Blight,61,4.1,False,False,False,True,0.0323,image_decisive,True
+melon__fusarium-wilts--blights--rots-and-damping-off__monosporascus-root-rot,Melon,"Fusarium Wilts, Blights, Rots And Damping-Off",Monosporascus Root Rot,53,4.1,False,False,False,True,0.0455,image_decisive,True
+melon__fusarium-wilts--blights--rots-and-damping-off__phytophthora-blight,Melon,"Fusarium Wilts, Blights, Rots And Damping-Off",Phytophthora Blight,62,4.1,False,False,False,True,0.0652,image_decisive,True
+melon__fusarium-wilts--blights--rots-and-damping-off__powdery-mildew,Melon,"Fusarium Wilts, Blights, Rots And Damping-Off",Powdery Mildew,29,4.1,False,False,False,True,0.0625,image_decisive,True
+melon__gummy-stem-blight__sour-rot,Melon,Gummy Stem Blight,Sour Rot,76,4.1,False,False,False,True,0.0847,image_decisive,True
+melon__phytophthora-blight__sour-rot,Melon,Phytophthora Blight,Sour Rot,77,4.1,False,False,False,True,0.0455,image_decisive,True
+oak__anthracnose__botryosphaeria-rots-and-cankers,Oak,Anthracnose,Botryosphaeria Rots And Cankers,42,4.1,False,False,False,True,0.0263,image_decisive,True
+oak__botryosphaeria-rots-and-cankers__leaf-spot,Oak,Botryosphaeria Rots And Cankers,Leaf Spot,43,4.1,False,False,False,True,0.0976,image_decisive,True
+oak__botryosphaeria-rots-and-cankers__oak-leaf-blister,Oak,Botryosphaeria Rots And Cankers,Oak Leaf Blister,44,4.1,False,False,False,True,0.1143,image_decisive,True
+oak__coryneum-twig-blight__oak-leaf-blister,Oak,Coryneum Twig Blight,Oak Leaf Blister,26,4.1,False,False,False,True,0.0,image_decisive,True
+squash__anthracnose__choanephora-fruit-rot,Squash,Anthracnose,Choanephora Fruit Rot,63,4.1,True,False,False,True,0.1579,image_decisive,False
+squash__anthracnose__gummy-stem-blight,Squash,Anthracnose,Gummy Stem Blight,43,4.1,False,False,False,False,,,True
+squash__anthracnose__southern-blight,Squash,Anthracnose,Southern Blight,43,4.1,False,False,False,False,,,True
+squash__choanephora-fruit-rot__phytophthora-blight,Squash,Choanephora Fruit Rot,Phytophthora Blight,289,4.1,False,False,False,True,0.2941,image_ambiguous,True
+squash__choanephora-fruit-rot__plectosphaerella-fungus,Squash,Choanephora Fruit Rot,Plectosphaerella Fungus,64,4.1,False,False,False,False,,,True
+squash__cucurbit-downy-mildew__southern-blight,Squash,Cucurbit Downy Mildew,Southern Blight,102,4.1,False,False,False,False,,,True
+squash__gummy-stem-blight__plectosphaerella-fungus,Squash,Gummy Stem Blight,Plectosphaerella Fungus,44,4.1,False,False,False,False,,,True
+squash__phytophthora-blight__southern-blight,Squash,Phytophthora Blight,Southern Blight,269,4.1,False,False,False,False,,,True
+squash__plectosphaerella-fungus__southern-blight,Squash,Plectosphaerella Fungus,Southern Blight,44,4.1,False,False,False,False,,,True
+squash__powdery-mildew__southern-blight,Squash,Powdery Mildew,Southern Blight,57,4.1,False,False,False,True,0.05,image_decisive,True
+watermelon__bacterial-fruit-blotch__powdery-mildew,Watermelon,Bacterial Fruit Blotch,Powdery Mildew,103,4.1,False,False,False,True,0.0256,image_decisive,True
+watermelon__cucurbit-downy-mildew__phytophthora-blight,Watermelon,Cucurbit Downy Mildew,Phytophthora Blight,199,4.1,False,False,False,True,0.0,image_decisive,True
+watermelon__cucurbit-downy-mildew__powdery-mildew,Watermelon,Cucurbit Downy Mildew,Powdery Mildew,91,4.1,False,False,False,True,0.0664,image_decisive,True
+watermelon__phytophthora-blight__pythium-diseases,Watermelon,Phytophthora Blight,Pythium Diseases,168,4.1,False,False,False,True,0.0294,image_decisive,True
+lettuce__downy-mildew__powdery-mildew,Lettuce,Downy Mildew,Powdery Mildew,111,4.1,False,False,False,True,0.0275,image_decisive,True
+lettuce__downy-mildew__sclerotinia-stem-rot,Lettuce,Downy Mildew,Sclerotinia Stem Rot,79,4.1,False,False,False,True,0.0,image_decisive,True
+lettuce__downy-mildew__southern-blight,Lettuce,Downy Mildew,Southern Blight,80,4.1,False,False,False,True,0.0,image_decisive,True
+lettuce__gray-mold__southern-blight,Lettuce,Gray Mold,Southern Blight,35,4.1,False,False,False,True,0.0,image_decisive,True
+lettuce__lettuce-chlorosis-virus__sclerotinia-timber-rot,Lettuce,Lettuce Chlorosis Virus,Sclerotinia Timber Rot,162,4.1,False,False,False,True,0.0294,image_decisive,True
+lettuce__powdery-mildew__sclerotinia-stem-rot,Lettuce,Powdery Mildew,Sclerotinia Stem Rot,56,4.1,False,False,False,True,0.0,image_decisive,True
+lettuce__powdery-mildew__sclerotinia-timber-rot,Lettuce,Powdery Mildew,Sclerotinia Timber Rot,183,4.1,False,False,False,True,0.0,image_decisive,True
+lettuce__rhizoctonia-damping-off--blight-and-rot__southern-blight,Lettuce,"Rhizoctonia Damping-Off, Blight And Rot",Southern Blight,25,4.1,False,False,False,False,,,True
+lettuce__sclerotinia-stem-rot__sclerotinia-timber-rot,Lettuce,Sclerotinia Stem Rot,Sclerotinia Timber Rot,151,4.1,False,False,False,True,0.0,image_decisive,True
+lettuce__sclerotinia-timber-rot__southern-blight,Lettuce,Sclerotinia Timber Rot,Southern Blight,152,4.1,False,False,False,True,0.0,image_decisive,True
+cabbage__bacterial-soft-rot__club-root-of-crucifers,Cabbage,Bacterial Soft Rot,Club Root Of Crucifers,30,4.1,False,False,False,True,0.0,image_decisive,True
+cabbage__bacterial-soft-rot__downy-mildew,Cabbage,Bacterial Soft Rot,Downy Mildew,83,4.1,False,False,False,True,0.0,image_decisive,True
+cabbage__bacterial-soft-rot__phytophthora-root-and-stem-rot,Cabbage,Bacterial Soft Rot,Phytophthora Root And Stem Rot,27,4.1,False,False,False,True,0.0333,image_decisive,True
+cabbage__club-root-of-crucifers__downy-mildew,Cabbage,Club Root Of Crucifers,Downy Mildew,89,4.1,False,False,False,True,0.0,image_decisive,True
+corn__anthracnose__common-corn-rust,Corn,Anthracnose,Common Corn Rust,26,4.1,False,False,False,False,,,True
+corn__anthracnose__corn-smut,Corn,Anthracnose,Corn Smut,73,4.1,False,False,False,True,0.0333,image_decisive,True
+corn__anthracnose__goss--bacterial-wilt,Corn,Anthracnose,Goss' Bacterial Wilt,28,4.1,True,False,False,True,0.4167,image_ambiguous,False
+corn__anthracnose__southern-corn-rust,Corn,Anthracnose,Southern Corn Rust,27,4.1,False,False,False,False,,,True
+corn__anthracnose__white-ear-rot-and-seedling-blight-of-maize,Corn,Anthracnose,White Ear Rot And Seedling Blight Of Maize,38,4.1,False,False,False,True,0.4286,image_ambiguous,True
+grape__black-rot__powdery-mildew,Grape,Black Rot,Powdery Mildew,83,4.1,False,False,False,True,0.0,image_decisive,True
+grape__grape-anthracnose__powdery-mildew,Grape,Grape Anthracnose,Powdery Mildew,58,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__bacteria-wilt-and-soft-rot__fusarium-damping-off,Sweet Potato,Bacteria Wilt And Soft Rot,Fusarium Damping-Off,68,4.1,False,False,False,True,0.1186,image_decisive,True
+sweet-potato__bacteria-wilt-and-soft-rot__fusarium-wilt,Sweet Potato,Bacteria Wilt And Soft Rot,Fusarium Wilt,54,4.1,False,False,False,True,0.1087,image_decisive,True
+sweet-potato__bacteria-wilt-and-soft-rot__java-black-rot,Sweet Potato,Bacteria Wilt And Soft Rot,Java Black Rot,66,4.1,False,False,False,True,0.0408,image_decisive,True
+sweet-potato__bacteria-wilt-and-soft-rot__penicillium-fungi,Sweet Potato,Bacteria Wilt And Soft Rot,Penicillium Fungi,129,4.1,False,False,False,True,0.1154,image_decisive,True
+sweet-potato__bacteria-wilt-and-soft-rot__scurf,Sweet Potato,Bacteria Wilt And Soft Rot,Scurf,103,4.1,False,False,False,True,0.0946,image_decisive,True
+sweet-potato__bacteria-wilt-and-soft-rot__sour-rot,Sweet Potato,Bacteria Wilt And Soft Rot,Sour Rot,76,4.1,False,False,False,True,0.0161,image_decisive,True
+sweet-potato__bacteria-wilt-and-soft-rot__southern-blight,Sweet Potato,Bacteria Wilt And Soft Rot,Southern Blight,84,4.1,False,False,False,True,0.0645,image_decisive,True
+sweet-potato__bacteria-wilt-and-soft-rot__streptomyces-soil-rot,Sweet Potato,Bacteria Wilt And Soft Rot,Streptomyces Soil Rot,98,4.1,True,False,False,True,0.1408,image_decisive,False
+sweet-potato__bread-mold__fusarium-damping-off,Sweet Potato,Bread Mold,Fusarium Damping-Off,72,4.1,False,False,False,True,0.0588,image_decisive,True
+sweet-potato__bread-mold__fusarium-lateritium-nees,Sweet Potato,Bread Mold,Fusarium Lateritium Nees,61,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__bread-mold__fusarium-wilt,Sweet Potato,Bread Mold,Fusarium Wilt,58,4.1,False,False,False,True,0.0476,image_decisive,True
+sweet-potato__bread-mold__java-black-rot,Sweet Potato,Bread Mold,Java Black Rot,70,4.1,False,False,False,True,0.1161,image_decisive,True
+sweet-potato__bread-mold__southern-blight,Sweet Potato,Bread Mold,Southern Blight,88,4.1,False,False,False,True,0.0705,image_decisive,True
+sweet-potato__fusarium-damping-off__fusarium-lateritium-nees,Sweet Potato,Fusarium Damping-Off,Fusarium Lateritium Nees,41,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__fusarium-damping-off__fusarium-wilt,Sweet Potato,Fusarium Damping-Off,Fusarium Wilt,38,4.1,False,False,False,True,0.0857,image_decisive,True
+sweet-potato__fusarium-damping-off__java-black-rot,Sweet Potato,Fusarium Damping-Off,Java Black Rot,50,4.1,False,False,False,True,0.0526,image_decisive,True
+sweet-potato__fusarium-damping-off__penicillium-fungi,Sweet Potato,Fusarium Damping-Off,Penicillium Fungi,113,4.1,False,False,False,True,0.0976,image_decisive,True
+sweet-potato__fusarium-damping-off__rhizopus-soft-rots,Sweet Potato,Fusarium Damping-Off,Rhizopus Soft Rots,62,4.1,False,False,False,True,0.0294,image_decisive,True
+sweet-potato__fusarium-damping-off__scurf,Sweet Potato,Fusarium Damping-Off,Scurf,87,4.1,True,False,False,True,0.127,image_decisive,False
+sweet-potato__fusarium-damping-off__sour-rot,Sweet Potato,Fusarium Damping-Off,Sour Rot,60,4.1,False,False,False,True,0.0196,image_decisive,True
+sweet-potato__fusarium-damping-off__southern-blight,Sweet Potato,Fusarium Damping-Off,Southern Blight,68,4.1,False,False,False,True,0.0392,image_decisive,True
+sweet-potato__fusarium-damping-off__streptomyces-soil-rot,Sweet Potato,Fusarium Damping-Off,Streptomyces Soil Rot,82,4.1,True,False,False,True,0.1667,image_decisive,False
+sweet-potato__fusarium-lateritium-nees__fusarium-wilt,Sweet Potato,Fusarium Lateritium Nees,Fusarium Wilt,27,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__fusarium-lateritium-nees__java-black-rot,Sweet Potato,Fusarium Lateritium Nees,Java Black Rot,39,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__fusarium-lateritium-nees__penicillium-fungi,Sweet Potato,Fusarium Lateritium Nees,Penicillium Fungi,102,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__fusarium-lateritium-nees__rhizopus-soft-rots,Sweet Potato,Fusarium Lateritium Nees,Rhizopus Soft Rots,51,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__fusarium-lateritium-nees__scurf,Sweet Potato,Fusarium Lateritium Nees,Scurf,76,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__fusarium-lateritium-nees__sour-rot,Sweet Potato,Fusarium Lateritium Nees,Sour Rot,49,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__fusarium-lateritium-nees__southern-blight,Sweet Potato,Fusarium Lateritium Nees,Southern Blight,57,4.1,False,False,False,True,0.012,image_decisive,True
+sweet-potato__fusarium-lateritium-nees__streptomyces-soil-rot,Sweet Potato,Fusarium Lateritium Nees,Streptomyces Soil Rot,71,4.1,False,False,False,True,0.0244,image_decisive,True
+sweet-potato__fusarium-wilt__java-black-rot,Sweet Potato,Fusarium Wilt,Java Black Rot,36,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__fusarium-wilt__penicillium-fungi,Sweet Potato,Fusarium Wilt,Penicillium Fungi,99,4.1,False,False,False,True,0.0357,image_decisive,True
+sweet-potato__fusarium-wilt__rhizopus-soft-rots,Sweet Potato,Fusarium Wilt,Rhizopus Soft Rots,48,4.1,True,False,False,True,0.1905,image_decisive,False
+sweet-potato__fusarium-wilt__scurf,Sweet Potato,Fusarium Wilt,Scurf,73,4.1,False,False,False,True,0.06,image_decisive,True
+sweet-potato__fusarium-wilt__sour-rot,Sweet Potato,Fusarium Wilt,Sour Rot,46,4.1,True,False,False,True,0.1316,image_decisive,False
+sweet-potato__fusarium-wilt__southern-blight,Sweet Potato,Fusarium Wilt,Southern Blight,54,4.1,False,False,False,True,0.0789,image_decisive,True
+sweet-potato__fusarium-wilt__streptomyces-soil-rot,Sweet Potato,Fusarium Wilt,Streptomyces Soil Rot,68,4.1,True,False,False,True,0.1489,image_decisive,False
+sweet-potato__java-black-rot__penicillium-fungi,Sweet Potato,Java Black Rot,Penicillium Fungi,111,4.1,True,False,False,True,0.1696,image_decisive,False
+sweet-potato__java-black-rot__rhizopus-soft-rots,Sweet Potato,Java Black Rot,Rhizopus Soft Rots,60,4.1,False,False,False,True,0.0985,image_decisive,True
+sweet-potato__java-black-rot__scurf,Sweet Potato,Java Black Rot,Scurf,85,4.1,False,False,False,True,0.0189,image_decisive,True
+sweet-potato__java-black-rot__sour-rot,Sweet Potato,Java Black Rot,Sour Rot,58,4.1,False,False,False,True,0.1009,image_decisive,True
+sweet-potato__java-black-rot__streptomyces-soil-rot,Sweet Potato,Java Black Rot,Streptomyces Soil Rot,80,4.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__penicillium-fungi__rhizopus-soft-rots,Sweet Potato,Penicillium Fungi,Rhizopus Soft Rots,123,4.1,True,False,False,True,0.1392,image_decisive,False
+sweet-potato__penicillium-fungi__sour-rot,Sweet Potato,Penicillium Fungi,Sour Rot,121,4.1,True,False,False,True,0.1355,image_decisive,False
+sweet-potato__penicillium-fungi__southern-blight,Sweet Potato,Penicillium Fungi,Southern Blight,129,4.1,False,False,False,True,0.0773,image_decisive,True
+sweet-potato__penicillium-fungi__streptomyces-soil-rot,Sweet Potato,Penicillium Fungi,Streptomyces Soil Rot,143,4.1,False,False,False,True,0.0189,image_decisive,True
+sweet-potato__rhizopus-soft-rots__scurf,Sweet Potato,Rhizopus Soft Rots,Scurf,97,4.1,True,False,False,True,0.1224,image_decisive,False
+sweet-potato__rhizopus-soft-rots__sour-rot,Sweet Potato,Rhizopus Soft Rots,Sour Rot,70,4.1,True,False,False,True,0.1662,image_decisive,False
+sweet-potato__rhizopus-soft-rots__southern-blight,Sweet Potato,Rhizopus Soft Rots,Southern Blight,78,4.1,False,False,False,True,0.1175,image_decisive,True
+sweet-potato__rhizopus-soft-rots__streptomyces-soil-rot,Sweet Potato,Rhizopus Soft Rots,Streptomyces Soil Rot,92,4.1,False,False,False,True,0.0217,image_decisive,True
+sweet-potato__scurf__sour-rot,Sweet Potato,Scurf,Sour Rot,95,4.1,False,False,False,True,0.1061,image_decisive,True
+sweet-potato__scurf__southern-blight,Sweet Potato,Scurf,Southern Blight,103,4.1,False,False,False,True,0.0909,image_decisive,True
+sweet-potato__scurf__streptomyces-soil-rot,Sweet Potato,Scurf,Streptomyces Soil Rot,117,4.1,True,False,False,True,0.12,image_decisive,False
+sweet-potato__sour-rot__southern-blight,Sweet Potato,Sour Rot,Southern Blight,76,4.1,False,False,False,True,0.0588,image_decisive,True
+sweet-potato__southern-blight__streptomyces-soil-rot,Sweet Potato,Southern Blight,Streptomyces Soil Rot,98,4.1,True,True,True,True,0.127,image_decisive,False
+lemon__green-mold__whisker-mold,Lemon,Green Mold,Whisker Mold,56,4.1,True,False,False,True,0.225,image_ambiguous,False
+cucumber__anthracnose__pythium-diseases,Cucumber,Anthracnose,Pythium Diseases,147,4.1,False,False,False,True,0.0222,image_decisive,True
+cucumber__corynespora-leaf-spot__phytophthora-blight,Cucumber,Corynespora Leaf Spot,Phytophthora Blight,109,4.1,False,False,False,True,0.0527,image_decisive,True
+cucumber__cucurbit-downy-mildew__rhizoctonia-damping-off--blight-and-rot,Cucumber,Cucurbit Downy Mildew,"Rhizoctonia Damping-Off, Blight And Rot",303,4.1,False,False,False,True,0.0,image_decisive,True
+cucumber__gummy-stem-blight__phytophthora-blight,Cucumber,Gummy Stem Blight,Phytophthora Blight,103,4.1,True,True,True,True,0.1449,image_decisive,False
+cucumber__gummy-stem-blight__pythium-diseases,Cucumber,Gummy Stem Blight,Pythium Diseases,48,4.1,False,False,False,True,0.0675,image_decisive,True
+cucumber__phytophthora-blight__rhizoctonia-damping-off--blight-and-rot,Cucumber,Phytophthora Blight,"Rhizoctonia Damping-Off, Blight And Rot",95,4.1,False,False,False,True,0.0288,image_decisive,True
+cucumber__powdery-mildew__pythium-diseases,Cucumber,Powdery Mildew,Pythium Diseases,36,4.1,False,False,False,True,0.05,image_decisive,True
+cucumber__pythium-diseases__rhizoctonia-damping-off--blight-and-rot,Cucumber,Pythium Diseases,"Rhizoctonia Damping-Off, Blight And Rot",40,4.1,False,False,False,True,0.105,image_decisive,True
+wheat__fusarium-wilts--blights--rots-and-damping-off__loose-smut-of-wheat-or-barley,Wheat,"Fusarium Wilts, Blights, Rots And Damping-Off",Loose Smut Of Wheat Or Barley,50,4.1,False,False,False,True,0.0909,image_decisive,True
+wheat__fusarium-wilts--blights--rots-and-damping-off__powdery-mildew,Wheat,"Fusarium Wilts, Blights, Rots And Damping-Off",Powdery Mildew,70,4.1,False,False,False,False,,,True
+wheat__fusarium-wilts--blights--rots-and-damping-off__stripe-rust,Wheat,"Fusarium Wilts, Blights, Rots And Damping-Off",Stripe Rust,66,4.1,False,False,False,True,0.1176,image_decisive,True
+wheat__fusarium-wilts--blights--rots-and-damping-off__tan-spot,Wheat,"Fusarium Wilts, Blights, Rots And Damping-Off",Tan Spot,49,4.1,False,False,False,True,0.0811,image_decisive,True
+wheat__fusarium-wilts--blights--rots-and-damping-off__wheat-leaf-rust,Wheat,"Fusarium Wilts, Blights, Rots And Damping-Off",Wheat Leaf Rust,55,4.1,False,False,False,True,0.0294,image_decisive,True
+wheat__fusarium-wilts--blights--rots-and-damping-off__zymoseptoria-tritici,Wheat,"Fusarium Wilts, Blights, Rots And Damping-Off",Zymoseptoria Tritici,79,4.1,False,False,False,True,0.0789,image_decisive,True
+wheat__loose-smut-of-wheat-or-barley__parastagonospora-nodorum,Wheat,Loose Smut Of Wheat Or Barley,Parastagonospora Nodorum,38,4.1,False,False,False,True,0.0791,image_decisive,True
+wheat__loose-smut-of-wheat-or-barley__wheat-stem-rust,Wheat,Loose Smut Of Wheat Or Barley,Wheat Stem Rust,36,4.1,True,False,False,True,0.1987,image_decisive,False
+common-bean__dry-bean-rust__sclerotinia-timber-rot,Common Bean,Dry Bean Rust,Sclerotinia Timber Rot,33,4.1,False,False,False,True,0.0,image_decisive,True
+dogwood__dogwood-anthracnose__powdery-mildew,Dogwood,Dogwood Anthracnose,Powdery Mildew,39,4.1,True,True,True,True,0.1538,image_decisive,False
+maple__anthracnose__maple-cankers,Maple,Anthracnose,Maple Cankers,47,4.1,False,False,False,True,0.0286,image_decisive,True
+creeping-bentgrass__anthracnose__dollar-spot,Creeping Bentgrass,Anthracnose,Dollar Spot,26,4.1,True,False,False,True,0.1751,image_decisive,False
+plum-and-cherry__black-knot__blumeriella-leaf-spot-of-cherry-and-plum,Plum and Cherry,Black Knot,Blumeriella Leaf Spot Of Cherry And Plum,46,4.1,False,False,False,True,0.0,image_decisive,True
+plum-and-cherry__black-knot__brown-rots,Plum and Cherry,Black Knot,Brown Rots,43,4.1,False,False,False,True,0.0,image_decisive,True
+cultivated-garlic__alternaria-embellisia-togashi__gray-molds,Cultivated Garlic,Alternaria Embellisia Togashi,Gray Molds,31,4.1,True,False,False,True,0.2414,image_ambiguous,False
+cultivated-garlic__alternaria-embellisia-togashi__onion-rust,Cultivated Garlic,Alternaria Embellisia Togashi,Onion Rust,29,4.1,False,False,False,True,0.1111,image_decisive,True
+cultivated-garlic__alternaria-embellisia-togashi__white-rot,Cultivated Garlic,Alternaria Embellisia Togashi,White Rot,27,4.1,False,False,False,True,0.0526,image_decisive,True
+cultivated-garlic__gray-molds__onion-rust,Cultivated Garlic,Gray Molds,Onion Rust,34,4.1,False,False,False,True,0.0294,image_decisive,True
+highbush-blueberry__anthracnose__mummy-berry,Highbush Blueberry,Anthracnose,Mummy Berry,78,4.1,False,False,False,True,0.025,image_decisive,True
+highbush-blueberry__anthracnose__twig-canker,Highbush Blueberry,Anthracnose,Twig Canker,31,4.1,True,True,True,True,0.2333,image_ambiguous,False
+highbush-blueberry__phomopsis-cankers-and-twig-blights__twig-canker,Highbush Blueberry,Phomopsis Cankers And Twig Blights,Twig Canker,27,4.1,True,False,False,True,0.2222,image_ambiguous,False
+common-sunflower__rust__sclerotinia-timber-rot,Common Sunflower,Rust,Sclerotinia Timber Rot,36,4.1,False,False,False,True,0.0,image_decisive,True
+tomato__anthracnose__sclerotinia-timber-rot,Tomato,Anthracnose,Sclerotinia Timber Rot,32,4.0,False,False,False,True,0.0909,image_decisive,True
+tomato__rhizopus-soft-rots__sclerotinia-timber-rot,Tomato,Rhizopus Soft Rots,Sclerotinia Timber Rot,34,4.0,True,False,False,True,0.125,image_decisive,False
+pepper__alternaria-black-molds---stem-cankers__phytophthora-blight,Pepper,Alternaria Black Molds / Stem Cankers,Phytophthora Blight,102,4.0,False,False,False,False,,,True
+pepper__alternaria-black-molds---stem-cankers__southern-blight,Pepper,Alternaria Black Molds / Stem Cankers,Southern Blight,40,4.0,False,False,False,True,0.0625,image_decisive,True
+soybean__downy-mildew__taproot-decline-on-soybean,Soybean,Downy Mildew,Taproot Decline On Soybean,49,4.0,False,False,False,True,0.0,image_decisive,True
+soybean__genus-diaporthe__taproot-decline-on-soybean,Soybean,Genus Diaporthe,Taproot Decline On Soybean,26,4.0,False,False,False,True,0.0455,image_decisive,True
+soybean__root-and-stem-rot__southern-blight,Soybean,Root And Stem Rot,Southern Blight,35,4.0,True,False,False,True,0.1304,image_decisive,False
+soybean__root-and-stem-rot__taproot-decline-on-soybean,Soybean,Root And Stem Rot,Taproot Decline On Soybean,30,4.0,False,False,False,True,0.0385,image_decisive,True
+soybean__sclerotinia-timber-rot__southern-blight,Soybean,Sclerotinia Timber Rot,Southern Blight,78,4.0,False,False,False,True,0.0417,image_decisive,True
+soybean__sclerotinia-timber-rot__soybean-rust,Soybean,Sclerotinia Timber Rot,Soybean Rust,91,4.0,False,False,False,True,0.0,image_decisive,True
+soybean__sclerotinia-timber-rot__taproot-decline-on-soybean,Soybean,Sclerotinia Timber Rot,Taproot Decline On Soybean,73,4.0,False,False,False,False,,,True
+melon__alternaria-leaf-blight__monosporascus-root-rot,Melon,Alternaria Leaf Blight,Monosporascus Root Rot,90,4.0,False,False,False,True,0.0148,image_decisive,True
+melon__alternaria-leaf-blight__powdery-mildew,Melon,Alternaria Leaf Blight,Powdery Mildew,66,4.0,False,False,False,True,0.0,image_decisive,True
+melon__anthracnose__monosporascus-root-rot,Melon,Anthracnose,Monosporascus Root Rot,68,4.0,False,False,False,True,0.0169,image_decisive,True
+melon__anthracnose__powdery-mildew,Melon,Anthracnose,Powdery Mildew,44,4.0,False,False,False,True,0.0357,image_decisive,True
+melon__bacterial-wilt__monosporascus-root-rot,Melon,Bacterial Wilt,Monosporascus Root Rot,54,4.0,False,False,False,True,0.0,image_decisive,True
+melon__cucurbit-downy-mildew__powdery-mildew,Melon,Cucurbit Downy Mildew,Powdery Mildew,48,4.0,True,True,True,True,0.1752,image_decisive,False
+melon__gummy-stem-blight__monosporascus-root-rot,Melon,Gummy Stem Blight,Monosporascus Root Rot,90,4.0,False,False,False,True,0.0627,image_decisive,True
+melon__gummy-stem-blight__powdery-mildew,Melon,Gummy Stem Blight,Powdery Mildew,66,4.0,False,False,False,True,0.0857,image_decisive,True
+melon__powdery-mildew__sour-rot,Melon,Powdery Mildew,Sour Rot,44,4.0,False,False,False,True,0.0,image_decisive,True
+rhododendrons-and-azaleas__guignardia-blotch__leaf-and-flower-gall,Rhododendrons And Azaleas,Guignardia Blotch,Leaf And Flower Gall,25,4.0,False,False,False,False,,,True
+rhododendrons-and-azaleas__leaf-and-flower-gall__pestalotiopsis-leaf-spot,Rhododendrons And Azaleas,Leaf And Flower Gall,Pestalotiopsis Leaf Spot,29,4.0,False,False,False,False,,,True
+oak__bacterial-leaf-scorch__coryneum-twig-blight,Oak,Bacterial Leaf Scorch,Coryneum Twig Blight,27,4.0,False,False,False,True,0.0,image_decisive,True
+oak__bacterial-leaf-scorch__oak-leaf-blister,Oak,Bacterial Leaf Scorch,Oak Leaf Blister,29,4.0,False,False,False,True,0.0,image_decisive,True
+oak__botryosphaeria-rots-and-cankers__oak-wilt,Oak,Botryosphaeria Rots And Cankers,Oak Wilt,53,4.0,False,False,False,True,0.0,image_decisive,True
+pecan__diplodia-fungus__pecan-scab,Pecan,Diplodia Fungus,Pecan Scab,41,4.0,False,False,False,True,0.0,image_decisive,True
+lettuce__gray-mold__powdery-mildew,Lettuce,Gray Mold,Powdery Mildew,66,4.0,False,False,False,True,0.0189,image_decisive,True
+lettuce__gray-mold__sclerotinia-stem-rot,Lettuce,Gray Mold,Sclerotinia Stem Rot,34,4.0,False,False,False,True,0.0,image_decisive,True
+lettuce__powdery-mildew__rhizoctonia-damping-off--blight-and-rot,Lettuce,Powdery Mildew,"Rhizoctonia Damping-Off, Blight And Rot",56,4.0,False,False,False,False,,,True
+lettuce__powdery-mildew__southern-blight,Lettuce,Powdery Mildew,Southern Blight,57,4.0,False,False,False,True,0.0,image_decisive,True
+lettuce__rhizoctonia-damping-off--blight-and-rot__sclerotinia-stem-rot,Lettuce,"Rhizoctonia Damping-Off, Blight And Rot",Sclerotinia Stem Rot,24,4.0,False,False,False,False,,,True
+lettuce__sclerotinia-stem-rot__southern-blight,Lettuce,Sclerotinia Stem Rot,Southern Blight,25,4.0,False,False,False,True,0.0,image_decisive,True
+wheat__fusarium-wilts--blights--rots-and-damping-off__parastagonospora-nodorum,Wheat,"Fusarium Wilts, Blights, Rots And Damping-Off",Parastagonospora Nodorum,46,4.0,False,False,False,True,0.1143,image_decisive,True
+plum-and-cherry__black-knot__phloeosporella-fungus,Plum and Cherry,Black Knot,Phloeosporella Fungus,33,4.0,False,False,False,False,,,True
+highbush-blueberry__blueberry-leaf-rust__mummy-berry,Highbush Blueberry,Blueberry Leaf Rust,Mummy Berry,77,4.0,False,False,False,True,0.0,image_decisive,True
+soybean__root-and-stem-rot__septoria-leaf-spot,Soybean,Root And Stem Rot,Septoria Leaf Spot,28,3.5,True,False,False,True,0.1538,image_decisive,False
+soybean__cercospora-blight__septoria-leaf-spot,Soybean,Cercospora Blight,Septoria Leaf Spot,66,3.4,False,False,False,True,0.0,image_decisive,True
+soybean__sclerotinia-timber-rot__septoria-leaf-spot,Soybean,Sclerotinia Timber Rot,Septoria Leaf Spot,71,3.4,False,False,False,False,,,True
+corn__corn-smut__northern-corn-leaf-blight,Corn,Corn Smut,Northern Corn Leaf Blight,94,3.4,False,False,False,True,0.0377,image_decisive,True
+tomato__bacterial-canker-and-wilt-of-tomato__early-blight,Tomato,Bacterial Canker And Wilt Of Tomato,Early Blight,68,3.3,False,False,False,True,0.0909,image_decisive,True
+tomato__bacterial-canker-and-wilt-of-tomato__southern-blight,Tomato,Bacterial Canker And Wilt Of Tomato,Southern Blight,56,3.3,False,False,False,True,0.0513,image_decisive,True
+soybean__frogeye-leaf-spot__septoria-leaf-spot,Soybean,Frogeye Leaf Spot,Septoria Leaf Spot,35,3.3,True,True,True,True,0.2414,image_ambiguous,False
+soybean__genus-diaporthe__septoria-leaf-spot,Soybean,Genus Diaporthe,Septoria Leaf Spot,24,3.3,True,False,False,True,0.1364,image_decisive,False
+corn__common-corn-rust__fusarium-graminearum-schwabe,Corn,Common Corn Rust,Fusarium Graminearum Schwabe,27,3.3,False,False,False,True,0.1154,image_decisive,True
+corn__common-corn-rust__northern-corn-leaf-blight,Corn,Common Corn Rust,Northern Corn Leaf Blight,47,3.3,False,False,False,False,,,True
+corn__fusarium-graminearum-schwabe__goss--bacterial-wilt,Corn,Fusarium Graminearum Schwabe,Goss' Bacterial Wilt,29,3.3,False,False,False,False,,,True
+corn__fusarium-graminearum-schwabe__southern-corn-rust,Corn,Fusarium Graminearum Schwabe,Southern Corn Rust,28,3.3,False,False,False,True,0.1154,image_decisive,True
+corn__fusarium-graminearum-schwabe__white-ear-rot-and-seedling-blight-of-maize,Corn,Fusarium Graminearum Schwabe,White Ear Rot And Seedling Blight Of Maize,39,3.3,True,False,False,True,0.4,image_ambiguous,False
+corn__goss--bacterial-wilt__northern-corn-leaf-blight,Corn,Goss' Bacterial Wilt,Northern Corn Leaf Blight,49,3.3,True,True,True,True,0.1702,image_decisive,False
+corn__northern-corn-leaf-blight__white-ear-rot-and-seedling-blight-of-maize,Corn,Northern Corn Leaf Blight,White Ear Rot And Seedling Blight Of Maize,59,3.3,False,False,False,True,0.1081,image_decisive,True
+hosta__hosta-virus-x__tobacco-rattle-virus,Hosta,Hosta Virus X,Tobacco Rattle Virus,39,3.3,True,True,True,True,0.2105,image_ambiguous,False
+tomato__bacterial-canker-and-wilt-of-tomato__gray-mold,Tomato,Bacterial Canker And Wilt Of Tomato,Gray Mold,42,3.2,True,False,False,True,0.2258,image_ambiguous,False
+tomato__bacterial-canker-and-wilt-of-tomato__late-blight,Tomato,Bacterial Canker And Wilt Of Tomato,Late Blight,139,3.2,False,False,False,True,0.0678,image_decisive,True
+tomato__bacterial-canker-and-wilt-of-tomato__phytophthora-blight,Tomato,Bacterial Canker And Wilt Of Tomato,Phytophthora Blight,58,3.2,False,False,False,True,0.0741,image_decisive,True
+tomato__bacterial-canker-and-wilt-of-tomato__tomato-leaf-mould,Tomato,Bacterial Canker And Wilt Of Tomato,Tomato Leaf Mould,59,3.2,False,False,False,True,0.1053,image_decisive,True
+tomato__bacterial-speck-of-tomato__bacterial-wilt,Tomato,Bacterial Speck Of Tomato,Bacterial Wilt,31,3.2,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-speck-of-tomato__southern-bacterial-wilt,Tomato,Bacterial Speck Of Tomato,Southern Bacterial Wilt,34,3.2,False,False,False,True,0.0323,image_decisive,True
+tomato__cucumber-mosaic-virus__tomato-spotted-wilt-virus,Tomato,Cucumber Mosaic Virus,Tomato Spotted Wilt Virus,142,3.2,False,False,False,True,0.0169,image_decisive,True
+tomato__early-blight__phytophthora-blight,Tomato,Early Blight,Phytophthora Blight,86,3.2,False,False,False,True,0.0517,image_decisive,True
+tomato__late-blight__phytophthora-blight,Tomato,Late Blight,Phytophthora Blight,157,3.2,False,False,False,True,0.0274,image_decisive,True
+tomato__phytophthora-blight__southern-blight,Tomato,Phytophthora Blight,Southern Blight,74,3.2,False,False,False,True,0.0189,image_decisive,True
+pepper__phytophthora-blight__tomato-spotted-wilt-virus,Pepper,Phytophthora Blight,Tomato Spotted Wilt Virus,156,3.2,False,False,False,True,0.0588,image_decisive,True
+soybean__bean-pod-mottle-virus__soybean-vein-necrosis-virus,Soybean,Bean Pod Mottle Virus,Soybean Vein Necrosis Virus,35,3.2,False,False,False,True,0.0857,image_decisive,True
+soybean__charcoal-rot__septoria-leaf-spot,Soybean,Charcoal Rot,Septoria Leaf Spot,38,3.2,False,False,False,True,0.037,image_decisive,True
+soybean__downy-mildew__septoria-leaf-spot,Soybean,Downy Mildew,Septoria Leaf Spot,47,3.2,False,False,False,True,0.0976,image_decisive,True
+melon__alternaria-leaf-blight__phytophthora-blight,Melon,Alternaria Leaf Blight,Phytophthora Blight,99,3.2,False,False,False,True,0.0145,image_decisive,True
+oak__anthracnose__oak-leaf-blister,Oak,Anthracnose,Oak Leaf Blister,26,3.2,False,False,False,True,0.0667,image_decisive,True
+squash__choanephora-fruit-rot__gummy-stem-blight,Squash,Choanephora Fruit Rot,Gummy Stem Blight,48,3.2,False,False,False,True,0.0526,image_decisive,True
+watermelon__bacterial-fruit-blotch__pythium-diseases,Watermelon,Bacterial Fruit Blotch,Pythium Diseases,73,3.2,False,False,False,True,0.0417,image_decisive,True
+watermelon__bacterial-fruit-blotch__unknown-virus,Watermelon,Bacterial Fruit Blotch,Unknown Virus,126,3.2,False,False,False,True,0.0909,image_decisive,True
+watermelon__gummy-stem-blight__unknown-virus,Watermelon,Gummy Stem Blight,Unknown Virus,158,3.2,False,False,False,False,,,True
+corn__anthracnose__northern-corn-leaf-blight,Corn,Anthracnose,Northern Corn Leaf Blight,45,3.2,True,False,False,True,0.186,image_decisive,False
+corn__common-corn-rust__downy-mildew,Corn,Common Corn Rust,Downy Mildew,26,3.2,False,False,False,False,,,True
+corn__corn-smut__downy-mildew,Corn,Corn Smut,Downy Mildew,73,3.2,False,False,False,True,0.0,image_decisive,True
+corn__corn-smut__gray-leaf-spot,Corn,Corn Smut,Gray Leaf Spot,81,3.2,False,False,False,True,0.025,image_decisive,True
+corn__downy-mildew__goss--bacterial-wilt,Corn,Downy Mildew,Goss' Bacterial Wilt,28,3.2,False,False,False,True,0.0769,image_decisive,True
+corn__downy-mildew__northern-corn-leaf-blight,Corn,Downy Mildew,Northern Corn Leaf Blight,45,3.2,False,False,False,True,0.0222,image_decisive,True
+corn__downy-mildew__southern-corn-rust,Corn,Downy Mildew,Southern Corn Rust,27,3.2,False,False,False,False,,,True
+corn__downy-mildew__white-ear-rot-and-seedling-blight-of-maize,Corn,Downy Mildew,White Ear Rot And Seedling Blight Of Maize,38,3.2,False,False,False,True,0.125,image_decisive,True
+corn__goss--bacterial-wilt__gray-leaf-spot,Corn,Goss' Bacterial Wilt,Gray Leaf Spot,36,3.2,True,False,False,True,0.2059,image_ambiguous,False
+corn__gray-leaf-spot__northern-corn-leaf-blight,Corn,Gray Leaf Spot,Northern Corn Leaf Blight,53,3.2,True,False,False,True,0.3774,image_ambiguous,False
+corn__gray-leaf-spot__white-ear-rot-and-seedling-blight-of-maize,Corn,Gray Leaf Spot,White Ear Rot And Seedling Blight Of Maize,46,3.2,False,False,False,True,0.0833,image_decisive,True
+corn__northern-corn-leaf-blight__southern-corn-rust,Corn,Northern Corn Leaf Blight,Southern Corn Rust,48,3.2,False,False,False,False,,,True
+grape__downy-mildew__gray-mold,Grape,Downy Mildew,Gray Mold,66,3.2,False,False,False,True,0.0179,image_decisive,True
+grape__gray-mold__powdery-mildew,Grape,Gray Mold,Powdery Mildew,79,3.2,False,False,False,True,0.0303,image_decisive,True
+potato__bacterial-soft-rot__rhizoctonia-damping-off--blight-and-rot,Potato,Bacterial Soft Rot,"Rhizoctonia Damping-Off, Blight And Rot",46,3.2,False,False,False,True,0.0465,image_decisive,True
+potato__late-blight__rhizoctonia-damping-off--blight-and-rot,Potato,Late Blight,"Rhizoctonia Damping-Off, Blight And Rot",91,3.2,False,False,False,True,0.0588,image_decisive,True
+alfalfa__downy-mildew__summer-black-stem,Alfalfa,Downy Mildew,Summer Black Stem,29,3.2,True,False,False,True,0.2,image_ambiguous,False
+hops__fusarium-wilts--blights--rots-and-damping-off__powdery-mildew,Hops,"Fusarium Wilts, Blights, Rots And Damping-Off",Powdery Mildew,80,3.2,True,False,False,True,0.1379,image_decisive,False
+red-pine__diplodia-sapinea-de-not__sirococcus-blight-of-conifers,Red Pine,Diplodia Sapinea De Not.,Sirococcus Blight Of Conifers,40,3.2,True,True,True,True,0.1667,image_decisive,False
+tomato__anthracnose__bacterial-canker-and-wilt-of-tomato,Tomato,Anthracnose,Bacterial Canker And Wilt Of Tomato,33,3.1,False,False,False,False,,,True
+tomato__bacterial-canker-and-wilt-of-tomato__rhizopus-soft-rots,Tomato,Bacterial Canker And Wilt Of Tomato,Rhizopus Soft Rots,35,3.1,False,False,False,False,,,True
+tomato__bacterial-canker-and-wilt-of-tomato__sclerotinia-timber-rot,Tomato,Bacterial Canker And Wilt Of Tomato,Sclerotinia Timber Rot,39,3.1,False,False,False,True,0.1111,image_decisive,True
+tomato__bacterial-canker-and-wilt-of-tomato__septoria-leaf-spot,Tomato,Bacterial Canker And Wilt Of Tomato,Septoria Leaf Spot,45,3.1,True,False,False,True,0.2222,image_ambiguous,False
+tomato__bacterial-canker-and-wilt-of-tomato__verticillium-wilts,Tomato,Bacterial Canker And Wilt Of Tomato,Verticillium Wilts,33,3.1,False,False,False,True,0.0909,image_decisive,True
+tomato__early-blight__verticillium-wilts,Tomato,Early Blight,Verticillium Wilts,61,3.1,True,True,True,True,0.2973,image_ambiguous,False
+tomato__gray-mold__phytophthora-blight,Tomato,Gray Mold,Phytophthora Blight,60,3.1,False,False,False,True,0.1111,image_decisive,True
+tomato__gray-mold__verticillium-wilts,Tomato,Gray Mold,Verticillium Wilts,35,3.1,True,False,False,True,0.125,image_decisive,False
+tomato__late-blight__verticillium-wilts,Tomato,Late Blight,Verticillium Wilts,132,3.1,True,True,True,True,0.1346,image_decisive,False
+tomato__phytophthora-blight__sclerotinia-timber-rot,Tomato,Phytophthora Blight,Sclerotinia Timber Rot,57,3.1,False,False,False,True,0.0,image_decisive,True
+tomato__phytophthora-blight__tomato-leaf-mould,Tomato,Phytophthora Blight,Tomato Leaf Mould,77,3.1,False,False,False,True,0.0,image_decisive,True
+tomato__phytophthora-blight__verticillium-wilts,Tomato,Phytophthora Blight,Verticillium Wilts,51,3.1,False,False,False,True,0.0,image_decisive,True
+tomato__sclerotinia-timber-rot__verticillium-wilts,Tomato,Sclerotinia Timber Rot,Verticillium Wilts,32,3.1,False,False,False,True,0.0,image_decisive,True
+tomato__southern-blight__verticillium-wilts,Tomato,Southern Blight,Verticillium Wilts,49,3.1,False,False,False,True,0.0,image_decisive,True
+pepper__bacterial-spot__tomato-spotted-wilt-virus,Pepper,Bacterial Spot,Tomato Spotted Wilt Virus,91,3.1,False,False,False,True,0.0926,image_decisive,True
+soybean__bacterial-blight__bacterial-pustule-of-soybean-disease,Soybean,Bacterial Blight,Bacterial Pustule Of Soybean Disease,39,3.1,True,True,True,True,0.25,image_ambiguous,False
+soybean__septoria-leaf-spot__soybean-rust,Soybean,Septoria Leaf Spot,Soybean Rust,44,3.1,False,False,False,True,0.0938,image_decisive,True
+melon__alternaria-leaf-blight__fusarium-wilts--blights--rots-and-damping-off,Melon,Alternaria Leaf Blight,"Fusarium Wilts, Blights, Rots And Damping-Off",61,3.1,False,False,False,True,0.0286,image_decisive,True
+melon__alternaria-leaf-blight__sour-rot,Melon,Alternaria Leaf Blight,Sour Rot,76,3.1,False,False,False,True,0.0,image_decisive,True
+melon__anthracnose__bacterial-fruit-blotch,Melon,Anthracnose,Bacterial Fruit Blotch,44,3.1,False,False,False,False,,,True
+melon__anthracnose__cucurbit-downy-mildew,Melon,Anthracnose,Cucurbit Downy Mildew,58,3.1,True,True,True,True,0.2258,image_ambiguous,False
+melon__bacterial-fruit-blotch__charcoal-rot,Melon,Bacterial Fruit Blotch,Charcoal Rot,35,3.1,False,False,False,True,0.0,image_decisive,True
+melon__bacterial-fruit-blotch__fusarium-wilts--blights--rots-and-damping-off,Melon,Bacterial Fruit Blotch,"Fusarium Wilts, Blights, Rots And Damping-Off",29,3.1,False,False,False,True,0.0,image_decisive,True
+melon__bacterial-fruit-blotch__phytophthora-blight,Melon,Bacterial Fruit Blotch,Phytophthora Blight,67,3.1,False,False,False,False,,,True
+melon__bacterial-fruit-blotch__sour-rot,Melon,Bacterial Fruit Blotch,Sour Rot,44,3.1,False,False,False,True,0.0606,image_decisive,True
+melon__charcoal-rot__gummy-stem-blight,Melon,Charcoal Rot,Gummy Stem Blight,67,3.1,False,False,False,True,0.0435,image_decisive,True
+melon__charcoal-rot__phytophthora-blight,Melon,Charcoal Rot,Phytophthora Blight,68,3.1,False,False,False,False,,,True
+melon__cucurbit-downy-mildew__fusarium-wilts--blights--rots-and-damping-off,Melon,Cucurbit Downy Mildew,"Fusarium Wilts, Blights, Rots And Damping-Off",43,3.1,False,False,False,True,0.0526,image_decisive,True
+melon__cucurbit-downy-mildew__gummy-stem-blight,Melon,Cucurbit Downy Mildew,Gummy Stem Blight,80,3.1,True,True,True,True,0.1579,image_decisive,False
+melon__cucurbit-downy-mildew__phytophthora-blight,Melon,Cucurbit Downy Mildew,Phytophthora Blight,81,3.1,False,False,False,True,0.0377,image_decisive,True
+melon__gummy-stem-blight__phytophthora-blight,Melon,Gummy Stem Blight,Phytophthora Blight,99,3.1,False,False,False,True,0.0308,image_decisive,True
+oak__anthracnose__nectria-canker,Oak,Anthracnose,Nectria Canker,26,3.1,True,False,False,True,0.1818,image_decisive,False
+oak__bacterial-leaf-scorch__leaf-spot,Oak,Bacterial Leaf Scorch,Leaf Spot,28,3.1,False,False,False,True,0.0526,image_decisive,True
+oak__coryneum-twig-blight__nectria-canker,Oak,Coryneum Twig Blight,Nectria Canker,26,3.1,False,False,False,True,0.0417,image_decisive,True
+oak__leaf-spot__nectria-canker,Oak,Leaf Spot,Nectria Canker,27,3.1,False,False,False,True,0.08,image_decisive,True
+oak__leaf-spot__oak-leaf-blister,Oak,Leaf Spot,Oak Leaf Blister,27,3.1,False,False,False,True,0.0556,image_decisive,True
+oak__nectria-canker__oak-leaf-blister,Oak,Nectria Canker,Oak Leaf Blister,28,3.1,False,False,False,True,0.0526,image_decisive,True
+oak__oak-leaf-blister__oak-wilt,Oak,Oak Leaf Blister,Oak Wilt,37,3.1,False,False,False,True,0.0,image_decisive,True
+squash__choanephora-fruit-rot__powdery-mildew,Squash,Choanephora Fruit Rot,Powdery Mildew,77,3.1,False,False,False,True,0.0769,image_decisive,True
+squash__choanephora-fruit-rot__southern-blight,Squash,Choanephora Fruit Rot,Southern Blight,48,3.1,False,False,False,True,0.0,image_decisive,True
+watermelon__anthracnose__unknown-virus,Watermelon,Anthracnose,Unknown Virus,146,3.1,False,False,False,False,,,True
+watermelon__cucurbit-downy-mildew__pythium-diseases,Watermelon,Cucurbit Downy Mildew,Pythium Diseases,61,3.1,False,False,False,True,0.0,image_decisive,True
+watermelon__phytophthora-blight__unknown-virus,Watermelon,Phytophthora Blight,Unknown Virus,221,3.1,True,False,False,True,0.125,image_decisive,False
+lettuce__mirafiori-lettuce-big-vein-virus__sclerotinia-timber-rot,Lettuce,Mirafiori Lettuce Big-Vein Virus,Sclerotinia Timber Rot,157,3.1,False,False,False,True,0.0,image_decisive,True
+cabbage__bacterial-soft-rot__black-rot-of-crucifers,Cabbage,Bacterial Soft Rot,Black Rot Of Crucifers,34,3.1,False,False,False,True,0.0588,image_decisive,True
+cabbage__black-rot-of-crucifers__downy-mildew,Cabbage,Black Rot Of Crucifers,Downy Mildew,93,3.1,False,False,False,True,0.0165,image_decisive,True
+corn__anthracnose__downy-mildew,Corn,Anthracnose,Downy Mildew,24,3.1,False,False,False,True,0.0455,image_decisive,True
+corn__anthracnose__fusarium-graminearum-schwabe,Corn,Anthracnose,Fusarium Graminearum Schwabe,25,3.1,False,False,False,False,,,True
+corn__anthracnose__gray-leaf-spot,Corn,Anthracnose,Gray Leaf Spot,32,3.1,True,True,True,True,0.2,image_ambiguous,False
+corn__common-corn-rust__gray-leaf-spot,Corn,Common Corn Rust,Gray Leaf Spot,34,3.1,False,False,False,False,,,True
+corn__downy-mildew__gray-leaf-spot,Corn,Downy Mildew,Gray Leaf Spot,32,3.1,False,False,False,True,0.0312,image_decisive,True
+corn__gray-leaf-spot__southern-corn-rust,Corn,Gray Leaf Spot,Southern Corn Rust,35,3.1,False,False,False,False,,,True
+sugar-beet__cercospora-leaf-spot__powdery-mildew,Sugar Beet,Cercospora Leaf Spot,Powdery Mildew,45,3.1,False,False,False,True,0.0625,image_decisive,True
+grape__black-rot__gray-mold,Grape,Black Rot,Gray Mold,70,3.1,False,False,False,True,0.0161,image_decisive,True
+grape__grape-anthracnose__gray-mold,Grape,Grape Anthracnose,Gray Mold,45,3.1,False,False,False,True,0.0,image_decisive,True
+peach__botryosphaeria-canker--white-rot__stigmina-fungus,Peach,"Botryosphaeria Canker, White Rot",Stigmina Fungus,33,3.1,False,False,False,True,0.0,image_decisive,True
+peach__brown-rot__peach-leaf-curl,Peach,Brown Rot,Peach Leaf Curl,78,3.1,False,False,False,True,0.1053,image_decisive,True
+peach__brown-rot__stigmina-fungus,Peach,Brown Rot,Stigmina Fungus,57,3.1,False,False,False,True,0.0769,image_decisive,True
+peach__peach-leaf-curl__stigmina-fungus,Peach,Peach Leaf Curl,Stigmina Fungus,59,3.1,False,False,False,True,0.0962,image_decisive,True
+almond__brown-rot__stigmina-fungus,Almond,Brown Rot,Stigmina Fungus,66,3.1,False,False,False,True,0.0161,image_decisive,True
+potato__late-blight__phytophthora-root-and-stem-rot,Potato,Late Blight,Phytophthora Root And Stem Rot,85,3.1,False,False,False,True,0.0189,image_decisive,True
+potato__phytophthora-root-and-stem-rot__rhizoctonia-damping-off--blight-and-rot,Potato,Phytophthora Root And Stem Rot,"Rhizoctonia Damping-Off, Blight And Rot",58,3.1,False,False,False,True,0.0204,image_decisive,True
+cucumber__angular-leaf-spot-of-cucumber__bacterial-wilt,Cucumber,Angular Leaf Spot Of Cucumber,Bacterial Wilt,63,3.1,False,False,False,True,0.0,image_decisive,True
+cucumber__anthracnose__rhizoctonia-damping-off--blight-and-rot,Cucumber,Anthracnose,"Rhizoctonia Damping-Off, Blight And Rot",143,3.1,False,False,False,True,0.0571,image_decisive,True
+cucumber__corynespora-leaf-spot__rhizoctonia-damping-off--blight-and-rot,Cucumber,Corynespora Leaf Spot,"Rhizoctonia Damping-Off, Blight And Rot",50,3.1,False,False,False,True,0.0,image_decisive,True
+cucumber__gummy-stem-blight__rhizoctonia-damping-off--blight-and-rot,Cucumber,Gummy Stem Blight,"Rhizoctonia Damping-Off, Blight And Rot",44,3.1,False,False,False,True,0.0,image_decisive,True
+cucumber__powdery-mildew__rhizoctonia-damping-off--blight-and-rot,Cucumber,Powdery Mildew,"Rhizoctonia Damping-Off, Blight And Rot",32,3.1,False,False,False,True,0.0556,image_decisive,True
+maple__anthracnose__tar-spot-of-maple,Maple,Anthracnose,Tar Spot Of Maple,46,3.1,True,True,True,True,0.1471,image_decisive,False
+maple__maple-cankers__tar-spot-of-maple,Maple,Maple Cankers,Tar Spot Of Maple,25,3.1,False,False,False,True,0.04,image_decisive,True
+rice__bacterial-panicle-blight__rhizoctonia-damping-off--blight-and-rot,Rice,Bacterial Panicle Blight,"Rhizoctonia Damping-Off, Blight And Rot",31,3.1,True,False,False,True,0.2759,image_ambiguous,False
+rice__bacterial-panicle-blight__rice-blast-disease,Rice,Bacterial Panicle Blight,Rice Blast Disease,27,3.1,False,False,False,True,0.0741,image_decisive,True
+rice__rhizoctonia-damping-off--blight-and-rot__rice-blast-disease,Rice,"Rhizoctonia Damping-Off, Blight And Rot",Rice Blast Disease,30,3.1,False,False,False,True,0.1071,image_decisive,True
+cultivated-garlic__gray-molds__white-rot,Cultivated Garlic,Gray Molds,White Rot,32,3.1,False,False,False,True,0.1154,image_decisive,True
+cultivated-garlic__onion-rust__white-rot,Cultivated Garlic,Onion Rust,White Rot,30,3.1,False,False,False,True,0.0417,image_decisive,True
+tomato__anthracnose__phytophthora-blight,Tomato,Anthracnose,Phytophthora Blight,51,3.0,False,False,False,False,,,True
+tomato__anthracnose__verticillium-wilts,Tomato,Anthracnose,Verticillium Wilts,26,3.0,False,False,False,False,,,True
+tomato__phytophthora-blight__rhizopus-soft-rots,Tomato,Phytophthora Blight,Rhizopus Soft Rots,53,3.0,False,False,False,False,,,True
+tomato__phytophthora-blight__septoria-leaf-spot,Tomato,Phytophthora Blight,Septoria Leaf Spot,63,3.0,False,False,False,True,0.0488,image_decisive,True
+tomato__rhizopus-soft-rots__verticillium-wilts,Tomato,Rhizopus Soft Rots,Verticillium Wilts,28,3.0,False,False,False,False,,,True
+tomato__septoria-leaf-spot__verticillium-wilts,Tomato,Septoria Leaf Spot,Verticillium Wilts,38,3.0,False,False,False,True,0.1,image_decisive,True
+tomato__tomato-leaf-mould__verticillium-wilts,Tomato,Tomato Leaf Mould,Verticillium Wilts,52,3.0,False,False,False,True,0.0645,image_decisive,True
+soybean__septoria-leaf-spot__southern-blight,Soybean,Septoria Leaf Spot,Southern Blight,31,3.0,False,False,False,True,0.0952,image_decisive,True
+soybean__septoria-leaf-spot__taproot-decline-on-soybean,Soybean,Septoria Leaf Spot,Taproot Decline On Soybean,26,3.0,False,False,False,True,0.0,image_decisive,True
+melon__charcoal-rot__monosporascus-root-rot,Melon,Charcoal Rot,Monosporascus Root Rot,59,3.0,False,False,False,True,0.0,image_decisive,True
+melon__charcoal-rot__powdery-mildew,Melon,Charcoal Rot,Powdery Mildew,35,3.0,False,False,False,False,,,True
+melon__monosporascus-root-rot__phytophthora-blight,Melon,Monosporascus Root Rot,Phytophthora Blight,91,3.0,False,False,False,True,0.0,image_decisive,True
+melon__phytophthora-blight__powdery-mildew,Melon,Phytophthora Blight,Powdery Mildew,67,3.0,False,False,False,True,0.0,image_decisive,True
+oak__anthracnose__bacterial-leaf-scorch,Oak,Anthracnose,Bacterial Leaf Scorch,27,3.0,False,False,False,True,0.0,image_decisive,True
+oak__anthracnose__ganoderma-root-and-butt-rot,Oak,Anthracnose,Ganoderma Root And Butt Rot,32,3.0,False,False,False,True,0.0,image_decisive,True
+oak__bacterial-leaf-scorch__botryosphaeria-rots-and-cankers,Oak,Bacterial Leaf Scorch,Botryosphaeria Rots And Cankers,45,3.0,False,False,False,True,0.0,image_decisive,True
+oak__bacterial-leaf-scorch__oak-wilt,Oak,Bacterial Leaf Scorch,Oak Wilt,38,3.0,False,False,False,True,0.0389,image_decisive,True
+oak__botryosphaeria-rots-and-cankers__ganoderma-root-and-butt-rot,Oak,Botryosphaeria Rots And Cankers,Ganoderma Root And Butt Rot,50,3.0,False,False,False,True,0.0,image_decisive,True
+oak__coryneum-twig-blight__ganoderma-root-and-butt-rot,Oak,Coryneum Twig Blight,Ganoderma Root And Butt Rot,32,3.0,False,False,False,True,0.0,image_decisive,True
+oak__ganoderma-root-and-butt-rot__leaf-spot,Oak,Ganoderma Root And Butt Rot,Leaf Spot,33,3.0,False,False,False,True,0.0,image_decisive,True
+oak__ganoderma-root-and-butt-rot__nectria-canker,Oak,Ganoderma Root And Butt Rot,Nectria Canker,34,3.0,False,False,False,True,0.0,image_decisive,True
+oak__ganoderma-root-and-butt-rot__oak-wilt,Oak,Ganoderma Root And Butt Rot,Oak Wilt,43,3.0,False,False,False,True,0.0,image_decisive,True
+oak__nectria-canker__oak-wilt,Oak,Nectria Canker,Oak Wilt,37,3.0,False,False,False,True,0.0,image_decisive,True
+loblolly-pine__leptographium-root-disease__pine-needle-rusts,Loblolly Pine,Leptographium Root Disease,Pine Needle Rusts,32,3.0,False,False,False,False,,,True
+lettuce__lettuce-chlorosis-virus__tomato-spotted-wilt-virus,Lettuce,Lettuce Chlorosis Virus,Tomato Spotted Wilt Virus,48,3.0,False,False,False,True,0.1,image_decisive,True
+lettuce__mirafiori-lettuce-big-vein-virus__tomato-spotted-wilt-virus,Lettuce,Mirafiori Lettuce Big-Vein Virus,Tomato Spotted Wilt Virus,43,3.0,False,False,False,True,0.0,image_decisive,True
+cabbage__club-root-of-crucifers__phytophthora-root-and-stem-rot,Cabbage,Club Root Of Crucifers,Phytophthora Root And Stem Rot,33,3.0,False,False,False,True,0.0,image_decisive,True
+cabbage__downy-mildew__phytophthora-root-and-stem-rot,Cabbage,Downy Mildew,Phytophthora Root And Stem Rot,86,3.0,False,False,False,True,0.0,image_decisive,True
+peach__botryosphaeria-canker--white-rot__brown-rot,Peach,"Botryosphaeria Canker, White Rot",Brown Rot,52,3.0,False,False,False,True,0.0426,image_decisive,True
+peach__botryosphaeria-canker--white-rot__peach-leaf-curl,Peach,"Botryosphaeria Canker, White Rot",Peach Leaf Curl,54,3.0,False,False,False,True,0.0426,image_decisive,True
+wheat__fusarium-graminearum-schwabe__karnal-bunt,Wheat,Fusarium Graminearum Schwabe,Karnal Bunt,79,3.0,False,False,False,False,,,True
+wheat__fusarium-wilts--blights--rots-and-damping-off__karnal-bunt,Wheat,"Fusarium Wilts, Blights, Rots And Damping-Off",Karnal Bunt,75,3.0,False,False,False,False,,,True
+wheat__karnal-bunt__loose-smut-of-wheat-or-barley,Wheat,Karnal Bunt,Loose Smut Of Wheat Or Barley,67,3.0,False,False,False,False,,,True
+wheat__karnal-bunt__parastagonospora-nodorum,Wheat,Karnal Bunt,Parastagonospora Nodorum,63,3.0,False,False,False,False,,,True
+wheat__karnal-bunt__powdery-mildew,Wheat,Karnal Bunt,Powdery Mildew,87,3.0,False,False,False,False,,,True
+wheat__karnal-bunt__stripe-rust,Wheat,Karnal Bunt,Stripe Rust,83,3.0,False,False,False,False,,,True
+wheat__karnal-bunt__tan-spot,Wheat,Karnal Bunt,Tan Spot,66,3.0,False,False,False,False,,,True
+wheat__karnal-bunt__wheat-leaf-rust,Wheat,Karnal Bunt,Wheat Leaf Rust,72,3.0,False,False,False,False,,,True
+wheat__karnal-bunt__wheat-stem-rust,Wheat,Karnal Bunt,Wheat Stem Rust,61,3.0,False,False,False,False,,,True
+wheat__karnal-bunt__zymoseptoria-tritici,Wheat,Karnal Bunt,Zymoseptoria Tritici,96,3.0,False,False,False,False,,,True
+eastern-white-pine__caliciopsis-canker__needle-cast,Eastern White Pine,Caliciopsis Canker,Needle Cast,27,3.0,False,False,False,True,0.1053,image_decisive,True
+eastern-white-pine__caliciopsis-canker__stem-rot,Eastern White Pine,Caliciopsis Canker,Stem Rot,27,3.0,False,False,False,True,0.1053,image_decisive,True
+peony__anthracnose__botrytis-blight,Peony,Anthracnose,Botrytis Blight,32,3.0,False,False,False,True,0.0385,image_decisive,True
+highbush-blueberry__mummy-berry__phomopsis-cankers-and-twig-blights,Highbush Blueberry,Mummy Berry,Phomopsis Cankers And Twig Blights,74,3.0,False,False,False,True,0.0,image_decisive,True
+highbush-blueberry__mummy-berry__twig-canker,Highbush Blueberry,Mummy Berry,Twig Canker,71,3.0,False,False,False,True,0.0,image_decisive,True
+american-beech__beech-leaf-disease__neonectria-coccinea,American Beech,Beech Leaf Disease,Neonectria Coccinea,57,3.0,False,False,False,True,0.0,image_decisive,True
+wheat__barley-yellow-dwarf-virus__stripe-rust,Wheat,Barley Yellow Dwarf Virus,Stripe Rust,53,2.6,True,False,False,True,0.1905,image_decisive,False
+pepper__bacterial-spot__phytophthora-blight,Pepper,Bacterial Spot,Phytophthora Blight,115,2.4,False,False,False,True,0.0962,image_decisive,True
+wheat__barley-yellow-dwarf-virus__fusarium-graminearum-schwabe,Wheat,Barley Yellow Dwarf Virus,Fusarium Graminearum Schwabe,49,2.4,False,False,False,True,0.0303,image_decisive,True
+wheat__barley-yellow-dwarf-virus__powdery-mildew,Wheat,Barley Yellow Dwarf Virus,Powdery Mildew,57,2.4,False,False,False,False,,,True
+wheat__barley-yellow-dwarf-virus__tan-spot,Wheat,Barley Yellow Dwarf Virus,Tan Spot,36,2.4,True,False,False,True,0.2083,image_ambiguous,False
+wheat__stripe-rust__wheat-streak-mosaic-virus,Wheat,Stripe Rust,Wheat Streak Mosaic Virus,58,2.4,True,False,False,True,0.2308,image_ambiguous,False
+tomato__early-blight__southern-bacterial-wilt,Tomato,Early Blight,Southern Bacterial Wilt,63,2.3,True,False,False,True,0.1351,image_decisive,False
+tomato__sclerotinia-timber-rot__southern-bacterial-wilt,Tomato,Sclerotinia Timber Rot,Southern Bacterial Wilt,34,2.3,False,False,False,True,0.1,image_decisive,True
+tomato__southern-bacterial-wilt__southern-blight,Tomato,Southern Bacterial Wilt,Southern Blight,51,2.3,False,False,False,True,0.0312,image_decisive,True
+soybean__bacterial-pustule-of-soybean-disease__root-and-stem-rot,Soybean,Bacterial Pustule Of Soybean Disease,Root And Stem Rot,37,2.3,False,False,False,True,0.0909,image_decisive,True
+watermelon__powdery-mildew__unknown-virus,Watermelon,Powdery Mildew,Unknown Virus,113,2.3,False,False,False,True,0.0909,image_decisive,True
+wheat__barley-yellow-dwarf-virus__loose-smut-of-wheat-or-barley,Wheat,Barley Yellow Dwarf Virus,Loose Smut Of Wheat Or Barley,37,2.3,False,False,False,True,0.05,image_decisive,True
+wheat__powdery-mildew__wheat-streak-mosaic-virus,Wheat,Powdery Mildew,Wheat Streak Mosaic Virus,62,2.3,False,False,False,False,,,True
+apple__apple-scab__fire-blight,Apple,Apple Scab,Fire Blight,56,2.3,False,False,False,True,0.0263,image_decisive,True
+tomato__bacterial-speck-of-tomato__phytophthora-blight,Tomato,Bacterial Speck Of Tomato,Phytophthora Blight,57,2.2,False,False,False,True,0.0,image_decisive,True
+tomato__gray-mold__southern-bacterial-wilt,Tomato,Gray Mold,Southern Bacterial Wilt,37,2.2,True,False,False,True,0.25,image_ambiguous,False
+tomato__late-blight__southern-bacterial-wilt,Tomato,Late Blight,Southern Bacterial Wilt,134,2.2,False,False,False,True,0.0577,image_decisive,True
+tomato__southern-bacterial-wilt__tomato-leaf-mould,Tomato,Southern Bacterial Wilt,Tomato Leaf Mould,54,2.2,False,False,False,True,0.0645,image_decisive,True
+soybean__bacterial-pustule-of-soybean-disease__cercospora-blight,Soybean,Bacterial Pustule Of Soybean Disease,Cercospora Blight,75,2.2,False,False,False,True,0.0204,image_decisive,True
+soybean__bacterial-pustule-of-soybean-disease__charcoal-rot,Soybean,Bacterial Pustule Of Soybean Disease,Charcoal Rot,47,2.2,False,False,False,True,0.0294,image_decisive,True
+soybean__bacterial-pustule-of-soybean-disease__downy-mildew,Soybean,Bacterial Pustule Of Soybean Disease,Downy Mildew,56,2.2,True,True,True,True,0.2083,image_ambiguous,False
+soybean__bacterial-pustule-of-soybean-disease__frogeye-leaf-spot,Soybean,Bacterial Pustule Of Soybean Disease,Frogeye Leaf Spot,44,2.2,True,True,True,True,0.1944,image_decisive,False
+soybean__bacterial-pustule-of-soybean-disease__genus-diaporthe,Soybean,Bacterial Pustule Of Soybean Disease,Genus Diaporthe,33,2.2,False,False,False,True,0.069,image_decisive,True
+soybean__bacterial-pustule-of-soybean-disease__sclerotinia-timber-rot,Soybean,Bacterial Pustule Of Soybean Disease,Sclerotinia Timber Rot,80,2.2,False,False,False,False,,,True
+corn__downy-mildew__fusarium-graminearum-schwabe,Corn,Downy Mildew,Fusarium Graminearum Schwabe,25,2.2,False,False,False,False,,,True
+corn__fusarium-graminearum-schwabe__northern-corn-leaf-blight,Corn,Fusarium Graminearum Schwabe,Northern Corn Leaf Blight,46,2.2,False,False,False,False,,,True
+wheat__barley-yellow-dwarf-virus__wheat-leaf-rust,Wheat,Barley Yellow Dwarf Virus,Wheat Leaf Rust,42,2.2,True,False,False,True,0.1429,image_decisive,False
+wheat__barley-yellow-dwarf-virus__wheat-stem-rust,Wheat,Barley Yellow Dwarf Virus,Wheat Stem Rust,31,2.2,False,False,False,True,0.0909,image_decisive,True
+wheat__barley-yellow-dwarf-virus__zymoseptoria-tritici,Wheat,Barley Yellow Dwarf Virus,Zymoseptoria Tritici,66,2.2,True,False,False,True,0.16,image_decisive,False
+wheat__fusarium-graminearum-schwabe__wheat-streak-mosaic-virus,Wheat,Fusarium Graminearum Schwabe,Wheat Streak Mosaic Virus,54,2.2,False,False,False,True,0.0,image_decisive,True
+wheat__tan-spot__wheat-streak-mosaic-virus,Wheat,Tan Spot,Wheat Streak Mosaic Virus,41,2.2,False,False,False,True,0.1034,image_decisive,True
+wheat__wheat-leaf-rust__wheat-streak-mosaic-virus,Wheat,Wheat Leaf Rust,Wheat Streak Mosaic Virus,47,2.2,False,False,False,True,0.1154,image_decisive,True
+wheat__wheat-stem-rust__wheat-streak-mosaic-virus,Wheat,Wheat Stem Rust,Wheat Streak Mosaic Virus,36,2.2,True,False,False,True,0.1852,image_decisive,False
+apple__black-rot__fire-blight,Apple,Black Rot,Fire Blight,31,2.2,False,False,False,False,,,True
+apple__cedar-apple-rust__fire-blight,Apple,Cedar-Apple Rust,Fire Blight,35,2.2,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-wilt__early-blight,Tomato,Bacterial Wilt,Early Blight,60,2.1,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-wilt__gray-mold,Tomato,Bacterial Wilt,Gray Mold,34,2.1,False,False,False,True,0.1042,image_decisive,True
+tomato__bacterial-wilt__late-blight,Tomato,Bacterial Wilt,Late Blight,131,2.1,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-wilt__sclerotinia-timber-rot,Tomato,Bacterial Wilt,Sclerotinia Timber Rot,31,2.1,False,False,False,True,0.0347,image_decisive,True
+tomato__bacterial-wilt__southern-blight,Tomato,Bacterial Wilt,Southern Blight,48,2.1,False,False,False,True,0.0,image_decisive,True
+soybean__bacterial-pustule-of-soybean-disease__soybean-rust,Soybean,Bacterial Pustule Of Soybean Disease,Soybean Rust,53,2.1,False,False,False,True,0.0769,image_decisive,True
+melon__alternaria-leaf-blight__bacterial-fruit-blotch,Melon,Alternaria Leaf Blight,Bacterial Fruit Blotch,66,2.1,False,False,False,False,,,True
+melon__alternaria-leaf-blight__charcoal-rot,Melon,Alternaria Leaf Blight,Charcoal Rot,67,2.1,False,False,False,True,0.0,image_decisive,True
+melon__anthracnose__bacterial-wilt,Melon,Anthracnose,Bacterial Wilt,40,2.1,False,False,False,True,0.0,image_decisive,True
+melon__bacterial-fruit-blotch__cucurbit-downy-mildew,Melon,Bacterial Fruit Blotch,Cucurbit Downy Mildew,48,2.1,False,False,False,False,,,True
+melon__bacterial-fruit-blotch__gummy-stem-blight,Melon,Bacterial Fruit Blotch,Gummy Stem Blight,66,2.1,False,False,False,False,,,True
+melon__bacterial-wilt__cucurbit-downy-mildew,Melon,Bacterial Wilt,Cucurbit Downy Mildew,44,2.1,True,False,False,True,0.2,image_ambiguous,False
+melon__bacterial-wilt__fusarium-wilts--blights--rots-and-damping-off,Melon,Bacterial Wilt,"Fusarium Wilts, Blights, Rots And Damping-Off",25,2.1,False,False,False,True,0.0,image_decisive,True
+melon__bacterial-wilt__gummy-stem-blight,Melon,Bacterial Wilt,Gummy Stem Blight,62,2.1,False,False,False,True,0.0,image_decisive,True
+melon__bacterial-wilt__sour-rot,Melon,Bacterial Wilt,Sour Rot,40,2.1,False,False,False,True,0.0,image_decisive,True
+melon__charcoal-rot__cucurbit-downy-mildew,Melon,Charcoal Rot,Cucurbit Downy Mildew,49,2.1,False,False,False,False,,,True
+oak__ganoderma-root-and-butt-rot__oak-leaf-blister,Oak,Ganoderma Root And Butt Rot,Oak Leaf Blister,34,2.1,False,False,False,True,0.0,image_decisive,True
+watermelon__cucurbit-downy-mildew__unknown-virus,Watermelon,Cucurbit Downy Mildew,Unknown Virus,114,2.1,False,False,False,True,0.0204,image_decisive,True
+lettuce__downy-mildew__lettuce-chlorosis-virus,Lettuce,Downy Mildew,Lettuce Chlorosis Virus,90,2.1,True,False,False,True,0.1352,image_decisive,False
+lettuce__downy-mildew__mirafiori-lettuce-big-vein-virus,Lettuce,Downy Mildew,Mirafiori Lettuce Big-Vein Virus,85,2.1,False,False,False,True,0.0359,image_decisive,True
+lettuce__lettuce-chlorosis-virus__rhizoctonia-damping-off--blight-and-rot,Lettuce,Lettuce Chlorosis Virus,"Rhizoctonia Damping-Off, Blight And Rot",35,2.1,False,False,False,True,0.0,image_decisive,True
+lettuce__mirafiori-lettuce-big-vein-virus__rhizoctonia-damping-off--blight-and-rot,Lettuce,Mirafiori Lettuce Big-Vein Virus,"Rhizoctonia Damping-Off, Blight And Rot",30,2.1,False,False,False,True,0.0625,image_decisive,True
+cabbage__black-rot-of-crucifers__club-root-of-crucifers,Cabbage,Black Rot Of Crucifers,Club Root Of Crucifers,40,2.1,False,False,False,True,0.0,image_decisive,True
+corn__fusarium-graminearum-schwabe__gray-leaf-spot,Corn,Fusarium Graminearum Schwabe,Gray Leaf Spot,33,2.1,False,False,False,False,,,True
+garden-onion__downy-mildew__iris-yellow-spot-virus,Garden Onion,Downy Mildew,Iris Yellow Spot Virus,35,2.1,True,False,False,True,0.1379,image_decisive,False
+sweet-potato__bacteria-wilt-and-soft-rot__black-rot,Sweet Potato,Bacteria Wilt And Soft Rot,Black Rot,67,2.1,False,False,False,True,0.0364,image_decisive,True
+sweet-potato__black-rot__bread-mold,Sweet Potato,Black Rot,Bread Mold,71,2.1,True,False,False,True,0.1478,image_decisive,False
+sweet-potato__black-rot__fusarium-damping-off,Sweet Potato,Black Rot,Fusarium Damping-Off,51,2.1,False,False,False,True,0.0909,image_decisive,True
+sweet-potato__black-rot__fusarium-lateritium-nees,Sweet Potato,Black Rot,Fusarium Lateritium Nees,40,2.1,False,False,False,True,0.0,image_decisive,True
+sweet-potato__black-rot__fusarium-wilt,Sweet Potato,Black Rot,Fusarium Wilt,37,2.1,False,False,False,True,0.0968,image_decisive,True
+sweet-potato__black-rot__java-black-rot,Sweet Potato,Black Rot,Java Black Rot,49,2.1,True,True,True,True,0.1218,image_decisive,False
+sweet-potato__black-rot__penicillium-fungi,Sweet Potato,Black Rot,Penicillium Fungi,112,2.1,True,False,False,True,0.1578,image_decisive,False
+sweet-potato__black-rot__rhizopus-soft-rots,Sweet Potato,Black Rot,Rhizopus Soft Rots,61,2.1,True,True,True,True,0.123,image_decisive,False
+sweet-potato__black-rot__scurf,Sweet Potato,Black Rot,Scurf,86,2.1,False,False,False,True,0.1186,image_decisive,True
+sweet-potato__black-rot__sour-rot,Sweet Potato,Black Rot,Sour Rot,59,2.1,True,False,False,True,0.1528,image_decisive,False
+sweet-potato__black-rot__southern-blight,Sweet Potato,Black Rot,Southern Blight,67,2.1,False,False,False,True,0.1132,image_decisive,True
+sweet-potato__black-rot__streptomyces-soil-rot,Sweet Potato,Black Rot,Streptomyces Soil Rot,81,2.1,False,False,False,True,0.1071,image_decisive,True
+potato__bacterial-soft-rot__tomato-spotted-wilt-virus,Potato,Bacterial Soft Rot,Tomato Spotted Wilt Virus,114,2.1,False,False,False,True,0.0204,image_decisive,True
+potato__phytophthora-root-and-stem-rot__tomato-spotted-wilt-virus,Potato,Phytophthora Root And Stem Rot,Tomato Spotted Wilt Virus,126,2.1,False,False,False,True,0.0727,image_decisive,True
+rose__black-spot__rose-rosette-virus,Rose,Black Spot,Rose Rosette Virus,42,2.1,False,False,False,True,0.027,image_decisive,True
+cucumber__angular-leaf-spot-of-cucumber__anthracnose,Cucumber,Angular Leaf Spot Of Cucumber,Anthracnose,173,2.1,True,True,True,True,0.2143,image_ambiguous,False
+cucumber__angular-leaf-spot-of-cucumber__cucurbit-downy-mildew,Cucumber,Angular Leaf Spot Of Cucumber,Cucurbit Downy Mildew,333,2.1,True,True,True,True,0.2615,image_ambiguous,False
+cucumber__angular-leaf-spot-of-cucumber__phytophthora-blight,Cucumber,Angular Leaf Spot Of Cucumber,Phytophthora Blight,125,2.1,False,False,False,True,0.0601,image_decisive,True
+cucumber__angular-leaf-spot-of-cucumber__powdery-mildew,Cucumber,Angular Leaf Spot Of Cucumber,Powdery Mildew,62,2.1,False,False,False,True,0.0769,image_decisive,True
+cucumber__anthracnose__bacterial-wilt,Cucumber,Anthracnose,Bacterial Wilt,140,2.1,False,False,False,True,0.0938,image_decisive,True
+cucumber__bacterial-wilt__corynespora-leaf-spot,Cucumber,Bacterial Wilt,Corynespora Leaf Spot,47,2.1,False,False,False,True,0.0909,image_decisive,True
+cucumber__bacterial-wilt__cucurbit-downy-mildew,Cucumber,Bacterial Wilt,Cucurbit Downy Mildew,300,2.1,False,False,False,True,0.0,image_decisive,True
+cucumber__bacterial-wilt__gummy-stem-blight,Cucumber,Bacterial Wilt,Gummy Stem Blight,41,2.1,False,False,False,True,0.0323,image_decisive,True
+cucumber__bacterial-wilt__phytophthora-blight,Cucumber,Bacterial Wilt,Phytophthora Blight,92,2.1,False,False,False,True,0.087,image_decisive,True
+cucumber__bacterial-wilt__powdery-mildew,Cucumber,Bacterial Wilt,Powdery Mildew,29,2.1,False,False,False,True,0.0667,image_decisive,True
+cucumber__bacterial-wilt__pythium-diseases,Cucumber,Bacterial Wilt,Pythium Diseases,37,2.1,False,False,False,True,0.0,image_decisive,True
+wheat__barley-yellow-dwarf-virus__fusarium-wilts--blights--rots-and-damping-off,Wheat,Barley Yellow Dwarf Virus,"Fusarium Wilts, Blights, Rots And Damping-Off",45,2.1,False,False,False,True,0.0465,image_decisive,True
+wheat__barley-yellow-dwarf-virus__parastagonospora-nodorum,Wheat,Barley Yellow Dwarf Virus,Parastagonospora Nodorum,33,2.1,False,False,False,True,0.0909,image_decisive,True
+wheat__fusarium-wilts--blights--rots-and-damping-off__wheat-streak-mosaic-virus,Wheat,"Fusarium Wilts, Blights, Rots And Damping-Off",Wheat Streak Mosaic Virus,50,2.1,False,False,False,True,0.0417,image_decisive,True
+wheat__loose-smut-of-wheat-or-barley__wheat-streak-mosaic-virus,Wheat,Loose Smut Of Wheat Or Barley,Wheat Streak Mosaic Virus,42,2.1,False,False,False,True,0.04,image_decisive,True
+wheat__wheat-streak-mosaic-virus__zymoseptoria-tritici,Wheat,Wheat Streak Mosaic Virus,Zymoseptoria Tritici,71,2.1,True,False,False,True,0.1667,image_decisive,False
+common-bean__common-bacterial--blight-of-beans--fuscous-blight__halo-blight,Common Bean,"Common Bacterial  Blight Of Beans, Fuscous Blight",Halo Blight,53,2.1,False,False,False,True,0.0189,image_decisive,True
+tomato__anthracnose__bacterial-wilt,Tomato,Anthracnose,Bacterial Wilt,25,2.0,False,False,False,True,0.0588,image_decisive,True
+tomato__anthracnose__southern-bacterial-wilt,Tomato,Anthracnose,Southern Bacterial Wilt,28,2.0,False,False,False,False,,,True
+tomato__bacterial-wilt__rhizopus-soft-rots,Tomato,Bacterial Wilt,Rhizopus Soft Rots,27,2.0,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-wilt__septoria-leaf-spot,Tomato,Bacterial Wilt,Septoria Leaf Spot,37,2.0,False,False,False,True,0.0347,image_decisive,True
+tomato__bacterial-wilt__tomato-leaf-mould,Tomato,Bacterial Wilt,Tomato Leaf Mould,51,2.0,False,False,False,True,0.0,image_decisive,True
+tomato__rhizopus-soft-rots__southern-bacterial-wilt,Tomato,Rhizopus Soft Rots,Southern Bacterial Wilt,30,2.0,False,False,False,False,,,True
+tomato__septoria-leaf-spot__southern-bacterial-wilt,Tomato,Septoria Leaf Spot,Southern Bacterial Wilt,40,2.0,True,False,False,True,0.15,image_decisive,False
+soybean__bacterial-pustule-of-soybean-disease__southern-blight,Soybean,Bacterial Pustule Of Soybean Disease,Southern Blight,40,2.0,False,False,False,True,0.0714,image_decisive,True
+soybean__bacterial-pustule-of-soybean-disease__taproot-decline-on-soybean,Soybean,Bacterial Pustule Of Soybean Disease,Taproot Decline On Soybean,35,2.0,False,False,False,True,0.0323,image_decisive,True
+melon__bacterial-fruit-blotch__monosporascus-root-rot,Melon,Bacterial Fruit Blotch,Monosporascus Root Rot,58,2.0,False,False,False,False,,,True
+melon__bacterial-fruit-blotch__powdery-mildew,Melon,Bacterial Fruit Blotch,Powdery Mildew,34,2.0,False,False,False,False,,,True
+melon__bacterial-wilt__powdery-mildew,Melon,Bacterial Wilt,Powdery Mildew,30,2.0,False,False,False,True,0.0,image_decisive,True
+oak__bacterial-leaf-scorch__ganoderma-root-and-butt-rot,Oak,Bacterial Leaf Scorch,Ganoderma Root And Butt Rot,35,2.0,False,False,False,True,0.0,image_decisive,True
+oak__bacterial-leaf-scorch__nectria-canker,Oak,Bacterial Leaf Scorch,Nectria Canker,29,2.0,False,False,False,True,0.0,image_decisive,True
+cabbage__black-rot-of-crucifers__phytophthora-root-and-stem-rot,Cabbage,Black Rot Of Crucifers,Phytophthora Root And Stem Rot,37,2.0,False,False,False,True,0.0,image_decisive,True
+wheat__parastagonospora-nodorum__wheat-streak-mosaic-virus,Wheat,Parastagonospora Nodorum,Wheat Streak Mosaic Virus,38,2.0,False,False,False,True,0.037,image_decisive,True
+aspen-poplar__cytospora-cankers__marssonina-leaf-spots,Aspen/Poplar,Cytospora Cankers,Marssonina Leaf Spots,28,2.0,False,False,False,False,,,True
+tomato__early-blight__tomato-spotted-wilt-virus,Tomato,Early Blight,Tomato Spotted Wilt Virus,171,1.5,True,True,True,True,0.1406,image_decisive,False
+tomato__late-blight__tomato-spotted-wilt-virus,Tomato,Late Blight,Tomato Spotted Wilt Virus,242,1.5,False,False,False,True,0.1139,image_decisive,True
+tomato__southern-bacterial-wilt__tomato-spotted-wilt-virus,Tomato,Southern Bacterial Wilt,Tomato Spotted Wilt Virus,138,1.4,False,False,False,True,0.0943,image_decisive,True
+tomato__southern-blight__tomato-spotted-wilt-virus,Tomato,Southern Blight,Tomato Spotted Wilt Virus,159,1.4,False,False,False,True,0.0,image_decisive,True
+soybean__bacterial-blight__cercospora-blight,Soybean,Bacterial Blight,Cercospora Blight,72,1.4,False,False,False,True,0.0,image_decisive,True
+soybean__bean-pod-mottle-virus__cercospora-blight,Soybean,Bean Pod Mottle Virus,Cercospora Blight,76,1.4,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-canker-and-wilt-of-tomato__tomato-spotted-wilt-virus,Tomato,Bacterial Canker And Wilt Of Tomato,Tomato Spotted Wilt Virus,143,1.3,False,False,False,True,0.1167,image_decisive,True
+tomato__septoria-leaf-spot__tomato-spotted-wilt-virus,Tomato,Septoria Leaf Spot,Tomato Spotted Wilt Virus,148,1.3,False,False,False,True,0.0638,image_decisive,True
+tomato__tomato-leaf-mould__tomato-spotted-wilt-virus,Tomato,Tomato Leaf Mould,Tomato Spotted Wilt Virus,162,1.3,False,False,False,True,0.0172,image_decisive,True
+pepper__bacterial-spot__southern-blight,Pepper,Bacterial Spot,Southern Blight,53,1.3,False,False,False,True,0.0244,image_decisive,True
+soybean__bacterial-blight__frogeye-leaf-spot,Soybean,Bacterial Blight,Frogeye Leaf Spot,41,1.3,True,True,True,True,0.1765,image_decisive,False
+soybean__bacterial-pustule-of-soybean-disease__septoria-leaf-spot,Soybean,Bacterial Pustule Of Soybean Disease,Septoria Leaf Spot,33,1.3,True,True,True,True,0.2258,image_ambiguous,False
+soybean__bean-pod-mottle-virus__root-and-stem-rot,Soybean,Bean Pod Mottle Virus,Root And Stem Rot,38,1.3,False,False,False,True,0.0278,image_decisive,True
+soybean__bean-pod-mottle-virus__sclerotinia-timber-rot,Soybean,Bean Pod Mottle Virus,Sclerotinia Timber Rot,81,1.3,False,False,False,False,,,True
+soybean__bean-pod-mottle-virus__septoria-leaf-spot,Soybean,Bean Pod Mottle Virus,Septoria Leaf Spot,34,1.3,False,False,False,True,0.0588,image_decisive,True
+strawberry__angular-leaf-spot-of-strawberry__gray-mold,Strawberry,Angular Leaf Spot Of Strawberry,Gray Mold,34,1.3,False,False,False,True,0.0455,image_decisive,True
+tomato__anthracnose__tomato-spotted-wilt-virus,Tomato,Anthracnose,Tomato Spotted Wilt Virus,136,1.2,False,False,False,False,,,True
+tomato__bacterial-canker-and-wilt-of-tomato__bacterial-speck-of-tomato,Tomato,Bacterial Canker And Wilt Of Tomato,Bacterial Speck Of Tomato,39,1.2,False,False,False,True,0.0263,image_decisive,True
+tomato__bacterial-canker-and-wilt-of-tomato__southern-bacterial-wilt,Tomato,Bacterial Canker And Wilt Of Tomato,Southern Bacterial Wilt,35,1.2,True,True,True,True,0.1515,image_decisive,False
+tomato__bacterial-speck-of-tomato__early-blight,Tomato,Bacterial Speck Of Tomato,Early Blight,67,1.2,False,False,False,True,0.119,image_decisive,True
+tomato__bacterial-speck-of-tomato__late-blight,Tomato,Bacterial Speck Of Tomato,Late Blight,138,1.2,False,False,False,True,0.0702,image_decisive,True
+tomato__bacterial-speck-of-tomato__southern-blight,Tomato,Bacterial Speck Of Tomato,Southern Blight,55,1.2,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-speck-of-tomato__tomato-spotted-wilt-virus,Tomato,Bacterial Speck Of Tomato,Tomato Spotted Wilt Virus,142,1.2,False,False,False,True,0.0517,image_decisive,True
+tomato__cucumber-mosaic-virus__late-blight,Tomato,Cucumber Mosaic Virus,Late Blight,138,1.2,False,False,False,True,0.0,image_decisive,True
+tomato__cucumber-mosaic-virus__southern-blight,Tomato,Cucumber Mosaic Virus,Southern Blight,55,1.2,False,False,False,True,0.0,image_decisive,True
+tomato__cucumber-mosaic-virus__tomato-leaf-mould,Tomato,Cucumber Mosaic Virus,Tomato Leaf Mould,58,1.2,False,False,False,True,0.0,image_decisive,True
+tomato__gray-mold__tomato-spotted-wilt-virus,Tomato,Gray Mold,Tomato Spotted Wilt Virus,145,1.2,False,False,False,True,0.0784,image_decisive,True
+tomato__phytophthora-blight__southern-bacterial-wilt,Tomato,Phytophthora Blight,Southern Bacterial Wilt,53,1.2,False,False,False,True,0.0638,image_decisive,True
+tomato__phytophthora-blight__tomato-spotted-wilt-virus,Tomato,Phytophthora Blight,Tomato Spotted Wilt Virus,161,1.2,False,False,False,True,0.0946,image_decisive,True
+tomato__sclerotinia-timber-rot__tomato-spotted-wilt-virus,Tomato,Sclerotinia Timber Rot,Tomato Spotted Wilt Virus,142,1.2,False,False,False,True,0.0426,image_decisive,True
+pepper__southern-blight__tomato-spotted-wilt-virus,Pepper,Southern Blight,Tomato Spotted Wilt Virus,94,1.2,False,False,False,True,0.0175,image_decisive,True
+soybean__bacterial-blight__bean-pod-mottle-virus,Soybean,Bacterial Blight,Bean Pod Mottle Virus,40,1.2,False,False,False,True,0.0256,image_decisive,True
+soybean__bacterial-blight__downy-mildew,Soybean,Bacterial Blight,Downy Mildew,53,1.2,False,False,False,True,0.1087,image_decisive,True
+soybean__bacterial-blight__root-and-stem-rot,Soybean,Bacterial Blight,Root And Stem Rot,34,1.2,False,False,False,True,0.0,image_decisive,True
+soybean__bacterial-blight__sclerotinia-timber-rot,Soybean,Bacterial Blight,Sclerotinia Timber Rot,77,1.2,False,False,False,False,,,True
+soybean__bacterial-blight__septoria-leaf-spot,Soybean,Bacterial Blight,Septoria Leaf Spot,30,1.2,True,True,True,True,0.1724,image_decisive,False
+soybean__bacterial-pustule-of-soybean-disease__bean-pod-mottle-virus,Soybean,Bacterial Pustule Of Soybean Disease,Bean Pod Mottle Virus,43,1.2,False,False,False,True,0.0244,image_decisive,True
+soybean__bean-pod-mottle-virus__charcoal-rot,Soybean,Bean Pod Mottle Virus,Charcoal Rot,48,1.2,False,False,False,True,0.0,image_decisive,True
+soybean__bean-pod-mottle-virus__downy-mildew,Soybean,Bean Pod Mottle Virus,Downy Mildew,57,1.2,False,False,False,True,0.0588,image_decisive,True
+soybean__bean-pod-mottle-virus__frogeye-leaf-spot,Soybean,Bean Pod Mottle Virus,Frogeye Leaf Spot,45,1.2,False,False,False,True,0.0769,image_decisive,True
+soybean__bean-pod-mottle-virus__genus-diaporthe,Soybean,Bean Pod Mottle Virus,Genus Diaporthe,34,1.2,True,False,False,True,0.125,image_decisive,False
+soybean__bean-pod-mottle-virus__southern-blight,Soybean,Bean Pod Mottle Virus,Southern Blight,41,1.2,False,False,False,True,0.0645,image_decisive,True
+soybean__cercospora-blight__soybean-vein-necrosis-virus,Soybean,Cercospora Blight,Soybean Vein Necrosis Virus,67,1.2,False,False,False,True,0.0,image_decisive,True
+soybean__genus-diaporthe__soybean-vein-necrosis-virus,Soybean,Genus Diaporthe,Soybean Vein Necrosis Virus,25,1.2,False,False,False,True,0.0435,image_decisive,True
+soybean__root-and-stem-rot__soybean-vein-necrosis-virus,Soybean,Root And Stem Rot,Soybean Vein Necrosis Virus,29,1.2,False,False,False,True,0.0,image_decisive,True
+soybean__sclerotinia-timber-rot__soybean-vein-necrosis-virus,Soybean,Sclerotinia Timber Rot,Soybean Vein Necrosis Virus,72,1.2,False,False,False,False,,,True
+soybean__septoria-leaf-spot__soybean-vein-necrosis-virus,Soybean,Septoria Leaf Spot,Soybean Vein Necrosis Virus,25,1.2,True,True,True,True,0.16,image_decisive,False
+watermelon__pythium-diseases__unknown-virus,Watermelon,Pythium Diseases,Unknown Virus,83,1.2,False,False,False,False,,,True
+sweet-potato__java-black-rot__sweet-potato-feathery-mottle-virus,Sweet Potato,Java Black Rot,Sweet Potato Feathery Mottle Virus,69,1.2,False,False,False,True,0.0185,image_decisive,True
+sweet-potato__southern-blight__sweet-potato-feathery-mottle-virus,Sweet Potato,Southern Blight,Sweet Potato Feathery Mottle Virus,87,1.2,False,False,False,True,0.0597,image_decisive,True
+tomato__bacterial-canker-and-wilt-of-tomato__bacterial-wilt,Tomato,Bacterial Canker And Wilt Of Tomato,Bacterial Wilt,32,1.1,False,False,False,True,0.08,image_decisive,True
+tomato__bacterial-canker-and-wilt-of-tomato__cucumber-mosaic-virus,Tomato,Bacterial Canker And Wilt Of Tomato,Cucumber Mosaic Virus,39,1.1,False,False,False,True,0.0513,image_decisive,True
+tomato__bacterial-speck-of-tomato__cucumber-mosaic-virus,Tomato,Bacterial Speck Of Tomato,Cucumber Mosaic Virus,38,1.1,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-speck-of-tomato__gray-mold,Tomato,Bacterial Speck Of Tomato,Gray Mold,41,1.1,False,False,False,True,0.069,image_decisive,True
+tomato__bacterial-speck-of-tomato__sclerotinia-timber-rot,Tomato,Bacterial Speck Of Tomato,Sclerotinia Timber Rot,38,1.1,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-speck-of-tomato__tomato-leaf-mould,Tomato,Bacterial Speck Of Tomato,Tomato Leaf Mould,58,1.1,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-speck-of-tomato__verticillium-wilts,Tomato,Bacterial Speck Of Tomato,Verticillium Wilts,32,1.1,True,False,False,True,0.129,image_decisive,False
+tomato__bacterial-wilt__phytophthora-blight,Tomato,Bacterial Wilt,Phytophthora Blight,50,1.1,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-wilt__tomato-spotted-wilt-virus,Tomato,Bacterial Wilt,Tomato Spotted Wilt Virus,135,1.1,False,False,False,True,0.0,image_decisive,True
+tomato__bacterial-wilt__verticillium-wilts,Tomato,Bacterial Wilt,Verticillium Wilts,25,1.1,False,False,False,True,0.0,image_decisive,True
+tomato__cucumber-mosaic-virus__early-blight,Tomato,Cucumber Mosaic Virus,Early Blight,67,1.1,False,False,False,True,0.0,image_decisive,True
+tomato__cucumber-mosaic-virus__phytophthora-blight,Tomato,Cucumber Mosaic Virus,Phytophthora Blight,57,1.1,False,False,False,True,0.0,image_decisive,True
+tomato__cucumber-mosaic-virus__septoria-leaf-spot,Tomato,Cucumber Mosaic Virus,Septoria Leaf Spot,44,1.1,False,False,False,True,0.1154,image_decisive,True
+tomato__cucumber-mosaic-virus__southern-bacterial-wilt,Tomato,Cucumber Mosaic Virus,Southern Bacterial Wilt,34,1.1,False,False,False,True,0.0,image_decisive,True
+tomato__rhizopus-soft-rots__tomato-spotted-wilt-virus,Tomato,Rhizopus Soft Rots,Tomato Spotted Wilt Virus,138,1.1,False,False,False,False,,,True
+tomato__southern-bacterial-wilt__verticillium-wilts,Tomato,Southern Bacterial Wilt,Verticillium Wilts,28,1.1,False,False,False,True,0.0769,image_decisive,True
+tomato__tomato-spotted-wilt-virus__verticillium-wilts,Tomato,Tomato Spotted Wilt Virus,Verticillium Wilts,136,1.1,False,False,False,True,0.0755,image_decisive,True
+soybean__bacterial-blight__genus-diaporthe,Soybean,Bacterial Blight,Genus Diaporthe,30,1.1,False,False,False,True,0.0,image_decisive,True
+soybean__bacterial-blight__southern-blight,Soybean,Bacterial Blight,Southern Blight,37,1.1,False,False,False,True,0.0385,image_decisive,True
+soybean__bacterial-blight__soybean-vein-necrosis-virus,Soybean,Bacterial Blight,Soybean Vein Necrosis Virus,31,1.1,False,False,False,True,0.0667,image_decisive,True
+soybean__bacterial-pustule-of-soybean-disease__soybean-vein-necrosis-virus,Soybean,Bacterial Pustule Of Soybean Disease,Soybean Vein Necrosis Virus,34,1.1,True,True,True,True,0.1562,image_decisive,False
+soybean__bean-pod-mottle-virus__soybean-rust,Soybean,Bean Pod Mottle Virus,Soybean Rust,54,1.1,False,False,False,True,0.0,image_decisive,True
+soybean__bean-pod-mottle-virus__taproot-decline-on-soybean,Soybean,Bean Pod Mottle Virus,Taproot Decline On Soybean,36,1.1,False,False,False,True,0.0,image_decisive,True
+soybean__downy-mildew__soybean-vein-necrosis-virus,Soybean,Downy Mildew,Soybean Vein Necrosis Virus,48,1.1,True,True,True,True,0.1429,image_decisive,False
+soybean__frogeye-leaf-spot__soybean-vein-necrosis-virus,Soybean,Frogeye Leaf Spot,Soybean Vein Necrosis Virus,36,1.1,False,False,False,True,0.0667,image_decisive,True
+strawberry__angular-leaf-spot-of-strawberry__anthracnose,Strawberry,Angular Leaf Spot Of Strawberry,Anthracnose,106,1.1,False,False,False,True,0.0588,image_decisive,True
+strawberry__angular-leaf-spot-of-strawberry__phomopsis-leaf-blight-and-fruit-rot,Strawberry,Angular Leaf Spot Of Strawberry,Phomopsis Leaf Blight And Fruit Rot,32,1.1,False,False,False,True,0.0,image_decisive,True
+strawberry__angular-leaf-spot-of-strawberry__ramularia-grevilleana-verkley---u--braun,Strawberry,Angular Leaf Spot Of Strawberry,Ramularia Grevilleana Verkley & U. Braun,49,1.1,True,True,True,True,0.1739,image_decisive,False
+melon__alternaria-leaf-blight__bacterial-wilt,Melon,Alternaria Leaf Blight,Bacterial Wilt,62,1.1,False,False,False,True,0.0,image_decisive,True
+melon__bacterial-wilt__charcoal-rot,Melon,Bacterial Wilt,Charcoal Rot,31,1.1,False,False,False,False,,,True
+melon__bacterial-wilt__phytophthora-blight,Melon,Bacterial Wilt,Phytophthora Blight,63,1.1,False,False,False,True,0.0,image_decisive,True
+lettuce__downy-mildew__tomato-spotted-wilt-virus,Lettuce,Downy Mildew,Tomato Spotted Wilt Virus,92,1.1,False,False,False,True,0.0909,image_decisive,True
+lettuce__gray-mold__lettuce-chlorosis-virus,Lettuce,Gray Mold,Lettuce Chlorosis Virus,45,1.1,False,False,False,False,,,True
+lettuce__gray-mold__mirafiori-lettuce-big-vein-virus,Lettuce,Gray Mold,Mirafiori Lettuce Big-Vein Virus,40,1.1,False,False,False,False,,,True
+lettuce__gray-mold__tomato-spotted-wilt-virus,Lettuce,Gray Mold,Tomato Spotted Wilt Virus,47,1.1,False,False,False,False,,,True
+lettuce__rhizoctonia-damping-off--blight-and-rot__tomato-spotted-wilt-virus,Lettuce,"Rhizoctonia Damping-Off, Blight And Rot",Tomato Spotted Wilt Virus,37,1.1,False,False,False,False,,,True
+lettuce__sclerotinia-timber-rot__tomato-spotted-wilt-virus,Lettuce,Sclerotinia Timber Rot,Tomato Spotted Wilt Virus,164,1.1,False,False,False,True,0.0,image_decisive,True
+lettuce__southern-blight__tomato-spotted-wilt-virus,Lettuce,Southern Blight,Tomato Spotted Wilt Virus,38,1.1,False,False,False,True,0.0,image_decisive,True
+garden-onion__downy-mildew__onion-yellows-phytoplasma,Garden Onion,Downy Mildew,Onion Yellows Phytoplasma,35,1.1,False,False,False,True,0.0606,image_decisive,True
+garden-onion__iris-yellow-spot-virus__onion-yellows-phytoplasma,Garden Onion,Iris Yellow Spot Virus,Onion Yellows Phytoplasma,28,1.1,True,False,False,True,0.125,image_decisive,False
+sweet-potato__bacteria-wilt-and-soft-rot__sweet-potato-feathery-mottle-virus,Sweet Potato,Bacteria Wilt And Soft Rot,Sweet Potato Feathery Mottle Virus,87,1.1,False,False,False,True,0.0667,image_decisive,True
+sweet-potato__black-rot__sweet-potato-feathery-mottle-virus,Sweet Potato,Black Rot,Sweet Potato Feathery Mottle Virus,70,1.1,False,False,False,True,0.0167,image_decisive,True
+sweet-potato__bread-mold__sweet-potato-feathery-mottle-virus,Sweet Potato,Bread Mold,Sweet Potato Feathery Mottle Virus,91,1.1,False,False,False,True,0.02,image_decisive,True
+sweet-potato__fusarium-damping-off__sweet-potato-feathery-mottle-virus,Sweet Potato,Fusarium Damping-Off,Sweet Potato Feathery Mottle Virus,71,1.1,False,False,False,True,0.0156,image_decisive,True
+sweet-potato__fusarium-lateritium-nees__sweet-potato-feathery-mottle-virus,Sweet Potato,Fusarium Lateritium Nees,Sweet Potato Feathery Mottle Virus,60,1.1,False,False,False,True,0.0444,image_decisive,True
+sweet-potato__fusarium-wilt__sweet-potato-feathery-mottle-virus,Sweet Potato,Fusarium Wilt,Sweet Potato Feathery Mottle Virus,57,1.1,False,False,False,True,0.0196,image_decisive,True
+sweet-potato__penicillium-fungi__sweet-potato-feathery-mottle-virus,Sweet Potato,Penicillium Fungi,Sweet Potato Feathery Mottle Virus,132,1.1,False,False,False,True,0.0351,image_decisive,True
+sweet-potato__rhizopus-soft-rots__sweet-potato-feathery-mottle-virus,Sweet Potato,Rhizopus Soft Rots,Sweet Potato Feathery Mottle Virus,81,1.1,False,False,False,True,0.06,image_decisive,True
+sweet-potato__scurf__sweet-potato-feathery-mottle-virus,Sweet Potato,Scurf,Sweet Potato Feathery Mottle Virus,106,1.1,False,False,False,True,0.038,image_decisive,True
+sweet-potato__sour-rot__sweet-potato-feathery-mottle-virus,Sweet Potato,Sour Rot,Sweet Potato Feathery Mottle Virus,79,1.1,False,False,False,True,0.0299,image_decisive,True
+sweet-potato__streptomyces-soil-rot__sweet-potato-feathery-mottle-virus,Sweet Potato,Streptomyces Soil Rot,Sweet Potato Feathery Mottle Virus,101,1.1,False,False,False,True,0.0395,image_decisive,True
+potato__late-blight__tomato-spotted-wilt-virus,Potato,Late Blight,Tomato Spotted Wilt Virus,159,1.1,True,True,True,True,0.1622,image_decisive,False
+potato__rhizoctonia-damping-off--blight-and-rot__tomato-spotted-wilt-virus,Potato,"Rhizoctonia Damping-Off, Blight And Rot",Tomato Spotted Wilt Virus,132,1.1,False,False,False,True,0.0143,image_decisive,True
+cucumber__angular-leaf-spot-of-cucumber__corynespora-leaf-spot,Cucumber,Angular Leaf Spot Of Cucumber,Corynespora Leaf Spot,80,1.1,True,True,True,True,0.2281,image_ambiguous,False
+cucumber__angular-leaf-spot-of-cucumber__gummy-stem-blight,Cucumber,Angular Leaf Spot Of Cucumber,Gummy Stem Blight,74,1.1,False,False,False,True,0.0909,image_decisive,True
+cucumber__angular-leaf-spot-of-cucumber__pythium-diseases,Cucumber,Angular Leaf Spot Of Cucumber,Pythium Diseases,70,1.1,False,False,False,True,0.0,image_decisive,True
+cucumber__angular-leaf-spot-of-cucumber__rhizoctonia-damping-off--blight-and-rot,Cucumber,Angular Leaf Spot Of Cucumber,"Rhizoctonia Damping-Off, Blight And Rot",66,1.1,False,False,False,True,0.0,image_decisive,True
+cucumber__bacterial-wilt__rhizoctonia-damping-off--blight-and-rot,Cucumber,Bacterial Wilt,"Rhizoctonia Damping-Off, Blight And Rot",33,1.1,False,False,False,True,0.0,image_decisive,True
+common-bean__beet-curly-top-virus__dry-bean-rust,Common Bean,Beet Curly Top Virus,Dry Bean Rust,33,1.1,False,False,False,True,0.0385,image_decisive,True
+common-bean__beet-curly-top-virus__halo-blight,Common Bean,Beet Curly Top Virus,Halo Blight,28,1.1,False,False,False,True,0.0714,image_decisive,True
+common-bean__beet-curly-top-virus__sclerotinia-timber-rot,Common Bean,Beet Curly Top Virus,Sclerotinia Timber Rot,30,1.1,False,False,False,False,,,True
+common-bean__common-bacterial--blight-of-beans--fuscous-blight__dry-bean-rust,Common Bean,"Common Bacterial  Blight Of Beans, Fuscous Blight",Dry Bean Rust,58,1.1,False,False,False,True,0.0588,image_decisive,True
+common-bean__dry-bean-rust__halo-blight,Common Bean,Dry Bean Rust,Halo Blight,31,1.1,False,False,False,True,0.0417,image_decisive,True
+common-bean__halo-blight__sclerotinia-timber-rot,Common Bean,Halo Blight,Sclerotinia Timber Rot,28,1.1,False,False,False,False,,,True
+burley-tobacco__blue-mold__tomato-spotted-wilt-virus,Burley Tobacco,Blue Mold,Tomato Spotted Wilt Virus,28,1.1,True,False,False,True,0.1538,image_decisive,False
+tomato__anthracnose__bacterial-speck-of-tomato,Tomato,Anthracnose,Bacterial Speck Of Tomato,32,1.0,False,False,False,False,,,True
+tomato__anthracnose__cucumber-mosaic-virus,Tomato,Anthracnose,Cucumber Mosaic Virus,32,1.0,False,False,False,False,,,True
+tomato__bacterial-speck-of-tomato__rhizopus-soft-rots,Tomato,Bacterial Speck Of Tomato,Rhizopus Soft Rots,34,1.0,False,False,False,False,,,True
+tomato__bacterial-speck-of-tomato__septoria-leaf-spot,Tomato,Bacterial Speck Of Tomato,Septoria Leaf Spot,44,1.0,True,True,True,True,0.16,image_decisive,False
+tomato__bacterial-wilt__cucumber-mosaic-virus,Tomato,Bacterial Wilt,Cucumber Mosaic Virus,31,1.0,False,False,False,True,0.0,image_decisive,True
+tomato__cucumber-mosaic-virus__gray-mold,Tomato,Cucumber Mosaic Virus,Gray Mold,41,1.0,False,False,False,True,0.1,image_decisive,True
+tomato__cucumber-mosaic-virus__rhizopus-soft-rots,Tomato,Cucumber Mosaic Virus,Rhizopus Soft Rots,34,1.0,False,False,False,False,,,True
+tomato__cucumber-mosaic-virus__sclerotinia-timber-rot,Tomato,Cucumber Mosaic Virus,Sclerotinia Timber Rot,38,1.0,False,False,False,True,0.0,image_decisive,True
+tomato__cucumber-mosaic-virus__verticillium-wilts,Tomato,Cucumber Mosaic Virus,Verticillium Wilts,32,1.0,False,False,False,True,0.0,image_decisive,True
+pepper__alternaria-black-molds---stem-cankers__bacterial-spot,Pepper,Alternaria Black Molds / Stem Cankers,Bacterial Spot,37,1.0,False,False,False,False,,,True
+pepper__alternaria-black-molds---stem-cankers__tomato-spotted-wilt-virus,Pepper,Alternaria Black Molds / Stem Cankers,Tomato Spotted Wilt Virus,78,1.0,False,False,False,False,,,True
+soybean__bacterial-blight__charcoal-rot,Soybean,Bacterial Blight,Charcoal Rot,44,1.0,False,False,False,True,0.0,image_decisive,True
+soybean__bacterial-blight__soybean-rust,Soybean,Bacterial Blight,Soybean Rust,50,1.0,False,False,False,True,0.0541,image_decisive,True
+soybean__bacterial-blight__taproot-decline-on-soybean,Soybean,Bacterial Blight,Taproot Decline On Soybean,32,1.0,False,False,False,True,0.0,image_decisive,True
+soybean__charcoal-rot__soybean-vein-necrosis-virus,Soybean,Charcoal Rot,Soybean Vein Necrosis Virus,39,1.0,False,False,False,True,0.0,image_decisive,True
+soybean__southern-blight__soybean-vein-necrosis-virus,Soybean,Southern Blight,Soybean Vein Necrosis Virus,32,1.0,True,False,False,True,0.1364,image_decisive,False
+soybean__soybean-rust__soybean-vein-necrosis-virus,Soybean,Soybean Rust,Soybean Vein Necrosis Virus,45,1.0,False,False,False,True,0.0303,image_decisive,True
+soybean__soybean-vein-necrosis-virus__taproot-decline-on-soybean,Soybean,Soybean Vein Necrosis Virus,Taproot Decline On Soybean,27,1.0,False,False,False,True,0.08,image_decisive,True
+st--augustinegrass__rhizoctonia-damping-off--blight-and-rot__sugarcane-mosaic-virus,St. Augustinegrass,"Rhizoctonia Damping-Off, Blight And Rot",Sugarcane Mosaic Virus,28,1.0,False,False,False,True,0.0,image_decisive,True
+lettuce__lettuce-chlorosis-virus__powdery-mildew,Lettuce,Lettuce Chlorosis Virus,Powdery Mildew,67,1.0,False,False,False,True,0.0909,image_decisive,True
+lettuce__lettuce-chlorosis-virus__sclerotinia-stem-rot,Lettuce,Lettuce Chlorosis Virus,Sclerotinia Stem Rot,35,1.0,False,False,False,False,,,True
+lettuce__lettuce-chlorosis-virus__southern-blight,Lettuce,Lettuce Chlorosis Virus,Southern Blight,36,1.0,False,False,False,True,0.1,image_decisive,True
+lettuce__mirafiori-lettuce-big-vein-virus__powdery-mildew,Lettuce,Mirafiori Lettuce Big-Vein Virus,Powdery Mildew,62,1.0,False,False,False,True,0.0,image_decisive,True
+lettuce__mirafiori-lettuce-big-vein-virus__sclerotinia-stem-rot,Lettuce,Mirafiori Lettuce Big-Vein Virus,Sclerotinia Stem Rot,30,1.0,False,False,False,False,,,True
+lettuce__mirafiori-lettuce-big-vein-virus__southern-blight,Lettuce,Mirafiori Lettuce Big-Vein Virus,Southern Blight,31,1.0,False,False,False,True,0.0,image_decisive,True
+lettuce__powdery-mildew__tomato-spotted-wilt-virus,Lettuce,Powdery Mildew,Tomato Spotted Wilt Virus,69,1.0,False,False,False,True,0.0,image_decisive,True
+lettuce__sclerotinia-stem-rot__tomato-spotted-wilt-virus,Lettuce,Sclerotinia Stem Rot,Tomato Spotted Wilt Virus,37,1.0,False,False,False,False,,,True
+wheat__barley-yellow-dwarf-virus__karnal-bunt,Wheat,Barley Yellow Dwarf Virus,Karnal Bunt,62,1.0,False,False,False,False,,,True
+wheat__karnal-bunt__wheat-streak-mosaic-virus,Wheat,Karnal Bunt,Wheat Streak Mosaic Virus,67,1.0,False,False,False,False,,,True
+melon__bacterial-fruit-blotch__bacterial-wilt,Melon,Bacterial Fruit Blotch,Bacterial Wilt,30,0.1,False,False,False,False,,,True
+common-bean__beet-curly-top-virus__common-bacterial--blight-of-beans--fuscous-blight,Common Bean,Beet Curly Top Virus,"Common Bacterial  Blight Of Beans, Fuscous Blight",55,0.1,False,False,False,True,0.0182,image_decisive,True
+common-bean__common-bacterial--blight-of-beans--fuscous-blight__sclerotinia-timber-rot,Common Bean,"Common Bacterial  Blight Of Beans, Fuscous Blight",Sclerotinia Timber Rot,55,0.1,False,False,False,False,,,True

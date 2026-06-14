@@ -1,0 +1,70 @@
+{
+  "pair_id": "wheat__barley-yellow-dwarf-virus__fusarium-wilts--blights--rots-and-damping-off",
+  "kind": "disease",
+  "crop": "Wheat",
+  "member_a_label": "Barley Yellow Dwarf Virus",
+  "member_b_label": "Fusarium Wilts, Blights, Rots And Damping-Off",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both can produce stunting, yellowing/discoloration, and patchy stand thinning in wheat that a scout may lump together as \"poor, off-color patches.\" BYDV causes leaf yellowing/reddening from the tip and stunting; Fusarium (crown/root rot, seedling damping-off, and Fusarium head blight) can also stunt plants, kill seedlings in patches, and cause whole-tiller chlorosis/premature death from root/crown infection. The confusion is greatest at the vegetative/early stage when both look like generalized chlorosis and stunting in irregular patches. They diverge sharply on plant part affected, presence of pathogen signs, and the appearance when the stem/crown is split.",
+    "shared_presentation": "Patchy, stunted, off-color wheat: yellow to reddish-purple foliage, reduced tillering, thin or dying stands, and premature whitening/death of tillers \u2014 symptoms that overlap during vegetative growth and into early reproductive stages.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are the symptoms concentrated in the foliage (leaves) or in the crown/roots and developing heads?",
+        "a_signal": "Discoloration is a foliar phenomenon \u2014 leaf blades yellow/redden while roots and crown stay healthy and white when dug",
+        "b_signal": "Primary damage is below/at soil line (rotted brown roots, discolored crown/subcrown internode) or in the spike (bleached florets)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the color and pattern of the leaf discoloration?",
+        "a_signal": "Bright golden-yellow to red/purple discoloration starting at the leaf TIP and spreading down the margins, often interveinal, on the youngest/upper leaves",
+        "b_signal": "Dull yellowing/browning of whole tillers (chlorosis from water/nutrient cutoff), or tan-bleached premature whiteheads, not the distinctive tip-down reddening",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is there any fungal sign or insect vector evidence?",
+        "a_signal": "No fungal growth anywhere; aphids (bird cherry-oat, English grain) present earlier as the vector \u2014 a sign of insect activity, not fungus",
+        "b_signal": "Pinkish-orange to white fungal mycelium/sporodochia on crown, stem base, or bleached spikelets (salmon spore masses in humid conditions)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "When you split the lower stem/crown and pull the roots, what do the internal tissues look like?",
+        "a_signal": "Roots white and intact, crown and stem-base tissue clean and healthy internally \u2014 discoloration is only in leaves above ground",
+        "b_signal": "Brown-to-honey discolored crown, rotted/pruned roots, and a characteristic browning of the subcrown internode and lower stem (vascular/cortical rot)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "habit",
+        "question": "How are affected plants distributed in the field and within a plant?",
+        "a_signal": "Scattered or patchy individual stunted plants, often along field edges/near grassy aphid sources; tillering reduced but whole plant uniformly affected",
+        "b_signal": "Patches tied to stressed/dry areas, with individual tillers dying one at a time (whiteheads) or seedling-stage gaps from damping-off",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Does the affected plant recover/compensate or progress to death from the base up?",
+        "a_signal": "Plant survives but stays stunted with poor grain fill; no progressive basal rot \u2014 damage is set by early infection timing",
+        "b_signal": "Progressive decline as crown/root rot girdles the plant under stress (especially moisture stress at grain fill), leading to premature ripening and death",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Barley yellow dwarf is a phloem-limited Luteovirus vectored by aphids. Infected wheat shows stunting, reduced tillering, and a hallmark discoloration that begins at the leaf tip and progresses down the blade \u2014 golden-yellow, or in wheat often reddish-purple \u2014 typically on the upper/youngest leaves. Critically, the disease is foliar and systemic via phloem: roots and crown remain healthy and white. There are no fungal signs; the only \"sign vector\" evidence is aphid colonization earlier in the season. Damage is determined by how early infection occurred, with fall/early infections causing the worst stunting and yield loss. Plants survive but yield poorly.",
+    "narrative_b": "Fusarium on wheat is a complex of soilborne/residueborne fungi causing seedling damping-off, crown and root rot (e.g., Fusarium pseudograminearum/culmorum), and Fusarium head blight (F. graminearum). Unlike BYDV, the action is at or below the soil line and in the spike: rotted brown roots, browned crown and subcrown internode, and \u2014 under moisture/heat stress at grain fill \u2014 premature whiteheads and dying tillers. Diagnostic confirmation comes from splitting the crown/stem base to reveal internal browning, and from fungal signs: pinkish-salmon spore masses on the crown or on bleached spikelets in humid weather. Stand loss can appear as seedling gaps (damping-off) or one-tiller-at-a-time death rather than uniform foliar discoloration.",
+    "management_a": "Manage BYDV through vector and timing: delay fall planting to avoid peak aphid flights, use insecticidal seed treatments (neonicotinoids) or scout-based foliar aphicides, plant tolerant/resistant varieties, and control volunteer cereals and grassy weeds that serve as virus/aphid reservoirs (green bridge). Nothing can be done curatively once infected.",
+    "management_b": "Manage Fusarium crown/root rot and FHB by reducing inoculum and stress: rotate away from cereals and manage residue, avoid moisture stress where possible, use resistant/tolerant varieties, balance nitrogen, and use seed treatment fungicides for damping-off. For Fusarium head blight, apply a triazole fungicide (e.g., prothioconazole/tebuconazole) at early flowering and manage for DON mycotoxin at harvest.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "I've got patchy areas in my wheat where the plants are stunted and off-color, with leaves turning yellow to reddish-purple. Those spots have thinner, weaker stands with fewer shoots, and some tillers are dying off early and turning white before the rest of the field is ready.",
+      "decisive_lay_a": "Dig up an affected plant and look below ground: the roots are white and healthy with no rot, and when you slice open the base of the stem and the crown it looks clean and normal inside. All the color trouble is only in the leaves above ground.",
+      "decisive_lay_b": "Dig up an affected plant and check the base: the crown is rotted and discolored brown to honey-colored, the roots are rotted off or stubby, and when you split the lower stem and the underground stem section just below the crown you see brown streaking and rot inside.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pair_id": "melon__charcoal-rot__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Charcoal Rot",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause crown/stem cankers and vine collapse on melon, often appearing at fruit load under hot conditions, with stem lesions that exude or discolor and produce tiny black fruiting bodies (microsclerotia vs pycnidia) that are hard to tell apart with the naked eye. Both can be confused with general \"vine decline\" and both kill plants progressively from the crown outward, so field diagnosis without a hand lens or splitting the stem is unreliable.",
+    "shared_presentation": "Mid- to late-season melon plants showing wilting, vine decline, and crown/stem cankers, frequently coinciding with fruit set and heat stress. Affected stems show tan-to-brown lesions near the soil line or at nodes, dark speckling within the lesion, and eventual girdling that collapses the runner or whole plant. Both diseases can leave a dry, shredded or split stem and are commonly lumped together as \"sudden wilt\" or \"vine decline.\"",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What weather and soil conditions preceded symptom onset?",
+        "a_signal": "Symptoms erupt under hot (28-35C), dry, drought-stressed conditions and sandy/water-stressed soils; disease worsens with heat and water deficit at fruit load.",
+        "b_signal": "Symptoms favor warm but WET, humid, rainy/overhead-irrigated conditions with prolonged leaf and stem wetness; disease worsens after rain and in dense canopies.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant do lesions concentrate?",
+        "a_signal": "Concentrated at the crown, lower stem and taproot near the soil line; root and crown rot dominate with internal vascular/cortex colonization.",
+        "b_signal": "Lesions appear on stems at nodes/wounds AND aerial parts including leaves (V-shaped marginal blights) and fruit (black rot); not confined to the crown.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Does the stem lesion ooze a gum, and what does internal tissue look like?",
+        "a_signal": "No true gumming; lesion is dry, tissues shred and the stem pith/cortex turns ashy gray-black as it dries (dry charcoal rot).",
+        "b_signal": "Stem canker exudes characteristic amber/reddish-brown GUMMY droplets ('gummy stem'); lesion stays moist and oozes.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does wilting progress through the day and over time?",
+        "a_signal": "Rapid, often irreversible wilt that intensifies during heat of the day as the colonized vascular system fails; collapse near maturity.",
+        "b_signal": "More gradual canker enlargement and girdling; wilt follows stem girdling rather than acute vascular collapse, and can advance steadily after wet spells.",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens or low-power microscope, what fruiting structures are embedded in the lesion?",
+        "a_signal": "Tiny, smooth, jet-black MICROSCLEROTIA (uniform pepper-grain bodies) peppering gray stem and root tissue; no cellular pycnidia, no spore ooze.",
+        "b_signal": "Dark PYCNIDIA (flask-shaped fruiting bodies with ostioles) embedded in tan tissue, exuding cream-to-amber spore tendrils (cirrhi) when wet.",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Charcoal rot of melon is caused by the soilborne fungus Macrophomina phaseolina. It is fundamentally a hot-and-dry, stress-driven disease: infection establishes early but symptoms explode when plants are loaded with fruit and pushed by high soil temperatures and drought. The pathogen colonizes the taproot and crown, plugging the vascular system and causing rapid wilt and collapse, often right as the crop nears harvest. The diagnostic hallmark is the ashy-gray internal tissue of the lower stem and root studded with countless tiny, uniform, jet-black microsclerotia, which give the rot its \"charcoal\" name. There is no gumming and no spore ooze.",
+    "narrative_b": "Gummy stem blight (black rot on fruit) is caused by Stagonosporopsis cucurbitacearum (formerly Didymella bryoniae). Unlike charcoal rot, it is a wet-weather, splash-and-canopy disease that attacks leaves, stems, and fruit. Stem cankers at nodes or wounds characteristically exude amber-to-reddish gummy droplets, and leaves show tan V-shaped marginal blights that often begin at the margin. The decisive sign is the presence of dark pycnidia embedded in the lesions; when moist, these flask-shaped bodies extrude cream-to-amber spore tendrils. The same fungus causes black rot of harvested fruit in storage, distinguishing it from the strictly crown/root-centered charcoal rot.",
+    "management_a": "Manage stress: maintain adequate, uniform soil moisture during fruit load to avoid drought triggers, and avoid over-fertilization that increases plant load. Rotate away from other Macrophomina hosts (the fungus has a very broad host range, so rotation value is limited), incorporate residue, and consider deeper irrigation and shading practices to lower soil temperature. There are no highly effective rescue fungicides once vascular colonization occurs; use tolerant cultivars and good water management as the primary tools. Solarization and reducing microsclerotia inoculum in heavily infested fields can help over time.",
+    "management_b": "Use pathogen-free seed and transplants (seedborne), since seedling infection seeds field outbreaks. Rotate 2-3 years out of cucurbits, bury crop debris, improve air circulation with proper spacing, and avoid overhead irrigation/extended leaf wetness. Apply protectant and systemic fungicides on a preventive schedule during warm, wet periods, rotating FRAC groups to manage resistance (the pathogen is prone to QoI/SDHI resistance). Protect fruit and harvest dry to prevent post-harvest black rot; sanitize storage.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Around the time the melons started setting fruit and the weather turned hot, my vines began wilting and dying back, with the whole runner sometimes collapsing. Down near the soil line and at the joints I'm seeing tan-to-brown sunken patches on the stems with dark speckling, and the stems dry out, split, and shred where they girdle.",
+      "decisive_lay_a": "Look for a fine, even peppering of tiny, smooth, pure-black specks (like ground pepper grains) scattered through the grayish stem and root tissue, with no ooze coming out.",
+      "decisive_lay_b": "Look for dark pinhead-sized bumps embedded in the tan stem patches that, when wet, push out cream-to-amber threads or ooze of spore goo.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

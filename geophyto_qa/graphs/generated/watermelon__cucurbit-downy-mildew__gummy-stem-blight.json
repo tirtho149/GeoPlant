@@ -1,0 +1,70 @@
+{
+  "pair_id": "watermelon__cucurbit-downy-mildew__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-irregular necrotic leaf lesions on watermelon foliage that can co-occur and are routinely confused at a distance, especially mid-season during humid weather. They diverge sharply on three observable points: downy mildew is strictly a foliar pathogen showing a grayish-purple sporulation mat on the LOWER leaf surface and never colonizes the stem/crown, whereas gummy stem blight attacks stems and crowns producing the diagnostic gummy amber-brown exudate and black pycnidia/perithecia embedded in tissue. Flipping the leaf for sign vector, and inspecting the stem/crown for cankers and ooze, resolves the pair.",
+    "shared_presentation": "Mid- to late-season watermelon plants with chlorotic-to-necrotic angular or irregular leaf lesions, leaf yellowing and blighting that can rapidly defoliate the canopy under warm, humid, wet conditions, leading to sunscald of exposed fruit and yield loss.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are symptoms confined to leaves, or do stems and the crown also show lesions and cankers?",
+        "a_signal": "Symptoms restricted to leaf blades; petioles, stems, and crown remain healthy and asymptomatic",
+        "b_signal": "Stems, vines, and crown develop water-soaked-to-tan elongated cankers in addition to leaf spotting; girdling vine dieback common",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and boundary of the leaf lesions?",
+        "a_signal": "Chlorotic angular lesions sharply delimited by leaf veins, often yellow then necrotic, giving a vein-bounded blocky pattern",
+        "b_signal": "Irregular tan-to-brown circular spots, often starting at leaf margins, with concentric zonation and a chlorotic halo, not strictly vein-limited",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When the leaf is flipped, what sign appears on the underside of lesions in humid conditions?",
+        "a_signal": "A downy grayish-purple to dark fuzzy sporulation mat (sporangiophores) coats the lower lesion surface under leaf wetness/high humidity",
+        "b_signal": "No downy growth; instead tiny black specks (pycnidia) are embedded within necrotic leaf tissue, visible on either surface with a hand lens",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Does the stem ooze when cankered, and what fruiting bodies are present?",
+        "a_signal": "No stem involvement and no exudate; pathogen produces only foliar sporangia, never stem cankers or ooze",
+        "b_signal": "Stem/crown cankers exude an amber-to-reddish-brown gummy bead and bear black pycnidia and perithecia in the bark",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease move through the field and plant?",
+        "a_signal": "Spreads as a fast foliar epidemic via airborne sporangia from south to north on humid wind currents; pure leaf blight",
+        "b_signal": "Progresses from leaf and stem infections to crown/vine girdling and can cause black rot of fruit in storage",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather and inoculum conditions favor the disease?",
+        "a_signal": "Favored by cool-to-moderate temperatures with prolonged leaf wetness, dew, and overcast humid days; obligate parasite needing living tissue and seasonal aerial inoculum",
+        "b_signal": "Favored by warm wet weather; survives in crop debris and on/in seed, so reappears in fields with cucurbit residue regardless of regional aerial spread",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Cucurbit downy mildew, caused by the obligate oomycete Pseudoperonospora cubensis, is a purely foliar disease. On watermelon it produces chlorotic angular lesions bounded by the leaf veins; under humid, dewy conditions the undersides of these lesions develop a characteristic grayish-purple to dark downy sporulation. It spreads explosively via airborne sporangia and can defoliate a canopy within days, but it never infects stems, crowns, or fruit. Because the pathogen does not overwinter in most of the US, epidemics depend on annual aerial introduction of inoculum tracked by forecasting networks.",
+    "narrative_b": "Gummy stem blight, caused by Stagonosporopsis cucurbitacearum (anamorph Phoma/Didymella), is a foliar AND stem/crown disease whose foliar phase mimics downy mildew. Leaf spots are irregular, often marginal, tan-brown with concentric rings and a chlorotic halo, and bear tiny black pycnidia rather than downy growth. The diagnostic feature is on the stem and crown: elongated water-soaked cankers that exude an amber-to-reddish-brown gummy ooze and become studded with black pycnidia and perithecia. The fruit-rotting phase is called black rot. The fungus is seedborne and survives in crop debris, so it recurs where cucurbit residue persists.",
+    "management_a": "Use disease forecasting (cucurbit downy mildew ipmPIPE alerts) to time protectant and oomycete-specific fungicides (e.g., cyazofamid, mandipropamid, oxathiapiprolin, fluopicolide) before predicted arrival; rotate FRAC groups to avoid resistance. Improve air movement and reduce leaf wetness duration; orient rows with prevailing wind; avoid overhead irrigation late in the day. Plant tolerant cultivars where available and scout lower leaf surfaces during humid spells.",
+    "management_b": "Plant pathogen-free, treated seed and rotate out of cucurbits for 2-3 years to deplete debris-borne inoculum; bury or destroy crop residue. Avoid plant wounding and manage in warm wet periods with protectant plus systemic fungicides (e.g., FRAC 7/11 combinations, fluxapyroxad, tebuconazole, chlorothalonil) on a preventive schedule, rotating modes of action since the pathogen develops resistance readily. Improve drainage and airflow, avoid overhead irrigation, and steer clear of working fields when foliage is wet.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My watermelon vines are turning yellow and brown in patches, with angular and irregular dead spots all over the leaves. It's spreading fast in this warm, wet, muggy weather, and whole sections of the canopy are browning out and dying back, leaving the fruit exposed to the sun.",
+      "decisive_lay_a": "Flip the leaf over and look at the underside of the spots first thing in the morning when there's dew or after a humid night. You'll see a downy, fuzzy gray-to-purplish or dark moldy coating growing right on the bottom surface under the yellow patches.",
+      "decisive_lay_b": "No fuzzy growth at all. Instead, look closely at the dead brown tissue and you'll see lots of tiny black specks or dots peppered right in the dead spots, on either the top or bottom of the leaf. You'll likely need a hand lens to see them clearly.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pair_id": "grape__black-rot__gray-mold",
+  "kind": "disease",
+  "crop": "Grape",
+  "member_a_label": "Black Rot",
+  "member_b_label": "Gray Mold",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both rot grape berries during the season and can produce shriveled, mummified fruit, so a quick glance at a cluster with rotting and dried berries can be ambiguous. The decisive separators are the sign vector (Black Rot's hard, pycnidia-studded black mummy vs Gray Mold's fuzzy gray sporulation) and the symptom history on leaves, which often go overlooked.",
+    "shared_presentation": "Both diseases attack ripening grape clusters, cause berries to brown and rot, and ultimately leave shriveled, dried-out (mummified) berries on the rachis. Each thrives in wet, humid conditions and can devastate a cluster, so an isolated view of rotting/dried berries late in the season is easily confused.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are diagnostic leaf lesions present earlier in the season, and what do they look like?",
+        "a_signal": "Black Rot produces distinct circular tan-to-reddish-brown leaf spots (3-6 mm) with a dark margin, peppered with tiny black pycnidia in the center; lesions appear on leaves, shoots, and tendrils well before fruit symptoms.",
+        "b_signal": "Gray Mold rarely makes characteristic foliar spots; it shows up mainly as blossom blight and fruit/cluster rot, sometimes brown necrotic leaf blotches under prolonged wetness but no pycnidia.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How and when does the fruit rot begin and spread through the cluster?",
+        "a_signal": "Black Rot berries develop a small whitish/tan spot that rapidly browns, then the whole berry shrivels into a hard mummy; infection is most severe from bloom through veraison and individual berries rot in place.",
+        "b_signal": "Gray Mold often starts at wounds, bloom debris, or berry-to-berry contact in tight clusters near/after veraison and spreads rapidly through the cluster as a soft, watery 'bunch rot.'",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is the rot hard and dry or soft and collapsing?",
+        "a_signal": "Black Rot berries become hard, firm, and dry as they mummify, retaining a wrinkled but rigid shape.",
+        "b_signal": "Gray Mold berries turn soft, watery, and collapse, with skin slipping; the cluster becomes a slimy, decaying mass before drying.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and timing favor the outbreak?",
+        "a_signal": "Black Rot is favored by warm (around 80F), wet spring/early-summer weather during the susceptible bloom-to-veraison window; overwintered mummies are the inoculum source.",
+        "b_signal": "Gray Mold is favored by cool, humid, rainy conditions especially at bloom and again as fruit ripens, and worsens with dense canopies and tight clusters.",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the surface of an affected/mummified berry closely (hand lens): what pathogen structures are present?",
+        "a_signal": "Black Rot mummies are hard, black, and coal-like, densely studded with raised black pycnidia (and later pseudothecia); no fuzzy growth.",
+        "b_signal": "Gray Mold berries are covered with a conspicuous powdery/fuzzy gray-brown mat of mycelium and conidiophores ('gray mold') that puffs into dust when disturbed.",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Black Rot (Phyllosticta ampelicida, syn. Guignardia bidwellii) is one of the most destructive grape diseases in the warm, humid eastern and midwestern US. It overwinters in mummified berries and lesions on the vine and forces. Spring rains release spores that infect young leaves, shoots, tendrils, and fruit. Leaves show circular tan lesions ringed by a dark border and dotted with black pycnidia. The most damaging phase is fruit infection from bloom through veraison: berries develop a pale spot, rot, and then shrivel into hard, black, pycnidia-covered mummies that cling to the cluster. The disease is essentially a dry rot, and its hard, coal-like mummies are the hallmark.",
+    "narrative_b": "Gray Mold (Botrytis cinerea) is a cosmopolitan, broad-host-range pathogen that causes blossom blight and bunch rot of grapes worldwide. It favors cool, wet, humid conditions and exploits wounds, senescing bloom tissue, and the microclimate of tight, dense clusters. Infections often initiate at bloom (latent) and flare as berries ripen and sugars rise, causing a soft, watery rot that spreads rapidly berry-to-berry. The signature sign is a fuzzy gray-brown mat of sporulation on rotting berries. In certain wine grapes under the right drying conditions it can become 'noble rot' (botrytized wine), but in most settings it is a serious cause of pre- and post-harvest loss.",
+    "management_a": "Sanitation is foundational: remove and destroy mummified berries and infected canes during dormant pruning to reduce overwintering inoculum. Maintain an open canopy for airflow and faster drying. Apply protectant and systemic fungicides on a schedule targeting the critical window from immediate pre-bloom through 4-6 weeks after bloom (early shoot growth to veraison); effective materials include mancozeb, captan, and sterol-inhibitor (DMI) and strobilurin (QoI) fungicides, rotating modes of action to manage resistance. Choose less-susceptible cultivars where black rot pressure is high.",
+    "management_b": "Reduce humidity and free moisture in the fruit zone through canopy management, leaf pulling around clusters, shoot thinning, and good row orientation/airflow. Avoid excess nitrogen and overly tight clusters; select looser-clustered cultivars where feasible. Minimize berry injury (insects, birds, powdery mildew cracking) since wounds are entry points. Apply Botrytis-specific fungicides at key timings (bloom, pre-bunch-closure, veraison, pre-harvest), rotating among distinct FRAC groups (e.g., fenhexamid, fludioxonil, boscalid/SDHIs, anilinopyrimidines) because Botrytis develops resistance readily. Promptly harvest and cull infected clusters.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "Late in the season my ripening grape clusters are turning brown and rotting, and a lot of the berries are shriveling up into hard, dried-out raisins still hanging on the stem. It got bad fast during all the warm, wet, humid weather we've had, and it's wiping out whole clusters.",
+      "decisive_lay_a": "Look for berries that dry down into hard, coal-black, shriveled \"mummies\" that feel rough and bumpy, like they're studded all over with tiny raised black pimples or specks. There is NO fuzz or powder on them at all, just a hard black crusty surface.",
+      "decisive_lay_b": "Look for a thick powdery, fuzzy gray-brown coating or mat covering the rotting berries, like dusty mold. If you tap or disturb it, it puffs up into a cloud of dust.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

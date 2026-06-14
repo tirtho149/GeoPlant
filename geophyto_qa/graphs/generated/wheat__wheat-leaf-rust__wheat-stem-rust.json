@@ -1,0 +1,70 @@
+{
+  "pair_id": "wheat__wheat-leaf-rust__wheat-stem-rust",
+  "kind": "disease",
+  "crop": "Wheat",
+  "member_a_label": "Wheat Leaf Rust",
+  "member_b_label": "Wheat Stem Rust",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are Puccinia rusts producing reddish-orange uredinial pustules on wheat during the growing season, and growers often lump them as \"rust.\" They are most confused at the early uredinial stage before the diagnostic differences in plant part, pustule size/shape, and epidermal rupture become obvious.",
+    "shared_presentation": "Reddish-brown to orange powdery uredinial pustules erupting through the epidermis of green wheat tissue, releasing rust-colored urediniospores that rub off on fingers/clothing. Both occur in spring through early summer, favor moist conditions and dew, and later in the season can form dark brown to black telia. Both can cause yield loss and appear during heading.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant are the pustules concentrated?",
+        "a_signal": "Pustules predominantly on the upper leaf blade surface; sheaths and stems largely spared",
+        "b_signal": "Pustules concentrated on stems, leaf sheaths, and peduncles (and can occur on glumes/awns), not just leaf blades",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the size, shape, and arrangement of the pustules?",
+        "a_signal": "Small, round to oval, orange-brown pustules scattered randomly, mostly on the leaf surface",
+        "b_signal": "Larger, elongated, oval to diamond-shaped brick-red pustules, often merging into streaks along the stem",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "How does the pustule interact with the leaf/stem epidermis?",
+        "a_signal": "Epidermis ruptures modestly; spore mass stays relatively contained within the small pustule",
+        "b_signal": "Epidermis is torn back conspicuously in ragged flaps around the pustule, giving a rough, shredded feel to the stem",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is the underside of the leaf affected opposite the pustule?",
+        "a_signal": "Pustules mostly on upper surface; little or no corresponding pustule directly through to the lower surface",
+        "b_signal": "Pustules erupt completely through the tissue so the same lesion shows on both sides of leaf/sheath",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "As the crop matures, where do dark black telia form?",
+        "a_signal": "Black telia form mainly on lower leaf surfaces and sheaths",
+        "b_signal": "Abundant black, hard, elongated telia form on stems and sheaths, blackening the straw",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature regime favored the outbreak?",
+        "a_signal": "Developed under cooler, moderate spring temperatures (optimum ~15-22 C)",
+        "b_signal": "Accelerated under warmer conditions (optimum ~25-30 C), often a later-season explosive flare",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Wheat leaf rust (Puccinia recondita f. sp. tritici) produces small, round, orange-brown uredinial pustules scattered chiefly on the upper surface of leaf blades, with comparatively little involvement of stems or sheaths. Epidermal rupture is modest and the pustules remain discrete. It is the most common and widespread wheat rust in the US, developing under cool to moderate spring temperatures. Yield loss comes from reduced green leaf area and impaired grain fill rather than the dramatic lodging seen with stem rust.",
+    "narrative_b": "Wheat stem rust (Puccinia graminis f. sp. tritici) produces larger, elongated, brick-red to dark reddish-brown pustules concentrated on stems, leaf sheaths, peduncles, glumes, and awns. The pustules tear the epidermis back in ragged flaps, giving the stem a rough, shredded texture, and erupt through both tissue surfaces. It favors warmer temperatures and can flare explosively late in the season, weakening stems and causing lodging and shriveled grain. Though historically devastating and now uncommon in much of the US due to barberry eradication and resistant cultivars, it remains a high-consequence threat (e.g., Ug99 race group concerns).",
+    "management_a": "Plant resistant or moderately resistant cultivars; scout flag leaves from heading onward. Apply foliar triazole/strobilurin fungicides at flag-leaf emergence to early heading when pustules appear on upper leaves and conditions favor spread. Avoid excessive nitrogen and volunteer wheat that serve as green bridges. Track regional rust forecasts and spore-trap/sentinel-plot reports.",
+    "management_b": "Plant resistant cultivars (the primary defense) and monitor for the introduction of virulent races such as the Ug99 lineage. Eliminate nearby common barberry (the alternate/sexual host) to reduce inoculum and new races. Scout stems and sheaths during stem elongation through grain fill; apply effective fungicides promptly if pustules are detected, since stem rust can intensify rapidly. Destroy volunteer wheat and report suspected outbreaks to extension/regulatory authorities.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My wheat has reddish-brown to orange powdery bumps breaking out of the green tissue, and the rusty dust rubs off orange on my fingers and clothes. It showed up in late spring around heading when we had heavy dew and moist weather.",
+      "decisive_lay_a": "The rusty bumps are mostly on the top side of the leaf blades, and the stems and the leaf wrappers around the stem are mostly clean.",
+      "decisive_lay_b": "The rusty bumps are clustered on the stems, on the leaf wrappers around the stem, and on the stalk just below the head (and sometimes on the head's husks and whiskers), not just on the leaf blades.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

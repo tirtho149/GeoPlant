@@ -1,0 +1,63 @@
+{
+  "pair_id": "soybean__bacterial-blight__bacterial-pustule-of-soybean-disease",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bacterial Blight",
+  "member_b_label": "Bacterial Pustule Of Soybean Disease",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small angular-to-irregular foliar lesions on soybean leaves with chlorotic halos and can occur together in the field, so early lesions are easily confused; they differ decisively in the presence of a raised pustule and in their favoring temperature/moisture regimes.",
+    "shared_presentation": "Small water-soaked to angular leaf spots on soybean foliage, often with yellow-green chlorotic halos, that enlarge and coalesce; lesion centers turn brown and may tear/drop out giving a ragged, tattered leaf appearance. Both are bacterial, seedborne, splash-dispersed, favored by wet conditions, and concentrate on upper/younger leaves.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Examine the lower (abaxial) leaf surface within the lesion under a hand lens: is there a small raised, blister-like pustule at the lesion center?",
+        "a_signal": "No pustule; lesion is flat, water-soaked, angular, often with a translucent margin and a visible bacterial exudate that dries shiny",
+        "b_signal": "A small raised pale/tan pustule (erumpent volcano-like blister) present in the center of the spot on the underside of the leaf",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature regime preceded symptom onset?",
+        "a_signal": "Cool, wet weather (roughly 75-80F / 24-27C), often after storms in early-mid season",
+        "b_signal": "Warm to hot, humid weather (roughly 85-90F / 30-33C), typically mid-to-late summer",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and margin of individual lesions?",
+        "a_signal": "Angular spots bounded by leaf veins, water-soaked margin, dark brown to black necrotic center surrounded by a yellowish zone",
+        "b_signal": "Smaller, more rounded to irregular spots with a raised center; reddish-brown specks that develop the pustule",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do older lesions evolve on the leaf?",
+        "a_signal": "Necrotic centers dry, fall out and tear, giving a shot-hole/ragged tattered look; large dead blighted areas coalesce",
+        "b_signal": "Pustules enlarge and may crack; lesions stay smaller, centers less likely to drop out, more numerous scattered spots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are pods and seeds visibly affected?",
+        "a_signal": "Pods can show water-soaked lesions; less commonly raised",
+        "b_signal": "Pod lesions may also bear small raised pustules; seed can be discolored",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial blight, caused by Pseudomonas savastanoi pv. glycinea, is the most common soybean bacterial disease and is favored by cool, wet weather. It produces angular, water-soaked spots delimited by leaf veins, with dark brown-to-black necrotic centers ringed by a yellow halo. Lesions are flat (never raised into a pustule), and a bacterial ooze may dry to a shiny film. As lesions coalesce and necrotic centers fall out, leaves take on a ragged, shot-hole appearance. It is splash- and wind-driven, worsened by storms that wound tissue, and spreads on the upper younger canopy.",
+    "narrative_b": "Bacterial pustule, caused by Xanthomonas axonopodis pv. glycines (X. citri pv. glycines), is favored by hot, humid conditions later in the season. Its defining sign is a small raised pustule (a blister-like erumpent structure) at the center of each spot, most evident on the lower leaf surface. Lesions begin as small pale-green specks that develop reddish-brown raised centers; they are typically smaller and more numerous than blight lesions, with less halo. The pustule distinguishes it from blight and from rust (rust pustules contain orange spores; bacterial pustules do not). Resistant cultivars (Rxp gene) are widely deployed.",
+    "management_a": "Plant pathogen-free/treated seed and resistant varieties; rotate away from soybean (2-year) and incorporate residue to reduce inoculum; avoid working fields when foliage is wet to limit mechanical spread. Bactericides (copper) give limited benefit and are rarely economical; emphasis is on resistant cultivars and cultural practices. Disease often plateaus when hot/dry weather arrives.",
+    "management_b": "Use resistant cultivars (Rxp resistance gene is the primary control), pathogen-free seed, crop rotation, and residue management; avoid overhead/wet-canopy field operations. Copper-based bactericides offer marginal suppression and are seldom warranted. Because it favors heat, the disease is more aggressive in southern production areas and warm humid spells.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My soybeans have small water-soaked spots on the upper, younger leaves with yellow-green halos around them. The spots are starting to run together and turn brown in the middle, and some centers have torn out leaving the leaves looking ragged and full of holes. It's been wet, and it seems to be spreading.",
+      "decisive_lay_a": "The spots stay flat with no bump in the middle. They look soaked and water-stained with a clear, see-through edge, and you may see a shiny dried film where bacteria oozed out.",
+      "decisive_lay_b": "Look at the underside of the leaf in the center of each spot for a tiny raised pale or tan bump, like a little volcano-shaped blister poking up.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

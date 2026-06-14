@@ -1,0 +1,70 @@
+{
+  "pair_id": "melon__cucurbit-downy-mildew__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-irregular chlorotic and necrotic foliar lesions on melon that can blight large areas of the canopy, and both can rapidly defoliate a planting under warm humid conditions. Early foliar symptoms (yellowing patches bounded by veins, browning, leaf collapse) overlap enough that growers and scouts frequently confuse them until the diagnostic signs (sporulation vs. pycnidia/stem cankers) are examined.",
+    "shared_presentation": "Yellow to brown angular or irregular leaf lesions, progressive leaf necrosis and canopy blighting, and decline of vining melon plants during warm, humid, wet weather; both spread quickly across a field and can defoliate plants, exposing fruit to sunscald.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the primary damage concentrated: foliage only, or stems and crown as well?",
+        "a_signal": "Damage is essentially confined to leaves (foliar blighting); stems, petioles, and crown remain healthy",
+        "b_signal": "Damage involves stems and crown with cankers and dieback in addition to leaf and fruit lesions",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and boundary of the foliar lesions?",
+        "a_signal": "Sharply angular chlorotic-then-necrotic lesions strictly delimited by leaf veins, giving a blocky mosaic appearance",
+        "b_signal": "Roundish to irregular tan-brown lesions, often starting at the leaf margin or as water-soaked spots, not strictly vein-bounded",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaf and examine the underside of a fresh lesion with a hand lens under humid conditions: what fungal sign is present?",
+        "a_signal": "Fine downy grayish-to-purple sporulation (sporangiophores) on the lower leaf surface within the angular lesion",
+        "b_signal": "No downy growth; instead small dark pinpoint pycnidia (and sometimes oozing tendrils) embedded in tan lesions and especially in stem cankers",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Examine the stem/crown: are there cankers exuding gum?",
+        "a_signal": "Stems are clean with no cankers or gummy exudate",
+        "b_signal": "Water-soaked to brown stem cankers, often at nodes or crown, exuding amber to reddish-brown gummy ooze",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the blight progress through the canopy and season?",
+        "a_signal": "Rapid foliar collapse spreading on prevailing winds, often moving north as the season advances from overwintering southern inoculum",
+        "b_signal": "Slower buildup tied to crop debris, seed, and prolonged leaf wetness; vine and crown collapse leads to whole-plant wilt",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What moisture and temperature conditions precede outbreaks?",
+        "a_signal": "Cool-to-moderate temperatures with extended leaf wetness, dew, and high humidity favor explosive foliar epidemics",
+        "b_signal": "Warm, wet weather with overhead irrigation, dense canopy, and infected debris/seed favor stem and fruit infection",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Cucurbit downy mildew (Pseudoperonospora cubensis) is an obligate oomycete that attacks melon foliage. It produces sharply angular chlorotic lesions bounded by the leaf veins, which turn necrotic and coalesce to blight and kill leaves while stems and fruit stay symptomless. The diagnostic sign is delicate grayish-to-purple downy sporulation on the underside of lesions under humid conditions. Because the pathogen cannot overwinter where cucurbits freeze out, it survives in the southern US and on greenhouse/year-round hosts and is re-introduced annually via airborne sporangia, producing fast-moving regional epidemics tracked by forecasting networks.",
+    "narrative_b": "Gummy stem blight (Stagonosporopsis cucurbitacearum, anamorph Phoma/Didymella) is a true fungus causing a three-part disease on melon: leaf spots, stem cankers, and fruit rot (black rot). Leaf lesions are roundish to irregular, often beginning at margins as water-soaked spots that dry tan-brown, frequently dotted with tiny black pycnidia. The defining feature is water-soaked to brown stem and crown cankers that exude amber-to-reddish gummy ooze, leading to vine wilt and plant death. It is seedborne and survives in crop debris, so it builds within and between fields wherever cucurbits are grown.",
+    "management_a": "Use downy mildew forecasting alerts (e.g., cucurbit DM ipmPIPE) to time sprays ahead of arrival; apply oomycete-targeted fungicides (e.g., cyazofamid, oxathiapiprolin, mandipropamid, fluopicolide) rotated by FRAC group, since the pathogen has broad resistance; favor airflow with wider spacing and avoid prolonged leaf wetness; choose tolerant cultivars where available. Phosphonates and chlorothalonil/mancozeb serve as protectant partners.",
+    "management_b": "Start with pathogen-free or treated seed and transplants; rotate at least 2 years out of cucurbits; bury or destroy crop debris; avoid overhead irrigation and reduce canopy wetness. Apply protectant plus systemic fungicides (chlorothalonil, mancozeb, tebuconazole/difenoconazole, fluxapyroxad-pyraclostrobin, boscalid) rotated by FRAC group, beginning early since stem cankers are hard to cure once established. Promptly remove infected vines.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My melon vines are getting yellow-to-brown angular and irregular blotches on the leaves that keep spreading fast in this warm, wet, humid stretch. Whole leaves are browning and dying back, the canopy is thinning out, and the plants are going downhill, which is starting to leave the fruit exposed to sunburn.",
+      "decisive_lay_a": "Flip a spotted leaf over and look at the underside of the blotches early in the morning: you'll see a fine fuzzy gray-to-purplish coating sitting right under the yellow patches.",
+      "decisive_lay_b": "No fuzzy growth on the underside. Instead, look for tiny black pinpoint dots peppered in the tan dead spots and especially in cracked, gummy cankers on the stems, sometimes with amber ooze.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pair_id": "strawberry__anthracnose__gray-mold",
+  "kind": "disease",
+  "crop": "Strawberry",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Gray Mold",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause sunken, firm-to-soft fruit rot on ripening and ripe strawberries under warm, wet/humid conditions, and both can collapse flowers and produce post-harvest rot. Early lesions on fruit look alike (water-soaked to brown, depressed) before the pathogen sporulates, so growers routinely confuse them until signs develop.",
+    "shared_presentation": "Soft-to-firm rotting of flowers and ripening/ripe fruit with sunken, discolored lesions that expand rapidly in warm humid weather; both can cause blossom blight, fruit mummification, and rapid post-harvest losses, and both spread by splashing rain/overhead irrigation and handling.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Which tissues show the primary damage?",
+        "a_signal": "Lesions on fruit, plus dark sunken cankers/lesions on petioles, runners (stolons), and crowns; can cause crown rot and whole-plant wilt",
+        "b_signal": "Damage concentrated on flowers (blossom blight) and fruit, especially fruit contacting soil, mulch, or other rotting berries; vegetative stems rarely cankered",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and shape of the fruit lesion?",
+        "a_signal": "Firm, sharply sunken, round, water-soaked-to-dark-brown lesion with a defined margin; fruit stays relatively firm as it dries to a hard mummy",
+        "b_signal": "Soft, watery, light-brown rot that spreads diffusely with no sharp margin; tissue stays mushy then dries to a gray mummy",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather/temperature accompanied the outbreak?",
+        "a_signal": "Favored by warm temperatures (about 77-86\u00b0F / 25-30\u00b0C) with rain or overhead irrigation; worse in hot wet summers",
+        "b_signal": "Favored by cool-to-moderate, wet, humid conditions (about 65-75\u00b0F / 18-24\u00b0C); prolonged leaf/flower wetness and dense canopies, common in cool wet springs",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the rot behave in storage/handling?",
+        "a_signal": "Lesion remains firm and discrete; nesting (berry-to-berry spread) is limited compared to Botrytis",
+        "b_signal": "Rapid berry-to-berry nesting in clamshells/storage; one infected berry rots adjacent berries quickly via gray fuzz",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When the lesion sporulates, what does the spore mass look like (hand lens/incubate in moist chamber)?",
+        "a_signal": "Salmon-pink to orange, gelatinous/slimy spore masses (acervuli), sometimes with dark setae; never gray fuzz",
+        "b_signal": "Abundant gray-to-tan fuzzy mold (mycelium with grape-like conidial clusters); no pink slime",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Anthracnose (Colletotrichum acutatum/gloeosporioides/fragariae) attacks multiple tissues: it produces firm, sharply sunken, round dark-brown fruit lesions, dark elongated cankers/lesions on petioles, runners and stolons, and can cause a lethal crown rot with internal reddish-brown discoloration leading to plant collapse. It is driven by warm (25-30\u00b0C) wet weather and splashing water. The diagnostic sign is salmon-pink to orange, slimy spore masses oozing from acervuli within the lesion, often visible after incubation in a moist chamber.",
+    "narrative_b": "Gray Mold (Botrytis cinerea) is primarily a blossom and fruit disease favored by cool, wet, humid conditions and dense canopies with prolonged wetness. Infections often begin at the flower (blossom blight) and move into the developing fruit, or start where fruit touches soil, mulch, or other berries. The rot is soft, watery, and light brown, spreading without a sharp margin and rapidly nesting berry-to-berry in storage. The diagnostic sign is profuse gray-to-tan fuzzy mold covering the rotted tissue.",
+    "management_a": "Use certified disease-free transplants and resistant cultivars; avoid overhead irrigation and reduce leaf wetness; rotate out of strawberry and remove infected crowns/runners and mummified fruit. Apply protectant fungicides (e.g., captan, QoI/strobilurins where not resistant) during warm wet fruiting periods; scout petioles and runners, not just fruit, and rogue symptomatic mother plants in nurseries.",
+    "management_b": "Improve air circulation and canopy openness, use drip rather than overhead irrigation, mulch to keep fruit off soil, and harvest frequently while removing rotted/old blossoms and berries. Time fungicide applications to bloom (the key infection window) using rotated modes of action (e.g., fenhexamid, cyprodinil+fludioxonil, captan), managing resistance carefully; cool and handle fruit promptly post-harvest to limit nesting.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My ripening and ripe berries are developing sunken, dark, rotten spots that spread fast in this warm, humid weather, and some blossoms are dying off too. A lot of the affected fruit shrivels up into hard little mummies, and I'm losing a bunch more after picking, especially where rain or overhead watering splashes the plants.",
+      "decisive_lay_a": "Look for slimy, salmon-pink to orange ooze or goo sitting on top of the sunken rotten spots, sometimes with tiny dark hairs or bristles. There is NO gray fuzz.",
+      "decisive_lay_b": "Look for thick gray-to-tan fuzzy mold (like dusty cobwebs) coating the rotting berry or blossom. There is NO pink slime.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

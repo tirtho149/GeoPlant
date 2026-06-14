@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__early-blight__septoria-leaf-spot",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Early Blight",
+  "member_b_label": "Septoria Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are fungal foliar diseases of tomato that start on the oldest, lowest leaves, cause necrotic leaf spots with yellowing (chlorosis) and progressive defoliation from the bottom up, and frequently co-occur on the same plant during warm, wet mid-season weather. Growers and even trained scouts routinely confuse the small early lesions before diagnostic signs (concentric rings vs. pycnidia) develop.",
+    "shared_presentation": "Lower/older leaves develop brown necrotic spots surrounded by yellow halos, leading to leaf chlorosis and defoliation that advances upward. Both favor warm temperatures, prolonged leaf wetness, overhead irrigation, and crowded canopies, and both overwinter in crop debris. Early-season scouting often shows scattered small dark spots on bottom foliage that look nearly identical.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant do lesions occur, and do they involve stems and fruit?",
+        "a_signal": "Lesions appear on leaves AND stems (dark sunken collar-rot/stem cankers) and fruit (dark leathery spots with concentric rings at the stem end)",
+        "b_signal": "Lesions are essentially restricted to leaves (and sometimes petioles/stems) but rarely if ever infect the fruit",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "How large are individual mature leaf spots and how many per leaflet?",
+        "a_signal": "Fewer, larger spots 6-12+ mm that enlarge and coalesce; angular shape bounded by veins",
+        "b_signal": "Many small, numerous spots 1-3 mm of fairly uniform size peppering the leaflet",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Does the lesion have concentric rings or a pale center?",
+        "a_signal": "Dark concentric rings forming a 'target-board' or bull's-eye pattern within the lesion",
+        "b_signal": "Tan to gray sunken center with a distinct dark brown margin, no target rings",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the lesion center with a hand lens (10-20x): what reproductive structures are present?",
+        "a_signal": "No pinpoint black dots; dark velvety sporulation may be visible but no embedded pycnidia",
+        "b_signal": "Tiny black pinpoint pycnidia (fruiting bodies) embedded in the pale lesion center",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature regime is driving the outbreak?",
+        "a_signal": "Tends to be more aggressive in warm-to-hot conditions (24-29C) and on stressed/older plants",
+        "b_signal": "Favored by moderate warm-wet weather (20-25C) with persistent high humidity/leaf wetness",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Early Blight (Alternaria solani) produces relatively large, dark brown leaf lesions with characteristic concentric rings (target/bull's-eye pattern) often surrounded by a chlorotic halo, beginning on the oldest leaves. Critically, it is not confined to foliage: it causes dark sunken stem cankers (including damping-off and collar rot at the base) and a distinctive dark, leathery, concentric-ringed rot at the stem end of fruit. Severe defoliation exposes fruit to sunscald. Under a hand lens, lesion centers lack the pinpoint black pycnidia of Septoria.",
+    "narrative_b": "Septoria Leaf Spot (Septoria lycopersici) produces numerous small (1-3 mm), circular spots with tan-to-gray sunken centers and dark margins, again starting on the lowest leaves. The hallmark and decisive feature is the presence of tiny black pycnidia embedded in the pale lesion centers, visible with a hand lens. Septoria is almost exclusively a foliar (and occasionally petiole/stem) disease and does not infect fruit, which helps separate it from early blight. Heavy infection causes rapid yellowing and defoliation from the bottom up.",
+    "management_a": "Rotate out of solanaceous crops 2-3 years; remove and destroy infected debris and volunteers; stake/mulch to reduce soil splash; avoid overhead irrigation and water early in the day; maintain plant vigor (adequate N) since stressed plants are more susceptible. Apply protectant fungicides (chlorothalonil, mancozeb) or FRAC-rotated systemics (azoxystrobin, boscalid, difenoconazole) on a preventive schedule, prioritizing protection of stems and fruit. Use resistant/tolerant cultivars where available.",
+    "management_b": "Sanitation is central: remove and destroy infected lower leaves and crop debris (pycnidia overwinter in residue), rotate 2-3 years away from tomato/solanaceous hosts, control solanaceous weeds (nightshade, horsenettle) that harbor the fungus. Use mulch and drip irrigation to limit splash dispersal, improve air circulation by spacing/pruning, and water at the base. Apply protectant fungicides (chlorothalonil, mancozeb, copper) on a 7-10 day preventive interval; rotate FRAC groups for systemics. Start sprays early because spread up the canopy is rapid once established.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My lower, older tomato leaves are getting brown spots with yellow rings around them, and the yellowing is spreading so the bottom leaves are dying off and dropping. It's been warm and the foliage stays wet a lot, and now the damage is creeping up the plant.",
+      "decisive_lay_a": "Look at the brown spots up close: with Early Blight there are NO tiny black pinpoint dots speckled in the center. Instead the spots may have a dark, dusty or velvety look and often show faint dark rings, like a target or bullseye pattern.",
+      "decisive_lay_b": "Look in the pale, tan center of each spot for a sprinkle of very tiny black pinpoint dots, like someone shook ground pepper or poppy seeds onto the spot. These specks are usually too small to see clearly without a hand lens.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "watermelon__cucurbit-downy-mildew__powdery-mildew",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Powdery Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are common foliar diseases of watermelon that begin as chlorotic/yellowing leaf lesions and can rapidly defoliate the canopy, leading growers to confuse early symptoms. They diverge clearly once the diagnostic sign (sporulation color and location) is examined, but the early upper-surface yellowing overlaps.",
+    "shared_presentation": "Yellowing and chlorotic blotching of older/crown leaves that progresses upward through the canopy, leaf curling and eventual necrosis with premature defoliation that exposes fruit to sunburn. Both favor dense canopies and reduce yield, and both first draw attention as patches of off-color foliage.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaf over and examine the lower surface with a hand lens, preferably in the early morning after dew. What growth is present?",
+        "a_signal": "Fine gray-purple-to-black downy/fuzzy sporulation confined to the underside, restricted to angular yellow patches bounded by leaf veins",
+        "b_signal": "White-to-grayish powdery, flour-like fungal growth that can be wiped off, present on BOTH leaf surfaces (and petioles/stems)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the SHAPE of the chlorotic lesions on the upper leaf surface?",
+        "a_signal": "Angular, blocky yellow lesions sharply delimited by leaf veins (vein-limited mosaic pattern)",
+        "b_signal": "Diffuse, rounded yellow blotches or general chlorosis not bounded by veins",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather/moisture conditions preceded the outbreak?",
+        "a_signal": "Cool, wet, humid weather with prolonged leaf wetness, fog, rain, or heavy dew",
+        "b_signal": "Warm, dry conditions with high humidity but little leaf wetness; common in late-season dense canopies",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant does the visible fungal growth concentrate?",
+        "a_signal": "Almost exclusively the lower (abaxial) leaf surface; rarely on stems or petioles",
+        "b_signal": "Upper and lower leaf surfaces plus petioles and stems",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease appear and move through a field over a season?",
+        "a_signal": "Often arrives suddenly via airborne sporangia blown north on storm fronts; spreads explosively once present",
+        "b_signal": "Builds gradually from local inoculum within the canopy, worsening as plants mature and canopy closes",
+        "weight": "weak"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under magnification, what is the color and form of the spore-bearing structures?",
+        "a_signal": "Dark, dichotomously branched sporangiophores bearing lemon-shaped sporangia, giving a dingy gray-violet down",
+        "b_signal": "Hyaline chains of barrel-shaped conidia on erect conidiophores giving a bright white powdery mat",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Cucurbit downy mildew (Pseudoperonospora cubensis) is an obligate oomycete that produces angular, vein-limited yellow lesions on the upper leaf surface. The defining sign is fine gray to purplish-black downy sporulation on the LOWER leaf surface, visible especially in early morning under humid conditions. It requires cool, wet weather and prolonged leaf wetness, and in the US it characteristically arrives as airborne sporangia carried northward on weather systems from overwintering southern sources, then spreads explosively and can defoliate a field within days.",
+    "narrative_b": "Powdery mildew (Podosphaera xanthii / fuliginea) is a true fungus producing white-to-grayish powdery, flour-like colonies on BOTH leaf surfaces as well as petioles and stems. The powdery growth can be wiped off, distinguishing it from downy mildew's embedded down. It thrives in warm, dry conditions with high humidity but does not require leaf wetness, and it intensifies in dense, mature canopies late in the season, causing chlorosis, premature senescence, and reduced fruit quality from sunscald and poor sugar accumulation.",
+    "management_a": "Use forecasting networks (e.g., the Cucurbit Downy Mildew ipmPIPE/forecast) to time the first sprays at regional arrival. Apply targeted oomycete-specific fungicides (cyazofamid, oxathiapiprolin, mandipropamid, fluopicolide, propamocarb) tank-mixed with a protectant (chlorothalonil/mancozeb), rotate FRAC groups to avoid resistance, improve air movement, and plant tolerant cultivars where available. Standard powdery-mildew DMI fungicides do not control it.",
+    "management_b": "Begin protectant programs at first sign or when canopy closes; use FRAC-rotated systemics effective on true fungi (DMIs such as myclobutanil/difenoconazole, SDHIs like boscalid/fluopyram, quinoxyfen, and biologicals/sulfur or potassium bicarbonate). Resistance management is critical given widespread DMI/QoI resistance in P. xanthii. Plant resistant cultivars, scout lower leaves and crown, and maintain open canopies.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "The older leaves down in the crown of the vines are turning yellow and getting blotchy, and it's creeping up into the newer growth toward the top of the canopy. The leaves are starting to curl, brown out, and drop off, and where the vines have thinned out the melons are getting scalded by the sun. It hit hardest in the thick, dense parts of the field, and I'm worried it's going to cut my yield.",
+      "decisive_lay_a": "Flip the yellow leaves over and look at the underside: you'll see a fine fuzzy or downy gray-to-purplish-black growth, and it stays only inside the angular yellow patches that are boxed in by the leaf veins (giving them a blocky, vein-bordered shape).",
+      "decisive_lay_b": "A white-to-grayish powdery, flour-like coating that you can rub or wipe off with your finger, showing up on BOTH the top and bottom of the leaves as well as on the leaf stems and vines.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "highbush-blueberry__mummy-berry__twig-canker",
+  "kind": "disease",
+  "crop": "Highbush Blueberry",
+  "member_a_label": "Mummy Berry",
+  "member_b_label": "Twig Canker",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both can present in spring as wilting, browning, and dieback of young shoots and twigs on highbush blueberry, so during the early blight/dieback window a scout seeing collapsed shoot tips may not immediately know whether it is the primary shoot blight of mummy berry or twig canker dieback. They diverge sharply once the diagnostic signs (mummified fruit and ground apothecia vs. stem cankers with embedded perithecia) are examined.",
+    "shared_presentation": "Brown, wilting, dying young shoots/twigs and associated leaf browning in spring, giving a shepherd's-crook or flagging dieback appearance on scattered stems.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "When in the season does the dieback first appear and what tissues are involved?",
+        "a_signal": "Sharp onset at bud break/early bloom: new succulent shoots, leaves, and flower clusters suddenly wilt and brown (primary blight phase), later followed by fruit infection",
+        "b_signal": "Dieback associated with older one- and two-year-old wood; symptoms tied to discrete stem lesions that enlarge over more than one season rather than a sudden bloom-time collapse",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Is the problem centered on succulent current-season shoots/flowers or on woody stems?",
+        "a_signal": "Primary infection blights tender current-season shoots, leaf midribs, and flower clusters; ultimately the fruit is the key target",
+        "b_signal": "Lesions are seated on woody twigs and stems, forming sunken or swollen cankers that girdle and kill the distal portion",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "On affected shoots, is there a blight/wilt without a defined stem lesion, or a defined canker?",
+        "a_signal": "Blight/wilt with a brown, often water-soaked collapse of the shoot; no distinct sunken woody canker margin",
+        "b_signal": "Distinct canker: a delimited, often discolored and roughened lesion on the stem with a margin between living and dead bark girdling the twig",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease progress through the season after the initial dieback?",
+        "a_signal": "Moves from spring shoot/flower blight to infected fruit that turn tan/pink, shrivel, harden into 'mummies,' and drop to the ground",
+        "b_signal": "Canker slowly enlarges along the stem; distal twig dies back progressively; no fruit mummification, disease persists in woody tissue",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the diagnostic fungal structures: are there mummified berries with cup-shaped apothecia on the ground, or black perithecia embedded in stem cankers?",
+        "a_signal": "Hard gray/tan mummified berries on the soil that in spring produce small mushroom-like, cup-shaped apothecia (trumpet stage); conidia give a gray bloom on blighted shoots",
+        "b_signal": "No mummified fruit; instead small black flask-shaped fruiting bodies (perithecia) erupting through the bark on the dead cankered twig surface",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and overwintering site drive infection?",
+        "a_signal": "Cool, wet spring weather at bud break triggers apothecia from ground-borne mummies; risk tracks early-season moisture and degree-day timing of bloom",
+        "b_signal": "Favored on stressed, winter-injured, or poorly pruned older wood; inoculum overwinters in the standing cankered stems rather than on the ground",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Mummy berry is a two-stage disease. In a cool, wet spring at bud break, ascospores released from cup-shaped apothecia that emerge from mummified berries on the ground infect succulent new shoots, leaves, and flower clusters, causing a sudden wilt and browning (often with a gray bloom of conidia). Secondary spread to flowers leads to the signature fruit phase: berries turn tan/pinkish, shrivel, and harden into 'mummies' that drop and overwinter. The combination of bloom-time shoot blight and later mummified, dropped fruit is diagnostic.",
+    "narrative_b": "Twig canker (Gibbera vaccinicola) is a woody-stem disease that produces delimited cankers on one- and two-year-old stems, girdling and killing the distal twig and causing flagging dieback. Diagnostic black, flask-shaped perithecia erupt through the bark on the surface of dead cankered twigs. There is no fruit mummification and no ground-borne apothecia; inoculum persists in the standing cankered wood. It is favored by plant stress, winter injury, and dense, poorly pruned canopies.",
+    "management_a": "Sanitation is central: remove or bury/disrupt mummified berries on the ground (cultivation, mulching, raking) to prevent apothecia, and apply protectant/systemic fungicides timed to green tip and bloom based on regional degree-day and weather (wetting) models. Choose less-susceptible cultivars where possible and maintain airflow to speed drying.",
+    "management_b": "Prune out and destroy cankered and dead twigs well below the lesion during dry weather, and remove infected prunings from the field to reduce perithecial inoculum. Reduce plant stress and winter injury through balanced fertility, good drainage, and canopy thinning for airflow; fungicides are secondary to pruning and sanitation.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Scattered young shoots are wilting and dying back, with the tips curling over like a shepherd's crook and the leaves turning brown. It's hitting random stems across the bushes in spring.",
+      "decisive_lay_a": "Look on the ground under the bushes for hard, shriveled gray or tan dried-up berries from last year. In spring those old berries sprout tiny tan trumpet- or cup-shaped little mushrooms, and the blighted shoots often carry a dusty gray bloom.",
+      "decisive_lay_b": "No shriveled dried berries on the ground. Instead, look at the dead twig itself for tiny black pimple-like bumps breaking out through the bark along the dead area.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

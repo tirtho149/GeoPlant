@@ -1,0 +1,63 @@
+{
+  "pair_id": "soybean__cercospora-blight__soybean-vein-necrosis-virus",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Cercospora Blight",
+  "member_b_label": "Soybean Vein Necrosis Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce late-season upper-canopy foliar discoloration on soybean and both can give leaves a bronzed/purplish, leathery appearance with interveinal or vein-associated necrosis. Field scouts frequently confuse them because both peak at R5-R6, both concentrate in the sun-exposed top of the canopy, and neither produces conspicuous fruiting structures visible to the naked eye, so the bronze-to-necrotic foliage is the only obvious cue.",
+    "shared_presentation": "Upper-canopy soybean leaves develop a bronze to reddish-purple cast progressing to interveinal/vein-associated necrosis during late reproductive stages (R5-R6), with affected leaflets becoming leathery and ultimately dropping; both lack obvious visible fruiting bodies.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Where does the discoloration originate relative to the veins?",
+        "a_signal": "Diffuse reddish-purple bronzing of the upper leaf surface (interveinal and tissue-wide leathery 'leather-leaf'), not anchored to veins",
+        "b_signal": "Discoloration begins as clearing/chlorosis ALONG the veins, then veins themselves redden/brown before interveinal necrosis develops",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "What is the spatial/temporal spread pattern across the plant?",
+        "a_signal": "Symptoms spread broadly across exposed upper canopy and onto petioles, stems and pods; petiole 'purple seed stain' link",
+        "b_signal": "Symptoms appear first on a few scattered leaves/plants then spread leaf-to-leaf systemically; classic initial vein-clearing on youngest fully expanded trifoliates",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are pods and seeds affected?",
+        "a_signal": "Yes - purple seed stain on seed coat and purpling of pods/petioles is diagnostic of the same pathogen",
+        "b_signal": "No seed-coat staining; symptoms confined to foliage (and occasionally petioles) with no pod/seed lesions",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does microscopy/lab testing reveal as the cause?",
+        "a_signal": "Fungal sign: dark Cercospora conidiophores and long multiseptate conidia on tissue; pathogen culturable; reddish cercosporin pigment present",
+        "b_signal": "No fungal structures; thrips-vectored tospovirus confirmed only by RT-PCR/ELISA serology - vein-necrosis virus particles, not a culturable organism",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is a vector or fungal habitat association present?",
+        "a_signal": "Favored by warm, wet/humid canopy conditions; spreads as a fungus, no insect vector",
+        "b_signal": "Associated with thrips activity (vector); incidence tracks thrips populations and can show edge/patchy distribution from vector movement",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Cercospora Blight, caused by Cercospora kikuchii, is a fungal disease that typically becomes conspicuous at R5-R6. The pathogen produces the toxin cercosporin, giving sun-exposed upper-canopy leaves a diffuse reddish-purple to bronze, leathery cast ('leather-leaf') that is not confined to veins. Crucially, the same pathogen causes purple seed stain on the seed coat and purpling of pods and petioles, which is the practical hallmark in the field and at harvest. Diagnosis is confirmed by finding dark Cercospora conidiophores and long, multiseptate conidia on affected tissue, and the fungus is readily culturable. Warm, humid conditions and dense canopies favor disease and the resulting seed-quality losses.",
+    "narrative_b": "Soybean Vein Necrosis Virus (SVNV), a tospovirus transmitted by thrips, is the most widespread soybean virus in the US. Its signature symptom is vein-associated: initial vein clearing or chlorosis along the veins of the youngest fully expanded trifoliates, followed by reddening/browning of the veins and then interveinal necrosis, often with a bronzed appearance that mimics Cercospora's leather-leaf. However, SVNV produces no fungal signs, no seed-coat staining, and no culturable organism; confirmation requires serology (ELISA) or RT-PCR. Distribution can be patchy and tied to thrips vector activity. Yield impact is generally modest, but the foliar look closely overlaps with late-season Cercospora bronzing.",
+    "management_a": "Use disease-tolerant varieties and certified, disease-free seed; rotate away from soybean and manage residue. Foliar fungicides (e.g., QoI/strobilurin + DMI mixes) applied at R3-R5 can reduce leaf blight and purple seed stain where economically justified; manage canopy/irrigation to reduce humidity. Confirm with a lab before fungicide decisions, since SVNV will not respond to fungicides.",
+    "management_b": "No fungicide control; management focuses on host resistance/tolerance (vary by maturity group/cultivar) and reducing thrips pressure where feasible. Avoid unnecessary insecticide sprays that can flare thrips secondary to natural-enemy disruption. Most important practically: confirm by ELISA/RT-PCR so growers do not spend on fungicides for a virus; rogue/monitor and select less-susceptible varieties in regions with chronic high incidence.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My upper soybean leaves near the top of the canopy are turning a bronze to reddish-purple color, and as it gets worse the tissue between and along the veins dies and browns out. The affected leaflets feel leathery and tough, and they end up dropping off. This is showing up late in the season around pod fill.",
+      "decisive_lay_a": "Look for a faint reddish or pinkish-red staining in the discolored leaf tissue, and if you take a sample to a lab they can grow the fungus out from it in a dish and spot its dark spore-bearing stalks and long spores under the scope. The reddish pigment is the giveaway that a fungus is causing it.",
+      "decisive_lay_b": "There is no fungus to grow out and no fuzzy or spore-producing structures at all. The only way to confirm it is a lab blood-type style test (ELISA) or a DNA test (RT-PCR) showing the virus, which is carried into the field by tiny slender insects called thrips.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

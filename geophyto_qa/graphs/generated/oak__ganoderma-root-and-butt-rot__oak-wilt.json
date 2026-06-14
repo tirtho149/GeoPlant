@@ -1,0 +1,70 @@
+{
+  "pair_id": "oak__ganoderma-root-and-butt-rot__oak-wilt",
+  "kind": "disease",
+  "crop": "Oak",
+  "member_a_label": "Ganoderma Root And Butt Rot",
+  "member_b_label": "Oak Wilt",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause general crown decline and dieback in mature oaks\u2014thinning canopy, branch dieback, and eventual mortality\u2014so an arborist seeing a \"declining oak\" may suspect either. However, they differ fundamentally: Ganoderma is a basal/root wood-decay fungus producing external conks and structural failure over years, while oak wilt is a vascular wilt killing trees (especially red oaks) within weeks to months with rapid foliar wilt and no basal conk.",
+    "shared_presentation": "Mature oak in slow-to-moderate decline with crown thinning, branch dieback from the top/outer canopy inward, reduced vigor, and ultimately tree death. Both can produce sparse, undersized, or off-color foliage and may affect high-value landscape and forest oaks, prompting concern about whether the tree is hazardous or salvageable.",
+    "forks": [
+      {
+        "axis": "progression",
+        "question": "How fast does the crown decline unfold once symptoms appear?",
+        "a_signal": "Slow chronic decline over multiple years; tree may persist while structurally compromised",
+        "b_signal": "Rapid wilt and death within weeks to a few months (especially red oaks), often whole-canopy collapse in a single season",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the character of the foliar symptom?",
+        "a_signal": "Generalized crown thinning, small/chlorotic leaves, dieback consistent with root/butt decay starving the crown",
+        "b_signal": "Leaves wilt, bronze/brown from tip and margins inward (veinal pattern in red oaks), then drop while still partly green",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the tree is the primary lesion or damage located?",
+        "a_signal": "Lower trunk base, root collar, and major buttress roots\u2014wood decay and structural rot at ground level",
+        "b_signal": "Internal sapwood (xylem) throughout trunk and branches\u2014vascular system, no basal decay",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is there a basal fruiting body (conk) versus a vascular sign in the wood?",
+        "a_signal": "Shelf-like to hoof-shaped polypore conk at the base/roots\u2014shiny reddish-brown varnished cap (G. lucidum) with white pore surface; white rot of basal wood",
+        "b_signal": "No basal conk; instead dark vascular streaking in outer sapwood and gray-to-black fungal mats under bark that crack it (cracks/pressure pads), insect/root-graft spread",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "How does the pathogen spread between trees?",
+        "a_signal": "No tree-to-tree transmission of concern; spreads by airborne basidiospores colonizing wounds/roots, localized to the individual tree",
+        "b_signal": "Spreads underground through grafted roots (forming expanding pockets/mortality centers) and overland by sap-feeding nitidulid beetles to fresh wounds",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "On cutting the base/sapwood, what does the wood show?",
+        "a_signal": "Soft, white, spongy/stringy delignified white-rotted wood at the butt and roots; loss of structural integrity",
+        "b_signal": "Sound wood except for brown/dark streaks in the outermost growth rings (xylem discoloration); no soft basal rot",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Ganoderma root and butt rot is a chronic white-rot wood decay caused by Ganoderma lucidum (and allied species) attacking the lower trunk, root collar, and structural buttress roots of oaks. Infection enters through wounds or roots and progressively delignifies basal wood, hollowing and weakening the tree's anchorage and standing strength. The crown responds slowly\u2014thinning, smaller leaves, and dieback developing over several years as the decayed base fails to support water transport and the tree becomes increasingly hazardous for failure at the base. The pathognomonic clue is the conk: a shelf-like to hoof-shaped polypore at the soil line or on roots, typically with a glossy, varnished reddish-brown to mahogany upper surface and a creamy white pore underside. The key danger is structural\u2014trees can snap or uproot at the rotted base well before they die.",
+    "narrative_b": "Oak wilt is an aggressive vascular wilt caused by the fungus Bretziella fagacearum, which colonizes the water-conducting xylem and triggers the tree's own vessel-plugging defenses, choking off water movement. Red oak group trees are highly susceptible and can die within a few weeks to months of symptom onset, exhibiting rapid leaf wilt and bronzing from the leaf tips and margins inward, often dropping leaves that are still partly green. White oaks decline more slowly, branch by branch. The fungus produces gray-black fungal mats (pressure pads) beneath the bark that crack the bark and emit a fruity odor attracting sap-feeding nitidulid beetles, which carry spores to fresh wounds on healthy trees. Locally, the disease expands as mortality centers through interconnected (grafted) root systems. Diagnosis hinges on dark streaking in the outer sapwood and absence of any basal decay or conk.",
+    "management_a": "Manage as a structural-hazard and tree-health issue. Confirm by locating basal/root conks and assessing the extent of basal decay (resistance drilling/sonic tomography). There is no curative treatment for established butt rot\u2014focus on hazard assessment: trees with significant basal decay near targets (homes, walkways) should be evaluated for removal. Prevent infection by avoiding root-collar and basal wounds, mulching properly (keep mulch off the trunk), preventing soil compaction and grade changes, and maintaining tree vigor. Remove and dispose of infected stumps/roots where practical.",
+    "management_b": "Manage as a community-level epidemic. Confirm with sapwood streaking and lab culture/PCR. Disrupt underground spread by trenching or vibratory-plow severing root grafts (typically 4-5 ft deep) around infection centers before removing diseased red oaks; destroy or debark/dry wood with fungal mats to prevent beetle spread (do not move firewood). Critically, do NOT prune or wound oaks during the high-risk season (roughly spring through early summer); paint any unavoidable wounds immediately. High-value, not-yet-infected white/bur oaks near centers can be protected with macro-infusion of propiconazole fungicide.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My mature oak is slowly going downhill \u2014 the top and outer branches are thinning out and dying back, the leaves are sparse, small, and off-color, and the whole tree just looks weak. I'm worried it might fall or be too far gone to save.",
+      "decisive_lay_a": "Look for a hard, woody, shelf- or hoof-shaped growth at the very base of the trunk or over the roots. It often has a shiny, reddish-brown varnished-looking top and a white underside, and the wood inside the base feels soft, spongy, and bleached white.",
+      "decisive_lay_b": "No shelf growth at the base. Instead, peel the bark on a dying branch and look for dark brown streaking in the wood just under the bark, plus gray-to-black flattened pads of fungus under the bark that swell and crack the bark open. It also tends to spread fast from tree to tree.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

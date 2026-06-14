@@ -1,0 +1,63 @@
+{
+  "pair_id": "melon__fusarium-wilts--blights--rots-and-damping-off__monosporascus-root-rot",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Fusarium Wilts, Blights, Rots And Damping-Off",
+  "member_b_label": "Monosporascus Root Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne fungal diseases of melon that culminate in mid- to late-season vine wilt and collapse, often after fruit set, with declining foliage that can look identical from above. Distinguishing them requires examining the root system and lower stem (vascular discoloration vs. root rot with perithecia) rather than the canopy.",
+    "shared_presentation": "Mature melon vines wilt and decline, frequently around fruit load, with yellowing and necrosis of foliage progressing to plant collapse and yield loss. Both pathogens are soilborne, favored by stressed or weakened root systems, and produce symptoms that first appear as patchy or scattered plant decline within the field.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "At what crop stage does decline first appear?",
+        "a_signal": "Can strike at any stage: seed rot, pre/post-emergence damping-off of seedlings, plus crown/runner wilt later",
+        "b_signal": "Almost exclusively a late-season disease appearing near or after fruit maturity; no seedling phase",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the primary symptom class in the canopy?",
+        "a_signal": "Classic vascular wilt: one-sided/whole-vine wilting, leaf yellowing, sometimes crown rot and runner cankers",
+        "b_signal": "Sudden whole-plant wilt and collapse driven from below, often with little vascular streaking in the upper stem",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where is the most diagnostic damage located?",
+        "a_signal": "Lower stem/crown and vascular system; cut stem shows brown vascular discoloration extending up the vine",
+        "b_signal": "Tap root and major lateral roots are rotted, tan-brown and stripped; canopy vascular tissue relatively clean",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What soil/environment favors it?",
+        "a_signal": "Favored by warm soils; broad temperature range, sandy soils, and acidic conditions worsen it",
+        "b_signal": "Strongly favored by hot, saline, and high-temperature soils typical of arid desert melon production",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What pathogen sign appears on the rotted roots?",
+        "a_signal": "Pinkish/white to salmon mycelium or sporodochia on stem/crown lesions; no embedded black flask-shaped fruiting bodies on roots",
+        "b_signal": "Tiny black, ball-like perithecia (cleistothecia) embedded in the surface of rotted roots, visible with a hand lens",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Fusarium (Fusarium oxysporum f. sp. melonis and related Fusarium spp.) is a vascular wilt and damping-off complex. It can rot seed, kill seedlings before or after emergence, and later cause crown rot and one-sided or whole-vine wilting in established plants. The hallmark is brown vascular discoloration seen when the lower stem or crown is split, sometimes with pinkish/salmon fungal growth on cankered tissue. It is host-specialized, race-specific, and managed largely through resistant cultivars and grafting. Decline often progresses gradually and may be one-sided early on.",
+    "narrative_b": "Monosporascus root rot/vine decline (Monosporascus cannonballus) is a root-rotting disease that produces dramatic, often sudden whole-plant collapse late in the season as fruit matures. The pathogen destroys the tap and lateral roots, which appear tan to brown and decayed, while the upper-stem vascular tissue stays comparatively clean. The diagnostic sign is large, black, ball-shaped perithecia (ascocarps) embedded on the surface of rotted roots, visible with a hand lens. It thrives in hot, saline soils and is a major problem of cantaloupe/melon in arid, high-temperature production regions.",
+    "management_a": "Plant resistant cultivars matched to the local race, use grafting onto resistant rootstocks, rotate away from cucurbits, manage soil pH and avoid plant stress, use clean seed/transplants and good drainage; soil fumigation in high-pressure fields.",
+    "management_b": "Manage with soil fumigation or targeted fungicides (e.g., applied through drip), grafting onto tolerant rootstocks, longer rotations out of cucurbits, reducing root stress and soil salinity, and optimizing irrigation; resistant cultivars are limited so cultural and chemical tactics dominate.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My melon vines are wilting and going downhill, usually right when the fruit is sizing up. The leaves yellow and then brown and die back, and whole plants are collapsing in patchy spots scattered across the field, dropping my yield.",
+      "decisive_lay_a": "Look at the stem and crown near the soil line: with Fusarium you'll see a pinkish, whitish, or salmon-colored fuzzy or moldy growth on the diseased stem, and the roots will NOT have any tiny black specks buried in them.",
+      "decisive_lay_b": "Dig up the roots and look closely (a hand lens helps): with Monosporascus you'll find lots of tiny black, round, ball-like specks embedded in the surface of the rotted roots, like sprinkled black pepper.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

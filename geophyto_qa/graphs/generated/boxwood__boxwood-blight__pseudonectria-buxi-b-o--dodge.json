@@ -1,0 +1,70 @@
+{
+  "pair_id": "boxwood__boxwood-blight__pseudonectria-buxi-b-o--dodge",
+  "kind": "disease",
+  "crop": "Boxwood",
+  "member_a_label": "Boxwood Blight",
+  "member_b_label": "Pseudonectria Buxi B.O. Dodge",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are fungal pathogens causing leaf spots, leaf drop/defoliation, and dieback on boxwood, and both produce pinkish-to-salmon fruiting structures on affected tissue. In the field a grower sees browning leaves, leaf cast, and stem lesions in both, and the salmon-colored sporodochia of Pseudonectria can be mistaken for the white-to-pink sporulation of boxwood blight. The critical practical difference is that Pseudonectria (Volutella blight) is a weak/opportunistic pathogen of already-stressed or wounded plants, whereas boxwood blight is an aggressive primary pathogen producing characteristic black stem lesions and rapid total defoliation.",
+    "shared_presentation": "Tan to brown leaf discoloration, leaf spots, leaf drop, and twig/stem dieback on boxwood, with pinkish to salmon/orange fruiting bodies (sporulation) appearing on the surface of infected leaves and stems, often during warm humid weather.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Where do the fruiting bodies form and what color are they when examined with a hand lens?",
+        "a_signal": "White to pale-pink, frosty sporulation (sticky spore masses) on the UNDERSIDE of infected leaves and on black stem lesions, typically in a fine fuzzy layer",
+        "b_signal": "Distinct cushion-like salmon to coral-pink/orange waxy pustules (sporodochia) erupting on the UPPER leaf surface and dead twigs, often in clusters",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Are there black/dark cankers on the green stems?",
+        "a_signal": "Yes \u2014 sharply defined black or dark-brown linear streaks and lesions on green stems are diagnostic and present",
+        "b_signal": "No true black stem streaking; dieback is associated with stems that were already wounded, winter-injured, or shaded/stressed, lacking the clean black cankers",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast and how complete is the defoliation?",
+        "a_signal": "Rapid, near-total defoliation within days to a week, leaving bare blackened stems; spreads explosively through a planting",
+        "b_signal": "Slower, patchy dieback confined to weak or injured branches; affected leaves often turn straw-colored and hang on (persist) rather than dropping en masse",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the appearance and pattern of the leaf lesions?",
+        "a_signal": "Circular tan spots with darker concentric rings/zonate borders that rapidly coalesce; whole leaf browns",
+        "b_signal": "Leaves turn uniformly straw to bronze/tan, often upturned, with salmon pustules; spotting less zonate",
+        "weight": "weak"
+      },
+      {
+        "axis": "habit",
+        "question": "Is the disease attacking healthy vigorous plants or stressed/wounded ones?",
+        "a_signal": "Aggressive primary pathogen \u2014 infects fully healthy, vigorous boxwood regardless of condition",
+        "b_signal": "Opportunistic/secondary \u2014 overwhelmingly affects plants weakened by winter injury, drought, shearing wounds, poor air circulation, or other stress",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what conditions did the outbreak appear?",
+        "a_signal": "Warm (60-77F) and very wet/humid conditions; often traces to recently introduced infected nursery stock or holiday greenery",
+        "b_signal": "Follows periods of plant stress such as late spring after winter damage, dense canopy, overhead irrigation on already-declining shrubs",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Boxwood blight (Calonectria pseudonaviculata) is an aggressive primary pathogen. It produces dark circular leaf spots with concentric (zonate) rings that rapidly coalesce, followed by diagnostic black/dark linear cankers on the green stems and explosive, near-total defoliation within days. White-to-pink sporulation forms on the leaf undersides and along stem lesions under warm, humid conditions. It attacks healthy, vigorous plants and spreads readily via infected nursery stock and contaminated holiday greenery, making it a regulated, highly destructive disease.",
+    "narrative_b": "Pseudonectria buxi (Volutella blight) is a weak, opportunistic pathogen that primarily colonizes boxwood already weakened by winter injury, drought, shearing wounds, poor air circulation, or other stress. It causes patchy dieback and straw-to-bronze leaf discoloration, with leaves often upturned and persisting on the branch rather than dropping en masse. Its hallmark is the eruption of distinct salmon to coral-pink/orange waxy cushion-like sporodochia on the upper leaf surfaces and dead twigs. It lacks the clean black stem cankers and rapid total collapse of boxwood blight.",
+    "management_a": "Treat as a regulated, high-consequence disease. Confirm via lab diagnosis. Remove and bag/destroy infected plants and fallen leaf litter; do not compost. Strictly sanitize tools, footwear, and equipment. Avoid overhead irrigation and improve airflow. Source only certified clean nursery stock (Boxwood Blight Cleanliness Program). Preventive fungicides (chlorothalonil, or chlorothalonil + thiophanate-methyl) on a protectant schedule; rotate FRAC groups. Report to state regulatory/extension where required.",
+    "management_b": "Focus on reducing plant stress: avoid winter injury, water during drought, improve air circulation by thinning, and prune to remove dead/declining wood (disinfect tools between cuts). Avoid shearing in wet weather and minimize wounding. Rake and remove fallen debris. Because it is opportunistic, cultural correction often suffices; fungicides (thiophanate-methyl or copper-based products) can be applied after pruning out infected wood if pressure is high. Vigor restoration is the primary control.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My boxwoods have leaves turning tan to brown with spots, and they're dropping off, while some twigs and branches are dying back. In warm muggy weather I can see little pinkish-orange specks on the leaves and stems.",
+      "decisive_lay_a": "Look for clean, sharp-edged black or dark-brown streaks running up and down the green stems and twigs. These dark stem stripes/cankers are the giveaway.",
+      "decisive_lay_b": "No black stem stripes at all. Instead the branch dieback shows up on stems that were already hurt, like winter-damaged, wounded, or weak shaded/stressed growth, with no clean dark cankers.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

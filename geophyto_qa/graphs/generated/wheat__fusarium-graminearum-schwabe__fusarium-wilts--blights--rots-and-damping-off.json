@@ -1,0 +1,63 @@
+{
+  "pair_id": "wheat__fusarium-graminearum-schwabe__fusarium-wilts--blights--rots-and-damping-off",
+  "kind": "disease",
+  "crop": "Wheat",
+  "member_a_label": "Fusarium Graminearum Schwabe",
+  "member_b_label": "Fusarium Wilts, Blights, Rots And Damping-Off",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are Fusarium infections of wheat sharing the same genus and overlapping seedling/crown symptoms (browning, rot, damping-off). Member_a (F. graminearum) is one specific species that famously causes Fusarium Head Blight but also seedling blight/crown rot, while member_b is the broader Fusarium complex (multiple species like F. culmorum, F. pseudograminearum, F. avenaceum) producing wilts, blights, rots and damping-off. On vegetative tissue the symptoms converge and require lab species ID to separate; they are genuinely confused except at the heading stage.",
+    "shared_presentation": "Both produce brown, water-soaked to necrotic lesions on roots, crowns, and the subcrown internode of seedlings and young plants, pre- and post-emergence damping-off, stand thinning, and pinkish-salmon fungal growth in humid conditions. Both can cause crown rot leading to premature senescence, stunting, and whiteheads (bleached, sterile tillers) under moisture stress. Pinkish-orange sporodochia or mycelium may appear at the crown or stem base of both.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "At what growth stage do the most diagnostic symptoms appear?",
+        "a_signal": "F. graminearum's hallmark expression is at anthesis/heading, blighting the spike; vegetative-stage seedling blight is secondary",
+        "b_signal": "The Fusarium wilt/rot/damping-off complex expresses primarily at germination and seedling/crown stages on roots and lower stem",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which plant part shows the primary lesion or sign?",
+        "a_signal": "The head (spike) is the signature target: bleached spikelets, often starting mid-head and spreading",
+        "b_signal": "Roots, crown, subcrown internode and lower stem base are the primary targets; heads not directly colonized",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the dominant symptom class on the affected tissue?",
+        "a_signal": "Premature bleaching/blight of florets and spikelets with shriveled, chalky-pink 'tombstone' kernels",
+        "b_signal": "Wilt, root/crown rot, and seedling damping-off (collapse) with brown necrotic vascular and cortical tissue",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What pathogen signs are visible and where?",
+        "a_signal": "Salmon-pink sporodochia along the rachis and on glumes of blighted heads; orange perithecia (Gibberella zeae) on residue",
+        "b_signal": "Pink-to-white mycelium and sporodochia at the crown, stem base, and on rotted roots, not on the head",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What environmental trigger precedes severe disease?",
+        "a_signal": "Warm, wet/humid weather coinciding with flowering (anthesis) drives head infection",
+        "b_signal": "Cool-to-warm soils with moisture stress later in season; damping-off favored by saturated seedbeds at emergence",
+        "weight": "weak"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does laboratory culture/spore morphology reveal?",
+        "a_signal": "Single species confirmation of F. graminearum (long slender macroconidia, no microconidia, red-pigmented culture)",
+        "b_signal": "Mixed Fusarium spp. recovered (e.g., F. culmorum, F. pseudograminearum, F. avenaceum) with varied conidial morphology",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Fusarium graminearum (teleomorph Gibberella zeae) is best known as the cause of Fusarium Head Blight (scab) in wheat. After splash-dispersed spores or ascospores land on flowering spikelets during warm, wet anthesis, infected spikelets bleach prematurely while the rest of the head stays green, then the blight spreads along the rachis. Salmon-pink sporodochia develop on infected glumes, and kernels become shriveled, chalky-white to pink 'tombstones' contaminated with deoxynivalenol (DON) mycotoxin. The same species can cause seedling blight and contribute to crown rot, but its diagnostic identity is the bleached, sporulating head.",
+    "narrative_b": "This is the broader Fusarium disease complex on wheat causing wilts, blights, crown and root rots, and damping-off, attributable to several species (F. culmorum, F. pseudograminearum, F. avenaceum, and others, sometimes including F. graminearum itself). Soilborne and residue-borne inoculum infects germinating seed and seedlings, causing pre- and post-emergence damping-off and brown rot of roots, crown, and the subcrown internode. Under moisture stress, crown rot produces stunting, premature senescence, and bleached sterile whiteheads. Diagnosis centers on below-ground and stem-base tissue with pink mycelium at the crown rather than head infection.",
+    "management_a": "Use moderately resistant varieties; apply triazole fungicides (e.g., metconazole, prothioconazole) at early anthesis timed to wet flowering weather; rotate away from corn and small grains and bury infested residue to reduce Gibberella inoculum; harvest promptly and clean/test grain for DON; adjust combine to blow out light tombstone kernels.",
+    "management_b": "Plant clean, fungicide-treated seed at the proper depth into a warm, well-drained seedbed to speed emergence and limit damping-off; rotate with non-host broadleaf crops and manage residue to lower crown-rot inoculum; avoid excessive nitrogen and moisture stress; use tolerant cultivars where available; ensure good drainage to reduce seedling rot.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "lettuce__gray-mold__sclerotinia-stem-rot",
+  "kind": "disease",
+  "crop": "Lettuce",
+  "member_a_label": "Gray Mold",
+  "member_b_label": "Sclerotinia Stem Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are necrotrophic fungi that attack the lower stem/crown and outer leaves of mature lettuce in cool, moist conditions, causing a soft watery rot that wilts and collapses the whole head. To the naked eye an early lesion at the soil line looks nearly identical, and both can flatten a head onto the ground. The resolving features are the diagnostic signs: Botrytis produces fuzzy gray-brown spore masses, while Sclerotinia produces dense white cottony mycelium plus hard black sclerotia.",
+    "shared_presentation": "Mature head and romaine lettuce in cool (15-20C), wet/humid conditions develops a soft, watery, brown decay at the crown, basal stem, and lower wrapper leaves at or near the soil line. Affected plants wilt, the outer leaves collapse, and the head can rot down and flatten onto the soil. Both pathogens overwinter as sclerotia in soil and crop debris and both are favored by dense canopies, splashing/free moisture, and lettuce grown on the same ground repeatedly.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where does the rot initiate and is it tied to senescing/injured tissue vs. healthy crown contact with soil?",
+        "a_signal": "Often begins on senescent, wounded, or dead lower leaves and leaf tips, then spreads inward; opportunistic on injured or aging tissue",
+        "b_signal": "Typically begins at the crown/basal stem where healthy tissue contacts infested soil, girdling the base",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and color of the rotted tissue?",
+        "a_signal": "Brown, soft, water-soaked decay that becomes slimy; lesions may show concentric zonation as they enlarge",
+        "b_signal": "Soft, watery, bleached/tan rot that can become slimy and cause rapid wholesale collapse of the head",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does the fungal growth on the lesion surface look like under humid conditions?",
+        "a_signal": "Fuzzy, dusty GRAY to gray-brown sporulating mold (conidiophores) coating the surface; puffs of spores when disturbed",
+        "b_signal": "Dense, fluffy, cottony WHITE mycelium with no gray dusty sporulation",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Are sclerotia present, and what is their size and arrangement?",
+        "a_signal": "Sclerotia (if formed) are small, flat, irregular black crusts embedded in/on tissue; gray sporulation is the dominant sign",
+        "b_signal": "Numerous hard, black, discrete sclerotia (S. minor: small ~1-3 mm, often abundant) on and inside the rotted stem and on soil surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast and in what pattern does collapse occur in the field?",
+        "a_signal": "Decline is often gradual, lesion-by-lesion, frequently following damaged or shaded lower foliage",
+        "b_signal": "Rapid, sudden wilt and collapse of an apparently healthy plant once the crown is girdled",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature/moisture and crop conditions precede the outbreak?",
+        "a_signal": "Very cool, high-humidity periods and on wounded/senescent tissue (postharvest and storage also common)",
+        "b_signal": "Cool, moist soil with prolonged leaf wetness and dense canopy; strongly tied to infested field soil and rotation history",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Gray mold is caused by Botrytis cinerea, an opportunistic necrotroph that colonizes senescent, wounded, or aging lettuce tissue first. Look for a brown, soft, water-soaked rot on lower/wrapper leaves and the crown that becomes coated with a characteristic fuzzy GRAY to gray-brown layer of sporulation; brushing the lesion releases a dusty puff of spores. Lesions may show faint concentric zonation. Hard black sclerotia, if present, are small flat crusts, but the dominant diagnostic sign is the gray fuzzy mold rather than abundant discrete sclerotia. It is a major postharvest/storage problem as well as a field disease.",
+    "narrative_b": "Sclerotinia stem rot (lettuce drop) is caused by Sclerotinia minor (and S. sclerotiorum). It typically attacks the crown and basal stem where healthy tissue contacts infested soil, producing a soft, watery, bleached rot that girdles the base and causes sudden, wholesale collapse of an otherwise healthy-looking head onto the ground. The defining sign is dense, fluffy WHITE cottony mycelium on the rotted tissue, within which form numerous hard, black sclerotia. With S. minor the sclerotia are small (about 1-3 mm) and very abundant on and inside the stem and on the soil surface. There is no gray dusty sporulation.",
+    "management_a": "Reduce canopy humidity and leaf wetness via spacing, irrigation timing, and good drainage; avoid wounding and remove senescent lower leaves and crop debris. Promptly cool and handle harvested heads carefully to limit postharvest decay (maintain cold chain, low humidity in storage). Apply registered botryticides preventively where pressure is high, rotating FRAC groups to manage resistance, which is common in B. cinerea.",
+    "management_b": "Lengthen rotations away from lettuce and other susceptible broadleaf hosts to deplete sclerotia; deep-plow or otherwise bury sclerotia, manage residue, and avoid spreading infested soil. Improve drainage, widen spacing, and reduce prolonged soil/leaf wetness. Apply registered fungicides (e.g., at thinning/cupping) targeting the crown; consider biocontrol (Coniothyrium minitans) to degrade sclerotia in soil. Sanitize to prevent moving sclerotia between fields.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "In cool, wet weather my mature heads are rotting at the base right where they meet the soil. The crown and lower wrapper leaves turn into a soft, watery brown mush, the outer leaves flop down, and the whole head wilts and collapses flat onto the ground.",
+      "decisive_lay_a": "Look for a fuzzy, dusty gray to gray-brown moldy coating on the rotted surface that throws up little puffs of dust when you bump or touch it.",
+      "decisive_lay_b": "Look for dense, fluffy, cottony pure-white growth (like wet cotton wool) on the rot, with no gray dusty look and no puff of dust when disturbed.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

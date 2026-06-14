@@ -1,0 +1,70 @@
+{
+  "pair_id": "cucumber__cucurbit-downy-mildew__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both hit cucumber in warm, wet conditions and both can produce rapid foliar collapse with water-soaked lesions, so a grower glancing at wilting/blighting vines can confuse them. But downy mildew is a strictly foliar, angular-vein-bounded leaf disease, while Phytophthora capsici is a soilborne crown/root/fruit rotter that wilts whole plants and rots fruit on the soil contact side.",
+    "shared_presentation": "Sudden water-soaked tissue and foliar collapse on cucumber during hot, humid, wet weather; both spread explosively after rain and can defoliate or kill plants quickly, giving a general impression of a fast-moving wet rot/blight.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the primary damage concentrated \u2014 leaves only, or the crown/roots/fruit at the soil line?",
+        "a_signal": "Damage is confined to leaf blades; stems, crown, roots, and fruit remain healthy",
+        "b_signal": "Crown, lower stem, roots, and soil-contact fruit show rot; foliar wilt is secondary to root/crown failure",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape of the leaf lesions?",
+        "a_signal": "Angular chlorotic-to-necrotic lesions sharply bounded by leaf veins, giving a blocky mosaic pattern",
+        "b_signal": "Irregular water-soaked blotches not confined by veins; whole-plant flagging/wilt rather than discrete angular spots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the plant decline \u2014 leaf-by-leaf from older foliage, or sudden whole-plant wilt?",
+        "a_signal": "Progressive leaf death starting on crown/older leaves and moving outward; plant base stays turgid",
+        "b_signal": "Rapid, often overnight wilting and collapse of the entire plant despite moist soil, from girdling crown/root rot",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Is disease tied to leaf wetness/humidity broadcast across the canopy, or to standing water and low/poorly drained spots?",
+        "a_signal": "Spreads with prolonged leaf wetness, dew, and fog regardless of soil drainage; airborne sporangia",
+        "b_signal": "Worst in low, flooded, poorly drained areas and after heavy rain/irrigation; follows water flow and field contours",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Inspect the underside of a lesion or the surface of a rotting tissue at dawn \u2014 what sporulation appears?",
+        "a_signal": "Fine downy gray-to-purple sporulation (sporangiophores) on the LEAF UNDERSIDE within angular lesions in humid morning conditions",
+        "b_signal": "No leaf-underside downy fuzz; instead white cottony/powdery sporangia on rotting fruit, crown, or stem lesions at the soil line",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Cut into a wilted stem/crown at the base \u2014 is the internal tissue sound or rotted?",
+        "a_signal": "Internal crown and stem tissue is firm, white, and healthy; wilt (if any) is from lost leaf area",
+        "b_signal": "Internal crown/stem is brown, soft, water-soaked, and girdled; a dark constricted lesion rings the lower stem",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Cucurbit downy mildew (Pseudoperonospora cubensis) is an obligate, airborne foliar pathogen. It produces angular leaf lesions delimited by veins that begin as chlorotic blocks and turn necrotic, while stems, crowns, and fruit stay healthy. In humid mornings the leaf underside shows characteristic downy gray-violet sporulation within the angular lesions. Defoliation reduces yield and fruit quality but the plant base and root system remain intact and turgid.",
+    "narrative_b": "Phytophthora blight (Phytophthora capsici) is a soilborne oomycete that infects crown, roots, lower stem, and fruit. It causes rapid whole-plant wilt and collapse from girdling crown/root rot, plus water-soaked rot on soil-contact fruit covered with white cottony sporangia. It thrives in saturated, poorly drained soils and spreads with surface water after heavy rain or irrigation. Cutting the base reveals brown, soft, water-soaked internal tissue \u2014 never the firm white crown seen with downy mildew.",
+    "management_a": "Use resistant/tolerant cultivars, monitor the cucurbit downy mildew forecast (ipmPIPE/CDM ipmPIPE network), improve canopy airflow, and apply downy-mildew-specific oomycete fungicides (e.g., cyazofamid, oxathiapiprolin, propamocarb, mandipropamid) preventively on a tight schedule once sporangia are reported moving into your region.",
+    "management_b": "Manage water: plant on raised beds with excellent drainage, avoid overwatering and field flooding, rotate out of cucurbits/solanaceous hosts for 3+ years, and avoid moving infested soil/water. Apply soil-targeted oomycete fungicides (oxathiapiprolin, mefenoxam where not resistant, ethaboxam) and remove infected plants and fruit promptly; do not let fruit sit on wet soil.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My cucumbers went downhill fast after a stretch of hot, muggy weather and rain. The leaves got dark, wet-looking, almost greasy patches that quickly browned, and whole plants are wilting and collapsing within a few days. It's spreading through the patch quickly.",
+      "decisive_lay_a": "Flip the leaves over in the early morning and look on the underside of the wet-looking patches for a fine, fuzzy gray-to-purplish coating. That downy fuzz on the leaf bottom points to this one.",
+      "decisive_lay_b": "No fuzz on the leaf undersides. Instead, check down low for rotting fruit, crowns, or stems right at the soil line, which get a white cottony or powdery coating where they're rotting.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

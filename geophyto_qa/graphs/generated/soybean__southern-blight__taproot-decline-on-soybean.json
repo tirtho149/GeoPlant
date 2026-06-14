@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__southern-blight__taproot-decline-on-soybean",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Southern Blight",
+  "member_b_label": "Taproot Decline On Soybean",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce mid-to-late-season wilt/yellowing with dead plants in patchy clusters along the row, white mycelium associated with the lower stem/root, and dark-pigmented fungal structures, so a field scout seeing wilting plants with internal white fungal growth can confuse them. They are separated cleanly by WHERE the fungus expresses itself (external soil-line mat with mustard-seed sclerotia for southern blight vs internal black-stained taproot with cortical stroma for taproot decline).",
+    "shared_presentation": "Scattered wilting, yellowing, and dying soybean plants appearing in patches within a row, often from mid-season onward, with white fungal mycelium found at or below the soil line and dark/blackened fungal structures on or in the lower stem and roots. Both are warm-climate, southern-US soilborne fungal diseases that can kill plants outright.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "At what growth stage do plants first collapse?",
+        "a_signal": "Can strike at any stage including seedling damping-off (pre/post-emergence) as well as mature plants",
+        "b_signal": "Foliar collapse concentrated at reproductive pod-fill (R4-R6), though seedlings can occasionally show it",
+        "weight": "weak"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "How do the leaves die and stay on the plant?",
+        "a_signal": "Whole plant yellows and wilts; leaves turn brown and remain attached to the dead stem",
+        "b_signal": "Distinct interveinal chlorosis and necrosis (yellow/brown between veins) preceding plant death",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where is the lesion and fungal activity located relative to the soil surface?",
+        "a_signal": "Dark brown girdling lesion exactly at the soil line, with fungal activity external on the stem base and surrounding soil/residue",
+        "b_signal": "Damage is internal and below ground in the taproot and lateral roots; plants snap off at the soil line leaving rotted roots behind",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does the EXTERNAL stem base / soil surface look like for signs?",
+        "a_signal": "Conspicuous white fan-like mycelial mats on stem base, residue and soil, studded with round mustard-seed-sized sclerotia (tan to reddish-brown to dark brown)",
+        "b_signal": "No surface mat or mustard-seed sclerotia; instead black stromatic crusts on roots and occasional black-tipped 'dead man's fingers' stromata on roots/debris",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Split the lower stem/taproot longitudinally and examine the root surface and pith.",
+        "a_signal": "Taproot interior largely normal; signs are EXTERNAL (mat plus sclerotia) at the crown; no charcoal-black staining of the taproot vascular/cortical tissue",
+        "b_signal": "Taproot surface shows darkened charcoal-black thin stromatic tissue with white cottony mycelium inside the pith/cortex when split",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather and soil conditions accompanied the outbreak?",
+        "a_signal": "Outbreak tied to hot (77-95F) humid spells; thrives on residue at the soil surface near warm, moist crowns",
+        "b_signal": "Associated with continuous soybean/reduced rotation in southern soils; less tightly tied to a specific heat-humidity trigger",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Southern blight (Athelia/Sclerotium rolfsii) is a warm-weather soilborne fungus with a very wide host range that attacks the soybean crown at the soil line. Plants yellow, wilt, and die with brown leaves clinging to a girdled stem. The diagnostic giveaway is EXTERNAL: a white fan-like mycelial mat blanketing the stem base, residue, and soil, dotted with numerous round sclerotia the size of mustard seeds that mature from tan to reddish-brown to dark brown. Splitting the taproot reveals essentially normal internal tissue, confirming the pathogen lives on the outside of the crown rather than staining the root core.",
+    "narrative_b": "Taproot decline (Xylaria necrophora; reported as Xylaria sp./arbuscula) is an emerging southern-US root pathogen. Foliar interveinal chlorosis and necrosis typically appear at pod fill (R4-R6), and affected plants snap off easily at the soil line because the rot is concentrated in the taproot below ground. The diagnostic giveaway is INTERNAL and rooted: charcoal-black thin stromatic tissue coating the taproot and lateral roots, white cottony mycelium inside the pith when the root is split, and sometimes black-tipped 'dead man's fingers' stromata on roots and crop debris. There is no soil-line mat of mustard-seed sclerotia.",
+    "management_a": "Reduce inoculum and crown wetness: bury crop residue with deep tillage to bury sclerotia (they survive 3-4 years near the surface), rotate to nonhost grasses/corn out of the broad host range, avoid dense canopies and excessive surface debris around crowns, and improve drainage. Fungicides have limited utility once mats form; focus on cultural prevention and seed treatments where seedling damping-off is a risk.",
+    "management_b": "Manage through rotation and genetics: rotate away from continuous soybean to nonhost crops (e.g., corn) to break the soilborne stroma reservoir, manage crop residue/debris that harbors stromata, plant the least-susceptible available varieties, and avoid moving the pathogen on equipment/soil. No highly effective in-season fungicide rescue exists; emphasis is on rotation and reducing infested debris.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "I've got soybeans wilting, yellowing, and dying off in patches down the rows, mostly showing up from mid-season on. Down near the soil line I can see white fuzzy growth on the lower stems and roots, with some dark, blackened crusty stuff on the lower part of the plant.",
+      "decisive_lay_a": "Dig up a dying plant and split the main taproot open: inside it looks normal-colored and healthy, not stained dark. The trouble is all on the OUTSIDE at the crown right at the soil line, where you'll see a white fan-like fuzzy mat and tiny round tan-to-brown balls about the size of mustard seeds clinging to the stem base.",
+      "decisive_lay_b": "Pull a dying plant and look at the main taproot: the outside surface has thin charcoal-black crusty patches. Split that taproot lengthwise and the center pith/inner wood is packed with white cottony growth.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

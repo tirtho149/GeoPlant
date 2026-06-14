@@ -1,0 +1,70 @@
+{
+  "pair_id": "watermelon__powdery-mildew__unknown-virus",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Powdery Mildew",
+  "member_b_label": "Unknown Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both can present early as nonspecific foliar chlorosis, mottling, leaf distortion and stunted/declining vines, prompting growers to confuse a virus complex with mildew before the diagnostic white sign develops. Light early powdery mildew colonies and interveinal yellowing can be mistaken for viral mosaic/chlorosis, and vice versa, especially on older watermelon foliage where mildew is less obvious than on cucumber.",
+    "shared_presentation": "Yellowing, mottling/chlorosis and distortion of foliage with reduced vine vigor and potential fruit-quality decline. Both can appear mid-to-late season as patchy off-color leaves spreading through the planting, leading to confusion between a fungal foliar disease and a systemic virus.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Is there a visible white powdery fungal coating (mycelium/conidia) on the leaf surface, or are insect vectors (aphids/whiteflies/beetles) present without any surface growth?",
+        "a_signal": "White, talc-like powdery growth on leaf surfaces (especially undersides and older leaves) that rubs off with a finger; no causal arthropod sign needed",
+        "b_signal": "No surface growth that rubs off; aphids, whiteflies, or cucumber beetles often present as vectors and symptoms are systemic within the tissue",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is the discoloration a superficial powdery deposit/diffuse chlorosis, or an in-tissue mosaic/mottle pattern?",
+        "a_signal": "Powdery patches coalescing into white-to-gray felt; underlying tissue yellows then browns from the colony outward",
+        "b_signal": "Green-and-yellow mosaic or mottling embedded in the leaf, often with vein clearing or ring patterns, not removable by rubbing",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are symptoms confined mostly to leaves/petioles/stems, or do they include the growing point and fruit (skin mottling, bumps, internal discoloration)?",
+        "a_signal": "Largely foliar and on stems/petioles; fruit usually unaffected directly though sunscald/poor fill can follow defoliation",
+        "b_signal": "Systemic: new growth distorted, plus fruit symptoms such as mottled rind, knobby/warty surface, or internal discoloration",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the leaf-shape change in newest growth?",
+        "a_signal": "Leaf shape normal; affected leaves curl/cup and die back as colonies expand but expansion is from colonized areas",
+        "b_signal": "Newest leaves narrowed, strapped, blistered, or fern-like with overall deformation independent of any surface colony",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does it spread through the canopy and respond to fungicide?",
+        "a_signal": "Spreads leaf-to-leaf as airborne spores, favors crowded shaded canopy, and is suppressed by sulfur/DMI/SDHI fungicides",
+        "b_signal": "Spreads in a pattern matching vector movement or field edges, does not respond to fungicide, and may show field-edge gradients",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather/humidity conditions accompanied onset?",
+        "a_signal": "Onset under moderate temperatures with high humidity but dry leaf surfaces; thrives without free water",
+        "b_signal": "Onset linked to vector activity/season rather than humidity; can appear in hot dry conditions when vectors are active",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Powdery mildew of watermelon (Podosphaera fuliginea, syn. Podosphaera xanthii) is an obligate fungal pathogen producing superficial white-to-gray powdery colonies of mycelium and conidia, typically beginning on shaded lower and older leaves and leaf undersides. Colonies coalesce, the underlying tissue chloroses then necroses, and severe defoliation exposes fruit to sunscald and reduces sugar accumulation. It is wind-dispersed, favored by dense canopies, moderate temperatures and high relative humidity (but does not require leaf wetness), and is hallmarked by a powdery sign that rubs off the leaf.",
+    "narrative_b": "An unknown/undetermined virus of watermelon refers to a systemic viral infection (potyviruses such as WMV, ZYMV, PRSV-W; cucurbit aphid-borne yellows; cucumber mosaic virus; or whitefly-transmitted criniviruses/begomoviruses) whose exact identity is not yet confirmed by serology or PCR. These cause green-yellow mosaic/mottle, vein clearing, leaf narrowing/strapping and blistering, growing-point distortion, plant stunting, and fruit symptoms (mottled, knobby, or internally discolored rind). There is no surface fungal sign; spread tracks insect vectors and infected transplants/seed, and the disease does not respond to fungicides.",
+    "management_a": "Improve airflow with proper spacing and vine training; scout undersides of older leaves. Apply preventively at first sign with rotated FRAC modes of action (sulfur, DMI/FRAC 3, SDHI/FRAC 7, quinoxyfen), alternating to manage resistance; supplement with biologicals/potassium bicarbonate. Use resistant/tolerant cultivars where available. Fungicide-responsive disease.",
+    "management_b": "Confirm identity by ELISA/RT-PCR before action; fungicides are useless. Manage by controlling vectors and sources: use virus-tested/certified transplants and seed, reflective mulches and insecticides/oils to suppress aphids/whiteflies, rogue early infected plants, control weed/volunteer reservoirs, and deploy resistant cultivars. Adjust planting dates to avoid peak vector flights.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Mid-to-late season my watermelon vines started looking off-color, with patchy yellowing and a mottled light-and-dark pattern on the leaves, and some leaves are puckered or misshapen. The vines just aren't as vigorous as they should be and it's slowly spreading through the planting, so I'm worried it'll hurt fruit quality.",
+      "decisive_lay_a": "Look for a white, talc-like or powdery coating on the leaves, especially on the undersides and on the older leaves, that you can rub off with your finger like dust.",
+      "decisive_lay_b": "There is no powder or growth to rub off the leaf surface; instead the problem is inside the plant, and you'll often spot bugs like aphids, whiteflies, or cucumber beetles on the plants that carry and spread it.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

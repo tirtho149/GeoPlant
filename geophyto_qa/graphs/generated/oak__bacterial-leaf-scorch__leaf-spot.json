@@ -1,0 +1,70 @@
+{
+  "pair_id": "oak__bacterial-leaf-scorch__leaf-spot",
+  "kind": "disease",
+  "crop": "Oak",
+  "member_a_label": "Bacterial Leaf Scorch",
+  "member_b_label": "Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce browning/necrosis of oak foliage that intensifies in late summer and can mimic generic \"scorch.\" A homeowner seeing brown oak leaves in August may not distinguish a systemic vascular bacterial disease from a fungal foliar spot, so the two are routinely confused in walk-in extension diagnoses. The key is that BLS is a diffuse marginal/whole-leaf burn driven by a xylem-limited bacterium, whereas Tubakia produces discrete spots with fungal signs.",
+    "shared_presentation": "Brown, dead leaf tissue on oak (especially red oak group) appearing in mid-to-late summer, often most visible July-September, with leaves looking \"scorched\" and premature canopy decline. Both can be associated with hot, dry, or stressful summer conditions and both affect the foliage of the same hosts.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the dead tissue a diffuse marginal/interveinal burn covering large zones of the leaf, or discrete rounded lesions?",
+        "a_signal": "Tan-to-brown necrosis begins at leaf margins and tips and sweeps inward as a continuous scorched band, often the whole leaf",
+        "b_signal": "Numerous small, discrete, roughly circular reddish-brown to dark spots (1-5 mm) scattered on the blade, sometimes coalescing",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Is there a distinct color border between dead and living tissue?",
+        "a_signal": "A characteristic reddish-brown or yellow (chlorotic) halo/band separates the brown scorched margin from still-green inner tissue",
+        "b_signal": "Spots have their own dark margins; surrounding blade stays green except where spots merge, no single advancing marginal band",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens, are fungal fruiting structures present in the dead tissue?",
+        "a_signal": "No fungal signs; tissue is sterile to the lens because the cause is a xylem-limited bacterium (Xylella) not visible without lab assay (ELISA/PCR)",
+        "b_signal": "Tiny black pinhead fruiting bodies (pycnothyria of Tubakia) visible in the spots, confirming a fungal cause",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the tree and branch does decline concentrate?",
+        "a_signal": "Symptoms appear branch-by-branch / sector-by-sector and worsen cumulatively year over year as the systemic infection spreads through the vascular system",
+        "b_signal": "Spotting is scattered through the canopy on individual leaves, concentrated on lower/inner shaded foliage, not following a vascular sectoring pattern",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the problem behave across multiple seasons?",
+        "a_signal": "Chronic, progressive dieback over several years; more branches affected each year, eventually killing the tree",
+        "b_signal": "Episodic and weather-driven; severe in wet springs/early summers but the tree refoliates and recovers, rarely lethal",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather favored the outbreak?",
+        "a_signal": "Symptoms intensify with summer heat/drought stress on a chronically infected tree",
+        "b_signal": "Outbreaks follow wet, humid, rainy spring and early-summer conditions that favor fungal spore production and infection",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial Leaf Scorch is caused by the xylem-limited bacterium Xylella fastidiosa, spread by xylem-feeding insects (leafhoppers, spittlebugs). The bacterium colonizes and occludes the water-conducting xylem, so leaves develop a uniform marginal scorch\u2014tan-brown necrosis advancing inward from the leaf edge, classically bordered by a reddish-brown or yellow chlorotic band against still-green inner tissue. It is systemic and chronic: symptoms emerge branch-by-branch in late summer and the affected sectors expand year after year, leading to progressive dieback and eventual death over 5-10 years. There are no visible fungal signs; definitive diagnosis requires lab assay (ELISA or PCR). Most damaging in pin oak, red oak, and other red-oak-group species in the eastern/southeastern US.",
+    "narrative_b": "Tubakia leaf spot, caused by the fungus Tubakia dryina (formerly Actinopelte dryina), is a foliar disease producing numerous small, roughly circular reddish-brown to dark brown spots on oak leaves, most often in the red oak group. Spots may coalesce into larger blotches and, when along veins, can cause a localized scorch-like browning, which is what invites confusion with BLS. Diagnostic fungal signs\u2014tiny dark fruiting bodies (pycnothyria) with a fringed margin\u2014develop in the lesions and are visible with a hand lens. The disease is favored by warm, wet, humid weather and is most severe on stressed trees and lower, shaded, inner-canopy foliage. It is generally a cosmetic, late-season problem; trees refoliate and it is rarely fatal.",
+    "management_a": "No cure; management is supportive and aimed at prolonging tree life. Confirm with lab assay before acting. Maintain vigor with proper watering during drought, mulching, and avoiding root stress. Prune out dead/declining branches. Annual trunk/root-flare injection of oxytetracycline can temporarily suppress symptoms but does not eliminate the bacterium. On high-value trees consider professional management; plan for eventual removal/replacement with non-susceptible species. Insect vector control is generally impractical.",
+    "management_b": "Largely cosmetic on established trees, so fungicides are rarely warranted. Rake and destroy fallen leaves to reduce overwintering inoculum, improve air circulation by pruning, and reduce tree stress with proper watering and mulching. For high-value or repeatedly defoliated trees, protective fungicide applications (e.g., chlorothalonil, mancozeb, or DMI products) timed at budbreak and during leaf expansion in wet springs can help. Healthy trees recover without intervention.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My oak (a red oak type) has leaves turning brown and dead-looking around the edges, like they got scorched, and it's worst in the heat of mid-to-late summer. The canopy is thinning out and dropping leaves earlier than it should, and it seems worse during the hot, dry stretches.",
+      "decisive_lay_a": "Look closely at the dead brown areas and find nothing growing on them at all - no bumps, no fuzz, no specks. The leaf is just clean dead tissue with no sign of any fungus, which points to a bacterial cause that can only be confirmed by sending a sample to a lab for testing.",
+      "decisive_lay_b": "Look in the brown dead spots for tiny black pinhead-sized dots, like specks of ground pepper sitting in the spots. These little black fruiting specks confirm a fungus is causing the problem.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

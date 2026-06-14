@@ -1,0 +1,63 @@
+{
+  "pair_id": "cucumber__corynespora-leaf-spot__cucurbit-downy-mildew",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Corynespora Leaf Spot",
+  "member_b_label": "Cucurbit Downy Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-irregular chlorotic/necrotic leaf spots on cucumber foliage that are bounded by veins and can rapidly blight the canopy, especially in warm humid greenhouse or field conditions. Early lesions of both appear as small yellow-green spots on the upper leaf surface, and both spread from older lower leaves upward, leading growers to mistake target spot for downy mildew and vice versa. The decisive separation requires examining the underside of a fresh lesion for the pathogen sign.",
+    "shared_presentation": "Angular to irregular chlorotic spots on cucumber leaves, often vein-delimited, beginning on older/lower leaves and progressing upward; spots coalesce into large necrotic blighted areas that can defoliate the plant under warm, humid, high-leaf-wetness conditions in greenhouse or field.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are stems, petioles, and fruit involved, or is the disease essentially leaf-only?",
+        "a_signal": "Corynespora can also lesion stems, petioles, and produce sunken spots on fruit, not just leaves",
+        "b_signal": "Downy mildew is strictly foliar; stems and fruit are not directly infected",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the lesion shape and internal pattern on the upper leaf surface?",
+        "a_signal": "Lesions tend to be more rounded to irregular, often with concentric target-like rings and a yellow halo, and can have a tan-gray necrotic center that may crack or fall out",
+        "b_signal": "Lesions are sharply angular, blocky, and tightly confined by the leaf veins (vein-limited mosaic of yellow then brown patches)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the spot evolve and what color does the necrotic tissue become?",
+        "a_signal": "Spots enlarge into target-spot rings with gray-tan papery centers; defoliation from individual expanding round lesions",
+        "b_signal": "Angular yellow patches turn brown and necrotic but stay angular; whole leaf scorches in an angular mosaic, curling upward and dying",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What growth appears on the LOWER leaf surface of a fresh lesion held in humidity (flip the leaf and inspect the underside)?",
+        "a_signal": "Underside shows a sparse, fuzzy olive-gray to brown to black mold (Corynespora conidiophores bearing long obclavate multi-septate conidia), present on either surface and not strictly confined to lesion outline",
+        "b_signal": "Underside shows a delicate gray-purple to dark downy fuzz (Pseudoperonospora sporangiophores with lemon-shaped sporangia) confined precisely to the angular lesion beneath the yellow upper-surface spot",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "Does disease pressure track a regional airborne epidemic forecast or persist independently in protected culture?",
+        "a_signal": "Corynespora persists in warm humid greenhouses and southern field plantings year-round, surviving on debris/seed without needing live host inflow",
+        "b_signal": "Downy mildew is an obligate biotroph driven by long-distance sporangia spread tracked by the Cucurbit Downy Mildew Forecasting system, arriving seasonally from southern overwintering sources",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Corynespora cassiicola (Corynespora leaf spot / target leaf spot) is a necrotrophic fungus. On cucumber it produces roundish to irregular spots, frequently with concentric target-like rings and a chlorotic halo, and gray-tan papery centers that may crack or drop out. Unlike downy mildew it is not confined to leaves: stems, petioles, and fruit can show lesions. It survives on crop debris and seed and thrives in warm, humid greenhouses and warm southern field conditions. Diagnostic sign: sparse olive-gray to black fuzzy mold of conidiophores and large obclavate multi-septate conidia, which can appear on either leaf surface.",
+    "narrative_b": "Pseudoperonospora cubensis (cucurbit downy mildew) is an obligate oomycete biotroph. It causes sharply angular, vein-limited chlorotic spots on the upper leaf surface that turn brown and necrotic while remaining blocky and angular, eventually scorching and curling the whole leaf. It is strictly foliar (no stem/fruit lesions). The defining sign is a delicate gray-purple downy growth of sporangiophores and lemon-shaped sporangia on the LOWER surface directly beneath the angular yellow spots, visible under high humidity/dew. It spreads as airborne sporangia in seasonal epidemics tracked by regional forecasting networks.",
+    "management_a": "Improve air circulation and reduce leaf wetness/humidity (critical in greenhouses); avoid overhead irrigation; remove and destroy infected debris and use clean/treated seed; rotate away from cucurbits. Apply protectant/systemic fungicides effective against Corynespora (e.g., chlorothalonil, plus rotated FRAC-group materials such as boscalid/SDHI or strobilurins where resistance allows), scouting for both leaf and fruit lesions.",
+    "management_b": "Use the Cucurbit Downy Mildew ipmPIPE/forecast alerts to time sprays ahead of sporangia arrival; plant resistant/tolerant cultivars; orient rows and space plants to speed drying and reduce leaf wetness; avoid overhead irrigation. Apply oomycete-specific fungicides (e.g., cyazofamid, mandipropamid, oxathiapiprolin, fluopicolide) tank-mixed/rotated with a protectant like chlorothalonil, beginning protectively when disease is forecast nearby.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My cucumber leaves have angular, blocky yellow spots that seem boxed in by the veins, starting on the older lower leaves and moving up the plant. In the warm, humid weather the spots are running together into big brown dead patches and the plants are starting to drop leaves.",
+      "decisive_lay_a": "Flip the leaf over and look for a thin, patchy fuzzy mold that is olive-gray to brown or black. It can show up on either side of the leaf and tends to spread a bit beyond the edges of the spots rather than staying neatly inside them.",
+      "decisive_lay_b": "Flip the leaf over and look for a fine gray to purplish downy fuzz that sits exactly inside the angular spot, right under the yellow patch on top, staying neatly within the boxed-in spot outline.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

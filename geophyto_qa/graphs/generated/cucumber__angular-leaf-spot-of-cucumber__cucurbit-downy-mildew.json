@@ -1,0 +1,63 @@
+{
+  "pair_id": "cucumber__angular-leaf-spot-of-cucumber__cucurbit-downy-mildew",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Angular Leaf Spot Of Cucumber",
+  "member_b_label": "Cucurbit Downy Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular, vein-delimited lesions on cucumber leaves that turn yellow then brown/necrotic, and both favor cool, wet, humid conditions with leaf wetness. Early-stage spots of each are bounded by leaf veins and look nearly identical from the upper surface, so field scouts routinely confuse them until the leaf underside or lesion behavior (tearing/holes vs. sporulation) is examined.",
+    "shared_presentation": "Angular, vein-limited lesions on the foliage of cucumber that begin as small water-soaked spots, expand to a polygonal shape constrained by major veins, then turn yellow and brown/necrotic. Both diseases are driven by free moisture (rain, overhead irrigation, dew) and cool-to-moderate temperatures, both can defoliate plants under heavy pressure, and both reduce yield and fruit quality.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaf and inspect the underside of the lesion under humid conditions (or after a dewy morning) with a hand lens: is there fuzzy growth or bacterial ooze?",
+        "a_signal": "No fuzzy mold; instead a milky-white bacterial exudate that dries to a thin white crust/flake on the underside of water-soaked spots",
+        "b_signal": "A grayish to purplish-black downy fungal mat (sporangiophores) on the lower leaf surface within the lesion",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "What happens to the dead lesion tissue over time?",
+        "a_signal": "Necrotic center dries, tears away, and drops out leaving ragged holes ('shot-hole'/tattered look)",
+        "b_signal": "Necrotic tissue remains in place as angular brown patches that coalesce; leaf curls and dies without dropping out cleanly",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is there a water-soaking and exudate phase on fruit or stems, not just leaves?",
+        "a_signal": "Yes - small water-soaked circular spots with bacterial ooze can appear on fruit and petioles, leaving white residue and cracking",
+        "b_signal": "No - infection is essentially limited to foliage; fruit are not directly spotted (though they fail to size from defoliation)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Look at the leaf in transmitted light / early lesion margin: is there a halo and water-soaked translucent border?",
+        "a_signal": "Spots often have a yellow halo and a greasy, translucent water-soaked margin early on",
+        "b_signal": "Lesions appear as bright angular yellow blotches (chlorotic) on the upper surface that later brown, without a greasy water-soaked rim",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What is the regional/seasonal disease-pressure context and forecast signal?",
+        "a_signal": "Favored by warm-and-wet conditions and splashing rain; seed- and debris-borne, so present wherever inoculum exists",
+        "b_signal": "Driven by airborne sporangia that overwinter in the south and move north on storm fronts; tracked by the Cucurbit Downy Mildew ipmPIPE forecast",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Angular leaf spot is a BACTERIAL disease (Pseudomonas syringae pv. lachrymans). It starts as small water-soaked angular spots delimited by veins, often with a yellow halo. In humid weather a milky bacterial ooze exudes from the underside; this dries to a thin white crusty film - a key tell. Dead centers dry, crack, and fall out, giving leaves a ragged shot-hole/tattered appearance. Water-soaked spots can also form on fruit and stems. It is seed-borne and survives in crop debris, spreading by rain splash and workers/equipment moving through wet foliage.",
+    "narrative_b": "Cucurbit downy mildew is an OOMYCETE disease (Pseudoperonospora cubensis), an obligate, airborne pathogen. Upper-surface symptoms are angular, vein-bounded chlorotic (yellow) blotches that turn brown and necrotic. The diagnostic sign is on the LOWER leaf surface: a gray-to-purplish-black downy sporulation mat visible under humidity/dew. Lesions stay in place and coalesce, rapidly killing foliage from the crown outward, but the dead tissue does not cleanly drop out and fruit are not directly spotted. Inoculum overwinters in the southern US/greenhouses and sporangia disperse northward on weather systems each season.",
+    "management_a": "Use pathogen-free/treated seed and resistant varieties; rotate 2+ years out of cucurbits; avoid working in wet fields and minimize overhead irrigation/leaf wetness duration. Bury or remove infected debris. Apply copper-based bactericides (often with mancozeb) preventively when warm-wet conditions favor spread; copper does not cure established infection, so timing on the forecast/scouting is critical.",
+    "management_b": "Plant downy-mildew-resistant/tolerant cultivars and scout intensively; monitor the regional Cucurbit Downy Mildew ipmPIPE forecast to time the first spray ahead of arriving sporangia. Improve airflow and reduce leaf wetness. Apply targeted oomycete fungicides (e.g., cyazofamid, oxathiapiprolin, fluopicolide, mandipropamid, ametoctradin/dimethomorph) on a protectant schedule with mancozeb/chlorothalonil; rotate FRAC groups to manage resistance. Copper is largely ineffective.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My cucumber leaves have small water-soaked spots that grow into angular, blocky patches boxed in by the leaf veins, then turn yellow and brown and die. It seems to spread fast after rain, overhead watering, or heavy dew when the weather is cool, and the worst leaves are dropping off the plant.",
+      "decisive_lay_a": "Flip the leaf over and look at the underside of a fresh water-soaked spot for a milky or cloudy droplet of ooze that dries down into a thin, whitish, flaky crust. There is no fuzz or mold, just that dried white film.",
+      "decisive_lay_b": "Flip the leaf over and check the underside of the spot for a fuzzy, downy growth that looks grayish to dark purple-black, like a faint mat of mold, especially in the morning when it is damp.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

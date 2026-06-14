@@ -1,0 +1,63 @@
+{
+  "pair_id": "cultivated-garlic__gray-molds__white-rot",
+  "kind": "disease",
+  "crop": "Cultivated Garlic",
+  "member_a_label": "Gray Molds",
+  "member_b_label": "White Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce a white-to-gray fungal growth and soft rot on garlic bulbs and basal plate, often in cool wet conditions, and both can collapse foliage and rot stored or in-ground bulbs. A field diagnosis based only on a rotting bulb with white mycelium is genuinely ambiguous; the diseases diverge most clearly on the color/texture of the mold and the presence and morphology of the resting structures (gray conidial mold vs. tiny black sclerotia).",
+    "shared_presentation": "Yellowing and dieback of leaves from the tips, premature collapse of the plant, and a soft to semi-watery rot of the bulb and neck/basal plate accompanied by white fungal mycelium. Both favor cool, moist conditions and can continue to destroy bulbs in storage or in the field, leaving the cloves decayed and the plant easily lifted from loosened roots.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where does the rot and fungal growth first concentrate?",
+        "a_signal": "Starts at the neck, wounds, cut tops, or upper bulb/stored cloves; often a storage/postharvest and aerial-tissue rot.",
+        "b_signal": "Starts at the basal plate and roots, rotting the bottom of the bulb and the root system, an in-ground soilborne attack.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the color and texture of the mold covering the affected tissue?",
+        "a_signal": "Dense GRAY-brown fuzzy/dusty mold (sporulating conidiophores) that puffs into dust when disturbed.",
+        "b_signal": "Dense WHITE fluffy cottony mycelial mat with no gray dusty sporulation.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the planting show the disease spatially in the field?",
+        "a_signal": "Scattered or wound-associated, strongly tied to storage and post-harvest handling; less of a discrete soil patch.",
+        "b_signal": "Expanding circular patches of dead/yellow plants spreading plant-to-plant through soil, recurring in the same ground for years.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What resting structures form in or on the decayed tissue?",
+        "a_signal": "Larger, flat, irregular BLACK sclerotia (1-5+ mm) embedded among gray mold, plus abundant gray spores.",
+        "b_signal": "Numerous TINY round poppy-seed-like black sclerotia (about 0.5 mm, sand-grain sized) crusting the basal plate and roots in the white mycelium.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and history precede the outbreak?",
+        "a_signal": "Cool, humid, high-moisture storage or wet harvest; bruising and poor curing trigger it; not field-soil-persistent.",
+        "b_signal": "Cool soil (about 50-75F) with persistent soilborne inoculum that survives 15-20+ years; tied to fields with allium cropping history.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Gray mold (Botrytis spp., e.g. B. porri/B. allii) on garlic is largely a neck, wound, and storage rot. It enters through cut tops, bruises, frost-damaged or senescing tissue and produces a soft, sometimes water-soaked decay covered by a characteristic gray-brown dusty mold that releases clouds of conidia when touched. Larger, flattened, irregular black sclerotia may form in the rotted neck and outer scales. It thrives in cool, humid, poorly ventilated storage and during wet harvest seasons, and is favored by mechanical injury and inadequate curing.",
+    "narrative_b": "White rot, caused by the soilborne fungus Stromatinia (Sclerotium) cepivora, attacks the basal plate and roots. Infected plants yellow and die back, are easily pulled, and show a fluffy white mycelial mat over the bulb base studded with very small (~0.5 mm) spherical black sclerotia resembling poppy seeds or sand grains. It spreads in expanding circular patches through the soil and is favored by cool soil temperatures. Its sclerotia survive in soil for 15-20 years or more, germinating in response to allium root exudates, making infested fields a long-term problem.",
+    "management_a": "Cure bulbs rapidly and thoroughly; minimize bruising and neck damage at harvest. Store at low temperature with low humidity and good ventilation. Avoid harvesting in wet conditions and discard injured/diseased bulbs. Crop rotation and managing field moisture/canopy humidity reduce inoculum; protective fungicides may help where labeled. Use clean, healthy seed garlic.",
+    "management_b": "Plant only certified clean seed garlic and avoid moving soil/equipment from infested fields. Because sclerotia persist for decades, long rotations out of alliums are essential; once established, fields may be unusable for allium production for many years. Soil solarization, sclerotia-germination stimulants (e.g., garlic/onion oil applications to flush and starve sclerotia), and labeled fungicide/biocontrol treatments can reduce inoculum. Avoid cool-season planting in known infested ground.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My garlic leaves are yellowing and dying back from the tips and the plants are flopping over way too early. When I pull them up they lift out easy because the roots have rotted loose, and the bulb and neck are soft and mushy with a watery rot and white fuzzy fungal growth all over the base.",
+      "decisive_lay_a": "Look in the gray fuzzy mold for larger, flat, irregular hard black lumps or crusty flakes, anywhere from a pinhead up to pea-sized (1 to 5 mm or bigger). You'll also see lots of dusty gray mold spores covering the rotted tissue.",
+      "decisive_lay_b": "Look on the white cottony growth at the very bottom of the bulb (the basal plate) and on the roots for tons of tiny round black specks the size of poppy seeds or fine sand grains (about half a millimeter), so many they crust the surface like ground pepper sprinkled in the white fungus.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

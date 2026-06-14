@@ -1,0 +1,70 @@
+{
+  "pair_id": "strawberry__phomopsis-leaf-blight-and-fruit-rot__ramularia-grevilleana-verkley---u--braun",
+  "kind": "disease",
+  "crop": "Strawberry",
+  "member_a_label": "Phomopsis Leaf Blight And Fruit Rot",
+  "member_b_label": "Ramularia Grevilleana Verkley & U. Braun",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are fungal foliar diseases of strawberry producing discrete leaf spots that can be confused in early stages, especially when lesions are small and reddish/purple-bordered. However, Ramularia grevilleana is the modern teleomorph-linked name for the common leaf spot pathogen (formerly Mycosphaerella fragariae / Ramularia tulasnei), which produces small spots with tan-to-white centers and purple margins, while Phomopsis obscurans produces larger V-shaped/wedge-shaped angular blotches following major veins. Their fruiting structures (pycnidia vs. hyphomycete conidiophores) and lesion geometry differ decisively, but the early small-spot phase and shared host/season drive confusion.",
+    "shared_presentation": "Discrete reddish-purple-bordered spots on mature/older strawberry leaves during warm, humid mid-to-late season, often on the same planting; both can cause leaf necrosis and reduce vigor, and both overwinter on infected leaf debris and old leaves.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Which plant parts carry symptoms beyond the leaf blade?",
+        "a_signal": "Affects leaves, petioles, runners, fruit (firm brown fruit rot, sometimes with concentric zonation), and can blight fruit caps/stems",
+        "b_signal": "Essentially confined to leaf blades (and occasionally petioles/calyx); does not cause a true firm fruit rot",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and size of an individual mature leaf lesion?",
+        "a_signal": "Large lesions begin as small reddish-purple spots then enlarge into V-shaped or wedge-shaped (triangular) brown blotches, wide edge toward the leaf margin, often following major veins; centers tan to dark brown",
+        "b_signal": "Lesions stay small and round (1-6 mm), with tan, gray, or bleached-white centers and a distinct deep purple to reddish-purple border (classic 'common leaf spot' eyespot)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the lesion enlarge over time?",
+        "a_signal": "Expands progressively into a large coalescing blotch/blight that can consume much of the leaflet, with a brown necrotic interior and reddish-brown margin",
+        "b_signal": "Remains a small, sharply delimited circular spot; many discrete spots stipple the leaf rather than forming large blotches; centers may drop out",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens, what fruiting bodies are embedded in or sitting on the lesion?",
+        "a_signal": "Dark, sunken, flask-shaped pycnidia (black pinpoint dots) embedded in the necrotic tissue, exuding cirrhi of two-celled alpha conidia in wet weather",
+        "b_signal": "No pycnidia; instead delicate white-to-grayish tufts of erect conidiophores bearing chains of hyaline cylindrical Ramularia conidia on the lesion surface (mealy/frosty bloom), especially on the underside",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What seasonal/temperature window favors peak development?",
+        "a_signal": "Favored by warm temperatures (~25-30 C) and prolonged leaf wetness, typically peaking in mid-to-late summer on older foliage",
+        "b_signal": "Favored by moderate, cool-to-warm humid conditions (~15-25 C) with frequent leaf wetness; can be active over a broader spring-through-fall window",
+        "weight": "weak"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the dominant tissue-level reaction class?",
+        "a_signal": "Necrotic blighting/blotch with reddish-brown expanding margin, trending toward leaf scorch and fruit rot",
+        "b_signal": "Discrete spotting with a hypersensitive purple halo and central bleaching/necrosis (eyespot type)",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Phomopsis leaf blight (Phomopsis obscurans) starts as small one-to-several-millimeter reddish-purple spots on older, mature leaves, then characteristically enlarges into V-shaped or wedge-shaped brown blotches with the broad edge at the leaf margin, frequently delimited by major veins and surrounded by a reddish-brown to purple margin with a lighter brown center. Heavily affected leaflets scorch and die. The same fungus also causes a firm brown fruit rot (sometimes with concentric light/dark zonation) and can infect petioles, runners, and fruit caps. Diagnostic confirmation comes from dark, sunken pycnidia embedded in necrotic tissue that release two-celled (alpha) conidia. It overwinters in old infected leaves and debris and intensifies in warm, wet mid-to-late season conditions, especially in older or stressed plantings.",
+    "narrative_b": "Ramularia grevilleana is the pathogen of strawberry common leaf spot (long known under the anamorph Ramularia tulasnei and teleomorph Mycosphaerella fragariae). It produces numerous small, round spots, typically 1-6 mm, with tan, gray, or bleached-white centers ringed by a sharp deep-purple to reddish-purple border, giving the classic 'eyespot' appearance; centers may drop out to leave shot-holes. Lesions remain discrete and stipple the leaf rather than coalescing into large blotches, and the disease is essentially a leaf-blade problem (with occasional petiole/calyx spotting) and does not produce a true firm fruit rot. Under humidity, the lesion surface bears delicate white-to-grayish tufts of erect conidiophores producing chains of hyaline cylindrical conidia (a frosty/mealy bloom, often on the leaf underside), the decisive sign separating it from Phomopsis. It favors moderate, humid conditions and survives on old leaves and debris.",
+    "management_a": "Remove and destroy old infected leaves and debris (renovation/mowing in matted-row systems), improve air circulation and avoid prolonged leaf wetness, and use resistant cultivars where available. Where disease pressure is high, apply protectant/systemic fungicides (e.g., captan, or QoI/SDHI products per label and resistance-management guidance) timed to early-season and post-renovation new growth, and manage fruit rot phase through canopy and moisture management at harvest.",
+    "management_b": "Sanitation is central: remove infected leaves at renovation, plant certified disease-free transplants, choose resistant cultivars (many modern cultivars carry good common-leaf-spot resistance), space plants and orient rows for rapid drying, and avoid overhead irrigation timing that prolongs leaf wetness. Fungicides (e.g., captan, or other labeled materials such as QoI/SDHI or copper products per regional recommendations) can be applied when new foliage is expanding under favorable wet conditions; because resistant cultivars are widely available, chemical control is often a secondary tactic.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My older strawberry leaves have scattered spots with reddish-purple edges, and it's been worse during the warm, muggy stretch of mid-to-late season. The leaves are looking beat up and the plants don't seem as vigorous, and I'm seeing it across the same planting.",
+      "decisive_lay_a": "Look closely at the dead/brown part of the spots for tiny black pinpoint dots embedded in the tissue. In wet weather these dots may push out a small amount of pinkish ooze or curling threads.",
+      "decisive_lay_b": "Look for a delicate white-to-grayish fuzzy or frosty/mealy bloom on the spots, especially on the underside of the leaf. There are no black dots in the spots.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

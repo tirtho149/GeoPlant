@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__downy-mildew__soybean-rust",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Downy Mildew",
+  "member_b_label": "Soybean Rust",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce foliar lesions on soybean with visible sporulation on the lower leaf surface, leading to chlorotic-to-necrotic upper-surface spots and potential premature defoliation. At a glance the pale upper-surface flecks and undersurface fungal growth of each can be mistaken, especially before sign color and structure are examined closely. They diverge sharply on the morphology of the sporulating sign (downy fuzz vs erupting pustules), on the upper-surface lesion pattern, and on geographic/seasonal risk.",
+    "shared_presentation": "Pale green to yellow flecks and angular-to-irregular chlorotic spots on the upper leaf surface, with sporulation concentrated on the abaxial (lower) surface directly beneath the lesions; heavy infection causes coalescing lesions, leaf yellowing, and premature defoliation, most evident on mid-to-lower canopy leaves during humid weather.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Examine the lower leaf surface beneath a lesion: is the growth a soft fuzzy white-to-gray mold, or raised tan-brown bumps that rupture and shed powder?",
+        "a_signal": "Cottony, downy white-to-pale-gray tufts of mold (sporangiophores) carpeting the undersurface, wiping off easily",
+        "b_signal": "Discrete raised volcano-like pustules (uredinia), tan to reddish-brown, that erupt through the epidermis and release powdery urediniospores",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the upper-surface lesion pattern?",
+        "a_signal": "Diffuse pale green to light yellow blotches, often large and angular, fading to brown; on pods/seed a whitish crust may form",
+        "b_signal": "Small, dense, angular tan to reddish-brown lesions, often vein-delimited, with a characteristic pin-point pustule center",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under a hand lens, what is the structure of the spores/sign?",
+        "a_signal": "Branched tree-like sporangiophores bearing lemon-shaped sporangia; oospores form in leaf tissue",
+        "b_signal": "Cup-shaped uredinia full of echinulate (spiny) urediniospores; no branched aerial fuzz",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease develop across the season and canopy?",
+        "a_signal": "Appears early, often systemic from infected seed; tends to plateau and is rarely yield-limiting",
+        "b_signal": "Starts low in canopy and moves upward, can escalate rapidly to severe defoliation late season under favorable weather",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather and temperature favored the outbreak?",
+        "a_signal": "Cool, wet, humid conditions (roughly 15-25C) with prolonged leaf wetness",
+        "b_signal": "Warm, humid conditions with frequent rain/dew; overwinters only where kudzu or living soybean persists",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are pods and seed affected?",
+        "a_signal": "Pods and seeds can be infected, leaving a white crusty layer of oospores on the seed coat",
+        "b_signal": "Primarily a leaf disease; pods rarely show the characteristic pustules",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Soybean downy mildew, caused by the oomycete Peronospora manshurica, is a common, generally minor foliar disease across most US soybean-growing regions. Upper leaf surfaces show pale green to light yellow indefinite blotches that enlarge and turn brown; the diagnostic sign is a soft, downy white-to-gray fuzz of branched sporangiophores on the corresponding lower surface, favored by cool, wet, humid weather. The pathogen is often seedborne, producing systemic infections and leaving a whitish oospore crust on infected seed. Despite conspicuous symptoms it seldom causes economic yield loss.",
+    "narrative_b": "Soybean rust, caused by the obligate fungus Phakopsora pachyrhizi, is a potentially devastating foliar disease. It begins as tiny tan to reddish-brown angular lesions on lower-canopy leaves, each bearing one or more raised, erupting uredinia (pustules) on the underside that release powdery urediniospores. Under warm, humid, wet conditions it spreads rapidly up the canopy, causing severe premature defoliation and substantial yield loss. In the US it cannot overwinter in most areas and must reintroduce each season from southern overwintering reservoirs (notably kudzu and surviving soybean along the Gulf Coast), making its appearance and timing strongly region- and season-dependent.",
+    "management_a": "Use disease-free or treated seed and resistant/tolerant varieties; rotate crops and manage residue. Foliar fungicides are rarely justified for downy mildew alone given its low yield impact, but seed treatments can reduce systemic seedborne infection where seed quality is a concern.",
+    "management_b": "Scout lower canopy intensively from flowering onward and track regional sentinel-plot/spore reports. Apply triazole and/or QoI (strobilurin) foliar fungicides preventively or at first detection, timed around R1-R3, since rust escalates rapidly once established; resistant cultivars and accurate, timely diagnosis are critical to avoid major yield loss.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My soybean leaves, mostly down in the middle and lower part of the canopy, have pale green and yellow flecks and patchy spots on the top side that are spreading and running together. It's been humid, and the worst leaves are yellowing up and starting to drop early.",
+      "decisive_lay_a": "Flip the leaf over and look on the underside for soft, cottony or fuzzy white-to-pale-gray patches of mold that sit right under the yellow spots and rub right off with your finger.",
+      "decisive_lay_b": "Flip the leaf over and look on the underside for tiny raised bumps like little volcanoes, tan to reddish-brown, that break open and let go of a fine rusty powder when you smear them.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

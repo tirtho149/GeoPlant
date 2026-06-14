@@ -1,0 +1,70 @@
+{
+  "pair_id": "cucumber__cucurbit-downy-mildew__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-irregular chlorotic/necrotic leaf lesions on cucumber foliage and can cause rapid canopy collapse, so early foliar symptoms are easily confused at a distance. They diverge on lesion geometry, the sporulation sign on the underside, and\u2014decisively\u2014whether the stem/crown shows a gummy cankered lesion.",
+    "shared_presentation": "Yellow to brown leaf lesions on a cucumber canopy progressing to widespread foliar blighting and defoliation, often appearing mid-season under warm humid conditions, with the potential for rapid loss of the vine and sunscald of exposed fruit.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are symptoms confined to leaves, or do stems/crown show cankering too?",
+        "a_signal": "Strictly foliar lesions; stems and crown remain healthy with no cankers",
+        "b_signal": "In addition to leaves, stems and crown develop tan-to-gray cankers, often near nodes",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and boundary of the leaf lesions?",
+        "a_signal": "Lesions sharply angular, blocky, bounded by leaf veins, giving a mosaic/tile-like pattern",
+        "b_signal": "Lesions roundish-to-irregular, often starting at leaf margins as wedge-shaped tan zones, NOT vein-limited",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When the leaf is flipped and held in humidity, what sign appears on the underside of a lesion?",
+        "a_signal": "Fuzzy gray-to-purple downy sporulation (sporangiophores) on the lower leaf surface under dew/humidity",
+        "b_signal": "No downy growth; instead tiny black pycnidia/perithecia dotting tan lesions and stem cankers, sometimes exuding amber gummy ooze",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is there a gummy exudate associated with the lesions?",
+        "a_signal": "No gummy exudate; lesions are dry angular chlorotic-necrotic patches",
+        "b_signal": "Amber-to-reddish gummy beads ooze from stem cankers (the namesake 'gum'), drying to a crust",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What moisture/temperature regime is driving the outbreak?",
+        "a_signal": "Favored by prolonged leaf wetness, dew, cool-to-moderate temps (~15-25C); spreads via airborne sporangia on wind from southern inoculum",
+        "b_signal": "Favored by warm wet weather (~24-29C) and overhead irrigation; survives on debris/seed and spreads by rain-splash locally",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease move through plant and field?",
+        "a_signal": "Begins on older crown leaves and sweeps upward/outward rapidly as a foliar epidemic once spores arrive",
+        "b_signal": "Often enters through wounds/nodes; girdling stem cankers wilt whole runners while leaves elsewhere may still look green",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Cucurbit downy mildew is an obligate oomycete (Pseudoperonospora cubensis) that attacks leaves only. Look for pale-yellow angular spots on the upper surface that are sharply confined by the veins, producing a blocky, tile-like mosaic. Under dew or high humidity, flip the leaf: a fuzzy gray-to-purple downy mat of sporangiophores forms on the underside directly beneath the lesions\u2014this is the defining sign. Lesions brown and coalesce, and an unprotected field can defoliate within days once airborne sporangia arrive, typically blowing northward from overwintering southern sources. Stems and fruit are not directly attacked; the damage is loss of photosynthetic canopy.",
+    "narrative_b": "Gummy stem blight (Stagonosporopsis cucurbitacearum; black rot phase on fruit) is a fungus that hits leaves, stems, crown, and fruit. Leaf lesions are roundish-to-irregular tan zones, often wedge-shaped from the margin inward and NOT limited by veins, frequently speckled with tiny black pycnidia. The diagnostic feature is on the stem: tan-to-gray cankers near nodes or wounds that exude amber-to-reddish gummy droplets which dry to a crust, and these girdling cankers can wilt entire runners. On fruit it causes black rot. Survival on infested debris and seed plus rain-splash spread make sanitation and seed health central.",
+    "management_a": "Use forecasting (e.g., the Cucurbit Downy Mildew ipmPIPE) to time the first spray ahead of spore arrival; deploy targeted oomycete-specific fungicides (e.g., cyazofamid, oxathiapiprolin, fluopicolide, mandipropamid) on a protective schedule, rotate FRAC groups to avoid resistance, plant tolerant/resistant cultivars, and improve airflow to shorten leaf wetness.",
+    "management_b": "Start with pathogen-free/treated seed and transplants; rotate out of cucurbits 2-3 years; bury or remove crop debris; avoid plant wounding and reduce overhead irrigation/leaf wetness; apply protectant plus systemic fungicides (chlorothalonil, plus QoI/DMI/SDHI products) on a preventive schedule with FRAC rotation, scouting nodes for early cankers.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My cucumber leaves are breaking out in yellow-to-brown blotchy patches that are spreading fast across the canopy, and a lot of the leaves are dying off and dropping. It blew up mid-season in the warm, muggy weather, and now the vines are thinning out so bad that the exposed fruit is starting to get scalded by the sun.",
+      "decisive_lay_a": "Flip the leaves over and look at the underside, especially in the early morning when there's dew: you'll see a fuzzy gray-to-purple downy coating sitting right under the yellow patches.",
+      "decisive_lay_b": "No fuzzy growth at all. Instead look for tiny black specks (like ground pepper) peppered across the tan dead patches and on cracked, cankered stems, and sometimes amber sticky gum oozing out of the stem.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

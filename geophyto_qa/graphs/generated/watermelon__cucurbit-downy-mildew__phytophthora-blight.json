@@ -1,0 +1,70 @@
+{
+  "pair_id": "watermelon__cucurbit-downy-mildew__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause rapid foliar collapse and water-soaked lesions on watermelon during warm, wet weather, and both can devastate a field quickly, so a scout seeing widespread wilting/blighted vines can mistake one for the other. They diverge sharply on which plant parts are attacked: downy mildew is a strictly foliar disease driven by leaf wetness, while Phytophthora blight is a soilborne crown/root/fruit rotter that also blights foliage. Their pathogen signs and lesion architecture differ enough that a careful examination resolves them.",
+    "shared_presentation": "Sudden appearance of water-soaked, angular-to-irregular leaf lesions that brown and coalesce, causing rapid vine collapse and field-scale defoliation under warm, humid, rainy conditions. Both can produce abundant sporulation in high humidity and both spread explosively after storms, so the early field impression of \"vines dying fast after rain\" is essentially identical.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Is the disease confined to leaves, or does it also rot the crown, roots, and fruit?",
+        "a_signal": "Symptoms restricted to foliage; crown, taproot, and fruit on the soil remain firm and healthy",
+        "b_signal": "Crown/lower stem girdling and brown root rot present, with fruit rotting where it contacts wet soil",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and boundary of the leaf lesions?",
+        "a_signal": "Lesions are angular, sharply bounded by leaf veins, yellow-to-brown, giving a blocky mosaic pattern",
+        "b_signal": "Lesions are irregular/round, water-soaked and rapidly expanding without vein limitation, often starting at leaf margins",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the underside of a fresh lesion in the morning (or after dew/incubation) under a hand lens: what sporulation is present?",
+        "a_signal": "Fine grayish-purple, fuzzy downy growth (sporangiophores) on the lower leaf surface only, confined to lesions",
+        "b_signal": "White, cottony/mealy mold of sporangia on any infected tissue including stems, crown, and fruit surfaces, especially fruit",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "Where does whole-plant death originate and how does it move?",
+        "a_signal": "Decline is top-down/leaf-by-leaf; defoliation progresses across the canopy while the vine base stays intact",
+        "b_signal": "Sudden permanent wilt of the whole vine from a girdled, water-soaked crown lesion; vine collapses from the base",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "How does field distribution relate to soil moisture and drainage?",
+        "a_signal": "Spread is canopy-driven and aerial, favoring leaf-wetness duration; pattern follows wind/dew, not necessarily low spots",
+        "b_signal": "Hotspots concentrate in low, poorly drained, flooded areas and along irrigation/run-off paths; fruit on wet ground rots first",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "On infected fruit, what does the rot look like?",
+        "a_signal": "No fruit rot; downy mildew does not infect watermelon fruit",
+        "b_signal": "Fruit develops a firm-to-soft depressed lesion topped with dense white sugary/yeast-like mold (sporangia)",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Cucurbit downy mildew is an obligate, airborne oomycete (Pseudoperonospora cubensis) that infects only the foliage. Watch for angular, vein-delimited chlorotic-to-necrotic lesions on the upper leaf surface with a matching patch of fine grayish-purple downy sporulation on the lower surface, best seen in early morning after a humid night. It overwinters in frost-free regions and arrives on watermelon via long-distance windborne sporangia, so outbreaks track the seasonal northward spread of inoculum. The crown, roots, and fruit are never affected; damage is purely from progressive leaf blighting and defoliation that exposes fruit to sunscald and reduces sugar accumulation.",
+    "narrative_b": "Phytophthora blight (Phytophthora capsici) is a soilborne, water-loving oomycete that attacks all plant parts. The hallmark is a water-soaked, girdling crown and root rot that causes sudden, permanent wilt, plus a devastating fruit rot in which contact lesions on the soil-facing side become covered with dense white cottony sporangial mold. Foliar lesions are irregular, rapidly expanding, and water-soaked rather than vein-limited. The pathogen produces motile zoospores that swim in free water, so disease explodes in low, flooded, poorly drained areas and follows surface water and splash. It survives in soil for years as oospores, making field history and drainage critical.",
+    "management_a": "Use resistant/tolerant varieties where available, apply oomycete-specific fungicides preventively (e.g., cyazofamid, mandipropamid, oxathiapiprolin, fluopicolide) on a tight schedule once regional forecasts flag the disease, and rotate FRAC groups to manage resistance. Improve canopy air movement and avoid extended leaf wetness; monitor the national cucurbit downy mildew forecasting network (ipmPIPE/cdm.ipmpipe) to time the first sprays to inoculum arrival.",
+    "management_b": "Manage water first: plant on raised beds with excellent drainage, avoid overwatering and flooding, and never plant in fields with a history of Phytophthora. Use long rotations (3-4+ years) away from cucurbits, peppers, and other hosts, and irrigate to avoid standing water. Apply targeted oomycete fungicides (oxathiapiprolin, mandipropamid, mefenoxam where not resistance-compromised) directed at crown/soil, and harvest fruit off wet ground. Sanitize equipment to prevent moving infested soil.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "After the warm, rainy weather my watermelon vines went downhill fast. The leaves got water-soaked, angular brown spots that ran together, and within a few days whole vines wilted and collapsed with the field looking burned and bare.",
+      "decisive_lay_a": "Flip the leaves over and look at the underside of the brown spots only: you'll see a fine grayish-purple, fuzzy, downy coating that stays on the bottom of the leaf and matches up with the spots on top.",
+      "decisive_lay_b": "Look for a white, cottony or mealy mold growing on any part of the plant, not just the leaves, especially on the stems, the crown at the base, and right on the fruit surface.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

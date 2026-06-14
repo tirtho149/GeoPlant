@@ -1,0 +1,70 @@
+{
+  "pair_id": "lettuce__downy-mildew__gray-mold",
+  "kind": "disease",
+  "crop": "Lettuce",
+  "member_a_label": "Downy Mildew",
+  "member_b_label": "Gray Mold",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both thrive in cool, wet/high-humidity conditions on lettuce and cause yellowing-to-necrotic foliar lesions with visible mold growth. Downy mildew lesions frequently turn brown and become secondarily colonized by Botrytis, blurring the line, and both produce whitish-to-gray fungal growth that a scout can mistake for the other. They are distinguished decisively by the structure and color of the sporulation seen under magnification.",
+    "shared_presentation": "On head and leaf lettuce in cool, humid, or wet weather: yellowing of outer/lower leaves progressing to tan-brown necrotic patches, leaf collapse, and a fuzzy mold on affected tissue. Both can rot outer wrapper leaves and cause field and postharvest losses, and both flourish under prolonged leaf wetness, dense canopies, and dew.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Are the early foliar lesions sharply delimited by leaf veins (angular) or are they soft, expanding water-soaked rots?",
+        "a_signal": "Light-green to yellow angular lesions bounded by major veins on upper leaf surface",
+        "b_signal": "Soft, brown, water-soaked decay that spreads across veins, often starting at wounds or senescing leaves",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant does damage concentrate?",
+        "a_signal": "Primarily on leaf blades (older outer leaves first), lesions remaining on foliage",
+        "b_signal": "Often at the crown, cut/wounded surfaces, senescent wrapper leaves, and stem base; collapses whole heads",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What color and texture is the mold, and on which leaf surface does it form?",
+        "a_signal": "Fine, white-to-pale-gray downy growth confined mostly to the UNDERSIDE beneath yellow lesions",
+        "b_signal": "Abundant coarse, dusty GRAY-BROWN mold (gray mold) on rotted tissue, on any surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What moisture/temperature regime preceded the outbreak?",
+        "a_signal": "Cool nights with heavy dew/fog and leaf wetness, moderate temps (favored ~10-18 C)",
+        "b_signal": "Cool, persistently wet/humid conditions plus wounding or aging tissue; thrives in storage/transit",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the lesion advance over time?",
+        "a_signal": "Yellow patches turn brown and dry; remains a leaf-spot/blight that can be secondarily invaded",
+        "b_signal": "Rapid soft rot that liquefies tissue and can topple the entire head from the base",
+        "weight": "weak"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under a hand lens or microscope, what is the sporulation structure and are sclerotia present?",
+        "a_signal": "Dichotomously branched, tree-like sporangiophores bearing hyaline sporangia (downy mildew of an oomycete); no sclerotia",
+        "b_signal": "Grape-like clusters of conidia on branched gray conidiophores; hard black sclerotia may form on/in rotted tissue",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Downy mildew (Bremia lactucae) is an obligate oomycete that first shows as pale-green to bright-yellow angular patches on the upper surface of older, outer leaves, the patches sharply limited by the major veins. In cool, dewy, foggy weather a delicate white-to-pale-gray downy felt of sporangiophores develops on the corresponding lower leaf surface. Lesions later turn tan-brown and dry; the dead tissue is a favored entry court for secondary molds (including Botrytis), which is the main source of confusion. The diagnostic sign is the dichotomously (tree-like) branched sporangiophore bearing hyaline lemon-shaped sporangia, and the absence of any sclerotia.",
+    "narrative_b": "Gray mold (Botrytis cinerea) is a broad-host necrotroph that typically enters through wounds, senescing wrapper leaves, the cut stump, or tissue already killed by other causes. It produces a soft, brown, water-soaked rot that expands across veins and can collapse and topple the whole head, often at the crown or stem base, and is a major postharvest/storage problem. The signature sign is profuse dusty gray-brown sporulation; under magnification, conidia are borne in grape-like clusters on branched conidiophores, and hard black sclerotia may develop in the rotted tissue. Both the gray dusty mold and the sclerotia distinguish it from the fine white underside down of Bremia.",
+    "management_a": "Use resistant cultivars matched to locally prevalent Bremia races and rotate them as races shift. Improve air movement and reduce leaf wetness duration (wider spacing, drip vs overhead, morning irrigation, canopy management). Scout undersides of outer leaves after dew/fog periods. Apply oomycete-targeted fungicides preventively on a forecast/risk basis (e.g., phosphonates, mandipropamid, oxathiapiprolin, cymoxanil, mefenoxam where not resistant), rotating FRAC groups; remove heavily infected crop residue.",
+    "management_b": "Minimize wounding and remove senescent/decaying leaves and crop debris that harbor inoculum and sclerotia. Lower humidity and leaf wetness via spacing, airflow, and irrigation timing; avoid over-fertilization that creates soft tissue. Harvest cleanly and rapidly cool to near 0 C with good ventilation to suppress storage rot. Apply botryticides where warranted, rotating FRAC groups to manage resistance (Botrytis develops fungicide resistance readily); consider biocontrols (e.g., Bacillus/Trichoderma-based) in integrated programs.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My lettuce is yellowing on the older outer and lower leaves, then turning tan-brown and mushy, with whole leaves wilting and collapsing. The wet weather and heavy dew seem to be making it worse, and there's a fuzzy mold showing up on the bad spots.",
+      "decisive_lay_a": "Look for a fine, soft, downy-white to grayish fuzz coating the underside of the leaf over the yellow areas, almost like a thin frosting that wipes off. There are no hard black pellets in the rotted tissue with this one.",
+      "decisive_lay_b": "Look for a thick, dusty gray-brown fuzzy mold on the rotting leaves that puffs up like dust when you touch it, and check for small, hard, black BB-like pellets or crusty black knots in or on the rotted tissue.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

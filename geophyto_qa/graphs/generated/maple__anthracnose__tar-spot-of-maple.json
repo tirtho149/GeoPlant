@@ -1,0 +1,63 @@
+{
+  "pair_id": "maple__anthracnose__tar-spot-of-maple",
+  "kind": "disease",
+  "crop": "Maple",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Tar Spot Of Maple",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are common, largely cosmetic foliar fungal diseases of Acer that produce dark spots/blotches on leaves, overwinter in fallen leaf litter, and are favored by wet conditions, so casual observers lump them as \"black/brown spots on maple leaves.\" They diverge sharply on lesion shape, distribution relative to veins, surface texture (flat vs. raised stroma), and the season the diagnostic sign matures.",
+    "shared_presentation": "Dark brown-to-black foliar spots/blotches on maple leaves during the growing season, both fungal, both non-lethal/cosmetic, both overwintering in leaf litter and spread by spring rain-splashed spores.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and distribution of the lesions on the leaf blade?",
+        "a_signal": "Irregular, angular reddish-brown to dark necrotic blotches concentrated along the midrib, major veins, and leaf margins (vein-associated, often coalescing into blight).",
+        "b_signal": "Discrete, roughly circular/rounded spots scattered across the interveinal blade, not following veins, each with a yellow halo early.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "When in the season does the diagnostic spot fully develop?",
+        "a_signal": "Most conspicuous in late spring to early summer, tied to a cool, wet spring at leaf-out; new tissue infected during expansion.",
+        "b_signal": "Begins as faint yellow-green spots in early summer but the defining black mass thickens through late summer into early fall.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Is the dark lesion flat/sunken in the leaf plane or a raised, thickened mass?",
+        "a_signal": "Lesions are flat to slightly sunken necrotic tissue, dull and papery, flush with the leaf surface.",
+        "b_signal": "Mature spot is a distinctly RAISED, glossy, wavy/furrowed black stroma 5-15 mm across that looks like a drop of dried tar sitting on the leaf.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under magnification, what fruiting structures occur on the lesion?",
+        "a_signal": "Small light-brown acervuli (40-70 um) erupting through the epidermis on the LOWER leaf surface along veins, releasing hyaline non-septate conidia.",
+        "b_signal": "A solid black fungal stroma (compacted hyphae) on the UPPER surface; ascomata/apothecia mature only after the leaf falls and overwinters.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather drives the worst outbreaks and where?",
+        "a_signal": "Prolonged cool, wet spring weather during leaf expansion; worse in shaded, humid canopies.",
+        "b_signal": "Areas with good summer-long leaf wetness and, historically, low air pollution (the fungus is SO2-sensitive), so it is sparser in heavily polluted urban cores.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Maple anthracnose (Aureobasidium apocryptum) appears at or shortly after leaf-out following a cool, wet spring. It produces irregular, angular reddish-brown to dark necrotic blotches that hug the midrib, major veins, and leaf margins, often coalescing into a blotchy leaf blight and sometimes causing leaf distortion or early drop. Lesions are flat to slightly sunken and papery, never raised. The diagnostic sign is inconspicuous light-brown acervuli (40-70 um) that erupt through the epidermis on the lower leaf surface along the veins, releasing hyaline, non-septate conidia. It overwinters in fallen leaves and on twigs.",
+    "narrative_b": "Tar spot of maple (Rhytisma acerinum) starts in early summer as faint, light green to yellow-green rounded spots scattered across the interveinal leaf blade, not tied to veins. Tiny black flecks appear within the yellow spot and, through late summer into fall, coalesce and thicken into the unmistakable raised, glossy, wavy black stroma 5-15 mm wide that resembles spilled tar with a yellow border. It is almost purely cosmetic. The fungus overwinters in the stroma on fallen leaves and produces apothecia the following spring that forcibly discharge ascospores onto newly emerging foliage. Historically suppressed in heavily SO2-polluted air, making it a rough air-quality indicator.",
+    "management_a": "Rake and remove or compost/destroy fallen leaves to reduce overwintering inoculum; prune to open the canopy for faster drying; maintain tree vigor with proper watering and mulching. Fungicides are rarely warranted and only useful as protectant sprays at bud break on high-value trees during prolonged wet springs.",
+    "management_b": "Primarily cosmetic, so management is optional: rake and remove or destroy fallen leaves in autumn to break the overwintering/ascospore cycle, ideally coordinated across neighboring properties since spores blow in. Fungicides are seldom justified; if used on small high-value trees, protectant sprays must target newly emerging spring leaves, not the mature summer spots.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My maple leaves have dark brown to black spots and blotches showing up during the growing season. They look ugly but the tree itself seems otherwise healthy and isn't dying.",
+      "decisive_lay_a": "The dark spots are flat and dull, with a dry papery feel, sitting right level with the leaf surface (not bumped up). Some may look a little sunken rather than raised.",
+      "decisive_lay_b": "The black spots are clearly raised up off the leaf, shiny and glossy with a wavy, wrinkled surface, about pea-to-dime sized, looking just like a drop of dried tar stuck on the leaf.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

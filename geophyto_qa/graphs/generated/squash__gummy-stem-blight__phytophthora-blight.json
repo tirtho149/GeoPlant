@@ -1,0 +1,63 @@
+{
+  "pair_id": "squash__gummy-stem-blight__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Squash",
+  "member_a_label": "Gummy Stem Blight",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause stem/crown lesions and rapid foliar/vine collapse on squash, and both can produce water-soaked lesions and wilting. In the field a grower sees a dying vine with a girdled stem and may not distinguish a slow-developing canker (gummy stem blight) from a soft, rapid soil-line rot (Phytophthora). Overlap is greatest on crown/stem lesions and on fruit rot. They diverge on the pathogen sign (gummy ooze + black pycnidia vs. white cottony sporangial growth), the speed of collapse, and the link to standing water.",
+    "shared_presentation": "Wilting, collapsing squash vines with darkened, girdling lesions at the crown or along the stem, plus rotting fruit. Both can show water-soaked tissue, defoliation, and plant death, often appearing in patches in the field during warm, wet weather.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "Is the affected area tied to low spots, poor drainage, or recent flooding/heavy rain and overhead irrigation?",
+        "a_signal": "Damage scattered across the field including well-drained areas; favored by warm humid weather and overhead moisture but not specifically standing water",
+        "b_signal": "Disease concentrated in low, poorly drained spots, along irrigation furrows, or wherever water pools after rain; spreads downhill with surface water",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does an affected plant go from healthy to dead?",
+        "a_signal": "Gradual decline over days to weeks as a stem canker slowly girdles the plant; foliar lesions enlarge progressively",
+        "b_signal": "Sudden, dramatic wilt and collapse within 1-3 days, often whole plant flagging at once as the crown rots through",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant does it start and what does fruit rot look like?",
+        "a_signal": "Lesions often begin at leaf margins (V-shaped tan blotches) and on stems/crown; fruit rot is firm/black with pycnidia",
+        "b_signal": "Often starts at the crown/soil line and on fruit touching wet soil; fruit develops a soft, water-soaked rot covered with white cottony mold",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and color of the stem/crown lesion?",
+        "a_signal": "Tan-to-brown dry canker, often cracked, that exudes an amber-to-reddish gummy ooze (the 'gum')",
+        "b_signal": "Dark, soft, water-soaked, mushy rot at the soil line with no gummy exudate; tissue collapses and is slimy",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What pathogen signs appear on lesions or fruit when examined closely (hand lens / after incubation in moisture)?",
+        "a_signal": "Tiny black raised dots (pycnidia/perithecia) embedded in lesions, releasing a creamy spore mass; amber gummy droplets present",
+        "b_signal": "White, dense, cottony sporangial growth (visible mold) on fruit and lesion surfaces under humid conditions; no black pycnidia, no gum",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Gummy Stem Blight (Stagonosporopsis cucurbitacearum, formerly Didymella bryoniae) is a fungal disease that develops more gradually. It produces V-shaped tan-brown lesions at leaf margins, brown stem cankers that crack and exude a characteristic amber-to-reddish gummy ooze, and a firm black rot of fruit. The diagnostic sign is abundant tiny black pycnidia (and perithecia) embedded in lesions, which release a creamy mass of spores. It is favored by warm, humid, leaf-wetness conditions and is seedborne and residue-borne, but it is not specifically tied to saturated soil.",
+    "narrative_b": "Phytophthora Blight (Phytophthora capsici) is an oomycete water mold that causes rapid, dramatic collapse. It thrives in saturated soils and is concentrated in low, poorly drained, or flooded areas, spreading with surface water and splash. Symptoms include a soft, dark, water-soaked crown/soil-line rot and a fruit rot covered with dense white cottony sporangial growth. Collapse can occur within days. There is no gummy exudate and no black pycnidia; instead the hallmark sign is the white sporangial 'sugary' mold and the tight association with standing water.",
+    "management_a": "Use disease-free/treated seed and resistant or tolerant cultivars where available; rotate 2-3 years out of cucurbits; bury or remove crop residue. Improve air circulation and avoid prolonged leaf wetness. Apply protectant and systemic fungicides (e.g., chlorothalonil rotated with QoI/SDHI or DMI chemistries) on a preventive schedule, scouting and managing for fungicide resistance.",
+    "management_b": "Manage water first: improve drainage, plant on raised beds/domed rows, avoid low spots, and use drip rather than overhead/furrow irrigation to prevent saturation. Long rotations (3-4+ years) away from cucurbits and other hosts (peppers, tomato, eggplant), and avoid moving soil/water between fields. Apply oomycete-specific fungicides (mefenoxam, where not resistant, plus rotation partners such as cyazofamid, mandipropamid, fluopicolide, phosphonates); harvest fruit promptly and keep it off wet soil.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My squash vines are wilting and collapsing, with dark, sunken rotted areas wrapping around the stem near the base, and some of the fruit is rotting. It's spreading in patches across the field during this warm, wet weather.",
+      "decisive_lay_a": "Look on the dark rotted stem areas for tiny black pinhead dots peppered in the tissue that ooze a creamy or pinkish paste, along with sticky amber gum droplets seeping out of the stem.",
+      "decisive_lay_b": "Look for a thick white, cottony or fuzzy mold growing right on the surface of the rotting fruit and stem when it's humid out, with no black dots and no gummy ooze.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

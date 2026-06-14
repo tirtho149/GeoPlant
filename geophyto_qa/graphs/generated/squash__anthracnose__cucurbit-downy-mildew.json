@@ -1,0 +1,63 @@
+{
+  "pair_id": "squash__anthracnose__cucurbit-downy-mildew",
+  "kind": "disease",
+  "crop": "Squash",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Cucurbit Downy Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce foliar leaf spots on squash that can appear angular and chlorotic-to-necrotic in early stages, and both flare under warm, wet, humid conditions. A scout glancing at yellowing, vein-bounded lesions can easily mistake one for the other before signs develop. They diverge decisively on the underside sign (downy gray-purple sporulation vs. salmon acervuli) and on whether fruit and stems are attacked.",
+    "shared_presentation": "Yellowish to tan foliar lesions on mature leaves during warm, humid weather, often beginning on older/lower leaves and capable of coalescing into large necrotic areas with rapid defoliation. Both are favored by leaf wetness and can look angular early, leading to confusion in the field.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are fruit and stems lesioned, or is the disease confined to foliage?",
+        "a_signal": "Anthracnose attacks fruit and stems too: sunken, circular, water-soaked fruit lesions that develop salmon/pink spore masses; stem and petiole cankers occur.",
+        "b_signal": "Downy mildew is essentially leaf-only; fruit and stems are not directly infected (though fruit may be poorly developed from defoliation).",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and border of the foliar lesion relative to leaf veins?",
+        "a_signal": "Anthracnose spots are more rounded to irregular, water-soaked then tan/brown, often with a darkened margin or shot-hole; not strictly bounded by veins.",
+        "b_signal": "Downy mildew lesions are angular, sharply delimited by leaf veins, appearing as a blocky chlorotic/yellow mosaic on the upper surface.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaf and inspect the underside of a lesion (ideally after a humid night or after incubating in a moist chamber) \u2014 what sign is present?",
+        "a_signal": "Anthracnose shows salmon-to-pink, sticky spore masses (acervuli, often with dark setae under a hand lens) on lesions of leaves, stems, or fruit.",
+        "b_signal": "Downy mildew shows a fuzzy gray-to-purple/violet downy growth (sporangiophores) on the LOWER leaf surface directly beneath the angular yellow spots.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the lesion field develop and spread across the canopy?",
+        "a_signal": "Anthracnose enlarges into ragged rounded blotches that may tear/shot-hole, with fruit rot becoming the most damaging phase late season.",
+        "b_signal": "Downy mildew spreads rapidly leaf-to-leaf as a wave of angular yellow patches that brown and curl, causing whole-field defoliation within days while fruit remain attached.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and inoculum source precede the outbreak?",
+        "a_signal": "Anthracnose comes from seedborne/residue inoculum, splash-dispersed in warm (24-30C) wet weather; tends to be more localized and tied to overwintered debris.",
+        "b_signal": "Downy mildew arrives via airborne sporangia (obligate parasite, cannot overwinter where cucurbits freeze out) on regional wind currents, often tracked north each season.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Anthracnose (Colletotrichum orbiculare) is a polycyclic, splash-dispersed fungal disease that attacks all above-ground parts of squash. Foliar lesions start water-soaked, then turn tan to brown and rounded-to-irregular, often tearing into a shot-hole appearance. The hallmark is the salmon-to-pink, slimy spore masses (acervuli) produced in lesions\u2014especially on stems and on sunken, circular fruit lesions that cause serious postharvest rot. Inoculum is seedborne and survives on crop residue; warm (24-30C), wet, splashy weather drives spread. Look-alike confusion with downy mildew is greatest on foliage before fruit/stem symptoms or the salmon sporulation appear.",
+    "narrative_b": "Cucurbit Downy Mildew (Pseudoperonospora cubensis) is an obligate oomycete that infects only the leaves. Upper surfaces show angular, vein-delimited chlorotic patches that form a blocky yellow mosaic; beneath these, under humid conditions, a gray-to-purple downy growth of sporangiophores erupts\u2014the definitive sign. The disease spreads explosively via airborne sporangia, causing rapid wholesale defoliation that exposes fruit to sunscald and stunts yield, though it never rots the fruit directly. Because the pathogen cannot overwinter where cucurbits freeze out, U.S. outbreaks march northward each season from southern overwintering reservoirs, tracked by forecasting networks. Early angular yellowing mimics anthracnose until the leaf is flipped.",
+    "management_a": "Use certified disease-free/treated seed and resistant cultivars; rotate 2-3 years out of cucurbits and bury or remove debris. Avoid overhead irrigation and working plants when wet to limit splash dispersal. Apply protectant fungicides (chlorothalonil, mancozeb) preventively in warm wet weather, rotating with strobilurin/SDHI chemistries; protect fruit through harvest and handle gently to prevent rot.",
+    "management_b": "Monitor the national Cucurbit Downy Mildew forecast and scout undersides of leaves as risk approaches your region. Plant tolerant/resistant cultivars, promote air movement and rapid leaf drying, and avoid prolonged leaf wetness. Begin oomycete-specific fungicides preventively when forecasts indicate arrival\u2014mefenoxam, cyazofamid, fluopicolide, propamocarb, oxathiapiprolin, or ametoctradin\u2014rotated by FRAC group with a chlorothalonil base; protectant-only programs fail once disease establishes.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My older, lower squash leaves are getting yellowish to tan spots in this warm, muggy weather, and the patches are running together into big dead-looking areas. The leaves are browning out and dropping fast, and it's creeping up the plant.",
+      "decisive_lay_a": "Look for salmon or pinkish, slimy, sticky ooze sitting on the spots on leaves, stems, or fruit; under a hand lens you may also see tiny dark bristles in those pink masses.",
+      "decisive_lay_b": "Flip the leaf over and look on the underside right beneath the yellow spots for a fuzzy gray-to-purple downy growth.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pair_id": "lettuce__sclerotinia-stem-rot__southern-blight",
+  "kind": "disease",
+  "crop": "Lettuce",
+  "member_a_label": "Sclerotinia Stem Rot",
+  "member_b_label": "Southern Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne fungal pathogens that attack the crown and lower stem of lettuce at or near the soil line, producing a watery soft rot and rapid wilt/collapse of the head, plus white mycelium on infected tissue. In the field a wilting, collapsing lettuce plant with a rotting crown looks nearly identical for the two until you examine the diagnostic sign (sclerotia and mycelial habit), which is why they are routinely confused.",
+    "shared_presentation": "Wilting and collapse of the lettuce head, soft watery rot of the crown and lower stem at the soil line, and white cottony mycelial growth on affected tissue. Both cause plants to flag and die in patches, leaving slimy, decayed basal tissue, and both survive in soil as sclerotia.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What soil temperature and season favored the outbreak?",
+        "a_signal": "Cool to moderate conditions (roughly 15-20 C), common in spring/fall and cooler coastal production",
+        "b_signal": "Hot weather, high soil temperatures (roughly 27-35 C), mid-to-late summer outbreaks",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the rot concentrated?",
+        "a_signal": "Crown and lower stem/petioles at or just below the soil line, rot can be on basal leaves contacting wet soil",
+        "b_signal": "Strictly the crown and stem base right at the soil line, often with a distinct lesion girdling the stem",
+        "weight": "weak"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "How does the infected tissue decay?",
+        "a_signal": "Soft, watery, brown rot that becomes dry and shredded as the plant collapses",
+        "b_signal": "Watery soft rot at base with a sharp margin; tissue tan to brown and rapidly girdled",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does the white mycelium look like on the tissue?",
+        "a_signal": "Dense, fluffy, fine white cottony mycelium (no obvious coarse strands or fan pattern)",
+        "b_signal": "Coarse, white, fan-shaped mycelial strands radiating across the stem base and onto adjacent soil/debris",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the sclerotia produced in/on the mycelium under magnification.",
+        "a_signal": "Numerous small, irregular, poppy-seed-sized black sclerotia (~0.5-2 mm), embedded in the white mycelium",
+        "b_signal": "Round, uniform, tan-to-reddish-brown sclerotia resembling mustard/cabbage seeds (~1-3 mm), turning brown with age, scattered on mycelium and soil surface",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Sclerotinia minor causes Sclerotinia stem (lettuce drop) rot, favored by cool, moist conditions. It attacks the crown and lower petioles at the soil line, producing a soft watery brown rot, a wilt/collapse of the whole head, and dense fluffy white cottony mycelium. The diagnostic sign is abundant small, irregular, poppy-seed-sized black sclerotia (about 0.5-2 mm) embedded in the mycelium and within rotted tissue.",
+    "narrative_b": "Athelia rolfsii (Sclerotium rolfsii) causes Southern blight, a hot-weather disease that girdles the crown and stem base at the soil line. It produces a watery basal rot, rapid wilt, and characteristic coarse white fan-shaped mycelial strands radiating onto the soil and debris. The decisive sign is its uniform, round, tan-to-reddish-brown sclerotia resembling mustard or cabbage seeds (about 1-3 mm), which are markedly larger and more regular than those of Sclerotinia.",
+    "management_a": "Rotate away from susceptible broadleaf hosts, deep-plow to bury sclerotia, improve drainage and air circulation, avoid dense planting, and apply registered fungicides (e.g., boscalid/SDHI or Coniothyrium minitans biocontrol) at thinning; remove and destroy infected plants and debris.",
+    "management_b": "Reduce soil temperature and moisture stress, deep-plow to bury sclerotia below the active zone, remove crop debris and organic mulch that fuel the fungus, rotate to grasses/cereals (non-hosts), and apply registered fungicides (e.g., flutolanil, PCNB, or azoxystrobin) to the crown/soil line; solarize beds in fallow where feasible.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My lettuce is wilting and flopping over, with the heads collapsing in patches across the bed. Down at the soil line the crown and lower stem have gone soft, watery, and slimy, and there's a white cottony fuzzy growth all over the rotted base.",
+      "decisive_lay_a": "Look in the white cottony growth for lots of tiny, hard, irregular black specks about the size of poppy seeds (roughly 1/32 to 1/16 inch), buried right in the fuzz.",
+      "decisive_lay_b": "Look on the white growth and on the soil surface around the plant for round, even, tan to reddish-brown balls about the size of mustard or cabbage seeds (roughly 1/16 to 1/8 inch) that darken to brown as they age.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

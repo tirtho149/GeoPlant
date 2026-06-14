@@ -1,0 +1,42 @@
+{
+  "pair_id": "wheat__powdery-mildew__wheat-leaf-rust",
+  "kind": "disease",
+  "crop": "Wheat",
+  "member_a_label": "Powdery Mildew",
+  "member_b_label": "Wheat Leaf Rust",
+  "source": "llm-generated (validated)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both raise discrete fungal growths on wheat leaves that a quick look reads as 'pustules'.",
+    "shared_presentation": "Raised fungal growths scattered over the leaf blades.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Which leaf surface and part of the canopy is affected?",
+        "a_signal": "Lower, shaded leaves, growth on both surfaces, superficial.",
+        "b_signal": "Mainly the upper leaf surface, scattered up the canopy.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Color the growth and rub it with a finger.",
+        "a_signal": "White-to-gray powdery growth that wipes off, leaving yellowed tissue.",
+        "b_signal": "Orange-brown raised pustules that erupt and leave rusty spores staining the finger.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather favored it?",
+        "a_signal": "Cool, humid weather, dense high-nitrogen canopy, no free water needed.",
+        "b_signal": "Mild, moist conditions with dew and arrival of wind-blown urediniospores.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Because the growth is white, powdery, and wipes off on the lower leaves, I classify this as powdery mildew rather than wheat leaf rust.",
+    "narrative_b": "Because the leaves bear orange-brown pustules that rupture and stain the finger with rusty spores, I classify this as wheat leaf rust rather than powdery mildew.",
+    "management_a": "Powdery mildew: use resistant varieties, avoid excess nitrogen and dense stands, and apply a labeled fungicide if it reaches the upper canopy before heading.",
+    "management_b": "Wheat leaf rust: plant resistant varieties and apply a labeled fungicide at the first sign of active pustules, especially when regional rust alerts indicate early arrival.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "squash__cucurbit-downy-mildew__powdery-mildew",
+  "kind": "disease",
+  "crop": "Squash",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Powdery Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are common foliar diseases of squash that begin as chlorotic/yellow patches on upper leaf surfaces and lead to leaf decline and defoliation. Growers frequently confuse early downy mildew chlorosis with the early stage of powdery mildew, and both peak in mid-to-late season. The decisive separation is the sign on the leaf undersurface (grey-purple sporulation for downy vs. white superficial powder for powdery), but early lesions look alike to the unaided eye.",
+    "shared_presentation": "Yellow to chlorotic patches on the upper surface of older/lower leaves first, progressing upward through the canopy. Both cause loss of leaf function, premature senescence, defoliation, and reduced fruit quality/sunscald exposure. Both favor dense canopies and are most damaging from mid-season onward on cucurbits including squash.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and boundary of the upper-surface chlorotic lesions?",
+        "a_signal": "Angular chlorotic-to-necrotic lesions sharply bounded by leaf veins, giving a blocky/mosaic appearance",
+        "b_signal": "Diffuse, rounded, non-vein-limited yellow patches that often coincide with white surface colonies",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaf and examine the lower surface under the chlorotic patches (ideally early morning or after humid night) with a hand lens.",
+        "a_signal": "Fine grey-to-purplish-brown downy fuzz (sporangiophores) confined to the underside beneath each angular lesion",
+        "b_signal": "No undersurface fuzz; instead a white-to-tan powdery growth that wipes off, present on BOTH leaf surfaces and petioles",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does the fungal growth on the UPPER leaf surface look like and does it rub off?",
+        "a_signal": "Upper surface shows only chlorosis/necrosis with no superficial growth that rubs off",
+        "b_signal": "Conspicuous white talc-like powdery colonies on the upper surface that smear when rubbed with a finger",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What moisture/temperature conditions preceded the outbreak?",
+        "a_signal": "Follows extended leaf wetness, rain, fog, heavy dew, and moderate-cool temperatures (~59-68F); needs free water/high humidity",
+        "b_signal": "Develops in warm, dry-canopy conditions with high ambient humidity but no free water; thrives in shaded dense plantings",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast and in what pattern does damage advance across the field/canopy?",
+        "a_signal": "Rapid regional spread via wind-borne sporangia; lesions coalesce and leaves brown and die quickly once established",
+        "b_signal": "Slower, plant-to-plant build-up; colonies enlarge and merge, leaves yellow then turn brown and brittle over weeks",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which tissues besides leaf blades show colonization?",
+        "a_signal": "Largely restricted to leaf blades; petioles and stems generally free of visible signs",
+        "b_signal": "Petioles, stems, and leaf undersides also colonized by white mycelium, not just the blade",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Cucurbit downy mildew, caused by the obligate oomycete Pseudoperonospora cubensis, produces angular chlorotic lesions on the upper leaf surface that are sharply delimited by the leaf veins, creating a blocky mosaic. Under humid conditions a sparse grey-to-purplish downy sporulation appears strictly on the lower leaf surface beneath each lesion. Lesions turn necrotic and coalesce, killing leaves rapidly. It requires free water/leaf wetness and cool-to-moderate temperatures, and spreads long distances as wind-blown sporangia, often arriving on a regional epidemic front.",
+    "narrative_b": "Powdery mildew, caused by the fungus Podosphaera xanthii, forms superficial white-to-tan powdery colonies of mycelium and conidia that develop on both upper and lower leaf surfaces as well as petioles and stems. The growth wipes off readily. Underlying tissue yellows then browns and becomes brittle. It is favored by warm temperatures, high ambient humidity, and dense shaded canopies, but unlike downy mildew it does NOT require free water on the leaf and is often worse during dry-but-humid weather.",
+    "management_a": "Use resistant/tolerant cultivars where available and monitor the national cucurbit downy mildew forecasting network (cdm.ipmpipe.org) for the advancing front. Apply oomycete-targeted fungicides preventively when risk is reported (e.g., cyazofamid, oxathiapiprolin, fluopicolide, mandipropamid, with chlorothalonil as a protectant base); rotate FRAC groups to avoid resistance. Improve airflow, orient rows for drying, avoid overhead irrigation late in the day to reduce leaf wetness.",
+    "management_b": "Plant resistant cultivars and scout undersides/older leaves weekly; treat at first colony detection. Use sulfur, potassium bicarbonate, or oils for low pressure, and rotate single-site fungicides across FRAC groups (e.g., DMIs, SDHIs, quinoxyfen) to manage resistance, which is common in P. xanthii. Reduce canopy density and shading, and avoid excess nitrogen. Free water is not required, so irrigation timing matters less than for downy mildew.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My older, lower squash leaves are turning yellow in blotchy patches on top, and it's slowly creeping up the plant. The affected leaves are drying out and dying early, which is leaving the fruit exposed to sunburn. It's worse where the vines are thick and crowded.",
+      "decisive_lay_a": "Flip the leaf over: directly under each yellow patch you'll see fine grayish to purplish-brown fuzzy growth on the underside only, and the yellow patches tend to look blocky or angular, boxed in by the leaf veins.",
+      "decisive_lay_b": "A white-to-tan powdery, dusty coating that you can rub off with your finger, showing up on BOTH the top and bottom of the leaves and even on the leaf stems, not just confined to the underside.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

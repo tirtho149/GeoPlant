@@ -1,0 +1,70 @@
+{
+  "pair_id": "common-bean__dry-bean-rust__halo-blight",
+  "kind": "disease",
+  "crop": "Common Bean",
+  "member_a_label": "Dry Bean Rust",
+  "member_b_label": "Halo Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small, roughly circular foliar lesions on common bean leaves that can be surrounded by a yellow (chlorotic) zone, and field scouts often confuse early rust pustules with the small water-soaked/necrotic spots of halo blight, especially before each disease shows its diagnostic sign (fungal pustules vs. bacterial ooze/systemic halo).",
+    "shared_presentation": "Scattered small circular leaf lesions, each commonly ringed by a yellow halo, appearing mid-season on bean foliage and capable of causing premature defoliation and yield loss.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Examine a lesion with a hand lens: is there a raised, dusty, rupturing pustule that releases powder, or a smooth water-soaked/greasy spot with no powder?",
+        "a_signal": "Raised reddish-brown (later black) erumpent pustules that rupture the epidermis and shed rust-colored urediniospores onto fingers/tissue",
+        "b_signal": "Smooth, flat, water-soaked or greasy-looking necrotic spots with no powdery spores; bacterial ooze may exude in humid conditions",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the nature of the yellow zone around the lesion and the lesion center?",
+        "a_signal": "Narrow chlorotic ring tightly encircling a discrete pustule; center is a fungal fruiting structure",
+        "b_signal": "Broad, diffuse greenish-yellow halo (often 2-3x lesion width) surrounding a small reddish-brown necrotic center",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are pods, stems, and growing points involved, and does the plant show systemic yellowing/stunting?",
+        "a_signal": "Lesions largely confined to leaves (and sometimes pods/stems as pustules); no systemic chlorosis or stunting",
+        "b_signal": "Pods show water-soaked greasy spots; systemic infection causes general leaf chlorosis, stunting, and a 'systemic chlorosis' of new growth",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do lesion color and structure change over time?",
+        "a_signal": "Pustules mature from white flecks to reddish-brown uredinia, later to dark brown/black telia",
+        "b_signal": "Water-soaked spots enlarge into reddish-brown necrotic blotches; halos may fade as tissue dies and lesions coalesce",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather favored the outbreak?",
+        "a_signal": "Moderate temperatures (60-75F) with prolonged leaf wetness/dew and high humidity favor rust",
+        "b_signal": "Cool, moist conditions (low 70s F and below) with wind-driven rain favor halo blight; disease worsens in cool seasons",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Does the lesion test positive for bacterial streaming or is it seedborne in pattern?",
+        "a_signal": "No bacterial streaming; spread by airborne urediniospores, not seed-associated initial foci",
+        "b_signal": "Bacterial streaming visible under microscope from cut lesion; often appears in patches tracing to infected seed lots",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Dry bean rust is a fungal disease (Uromyces appendiculatus) recognized by raised, erumpent pustules on leaves. Early white flecks develop into reddish-brown, powdery uredinia surrounded by a narrow chlorotic ring; rubbing a lesion deposits rust-colored spores on the finger. Pustules later turn dark brown to black (telia). Infection is largely foliar (occasionally pods/stems), without systemic chlorosis or stunting. Heavy infection causes premature defoliation. Spread is by airborne urediniospores under moderate temperatures with prolonged leaf wetness.",
+    "narrative_b": "Halo blight is a bacterial disease (Pseudomonas savastanoi pv. phaseolicola). Leaf lesions begin as small water-soaked spots that develop reddish-brown necrotic centers surrounded by a characteristic broad, diffuse greenish-yellow halo. There are no powdery spores; instead, cut lesions show bacterial streaming, and ooze may form in humidity. The bacterium is seedborne, so outbreaks often trace to infected seed lots and appear in patches. Systemic infection produces general leaf chlorosis, stunting, and greasy water-soaked spots on pods. Cool, moist weather with wind-driven rain favors disease.",
+    "management_a": "Plant rust-resistant cultivars and use fungicide programs (e.g., triazoles/strobilurins) when pustules first appear, especially during prolonged leaf-wetness periods. Rotate crops, manage residue, and scout the lower canopy. Avoid overhead irrigation timing that prolongs leaf wetness.",
+    "management_b": "Use certified pathogen-free (tested) seed since the bacterium is seedborne; plant resistant cultivars. Rotate out of beans, avoid working fields when foliage is wet, and minimize overhead irrigation. Copper-based bactericides give partial suppression but will not cure systemic infection; rogue and destroy infected plants/seed lots.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My bean plants have scattered small round spots on the leaves, and a lot of them have a yellow ring around the edge. It started mid-season and now some leaves are dropping early, so I'm worried about the yield.",
+      "decisive_lay_a": "Look for raised reddish-brown to rusty bumps on the leaves that break open and rub off a rust-colored, powdery dust onto your fingers or a tissue (they turn black later in the season).",
+      "decisive_lay_b": "Look for flat, smooth spots that look wet, greasy, or water-soaked with no powder at all; in damp weather you may see a sticky, slimy ooze on them, but nothing dusty rubs off.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

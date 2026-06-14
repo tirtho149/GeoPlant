@@ -1,0 +1,63 @@
+{
+  "pair_id": "douglas-fir__rhabdocline-needlecasts__swiss-needle-cast",
+  "kind": "disease",
+  "crop": "Douglas-Fir",
+  "member_a_label": "Rhabdocline Needlecasts",
+  "member_b_label": "Swiss Needle Cast",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are foliar needlecast diseases of Douglas-fir that cause needle discoloration (yellowing/browning), premature needle drop, and thin, off-color crowns, especially severe in plantation and Christmas tree settings. Symptoms peak in spring and growers/scouts frequently mistake one for the other from a distance because both produce yellow-mottled to brown needles and sparse foliage. They are reliably separated only by the location, color, and arrangement of the fruiting bodies (signs) on the needle.",
+    "shared_presentation": "Discolored (yellow-green to brown) needles on Douglas-fir, premature shedding of older needles leaving only the current-year needles, thinning crowns, and reduced vigor. Both worsen on stressed trees, become most visible in spring, and are economically important on Christmas-tree and timber plantations.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Examine the underside of an infected needle under magnification: are there rows of small black dots (fruiting bodies), and where are they located relative to the stomatal rows?",
+        "a_signal": "Fruiting bodies (apothecia) are reddish-brown to dark, elongate elliptical, and rupture through the needle surface, NOT confined to the stomatal lines",
+        "b_signal": "Two parallel rows of tiny black, spherical pseudothecia emerge precisely from the white stomatal lines (stomata) on the needle underside",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the pattern and color of the needle discoloration?",
+        "a_signal": "Distinct mottling: yellow to reddish-brown blotches/bands, often with sharply defined transverse banding on the needle by late winter/spring",
+        "b_signal": "Uniform yellowing then dull yellow-brown of the whole needle (chlorotic, not sharply blotched), older needles affected first",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How quickly after infection do needles show symptoms and drop?",
+        "a_signal": "Symptoms appear on current-year needles the spring following infection; infected needles typically cast within ~1 year",
+        "b_signal": "Needles may remain on the tree 1-2+ years while progressively yellowing; older needle age classes retained longer before casting",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which needle age classes carry the most obvious signs and damage?",
+        "a_signal": "Primarily the youngest (current-year) needles show the conspicuous bands and fruiting bodies",
+        "b_signal": "Older needles (1-, 2-, 3-year) show heaviest yellowing and the densest stomatal pseudothecia before being shed",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "When the fruiting bodies open, what is their shape and how do they rupture the needle?",
+        "a_signal": "Elongate, blister-like apothecia that split the epidermis open longitudinally exposing a reddish-brown fertile surface",
+        "b_signal": "Minute, round, black globose pseudothecia that protrude individually like beads from each stomatal pore, never blister-like",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Rhabdocline needlecast, caused by Rhabdocline spp., infects current-season Douglas-fir needles in spring as they expand. Through fall and winter the infections develop into yellow then reddish-brown mottled blotches and bands. By the following spring, elongate reddish-brown apothecia rupture through the needle surface (often on the underside), releasing ascospores that infect the new flush. Infected needles are typically cast within a year, so damage concentrates on the youngest needles. It is most damaging on Christmas-tree plantations and certain interior seed sources.",
+    "narrative_b": "Swiss needle cast, caused by Phaeocryptopus gaeumannii (now Nothophaeocryptopus gaeumannii), colonizes needles internally and produces rows of tiny black globose pseudothecia that emerge from the stomata on the needle underside. The fungus physically blocks stomata, reducing gas exchange and causing progressive uniform yellowing, especially of older needle age classes, followed by premature casting. Because needles can be held 1-2+ years while declining, multiple age classes are affected. Disease severity is strongly tied to mild, wet spring weather and is most severe in coastal regions.",
+    "management_a": "Improve air circulation and reduce leaf wetness through proper spacing, pruning, and weed control; remove and destroy heavily infected/cast needles where feasible. Plant resistant seed sources/provenances. Apply protectant fungicides (e.g., chlorothalonil) timed to protect the new flush as buds break in spring, with follow-up applications during needle elongation. Scout Christmas-tree blocks annually.",
+    "management_b": "Plant adapted, less-susceptible seed sources and avoid high-hazard coastal sites for plantations; favor wider spacing and good air movement to dry foliage. Protectant fungicides (chlorothalonil) timed at budbreak and during needle elongation in spring reduce stomatal colonization, particularly important for Christmas-tree growers. Monitor pseudothecia density on stomata as a severity index; consider thinning to reduce stress in affected stands.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My Douglas-firs look off-color, with needles turning yellow-green to brown, and the older needles are dropping early so the branches are left with mostly just this year's growth. The crowns are looking thin and the trees seem to be losing vigor, and it's most noticeable in spring.",
+      "decisive_lay_a": "Look for reddish-brown to dark, somewhat oval raised bumps that break right out through the surface of the needle, scattered on the needle rather than lined up in neat rows.",
+      "decisive_lay_b": "Flip the needles over and look for two straight rows of tiny black, round dots running along the white breathing lines on the underside of the needle.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

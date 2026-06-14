@@ -1,0 +1,70 @@
+{
+  "pair_id": "grape__downy-mildew__powdery-mildew",
+  "kind": "disease",
+  "crop": "Grape",
+  "member_a_label": "Downy Mildew",
+  "member_b_label": "Powdery Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are common foliar grape diseases that produce discolored leaf lesions and fungal-looking growth on leaves and clusters, and growers frequently lump them as \"the mildews.\" Early symptoms (chlorotic/dull patches, white growth) can look superficially similar from a distance, and both can damage fruit. The resolving difference is which leaf surface bears the sign and the nature/conditions of that sign.",
+    "shared_presentation": "Pale/chlorotic to discolored patches on leaves, whitish fungal growth visible on foliage and developing berries, distortion and drop of infected leaves, and reduced fruit set or rotted/cracked berries late season. Both thrive in the growing season and can defoliate vines and downgrade fruit quality.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaf over: what does the fungal growth look like and which surface is it on?",
+        "a_signal": "White-to-grayish DOWNY, cottony sporulation confined to the LOWER (abaxial) leaf surface, directly beneath yellow upper-surface 'oilspots'",
+        "b_signal": "White-to-gray POWDERY, dusty/talc-like growth that can occur on EITHER surface (often upper) and rubs off easily",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the lesion look like on the UPPER leaf surface?",
+        "a_signal": "Translucent, oily yellow-green 'oilspot' lesions, often angular and bounded by veins, later turning brown/necrotic",
+        "b_signal": "Diffuse white powdery patches or chlorotic/mottled blotching with no greasy translucent oilspot",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what moisture and temperature conditions did the outbreak intensify?",
+        "a_signal": "Worsens after rain, prolonged leaf wetness, high humidity and warm nights; needs free water for infection",
+        "b_signal": "Worsens in warm, DRY conditions with high ambient humidity but no free water; even thrives under low rainfall and shaded canopies",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "How are infected young berries affected?",
+        "a_signal": "Berries become covered in white downy growth then turn leathery, brown and shrivel ('brown rot'/soft); rachis can be infected",
+        "b_signal": "Berries show grayish powdery film, russeting/netlike scarring, and CRACK or split as they expand; epidermis hardens",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Examine the sporulation microscopically or with a hand lens.",
+        "a_signal": "Tree-like (dichotomous) sporangiophores emerging through stomata on leaf underside \u2014 an oomycete",
+        "b_signal": "Superficial mycelium with upright conidiophores bearing chains of conidia sitting ON the surface \u2014 a true fungus (ascomycete)",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease overwinter and re-emerge?",
+        "a_signal": "Overwinters as oospores in fallen leaves/soil; primary infection from rain-splashed soilborne spores low in the canopy",
+        "b_signal": "Overwinters as chasmothecia on bark/in buds or as mycelium in dormant buds; primary inoculum airborne from canes/buds",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Downy mildew (Plasmopara viticola) is an oomycete (water mold) requiring free water and warm humid conditions. Look for translucent, oily yellow-green 'oilspot' lesions on the upper leaf surface with characteristic white, cottony, downy sporulation on the LOWER surface directly beneath. Lesions are often angular, delimited by veins. Infected shoot tips, tendrils, and young berries develop downy growth and rot. It is most aggressive following rains and during periods of prolonged leaf wetness, and overwinters as oospores in fallen leaf litter.",
+    "narrative_b": "Powdery mildew (Erysiphe necator) is a true fungus that does NOT need free water \u2014 only high ambient humidity \u2014 and can develop even in dry, shaded canopies. Its hallmark is a white-to-gray, dusty, powdery growth sitting superficially on EITHER leaf surface, on shoots, and on clusters; it rubs off readily. Infected berries develop a powdery film, russeting/netting, and characteristically crack or split as they grow because the infected epidermis cannot expand. It overwinters as chasmothecia on bark or as mycelium in dormant buds and spreads via airborne conidia.",
+    "management_a": "Cultural: improve air movement and reduce leaf wetness duration via canopy management, training, and good drainage; remove and destroy fallen leaves to reduce oospore inoculum. Resistant varieties where available. Chemical: protectant fungicides (copper, mancozeb) before rain events plus systemic oomycete-specific materials (phosphonates, mandipropamid, cymoxanil, oxathiapiprolin) on rain-driven spray intervals; rotate FRAC groups to avoid resistance.",
+    "management_b": "Cultural: open the canopy and increase light/air exposure (the fungus prefers shade), shoot thinning and leaf removal in the fruit zone. Chemical: sulfur and oils are highly effective and economical; rotate with DMI (FRAC 3), SDHI (FRAC 7), and QoI (FRAC 11) fungicides, applying from pre-bloom through the susceptible berry stage (bloom to ~3-4 weeks after); manage resistance by alternating modes of action. Note sulfur-sensitive cultivars and avoid sulfur-oil interactions.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My grape leaves have pale, washed-out yellowish patches on top, and I'm seeing some whitish growth on the foliage and even on the developing berries. Some leaves are getting twisted and dropping early, and the fruit set looks poor with a few berries cracking or rotting.",
+      "decisive_lay_a": "Flip the leaf over and look at the underside, right beneath the yellow patches on top: you'll see a soft, fluffy white-to-grayish coating, almost like cotton or down, only on the bottom of the leaf.",
+      "decisive_lay_b": "Look for a dry, dusty white-to-gray coating that looks like spilled flour or talcum powder, often on the top of the leaf (but it can be on either side), and it smears or wipes right off when you rub it with your finger.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

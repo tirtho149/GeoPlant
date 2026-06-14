@@ -1,0 +1,63 @@
+{
+  "pair_id": "lettuce__rhizoctonia-damping-off--blight-and-rot__southern-blight",
+  "kind": "disease",
+  "crop": "Lettuce",
+  "member_a_label": "Rhizoctonia Damping-Off, Blight And Rot",
+  "member_b_label": "Southern Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne basidiomycete fungi causing crown/basal rot, wilting, and collapse of lettuce at the soil line, often producing brown sunken lesions and head/bottom rot (\"bottom rot\" for Rhizoctonia, \"southern blight\" for Athelia). Field symptoms of a wilting, collapsing plant with a rotted crown look nearly identical until the diagnostic signs are examined.",
+    "shared_presentation": "Wilting and collapse of lettuce plants, brown to reddish-brown sunken lesions on the lower stem/crown and basal leaves at or near the soil line, decay of wrapper/bottom leaves leading to head rot, favored by warm soil and present in damping-off of seedlings as well as rot of mature heads.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What soil temperature and season is associated with peak disease activity?",
+        "a_signal": "Active across a broad range including cool-to-moderate soils (roughly 60-80F); damaging in spring and fall as well as summer",
+        "b_signal": "Strongly favored by hot soils (>80-85F) and high humidity; an essentially mid-to-late-summer, warm-climate problem",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant does the rot concentrate and how does it spread within the head?",
+        "a_signal": "Lesions begin on lower wrapper/bottom leaves and crown in contact with soil ('bottom rot'), reddish-brown, firm, with leaf-to-leaf spread upward through the head",
+        "b_signal": "Rot girdles the crown/lower stem at the soil line first, causing rapid whole-plant wilt and collapse from basal girdling",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and color of the rotted tissue?",
+        "a_signal": "Rust-brown to reddish-brown, relatively dry, firm sunken lesions; slower decay",
+        "b_signal": "Watery, soft, light-brown rapid rot of the crown often with a sour smell as tissue is girdled",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What fungal sign forms on the infected crown/lower leaves under humid conditions?",
+        "a_signal": "Coarse brown web-like mycelium and brown sclerotia that are irregular, the same brown color as mycelium, embedded in tissue and lacking a distinct rind",
+        "b_signal": "Abundant white fan-like (cottony) mycelium radiating over the crown and adjacent soil, bearing numerous uniform tan-brown spherical sclerotia the size of mustard seeds",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What do the sclerotia look like under hand lens (size, shape, color uniformity)?",
+        "a_signal": "Irregular, flattened, brown, variable-sized sclerotia that blend with the mycelial mat, no smooth outer rind",
+        "b_signal": "Numerous round, smooth, uniform 1-2 mm sclerotia, white maturing to tan/brown, resembling mustard seeds with a hard rind",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Rhizoctonia solani causes damping-off in seedlings and \"bottom rot\" of mature lettuce, where infection begins on lower wrapper leaves and the crown in contact with soil. Lesions are reddish-brown, firm, dry and sunken, spreading leaf-to-leaf up into the head. The diagnostic sign is coarse brown web-like mycelium and irregular brown sclerotia that lack a distinct rind and blend in color with the mycelium. It operates across a broader soil-temperature range than southern blight.",
+    "narrative_b": "Athelia rolfsii (Sclerotium rolfsii) causes southern blight, girdling the crown/lower stem at the soil line and producing rapid wilt and watery soft collapse of the whole plant. The unmistakable sign is abundant white, fan-like cottony mycelium spreading over the crown and onto adjacent soil, studded with numerous uniform round tan-brown sclerotia the size of mustard seeds. It is strongly tied to hot soils and humid, mid-to-late-summer conditions.",
+    "management_a": "Improve drainage and air movement; avoid deep planting and excess soil contact with leaves; rotate away from susceptible hosts; manage with appropriate soil/foliar fungicides (e.g., azoxystrobin, fludioxonil) and reduce planting density. Use clean, well-drained seedbeds to limit damping-off.",
+    "management_b": "Deep plowing to bury sclerotia and infested residue, long rotations with non-hosts (grasses/cereals), soil solarization in warm regions, removal of infected plants plus surrounding soil, and targeted fungicides (e.g., flutolanil, PCNB, azoxystrobin) applied to the crown/soil line. Avoid organic mulch directly against stems.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My lettuce plants are wilting and flopping over, with brown to reddish-brown sunken rot at the base of the stem and crown right at the soil line. The bottom wrapper leaves are rotting and the whole head is starting to break down, and it's worse in the warm weather.",
+      "decisive_lay_a": "Look for a coarse, brown, web-like or stringy growth on the rotting tissue, with small, lumpy, irregular brown hard pellets that are the same brown color as the webbing and seem buried in the plant tissue (no clear outer skin or shell on them).",
+      "decisive_lay_b": "Look for lots of bright white, cottony, fan-shaped fuzzy growth fanning out over the crown and onto the nearby soil, dotted with many round, even-sized tan-brown hard balls about the size of mustard seeds.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

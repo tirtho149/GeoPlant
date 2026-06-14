@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__sclerotinia-timber-rot__southern-blight",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Sclerotinia Timber Rot",
+  "member_b_label": "Southern Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne fungal stem/crown rots producing conspicuous white cottony mycelium and hard survival sclerotia on or near the tomato stem, causing sudden wilt and plant collapse. Field diagnosticians frequently confuse them because the early white mold and stem girdling look nearly identical; the resolving differences are the size, color and location of the sclerotia and the height/temperature niche of the lesion.",
+    "shared_presentation": "Wilting, chlorosis and eventual collapse of an apparently healthy tomato plant; a girdling stem lesion bearing white, fluffy-to-felty mycelial growth; production of fungal sclerotia; favored by dense canopies and moisture; can kill plants outright and leave bleached, shredded stem tissue.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What temperature/season conditions accompanied the outbreak?",
+        "a_signal": "Appears in cool-to-moderate, wet conditions (60-70F / 15-21C), often spring or fall and in humid greenhouses",
+        "b_signal": "Appears in hot, humid weather (mid-summer, soil temps 80-95F / 27-35C), classic warm-climate disease",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the primary lesion located?",
+        "a_signal": "Lesion typically higher up the stem at a node, branch axil, or pruning wound where infected blossoms/debris lodged ('timber rot' on aerial stem)",
+        "b_signal": "Lesion at the soil line / crown, girdling the base of the stem right at the ground",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What do the stem lesion and internal tissue look like as it dries?",
+        "a_signal": "Stem becomes bleached, hollow and shredded/stringy ('timber'); pith disintegrates leaving a dry fibrous interior",
+        "b_signal": "Crown develops a soft tan-to-brown rot at the soil line with a dense mat of mycelium fanning over the surface and adjacent soil",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the sclerotia: what are their size, color, and where do they form?",
+        "a_signal": "Large (3-10+ mm), irregular, black, hard sclerotia forming INSIDE the hollow stem pith and on the lesion surface",
+        "b_signal": "Small (0.5-2 mm), uniform, round, tan-to-reddish-brown sclerotia resembling mustard seeds, on the stem base and soil surface within the white mycelial mat",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the texture and extent of the surface mycelium?",
+        "a_signal": "White cottony mycelium concentrated on the lesion, less likely to radiate broadly across soil",
+        "b_signal": "Coarse, white, rope-like (rhizomorph-like) mycelial fan radiating outward over the soil and lower stem",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Sclerotinia Timber Rot (white mold, Sclerotinia sclerotiorum) infects tomato under cool, wet, humid conditions, often initiating from infected senescing blossoms or debris that lodge in branch axils, nodes, or pruning wounds higher on the stem. The fungus produces watery soft rot followed by abundant white cottony mycelium, then bleaches and hollows the stem so it becomes dry, fibrous and shredded ('timber'). The diagnostic sign is large (several mm to over 1 cm), irregular, hard, coal-black sclerotia formed both on the lesion surface and inside the hollow pith. It is most damaging in greenhouses and cool-season production with extended leaf wetness.",
+    "narrative_b": "Southern Blight (Athelia/Sclerotium rolfsii, Athelia rolfsii) is a hot-weather soilborne disease that attacks the stem at the soil line, producing a soft tan crown rot and a conspicuous coarse white mycelial fan that radiates over the lower stem and surrounding soil. As it matures it forms numerous small (0.5-2 mm), round, uniform, tan to reddish-brown sclerotia that look like mustard or rape seeds scattered on the stem base and soil. The plant wilts and collapses suddenly after the basal girdle forms. It is most severe in warm, humid regions and during hot midsummer periods, especially where undecomposed organic matter is at the surface.",
+    "management_a": "Improve air circulation and reduce humidity (wider spacing, pruning, ventilation in greenhouses); avoid overhead irrigation and remove senescent blossoms/debris. Rotate away from other susceptible hosts (many broadleaf crops); deep-bury sclerotia by plowing. Apply registered fungicides (e.g., boscalid, fluazinam, or biologicals such as Coniothyrium minitans to degrade sclerotia) preventively during cool wet periods. Remove and destroy infected plants before sclerotia disperse.",
+    "management_b": "Reduce soil-surface inoculum: deep-plow to bury sclerotia and surface organic debris below the infection zone, and remove infected plants with surrounding soil. Avoid excess nitrogen-rich undecomposed residue at the surface; use soil solarization in hot climates to kill sclerotia. Improve drainage and avoid mounding moist soil/mulch against stems. Apply registered fungicides (e.g., flutolanil, PCNB, or azoxystrobin) as basal/soil-directed treatments and rotate with non-host crops (cereals/grasses) since the host range is very broad.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "A healthy-looking tomato plant suddenly started wilting and yellowing, then collapsed. Down low on the stem there's a soft, bleached, rotted spot wrapping all the way around, with white fluffy or felt-like fuzzy growth on it, and the stem there looks shredded and dried out.",
+      "decisive_lay_a": "Crack the stem open and look inside the hollow center: big (about a quarter-inch to half-inch or larger), lumpy, irregular, hard black pellets sitting inside the pith and on the rotted surface, like chunks of charcoal.",
+      "decisive_lay_b": "Look right at the stem base and on the soil around it within the white fuzzy mat: lots of tiny, even-sized, round tan-to-reddish-brown balls about the size of mustard seeds.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

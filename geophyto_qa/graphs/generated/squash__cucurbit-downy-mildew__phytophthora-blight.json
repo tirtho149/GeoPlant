@@ -1,0 +1,56 @@
+{
+  "pair_id": "squash__cucurbit-downy-mildew__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Squash",
+  "member_a_label": "Cucurbit Downy Mildew",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (validated)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause rapid water-soaked foliar blight and plant decline on cucurbits, so a wilting, blighted plant can be read either way.",
+    "shared_presentation": "Water-soaked, blighted foliage with rapid decline of the plant.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Are the leaf lesions angular and bounded by the veins, or large irregular water-soaked blotches?",
+        "a_signal": "Angular chlorotic-to-brown lesions sharply bounded by leaf veins.",
+        "b_signal": "Large irregular water-soaked blotches that ignore vein boundaries.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Is damage confined to foliage, or do crown, stem, and fruit rot as well?",
+        "a_signal": "Damage confined to the leaves; crown and fruit stay firm.",
+        "b_signal": "Crown, stem, and fruit develop soft watery rot and the plant collapses.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the lesion undersides in morning humidity versus the crown and fruit.",
+        "a_signal": "Downy gray-to-purple sporulation on the undersides of vein-bounded lesions.",
+        "b_signal": "White cottony growth on fruit/crown with soft, watery rot.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions preceded it?",
+        "a_signal": "Cool, humid weather with prolonged dew/leaf wetness.",
+        "b_signal": "Heavy rain, saturated or poorly drained soil, standing water in low spots.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Because lesions are angular and vein-bounded with downy gray sporulation on the leaf undersides and no crown or fruit rot, I classify this as cucurbit downy mildew rather than Phytophthora blight.",
+    "narrative_b": "Because there is soft crown and fruit rot with white cottony growth and collapse from saturated soil rather than vein-bounded foliar lesions, I classify this as Phytophthora blight rather than downy mildew.",
+    "management_a": "Cucurbit downy mildew: apply targeted oomycete fungicides on a tight schedule once regional forecast alerts fire, and use tolerant cultivars.",
+    "management_b": "Phytophthora blight: improve drainage, avoid overwatering, rotate away from cucurbits and solanaceous crops, and use soil-targeted oomycete fungicides.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My squash leaves suddenly look water-soaked and wilted, like they got scalded, and the plants are going downhill fast in just a few days.",
+      "decisive_lay_a": "Flip a leaf over: under the angular, blocky spots (the ones boxed in by the leaf veins) you'll see a fine fuzzy gray-to-purplish coating on the underside.",
+      "decisive_lay_b": "Look at the fruit and the base of the plant near the soil: a white cottony, fluffy growth on a soft, mushy, watery rotten spot.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

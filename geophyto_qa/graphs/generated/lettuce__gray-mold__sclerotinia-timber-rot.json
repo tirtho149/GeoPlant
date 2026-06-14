@@ -1,0 +1,63 @@
+{
+  "pair_id": "lettuce__gray-mold__sclerotinia-timber-rot",
+  "kind": "disease",
+  "crop": "Lettuce",
+  "member_a_label": "Gray Mold",
+  "member_b_label": "Sclerotinia Timber Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause a soft, watery basal/crown rot of lettuce that collapses the head, typically near harvest in cool moist conditions, and both produce conspicuous white-to-gray fungal growth at the soil line \u2014 so an initial glance at a wilted, rotting plant easily conflates them. They are distinguished by the COLOR and TEXTURE of the mycelium/sporulation and, decisively, by the presence of hard black sclerotia (Sclerotinia) versus dusty gray conidial masses (Botrytis).",
+    "shared_presentation": "A lettuce plant (often at heading to near-harvest maturity) wilts and collapses, with a soft, watery brown rot of the crown, lower leaves, and stem/basal tissue in contact with cool, moist soil. White fungal mycelium is visible at the lesion margin near the soil line, and infected heads slump and decay.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "What is the color and texture of fungal growth produced on the rotted tissue?",
+        "a_signal": "Dusty, fuzzy GRAY-brown mass of conidia (powdery spore layer) that puffs into the air when disturbed; mycelium is grayish.",
+        "b_signal": "Dense, fluffy WHITE cottony mycelium (cotton-ball/snow-white) with no powdery gray sporulation.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Are hard resting structures present in or on the rotted tissue?",
+        "a_signal": "No true sclerotia within tissue; at most small flat black stromatic crusts late, but the hallmark is gray conidial dust, not embedded black bodies.",
+        "b_signal": "Hard, irregular BLACK sclerotia (rat-dropping sized, 2-10 mm) form on and inside the white mycelium and within hollowed stems/crown \u2014 the definitive sign.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where does the rot initiate and how does the stem/crown appear when cut?",
+        "a_signal": "Often begins on wounded, senescent, or wrapper leaves and spreads inward; stem rot is soft but not characteristically hollowed with internal mycelial mat.",
+        "b_signal": "Crown/basal stem rot that bleaches and shreds; cut stem is hollow/water-soaked and packed with white mycelium and black sclerotia ('timber rot').",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the plant collapse and what is the lesion appearance over time?",
+        "a_signal": "Progressive soft rot from injured/aging tissue, surface turning gray-fuzzy; spreads from leaf to leaf under prolonged wetness.",
+        "b_signal": "Rapid, total wilt and watery collapse of the whole head once the crown is girdled; bleached, flaccid tissue.",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what conditions and tissue status does infection take hold?",
+        "a_signal": "Favored by cool wet weather and especially senescing/damaged/wounded tissue; a strong opportunistic wound and post-harvest colonizer.",
+        "b_signal": "Favored by cool moist soil and dense canopy; infects healthy crown/basal tissue directly from soilborne sclerotia/apothecia (ascospores), wound not required.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Gray mold (Botrytis cinerea) is an opportunistic, ubiquitous fungus that colonizes lettuce through wounds, senescing wrapper leaves, and damaged tissue, especially under prolonged cool, humid, wet conditions. The diagnostic sign is a dusty gray-brown layer of conidia over a fuzzy grayish mycelium that releases visible spore clouds when disturbed. Rot is soft and watery and commonly starts on outer/lower leaves or injuries, then spreads inward; it is also a major post-harvest decay. It does not form the large hard black internal sclerotia that define Sclerotinia.",
+    "narrative_b": "Sclerotinia timber rot/lettuce drop (Sclerotinia sclerotiorum, and S. minor) is a soilborne disease in which sclerotia in the soil germinate to mycelium or to apothecia releasing ascospores, infecting the crown and basal stem of healthy plants. It produces dense, snow-white cottony mycelium and the unmistakable hard black sclerotia (rat-dropping sized) on and inside hollowed, bleached, shredded stem tissue, causing rapid wilt and total collapse of the head. The black sclerotia embedded in white mycelium are the single confirming sign.",
+    "management_a": "Reduce canopy wetness and improve air circulation; avoid mechanical injury and over-maturity; remove senescent/wounded tissue and crop debris; manage irrigation timing to dry foliage; apply botryticides (e.g., fenhexamid, boscalid/pyraclostrobin, cyprodinil/fludioxonil) on a resistance-rotation schedule; maintain cold chain and minimize bruising for post-harvest control.",
+    "management_b": "Rotate away from susceptible broadleaf crops to non-hosts (cereals/grasses) to deplete sclerotia; deep-bury or avoid spreading sclerotia; improve drainage and reduce plant density to limit canopy humidity; avoid dense over-irrigated stands; apply targeted fungicides at thinning/canopy-close (boscalid, cyprodinil/fludioxonil, or Coniothyrium minitans biocontrol to degrade sclerotia); promptly remove and destroy infected plants before sclerotia mature.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My lettuce heads are wilting and flopping over right around harvest time, and the bottom leaves, crown, and base of the stem near the soil have turned into a soft, watery brown mush. There's white fuzzy growth showing up at the edge of the rot down near the ground, and the whole head is slumping and rotting out.",
+      "decisive_lay_a": "Look for a dusty gray coating or gray \"smoke\" that puffs off the rotted tissue when you bump it; there are no hard black pellets buried inside the plant (at most some thin, flat black crusty patches very late).",
+      "decisive_lay_b": "Look for hard, black, irregular lumps about the size of rat droppings (roughly the size of a small pea, 1/8 to 3/8 inch) sitting in the white fuzzy growth and packed inside the hollowed-out stem and crown.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

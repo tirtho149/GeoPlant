@@ -1,0 +1,63 @@
+{
+  "pair_id": "oak__anthracnose__leaf-spot",
+  "kind": "disease",
+  "crop": "Oak",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are fungal foliar diseases of oak producing irregular brown necrotic blotches that often follow leaf veins, both favor cool wet spring weather, and both can cause premature defoliation. Early-season Discula anthracnose and Tubakia leaf spot are routinely confused in the field because gross blotch symptoms overlap; the reliable separators are timing of onset, vein-association pattern, and the microscopic fruiting structures (acervuli vs. characteristic Tubakia shield-like pycnothyria).",
+    "shared_presentation": "Irregular brown-to-tan necrotic leaf blotches on oak, frequently expanding along or between major veins, with potential for premature leaf drop. Lesions can be papery and coalesce, and both diseases are promoted by prolonged leaf wetness and dense canopies. Casual inspection of a single symptomatic leaf does not separate them.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "When in the season did symptoms first appear and on which leaves?",
+        "a_signal": "Appears in cool wet SPRING on expanding/young leaves, often distorting and killing newly emerged foliage and shoots (shoot blight, twig dieback).",
+        "b_signal": "Appears mid-to-late SUMMER and into autumn on mature, fully expanded leaves; rarely affects new growth or shoots.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are shoots, buds, and twigs involved or only the leaf blades?",
+        "a_signal": "Goes beyond leaves: blights expanding shoots, kills buds, and causes small twig/branch cankers and dieback, sometimes with witches'-broom-like regrowth.",
+        "b_signal": "Largely confined to leaf blades (and occasionally petioles/acorns); twig cankers and shoot blight are not characteristic.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the relationship of the necrosis to the leaf veins?",
+        "a_signal": "Necrosis is strongly vein-oriented, expanding along midrib and major veins producing irregular vein-bounded brown blotches and puckering/distortion of the blade.",
+        "b_signal": "Discrete rounded-to-irregular spots scattered over the blade that enlarge into reddish-brown blotches, less strictly tied to following the major veins.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Is the canopy distribution and tree-stress context informative?",
+        "a_signal": "Most severe on white oaks and concentrated in the lower/inner canopy where humidity is highest after wet springs; severity tracks spring rainfall.",
+        "b_signal": "Worse on already-stressed, drought-affected, or older trees and tends to be more uniformly distributed, intensifying in late summer/fall.",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under magnification, what fruiting bodies form in the lesions?",
+        "a_signal": "Discula/Apiognomonia produces acervuli (cushion-like masses) oozing cream-colored conidia, typically along veins on the lower leaf surface; no shield-shaped structures.",
+        "b_signal": "Tubakia dryina produces distinctive dark, shield-like (peltate) pycnothyria/sporodochia on a central stalk, visible as tiny dark dots, releasing one- to few-celled conidia.",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Oak anthracnose, caused by Discula/Apiognomonia, is a cool-wet-spring disease. It strikes newly emerging leaves and shoots, producing vein-following brown necrosis, leaf distortion, shoot blight, bud death, and minor twig cankers. It is most damaging on white oaks and in the lower, more humid parts of the crown. Repeated spring infections cause crown thinning. Diagnostic confirmation comes from acervuli with cream conidia along veins on the lower leaf surface.",
+    "narrative_b": "Tubakia leaf spot, caused by Tubakia dryina, is a late-season disease appearing on mature foliage in mid-summer through fall. It produces rounded to irregular reddish-brown spots and blotches on the leaf blade, often worse on stressed or older trees, and can cause late defoliation but does not blight shoots or kill buds. The definitive sign is the characteristic dark, shield-shaped (peltate) pycnothyria seen under magnification within the lesions.",
+    "management_a": "Rake and destroy fallen leaves and prune out blighted twigs to reduce overwintering inoculum. Improve air circulation and avoid overhead irrigation. Maintain tree vigor with proper watering and mulching. Fungicides (e.g., chlorothalonil, copper) at budbreak through leaf expansion are warranted only on high-value trees during prolonged wet springs; mature trees generally tolerate the disease.",
+    "management_b": "Primarily a stress-associated disease, so management centers on reducing tree stress: appropriate watering during drought, mulching, avoiding root damage and compaction, and proper fertilization. Sanitation by removing fallen leaves lowers inoculum. Fungicides are rarely justified for established trees; address predisposing stress and any secondary problems instead.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My oak leaves have irregular brown-to-tan blotches that often run along or between the big veins, and the dead areas feel papery and are running together into bigger patches. Some leaves are dropping early, and it seems worse on the lower, shaded, crowded part of the canopy where the leaves stay wet a long time.",
+      "decisive_lay_a": "Look on the underside of the leaf, right along the veins, for tiny cushion-like bumps that ooze a cream or pale-pinkish goo when the leaf is wet. There are no little dark shield-shaped dots.",
+      "decisive_lay_b": "Look for tiny dark, round dots that sit up on a little stalk like a miniature umbrella or shield on the dead tissue. These are dark specks rather than oozing cushions.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

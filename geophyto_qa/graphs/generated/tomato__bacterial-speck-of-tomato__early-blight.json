@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__bacterial-speck-of-tomato__early-blight",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Bacterial Speck Of Tomato",
+  "member_b_label": "Early Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce dark foliar lesions on tomato leaves that can appear as scattered brown-to-black spots, and both are favored by leaf wetness, so early-stage spotting is genuinely confused in the field until lesion size, halo, and internal structure are examined.",
+    "shared_presentation": "Dark brown-to-black necrotic spots on tomato leaflets, often with surrounding yellowing, that develop during cool-to-warm wet weather and can be mistaken for one another in early stages; both may also blemish fruit.",
+    "forks": [
+      {
+        "axis": "morphology",
+        "question": "How large are the leaf lesions and what is their internal pattern?",
+        "a_signal": "Tiny pinpoint specks, mostly 1-3 mm, dark brown to black, never developing concentric rings",
+        "b_signal": "Larger lesions 6-12 mm or more with concentric dark rings forming a target-board / bullseye pattern",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is there a bright yellow halo tightly surrounding the spots?",
+        "a_signal": "Specks frequently ringed by a distinct yellow (chlorotic) halo",
+        "b_signal": "Surrounding tissue yellows broadly but lacks a sharp narrow halo around each lesion",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "What does the fruit symptom look like?",
+        "a_signal": "Numerous tiny raised black specks (<1.5 mm) superficial on the green/ripe fruit surface",
+        "b_signal": "Larger sunken dark lesions with concentric rings, usually at the stem-end or near calyx scar",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do lesions distribute and progress on the plant over the season?",
+        "a_signal": "Specks scattered over young foliage and remain small and discrete even when numerous",
+        "b_signal": "Starts on oldest lower leaves and moves upward, causing progressive defoliation from the bottom",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature and moisture conditions accompanied the outbreak?",
+        "a_signal": "Cool, wet conditions (optimum ~18-24 C / 65-75 F) early in the season",
+        "b_signal": "Warm, humid weather with alternating wet-dry cycles (optimum ~24-29 C), often on stressed plants",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Does microscopy or moist-chamber incubation reveal fungal structures?",
+        "a_signal": "No fungal growth; bacterial streaming from lesion under microscope (bacterial pathogen)",
+        "b_signal": "Dark velvety sporulation with characteristic muriform beaked Alternaria conidia in the rings",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Bacterial speck (Pseudomonas syringae pv. tomato) produces very small dark brown-to-black specks 1-3 mm in diameter on leaves, often surrounded by a yellow halo, with no concentric rings. On fruit it causes tiny superficial raised black specks. It is favored by cool, wet weather early in the season and spreads by splashing water and contaminated seed. The lack of target-board rings and the pinpoint size distinguish it from early blight.",
+    "narrative_b": "Early blight (Alternaria solani) produces larger leaf lesions, typically 6-12 mm, marked by concentric dark rings that give a characteristic target-board or bullseye appearance, often with surrounding chlorosis. It begins on the oldest lower leaves and progresses upward, causing defoliation, and produces sunken concentrically-ringed lesions on stems and at the fruit stem-end. Warm humid weather and plant stress favor it, and moist-chamber incubation reveals dark Alternaria sporulation.",
+    "management_a": "Use certified pathogen-free seed and transplants; apply copper-based bactericides (often with mancozeb) preventively during cool wet periods; avoid overhead irrigation and working plants when wet; rotate crops and remove infected debris. Resistant cultivars carrying the Pto gene are available.",
+    "management_b": "Rotate out of solanaceous crops 2-3 years, stake and mulch to reduce soil splash, remove lower infected leaves, and maintain plant vigor with adequate nitrogen. Apply protectant fungicides (chlorothalonil, mancozeb) or strobilurin/SDHI products on a schedule beginning when conditions favor disease; use less-susceptible cultivars.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My tomato leaves are getting dark brown to black spots, and the leaf around the spots is turning yellow. It started up after some cool, wet, rainy stretches, and I'm seeing a few marks on the fruit too.",
+      "decisive_lay_a": "Look for lots of tiny pinpoint specks, only about the size of a pinhead (roughly 1 to 3 mm), dark brown to black, that stay small flat dots and never grow rings inside them.",
+      "decisive_lay_b": "Look for bigger spots, dime-sized or larger (about a quarter inch or more), with dark rings inside that make a bullseye or target pattern, like the rings on a dartboard.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

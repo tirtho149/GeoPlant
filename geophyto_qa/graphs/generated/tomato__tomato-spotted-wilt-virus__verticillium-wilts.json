@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__tomato-spotted-wilt-virus__verticillium-wilts",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Tomato Spotted Wilt Virus",
+  "member_b_label": "Verticillium Wilts",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause non-specific wilting, chlorosis/yellowing, stunting, and decline of tomato plants, and both can produce one-sided or uneven foliar symptoms that prompt a generic \"wilt\" call. Early field diagnosis is easily confused because neither produces a fruiting-body sign on the foliage, and both can look like drought stress. They diverge sharply on whether vascular discoloration is present and on the presence of distinctive bronzing/ringspot/necrotic flecking versus classic V-shaped marginal scorch.",
+    "shared_presentation": "Wilting, leaf yellowing/chlorosis, stunting, and overall plant decline on tomato. Both can show asymmetric or partial-plant symptoms and can be mistaken for water stress or generic root/vascular trouble. Neither shows obvious surface fungal growth on leaves.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Cut the lower stem/petiole longitudinally and inspect the vascular tissue: is there internal browning?",
+        "a_signal": "Vascular tissue clean/white; no internal browning (virus is systemic, not vascular-occluding in the way a fungus is)",
+        "b_signal": "Distinct tan-to-brown vascular discoloration in the stem, visible as a ring or streaks when split",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the character of the foliar lesions/markings?",
+        "a_signal": "Bronzing, dark necrotic flecks/spots, and concentric chlorotic/necrotic ringspots on young foliage; cupping and one-sided growth",
+        "b_signal": "V-shaped chlorotic-to-necrotic wedges at leaf margins (marginal scorch), older lower leaves first, no ringspots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does decline progress over the day and through the canopy?",
+        "a_signal": "Sudden systemic appearance on growing tips with terminal bud/stem necrosis; not a clear bottom-up march",
+        "b_signal": "Gradual bottom-up wilt; lower leaves yellow/scorch and die first, often wilting in midday heat and recovering at night early on",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are fruit and growing points affected with diagnostic markings?",
+        "a_signal": "Fruit show chlorotic concentric rings, blotches, and raised bumps; growing tips with one-sided necrosis",
+        "b_signal": "Fruit usually unmarked; symptoms concentrated in foliage and vascular system, sometimes sunscald on exposed fruit",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Are thrips present and is there a known regional virus pressure?",
+        "a_signal": "Western flower thrips / other thrips vectors present; rasping feeding scars; spread tied to thrips activity",
+        "b_signal": "No insect vector; soilborne fungus, history of the field/soil and susceptible prior crops; favored by cool soils",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What soil and temperature conditions favor the problem?",
+        "a_signal": "Tied to thrips populations and nearby virus reservoirs/weeds rather than soil temperature",
+        "b_signal": "Favored by cool soil temperatures (around 70-80F/21-27C optimum) and infested soils; worse in cooler regions/seasons",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Tomato spotted wilt virus (TSWV), a thrips-transmitted tospovirus, produces a systemic disease rather than a vascular plugging. Look for bronzing and dark necrotic flecking on young leaves, concentric chlorotic/necrotic ringspots on foliage and especially on fruit (rings, blotches, raised bumps), one-sided growth, terminal bud and stem-tip necrosis, and overall stunting. Symptoms appear abruptly on new growth and are linked to thrips feeding (rasping scars) and nearby virus reservoir weeds/ornamentals. Crucially, when you split the stem the vascular tissue is NOT browned, which separates it from a vascular wilt fungus.",
+    "narrative_b": "Verticillium wilt is a soilborne fungal vascular disease. It colonizes the xylem and causes the hallmark tan-to-brown vascular discoloration seen when the lower stem is cut. Foliar symptoms are a slow, bottom-up decline: older lower leaves develop V-shaped chlorotic-to-necrotic wedges at the margins (marginal scorch), then die; plants may wilt in midday heat and recover at night early in disease. There is no insect vector and no ringspot or bronzing pattern, and fruit are generally unmarked. It is favored by cooler soil temperatures and infested fields, so it is more limiting in cooler regions and seasons.",
+    "management_a": "Manage TSWV by controlling the thrips vector and removing virus reservoirs: scout for thrips, use reflective mulches and insecticidal/IPM programs targeting thrips, eliminate weed hosts and volunteer/ornamental reservoirs around the field, and rogue out infected plants promptly. Plant TSWV-resistant tomato cultivars (Sw-5 gene) where available and use virus-tested transplants. Insecticides alone rarely stop spread once thrips are established; resistance plus sanitation is key.",
+    "management_b": "Manage Verticillium with resistant cultivars (look for the \"V\" designation, e.g., VFN), long rotations away from susceptible hosts, and soil management to reduce inoculum. There is no in-season cure once xylem is colonized. Avoid planting into known infested cool soils, maintain balanced fertility and consistent irrigation to reduce stress, and consider soil solarization in high-inoculum sites. Sanitation of crop debris helps reduce microsclerotia carryover.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Some of my tomato plants are wilting and the leaves are turning yellow, with the plants looking stunted and just generally going downhill. It's often hitting one side or part of a plant more than the rest, and at first I figured it was just water stress or something wrong at the roots.",
+      "decisive_lay_a": "Slice the main stem open lengthwise near the base: in this one the inside stays clean and white with no brown staining, so the plumbing tubes look healthy even though the plant is sick.",
+      "decisive_lay_b": "Slice the main stem open and you'll see a clear tan-to-brown discoloration inside, showing up as a ring or brown streaks running up the stem in the water-carrying tubes.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

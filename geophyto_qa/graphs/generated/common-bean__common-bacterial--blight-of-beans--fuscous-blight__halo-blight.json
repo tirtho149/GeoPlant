@@ -1,0 +1,63 @@
+{
+  "pair_id": "common-bean__common-bacterial--blight-of-beans--fuscous-blight__halo-blight",
+  "kind": "disease",
+  "crop": "Common Bean",
+  "member_a_label": "Common Bacterial  Blight Of Beans, Fuscous Blight",
+  "member_b_label": "Halo Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are seed-borne bacterial blights of common bean producing angular-to-irregular water-soaked leaf lesions, pod spots with bacterial ooze, and systemic seed infection. Early foliar lesions look nearly identical, so field diagnosis is frequently confused until the surrounding leaf-tissue reaction (halo vs. yellow margin) and temperature/season context are read carefully.",
+    "shared_presentation": "Water-soaked spots on leaves that enlarge and turn brown/necrotic, often coalescing; lesions also appear on pods (sometimes greasy, sunken) and stems; both can ooze bacterial exudate that dries to a crust; both are seed-transmitted and spread by rain-splash and handling of wet foliage, causing blighting, defoliation, and discolored/shriveled seed.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What temperature regime prevailed when symptoms developed?",
+        "a_signal": "Symptoms flare in warm/hot weather (optimum ~28-32 C); common in mid-to-late summer heat",
+        "b_signal": "Symptoms develop and worsen under cool/moderate conditions (optimum ~20-23 C); common in cool, wet early season",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What surrounds the necrotic leaf lesion?",
+        "a_signal": "Lesion bordered by a narrow bright-yellow zone (lemon-yellow margin) but NO broad chlorotic halo",
+        "b_signal": "Lesion ringed by a wide greenish-yellow chlorotic HALO of tissue extending well beyond the necrotic center",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is there systemic chlorosis distant from lesions?",
+        "a_signal": "Chlorosis limited to lesion margins; little general yellowing of uninvaded tissue",
+        "b_signal": "Systemic general chlorosis/greening-loss of new growth from the phaseolotoxin, including 'chlorotic' young leaves far from any lesion",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "How do pod lesions and ooze appear?",
+        "a_signal": "Pod spots circular to irregular, water-soaked then brick-red/brown; ooze often yellowish (especially fuscous strains)",
+        "b_signal": "Pod spots small, water-soaked, often with reddish margins; cream-colored ooze; greasy 'grease-spot' look",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does streaming/colony testing of a fresh lesion show?",
+        "a_signal": "Yellow (xanthomonadin-pigmented) colonies on culture; Xanthomonas axonopodis pv. phaseoli",
+        "b_signal": "Cream/white fluorescent colonies (fluoresces under UV on King's B); Pseudomonas savastanoi pv. phaseolicola",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Common bacterial blight (including the fuscous variant) is caused by Xanthomonas axonopodis pv. phaseoli. It is a warm-weather disease, intensifying at 28-32 C. Leaf lesions are water-soaked spots that enlarge into brown, dry, necrotic areas bordered by a characteristic narrow band of bright lemon-yellow tissue, but they lack the broad chlorotic halo of halo blight. Pods develop circular to irregular water-soaked spots that turn reddish-brown, and infected seed may be discolored or shriveled. The fuscous strain is distinguished in culture by a brown (fuscous) diffusible pigment; both produce yellow xanthomonadin-pigmented colonies. Spread is by splashing rain, contaminated seed, and movement through wet fields.",
+    "narrative_b": "Halo blight is caused by Pseudomonas savastanoi pv. phaseolicola and is favored by cool, moist conditions (optimum ~20-23 C), making it more damaging in cool early-season or high-elevation/cool-region plantings. Its diagnostic feature is the wide greenish-yellow chlorotic halo surrounding each small necrotic leaf lesion, produced by the bacterium's phaseolotoxin. The toxin also causes systemic chlorosis, so young leaves far from lesions may yellow generally. Pods show small water-soaked spots with reddish margins and cream-colored greasy ooze. The pathogen fluoresces on King's B medium under UV. It is seed-borne and spread by rain-splash and handling of wet plants.",
+    "management_a": "Plant certified pathogen-free seed and resistant cultivars; rotate out of beans for 2-3 years and bury or destroy infected residue; avoid working fields when foliage is wet; apply copper-based bactericides preventively where warranted. Because it is favored by heat, manage with timely planting and avoid overhead irrigation in warm periods.",
+    "management_b": "Use certified disease-free seed and resistant varieties (resistance genes exist but races vary); rotate away from beans 2-3 years; destroy infested debris; minimize leaf wetness and avoid field operations on wet plants; copper sprays can suppress spread. Because halo blight thrives in cool conditions, scout especially during cool, wet early-season weather and in cooler production regions.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My bean leaves have water-soaked spots that keep getting bigger and turning brown and dead, and some are running together into big blotches. I'm also seeing greasy, sunken spots on the pods, and after rain it looks like there's a dried crust on some of the damage.",
+      "decisive_lay_a": "Look right at the edge of a brown dead spot: there's just a thin, bright lemon-yellow rim hugging the spot, with NO wide band of yellowing spreading out into the green part of the leaf.",
+      "decisive_lay_b": "Look for a wide ring of pale greenish-yellow leaf around each brown spot, with the yellowing spreading well out into the healthy green tissue far beyond the dead center.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

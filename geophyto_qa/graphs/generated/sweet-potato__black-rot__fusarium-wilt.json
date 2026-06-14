@@ -1,0 +1,70 @@
+{
+  "pair_id": "sweet-potato__black-rot__fusarium-wilt",
+  "kind": "disease",
+  "crop": "Sweet Potato",
+  "member_a_label": "Black Rot",
+  "member_b_label": "Fusarium Wilt",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both attack sweet potato vascular/storage tissue and produce overlapping field symptoms: stunted, yellowing, wilting plants in the field and internally discolored storage roots in storage. Growers and even diagnosticians can confuse them because both can show vine decline and dark internal tissue. They diverge on the exact tissue affected, color/pattern of internal staining, and the presence of pathogen signs.",
+    "shared_presentation": "Stunted, off-color, wilting plants in the field with poor stands; internal darkening of vascular or storage tissue; reduced yield and unmarketable roots; both can be carried on infected slips/seed roots and persist in soil, causing patchy decline within a planting.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the primary, most diagnostic lesion concentrated?",
+        "a_signal": "Firm, dark, dry circular sunken lesions on the storage root surface and stem base (collar); damage centered on the storage root rind and below-ground stem.",
+        "b_signal": "Symptoms centered on the vine vascular system: yellowing and wilting of foliage, decline of the whole vine, with stem rather than root-rind rot.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the internal tissue look like when cut?",
+        "a_signal": "Greenish-black to gray-black rot of storage-root flesh, often with a bitter taste; rot is a tissue rot, not confined to vascular strands.",
+        "b_signal": "Brown to black discoloration of the vascular ring/strands within the stem and root, with surrounding flesh staying relatively firm and pale (vascular streaking).",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What pathogen signs appear on or near lesions?",
+        "a_signal": "Dark, beadlike perithecia and a characteristic fruity/sweet (banana-like) odor; long-necked perithecia oozing ascospores; insect-vectored (fungus gnats, weevils, fruit flies move spores).",
+        "b_signal": "In humid conditions, pinkish-white to salmon mycelium/sporodochia on stem lesions; no fruity odor; soilborne, not insect-vectored.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease develop over the season and in storage?",
+        "a_signal": "Often explodes in storage and transit (wash/curing) producing surface storage-root lesions; tied to wounds and post-harvest handling.",
+        "b_signal": "Progressive in-field vine wilt and decline through the growing season; gradual yellowing climbing the plant, not primarily a post-harvest surface rot.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions favor the disease?",
+        "a_signal": "Favored by wounding plus warm, moist curing/storage conditions and contaminated handling water; spreads readily in packing operations.",
+        "b_signal": "Favored by warm soils and is more damaging in sandy, well-drained soils; soil temperature and continuous sweet-potato cropping drive buildup.",
+        "weight": "weak"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and margin of the external lesion?",
+        "a_signal": "Distinct round, sharply margined, sunken dark lesions on root surface that can coalesce.",
+        "b_signal": "No discrete sunken round root lesion; external root may look near-normal while the vine wilts and the cut stem shows ring discoloration.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Black Rot (Ceratocystis fimbriata) presents as firm, dark, round, sunken lesions on the storage-root surface and at the stem base, with greenish-black rot of the underlying flesh and a notably bitter taste. A reliable tell is the sweet, fruity (banana-like) odor and the dark beadlike, long-necked perithecia oozing spores from lesions. It is a tissue rot of the storage root that flares dramatically in curing and storage, especially around wounds, and is moved by handling water and insects (fungus gnats, weevils). The pathogen is a wound-entering ascomycete, so post-harvest sanitation and clean slips are central.",
+    "narrative_b": "Fusarium Wilt (Fusarium oxysporum f.sp. batatas) is a vascular disease: the fungus colonizes the water-conducting tissue of the vine, producing progressive yellowing, stunting, and wilting of foliage through the season, often on one side of the plant first. Cutting the stem or root reveals brown-to-black vascular ring/streak discoloration while surrounding flesh stays relatively firm and pale. Under humidity, salmon-pink sporulation may appear on stem lesions, but there is no fruity odor and no discrete sunken root lesion. It is soilborne, builds up under continuous cropping and in warm sandy soils, and is managed mainly by resistant cultivars and clean planting stock.",
+    "management_a": "Use certified disease-free slips and seed roots; cure and store at recommended temperatures to seal wounds quickly; minimize harvest/handling wounds; sanitize wash water, crates, and packing surfaces; do not reuse contaminated dip water; rogue and discard symptomatic roots; rotate away from sweet potato and apply protectant fungicide dips to slips/seed roots where labeled.",
+    "management_b": "Plant resistant/tolerant cultivars (primary control); use pathogen-free slips from clean foundation stock; practice long rotations out of sweet potato; avoid moving infested soil; manage soil to reduce stress; there is no effective in-field fungicide cure once vascular colonization occurs, so prevention via resistance and clean stock is essential.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Patches of my sweet potato plants are stunted, off-color, and wilting, leaving thin, weak stands in those spots. When I cut open the roots they look dark inside, and a lot of them are too ugly to sell, so my yield is way down. It seems to have come in on my slips and is slowly spreading through the planting.",
+      "decisive_lay_a": "Cut the root open and look at the flesh itself: a greenish-black to gray-black rot that spreads through the whole inside of the root, not just along thin lines. Bad spots often taste bitter and the rotted tissue is soft or mushy, not firm.",
+      "decisive_lay_b": "Cut across the stem or root and look for a brown-to-black ring or thin streaks running through it (like darkened plumbing lines), while the flesh right around those lines stays pretty firm and pale rather than rotting away.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

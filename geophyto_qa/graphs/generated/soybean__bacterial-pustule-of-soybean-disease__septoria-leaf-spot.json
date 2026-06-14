@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__bacterial-pustule-of-soybean-disease__septoria-leaf-spot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bacterial Pustule Of Soybean Disease",
+  "member_b_label": "Septoria Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small (1-3 mm) angular-to-irregular brown leaf spots on soybean foliage during similar mid-to-late vegetative/reproductive windows, and field scouts routinely confuse them at a distance. The resolving difference is a raised bacterial pustule in a lesion center (Xanthomonas) versus tan necrotic spots bearing dark fungal pycnidia (Septoria), plus differing canopy position (upper vs. lower).",
+    "shared_presentation": "Small angular-to-irregular brown/tan leaf spots, 1-3 mm, often with a yellowish halo, that can coalesce; both cause premature defoliation in severe cases and both are favored by warm, wet/humid conditions and frequent rainfall during the growing season.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where in the canopy do the spots first and most heavily appear?",
+        "a_signal": "Lesions appear throughout the canopy including upper and mid leaves, often most active on younger upper foliage",
+        "b_signal": "Spots begin on the lowest (oldest) leaves near the soil and progress upward as the season advances",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture/relief of the lesion on the underside of the leaf?",
+        "a_signal": "A small raised, blister-like pustule erupts from the center of the lesion, most prominent on the lower leaf surface",
+        "b_signal": "Lesion is flat necrotic tissue with no raised pustule; surface stays sunken/flat",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the lesion with a hand lens: what pathogen sign is present in the spot?",
+        "a_signal": "Center of the pustule is a bacterial eruption (no fruiting bodies); a milky bacterial ooze may stream from a cut lesion held in water",
+        "b_signal": "Tiny dark brown-to-black pinpoint fungal pycnidia are embedded in the tan lesion center; no bacterial ooze",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and color of the mature lesion?",
+        "a_signal": "Small angular spots with a raised pale-brown center and yellow margin, lesion center may tear and drop out",
+        "b_signal": "Angular-to-irregular dark brown to rusty-brown spots, often coalescing into larger blotches with surrounding chlorosis",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease progress and what triggers defoliation timing?",
+        "a_signal": "Spreads via wind-driven rain and wounding in warm wet weather; defoliation when pustules coalesce",
+        "b_signal": "Classic 'brown spot' that climbs the canopy from the bottom, causing early lower-leaf yellowing and shedding, worst in wet seasons",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What moisture/temperature regime is favoring the outbreak?",
+        "a_signal": "Warm temperatures (~30 C) with rain and overhead wetting favor the bacterium",
+        "b_signal": "Prolonged leaf wetness and moderate-warm humid conditions, frequent in wet early-to-mid season, favor the fungus",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial pustule, caused by Xanthomonas axonopodis pv. glycines, produces small angular leaf spots distinguished by a tiny raised, blister-like pustule erupting from the lesion center, most evident on the lower leaf surface. Lesions have pale-brown centers with yellow-green margins and occur throughout the canopy, often on younger upper foliage. The hallmark is the raised pustule and the absence of fungal fruiting bodies; a cut lesion suspended in water may stream bacterial ooze. It is favored by warm temperatures and wind-driven rain, and is seedborne. It is often confused with bacterial blight, but the raised pustule and lack of water-soaked margin help separate it.",
+    "narrative_b": "Septoria leaf spot (brown spot), caused by the fungus Septoria glycines, is typically the first foliar disease to appear each season. It produces angular-to-irregular dark brown ('rusty') spots that begin on the lowest, oldest leaves near the soil and progress up the canopy. Surrounding tissue yellows and infected leaves drop early, giving the classic bottom-up defoliation pattern. Under a hand lens the tan lesion centers contain embedded dark pycnidia (fungal fruiting bodies) \u2014 the definitive sign. It overwinters on residue and is favored by leaf wetness and warm, humid wet conditions, intensifying late season.",
+    "management_a": "Plant pathogen-free certified seed and resistant varieties (the rxp gene confers resistance). Rotate away from soybean and incorporate residue to reduce inoculum. Avoid working fields when foliage is wet to limit bacterial spread by wounding. Copper-based bactericides give limited suppression; foliar fungicides are NOT effective because the pathogen is bacterial. Manage volunteer soybean and weed reservoirs.",
+    "management_b": "Use crop rotation (1-2 years out of soybean) and tillage to bury infected residue, the primary overwintering source. Plant less-susceptible varieties and pathogen-tested seed. Foliar fungicides (e.g., strobilurin/triazole at R3-R5) can be effective when disease pressure and weather warrant and when protecting upper canopy, unlike for the bacterial disease. Scout lower canopy early to time sprays.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My soybeans have a lot of small brown-to-tan angular spots on the leaves, only about a pinhead to a couple millimeters across, and many of them have a yellowish ring around the edge. Some of the spots are running together into bigger blotches, and in the worst spots the leaves are starting to drop early. It's been warm and rainy/humid, which seems to make it worse.",
+      "decisive_lay_a": "Look at the very center of a fresh raised spot or little bump: there are no tiny dark specks or grains in it. To confirm, cut a spot off and hold it in a glass of clear water for a minute or two and watch for a milky, cloudy thread or ooze drifting out of the cut edge.",
+      "decisive_lay_b": "Look closely at the tan center of a spot for a sprinkling of very tiny dark brown-to-black pinpoint dots, like someone tapped a fine black pen there. There is no milky ooze when you put a spot in water.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

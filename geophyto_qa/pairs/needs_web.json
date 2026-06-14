@@ -1,0 +1,4884 @@
+{
+  "n": 697,
+  "pairs": [
+    {
+      "pair_id": "squash__phytophthora-blight__powdery-mildew",
+      "crop": "Squash",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 7.1
+    },
+    {
+      "pair_id": "watermelon__anthracnose__gummy-stem-blight",
+      "crop": "Watermelon",
+      "member_a": "Anthracnose",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 6.4
+    },
+    {
+      "pair_id": "squash__anthracnose__cucurbit-downy-mildew",
+      "crop": "Squash",
+      "member_a": "Anthracnose",
+      "member_b": "Cucurbit Downy Mildew",
+      "lookalike_prior": 6.2
+    },
+    {
+      "pair_id": "elm__black-spot-of-elm__dutch-elm-disease",
+      "crop": "Elm",
+      "member_a": "Black Spot Of Elm",
+      "member_b": "Dutch Elm Disease",
+      "lookalike_prior": 6.2
+    },
+    {
+      "pair_id": "squash__anthracnose__phytophthora-blight",
+      "crop": "Squash",
+      "member_a": "Anthracnose",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 6.1
+    },
+    {
+      "pair_id": "squash__anthracnose__plectosphaerella-fungus",
+      "crop": "Squash",
+      "member_a": "Anthracnose",
+      "member_b": "Plectosphaerella Fungus",
+      "lookalike_prior": 6.1
+    },
+    {
+      "pair_id": "squash__cucurbit-downy-mildew__plectosphaerella-fungus",
+      "crop": "Squash",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Plectosphaerella Fungus",
+      "lookalike_prior": 6.1
+    },
+    {
+      "pair_id": "squash__phytophthora-blight__plectosphaerella-fungus",
+      "crop": "Squash",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Plectosphaerella Fungus",
+      "lookalike_prior": 6.1
+    },
+    {
+      "pair_id": "squash__plectosphaerella-fungus__powdery-mildew",
+      "crop": "Squash",
+      "member_a": "Plectosphaerella Fungus",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 6.1
+    },
+    {
+      "pair_id": "watermelon__anthracnose__phytophthora-blight",
+      "crop": "Watermelon",
+      "member_a": "Anthracnose",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 6.1
+    },
+    {
+      "pair_id": "watermelon__anthracnose__powdery-mildew",
+      "crop": "Watermelon",
+      "member_a": "Anthracnose",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 6.1
+    },
+    {
+      "pair_id": "cucumber__cucurbit-downy-mildew__phytophthora-blight",
+      "crop": "Cucumber",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 6.1
+    },
+    {
+      "pair_id": "boxwood__boxwood-blight__pseudonectria-buxi-b-o--dodge",
+      "crop": "Boxwood",
+      "member_a": "Boxwood Blight",
+      "member_b": "Pseudonectria Buxi B.O. Dodge",
+      "lookalike_prior": 6.1
+    },
+    {
+      "pair_id": "eggplant__diaporthe-vexans-gratz__phytophthora-blight",
+      "crop": "Eggplant",
+      "member_a": "Diaporthe Vexans Gratz",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 6.1
+    },
+    {
+      "pair_id": "melon__cucurbit-downy-mildew__monosporascus-root-rot",
+      "crop": "Melon",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Monosporascus Root Rot",
+      "lookalike_prior": 6.0
+    },
+    {
+      "pair_id": "tomato__early-blight__late-blight",
+      "crop": "Tomato",
+      "member_a": "Early Blight",
+      "member_b": "Late Blight",
+      "lookalike_prior": 5.6
+    },
+    {
+      "pair_id": "tomato__early-blight__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Early Blight",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 5.5
+    },
+    {
+      "pair_id": "tomato__late-blight__septoria-leaf-spot",
+      "crop": "Tomato",
+      "member_a": "Late Blight",
+      "member_b": "Septoria Leaf Spot",
+      "lookalike_prior": 5.4
+    },
+    {
+      "pair_id": "tomato__late-blight__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Late Blight",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 5.4
+    },
+    {
+      "pair_id": "wheat__fusarium-graminearum-schwabe__stripe-rust",
+      "crop": "Wheat",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Stripe Rust",
+      "lookalike_prior": 5.4
+    },
+    {
+      "pair_id": "wheat__fusarium-graminearum-schwabe__zymoseptoria-tritici",
+      "crop": "Wheat",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Zymoseptoria Tritici",
+      "lookalike_prior": 5.4
+    },
+    {
+      "pair_id": "wheat__stripe-rust__zymoseptoria-tritici",
+      "crop": "Wheat",
+      "member_a": "Stripe Rust",
+      "member_b": "Zymoseptoria Tritici",
+      "lookalike_prior": 5.4
+    },
+    {
+      "pair_id": "tomato__anthracnose__early-blight",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Early Blight",
+      "lookalike_prior": 5.3
+    },
+    {
+      "pair_id": "tomato__early-blight__gray-mold",
+      "crop": "Tomato",
+      "member_a": "Early Blight",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 5.3
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__downy-mildew",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 5.3
+    },
+    {
+      "pair_id": "watermelon__bacterial-fruit-blotch__gummy-stem-blight",
+      "crop": "Watermelon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 5.3
+    },
+    {
+      "pair_id": "lettuce__downy-mildew__sclerotinia-timber-rot",
+      "crop": "Lettuce",
+      "member_a": "Downy Mildew",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 5.3
+    },
+    {
+      "pair_id": "corn__common-corn-rust__corn-smut",
+      "crop": "Corn",
+      "member_a": "Common Corn Rust",
+      "member_b": "Corn Smut",
+      "lookalike_prior": 5.3
+    },
+    {
+      "pair_id": "corn__corn-smut__white-ear-rot-and-seedling-blight-of-maize",
+      "crop": "Corn",
+      "member_a": "Corn Smut",
+      "member_b": "White Ear Rot And Seedling Blight Of Maize",
+      "lookalike_prior": 5.3
+    },
+    {
+      "pair_id": "wheat__fusarium-graminearum-schwabe__wheat-leaf-rust",
+      "crop": "Wheat",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Wheat Leaf Rust",
+      "lookalike_prior": 5.3
+    },
+    {
+      "pair_id": "tomato__anthracnose__late-blight",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Late Blight",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "tomato__anthracnose__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "strawberry__anthracnose__gray-mold",
+      "crop": "Strawberry",
+      "member_a": "Anthracnose",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "strawberry__anthracnose__ramularia-grevilleana-verkley---u--braun",
+      "crop": "Strawberry",
+      "member_a": "Anthracnose",
+      "member_b": "Ramularia Grevilleana Verkley & U. Braun",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "watermelon__anthracnose__bacterial-fruit-blotch",
+      "crop": "Watermelon",
+      "member_a": "Anthracnose",
+      "member_b": "Bacterial Fruit Blotch",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "lettuce__downy-mildew__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Lettuce",
+      "member_a": "Downy Mildew",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "lettuce__rhizoctonia-damping-off--blight-and-rot__sclerotinia-timber-rot",
+      "crop": "Lettuce",
+      "member_a": "Rhizoctonia Damping-Off, Blight And Rot",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "corn__common-corn-rust__white-ear-rot-and-seedling-blight-of-maize",
+      "crop": "Corn",
+      "member_a": "Common Corn Rust",
+      "member_b": "White Ear Rot And Seedling Blight Of Maize",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "grape__black-rot__downy-mildew",
+      "crop": "Grape",
+      "member_a": "Black Rot",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "cucumber__anthracnose__phytophthora-blight",
+      "crop": "Cucumber",
+      "member_a": "Anthracnose",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "cucumber__cucurbit-downy-mildew__pythium-diseases",
+      "crop": "Cucumber",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "wheat__fusarium-graminearum-schwabe__powdery-mildew",
+      "crop": "Wheat",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "wheat__loose-smut-of-wheat-or-barley__zymoseptoria-tritici",
+      "crop": "Wheat",
+      "member_a": "Loose Smut Of Wheat Or Barley",
+      "member_b": "Zymoseptoria Tritici",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "wheat__parastagonospora-nodorum__stripe-rust",
+      "crop": "Wheat",
+      "member_a": "Parastagonospora Nodorum",
+      "member_b": "Stripe Rust",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "wheat__stripe-rust__wheat-stem-rust",
+      "crop": "Wheat",
+      "member_a": "Stripe Rust",
+      "member_b": "Wheat Stem Rust",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "wheat__wheat-stem-rust__zymoseptoria-tritici",
+      "crop": "Wheat",
+      "member_a": "Wheat Stem Rust",
+      "member_b": "Zymoseptoria Tritici",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "douglas-fir__rhabdocline-needlecasts__swiss-needle-cast",
+      "crop": "Douglas-Fir",
+      "member_a": "Rhabdocline Needlecasts",
+      "member_b": "Swiss Needle Cast",
+      "lookalike_prior": 5.2
+    },
+    {
+      "pair_id": "tomato__anthracnose__gray-mold",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "tomato__anthracnose__rhizopus-soft-rots",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "tomato__gray-mold__late-blight",
+      "crop": "Tomato",
+      "member_a": "Gray Mold",
+      "member_b": "Late Blight",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "tomato__gray-mold__rhizopus-soft-rots",
+      "crop": "Tomato",
+      "member_a": "Gray Mold",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "tomato__rhizopus-soft-rots__septoria-leaf-spot",
+      "crop": "Tomato",
+      "member_a": "Rhizopus Soft Rots",
+      "member_b": "Septoria Leaf Spot",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "tomato__rhizopus-soft-rots__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Rhizopus Soft Rots",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "soybean__downy-mildew__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Downy Mildew",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "strawberry__anthracnose__phomopsis-leaf-blight-and-fruit-rot",
+      "crop": "Strawberry",
+      "member_a": "Anthracnose",
+      "member_b": "Phomopsis Leaf Blight And Fruit Rot",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "melon__anthracnose__fusarium-wilts--blights--rots-and-damping-off",
+      "crop": "Melon",
+      "member_a": "Anthracnose",
+      "member_b": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "melon__anthracnose__gummy-stem-blight",
+      "crop": "Melon",
+      "member_a": "Anthracnose",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "melon__anthracnose__sour-rot",
+      "crop": "Melon",
+      "member_a": "Anthracnose",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "melon__fusarium-wilts--blights--rots-and-damping-off__sour-rot",
+      "crop": "Melon",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "melon__monosporascus-root-rot__powdery-mildew",
+      "crop": "Melon",
+      "member_a": "Monosporascus Root Rot",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "rhododendrons-and-azaleas__guignardia-blotch__pestalotiopsis-leaf-spot",
+      "crop": "Rhododendrons And Azaleas",
+      "member_a": "Guignardia Blotch",
+      "member_b": "Pestalotiopsis Leaf Spot",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "oak__anthracnose__coryneum-twig-blight",
+      "crop": "Oak",
+      "member_a": "Anthracnose",
+      "member_b": "Coryneum Twig Blight",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "oak__anthracnose__leaf-spot",
+      "crop": "Oak",
+      "member_a": "Anthracnose",
+      "member_b": "Leaf Spot",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "oak__anthracnose__oak-wilt",
+      "crop": "Oak",
+      "member_a": "Anthracnose",
+      "member_b": "Oak Wilt",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "oak__botryosphaeria-rots-and-cankers__coryneum-twig-blight",
+      "crop": "Oak",
+      "member_a": "Botryosphaeria Rots And Cankers",
+      "member_b": "Coryneum Twig Blight",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "oak__botryosphaeria-rots-and-cankers__nectria-canker",
+      "crop": "Oak",
+      "member_a": "Botryosphaeria Rots And Cankers",
+      "member_b": "Nectria Canker",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "squash__anthracnose__powdery-mildew",
+      "crop": "Squash",
+      "member_a": "Anthracnose",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "squash__cucurbit-downy-mildew__gummy-stem-blight",
+      "crop": "Squash",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "squash__gummy-stem-blight__phytophthora-blight",
+      "crop": "Squash",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "squash__gummy-stem-blight__powdery-mildew",
+      "crop": "Squash",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "squash__gummy-stem-blight__southern-blight",
+      "crop": "Squash",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "watermelon__bacterial-fruit-blotch__cucurbit-downy-mildew",
+      "crop": "Watermelon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Cucurbit Downy Mildew",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "watermelon__gummy-stem-blight__powdery-mildew",
+      "crop": "Watermelon",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "watermelon__phytophthora-blight__powdery-mildew",
+      "crop": "Watermelon",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "lettuce__lettuce-chlorosis-virus__mirafiori-lettuce-big-vein-virus",
+      "crop": "Lettuce",
+      "member_a": "Lettuce Chlorosis Virus",
+      "member_b": "Mirafiori Lettuce Big-Vein Virus",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "grape__black-rot__grape-anthracnose",
+      "crop": "Grape",
+      "member_a": "Black Rot",
+      "member_b": "Grape Anthracnose",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__bread-mold",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Bread Mold",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__fusarium-lateritium-nees",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Fusarium Lateritium Nees",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__rhizopus-soft-rots",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "sweet-potato__bread-mold__penicillium-fungi",
+      "crop": "Sweet Potato",
+      "member_a": "Bread Mold",
+      "member_b": "Penicillium Fungi",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "sweet-potato__bread-mold__scurf",
+      "crop": "Sweet Potato",
+      "member_a": "Bread Mold",
+      "member_b": "Scurf",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "sweet-potato__bread-mold__sour-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Bread Mold",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "sweet-potato__bread-mold__streptomyces-soil-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Bread Mold",
+      "member_b": "Streptomyces Soil Rot",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "sweet-potato__penicillium-fungi__scurf",
+      "crop": "Sweet Potato",
+      "member_a": "Penicillium Fungi",
+      "member_b": "Scurf",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "sweet-potato__sour-rot__streptomyces-soil-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Sour Rot",
+      "member_b": "Streptomyces Soil Rot",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "spinach__cladosporium-leaf-spot__downy-mildew",
+      "crop": "Spinach",
+      "member_a": "Cladosporium Leaf Spot",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "cucumber__gummy-stem-blight__powdery-mildew",
+      "crop": "Cucumber",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "cucumber__phytophthora-blight__powdery-mildew",
+      "crop": "Cucumber",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "wheat__fusarium-graminearum-schwabe__parastagonospora-nodorum",
+      "crop": "Wheat",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Parastagonospora Nodorum",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "apple__apple-scab__cedar-apple-rust",
+      "crop": "Apple",
+      "member_a": "Apple Scab",
+      "member_b": "Cedar-Apple Rust",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "apple__black-rot__cedar-apple-rust",
+      "crop": "Apple",
+      "member_a": "Black Rot",
+      "member_b": "Cedar-Apple Rust",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "eastern-white-pine__needle-cast__stem-rot",
+      "crop": "Eastern White Pine",
+      "member_a": "Needle Cast",
+      "member_b": "Stem Rot",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "blue-spruce__ceropsora-weirii__spruce-needle-rusts",
+      "crop": "Blue Spruce",
+      "member_a": "Ceropsora Weirii",
+      "member_b": "Spruce Needle Rusts",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "highbush-blueberry__blueberry-leaf-rust__twig-canker",
+      "crop": "Highbush Blueberry",
+      "member_a": "Blueberry Leaf Rust",
+      "member_b": "Twig Canker",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "phlox__downy-mildew__powdery-mildew",
+      "crop": "Phlox",
+      "member_a": "Downy Mildew",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 5.1
+    },
+    {
+      "pair_id": "tomato__late-blight__rhizopus-soft-rots",
+      "crop": "Tomato",
+      "member_a": "Late Blight",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "melon__monosporascus-root-rot__sour-rot",
+      "crop": "Melon",
+      "member_a": "Monosporascus Root Rot",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "oak__coryneum-twig-blight__oak-wilt",
+      "crop": "Oak",
+      "member_a": "Coryneum Twig Blight",
+      "member_b": "Oak Wilt",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "oak__leaf-spot__oak-wilt",
+      "crop": "Oak",
+      "member_a": "Leaf Spot",
+      "member_b": "Oak Wilt",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "spinach__cladosporium-leaf-spot__white-rust",
+      "crop": "Spinach",
+      "member_a": "Cladosporium Leaf Spot",
+      "member_b": "White Rust",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "spinach__downy-mildew__white-rust",
+      "crop": "Spinach",
+      "member_a": "Downy Mildew",
+      "member_b": "White Rust",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "wheat__parastagonospora-nodorum__powdery-mildew",
+      "crop": "Wheat",
+      "member_a": "Parastagonospora Nodorum",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "wheat__parastagonospora-nodorum__tan-spot",
+      "crop": "Wheat",
+      "member_a": "Parastagonospora Nodorum",
+      "member_b": "Tan Spot",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "wheat__parastagonospora-nodorum__wheat-leaf-rust",
+      "crop": "Wheat",
+      "member_a": "Parastagonospora Nodorum",
+      "member_b": "Wheat Leaf Rust",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "wheat__parastagonospora-nodorum__wheat-stem-rust",
+      "crop": "Wheat",
+      "member_a": "Parastagonospora Nodorum",
+      "member_b": "Wheat Stem Rust",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "hydrangea__cercospora-fungi__gray-molds",
+      "crop": "Hydrangea",
+      "member_a": "Cercospora Fungi",
+      "member_b": "Gray Molds",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "plum-and-cherry__blumeriella-leaf-spot-of-cherry-and-plum__phloeosporella-fungus",
+      "crop": "Plum and Cherry",
+      "member_a": "Blumeriella Leaf Spot Of Cherry And Plum",
+      "member_b": "Phloeosporella Fungus",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "plum-and-cherry__brown-rots__phloeosporella-fungus",
+      "crop": "Plum and Cherry",
+      "member_a": "Brown Rots",
+      "member_b": "Phloeosporella Fungus",
+      "lookalike_prior": 5.0
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__frogeye-leaf-spot",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Frogeye Leaf Spot",
+      "lookalike_prior": 4.5
+    },
+    {
+      "pair_id": "tomato__early-blight__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Early Blight",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.4
+    },
+    {
+      "pair_id": "tomato__southern-blight__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Southern Blight",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 4.4
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__root-and-stem-rot",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Root And Stem Rot",
+      "lookalike_prior": 4.4
+    },
+    {
+      "pair_id": "soybean__root-and-stem-rot__sclerotinia-timber-rot",
+      "crop": "Soybean",
+      "member_a": "Root And Stem Rot",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.4
+    },
+    {
+      "pair_id": "tomato__early-blight__sclerotinia-timber-rot",
+      "crop": "Tomato",
+      "member_a": "Early Blight",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "tomato__gray-mold__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Gray Mold",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "tomato__late-blight__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Late Blight",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "pepper__phytophthora-blight__southern-blight",
+      "crop": "Pepper",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__genus-diaporthe",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Genus Diaporthe",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__sclerotinia-timber-rot",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "soybean__downy-mildew__frogeye-leaf-spot",
+      "crop": "Soybean",
+      "member_a": "Downy Mildew",
+      "member_b": "Frogeye Leaf Spot",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "soybean__frogeye-leaf-spot__genus-diaporthe",
+      "crop": "Soybean",
+      "member_a": "Frogeye Leaf Spot",
+      "member_b": "Genus Diaporthe",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "soybean__frogeye-leaf-spot__root-and-stem-rot",
+      "crop": "Soybean",
+      "member_a": "Frogeye Leaf Spot",
+      "member_b": "Root And Stem Rot",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "peanut__nothopassalora-personata__southern-blight",
+      "crop": "Peanut",
+      "member_a": "Nothopassalora Personata",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "corn__common-corn-rust__goss--bacterial-wilt",
+      "crop": "Corn",
+      "member_a": "Common Corn Rust",
+      "member_b": "Goss' Bacterial Wilt",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "corn__corn-smut__goss--bacterial-wilt",
+      "crop": "Corn",
+      "member_a": "Corn Smut",
+      "member_b": "Goss' Bacterial Wilt",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "corn__goss--bacterial-wilt__southern-corn-rust",
+      "crop": "Corn",
+      "member_a": "Goss' Bacterial Wilt",
+      "member_b": "Southern Corn Rust",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "corn__goss--bacterial-wilt__white-ear-rot-and-seedling-blight-of-maize",
+      "crop": "Corn",
+      "member_a": "Goss' Bacterial Wilt",
+      "member_b": "White Ear Rot And Seedling Blight Of Maize",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "wheat__loose-smut-of-wheat-or-barley__stripe-rust",
+      "crop": "Wheat",
+      "member_a": "Loose Smut Of Wheat Or Barley",
+      "member_b": "Stripe Rust",
+      "lookalike_prior": 4.3
+    },
+    {
+      "pair_id": "tomato__late-blight__sclerotinia-timber-rot",
+      "crop": "Tomato",
+      "member_a": "Late Blight",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "tomato__sclerotinia-timber-rot__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "tomato__septoria-leaf-spot__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Septoria Leaf Spot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__charcoal-rot",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Charcoal Rot",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__southern-blight",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__charcoal-rot__frogeye-leaf-spot",
+      "crop": "Soybean",
+      "member_a": "Charcoal Rot",
+      "member_b": "Frogeye Leaf Spot",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__charcoal-rot__root-and-stem-rot",
+      "crop": "Soybean",
+      "member_a": "Charcoal Rot",
+      "member_b": "Root And Stem Rot",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__charcoal-rot__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Charcoal Rot",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__downy-mildew__genus-diaporthe",
+      "crop": "Soybean",
+      "member_a": "Downy Mildew",
+      "member_b": "Genus Diaporthe",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__downy-mildew__root-and-stem-rot",
+      "crop": "Soybean",
+      "member_a": "Downy Mildew",
+      "member_b": "Root And Stem Rot",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__frogeye-leaf-spot__sclerotinia-timber-rot",
+      "crop": "Soybean",
+      "member_a": "Frogeye Leaf Spot",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__frogeye-leaf-spot__southern-blight",
+      "crop": "Soybean",
+      "member_a": "Frogeye Leaf Spot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__frogeye-leaf-spot__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Frogeye Leaf Spot",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "soybean__genus-diaporthe__sclerotinia-timber-rot",
+      "crop": "Soybean",
+      "member_a": "Genus Diaporthe",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "peanut__nothopassalora-personata__passalora-fungus",
+      "crop": "Peanut",
+      "member_a": "Nothopassalora Personata",
+      "member_b": "Passalora Fungus",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "peanut__passalora-fungus__southern-blight",
+      "crop": "Peanut",
+      "member_a": "Passalora Fungus",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "melon__anthracnose__phytophthora-blight",
+      "crop": "Melon",
+      "member_a": "Anthracnose",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "squash__choanephora-fruit-rot__cucurbit-downy-mildew",
+      "crop": "Squash",
+      "member_a": "Choanephora Fruit Rot",
+      "member_b": "Cucurbit Downy Mildew",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "watermelon__anthracnose__cucurbit-downy-mildew",
+      "crop": "Watermelon",
+      "member_a": "Anthracnose",
+      "member_b": "Cucurbit Downy Mildew",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "watermelon__anthracnose__pythium-diseases",
+      "crop": "Watermelon",
+      "member_a": "Anthracnose",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "watermelon__cucurbit-downy-mildew__gummy-stem-blight",
+      "crop": "Watermelon",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "watermelon__gummy-stem-blight__pythium-diseases",
+      "crop": "Watermelon",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "watermelon__powdery-mildew__pythium-diseases",
+      "crop": "Watermelon",
+      "member_a": "Powdery Mildew",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "lettuce__downy-mildew__gray-mold",
+      "crop": "Lettuce",
+      "member_a": "Downy Mildew",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "lettuce__gray-mold__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Lettuce",
+      "member_a": "Gray Mold",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "lettuce__gray-mold__sclerotinia-timber-rot",
+      "crop": "Lettuce",
+      "member_a": "Gray Mold",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "corn__corn-smut__southern-corn-rust",
+      "crop": "Corn",
+      "member_a": "Corn Smut",
+      "member_b": "Southern Corn Rust",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "corn__southern-corn-rust__white-ear-rot-and-seedling-blight-of-maize",
+      "crop": "Corn",
+      "member_a": "Southern Corn Rust",
+      "member_b": "White Ear Rot And Seedling Blight Of Maize",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "grape__downy-mildew__powdery-mildew",
+      "crop": "Grape",
+      "member_a": "Downy Mildew",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "sweet-potato__java-black-rot__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Java Black Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "potato__bacterial-soft-rot__late-blight",
+      "crop": "Potato",
+      "member_a": "Bacterial Soft Rot",
+      "member_b": "Late Blight",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "potato__bacterial-soft-rot__phytophthora-root-and-stem-rot",
+      "crop": "Potato",
+      "member_a": "Bacterial Soft Rot",
+      "member_b": "Phytophthora Root And Stem Rot",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "cucumber__corynespora-leaf-spot__pythium-diseases",
+      "crop": "Cucumber",
+      "member_a": "Corynespora Leaf Spot",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "wheat__fusarium-graminearum-schwabe__fusarium-wilts--blights--rots-and-damping-off",
+      "crop": "Wheat",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__wheat-stem-rust",
+      "crop": "Wheat",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Wheat Stem Rust",
+      "lookalike_prior": 4.2
+    },
+    {
+      "pair_id": "tomato__anthracnose__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__southern-bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Southern Bacterial Wilt",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "tomato__rhizopus-soft-rots__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Rhizopus Soft Rots",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__charcoal-rot__downy-mildew",
+      "crop": "Soybean",
+      "member_a": "Charcoal Rot",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__charcoal-rot__genus-diaporthe",
+      "crop": "Soybean",
+      "member_a": "Charcoal Rot",
+      "member_b": "Genus Diaporthe",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__charcoal-rot__sclerotinia-timber-rot",
+      "crop": "Soybean",
+      "member_a": "Charcoal Rot",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__charcoal-rot__southern-blight",
+      "crop": "Soybean",
+      "member_a": "Charcoal Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__charcoal-rot__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Charcoal Rot",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__downy-mildew__sclerotinia-timber-rot",
+      "crop": "Soybean",
+      "member_a": "Downy Mildew",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__downy-mildew__southern-blight",
+      "crop": "Soybean",
+      "member_a": "Downy Mildew",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__frogeye-leaf-spot__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Frogeye Leaf Spot",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__genus-diaporthe__southern-blight",
+      "crop": "Soybean",
+      "member_a": "Genus Diaporthe",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__genus-diaporthe__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Genus Diaporthe",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__root-and-stem-rot__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Root And Stem Rot",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__southern-blight__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Southern Blight",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__southern-blight__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Southern Blight",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "soybean__soybean-rust__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Soybean Rust",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "strawberry__gray-mold__phomopsis-leaf-blight-and-fruit-rot",
+      "crop": "Strawberry",
+      "member_a": "Gray Mold",
+      "member_b": "Phomopsis Leaf Blight And Fruit Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "strawberry__gray-mold__ramularia-grevilleana-verkley---u--braun",
+      "crop": "Strawberry",
+      "member_a": "Gray Mold",
+      "member_b": "Ramularia Grevilleana Verkley & U. Braun",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__alternaria-leaf-blight__cucurbit-downy-mildew",
+      "crop": "Melon",
+      "member_a": "Alternaria Leaf Blight",
+      "member_b": "Cucurbit Downy Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__alternaria-leaf-blight__gummy-stem-blight",
+      "crop": "Melon",
+      "member_a": "Alternaria Leaf Blight",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__anthracnose__charcoal-rot",
+      "crop": "Melon",
+      "member_a": "Anthracnose",
+      "member_b": "Charcoal Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__charcoal-rot__fusarium-wilts--blights--rots-and-damping-off",
+      "crop": "Melon",
+      "member_a": "Charcoal Rot",
+      "member_b": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__charcoal-rot__sour-rot",
+      "crop": "Melon",
+      "member_a": "Charcoal Rot",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__cucurbit-downy-mildew__sour-rot",
+      "crop": "Melon",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__fusarium-wilts--blights--rots-and-damping-off__gummy-stem-blight",
+      "crop": "Melon",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__fusarium-wilts--blights--rots-and-damping-off__monosporascus-root-rot",
+      "crop": "Melon",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Monosporascus Root Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__fusarium-wilts--blights--rots-and-damping-off__phytophthora-blight",
+      "crop": "Melon",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__fusarium-wilts--blights--rots-and-damping-off__powdery-mildew",
+      "crop": "Melon",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__gummy-stem-blight__sour-rot",
+      "crop": "Melon",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "melon__phytophthora-blight__sour-rot",
+      "crop": "Melon",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "oak__anthracnose__botryosphaeria-rots-and-cankers",
+      "crop": "Oak",
+      "member_a": "Anthracnose",
+      "member_b": "Botryosphaeria Rots And Cankers",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "oak__botryosphaeria-rots-and-cankers__leaf-spot",
+      "crop": "Oak",
+      "member_a": "Botryosphaeria Rots And Cankers",
+      "member_b": "Leaf Spot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "oak__botryosphaeria-rots-and-cankers__oak-leaf-blister",
+      "crop": "Oak",
+      "member_a": "Botryosphaeria Rots And Cankers",
+      "member_b": "Oak Leaf Blister",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "oak__coryneum-twig-blight__oak-leaf-blister",
+      "crop": "Oak",
+      "member_a": "Coryneum Twig Blight",
+      "member_b": "Oak Leaf Blister",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "squash__anthracnose__gummy-stem-blight",
+      "crop": "Squash",
+      "member_a": "Anthracnose",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "squash__anthracnose__southern-blight",
+      "crop": "Squash",
+      "member_a": "Anthracnose",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "squash__choanephora-fruit-rot__phytophthora-blight",
+      "crop": "Squash",
+      "member_a": "Choanephora Fruit Rot",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "squash__choanephora-fruit-rot__plectosphaerella-fungus",
+      "crop": "Squash",
+      "member_a": "Choanephora Fruit Rot",
+      "member_b": "Plectosphaerella Fungus",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "squash__cucurbit-downy-mildew__southern-blight",
+      "crop": "Squash",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "squash__gummy-stem-blight__plectosphaerella-fungus",
+      "crop": "Squash",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Plectosphaerella Fungus",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "squash__phytophthora-blight__southern-blight",
+      "crop": "Squash",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "squash__plectosphaerella-fungus__southern-blight",
+      "crop": "Squash",
+      "member_a": "Plectosphaerella Fungus",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "squash__powdery-mildew__southern-blight",
+      "crop": "Squash",
+      "member_a": "Powdery Mildew",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "watermelon__bacterial-fruit-blotch__powdery-mildew",
+      "crop": "Watermelon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "watermelon__cucurbit-downy-mildew__phytophthora-blight",
+      "crop": "Watermelon",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "watermelon__cucurbit-downy-mildew__powdery-mildew",
+      "crop": "Watermelon",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "watermelon__phytophthora-blight__pythium-diseases",
+      "crop": "Watermelon",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "lettuce__downy-mildew__powdery-mildew",
+      "crop": "Lettuce",
+      "member_a": "Downy Mildew",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "lettuce__downy-mildew__sclerotinia-stem-rot",
+      "crop": "Lettuce",
+      "member_a": "Downy Mildew",
+      "member_b": "Sclerotinia Stem Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "lettuce__downy-mildew__southern-blight",
+      "crop": "Lettuce",
+      "member_a": "Downy Mildew",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "lettuce__gray-mold__southern-blight",
+      "crop": "Lettuce",
+      "member_a": "Gray Mold",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "lettuce__lettuce-chlorosis-virus__sclerotinia-timber-rot",
+      "crop": "Lettuce",
+      "member_a": "Lettuce Chlorosis Virus",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "lettuce__powdery-mildew__sclerotinia-stem-rot",
+      "crop": "Lettuce",
+      "member_a": "Powdery Mildew",
+      "member_b": "Sclerotinia Stem Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "lettuce__powdery-mildew__sclerotinia-timber-rot",
+      "crop": "Lettuce",
+      "member_a": "Powdery Mildew",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "lettuce__rhizoctonia-damping-off--blight-and-rot__southern-blight",
+      "crop": "Lettuce",
+      "member_a": "Rhizoctonia Damping-Off, Blight And Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "lettuce__sclerotinia-stem-rot__sclerotinia-timber-rot",
+      "crop": "Lettuce",
+      "member_a": "Sclerotinia Stem Rot",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "lettuce__sclerotinia-timber-rot__southern-blight",
+      "crop": "Lettuce",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cabbage__bacterial-soft-rot__club-root-of-crucifers",
+      "crop": "Cabbage",
+      "member_a": "Bacterial Soft Rot",
+      "member_b": "Club Root Of Crucifers",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cabbage__bacterial-soft-rot__downy-mildew",
+      "crop": "Cabbage",
+      "member_a": "Bacterial Soft Rot",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cabbage__bacterial-soft-rot__phytophthora-root-and-stem-rot",
+      "crop": "Cabbage",
+      "member_a": "Bacterial Soft Rot",
+      "member_b": "Phytophthora Root And Stem Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cabbage__club-root-of-crucifers__downy-mildew",
+      "crop": "Cabbage",
+      "member_a": "Club Root Of Crucifers",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "corn__anthracnose__common-corn-rust",
+      "crop": "Corn",
+      "member_a": "Anthracnose",
+      "member_b": "Common Corn Rust",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "corn__anthracnose__corn-smut",
+      "crop": "Corn",
+      "member_a": "Anthracnose",
+      "member_b": "Corn Smut",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "corn__anthracnose__southern-corn-rust",
+      "crop": "Corn",
+      "member_a": "Anthracnose",
+      "member_b": "Southern Corn Rust",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "corn__anthracnose__white-ear-rot-and-seedling-blight-of-maize",
+      "crop": "Corn",
+      "member_a": "Anthracnose",
+      "member_b": "White Ear Rot And Seedling Blight Of Maize",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "grape__black-rot__powdery-mildew",
+      "crop": "Grape",
+      "member_a": "Black Rot",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "grape__grape-anthracnose__powdery-mildew",
+      "crop": "Grape",
+      "member_a": "Grape Anthracnose",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__fusarium-damping-off",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Fusarium Damping-Off",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__fusarium-wilt",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Fusarium Wilt",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__java-black-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Java Black Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__penicillium-fungi",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Penicillium Fungi",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__scurf",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Scurf",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__sour-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bread-mold__fusarium-damping-off",
+      "crop": "Sweet Potato",
+      "member_a": "Bread Mold",
+      "member_b": "Fusarium Damping-Off",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bread-mold__fusarium-lateritium-nees",
+      "crop": "Sweet Potato",
+      "member_a": "Bread Mold",
+      "member_b": "Fusarium Lateritium Nees",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bread-mold__fusarium-wilt",
+      "crop": "Sweet Potato",
+      "member_a": "Bread Mold",
+      "member_b": "Fusarium Wilt",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bread-mold__java-black-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Bread Mold",
+      "member_b": "Java Black Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__bread-mold__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Bread Mold",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-damping-off__fusarium-lateritium-nees",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Damping-Off",
+      "member_b": "Fusarium Lateritium Nees",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-damping-off__fusarium-wilt",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Damping-Off",
+      "member_b": "Fusarium Wilt",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-damping-off__java-black-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Damping-Off",
+      "member_b": "Java Black Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-damping-off__penicillium-fungi",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Damping-Off",
+      "member_b": "Penicillium Fungi",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-damping-off__rhizopus-soft-rots",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Damping-Off",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-damping-off__sour-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Damping-Off",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-damping-off__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Damping-Off",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-lateritium-nees__fusarium-wilt",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Lateritium Nees",
+      "member_b": "Fusarium Wilt",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-lateritium-nees__java-black-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Lateritium Nees",
+      "member_b": "Java Black Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-lateritium-nees__penicillium-fungi",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Lateritium Nees",
+      "member_b": "Penicillium Fungi",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-lateritium-nees__rhizopus-soft-rots",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Lateritium Nees",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-lateritium-nees__scurf",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Lateritium Nees",
+      "member_b": "Scurf",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-lateritium-nees__sour-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Lateritium Nees",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-lateritium-nees__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Lateritium Nees",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-lateritium-nees__streptomyces-soil-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Lateritium Nees",
+      "member_b": "Streptomyces Soil Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-wilt__java-black-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Wilt",
+      "member_b": "Java Black Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-wilt__penicillium-fungi",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Wilt",
+      "member_b": "Penicillium Fungi",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-wilt__scurf",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Wilt",
+      "member_b": "Scurf",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-wilt__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Wilt",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__java-black-rot__rhizopus-soft-rots",
+      "crop": "Sweet Potato",
+      "member_a": "Java Black Rot",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__java-black-rot__scurf",
+      "crop": "Sweet Potato",
+      "member_a": "Java Black Rot",
+      "member_b": "Scurf",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__java-black-rot__sour-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Java Black Rot",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__java-black-rot__streptomyces-soil-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Java Black Rot",
+      "member_b": "Streptomyces Soil Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__penicillium-fungi__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Penicillium Fungi",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__penicillium-fungi__streptomyces-soil-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Penicillium Fungi",
+      "member_b": "Streptomyces Soil Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__rhizopus-soft-rots__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Rhizopus Soft Rots",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__rhizopus-soft-rots__streptomyces-soil-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Rhizopus Soft Rots",
+      "member_b": "Streptomyces Soil Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__scurf__sour-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Scurf",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__scurf__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Scurf",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "sweet-potato__sour-rot__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Sour Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cucumber__anthracnose__pythium-diseases",
+      "crop": "Cucumber",
+      "member_a": "Anthracnose",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cucumber__corynespora-leaf-spot__phytophthora-blight",
+      "crop": "Cucumber",
+      "member_a": "Corynespora Leaf Spot",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cucumber__cucurbit-downy-mildew__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Cucumber",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cucumber__gummy-stem-blight__pythium-diseases",
+      "crop": "Cucumber",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cucumber__phytophthora-blight__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Cucumber",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cucumber__powdery-mildew__pythium-diseases",
+      "crop": "Cucumber",
+      "member_a": "Powdery Mildew",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cucumber__pythium-diseases__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Cucumber",
+      "member_a": "Pythium Diseases",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__loose-smut-of-wheat-or-barley",
+      "crop": "Wheat",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Loose Smut Of Wheat Or Barley",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__powdery-mildew",
+      "crop": "Wheat",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__stripe-rust",
+      "crop": "Wheat",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Stripe Rust",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__tan-spot",
+      "crop": "Wheat",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Tan Spot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__wheat-leaf-rust",
+      "crop": "Wheat",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Wheat Leaf Rust",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__zymoseptoria-tritici",
+      "crop": "Wheat",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Zymoseptoria Tritici",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "wheat__loose-smut-of-wheat-or-barley__parastagonospora-nodorum",
+      "crop": "Wheat",
+      "member_a": "Loose Smut Of Wheat Or Barley",
+      "member_b": "Parastagonospora Nodorum",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "common-bean__dry-bean-rust__sclerotinia-timber-rot",
+      "crop": "Common Bean",
+      "member_a": "Dry Bean Rust",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "maple__anthracnose__maple-cankers",
+      "crop": "Maple",
+      "member_a": "Anthracnose",
+      "member_b": "Maple Cankers",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "plum-and-cherry__black-knot__blumeriella-leaf-spot-of-cherry-and-plum",
+      "crop": "Plum and Cherry",
+      "member_a": "Black Knot",
+      "member_b": "Blumeriella Leaf Spot Of Cherry And Plum",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "plum-and-cherry__black-knot__brown-rots",
+      "crop": "Plum and Cherry",
+      "member_a": "Black Knot",
+      "member_b": "Brown Rots",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cultivated-garlic__alternaria-embellisia-togashi__onion-rust",
+      "crop": "Cultivated Garlic",
+      "member_a": "Alternaria Embellisia Togashi",
+      "member_b": "Onion Rust",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cultivated-garlic__alternaria-embellisia-togashi__white-rot",
+      "crop": "Cultivated Garlic",
+      "member_a": "Alternaria Embellisia Togashi",
+      "member_b": "White Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "cultivated-garlic__gray-molds__onion-rust",
+      "crop": "Cultivated Garlic",
+      "member_a": "Gray Molds",
+      "member_b": "Onion Rust",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "highbush-blueberry__anthracnose__mummy-berry",
+      "crop": "Highbush Blueberry",
+      "member_a": "Anthracnose",
+      "member_b": "Mummy Berry",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "common-sunflower__rust__sclerotinia-timber-rot",
+      "crop": "Common Sunflower",
+      "member_a": "Rust",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.1
+    },
+    {
+      "pair_id": "tomato__anthracnose__sclerotinia-timber-rot",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "pepper__alternaria-black-molds---stem-cankers__phytophthora-blight",
+      "crop": "Pepper",
+      "member_a": "Alternaria Black Molds / Stem Cankers",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "pepper__alternaria-black-molds---stem-cankers__southern-blight",
+      "crop": "Pepper",
+      "member_a": "Alternaria Black Molds / Stem Cankers",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "soybean__downy-mildew__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Downy Mildew",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "soybean__genus-diaporthe__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Genus Diaporthe",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "soybean__root-and-stem-rot__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Root And Stem Rot",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "soybean__sclerotinia-timber-rot__southern-blight",
+      "crop": "Soybean",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "soybean__sclerotinia-timber-rot__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "soybean__sclerotinia-timber-rot__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "melon__alternaria-leaf-blight__monosporascus-root-rot",
+      "crop": "Melon",
+      "member_a": "Alternaria Leaf Blight",
+      "member_b": "Monosporascus Root Rot",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "melon__alternaria-leaf-blight__powdery-mildew",
+      "crop": "Melon",
+      "member_a": "Alternaria Leaf Blight",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "melon__anthracnose__monosporascus-root-rot",
+      "crop": "Melon",
+      "member_a": "Anthracnose",
+      "member_b": "Monosporascus Root Rot",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "melon__anthracnose__powdery-mildew",
+      "crop": "Melon",
+      "member_a": "Anthracnose",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "melon__bacterial-wilt__monosporascus-root-rot",
+      "crop": "Melon",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Monosporascus Root Rot",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "melon__gummy-stem-blight__monosporascus-root-rot",
+      "crop": "Melon",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Monosporascus Root Rot",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "melon__gummy-stem-blight__powdery-mildew",
+      "crop": "Melon",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "melon__powdery-mildew__sour-rot",
+      "crop": "Melon",
+      "member_a": "Powdery Mildew",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "rhododendrons-and-azaleas__guignardia-blotch__leaf-and-flower-gall",
+      "crop": "Rhododendrons And Azaleas",
+      "member_a": "Guignardia Blotch",
+      "member_b": "Leaf And Flower Gall",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "rhododendrons-and-azaleas__leaf-and-flower-gall__pestalotiopsis-leaf-spot",
+      "crop": "Rhododendrons And Azaleas",
+      "member_a": "Leaf And Flower Gall",
+      "member_b": "Pestalotiopsis Leaf Spot",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "oak__bacterial-leaf-scorch__coryneum-twig-blight",
+      "crop": "Oak",
+      "member_a": "Bacterial Leaf Scorch",
+      "member_b": "Coryneum Twig Blight",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "oak__bacterial-leaf-scorch__oak-leaf-blister",
+      "crop": "Oak",
+      "member_a": "Bacterial Leaf Scorch",
+      "member_b": "Oak Leaf Blister",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "oak__botryosphaeria-rots-and-cankers__oak-wilt",
+      "crop": "Oak",
+      "member_a": "Botryosphaeria Rots And Cankers",
+      "member_b": "Oak Wilt",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "pecan__diplodia-fungus__pecan-scab",
+      "crop": "Pecan",
+      "member_a": "Diplodia Fungus",
+      "member_b": "Pecan Scab",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "lettuce__gray-mold__powdery-mildew",
+      "crop": "Lettuce",
+      "member_a": "Gray Mold",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "lettuce__gray-mold__sclerotinia-stem-rot",
+      "crop": "Lettuce",
+      "member_a": "Gray Mold",
+      "member_b": "Sclerotinia Stem Rot",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "lettuce__powdery-mildew__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Lettuce",
+      "member_a": "Powdery Mildew",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "lettuce__powdery-mildew__southern-blight",
+      "crop": "Lettuce",
+      "member_a": "Powdery Mildew",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "lettuce__rhizoctonia-damping-off--blight-and-rot__sclerotinia-stem-rot",
+      "crop": "Lettuce",
+      "member_a": "Rhizoctonia Damping-Off, Blight And Rot",
+      "member_b": "Sclerotinia Stem Rot",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "lettuce__sclerotinia-stem-rot__southern-blight",
+      "crop": "Lettuce",
+      "member_a": "Sclerotinia Stem Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__parastagonospora-nodorum",
+      "crop": "Wheat",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Parastagonospora Nodorum",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "plum-and-cherry__black-knot__phloeosporella-fungus",
+      "crop": "Plum and Cherry",
+      "member_a": "Black Knot",
+      "member_b": "Phloeosporella Fungus",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "highbush-blueberry__blueberry-leaf-rust__mummy-berry",
+      "crop": "Highbush Blueberry",
+      "member_a": "Blueberry Leaf Rust",
+      "member_b": "Mummy Berry",
+      "lookalike_prior": 4.0
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__septoria-leaf-spot",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Septoria Leaf Spot",
+      "lookalike_prior": 3.4
+    },
+    {
+      "pair_id": "soybean__sclerotinia-timber-rot__septoria-leaf-spot",
+      "crop": "Soybean",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Septoria Leaf Spot",
+      "lookalike_prior": 3.4
+    },
+    {
+      "pair_id": "corn__corn-smut__northern-corn-leaf-blight",
+      "crop": "Corn",
+      "member_a": "Corn Smut",
+      "member_b": "Northern Corn Leaf Blight",
+      "lookalike_prior": 3.4
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__early-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Early Blight",
+      "lookalike_prior": 3.3
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 3.3
+    },
+    {
+      "pair_id": "corn__common-corn-rust__fusarium-graminearum-schwabe",
+      "crop": "Corn",
+      "member_a": "Common Corn Rust",
+      "member_b": "Fusarium Graminearum Schwabe",
+      "lookalike_prior": 3.3
+    },
+    {
+      "pair_id": "corn__common-corn-rust__northern-corn-leaf-blight",
+      "crop": "Corn",
+      "member_a": "Common Corn Rust",
+      "member_b": "Northern Corn Leaf Blight",
+      "lookalike_prior": 3.3
+    },
+    {
+      "pair_id": "corn__fusarium-graminearum-schwabe__goss--bacterial-wilt",
+      "crop": "Corn",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Goss' Bacterial Wilt",
+      "lookalike_prior": 3.3
+    },
+    {
+      "pair_id": "corn__fusarium-graminearum-schwabe__southern-corn-rust",
+      "crop": "Corn",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Southern Corn Rust",
+      "lookalike_prior": 3.3
+    },
+    {
+      "pair_id": "corn__northern-corn-leaf-blight__white-ear-rot-and-seedling-blight-of-maize",
+      "crop": "Corn",
+      "member_a": "Northern Corn Leaf Blight",
+      "member_b": "White Ear Rot And Seedling Blight Of Maize",
+      "lookalike_prior": 3.3
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__late-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Late Blight",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__phytophthora-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Bacterial Wilt",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__southern-bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Southern Bacterial Wilt",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "tomato__early-blight__phytophthora-blight",
+      "crop": "Tomato",
+      "member_a": "Early Blight",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "tomato__late-blight__phytophthora-blight",
+      "crop": "Tomato",
+      "member_a": "Late Blight",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "tomato__phytophthora-blight__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "pepper__phytophthora-blight__tomato-spotted-wilt-virus",
+      "crop": "Pepper",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__soybean-vein-necrosis-virus",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Soybean Vein Necrosis Virus",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "soybean__charcoal-rot__septoria-leaf-spot",
+      "crop": "Soybean",
+      "member_a": "Charcoal Rot",
+      "member_b": "Septoria Leaf Spot",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "soybean__downy-mildew__septoria-leaf-spot",
+      "crop": "Soybean",
+      "member_a": "Downy Mildew",
+      "member_b": "Septoria Leaf Spot",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "melon__alternaria-leaf-blight__phytophthora-blight",
+      "crop": "Melon",
+      "member_a": "Alternaria Leaf Blight",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "oak__anthracnose__oak-leaf-blister",
+      "crop": "Oak",
+      "member_a": "Anthracnose",
+      "member_b": "Oak Leaf Blister",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "squash__choanephora-fruit-rot__gummy-stem-blight",
+      "crop": "Squash",
+      "member_a": "Choanephora Fruit Rot",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "watermelon__bacterial-fruit-blotch__pythium-diseases",
+      "crop": "Watermelon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "watermelon__bacterial-fruit-blotch__unknown-virus",
+      "crop": "Watermelon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Unknown Virus",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "watermelon__gummy-stem-blight__unknown-virus",
+      "crop": "Watermelon",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Unknown Virus",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "corn__common-corn-rust__downy-mildew",
+      "crop": "Corn",
+      "member_a": "Common Corn Rust",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "corn__corn-smut__downy-mildew",
+      "crop": "Corn",
+      "member_a": "Corn Smut",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "corn__corn-smut__gray-leaf-spot",
+      "crop": "Corn",
+      "member_a": "Corn Smut",
+      "member_b": "Gray Leaf Spot",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "corn__downy-mildew__goss--bacterial-wilt",
+      "crop": "Corn",
+      "member_a": "Downy Mildew",
+      "member_b": "Goss' Bacterial Wilt",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "corn__downy-mildew__northern-corn-leaf-blight",
+      "crop": "Corn",
+      "member_a": "Downy Mildew",
+      "member_b": "Northern Corn Leaf Blight",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "corn__downy-mildew__southern-corn-rust",
+      "crop": "Corn",
+      "member_a": "Downy Mildew",
+      "member_b": "Southern Corn Rust",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "corn__downy-mildew__white-ear-rot-and-seedling-blight-of-maize",
+      "crop": "Corn",
+      "member_a": "Downy Mildew",
+      "member_b": "White Ear Rot And Seedling Blight Of Maize",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "corn__gray-leaf-spot__white-ear-rot-and-seedling-blight-of-maize",
+      "crop": "Corn",
+      "member_a": "Gray Leaf Spot",
+      "member_b": "White Ear Rot And Seedling Blight Of Maize",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "corn__northern-corn-leaf-blight__southern-corn-rust",
+      "crop": "Corn",
+      "member_a": "Northern Corn Leaf Blight",
+      "member_b": "Southern Corn Rust",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "grape__downy-mildew__gray-mold",
+      "crop": "Grape",
+      "member_a": "Downy Mildew",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "grape__gray-mold__powdery-mildew",
+      "crop": "Grape",
+      "member_a": "Gray Mold",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "potato__bacterial-soft-rot__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Potato",
+      "member_a": "Bacterial Soft Rot",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "potato__late-blight__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Potato",
+      "member_a": "Late Blight",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 3.2
+    },
+    {
+      "pair_id": "tomato__anthracnose__bacterial-canker-and-wilt-of-tomato",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Bacterial Canker And Wilt Of Tomato",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__rhizopus-soft-rots",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__sclerotinia-timber-rot",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "tomato__gray-mold__phytophthora-blight",
+      "crop": "Tomato",
+      "member_a": "Gray Mold",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "tomato__phytophthora-blight__sclerotinia-timber-rot",
+      "crop": "Tomato",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "tomato__phytophthora-blight__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "tomato__phytophthora-blight__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "tomato__sclerotinia-timber-rot__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "tomato__southern-blight__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Southern Blight",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "pepper__bacterial-spot__tomato-spotted-wilt-virus",
+      "crop": "Pepper",
+      "member_a": "Bacterial Spot",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "soybean__septoria-leaf-spot__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Septoria Leaf Spot",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__alternaria-leaf-blight__fusarium-wilts--blights--rots-and-damping-off",
+      "crop": "Melon",
+      "member_a": "Alternaria Leaf Blight",
+      "member_b": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__alternaria-leaf-blight__sour-rot",
+      "crop": "Melon",
+      "member_a": "Alternaria Leaf Blight",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__anthracnose__bacterial-fruit-blotch",
+      "crop": "Melon",
+      "member_a": "Anthracnose",
+      "member_b": "Bacterial Fruit Blotch",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__bacterial-fruit-blotch__charcoal-rot",
+      "crop": "Melon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Charcoal Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__bacterial-fruit-blotch__fusarium-wilts--blights--rots-and-damping-off",
+      "crop": "Melon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__bacterial-fruit-blotch__phytophthora-blight",
+      "crop": "Melon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__bacterial-fruit-blotch__sour-rot",
+      "crop": "Melon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__charcoal-rot__gummy-stem-blight",
+      "crop": "Melon",
+      "member_a": "Charcoal Rot",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__charcoal-rot__phytophthora-blight",
+      "crop": "Melon",
+      "member_a": "Charcoal Rot",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__cucurbit-downy-mildew__fusarium-wilts--blights--rots-and-damping-off",
+      "crop": "Melon",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__cucurbit-downy-mildew__phytophthora-blight",
+      "crop": "Melon",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "melon__gummy-stem-blight__phytophthora-blight",
+      "crop": "Melon",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "oak__bacterial-leaf-scorch__leaf-spot",
+      "crop": "Oak",
+      "member_a": "Bacterial Leaf Scorch",
+      "member_b": "Leaf Spot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "oak__coryneum-twig-blight__nectria-canker",
+      "crop": "Oak",
+      "member_a": "Coryneum Twig Blight",
+      "member_b": "Nectria Canker",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "oak__leaf-spot__nectria-canker",
+      "crop": "Oak",
+      "member_a": "Leaf Spot",
+      "member_b": "Nectria Canker",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "oak__leaf-spot__oak-leaf-blister",
+      "crop": "Oak",
+      "member_a": "Leaf Spot",
+      "member_b": "Oak Leaf Blister",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "oak__nectria-canker__oak-leaf-blister",
+      "crop": "Oak",
+      "member_a": "Nectria Canker",
+      "member_b": "Oak Leaf Blister",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "oak__oak-leaf-blister__oak-wilt",
+      "crop": "Oak",
+      "member_a": "Oak Leaf Blister",
+      "member_b": "Oak Wilt",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "squash__choanephora-fruit-rot__powdery-mildew",
+      "crop": "Squash",
+      "member_a": "Choanephora Fruit Rot",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "squash__choanephora-fruit-rot__southern-blight",
+      "crop": "Squash",
+      "member_a": "Choanephora Fruit Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "watermelon__anthracnose__unknown-virus",
+      "crop": "Watermelon",
+      "member_a": "Anthracnose",
+      "member_b": "Unknown Virus",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "watermelon__cucurbit-downy-mildew__pythium-diseases",
+      "crop": "Watermelon",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "lettuce__mirafiori-lettuce-big-vein-virus__sclerotinia-timber-rot",
+      "crop": "Lettuce",
+      "member_a": "Mirafiori Lettuce Big-Vein Virus",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "cabbage__bacterial-soft-rot__black-rot-of-crucifers",
+      "crop": "Cabbage",
+      "member_a": "Bacterial Soft Rot",
+      "member_b": "Black Rot Of Crucifers",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "cabbage__black-rot-of-crucifers__downy-mildew",
+      "crop": "Cabbage",
+      "member_a": "Black Rot Of Crucifers",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "corn__anthracnose__downy-mildew",
+      "crop": "Corn",
+      "member_a": "Anthracnose",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "corn__anthracnose__fusarium-graminearum-schwabe",
+      "crop": "Corn",
+      "member_a": "Anthracnose",
+      "member_b": "Fusarium Graminearum Schwabe",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "corn__common-corn-rust__gray-leaf-spot",
+      "crop": "Corn",
+      "member_a": "Common Corn Rust",
+      "member_b": "Gray Leaf Spot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "corn__downy-mildew__gray-leaf-spot",
+      "crop": "Corn",
+      "member_a": "Downy Mildew",
+      "member_b": "Gray Leaf Spot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "corn__gray-leaf-spot__southern-corn-rust",
+      "crop": "Corn",
+      "member_a": "Gray Leaf Spot",
+      "member_b": "Southern Corn Rust",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "sugar-beet__cercospora-leaf-spot__powdery-mildew",
+      "crop": "Sugar Beet",
+      "member_a": "Cercospora Leaf Spot",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "grape__black-rot__gray-mold",
+      "crop": "Grape",
+      "member_a": "Black Rot",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "grape__grape-anthracnose__gray-mold",
+      "crop": "Grape",
+      "member_a": "Grape Anthracnose",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "peach__botryosphaeria-canker--white-rot__stigmina-fungus",
+      "crop": "Peach",
+      "member_a": "Botryosphaeria Canker, White Rot",
+      "member_b": "Stigmina Fungus",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "peach__brown-rot__peach-leaf-curl",
+      "crop": "Peach",
+      "member_a": "Brown Rot",
+      "member_b": "Peach Leaf Curl",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "peach__brown-rot__stigmina-fungus",
+      "crop": "Peach",
+      "member_a": "Brown Rot",
+      "member_b": "Stigmina Fungus",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "peach__peach-leaf-curl__stigmina-fungus",
+      "crop": "Peach",
+      "member_a": "Peach Leaf Curl",
+      "member_b": "Stigmina Fungus",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "almond__brown-rot__stigmina-fungus",
+      "crop": "Almond",
+      "member_a": "Brown Rot",
+      "member_b": "Stigmina Fungus",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "potato__late-blight__phytophthora-root-and-stem-rot",
+      "crop": "Potato",
+      "member_a": "Late Blight",
+      "member_b": "Phytophthora Root And Stem Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "potato__phytophthora-root-and-stem-rot__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Potato",
+      "member_a": "Phytophthora Root And Stem Rot",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "cucumber__angular-leaf-spot-of-cucumber__bacterial-wilt",
+      "crop": "Cucumber",
+      "member_a": "Angular Leaf Spot Of Cucumber",
+      "member_b": "Bacterial Wilt",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "cucumber__anthracnose__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Cucumber",
+      "member_a": "Anthracnose",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "cucumber__corynespora-leaf-spot__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Cucumber",
+      "member_a": "Corynespora Leaf Spot",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "cucumber__gummy-stem-blight__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Cucumber",
+      "member_a": "Gummy Stem Blight",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "cucumber__powdery-mildew__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Cucumber",
+      "member_a": "Powdery Mildew",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "maple__maple-cankers__tar-spot-of-maple",
+      "crop": "Maple",
+      "member_a": "Maple Cankers",
+      "member_b": "Tar Spot Of Maple",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "rice__bacterial-panicle-blight__rice-blast-disease",
+      "crop": "Rice",
+      "member_a": "Bacterial Panicle Blight",
+      "member_b": "Rice Blast Disease",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "rice__rhizoctonia-damping-off--blight-and-rot__rice-blast-disease",
+      "crop": "Rice",
+      "member_a": "Rhizoctonia Damping-Off, Blight And Rot",
+      "member_b": "Rice Blast Disease",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "cultivated-garlic__gray-molds__white-rot",
+      "crop": "Cultivated Garlic",
+      "member_a": "Gray Molds",
+      "member_b": "White Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "cultivated-garlic__onion-rust__white-rot",
+      "crop": "Cultivated Garlic",
+      "member_a": "Onion Rust",
+      "member_b": "White Rot",
+      "lookalike_prior": 3.1
+    },
+    {
+      "pair_id": "tomato__anthracnose__phytophthora-blight",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "tomato__anthracnose__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "tomato__phytophthora-blight__rhizopus-soft-rots",
+      "crop": "Tomato",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "tomato__phytophthora-blight__septoria-leaf-spot",
+      "crop": "Tomato",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Septoria Leaf Spot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "tomato__rhizopus-soft-rots__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Rhizopus Soft Rots",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "tomato__septoria-leaf-spot__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Septoria Leaf Spot",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "tomato__tomato-leaf-mould__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Tomato Leaf Mould",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "soybean__septoria-leaf-spot__southern-blight",
+      "crop": "Soybean",
+      "member_a": "Septoria Leaf Spot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "soybean__septoria-leaf-spot__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Septoria Leaf Spot",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "melon__charcoal-rot__monosporascus-root-rot",
+      "crop": "Melon",
+      "member_a": "Charcoal Rot",
+      "member_b": "Monosporascus Root Rot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "melon__charcoal-rot__powdery-mildew",
+      "crop": "Melon",
+      "member_a": "Charcoal Rot",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "melon__monosporascus-root-rot__phytophthora-blight",
+      "crop": "Melon",
+      "member_a": "Monosporascus Root Rot",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "melon__phytophthora-blight__powdery-mildew",
+      "crop": "Melon",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "oak__anthracnose__bacterial-leaf-scorch",
+      "crop": "Oak",
+      "member_a": "Anthracnose",
+      "member_b": "Bacterial Leaf Scorch",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "oak__anthracnose__ganoderma-root-and-butt-rot",
+      "crop": "Oak",
+      "member_a": "Anthracnose",
+      "member_b": "Ganoderma Root And Butt Rot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "oak__bacterial-leaf-scorch__botryosphaeria-rots-and-cankers",
+      "crop": "Oak",
+      "member_a": "Bacterial Leaf Scorch",
+      "member_b": "Botryosphaeria Rots And Cankers",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "oak__bacterial-leaf-scorch__oak-wilt",
+      "crop": "Oak",
+      "member_a": "Bacterial Leaf Scorch",
+      "member_b": "Oak Wilt",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "oak__botryosphaeria-rots-and-cankers__ganoderma-root-and-butt-rot",
+      "crop": "Oak",
+      "member_a": "Botryosphaeria Rots And Cankers",
+      "member_b": "Ganoderma Root And Butt Rot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "oak__coryneum-twig-blight__ganoderma-root-and-butt-rot",
+      "crop": "Oak",
+      "member_a": "Coryneum Twig Blight",
+      "member_b": "Ganoderma Root And Butt Rot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "oak__ganoderma-root-and-butt-rot__leaf-spot",
+      "crop": "Oak",
+      "member_a": "Ganoderma Root And Butt Rot",
+      "member_b": "Leaf Spot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "oak__ganoderma-root-and-butt-rot__nectria-canker",
+      "crop": "Oak",
+      "member_a": "Ganoderma Root And Butt Rot",
+      "member_b": "Nectria Canker",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "oak__ganoderma-root-and-butt-rot__oak-wilt",
+      "crop": "Oak",
+      "member_a": "Ganoderma Root And Butt Rot",
+      "member_b": "Oak Wilt",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "oak__nectria-canker__oak-wilt",
+      "crop": "Oak",
+      "member_a": "Nectria Canker",
+      "member_b": "Oak Wilt",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "loblolly-pine__leptographium-root-disease__pine-needle-rusts",
+      "crop": "Loblolly Pine",
+      "member_a": "Leptographium Root Disease",
+      "member_b": "Pine Needle Rusts",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "lettuce__lettuce-chlorosis-virus__tomato-spotted-wilt-virus",
+      "crop": "Lettuce",
+      "member_a": "Lettuce Chlorosis Virus",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "lettuce__mirafiori-lettuce-big-vein-virus__tomato-spotted-wilt-virus",
+      "crop": "Lettuce",
+      "member_a": "Mirafiori Lettuce Big-Vein Virus",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "cabbage__club-root-of-crucifers__phytophthora-root-and-stem-rot",
+      "crop": "Cabbage",
+      "member_a": "Club Root Of Crucifers",
+      "member_b": "Phytophthora Root And Stem Rot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "cabbage__downy-mildew__phytophthora-root-and-stem-rot",
+      "crop": "Cabbage",
+      "member_a": "Downy Mildew",
+      "member_b": "Phytophthora Root And Stem Rot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "peach__botryosphaeria-canker--white-rot__brown-rot",
+      "crop": "Peach",
+      "member_a": "Botryosphaeria Canker, White Rot",
+      "member_b": "Brown Rot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "peach__botryosphaeria-canker--white-rot__peach-leaf-curl",
+      "crop": "Peach",
+      "member_a": "Botryosphaeria Canker, White Rot",
+      "member_b": "Peach Leaf Curl",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "wheat__fusarium-graminearum-schwabe__karnal-bunt",
+      "crop": "Wheat",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Karnal Bunt",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__karnal-bunt",
+      "crop": "Wheat",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Karnal Bunt",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "wheat__karnal-bunt__loose-smut-of-wheat-or-barley",
+      "crop": "Wheat",
+      "member_a": "Karnal Bunt",
+      "member_b": "Loose Smut Of Wheat Or Barley",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "wheat__karnal-bunt__parastagonospora-nodorum",
+      "crop": "Wheat",
+      "member_a": "Karnal Bunt",
+      "member_b": "Parastagonospora Nodorum",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "wheat__karnal-bunt__powdery-mildew",
+      "crop": "Wheat",
+      "member_a": "Karnal Bunt",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "wheat__karnal-bunt__stripe-rust",
+      "crop": "Wheat",
+      "member_a": "Karnal Bunt",
+      "member_b": "Stripe Rust",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "wheat__karnal-bunt__tan-spot",
+      "crop": "Wheat",
+      "member_a": "Karnal Bunt",
+      "member_b": "Tan Spot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "wheat__karnal-bunt__wheat-leaf-rust",
+      "crop": "Wheat",
+      "member_a": "Karnal Bunt",
+      "member_b": "Wheat Leaf Rust",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "wheat__karnal-bunt__wheat-stem-rust",
+      "crop": "Wheat",
+      "member_a": "Karnal Bunt",
+      "member_b": "Wheat Stem Rust",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "wheat__karnal-bunt__zymoseptoria-tritici",
+      "crop": "Wheat",
+      "member_a": "Karnal Bunt",
+      "member_b": "Zymoseptoria Tritici",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "eastern-white-pine__caliciopsis-canker__needle-cast",
+      "crop": "Eastern White Pine",
+      "member_a": "Caliciopsis Canker",
+      "member_b": "Needle Cast",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "eastern-white-pine__caliciopsis-canker__stem-rot",
+      "crop": "Eastern White Pine",
+      "member_a": "Caliciopsis Canker",
+      "member_b": "Stem Rot",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "peony__anthracnose__botrytis-blight",
+      "crop": "Peony",
+      "member_a": "Anthracnose",
+      "member_b": "Botrytis Blight",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "highbush-blueberry__mummy-berry__phomopsis-cankers-and-twig-blights",
+      "crop": "Highbush Blueberry",
+      "member_a": "Mummy Berry",
+      "member_b": "Phomopsis Cankers And Twig Blights",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "highbush-blueberry__mummy-berry__twig-canker",
+      "crop": "Highbush Blueberry",
+      "member_a": "Mummy Berry",
+      "member_b": "Twig Canker",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "american-beech__beech-leaf-disease__neonectria-coccinea",
+      "crop": "American Beech",
+      "member_a": "Beech Leaf Disease",
+      "member_b": "Neonectria Coccinea",
+      "lookalike_prior": 3.0
+    },
+    {
+      "pair_id": "pepper__bacterial-spot__phytophthora-blight",
+      "crop": "Pepper",
+      "member_a": "Bacterial Spot",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 2.4
+    },
+    {
+      "pair_id": "wheat__barley-yellow-dwarf-virus__fusarium-graminearum-schwabe",
+      "crop": "Wheat",
+      "member_a": "Barley Yellow Dwarf Virus",
+      "member_b": "Fusarium Graminearum Schwabe",
+      "lookalike_prior": 2.4
+    },
+    {
+      "pair_id": "wheat__barley-yellow-dwarf-virus__powdery-mildew",
+      "crop": "Wheat",
+      "member_a": "Barley Yellow Dwarf Virus",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 2.4
+    },
+    {
+      "pair_id": "tomato__sclerotinia-timber-rot__southern-bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Southern Bacterial Wilt",
+      "lookalike_prior": 2.3
+    },
+    {
+      "pair_id": "tomato__southern-bacterial-wilt__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Southern Bacterial Wilt",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 2.3
+    },
+    {
+      "pair_id": "soybean__bacterial-pustule-of-soybean-disease__root-and-stem-rot",
+      "crop": "Soybean",
+      "member_a": "Bacterial Pustule Of Soybean Disease",
+      "member_b": "Root And Stem Rot",
+      "lookalike_prior": 2.3
+    },
+    {
+      "pair_id": "watermelon__powdery-mildew__unknown-virus",
+      "crop": "Watermelon",
+      "member_a": "Powdery Mildew",
+      "member_b": "Unknown Virus",
+      "lookalike_prior": 2.3
+    },
+    {
+      "pair_id": "wheat__barley-yellow-dwarf-virus__loose-smut-of-wheat-or-barley",
+      "crop": "Wheat",
+      "member_a": "Barley Yellow Dwarf Virus",
+      "member_b": "Loose Smut Of Wheat Or Barley",
+      "lookalike_prior": 2.3
+    },
+    {
+      "pair_id": "wheat__powdery-mildew__wheat-streak-mosaic-virus",
+      "crop": "Wheat",
+      "member_a": "Powdery Mildew",
+      "member_b": "Wheat Streak Mosaic Virus",
+      "lookalike_prior": 2.3
+    },
+    {
+      "pair_id": "apple__apple-scab__fire-blight",
+      "crop": "Apple",
+      "member_a": "Apple Scab",
+      "member_b": "Fire Blight",
+      "lookalike_prior": 2.3
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__phytophthora-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "tomato__late-blight__southern-bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Late Blight",
+      "member_b": "Southern Bacterial Wilt",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "tomato__southern-bacterial-wilt__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Southern Bacterial Wilt",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "soybean__bacterial-pustule-of-soybean-disease__cercospora-blight",
+      "crop": "Soybean",
+      "member_a": "Bacterial Pustule Of Soybean Disease",
+      "member_b": "Cercospora Blight",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "soybean__bacterial-pustule-of-soybean-disease__charcoal-rot",
+      "crop": "Soybean",
+      "member_a": "Bacterial Pustule Of Soybean Disease",
+      "member_b": "Charcoal Rot",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "soybean__bacterial-pustule-of-soybean-disease__genus-diaporthe",
+      "crop": "Soybean",
+      "member_a": "Bacterial Pustule Of Soybean Disease",
+      "member_b": "Genus Diaporthe",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "soybean__bacterial-pustule-of-soybean-disease__sclerotinia-timber-rot",
+      "crop": "Soybean",
+      "member_a": "Bacterial Pustule Of Soybean Disease",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "corn__downy-mildew__fusarium-graminearum-schwabe",
+      "crop": "Corn",
+      "member_a": "Downy Mildew",
+      "member_b": "Fusarium Graminearum Schwabe",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "corn__fusarium-graminearum-schwabe__northern-corn-leaf-blight",
+      "crop": "Corn",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Northern Corn Leaf Blight",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "wheat__barley-yellow-dwarf-virus__wheat-stem-rust",
+      "crop": "Wheat",
+      "member_a": "Barley Yellow Dwarf Virus",
+      "member_b": "Wheat Stem Rust",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "wheat__fusarium-graminearum-schwabe__wheat-streak-mosaic-virus",
+      "crop": "Wheat",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Wheat Streak Mosaic Virus",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "wheat__tan-spot__wheat-streak-mosaic-virus",
+      "crop": "Wheat",
+      "member_a": "Tan Spot",
+      "member_b": "Wheat Streak Mosaic Virus",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "wheat__wheat-leaf-rust__wheat-streak-mosaic-virus",
+      "crop": "Wheat",
+      "member_a": "Wheat Leaf Rust",
+      "member_b": "Wheat Streak Mosaic Virus",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "apple__black-rot__fire-blight",
+      "crop": "Apple",
+      "member_a": "Black Rot",
+      "member_b": "Fire Blight",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "apple__cedar-apple-rust__fire-blight",
+      "crop": "Apple",
+      "member_a": "Cedar-Apple Rust",
+      "member_b": "Fire Blight",
+      "lookalike_prior": 2.2
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__early-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Early Blight",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__gray-mold",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__late-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Late Blight",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__sclerotinia-timber-rot",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "soybean__bacterial-pustule-of-soybean-disease__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Bacterial Pustule Of Soybean Disease",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "melon__alternaria-leaf-blight__bacterial-fruit-blotch",
+      "crop": "Melon",
+      "member_a": "Alternaria Leaf Blight",
+      "member_b": "Bacterial Fruit Blotch",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "melon__alternaria-leaf-blight__charcoal-rot",
+      "crop": "Melon",
+      "member_a": "Alternaria Leaf Blight",
+      "member_b": "Charcoal Rot",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "melon__anthracnose__bacterial-wilt",
+      "crop": "Melon",
+      "member_a": "Anthracnose",
+      "member_b": "Bacterial Wilt",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "melon__bacterial-fruit-blotch__cucurbit-downy-mildew",
+      "crop": "Melon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Cucurbit Downy Mildew",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "melon__bacterial-fruit-blotch__gummy-stem-blight",
+      "crop": "Melon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "melon__bacterial-wilt__fusarium-wilts--blights--rots-and-damping-off",
+      "crop": "Melon",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "melon__bacterial-wilt__gummy-stem-blight",
+      "crop": "Melon",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "melon__bacterial-wilt__sour-rot",
+      "crop": "Melon",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Sour Rot",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "melon__charcoal-rot__cucurbit-downy-mildew",
+      "crop": "Melon",
+      "member_a": "Charcoal Rot",
+      "member_b": "Cucurbit Downy Mildew",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "oak__ganoderma-root-and-butt-rot__oak-leaf-blister",
+      "crop": "Oak",
+      "member_a": "Ganoderma Root And Butt Rot",
+      "member_b": "Oak Leaf Blister",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "watermelon__cucurbit-downy-mildew__unknown-virus",
+      "crop": "Watermelon",
+      "member_a": "Cucurbit Downy Mildew",
+      "member_b": "Unknown Virus",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "lettuce__downy-mildew__mirafiori-lettuce-big-vein-virus",
+      "crop": "Lettuce",
+      "member_a": "Downy Mildew",
+      "member_b": "Mirafiori Lettuce Big-Vein Virus",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "lettuce__lettuce-chlorosis-virus__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Lettuce",
+      "member_a": "Lettuce Chlorosis Virus",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "lettuce__mirafiori-lettuce-big-vein-virus__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Lettuce",
+      "member_a": "Mirafiori Lettuce Big-Vein Virus",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "cabbage__black-rot-of-crucifers__club-root-of-crucifers",
+      "crop": "Cabbage",
+      "member_a": "Black Rot Of Crucifers",
+      "member_b": "Club Root Of Crucifers",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "corn__fusarium-graminearum-schwabe__gray-leaf-spot",
+      "crop": "Corn",
+      "member_a": "Fusarium Graminearum Schwabe",
+      "member_b": "Gray Leaf Spot",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__black-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Black Rot",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "sweet-potato__black-rot__fusarium-damping-off",
+      "crop": "Sweet Potato",
+      "member_a": "Black Rot",
+      "member_b": "Fusarium Damping-Off",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "sweet-potato__black-rot__fusarium-lateritium-nees",
+      "crop": "Sweet Potato",
+      "member_a": "Black Rot",
+      "member_b": "Fusarium Lateritium Nees",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "sweet-potato__black-rot__fusarium-wilt",
+      "crop": "Sweet Potato",
+      "member_a": "Black Rot",
+      "member_b": "Fusarium Wilt",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "sweet-potato__black-rot__scurf",
+      "crop": "Sweet Potato",
+      "member_a": "Black Rot",
+      "member_b": "Scurf",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "sweet-potato__black-rot__southern-blight",
+      "crop": "Sweet Potato",
+      "member_a": "Black Rot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "sweet-potato__black-rot__streptomyces-soil-rot",
+      "crop": "Sweet Potato",
+      "member_a": "Black Rot",
+      "member_b": "Streptomyces Soil Rot",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "potato__bacterial-soft-rot__tomato-spotted-wilt-virus",
+      "crop": "Potato",
+      "member_a": "Bacterial Soft Rot",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "potato__phytophthora-root-and-stem-rot__tomato-spotted-wilt-virus",
+      "crop": "Potato",
+      "member_a": "Phytophthora Root And Stem Rot",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "rose__black-spot__rose-rosette-virus",
+      "crop": "Rose",
+      "member_a": "Black Spot",
+      "member_b": "Rose Rosette Virus",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "cucumber__angular-leaf-spot-of-cucumber__phytophthora-blight",
+      "crop": "Cucumber",
+      "member_a": "Angular Leaf Spot Of Cucumber",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "cucumber__angular-leaf-spot-of-cucumber__powdery-mildew",
+      "crop": "Cucumber",
+      "member_a": "Angular Leaf Spot Of Cucumber",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "cucumber__anthracnose__bacterial-wilt",
+      "crop": "Cucumber",
+      "member_a": "Anthracnose",
+      "member_b": "Bacterial Wilt",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "cucumber__bacterial-wilt__corynespora-leaf-spot",
+      "crop": "Cucumber",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Corynespora Leaf Spot",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "cucumber__bacterial-wilt__cucurbit-downy-mildew",
+      "crop": "Cucumber",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Cucurbit Downy Mildew",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "cucumber__bacterial-wilt__gummy-stem-blight",
+      "crop": "Cucumber",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "cucumber__bacterial-wilt__phytophthora-blight",
+      "crop": "Cucumber",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "cucumber__bacterial-wilt__powdery-mildew",
+      "crop": "Cucumber",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "cucumber__bacterial-wilt__pythium-diseases",
+      "crop": "Cucumber",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "wheat__barley-yellow-dwarf-virus__fusarium-wilts--blights--rots-and-damping-off",
+      "crop": "Wheat",
+      "member_a": "Barley Yellow Dwarf Virus",
+      "member_b": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "wheat__barley-yellow-dwarf-virus__parastagonospora-nodorum",
+      "crop": "Wheat",
+      "member_a": "Barley Yellow Dwarf Virus",
+      "member_b": "Parastagonospora Nodorum",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__wheat-streak-mosaic-virus",
+      "crop": "Wheat",
+      "member_a": "Fusarium Wilts, Blights, Rots And Damping-Off",
+      "member_b": "Wheat Streak Mosaic Virus",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "wheat__loose-smut-of-wheat-or-barley__wheat-streak-mosaic-virus",
+      "crop": "Wheat",
+      "member_a": "Loose Smut Of Wheat Or Barley",
+      "member_b": "Wheat Streak Mosaic Virus",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "common-bean__common-bacterial--blight-of-beans--fuscous-blight__halo-blight",
+      "crop": "Common Bean",
+      "member_a": "Common Bacterial  Blight Of Beans, Fuscous Blight",
+      "member_b": "Halo Blight",
+      "lookalike_prior": 2.1
+    },
+    {
+      "pair_id": "tomato__anthracnose__bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Bacterial Wilt",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "tomato__anthracnose__southern-bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Southern Bacterial Wilt",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__rhizopus-soft-rots",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__septoria-leaf-spot",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Septoria Leaf Spot",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "tomato__rhizopus-soft-rots__southern-bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Rhizopus Soft Rots",
+      "member_b": "Southern Bacterial Wilt",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "soybean__bacterial-pustule-of-soybean-disease__southern-blight",
+      "crop": "Soybean",
+      "member_a": "Bacterial Pustule Of Soybean Disease",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "soybean__bacterial-pustule-of-soybean-disease__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Bacterial Pustule Of Soybean Disease",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "melon__bacterial-fruit-blotch__monosporascus-root-rot",
+      "crop": "Melon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Monosporascus Root Rot",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "melon__bacterial-fruit-blotch__powdery-mildew",
+      "crop": "Melon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "melon__bacterial-wilt__powdery-mildew",
+      "crop": "Melon",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "oak__bacterial-leaf-scorch__ganoderma-root-and-butt-rot",
+      "crop": "Oak",
+      "member_a": "Bacterial Leaf Scorch",
+      "member_b": "Ganoderma Root And Butt Rot",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "oak__bacterial-leaf-scorch__nectria-canker",
+      "crop": "Oak",
+      "member_a": "Bacterial Leaf Scorch",
+      "member_b": "Nectria Canker",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "cabbage__black-rot-of-crucifers__phytophthora-root-and-stem-rot",
+      "crop": "Cabbage",
+      "member_a": "Black Rot Of Crucifers",
+      "member_b": "Phytophthora Root And Stem Rot",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "wheat__parastagonospora-nodorum__wheat-streak-mosaic-virus",
+      "crop": "Wheat",
+      "member_a": "Parastagonospora Nodorum",
+      "member_b": "Wheat Streak Mosaic Virus",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "aspen-poplar__cytospora-cankers__marssonina-leaf-spots",
+      "crop": "Aspen/Poplar",
+      "member_a": "Cytospora Cankers",
+      "member_b": "Marssonina Leaf Spots",
+      "lookalike_prior": 2.0
+    },
+    {
+      "pair_id": "tomato__late-blight__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Late Blight",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.5
+    },
+    {
+      "pair_id": "tomato__southern-bacterial-wilt__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Southern Bacterial Wilt",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.4
+    },
+    {
+      "pair_id": "tomato__southern-blight__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Southern Blight",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.4
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__cercospora-blight",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Cercospora Blight",
+      "lookalike_prior": 1.4
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__cercospora-blight",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Cercospora Blight",
+      "lookalike_prior": 1.4
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.3
+    },
+    {
+      "pair_id": "tomato__septoria-leaf-spot__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Septoria Leaf Spot",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.3
+    },
+    {
+      "pair_id": "tomato__tomato-leaf-mould__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Tomato Leaf Mould",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.3
+    },
+    {
+      "pair_id": "pepper__bacterial-spot__southern-blight",
+      "crop": "Pepper",
+      "member_a": "Bacterial Spot",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 1.3
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__root-and-stem-rot",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Root And Stem Rot",
+      "lookalike_prior": 1.3
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__sclerotinia-timber-rot",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 1.3
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__septoria-leaf-spot",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Septoria Leaf Spot",
+      "lookalike_prior": 1.3
+    },
+    {
+      "pair_id": "strawberry__angular-leaf-spot-of-strawberry__gray-mold",
+      "crop": "Strawberry",
+      "member_a": "Angular Leaf Spot Of Strawberry",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 1.3
+    },
+    {
+      "pair_id": "tomato__anthracnose__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__bacterial-speck-of-tomato",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Bacterial Speck Of Tomato",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__early-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Early Blight",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__late-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Late Blight",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__late-blight",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Late Blight",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__southern-blight",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__gray-mold__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Gray Mold",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__phytophthora-blight__southern-bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Southern Bacterial Wilt",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__phytophthora-blight__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Phytophthora Blight",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__sclerotinia-timber-rot__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "pepper__southern-blight__tomato-spotted-wilt-virus",
+      "crop": "Pepper",
+      "member_a": "Southern Blight",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__bean-pod-mottle-virus",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Bean Pod Mottle Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__downy-mildew",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__root-and-stem-rot",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Root And Stem Rot",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__sclerotinia-timber-rot",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__bacterial-pustule-of-soybean-disease__bean-pod-mottle-virus",
+      "crop": "Soybean",
+      "member_a": "Bacterial Pustule Of Soybean Disease",
+      "member_b": "Bean Pod Mottle Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__charcoal-rot",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Charcoal Rot",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__downy-mildew",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Downy Mildew",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__frogeye-leaf-spot",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Frogeye Leaf Spot",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__southern-blight",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__cercospora-blight__soybean-vein-necrosis-virus",
+      "crop": "Soybean",
+      "member_a": "Cercospora Blight",
+      "member_b": "Soybean Vein Necrosis Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__genus-diaporthe__soybean-vein-necrosis-virus",
+      "crop": "Soybean",
+      "member_a": "Genus Diaporthe",
+      "member_b": "Soybean Vein Necrosis Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__root-and-stem-rot__soybean-vein-necrosis-virus",
+      "crop": "Soybean",
+      "member_a": "Root And Stem Rot",
+      "member_b": "Soybean Vein Necrosis Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "soybean__sclerotinia-timber-rot__soybean-vein-necrosis-virus",
+      "crop": "Soybean",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Soybean Vein Necrosis Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "watermelon__pythium-diseases__unknown-virus",
+      "crop": "Watermelon",
+      "member_a": "Pythium Diseases",
+      "member_b": "Unknown Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "sweet-potato__java-black-rot__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Java Black Rot",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "sweet-potato__southern-blight__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Southern Blight",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.2
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Bacterial Wilt",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__cucumber-mosaic-virus",
+      "crop": "Tomato",
+      "member_a": "Bacterial Canker And Wilt Of Tomato",
+      "member_b": "Cucumber Mosaic Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__cucumber-mosaic-virus",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Cucumber Mosaic Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__gray-mold",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__sclerotinia-timber-rot",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__tomato-leaf-mould",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Tomato Leaf Mould",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__phytophthora-blight",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__early-blight",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Early Blight",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__phytophthora-blight",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__septoria-leaf-spot",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Septoria Leaf Spot",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__southern-bacterial-wilt",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Southern Bacterial Wilt",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__rhizopus-soft-rots__tomato-spotted-wilt-virus",
+      "crop": "Tomato",
+      "member_a": "Rhizopus Soft Rots",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__southern-bacterial-wilt__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Southern Bacterial Wilt",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__tomato-spotted-wilt-virus__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Tomato Spotted Wilt Virus",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__genus-diaporthe",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Genus Diaporthe",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__southern-blight",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__soybean-vein-necrosis-virus",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Soybean Vein Necrosis Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "soybean__bean-pod-mottle-virus__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Bean Pod Mottle Virus",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "soybean__frogeye-leaf-spot__soybean-vein-necrosis-virus",
+      "crop": "Soybean",
+      "member_a": "Frogeye Leaf Spot",
+      "member_b": "Soybean Vein Necrosis Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "strawberry__angular-leaf-spot-of-strawberry__anthracnose",
+      "crop": "Strawberry",
+      "member_a": "Angular Leaf Spot Of Strawberry",
+      "member_b": "Anthracnose",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "strawberry__angular-leaf-spot-of-strawberry__phomopsis-leaf-blight-and-fruit-rot",
+      "crop": "Strawberry",
+      "member_a": "Angular Leaf Spot Of Strawberry",
+      "member_b": "Phomopsis Leaf Blight And Fruit Rot",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "melon__alternaria-leaf-blight__bacterial-wilt",
+      "crop": "Melon",
+      "member_a": "Alternaria Leaf Blight",
+      "member_b": "Bacterial Wilt",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "melon__bacterial-wilt__charcoal-rot",
+      "crop": "Melon",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Charcoal Rot",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "melon__bacterial-wilt__phytophthora-blight",
+      "crop": "Melon",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Phytophthora Blight",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "lettuce__downy-mildew__tomato-spotted-wilt-virus",
+      "crop": "Lettuce",
+      "member_a": "Downy Mildew",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "lettuce__gray-mold__lettuce-chlorosis-virus",
+      "crop": "Lettuce",
+      "member_a": "Gray Mold",
+      "member_b": "Lettuce Chlorosis Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "lettuce__gray-mold__mirafiori-lettuce-big-vein-virus",
+      "crop": "Lettuce",
+      "member_a": "Gray Mold",
+      "member_b": "Mirafiori Lettuce Big-Vein Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "lettuce__gray-mold__tomato-spotted-wilt-virus",
+      "crop": "Lettuce",
+      "member_a": "Gray Mold",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "lettuce__rhizoctonia-damping-off--blight-and-rot__tomato-spotted-wilt-virus",
+      "crop": "Lettuce",
+      "member_a": "Rhizoctonia Damping-Off, Blight And Rot",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "lettuce__sclerotinia-timber-rot__tomato-spotted-wilt-virus",
+      "crop": "Lettuce",
+      "member_a": "Sclerotinia Timber Rot",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "lettuce__southern-blight__tomato-spotted-wilt-virus",
+      "crop": "Lettuce",
+      "member_a": "Southern Blight",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "garden-onion__downy-mildew__onion-yellows-phytoplasma",
+      "crop": "Garden Onion",
+      "member_a": "Downy Mildew",
+      "member_b": "Onion Yellows Phytoplasma",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__bacteria-wilt-and-soft-rot__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Bacteria Wilt And Soft Rot",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__black-rot__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Black Rot",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__bread-mold__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Bread Mold",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-damping-off__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Damping-Off",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-lateritium-nees__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Lateritium Nees",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__fusarium-wilt__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Fusarium Wilt",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__penicillium-fungi__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Penicillium Fungi",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__rhizopus-soft-rots__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Rhizopus Soft Rots",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__scurf__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Scurf",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__sour-rot__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Sour Rot",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "sweet-potato__streptomyces-soil-rot__sweet-potato-feathery-mottle-virus",
+      "crop": "Sweet Potato",
+      "member_a": "Streptomyces Soil Rot",
+      "member_b": "Sweet Potato Feathery Mottle Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "potato__rhizoctonia-damping-off--blight-and-rot__tomato-spotted-wilt-virus",
+      "crop": "Potato",
+      "member_a": "Rhizoctonia Damping-Off, Blight And Rot",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "cucumber__angular-leaf-spot-of-cucumber__gummy-stem-blight",
+      "crop": "Cucumber",
+      "member_a": "Angular Leaf Spot Of Cucumber",
+      "member_b": "Gummy Stem Blight",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "cucumber__angular-leaf-spot-of-cucumber__pythium-diseases",
+      "crop": "Cucumber",
+      "member_a": "Angular Leaf Spot Of Cucumber",
+      "member_b": "Pythium Diseases",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "cucumber__angular-leaf-spot-of-cucumber__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Cucumber",
+      "member_a": "Angular Leaf Spot Of Cucumber",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "cucumber__bacterial-wilt__rhizoctonia-damping-off--blight-and-rot",
+      "crop": "Cucumber",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Rhizoctonia Damping-Off, Blight And Rot",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "common-bean__beet-curly-top-virus__dry-bean-rust",
+      "crop": "Common Bean",
+      "member_a": "Beet Curly Top Virus",
+      "member_b": "Dry Bean Rust",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "common-bean__beet-curly-top-virus__halo-blight",
+      "crop": "Common Bean",
+      "member_a": "Beet Curly Top Virus",
+      "member_b": "Halo Blight",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "common-bean__beet-curly-top-virus__sclerotinia-timber-rot",
+      "crop": "Common Bean",
+      "member_a": "Beet Curly Top Virus",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "common-bean__common-bacterial--blight-of-beans--fuscous-blight__dry-bean-rust",
+      "crop": "Common Bean",
+      "member_a": "Common Bacterial  Blight Of Beans, Fuscous Blight",
+      "member_b": "Dry Bean Rust",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "common-bean__dry-bean-rust__halo-blight",
+      "crop": "Common Bean",
+      "member_a": "Dry Bean Rust",
+      "member_b": "Halo Blight",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "common-bean__halo-blight__sclerotinia-timber-rot",
+      "crop": "Common Bean",
+      "member_a": "Halo Blight",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 1.1
+    },
+    {
+      "pair_id": "tomato__anthracnose__bacterial-speck-of-tomato",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Bacterial Speck Of Tomato",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "tomato__anthracnose__cucumber-mosaic-virus",
+      "crop": "Tomato",
+      "member_a": "Anthracnose",
+      "member_b": "Cucumber Mosaic Virus",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "tomato__bacterial-speck-of-tomato__rhizopus-soft-rots",
+      "crop": "Tomato",
+      "member_a": "Bacterial Speck Of Tomato",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "tomato__bacterial-wilt__cucumber-mosaic-virus",
+      "crop": "Tomato",
+      "member_a": "Bacterial Wilt",
+      "member_b": "Cucumber Mosaic Virus",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__gray-mold",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Gray Mold",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__rhizopus-soft-rots",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Rhizopus Soft Rots",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__sclerotinia-timber-rot",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "tomato__cucumber-mosaic-virus__verticillium-wilts",
+      "crop": "Tomato",
+      "member_a": "Cucumber Mosaic Virus",
+      "member_b": "Verticillium Wilts",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "pepper__alternaria-black-molds---stem-cankers__bacterial-spot",
+      "crop": "Pepper",
+      "member_a": "Alternaria Black Molds / Stem Cankers",
+      "member_b": "Bacterial Spot",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "pepper__alternaria-black-molds---stem-cankers__tomato-spotted-wilt-virus",
+      "crop": "Pepper",
+      "member_a": "Alternaria Black Molds / Stem Cankers",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__charcoal-rot",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Charcoal Rot",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__soybean-rust",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Soybean Rust",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "soybean__bacterial-blight__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Bacterial Blight",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "soybean__charcoal-rot__soybean-vein-necrosis-virus",
+      "crop": "Soybean",
+      "member_a": "Charcoal Rot",
+      "member_b": "Soybean Vein Necrosis Virus",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "soybean__soybean-rust__soybean-vein-necrosis-virus",
+      "crop": "Soybean",
+      "member_a": "Soybean Rust",
+      "member_b": "Soybean Vein Necrosis Virus",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "soybean__soybean-vein-necrosis-virus__taproot-decline-on-soybean",
+      "crop": "Soybean",
+      "member_a": "Soybean Vein Necrosis Virus",
+      "member_b": "Taproot Decline On Soybean",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "st--augustinegrass__rhizoctonia-damping-off--blight-and-rot__sugarcane-mosaic-virus",
+      "crop": "St. Augustinegrass",
+      "member_a": "Rhizoctonia Damping-Off, Blight And Rot",
+      "member_b": "Sugarcane Mosaic Virus",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "lettuce__lettuce-chlorosis-virus__powdery-mildew",
+      "crop": "Lettuce",
+      "member_a": "Lettuce Chlorosis Virus",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "lettuce__lettuce-chlorosis-virus__sclerotinia-stem-rot",
+      "crop": "Lettuce",
+      "member_a": "Lettuce Chlorosis Virus",
+      "member_b": "Sclerotinia Stem Rot",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "lettuce__lettuce-chlorosis-virus__southern-blight",
+      "crop": "Lettuce",
+      "member_a": "Lettuce Chlorosis Virus",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "lettuce__mirafiori-lettuce-big-vein-virus__powdery-mildew",
+      "crop": "Lettuce",
+      "member_a": "Mirafiori Lettuce Big-Vein Virus",
+      "member_b": "Powdery Mildew",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "lettuce__mirafiori-lettuce-big-vein-virus__sclerotinia-stem-rot",
+      "crop": "Lettuce",
+      "member_a": "Mirafiori Lettuce Big-Vein Virus",
+      "member_b": "Sclerotinia Stem Rot",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "lettuce__mirafiori-lettuce-big-vein-virus__southern-blight",
+      "crop": "Lettuce",
+      "member_a": "Mirafiori Lettuce Big-Vein Virus",
+      "member_b": "Southern Blight",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "lettuce__powdery-mildew__tomato-spotted-wilt-virus",
+      "crop": "Lettuce",
+      "member_a": "Powdery Mildew",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "lettuce__sclerotinia-stem-rot__tomato-spotted-wilt-virus",
+      "crop": "Lettuce",
+      "member_a": "Sclerotinia Stem Rot",
+      "member_b": "Tomato Spotted Wilt Virus",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "wheat__barley-yellow-dwarf-virus__karnal-bunt",
+      "crop": "Wheat",
+      "member_a": "Barley Yellow Dwarf Virus",
+      "member_b": "Karnal Bunt",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "wheat__karnal-bunt__wheat-streak-mosaic-virus",
+      "crop": "Wheat",
+      "member_a": "Karnal Bunt",
+      "member_b": "Wheat Streak Mosaic Virus",
+      "lookalike_prior": 1.0
+    },
+    {
+      "pair_id": "melon__bacterial-fruit-blotch__bacterial-wilt",
+      "crop": "Melon",
+      "member_a": "Bacterial Fruit Blotch",
+      "member_b": "Bacterial Wilt",
+      "lookalike_prior": 0.1
+    },
+    {
+      "pair_id": "common-bean__beet-curly-top-virus__common-bacterial--blight-of-beans--fuscous-blight",
+      "crop": "Common Bean",
+      "member_a": "Beet Curly Top Virus",
+      "member_b": "Common Bacterial  Blight Of Beans, Fuscous Blight",
+      "lookalike_prior": 0.1
+    },
+    {
+      "pair_id": "common-bean__common-bacterial--blight-of-beans--fuscous-blight__sclerotinia-timber-rot",
+      "crop": "Common Bean",
+      "member_a": "Common Bacterial  Blight Of Beans, Fuscous Blight",
+      "member_b": "Sclerotinia Timber Rot",
+      "lookalike_prior": 0.1
+    }
+  ]
+}

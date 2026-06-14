@@ -1,0 +1,70 @@
+{
+  "pair_id": "corn__common-corn-rust__gray-leaf-spot",
+  "kind": "disease",
+  "crop": "Corn",
+  "member_a_label": "Common Corn Rust",
+  "member_b_label": "Gray Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce numerous small-to-elongate brown lesions scattered across corn leaves during mid-to-late vegetative and reproductive stages, and at a glance both can look like rows of dark brown specks running along the blade. Growers commonly conflate early rust pustules with developing gray leaf spot lesions, especially before pustules rupture or before GLS lesions elongate and turn distinctly rectangular.",
+    "shared_presentation": "Scattered brown to tan lesions on corn leaf blades, most conspicuous from late vegetative through tasseling/grain fill, capable of coalescing and reducing green leaf area and yield under favorable warm, humid conditions.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Do the lesions form raised pustules that rupture to release powdery spores, or remain flat with no powder?",
+        "a_signal": "Raised, erumpent pustules break through the epidermis and shed cinnamon-brown to rusty-orange powdery urediniospores that rub off on a finger.",
+        "b_signal": "Lesions are flat, embedded in the leaf with an intact surface; nothing powdery rubs off, only a faint gray fungal sporulation visible under high humidity/hand lens.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and margin of an individual mature lesion?",
+        "a_signal": "Small, round to elongate-oval pustules (1-2 mm) scattered randomly on both upper and lower leaf surfaces, not constrained by veins.",
+        "b_signal": "Long, narrow rectangular lesions with sharply parallel sides, blunt ends bounded by the leaf veins, giving a brick-shaped or matchstick outline.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is the discoloration a discrete erumpent sorus or a vein-delimited necrotic streak?",
+        "a_signal": "Discrete sori (pustules) that are a fungal sign sitting on the leaf surface; color is rusty/orange early, turning brownish-black (telia) late.",
+        "b_signal": "Necrotic, gray-to-tan rectangular tissue death; lesions begin as tiny pinpoint chlorotic spots with yellow halos then expand lengthwise within vein boundaries.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "On which leaf surface and where in the canopy do lesions appear, and does pustule distribution differ top vs bottom?",
+        "a_signal": "Pustules on both upper and lower leaf surfaces (often directly opposite each other), distributed throughout the canopy, frequently appearing on upper/younger leaves.",
+        "b_signal": "Lesions develop first on lower, shaded leaves near the soil and progress upward; tends to stay denser in the lower canopy early.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does color and structure change as the lesion ages?",
+        "a_signal": "Cinnamon-brown pustules darken and produce black telial pustules late in the season as the rust shifts to overwintering teliospores.",
+        "b_signal": "Lesions stay gray-tan, do not produce pustules, and many lesions coalesce to blight and kill entire leaves from the bottom up.",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather and residue conditions precede the outbreak?",
+        "a_signal": "Favored by cool to moderate temperatures (60-77F) with heavy dew; spores blow in long-distance from southern overwintering sites (does not overwinter in the Corn Belt).",
+        "b_signal": "Favored by hot (75-85F), prolonged high humidity and is residue-borne; worst in continuous corn, no-till fields with abundant infested corn debris.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Common corn rust (Puccinia sorghi) is an obligate biotroph that arrives in the Corn Belt as urediniospores blown north each season from overwintering hosts in the southern US and Mexico. Its hallmark is a true fungal SIGN: small, raised, oval pustules (uredinia) that rupture the epidermis and release cinnamon-brown to brick-red powdery spores which smear orange when rubbed. Pustules occur on both leaf surfaces, often appearing opposite each other, and are scattered without regard to leaf veins. Late season they darken into black telial pustules. It favors cooler temperatures and heavy dew, and rarely causes major yield loss in dent corn unless infection is early and severe.",
+    "narrative_b": "Gray leaf spot (Cercospora zeae-maydis) is a residue-borne foliar disease that overwinters in corn debris, making it most severe in continuous-corn, no-till fields under hot, humid conditions. It produces a SYMPTOM rather than a powdery sign: lesions start as tiny pinpoint spots with yellow halos and expand into long, narrow, rectangular gray-to-tan lesions with sharply parallel sides bounded by the leaf veins (the brick or matchstick shape). There are no raised pustules and nothing rubs off; sporulation is sparse and gray, best seen with a hand lens under humidity. Disease moves from the lower, shaded canopy upward and can coalesce to blight whole leaves, threatening grain fill and standability, so it is one of the most economically important corn foliar diseases.",
+    "management_a": "Most hybrids have adequate partial resistance, so rust rarely warrants action in field corn; scout sweet corn and seed corn more closely. Apply a foliar triazole/strobilurin fungicide only if pustules appear early (before tasseling) and are increasing rapidly on susceptible/sweet corn under cool, dewy conditions. Hybrid selection (rust-resistant genetics) is the primary tool.",
+    "management_b": "Manage primarily through hybrid resistance, crop rotation away from corn, and tillage to bury infested residue. Scout from V10 through tasseling, focusing on lower leaves. Apply a foliar fungicide (strobilurin + triazole) at VT/R1 when lesions reach the ear leaf or just below on susceptible hybrids, particularly in continuous-corn no-till fields during warm, humid weather; timing at tasseling is most cost-effective.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My corn leaves are getting scattered brown to tan spots, worse on the older leaves, and they're showing up as the plants head toward tasseling. In the warm muggy weather the spots are spreading and running together, browning out parts of the leaves and cutting down on the green I've got left.",
+      "decisive_lay_a": "Look for raised, blister-like bumps that break open and shed a rusty-orange to cinnamon-brown powder that rubs off onto your finger when you wipe the leaf.",
+      "decisive_lay_b": "Look for flat spots that sit right in the surface of the leaf with nothing powdery rubbing off; at most a faint grayish haze you'd only spot up close in very humid weather.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

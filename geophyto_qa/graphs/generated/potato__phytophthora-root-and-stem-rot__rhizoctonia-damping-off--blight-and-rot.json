@@ -1,0 +1,70 @@
+{
+  "pair_id": "potato__phytophthora-root-and-stem-rot__rhizoctonia-damping-off--blight-and-rot",
+  "kind": "disease",
+  "crop": "Potato",
+  "member_a_label": "Phytophthora Root And Stem Rot",
+  "member_b_label": "Rhizoctonia Damping-Off, Blight And Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne fungal/oomycete diseases that cause underground stem and stolon lesions, wilting, stunting, and stand loss in potato, especially in cool/wet soils early in the season. Field symptoms of aboveground wilt and below-ground stem rot overlap enough that growers and even scouts confuse them without examining the rot character and the diagnostic signs (pink-then-black wet rot vs dry brown cankers with sclerotia).",
+    "shared_presentation": "Stunted, wilting potato plants with discolored, rotting underground stems and stolons; reduced emergence or post-emergence collapse in cool, wet soils; affected stems girdled below the soil line leading to chlorosis and decline of the canopy.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Cut/examine the affected belowground stem and tubers for a diagnostic sign: is there a wet, soft rot that turns from pinkish to black, or are there hard, raised brown-to-black crusty bodies (sclerotia) on the stem and tuber surface?",
+        "a_signal": "Internal tissue is a wet, spongy rot; freshly cut tissue exposed to air develops a salmon-pink to reddish tinge that darkens to brown/black; no surface sclerotia",
+        "b_signal": "Hard, dark brown-to-black sclerotia (black scurf, looks like soil that won't wash off) adhere to stem base and tuber surface; cankers are dry, sunken, reddish-brown",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is the belowground stem/root rot wet and soft or dry and cankerous?",
+        "a_signal": "Soft, watery, soft-rot type decay of roots, stem base, and pith",
+        "b_signal": "Dry, firm, sunken reddish-brown cankers/lesions girdling stem and stolons (rhizoctonia canker)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where is the most diagnostic damage concentrated and what is the stolon/sprout symptom?",
+        "a_signal": "Lower stem and root system with ascending wet rot; tubers develop wet rot at stolon end",
+        "b_signal": "Pruned/killed sprouts and stolons (stolon pruning), aerial tubers, and rolled purplish top leaves from girdling",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "On the soil surface or lower stem in humid conditions, is there a white moldy collar or felt?",
+        "a_signal": "May show white oomycete-like growth on rotting tissue under very wet conditions, not a distinct collar",
+        "b_signal": "White to grayish mycelial collar/felt ('mycelial collar') may form at the stem base near the soil line in humid weather",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease progress through the season relative to soil moisture?",
+        "a_signal": "Worsens sharply with saturated/flooded soils and poor drainage; can cause rapid late-season wilt and tuber pink rot",
+        "b_signal": "Most damaging at/before emergence in cool soils (delayed emergence, damping-off); black scurf develops on tubers later at harvest/storage",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What soil conditions favor the outbreak pattern?",
+        "a_signal": "Waterlogged, poorly drained, low spots and compacted areas; favored by free water",
+        "b_signal": "Cool, moist (not necessarily saturated) soils with slow emergence; broad temperature range, worse with deep planting",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Phytophthora erythroseptica causes Phytophthora root and stem rot (and pink rot of tubers). As an oomycete it thrives in saturated, poorly drained soils. Infection produces a wet, soft rot of roots, lower stem, and stolons, with ascending decay. The hallmark sign is on cut tuber or stem tissue: exposed flesh turns salmon-pink within 20-30 minutes, then darkens to brown and finally black, with a rubbery texture and characteristic odor. Aboveground, plants wilt and yellow, often rapidly after heavy rain or irrigation. There are no sclerotia.",
+    "narrative_b": "Rhizoctonia solani (AG-3 on potato) causes damping-off, stem and stolon canker, and black scurf. In cool, moist soil it attacks emerging sprouts (causing delayed/failed emergence), then forms dry, sunken reddish-brown cankers that girdle stems and prune stolons, sometimes producing aerial tubers and upward-rolled, purplish top foliage. A white-gray mycelial collar can appear at the stem base in humid weather. The definitive diagnostic sign is black scurf: hard, dark sclerotia that adhere firmly to tuber and stem surfaces and resist washing. The rot is dry and cankerous rather than wet and soft.",
+    "management_a": "Improve soil drainage and avoid overwatering/low wet spots; manage irrigation to prevent saturation. Use resistant or tolerant cultivars where available and certified seed. Apply oomycete-targeted fungicides (e.g., mefenoxam/metalaxyl, phosphorous acid) where labeled; rotate out of potato and other hosts. Harvest mature tubers and avoid harvesting wet fields to limit pink rot in storage; manage storage temperature and ventilation.",
+    "management_b": "Plant certified, sclerotia-free seed into warm enough soil to ensure rapid emergence; avoid deep planting and cold-soil planting. Use shallow planting and good seedbed conditions to speed emergence. Apply in-furrow or seed-treatment fungicides effective on Rhizoctonia (e.g., azoxystrobin, fludioxonil, flutolanil, penflufen) where labeled. Rotate crops, manage volunteers/weeds, and harvest promptly to limit black scurf formation on tubers.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My potato plants came up thin and patchy, and the ones that did emerge are stunted and wilting even though the soil's been cool and wet. When I dig them up, the underground stems and runners are dark, soft, and rotting, and they look pinched off near the soil line, so the tops are yellowing and going downhill.",
+      "decisive_lay_a": "Cut into the rotted stem or tuber and it's wet, soft, and spongy inside; the fresh-cut surface turns a salmon-pink or reddish color when it hits the air, then darkens to brown or black. There are no hard crusty bits stuck to the outside.",
+      "decisive_lay_b": "Hard, dark brown-to-black crusty specks or lumps stuck to the stem base and tuber skin that look like dirt but won't wash or rub off (often called \"black scurf\"), along with dry, sunken, reddish-brown sores on the stems.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

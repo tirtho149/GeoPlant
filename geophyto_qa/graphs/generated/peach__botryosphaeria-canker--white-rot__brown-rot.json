@@ -1,0 +1,70 @@
+{
+  "pair_id": "peach__botryosphaeria-canker--white-rot__brown-rot",
+  "kind": "disease",
+  "crop": "Peach",
+  "member_a_label": "Botryosphaeria Canker, White Rot",
+  "member_b_label": "Brown Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce a brown, firm fruit rot on ripening peaches that can develop a soft decay, and both can fruit on the lesion surface, so a quick look at a rotting fruit on the tree can be ambiguous. The fruit-rot phase of Botryosphaeria (white rot / Botryosphaeria fruit rot) overlaps the early brown rot lesion, and both fungi overwinter on the tree and infect through wounds, making field separation genuinely difficult before sporulation type and canker presence are assessed.",
+    "shared_presentation": "A circular, expanding brown/tan rotted area on a maturing or ripe peach fruit, often firm at first, sometimes with the fungus fruiting on the surface; both pathogens overwinter on the tree (in cankers/mummies) and gain entry through wounds, insect injury, or growth cracks, and both are favored by warm, wet, humid summer weather as harvest approaches.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are perennial sunken cankers present on woody limbs/trunk in addition to (or instead of) fruit symptoms?",
+        "a_signal": "Distinct sunken, dark bark cankers on scaffold limbs/trunk, often with gummosis, raised pimple-like fruiting bodies (pycnidia), and dieback above the canker; fruit rot is secondary",
+        "b_signal": "No true woody cankers; pathogen lives mainly in fruit mummies and in blossom/twig blight cankers (small, at the base of killed flowers/spurs), not large perennial limb cankers",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "Is there a blossom and shoot blight phase early in the season tied to bloom?",
+        "a_signal": "No blossom blight; disease activity centers on summer fruit rot and chronic limb cankers that expand over years",
+        "b_signal": "Classic blossom blight at bloom: flowers turn brown, wilt, and stick to the twig, often with gummy twig cankers and a green-season die-back of spurs",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "How does the rotted fruit flesh behave and color as the lesion expands?",
+        "a_signal": "Lesion stays relatively firm and turns tan to white/light brown (\"white rot\"); internal decay can be watery but surface bleaches lighter",
+        "b_signal": "Lesion is a soft, rapidly enlarging brown rot that turns the whole fruit into a firm-then-shriveled mummy; flesh browns throughout",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the fruit lesion spread and what does the fruit become at the end?",
+        "a_signal": "Slower-expanding; fruit may rot but mummification/sporulation pattern is less aggressive, lesion may remain localized",
+        "b_signal": "Very rapid (a peach can rot in 24-48 h in warm humid weather); fruit shrivels into a hard, persistent gray mummy that clings to the tree",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What is the color, texture, and arrangement of the sporulation on the rotted fruit surface (examine under hand lens)?",
+        "a_signal": "Sparse, dark, embedded pycnidia (pimple-like flask-shaped fruiting bodies) that ooze a creamy/white spore mass; sporulation is dull, not powdery, and not in concentric rings",
+        "b_signal": "Abundant powdery, tan-to-gray tufts of conidia (sporodochia) erupting in concentric rings over the lesion surface, giving a fuzzy, ash-gray sporulating mass",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and tissue history precede the outbreak?",
+        "a_signal": "Associated with tree stress (drought, winter injury, sunscald, nutrient stress) that predisposes wood to canker colonization; warm humid summers",
+        "b_signal": "Driven by wet bloom periods and warm humid weather near harvest plus wounds/insect (e.g., plum curculio) and brown-rot mummy inoculum from prior season",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Botryosphaeria dothidea on peach is primarily a wood disease: it forms perennial, sunken bark cankers on scaffold limbs and trunks, frequently with gummosis and embedded black pycnidia, leading to limb dieback and reduced vigor. The same fungus causes a fruit rot (\"white rot\") that is firmer and bleaches to a tan/whitish color, with dull, embedded pycnidia oozing creamy spore masses rather than powdery tufts. Tree stress (drought, sunscald, winter injury) strongly predisposes wood to colonization. The decisive separator is the sporulation type: pimple-like pycnidia versus brown rot's powdery sporodochia in concentric rings, and the presence of true perennial limb cankers points to Botryosphaeria.",
+    "narrative_b": "Monilinia fructicola (brown rot) is the classic peach fruit and blossom disease. It begins as blossom blight at bloom (browned, wilted, gummy flowers stuck to twigs with small twig cankers), then causes an explosively fast brown fruit rot near harvest in warm, humid weather. Rotted fruit develops abundant powdery tan-to-gray tufts (sporodochia) arranged in concentric rings and ultimately shrivels into hard gray mummies that persist on the tree and ground as the next season's inoculum. Wounds and insect injury (notably plum curculio) and contact between fruit accelerate spread. It does not form large perennial woody limb cankers, which distinguishes it from Botryosphaeria.",
+    "management_a": "Reduce tree stress: maintain irrigation, avoid winter/sunscald injury, balanced nutrition. Prune out and remove cankered, dead, and dying limbs well below the visible canker during dry weather and destroy the wood to lower inoculum. Protect pruning wounds. Fungicide programs targeting brown rot (e.g., DMIs, QoIs, SDHIs) provide some fruit-rot suppression, but cultural sanitation of cankers and improving tree vigor are the primary controls; manage other diseases to limit predisposing stress.",
+    "management_b": "Sanitation is foundational: remove and destroy all mummified fruit from the tree and orchard floor and prune out blighted blossoms/twig cankers to cut overwintering inoculum. Apply fungicides at bloom (blossom blight) and again in the preharvest window (typically 2-3 weeks before harvest) using rotated FRAC groups (DMI, QoI, SDHI) to manage resistance. Control wounding insects, especially plum curculio and oriental fruit moth, thin fruit to reduce fruit-to-fruit contact, harvest carefully to avoid wounds, and rapidly cool fruit postharvest.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "I've got a ripening peach with a round, tan-to-brown rotted spot that's slowly spreading across the fruit. It started out kind of firm, and now the fungus looks like it's starting to grow right on the surface of the rotted area, especially with all this warm, muggy, wet weather coming into harvest.",
+      "decisive_lay_a": "Look for just a few scattered, dark pimple-like specks buried in the rotted skin that squeeze out a creamy, whitish ooze. The growth looks dull and slimy rather than dry and powdery, and it does NOT form rings.",
+      "decisive_lay_b": "Look for lots of powdery, tan-to-gray fuzzy tufts that pop up in clear ring-shaped circles over the rotted area, giving the fruit a dusty, ash-gray fuzzy coating.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "sweet-potato__fusarium-wilt__southern-blight",
+  "kind": "disease",
+  "crop": "Sweet Potato",
+  "member_a_label": "Fusarium Wilt",
+  "member_b_label": "Southern Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne fungal pathogens of sweet potato that cause wilting, yellowing, and collapse of plants, often with discoloration at the stem base and vascular/crown area. In the field a wilting plant with a rotting lower stem can look the same from above, so growers and even trained scouts confuse the two until the stem is examined for internal vascular browning (Fusarium) versus surface mycelium and sclerotia (Southern blight).",
+    "shared_presentation": "Scattered or patchy wilting and yellowing of vines, stunting, and decline that may progress to plant death; both show damage concentrated at the stem base/soil line and can rot fleshy roots in storage or in the field, mimicking a generic \"wilt and rot\" complex.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Split the lower stem lengthwise at the soil line and examine the internal tissue and any external growth.",
+        "a_signal": "Internal vascular tissue (the ring of strands) is stained brown to black, running up the stem; no external mat of growth.",
+        "b_signal": "A white, fan-like cottony mycelial mat coats the stem surface at the soil line, often bearing tan-brown mustard-seed-sized sclerotia; internal vascular ring stays clean.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant does the primary lesion/damage originate?",
+        "a_signal": "Damage is internal and systemic, ascending through the vascular system from roots/crown upward.",
+        "b_signal": "Damage is a girdling rot of the outer stem cortex right at the soil line, plus colonization of surface debris.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the character of the foliar decline?",
+        "a_signal": "Progressive yellowing starting with lower/older leaves, often one-sided, with slow vascular wilt over days to weeks.",
+        "b_signal": "Sudden, complete wilt and collapse of the whole plant once the stem is girdled, with rapid death.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what soil/weather conditions did symptoms surge?",
+        "a_signal": "Favored by warm soils and recurs in fields with a history of Fusarium; less tied to surface moisture.",
+        "b_signal": "Explodes in hot, humid weather with abundant moist surface organic debris/mulch at the soil line.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Examine any reproductive structures with a hand lens.",
+        "a_signal": "No surface structures; pinkish sporodochia/conidia only in lab culture of vascular tissue.",
+        "b_signal": "Distinct uniform spherical sclerotia (1-2 mm) like mustard or radish seeds, white maturing to tan/brown, scattered on stem and adjacent soil.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does an affected plant go from first symptom to death?",
+        "a_signal": "Gradual decline; plant may linger and partially recover or remain stunted for weeks.",
+        "b_signal": "Very rapid; healthy-looking plant can collapse within a few days of the girdle forming.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Fusarium wilt (Fusarium oxysporum f.sp. batatas) is a vascular wilt: the fungus invades through roots and colonizes the xylem, producing the hallmark brown-to-black vascular discoloration seen when a stem or fleshy root is cut. Foliar symptoms are gradual chlorosis (often one-sided), wilting of older leaves first, stunting, and eventual decline. It is host-specialized to sweet potato, persists in soil for years, and spreads on infected slips/transplants and fleshy roots, making clean planting stock the key control point.",
+    "narrative_b": "Southern blight (Athelia rolfsii, formerly Sclerotium rolfsii) is a soil-line cortical rot. The fungus produces a conspicuous white fan-shaped mycelial mat that girdles the lower stem and forms numerous uniform tan-brown sclerotia resembling mustard seeds on the stem and surrounding soil. Girdling causes abrupt, total wilt and plant collapse. It is a broad-host-range pathogen favored by hot, humid weather and abundant moist surface organic matter, and survives as persistent sclerotia in soil.",
+    "management_a": "Use certified disease-free slips and seed roots; plant resistant/tolerant cultivars where available; practice long rotations (3-4+ years) out of sweet potato; sanitize cutting tools and storage; manage to avoid moving infested soil/roots. No effective in-season rescue once vascular infection is established.",
+    "management_b": "Reduce surface organic debris and avoid deep mulching at the stem base; promote drying around the soil line; deep-plow to bury sclerotia; rotate with non-host grains/grasses; consider soil-applied fungicides or biocontrols (e.g., Trichoderma) and pre-plant soil treatment in heavily infested fields; remove and destroy infected plants with surrounding soil.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My sweet potato vines are wilting and yellowing in scattered patches, and the affected plants are stunted and slowly dying back. The trouble seems to be worst right down at the base of the stem near the soil, and some of the fleshy roots are rotting in the field and in storage.",
+      "decisive_lay_a": "Slice the stem open with a knife and look inside: the inner ring of strands (the \"plumbing\" that carries water up the stem) is stained brown to black running up from the base, but the outside of the stem stays clean with no fuzzy or cottony growth on it.",
+      "decisive_lay_b": "Look at the outside of the stem right at the soil line for a white, fan-shaped cottony coating spreading over the surface, often dotted with tan-brown grains the size of mustard seeds. If you cut the stem open, the inner ring of strands stays clean and normal-colored.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

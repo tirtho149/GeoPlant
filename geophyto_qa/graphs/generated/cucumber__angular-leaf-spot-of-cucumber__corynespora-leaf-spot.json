@@ -1,0 +1,63 @@
+{
+  "pair_id": "cucumber__angular-leaf-spot-of-cucumber__corynespora-leaf-spot",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Angular Leaf Spot Of Cucumber",
+  "member_b_label": "Corynespora Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-roundish necrotic leaf spots on cucumber foliage, frequently with chlorotic halos and vein-delimited margins, and both flare in warm, humid/wet weather. Early lesions of each can look nearly identical, and shot-hole (tearing-out of dead tissue) occurs in both, so field diagnosis without examining signs or lesion behavior is unreliable.",
+    "shared_presentation": "Angular to subcircular tan-to-brown leaf spots on cucumber leaves, often vein-bounded, with yellow halos and eventual shot-holing/tearing of necrotic centers; both worsen under warm humid conditions and can cause significant defoliation.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "On the underside of a fresh lesion in the early morning or after dew/rain, is there milky bacterial ooze/exudate drying to a white crusty film, or are there dark fuzzy fungal tufts (conidiophores)?",
+        "a_signal": "Bacterial ooze: water-soaked underside exuding milky droplets that dry to a thin white/tan crust; no fungal growth",
+        "b_signal": "Sparse to moderate olivaceous/dark fungal sporulation (conidiophores bearing long conidia) on the lesion surface, visible with a hand lens, especially lower leaf surface",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Are the earliest lesions water-soaked and translucent (hold a leaf to the light), or are they dry necrotic spots from the start?",
+        "a_signal": "Early lesions distinctly water-soaked, greasy/translucent, angular and confined by veins",
+        "b_signal": "Early lesions are small dry chlorotic-to-tan necrotic flecks, becoming angular-to-circular without a persistent water-soaked phase",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "As lesions enlarge, do they stay tightly vein-delimited and angular, or expand into larger circular spots with concentric zonate (target-like) rings?",
+        "a_signal": "Lesions remain sharply angular, hemmed in by veins; centers turn tan, dry, crack and drop out (shot-hole)",
+        "b_signal": "Lesions enlarge to circular/irregular spots, often with concentric target-like rings and a chlorotic halo; can coalesce into large blighted areas",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Beyond leaves, are fruit lesions present and what do they look like?",
+        "a_signal": "Small circular water-soaked spots on fruit that exude bacterial ooze and crack, often with secondary soft rot; white crusty residue",
+        "b_signal": "Fruit lesions uncommon; disease is predominantly foliar (with stem/petiole spots possible) and lacks bacterial cracking/ooze",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and cropping system precede the outbreak?",
+        "a_signal": "Favored by cool-to-moderate wet weather, overhead irrigation, splashing, and handling of wet foliage; seedborne, common on field cucumbers",
+        "b_signal": "Favored by sustained high temperature and high humidity; classic in greenhouse/high-tunnel and humid Southeastern field cucurbits, spreads by airborne conidia",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Angular leaf spot is a bacterial disease (Pseudomonas syringae pv. lachrymans). It begins as small water-soaked, translucent spots on the lower leaf surface that enlarge until stopped by leaf veins, producing the characteristic angular outline. In humid mornings the undersides exude milky bacterial droplets that dry to a thin white crust. Necrotic centers dry, crack, and fall out, leaving ragged shot-holes. Water-soaked fruit lesions can ooze and crack, opening the door to soft rot. The pathogen is seedborne and splash-dispersed, so overhead irrigation and working wet foliage drive spread.",
+    "narrative_b": "Corynespora leaf spot (Corynespora cassiicola) is a fungal disease. Lesions start as small chlorotic-to-tan dry flecks that enlarge into circular-to-angular spots, frequently developing concentric target-like rings and a yellow halo; under conducive conditions they coalesce into large blighted zones causing rapid defoliation. The fungus sporulates on lesion surfaces (look for dark conidiophores and long multiseptate conidia with a hand lens), and spreads via airborne conidia. It thrives under sustained heat and high humidity, making it especially troublesome in greenhouses, high tunnels, and the humid Southeast.",
+    "management_a": "Use certified pathogen-free/treated seed and resistant varieties; rotate 2+ years away from cucurbits and incorporate residue. Avoid overhead irrigation and do not work plants when foliage is wet. Apply fixed-copper bactericides (often with mancozeb) preventively on a protectant schedule during warm wet periods. Sanitize tools and avoid moving the bacterium between blocks.",
+    "management_b": "Plant resistant/tolerant cultivars where available and rotate out of cucurbits; remove and destroy infected debris. Lower humidity and leaf wetness duration, especially in protected culture (improve venting, spacing, airflow; avoid overhead watering). Apply protectant/systemic fungicides (e.g., chlorothalonil, mancozeb, and FRAC-rotated QoI/SDHI products) preventively, rotating modes of action to avoid resistance, which C. cassiicola develops readily.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My cucumber leaves have tan-to-brown angular spots, kind of boxed in by the veins, with yellow halos around them. The dead centers are drying up, cracking, and falling out so the leaves look full of holes and torn, and it's getting worse in this warm muggy weather, with leaves starting to drop.",
+      "decisive_lay_a": "On the underside of a fresh spot, look for a wet, water-soaked area that oozes tiny milky droplets; as they dry they leave a thin white or tan crust. There is no fuzzy or moldy growth.",
+      "decisive_lay_b": "On the spot's surface, especially the underside, look for sparse dark olive-to-gray fuzzy growth. It is faint, so you'll likely need a hand lens to see it clearly.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__late-blight__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Late Blight",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are Phytophthora-caused diseases on tomato producing dark, water-soaked, rapidly-spreading rots, and growers often lump them under \"Phytophthora.\" However they differ fundamentally in tissue affinity and dispersal: Late Blight (P. infestans) is an aerial foliar/fruit blight driven by airborne sporangia in cool wet weather, while Phytophthora Blight (P. nicotianae) is a soilborne crown/root/lower-stem and fruit rot driven by splash and saturated soil in warm conditions. The shared dark water-soaked lesion appearance makes early-stage confusion genuine.",
+    "shared_presentation": "Dark brown to black, greasy water-soaked lesions that expand rapidly and can collapse tissue; both can rot tomato fruit; both favor wet conditions and free moisture; both produce a coenocytic Phytophthora mycelium and can cause sudden plant decline that alarms growers.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant does the disease originate and concentrate?",
+        "a_signal": "Upper canopy: leaflets, petioles, stems, and fruit shoulders blighted from the top down; foliage is the primary site",
+        "b_signal": "Soil line: crown, lower stem, roots, and ground-contact fruit rot first; basal/lower-plant origin",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the leaf symptom pattern?",
+        "a_signal": "Irregular gray-green to brown water-soaked blotches on leaflets, often starting at leaf tips/margins, killing foliage extensively",
+        "b_signal": "Little to no leaf-blade symptom; instead sudden wilting of the whole plant as the crown girdles, leaves stay attached but flag",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is there white sporulation on the underside of foliar lesions in humid conditions?",
+        "a_signal": "Yes: delicate white downy sporulation (sporangiophores) rings the underside of leaf lesions and on stems at the lesion margin",
+        "b_signal": "No foliar downy growth; any white growth is on rotting fruit or crown near soil, not on canopy leaves",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "When you split the lower stem/crown at the soil line, is there an internal brown rot girdling the vascular/cortex tissue?",
+        "a_signal": "Stem stays internally sound at the crown; lesions are external aerial cankers higher up, no soil-line girdling rot",
+        "b_signal": "Crown and lower stem show internal chocolate-brown cortical rot girdling the plant at/near the soil line, with collapse",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather/soil conditions preceded the outbreak?",
+        "a_signal": "Cool, moist, overcast weather (60-70F) with prolonged leaf wetness; spreads aerially across the field/region rapidly",
+        "b_signal": "Warm weather with saturated, poorly drained or flooded soil; appears in low/wet field spots and after heavy irrigation",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease spread through the field?",
+        "a_signal": "Explosive aerial, polycyclic spread downwind affecting whole regions within days once established",
+        "b_signal": "Patchy spread following water flow, low spots, and splash; tied to specific wet zones rather than wind direction",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Late Blight is a cool-season aerial epidemic. Look for irregular gray-green water-soaked blotches on upper leaflets and stems that brown and collapse, with delicate white downy sporulation on lesion undersides during humid mornings. Fruit develop firm, greasy, brown-bronzed lesions on the shoulders. The crown and roots remain sound. Onset follows cool, wet, overcast weather and the disease races across fields and regions on wind-driven sporangia.",
+    "narrative_b": "Phytophthora Blight (buckeye rot / crown-and-root phase from P. nicotianae) is a warm-season soilborne problem. Plants wilt suddenly while leaves remain attached; splitting the crown/lower stem reveals internal chocolate-brown cortical rot girdling the plant at the soil line. Fruit touching wet soil develop concentric \"buckeye\" target-ring rot. There is no canopy downy sporulation. It appears in saturated, poorly drained low spots after heavy rain or over-irrigation.",
+    "management_a": "Apply protectant and Phytophthora-targeted fungicides (chlorothalonil, mancozeb; systemic phenylamides/oomycete-specific products where resistance allows) on a preventive schedule when cool wet weather threatens. Destroy cull piles and volunteer tomato/potato, eliminate culls as sporangia sources, scout aggressively, and remove/rogue infected plants. Use resistant cultivars and monitor regional late blight alerts (USAblight) since the pathogen is community-wide and airborne.",
+    "management_b": "Manage water and soil: improve drainage, avoid low wet spots, use raised beds and well-spaced plants, and prevent prolonged soil saturation and overhead/over-irrigation. Mulch and stake to keep fruit off the soil to reduce buckeye fruit rot. Rotate away from solanaceous and other hosts, use clean transplants, and apply soil-directed oomycete fungicides (e.g., mefenoxam, phosphonates, oxathiapiprolin) for crown/root protection. Sanitize to limit oospore buildup in soil.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomato plants suddenly have dark brown to black, greasy, water-soaked patches that spread fast and make the tissue go limp and collapse, and some of the fruit is rotting too. It blew up quick after all this wet, rainy weather.",
+      "decisive_lay_a": "When you slice into the base of the stem right at the soil line, the inside is still firm, white or green, and healthy-looking. The rot and dark greasy patches are up higher on the stems and leaves out in the open air, not down at the bottom choking off the plant at the ground.",
+      "decisive_lay_b": "When you slice into the base of the stem at or just below the soil line, the inside is rotted a chocolate-brown all the way around, and that brown rotted ring chokes the plant off at the ground so the whole plant wilts and falls over.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

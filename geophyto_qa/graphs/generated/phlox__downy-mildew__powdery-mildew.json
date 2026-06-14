@@ -1,0 +1,70 @@
+{
+  "pair_id": "phlox__downy-mildew__powdery-mildew",
+  "kind": "disease",
+  "crop": "Phlox",
+  "member_a_label": "Downy Mildew",
+  "member_b_label": "Powdery Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are common foliar \"mildew\" diseases of garden phlox that gardeners lump together by name and by the whitish appearance on leaves. Both can produce pale/discolored foliage and leaf decline, and both peak in mid-to-late summer. The decisive separation is which leaf surface bears the growth and the color/architecture of the sporulation: powdery mildew lays a white superficial dusty coating mostly on the upper surface, while downy mildew confines a grayish-purple fuzzy growth to the lower surface beneath angular chlorotic blotches.",
+    "shared_presentation": "Mid- to late-season foliar disease on garden phlox (Phlox paniculata) with discolored, declining leaves and a mildew-like growth that gardeners describe simply as \"mildew on the phlox.\" Lower and interior leaves are often affected first, foliage may yellow, brown, and drop, and both diseases reduce vigor and bloom in dense, poorly ventilated plantings.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Which leaf surface carries the fungal growth, and what is its texture and color?",
+        "a_signal": "Grayish-white to bluish-purple downy/fuzzy growth confined to the UNDER surface of the leaf",
+        "b_signal": "White-to-gray powdery, dusty, talc-like coating mostly on the UPPER surface (and stems/buds)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the upper leaf surface look like above the growth?",
+        "a_signal": "Angular, vein-delimited yellow-to-brown blotches or pale patches on top, mirrored by fuzz below",
+        "b_signal": "Diffuse white powdery patches that coalesce; tissue beneath may yellow then brown but lesions are not vein-bounded",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what moisture and temperature conditions did it flare?",
+        "a_signal": "Favored by cool, wet, humid spells with leaf wetness, fog, or frequent rain/overhead irrigation",
+        "b_signal": "Favored by warm days with humid nights but DRY leaves; thrives without free water and even in drier weather",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Does the growth extend onto stems, buds, and flowers?",
+        "a_signal": "Largely restricted to leaves; systemic shoots may be distorted but no white coating on stems/buds",
+        "b_signal": "Readily colonizes stems, petioles, flower buds and calyces with the same powdery white film",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How do affected leaves decline over time?",
+        "a_signal": "Blotches brown and necrose; leaves can blight and curl, dropping from the angular dead zones",
+        "b_signal": "Leaves uniformly chlorose, then dull/tan and dry; whole-leaf senescence from the base of the plant upward",
+        "weight": "weak"
+      },
+      {
+        "axis": "morphology",
+        "question": "What do the spores look like under a hand lens or microscope?",
+        "a_signal": "Tree-like (dichotomously branched) sporangiophores bearing sporangia on the underside \u2014 an oomycete",
+        "b_signal": "Beaded chains of barrel-shaped conidia on erect conidiophores; superficial mycelium \u2014 a true ascomycete fungus",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Downy mildew of phlox, caused by the oomycete Peronospora, is a cool-wet-weather disease. The diagnostic giveaway is on the LOWER leaf surface: a grayish-white to violet-tinged downy or fuzzy mat of sporangiophores, sitting directly beneath angular, vein-bounded chlorotic-to-necrotic blotches visible on the upper surface. It needs leaf wetness and humidity to sporulate, so it appears after rainy or foggy stretches and in crowded, poorly drained beds. Microscopically the sporangiophores are dichotomously branched (tree-like) \u2014 not the bead-chain conidia of a true mildew. Because it is an oomycete rather than a fungus, it does not respond to the same chemistries as powdery mildew, which makes correct identification practically important.",
+    "narrative_b": "Powdery mildew, caused by the ascomycete Golovinomyces cichoracearum, is the far more familiar phlox disease \u2014 so common that resistant cultivars are bred specifically for it. It forms a superficial white-to-gray powdery, talc-like coating predominantly on the UPPER leaf surface, and readily spreads to stems, petioles, buds, and flowers. Unlike downy mildew, it does not require free water; it thrives with warm days, humid nights, and dry foliage, often worst in shaded, crowded, low-airflow plantings. Under a lens the growth is a superficial web of mycelium producing erect conidiophores with beaded chains of barrel-shaped conidia. Affected leaves yellow, dull, and dry, typically progressing from the base of the plant upward.",
+    "management_a": "Improve airflow by thinning and spacing clumps; avoid overhead watering and water early so foliage dries. Remove and destroy infected leaves and clean up fallen debris at season end since oomycetes can overwinter on residue. Because the pathogen is an oomycete, use oomycete-targeted products (e.g., phosphonates/phosphorous acid, mefenoxam, mandipropamid, or copper) rather than typical powdery-mildew fungicides; choose resistant or tolerant cultivars and avoid excess nitrogen and dense canopies.",
+    "management_b": "Plant powdery-mildew-resistant phlox cultivars (the most effective single step), thin stems each spring for airflow, and site in full sun with good spacing. Remove and discard infected foliage and cut back/clean up stalks in fall to reduce overwintering inoculum. Where needed, apply protectant/eradicant fungicides effective on powdery mildew (horticultural oil, potassium bicarbonate, sulfur, or labeled synthetics such as myclobutanil/tebuconazole), rotating modes of action; avoid overhead-shaded crowded conditions and excessive nitrogen.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My garden phlox is looking rough this summer - the lower and inner leaves are yellowing, turning brown, and dropping, and there's some kind of mildew-looking growth on the foliage. The plants in the crowded, shady part of the bed where air doesn't move well are hit the worst, and they just aren't blooming or growing like they should.",
+      "decisive_lay_a": "Flip the leaves over and look at the UNDERSIDE - you'll see a grayish-white to bluish-purple fuzzy or downy growth there, while the top of the leaf may just show pale or discolored blotches.",
+      "decisive_lay_b": "Look at the TOP of the leaves (and the stems and buds) for a white-to-gray powdery, dusty coating that looks like someone sprinkled talc or flour on them and can be rubbed off with your finger.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

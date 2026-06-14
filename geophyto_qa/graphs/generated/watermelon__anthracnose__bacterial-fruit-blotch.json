@@ -1,0 +1,70 @@
+{
+  "pair_id": "watermelon__anthracnose__bacterial-fruit-blotch",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Bacterial Fruit Blotch",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce dark, sunken or water-soaked lesions on maturing watermelon fruit in warm, wet weather and can devastate a field near harvest, so growers frequently confuse the two on rind symptoms alone. They diverge sharply on the pathogen sign (fungal acervuli/spore masses vs. bacterial ooze), the lesion architecture, and the foliar phase, which is where the diagnosis is actually made.",
+    "shared_presentation": "Dark, depressed lesions on the upper surface of nearly mature fruit appearing in hot, humid, rainy conditions late in the season; both can begin as small spots that enlarge, both spread by rain splash and overhead irrigation, both are seedborne, and both can cause rapid pre/post-harvest fruit rot that confuses field scouts.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "At what crop stage did symptoms first appear, and were transplants/seedlings affected?",
+        "a_signal": "Foliar and fruit symptoms appear progressively from mid-season onward; seedling phase is usually unremarkable.",
+        "b_signal": "Disease often traces to infected seed/transplants \u2014 seedling cotyledons and first leaves show water-soaked, dark, often vein-delimited lesions in the greenhouse before transplant.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are there distinct, well-developed leaf lesions in addition to fruit symptoms?",
+        "a_signal": "Conspicuous foliar blight: tan to dark, roundish-to-angular leaf spots that coalesce and scorch the canopy; petioles and stems also develop elongated sunken lesions.",
+        "b_signal": "Foliar symptoms are subtle and easily missed \u2014 small dark, water-soaked, angular spots along veins, often inconspicuous; the dramatic damage is on the fruit.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the geometry of the fruit lesion \u2014 circular and sunken, or an irregular surface stain?",
+        "a_signal": "Distinctly circular, sharply sunken (cratered) lesions that penetrate into the flesh, often with concentric zonation.",
+        "b_signal": "Irregular, olive-green to brown water-soaked blotch that stays superficial early, spreading across the rind surface with a greasy halo before cracking.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Does the rind crack and exude, and what is the surface texture of the spreading lesion edge?",
+        "a_signal": "Lesion stays firm and dry-cratered; cracking is from the sunken pit, not from internal pressure; no sticky exudate.",
+        "b_signal": "Rind surface ruptures/cracks and characteristically weeps a brownish bacterial ooze; the leading edge looks greasy/water-soaked.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens (and a simple ooze test), what sign is present in the lesion?",
+        "a_signal": "Salmon-pink to orange gelatinous spore masses (conidia from acervuli), sometimes with tiny black setae, on the lesion surface in wet weather \u2014 a fungal sign.",
+        "b_signal": "No fungal fruiting bodies; cut tissue placed in clear water streams cloudy bacterial ooze, and lesions exude bacteria rather than colored spore masses.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the rot advance into the fruit interior over time?",
+        "a_signal": "Firm, dry, sunken decay that deepens into the flesh from the cratered spot; secondary soft rotters may follow.",
+        "b_signal": "Water-soaked breakdown spreads internally from the rind, often with rapid wet collapse and bacterial streaming through the flesh.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Anthracnose, caused by the fungus Colletotrichum orbiculare, is fundamentally a foliar-and-fruit disease. Scout the canopy first: it produces conspicuous leaf spots (tan to dark, becoming angular and coalescing into scorched, blighted areas) and elongated sunken lesions on petioles and stems \u2014 a level of foliar damage that bacterial fruit blotch does not cause. On fruit, look for distinctly circular, sharply sunken (cratered) lesions, often with concentric rings, that penetrate as a firm, dry decay. The decisive sign is the salmon-pink to orange gelatinous spore mass (conidia in acervuli, sometimes with black setae) that wells up in the lesion during wet weather. Favored by warm, wet, prolonged-leaf-wetness conditions, it is seedborne and splash-dispersed.",
+    "narrative_b": "Bacterial fruit blotch, caused by Acidovorax citrulli (avenae ssp. citrulli), is primarily a seed- and transplant-borne fruit disease whose name tells the story \u2014 the conspicuous damage is on the rind. Trace the history: outbreaks frequently originate from infected seed lots or symptomatic transplants, with seedling cotyledons showing dark, water-soaked, sometimes vein-delimited lesions in the greenhouse. On fruit, the hallmark is an irregular, olive-green to brown water-soaked blotch that begins on the upper surface, stays superficial at first, then spreads, with the rind cracking and weeping a brownish bacterial ooze. Foliar symptoms are subtle \u2014 small dark angular water-soaked spots along veins, easily overlooked. The decisive test is the absence of any fungal fruiting body combined with bacterial streaming: cut symptomatic tissue, suspend in clear water, and watch for cloudy bacterial ooze.",
+    "management_a": "Plant pathogen-free/treated seed and rotate out of cucurbits 2-3 years. Use protectant/systemic fungicides (chlorothalonil; QoI/strobilurin and DMI products, rotating FRAC groups to manage resistance) on a preventive schedule timed to leaf wetness and fruit set. Improve airflow, avoid overhead irrigation, and minimize leaf wetness duration; bury or remove crop debris. Manage volunteer cucurbits and weeds; harvest promptly and avoid wounding fruit.",
+    "management_b": "This is a seed/transplant problem first: use certified, tested (and where appropriate treated) seed, inspect and rogue symptomatic seedlings in the greenhouse, and never carry suspect transplants to the field. Sanitize greenhouse benches, tools, and trays; avoid overhead irrigation and handling wet foliage. Copper-based bactericides (often with mancozeb) provide only partial suppression and must start early and preventively \u2014 there is no curative spray. Rotate away from cucurbits, control volunteers, and remove infected fruit; fungicides are ineffective because the pathogen is bacterial.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "Late in the season during that hot, wet, rainy stretch, my nearly ripe melons are showing dark, sunken spots on the top side of the fruit. They started small but are getting bigger fast, and some melons are starting to rot right before and after picking.",
+      "decisive_lay_a": "Look in the sunken spots after a rain or heavy dew for a slimy, jelly-like ooze that is salmon-pink to orange in color, sometimes with a few tiny black hairs poking up. That colored, gummy ooze sitting on the surface points to the fungal one.",
+      "decisive_lay_b": "There is no colored slime and no fuzzy growth in the spot. To check, cut a piece from the edge of a dark spot and drop it in a glass of clear water; if you see milky, cloudy threads streaming out of the cut piece into the water, that cloudy bacterial leakage points to the bacterial one.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

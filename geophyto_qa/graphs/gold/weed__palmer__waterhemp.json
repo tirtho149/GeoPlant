@@ -1,0 +1,49 @@
+{
+  "pair_id": "weed__palmer-amaranth__waterhemp",
+  "kind": "weed",
+  "crop": "Pigweed (Amaranthus) in row crops",
+  "member_a_label": "Palmer amaranth",
+  "member_b_label": "Waterhemp",
+  "source": "gold (docx exemplar)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are dioecious Amaranthus pigweeds with hairless stems and similar seedlings, routinely confused in soybean and corn.",
+    "shared_presentation": "Tall, smooth-stemmed pigweed with alternate leaves and a terminal seedhead; no hairs on stems or leaves.",
+    "forks": [
+      {
+        "axis": "habit",
+        "question": "What is the overall plant habit and branching?",
+        "a_signal": "Tall, highly branched, robust, almost tree-like, especially in competitive stands.",
+        "b_signal": "More slender with fewer, more upright branches and a willowy look.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Look at mid-canopy leaves: leaf shape and petiole length relative to the blade.",
+        "a_signal": "Diamond- or spade-shaped leaves wider toward the tip, with the petiole at least as long as or longer than the blade on many leaves.",
+        "b_signal": "Elongated, narrow, lanceolate leaves with the petiole clearly shorter than the blade.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Check fine leaf traits: a single hair at the leaf-tip notch or a faint V-shaped watermark.",
+        "a_signal": "A small hair at the very leaf-tip notch (when present) and an occasional faint V watermark favor Palmer, but only weakly.",
+        "b_signal": "No tip hair; these fine marks absent leans waterhemp.",
+        "weight": "weak"
+      },
+      {
+        "axis": "morphology",
+        "question": "If flowering, examine female seedheads and bracts.",
+        "a_signal": "Very long, thick, tough terminal seedheads; bracts 3-7 mm, stiff, extending beyond the tepals and sharp to the touch.",
+        "b_signal": "Shorter seedheads; bracts under 3 mm, not extending much beyond the tepals.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Because the plant has diamond-shaped leaves with petioles as long as or longer than the blades, robust branching, and long thick seedheads with stiff bracts, I classify it as Palmer amaranth rather than waterhemp.",
+    "narrative_b": "Because the leaves are narrow and lanceolate with petioles shorter than the blade, a slender willowy habit, and short bracts, I classify it as waterhemp rather than Palmer amaranth.",
+    "management_a": "Palmer amaranth: overlap residual herbicides and remove escapes before seed set; assume glyphosate/ALS resistance.",
+    "management_b": "Waterhemp: same residual-overlap and zero-tolerance approach; both pigweeds are widely herbicide-resistant.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true
+  }
+}

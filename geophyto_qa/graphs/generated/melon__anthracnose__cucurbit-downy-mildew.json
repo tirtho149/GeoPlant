@@ -1,0 +1,70 @@
+{
+  "pair_id": "melon__anthracnose__cucurbit-downy-mildew",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Cucurbit Downy Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce foliar leaf spots/lesions on melon that can begin as small water-soaked or chlorotic areas and expand into necrotic patches, and both can cause blighting of foliage in warm, humid conditions. In early stages a scout glancing at yellowing-then-browning leaf spots can mistake one for the other, especially before diagnostic signs (acervuli vs. sporulation) or lesion geometry develop.",
+    "shared_presentation": "Angular-to-irregular chlorotic and necrotic foliar lesions on melon leaves during warm, wet/humid weather, with progressive leaf yellowing, browning, and eventual blighting/defoliation of the canopy; both favor leaf wetness and can rapidly spread across a field.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are fruit, stems, and petioles affected, or is damage confined to leaves?",
+        "a_signal": "Anthracnose attacks all above-ground parts: sunken, dark, circular fruit lesions (often with salmon-pink spore masses) plus stem and petiole cankers, in addition to leaf spots",
+        "b_signal": "Downy mildew is essentially leaf-only; fruit and stems are not directly infected (fruit damage is secondary from sunscald/poor fill after defoliation)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and boundary of the leaf lesion?",
+        "a_signal": "Lesions are roundish to irregular, water-soaked then tan-to-dark brown, often with shot-holing and tattered centers; not strictly vein-bounded",
+        "b_signal": "Lesions are distinctly angular, bounded by leaf veins, starting as pale-green/yellow chlorotic blocks that turn brown in a mosaic, blocky pattern",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When the leaf underside of a lesion is examined under humidity (dew/morning), what sporulation sign is present?",
+        "a_signal": "Under wet conditions lesions/fruit produce salmon-to-pink, gelatinous acervuli (slimy spore masses); no fuzzy mold, no purple-gray down",
+        "b_signal": "On the lower leaf surface beneath the angular spot there is a fine purple-gray to black downy fungal-like growth (sporangiophores), best seen at dawn under high humidity",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under the microscope or hand lens, what reproductive structures are seen?",
+        "a_signal": "Acervuli with dark setae (bristles) and hyaline, one-celled curved/cylindrical conidia in a pink matrix",
+        "b_signal": "Branched, dichotomously forking sporangiophores bearing lemon-shaped purplish sporangia emerging through stomata",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the leaf blight pattern advance across the canopy?",
+        "a_signal": "Spots coalesce into ragged necrotic blotches with shot-holes; spread tied to rain-splash and overhead irrigation, often from lower/interior canopy outward",
+        "b_signal": "Rapid top-down/aerial spread of angular yellowing that browns and crisps whole leaves within days, sweeping through the field as wind-borne sporangia arrive",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather and inoculum source is driving the outbreak?",
+        "a_signal": "Warm (24-30C) wet weather with splashing rain; inoculum survives in crop debris and seed locally",
+        "b_signal": "Cool-to-moderate temperatures with prolonged leaf wetness/heavy dew and fog; obligate parasite that overwinters in frost-free areas and is carried north on wind currents each season",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Anthracnose (Colletotrichum orbiculare) is a splash-dispersed fungus that infects all above-ground melon tissue. Leaf lesions begin water-soaked, becoming roundish tan-to-dark-brown spots that crack and shot-hole; stems and petioles develop elongate cankers; and fruit show diagnostic sunken, dark, circular lesions that ooze salmon-pink, gelatinous spore masses (acervuli, often with setae) in humid weather. It favors warm, rainy conditions, survives in crop debris and on seed, and is spread by rain-splash and overhead irrigation. The decisive separator is the pink/salmon acervuli on tissue and the involvement of fruit and stems \u2014 never a downy growth.",
+    "narrative_b": "Cucurbit downy mildew (Pseudoperonospora cubensis) is an obligate oomycete that infects only leaves. It produces sharply angular, vein-delimited lesions that start as pale chlorotic blocks and turn brown in a blocky, mosaic pattern. Under high humidity or morning dew, the diagnostic purple-gray to black downy sporulation appears on the lower leaf surface beneath the angular spots (dichotomously branched sporangiophores with lemon-shaped sporangia). It thrives under cool, moist, dewy conditions, spreads explosively via wind-borne sporangia, and in much of the US re-invades each season from southern overwintering sites. Fruit and stems are not directly infected; losses come from rapid defoliation.",
+    "management_a": "Use disease-free/treated seed and resistant cultivars; rotate out of cucurbits 2-3 years and bury or remove infected debris. Avoid overhead irrigation and working fields when foliage is wet to limit splash dispersal. Apply protectant fungicides (chlorothalonil, mancozeb) preventively, rotating with strobilurin/QoI or other FRAC-coded modes per resistance-management guidelines once disease pressure or warm wet weather develops.",
+    "management_b": "Plant resistant/tolerant varieties and scout the lower leaf surface for sporulation; subscribe to the cucurbit downy mildew forecast/IPM-PIPE network to time sprays to arrival of wind-borne inoculum. Improve airflow and reduce leaf wetness/canopy humidity. Apply downy-mildew-specific oomycete fungicides preventively and on a tight schedule once alerts trigger \u2014 e.g., oxathiapiprolin, cyazofamid, fluopicolide, mandipropamid, ametoctradin \u2014 tank-mixed/rotated with a broad-spectrum protectant; note that QoI/strobilurins have largely lost efficacy against this pathogen.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My melon leaves are breaking out with angular, blocky-looking brown and yellow spots, mostly during this warm, muggy, wet stretch. The yellowing and browning is spreading fast across the patch, and whole leaves are starting to dry up and die back.",
+      "decisive_lay_a": "Look for a slimy, pinkish-to-salmon orange ooze sitting in the spots or on the fruit when the weather is wet, with no fuzzy mold and no grayish fur underneath the leaf.",
+      "decisive_lay_b": "Flip the leaf over early in the morning when it is humid and look for a fine purplish-gray to blackish fuzzy growth on the underside, right under the angular spot.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

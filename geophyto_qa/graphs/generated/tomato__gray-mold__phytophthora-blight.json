@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__gray-mold__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Gray Mold",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce water-soaked, soft, expanding rot on tomato fruit and lower plant parts and both thrive in cool-to-warm wet conditions, so early lesions and collapsing tissue look similar before the diagnostic pathogen sign (gray fuzzy sporulation vs. white cottony mold / firm leathery rot) develops.",
+    "shared_presentation": "Soft, water-soaked, rapidly expanding rot of fruit and lower stem/foliage in humid, wet conditions; affected tissue collapses and plants may wilt, with overlapping crop-loss patterns in dense, poorly ventilated tomato plantings.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the rot concentrated and what is its relationship to soil and wounds?",
+        "a_signal": "Attacks senescing, wounded, or pruned tissue, blossoms, and aerial fruit/stems anywhere on the canopy regardless of soil contact",
+        "b_signal": "Centers on soil-contact organs: crown, lower stem, and fruit touching or splashed from the ground, spreading upward from the base",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and firmness of the rotted fruit?",
+        "a_signal": "Soft, mushy, watery decay that breaks down quickly with no firm leathery rind",
+        "b_signal": "Firm, leathery, often concentric-ringed rot (buckeye rot) that stays relatively solid before cottony growth appears",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does the sporulation/mold on the lesion surface look like under humidity?",
+        "a_signal": "Dense fuzzy GRAY-to-tan velvety mold (conidiophores) coating the lesion, dusty when disturbed",
+        "b_signal": "Sparse WHITE cottony/downy mycelium (sporangia) on the surface, never gray and dusty",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What moisture and temperature conditions preceded the outbreak?",
+        "a_signal": "Cool, humid, low-light greenhouse or canopy conditions (~15-22C) with leaf wetness but not necessarily flooding",
+        "b_signal": "Warm, saturated/flooded soil, heavy rain, or overhead irrigation with standing water (~25-32C optimum)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Are there localized lesions with characteristic markings on stems/leaves?",
+        "a_signal": "Ghost spots (pale haloed rings) on fruit and tan stem cankers; can girdle pruned stem stubs",
+        "b_signal": "Dark, greasy, water-soaked stem/crown lesions causing rapid one-sided or whole-plant wilt and collapse",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease spread and persist between cycles?",
+        "a_signal": "Spreads by airborne conidia landing on wounds/blossoms; survives as sclerotia and on debris",
+        "b_signal": "Spreads by soilborne/waterborne motile zoospores moving in films of water; survives as oospores in soil",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Gray Mold (Botrytis cinerea) is an opportunistic, wound- and senescence-loving fungus that thrives in cool, humid, low-airflow settings such as greenhouses and dense field canopies. It colonizes pruned stem stubs, dying blossoms, and injured or ripening fruit, producing a soft watery decay topped by its signature dusty GRAY-tan fuzzy sporulation. Diagnostic hallmarks include \"ghost spots\" (small pale haloed rings) on green fruit and tan girdling cankers on stems. It is airborne via conidia and persists as durable sclerotia on debris.",
+    "narrative_b": "Phytophthora Blight (Phytophthora nicotianae) is a soil- and water-driven oomycete that attacks the crown, lower stem, roots, and fruit in contact with or splashed from saturated soil. Outbreaks follow heavy rain, flooding, or overhead irrigation under warm conditions. Fruit develop firm, leathery, concentrically zoned \"buckeye rot,\" and crowns/stems show dark greasy water-soaked lesions that cause rapid wilting and plant collapse. Under humidity it produces sparse WHITE cottony mycelium (never gray). It spreads via swimming zoospores in water films and survives as long-lived oospores in soil.",
+    "management_a": "Improve air circulation and reduce humidity (spacing, venting, avoid evening leaf wetness); remove and destroy senescent tissue, prune stubs flush in dry weather, and sanitize debris. Apply botryticides (e.g., fenhexamid, cyprodinil+fludioxonil, boscalid) rotating FRAC groups to manage resistance; protect wounds and blossoms during cool humid periods.",
+    "management_b": "Manage water: improve soil drainage, use raised beds, avoid flooding and overhead irrigation, and prevent soil splash with mulch. Rotate out of solanaceous/cucurbit hosts, plant in well-drained or pathogen-free ground, and avoid moving infested soil/water. Apply oomycete-specific fungicides (mefenoxam/metalaxyl, phosphonates, oxathiapiprolin, mandipropamid), targeting crown/soil and rotating modes of action.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Lower stems, leaves, and fruit are turning soft, mushy, and water-soaked, and the rot is spreading fast in this wet, humid, crowded planting. Affected parts collapse and some plants are wilting, with fruit going to mush near the ground.",
+      "decisive_lay_a": "A thick, fuzzy gray-to-tan velvety mold coating the rotted area that puffs up in a dusty cloud when you brush or shake it.",
+      "decisive_lay_b": "A thin, sparse white cottony or downy growth on the surface that stays white and does not puff up dusty when disturbed.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

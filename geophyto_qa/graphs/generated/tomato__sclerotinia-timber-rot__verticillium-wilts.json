@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__sclerotinia-timber-rot__verticillium-wilts",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Sclerotinia Timber Rot",
+  "member_b_label": "Verticillium Wilts",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce wilting tomato plants with branch dieback and can collapse vines, so a quick field glance at a flagging, declining plant looks similar. But Sclerotinia is a stem-girdling rot driven by external fungal signs (white mold, sclerotia) while Verticillium is a vascular xylem occlusion driven by internal browning and lower-leaf chlorosis \u2014 the confusion is real only until you split the stem and look for signs.",
+    "shared_presentation": "Wilting and progressive decline of tomato plants, with branches or whole vines flagging, yellowing, and dying back. Both can affect mature/fruiting plants and lead to plant collapse, so from a distance both present as a \"wilting tomato.\"",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the primary lesion an external soft/girdling stem rot or an internal vascular wilt with no surface rot?",
+        "a_signal": "A discrete bleached, watersoaked-to-tan girdling lesion on the main stem (often at a branch crotch or pruning wound), tissue collapses and shreds",
+        "b_signal": "Plant wilts with intact, firm stem surface; no external rot \u2014 symptoms are leaf yellowing/wilting from a hidden vascular blockage",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Are fungal SIGNS present on or in the stem?",
+        "a_signal": "Fluffy white cottony mycelium on/around the lesion and hard black sclerotia (rat-dropping bodies) inside the pith/hollow stem",
+        "b_signal": "No external mold and no sclerotia; no visible fungal structures on the surface",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does the cut/split stem reveal internally?",
+        "a_signal": "Hollowed, shredded pith containing black sclerotia; tissue is dry and pithy ('timber rot')",
+        "b_signal": "Solid stem with tan-to-brown discoloration of the vascular ring (xylem streaking) visible in a longitudinal or cross-section cut",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the wilt progress over the plant?",
+        "a_signal": "Sudden wilt/death of everything above a single girdling stem lesion; collapse is localized to and above that lesion",
+        "b_signal": "Gradual, often one-sided (V-shaped) yellowing starting on lower/older leaves and moving upward; whole-plant decline over weeks",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where does the damage initiate?",
+        "a_signal": "Initiates at an above-ground stem point (wound, branch axil, senescing flower tissue) and works outward",
+        "b_signal": "Initiates from the roots/soil through the vascular system; lowest leaves and one side of the plant show first",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions favored the outbreak?",
+        "a_signal": "Cool, wet, humid canopy conditions and dense planting (favors mycelial/apothecial infection of stems)",
+        "b_signal": "Cooler soils and moderate temps; favored by stress; classic in repeatedly cropped or solanaceous-rotation soils regardless of canopy humidity",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Sclerotinia Timber Rot (Sclerotinia sclerotiorum) attacks the above-ground stem, typically at a branch crotch, pruning wound, or where senescing blossoms lodge in the canopy. It produces a bleached, watersoaked girdling lesion and a fluffy white cottony mycelium. As it girdles the stem, everything above the lesion wilts and dies suddenly. The diagnostic clincher is splitting the stem: the pith is hollowed and shredded ('timber rot') and contains hard black sclerotia, often with white mold externally. Ascospores from apothecia infect via dead/senescing tissue under cool, wet, humid canopy conditions.",
+    "narrative_b": "Verticillium Wilt is a soilborne vascular disease in which the fungus colonizes the xylem from the roots, occluding water flow. The plant surface and stem remain firm and free of rot or mold. Symptoms begin as yellowing and wilting of the lower, older leaves, frequently in a one-sided or V-shaped pattern, and progress upward over weeks. Cutting the stem reveals tan-to-brown vascular discoloration but no sclerotia and no white mycelium. It favors cooler soils and is persistent in soils with a history of susceptible (solanaceous) crops; many modern tomato varieties carry the V (Ve) resistance gene.",
+    "management_a": "Improve air circulation (wider spacing, staking, pruning to open canopy) and avoid dense, humid microclimates. Remove and destroy infected plants and stem debris before sclerotia drop to soil; sclerotia survive years. Rotate away from broadleaf/solanaceous hosts to non-hosts (cereals/grasses); deep plowing to bury sclerotia and avoiding overhead irrigation help. Fungicides or biocontrol (Coniothyrium minitans) timed to bloom/apothecial activity can reduce infection.",
+    "management_b": "Plant resistant cultivars carrying the Ve (V) resistance gene \u2014 the single most effective control. Practice long rotations with non-hosts and avoid following other susceptible crops; use soil solarization in warm regions and maintain balanced fertility/irrigation to reduce plant stress. There is no curative treatment for infected plants; remove and destroy them. Grafting onto resistant rootstock is an option for high-value or repeatedly infested ground.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My tomato plants are wilting and going downhill - whole branches or vines are drooping, turning yellow, and dying back, even on big fruiting plants. From a distance the plants just look like they're collapsing and giving up.",
+      "decisive_lay_a": "Look for fluffy, cottony white growth on or near the rotted part of the stem, and crack open the hollow stem to find hard, black pellets inside that look like rat or mouse droppings.",
+      "decisive_lay_b": "There is no white fuzzy growth, no cottony coating, and no hard black pellets anywhere on or inside the stem - the surface stays clean with nothing visibly growing on it.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

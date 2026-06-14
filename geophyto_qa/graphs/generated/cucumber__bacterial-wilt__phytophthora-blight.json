@@ -1,0 +1,70 @@
+{
+  "pair_id": "cucumber__bacterial-wilt__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Bacterial Wilt",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause sudden vine wilt and plant collapse on cucumber, often mid-season, and both can kill plants rapidly, so a field scout seeing wilted, dying vines could attribute either cause. They diverge sharply on the pathogen sign (bacterial ooze vs. water-soaked rot/white mold) and on the plant part affected (vascular system via beetle feeding vs. crown/fruit rot from soil water).",
+    "shared_presentation": "Rapid wilting of runners or the whole plant, often during warm summer weather, with green-to-flagging foliage that collapses; affected plants may die quickly and appear scattered or in patches across the field.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Cut a wilting stem near the base, press the cut faces together and slowly draw them apart \u2014 do you see sticky strands, or is there visible cottony mold / water-soaked rot on the crown or fruit?",
+        "a_signal": "Viscous, milky-white bacterial ooze pulls into fine sticky threads when cut stem ends are separated (positive 'string test'); cucumber beetles often present",
+        "b_signal": "No ooze strands; instead crown and lower stem show dark water-soaked soft rot, and fruit on or near the soil bears white cottony/powdery sporulation",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where does the damage center \u2014 in the vascular tissue/runners, or at the crown, lower stem, and fruit contacting wet soil?",
+        "a_signal": "Wilt begins in individual leaves or runners and spreads through vines; vascular browning, roots and crown often look intact early",
+        "b_signal": "Crown, root collar, and fruit rot are central; girdling lesion at soil line and fruit rot in low/wet spots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What are the field moisture conditions \u2014 well-drained with beetle activity, or low, poorly drained, recently flooded/heavily irrigated areas?",
+        "a_signal": "Occurs across the field wherever cucumber beetles feed; not tied to standing water",
+        "b_signal": "Concentrated in low spots, poorly drained ground, or after heavy rain/overhead irrigation where soil stays saturated",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does wilt progress over a day and across the plant?",
+        "a_signal": "Leaves wilt during the day and may partly recover at night early on, then whole vines wilt irreversibly over days as bacteria plug xylem",
+        "b_signal": "Rapid, irreversible collapse once crown is girdled; plants often killed within days with no diurnal recovery",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Are striped or spotted cucumber beetles (the bacterial vector) present and feeding?",
+        "a_signal": "Cucumber beetles present; feeding wounds are the infection route for the bacterium",
+        "b_signal": "Beetle presence incidental; disease spreads via splashing water and soil-borne spores, not an insect vector",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "On affected fruit, what is the lesion character?",
+        "a_signal": "Fruit largely unaffected; symptoms are vascular/wilt rather than fruit rot",
+        "b_signal": "Fruit develops sunken water-soaked rot covered with a dense white 'powdered-sugar' sporangial layer",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Bacterial wilt is a vascular disease: cucumber beetles vector Erwinia tracheiphila into feeding wounds, the bacteria multiply in and plug the xylem, and the plant wilts because water transport fails. Classic confirmation is the string test \u2014 sticky bacterial ooze drawn from a cut stem. Wilt often starts in single leaves or runners, may show transient nighttime recovery early, and roots/crown look healthy. Beetle presence is a strong contextual clue. It is nationwide wherever cucumber beetles thrive, so not strongly region-specific.",
+    "narrative_b": "Phytophthora blight is a soil/water oomycete disease centered on the crown, lower stem, roots, and fruit. Saturated soil from heavy rain, flooding, or overhead irrigation drives infection, so it clusters in low, poorly drained field areas. The hallmark is water-soaked rot with dense white cottony sporulation on crown lesions and on fruit lying in wet soil, plus girdling at the soil line that causes abrupt collapse with no diurnal recovery. There is no bacterial ooze and no insect vector. Its severity depends on regional rainfall, drainage, and warm wet conditions, making it more region/season dependent.",
+    "management_a": "Manage the vector: scout for and control striped and spotted cucumber beetles early (insecticides, row covers removed at flowering, resistant/tolerant varieties), rogue and remove infected wilting plants to limit beetle-mediated spread, and clean up cucurbit debris. No effective cure once a plant is infected.",
+    "management_b": "Improve drainage and avoid waterlogging: plant on raised beds, use drip rather than overhead irrigation, avoid low/flooded ground, rotate out of cucurbits/solanaceous hosts for several years, apply oomycete-targeted fungicides (e.g., mefenoxam/mandipropamid programs) preventively, and remove infected fruit and plants. Sanitation of equipment moving through wet infested soil is important.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My cucumber vines are wilting fast in this warm weather, with whole runners or even entire plants flagging and collapsing within a day or two. The leaves were green and then just went limp, and I'm losing plants in scattered spots and patches across the field.",
+      "decisive_lay_a": "Cut through a wilted stem near the base, then slowly pull the two cut ends apart. If a milky-white, sticky goo strings out into fine threads between the pieces, that's the tell. You'll often also spot striped or spotted cucumber beetles feeding on the plants.",
+      "decisive_lay_b": "No sticky white threads when you pull a cut stem apart. Instead look at the crown and lower stem for a dark, wet, mushy soft rot, and check fruit lying on or near the soil for a white cottony or powdery fuzz growing on it.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

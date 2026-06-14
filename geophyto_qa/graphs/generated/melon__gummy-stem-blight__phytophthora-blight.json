@@ -1,0 +1,70 @@
+{
+  "pair_id": "melon__gummy-stem-blight__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Gummy Stem Blight",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce dark, water-soaked-to-necrotic lesions on melon stems/crowns and can wilt and kill plants, and both blight foliage. Field crews frequently confuse a girdling crown/stem lesion of gummy stem blight with the crown/root rot phase of Phytophthora blight, and both cause fruit rot. The pathogen signs (pycnidia/exudate vs. white sporangial growth) and the moisture/soil association are what truly separate them.",
+    "shared_presentation": "Wilting, collapsing melon plants with darkened, necrotic lesions on the lower stem/crown, foliar blighting, and fruit rot, often appearing in warm, wet weather and capable of killing plants outright.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "Where in the field did the dead/wilting plants first appear and what is the soil moisture history?",
+        "a_signal": "Plants scattered across the field, often where canopy stays wet and on stems near pruning wounds or old cotyledon scars; not tied to standing water",
+        "b_signal": "Plants clustered in low, poorly drained spots, ends of beds, or wheel tracks following heavy rain/flood irrigation; spreads from saturated soil up the bed",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which tissues carry the primary lesions, and does the rot start at the soil line or above it?",
+        "a_signal": "Lesions concentrated on aerial stems, nodes, crown and leaves; cankers can occur well above the soil line at wound sites",
+        "b_signal": "Rot begins at the crown/root and soil line as a dark, water-soaked girdling rot, with foliar and fruit symptoms following",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the leaf lesion look like and where does it start on the leaf?",
+        "a_signal": "Tan-to-brown circular leaf spots, often starting at the leaf margin in a V/wedge shape, sometimes with concentric zonation and dark speckling",
+        "b_signal": "Large, dark green, greasy water-soaked irregular blotches that collapse rapidly; less defined margins and no speckling",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "How does the fruit rot appear?",
+        "a_signal": "Black, firm-to-sunken fruit rot, may show black pimple-like fruiting bodies; rind cracking; rot relatively dry and circular",
+        "b_signal": "Soft, water-soaked fruit rot, typically on the underside contacting wet soil, becoming covered with cottony white mold",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "When the stem/crown lesion is examined, does it ooze a gummy amber exudate and bear dark pycnidia?",
+        "a_signal": "Cankers exude a reddish-brown to amber gummy droplet ('gummosis') and develop tiny black pycnidia/perithecia in the dead tissue",
+        "b_signal": "No gummy amber exudate; lesion is water-soaked and may show white sporangial bloom under humidity, no embedded black pycnidia",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Incubate a lesion in a moist chamber (or examine under a hand lens/scope): what reproductive structures form?",
+        "a_signal": "Dark, globose pycnidia/perithecia embedded in tissue, exuding hyaline conidia in tendrils; no white aerial sporangia",
+        "b_signal": "White, branched, cottony sporangiophores bearing lemon-shaped (papillate) sporangia; motile zoospores release in free water",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Gummy Stem Blight, caused by the fungus Stagonosporopsis cucurbitacearum (syn. Didymella bryoniae), is primarily an aerial, wound-associated disease. It produces leaf spots (often marginal, wedge-shaped, with dark speckling), brown stem cankers that ooze a characteristic reddish-amber gummy exudate, and black fruit rot. The diagnostic hallmark is the formation of dark pycnidia and perithecia embedded in the necrotic tissue, releasing fungal conidia/ascospores. It is favored by warm, humid, rainy weather and spreads via splash and infected debris/seed, and is not dependent on saturated soil.",
+    "narrative_b": "Phytophthora Blight, caused by the oomycete Phytophthora capsici, is a soilborne, water-driven disease. It causes crown and root rot at the soil line, rapid wilting, water-soaked greasy foliar blight, and a soft fruit rot (usually on the soil-contact side) covered with cottony white growth. The diagnostic hallmark is profuse white sporangiophores bearing lemon-shaped papillate sporangia and the production of swimming zoospores in free water. It is favored by warm temperatures plus excess water (heavy rain, flooding, poorly drained or low spots), spreading explosively through saturated soil and surface water.",
+    "management_a": "Use pathogen-free/treated seed and resistant varieties where available; rotate out of cucurbits 2-3 years; avoid overhead irrigation and reduce leaf wetness; remove infected debris; minimize plant wounding; apply protectant and targeted fungicides (e.g., chlorothalonil plus DMI/SDHI/QoI products on rotation to manage resistance) on a preventive schedule.",
+    "management_b": "Manage water first: plant on raised, well-drained beds, avoid low spots, improve drainage, and avoid flood/overhead irrigation and moving water from infested areas; rotate 3+ years out of host crops (avoid peppers/cucurbits/tomatoes/eggplant); apply oomycete-specific products (mefenoxam/metalaxyl where not resistant, plus mandipropamid, oxathiapiprolin, cyazofamid, dimethomorph) preventively; sanitize equipment to limit field-to-field spread.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My melon plants are wilting and collapsing, especially in this warm, wet stretch. The lower stems near the soil are turning dark and mushy, the leaves are browning and dying back, and some fruit is rotting. Whole plants are dying off.",
+      "decisive_lay_a": "Look on the dark stem for tiny black specks or pimple-like dots stuck in the surface. In wet weather these dots ooze a pale, slimy thread or droplet. There is NO white fuzzy growth.",
+      "decisive_lay_b": "Look for a white, cottony, fuzzy growth on the rotting stem or fruit, like a fine mold or fuzz, that shows up when things stay wet. It spreads fast where water sits or splashes.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pair_id": "lettuce__sclerotinia-stem-rot__sclerotinia-timber-rot",
+  "kind": "disease",
+  "crop": "Lettuce",
+  "member_a_label": "Sclerotinia Stem Rot",
+  "member_b_label": "Sclerotinia Timber Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are Sclerotinia rots on lettuce producing watery soft rot, white fluffy mycelium, wilt, and black sclerotia, and the two often co-occur in the same field. Field crews routinely lump them as \"lettuce drop.\" They are reliably separated only by sclerotium size/number and by the infection court (basal/soilline vs. aerial/ascospore-driven), which most diagnosticians overlook.",
+    "shared_presentation": "Sudden wilt and collapse of the lettuce head, water-soaked tan-to-brown soft rot at the crown and lower stem/leaf bases, white cottony (fluffy) mycelial growth on affected tissue under moist conditions, and the eventual formation of hard black sclerotia in or on the rotted tissue. Both progress to complete plant collapse (\"drop\") and thrive in cool, wet, dense canopy conditions.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Where on the plant does the rot initiate and is there an aerial/ascospore infection court?",
+        "a_signal": "Infection begins at the soil line / crown and lowest leaf bases in direct contact with soil; spread is by mycelium from sclerotia in soil, no apothecia/ascospore stage needed",
+        "b_signal": "Infection can begin higher up on senescing outer leaves or stem from airborne ascospores released by buff-colored apothecia (mushroom-like cups) on the soil surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Examine the sclerotia formed in/on the rotted tissue: how big and how many?",
+        "a_signal": "Numerous, very small (about 0.5-2 mm), irregular poppy-seed-like black sclerotia, often abundant on and within tissue and in soil",
+        "b_signal": "Fewer, large (about 3-10+ mm), elongated or irregular black sclerotia, often formed in the pith of the hollowed stem",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Is the pith/inner stem hollowed out and lined with sclerotia ('timber' rot habit)?",
+        "a_signal": "Rot is concentrated at the basal crown and leaf bases; pith cavity packed with tiny sclerotia is uncommon",
+        "b_signal": "Stem can be bleached and hollowed (dry, timber-like) with large sclerotia formed in the internal cavity",
+        "weight": "supporting"
+      },
+      {
+        "axis": "habit",
+        "question": "What is the spatial/host pattern of disease in the field?",
+        "a_signal": "Tends to be more strictly soilborne with a narrow host range bias; spread follows soil-contact and previous lettuce-drop history",
+        "b_signal": "Very wide host range (200+ species); outbreaks tied to ascospore showers and can appear where airborne inoculum lands",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions immediately preceded the outbreak?",
+        "a_signal": "Cool, moist soil with dense canopy contacting the ground; tied to sclerotia surviving in soil from prior crops",
+        "b_signal": "Cool wet weather plus a period favorable for apothecial germination and ascospore release (prolonged surface moisture)",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Sclerotinia minor causes the classic \"lettuce drop\" as a soilborne, basal disease. Sclerotia surviving in soil germinate myceliogenically (no apothecial/ascospore stage required) and infect the crown, lower stem, and leaf bases in contact with soil. Plants wilt suddenly and collapse, with water-soaked tan rot and white cottony mycelium at the base. The diagnostic hallmark is the production of numerous very small (0.5-2 mm), poppy-seed-sized black sclerotia abundant on and within the rotted basal tissue and in the surrounding soil. S. minor is generally the dominant lettuce-drop pathogen in many intensive lettuce-production soils.",
+    "narrative_b": "Sclerotinia sclerotiorum causes timber rot / cottony rot on lettuce and an enormous range of other hosts. Unlike S. minor, it commonly relies on carpogenic germination: sclerotia produce small buff/tan apothecia (cups) on the soil surface that release airborne ascospores, which infect senescing outer leaves and stems, sometimes higher on the plant. Infected stems may bleach, dry, and hollow (\"timber\" rot) with white cottony mycelium and the formation of fewer but large (3-10+ mm) elongated black sclerotia, frequently inside the stem cavity. Its very broad host range and ascospore-driven epidemiology distinguish it from the strictly soilborne S. minor.",
+    "management_a": "Reduce soilborne sclerotia: deep plowing to bury sclerotia, long rotations with non-host or poor-host crops (e.g., cereals), and avoid back-to-back lettuce. Improve canopy airflow and avoid excess irrigation/over-dense planting so lower leaves stay dry. Apply soil-targeted/contact fungicides (e.g., boscalid, fluazinam, or Coniothyrium minitans biocontrol) at thinning/early head. Remove and destroy infected debris; manage soil moisture to limit myceliogenic germination at the crown.",
+    "management_b": "Same sanitation and rotation principles, but additionally target the ascospore stage: time fungicide sprays (e.g., boscalid, fluazinam, azoxystrobin) to coincide with apothecial development and ascospore release during cool, wet periods, focusing on protecting senescing outer leaves. Because of its very wide host range, rotation is less reliable; emphasize canopy management, residue destruction, biocontrol (Coniothyrium minitans) to degrade sclerotia, and shallow cultivation to disrupt apothecia at the soil surface.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My lettuce heads suddenly wilted and flopped over, and the base of the plant near the soil went soft, mushy, and tan-to-brown like it's rotting. After a few damp days I'm seeing white cottony, fluffy growth on the rotted parts, and the whole head is collapsing and dropping.",
+      "decisive_lay_a": "Look for lots of tiny black specks like poppy seeds (about the size of a pinhead, roughly 1/16 inch) scattered all over and inside the rotted tissue and even in the soil around the plant.",
+      "decisive_lay_b": "Look for a few larger, hard black lumps (about pea-sized or bigger, 1/8 to 1/2 inch), often long or irregular in shape, formed inside the hollowed-out center of the stem.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

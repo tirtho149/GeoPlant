@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__bacterial-wilt__southern-blight",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Bacterial Wilt",
+  "member_b_label": "Southern Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are warm-season soilborne pathogens that cause sudden, rapid wilting of otherwise healthy-looking tomato plants (often with green leaves still attached), strike in hot wet weather, and kill plants from the base/root zone \u2014 so a grower seeing a collapsed plant in midsummer can easily mistake one for the other before examining the stem base and roots.",
+    "shared_presentation": "A vigorous mid-season tomato plant wilts abruptly during hot, humid weather, frequently with foliage still green at first collapse, and the problem originates at the soil line / lower stem and roots rather than as a foliar leaf-spot progression.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What weather and soil conditions preceded the collapse?",
+        "a_signal": "Warm to hot temperatures with wet, poorly drained or saturated soil; favored in the deep South and increasingly mid-Atlantic; spreads in standing water and contaminated soil/tools",
+        "b_signal": "Hot temperatures with high humidity plus abundant surface organic debris/mulch at the soil line; favored by warm dry-to-moist conditions that let surface mycelium run",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where does the damage initiate \u2014 internal vascular tissue or the external stem surface at the soil line?",
+        "a_signal": "Damage is internal/vascular with no external lesion; lower stem looks normal on the outside",
+        "b_signal": "Damage is external at the crown: a distinct water-soaked to brown necrotic lesion girdles the stem right at the soil line",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Does the whole plant wilt at once while green, or does lower-leaf yellowing/girdling precede collapse?",
+        "a_signal": "Rapid, often whole-plant wilt while leaves are still green, sometimes one-sided; little initial yellowing",
+        "b_signal": "Sudden wilt following a girdling crown rot; lower leaves may yellow as the stem base is destroyed",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What sign appears on or around the stem base \u2014 surface fungal growth and seed-like bodies, or none?",
+        "a_signal": "No fungal growth; no sclerotia. Stem surface is clean (bacterial pathogen, no visible signs)",
+        "b_signal": "White fan-like mycelial mat on the lower stem/soil surface bearing tan-to-reddish-brown, mustard-seed-sized round sclerotia",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "When a cut lower stem section is suspended in clear water, what comes out?",
+        "a_signal": "Milky-white bacterial streaming (ooze) threads stream from the cut vascular tissue within minutes \u2014 positive streaming test",
+        "b_signal": "No bacterial streaming; cut shows dry/soft crown rot, water stays clear",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease move through the planting and within the plant?",
+        "a_signal": "Browning/discoloration of the vascular ring extends well up the stem; can move plant-to-plant via soil water; rapid systemic collapse",
+        "b_signal": "Stays localized to the crown/lower stem; collapse is per-plant once the base is girdled; mycelium spreads along soil surface to adjacent plants",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial wilt (Ralstonia solanacearum) is a vascular, systemic bacterial disease. The pathogen invades and plugs the xylem, so plants wilt rapidly \u2014 often the entire plant or one side collapses while leaves remain green. The hallmark is an internal vascular browning with no external stem lesion and no fungal signs. The definitive in-field confirmation is the streaming test: a cut lower-stem segment suspended in clear water releases milky bacterial ooze within minutes. It is favored by hot temperatures and wet, poorly drained soils and is most damaging in the southeastern US.",
+    "narrative_b": "Southern blight (Athelia/Sclerotium rolfsii) is a fungal crown rot. It produces a conspicuous external lesion that girdles the stem at the soil line, and the diagnostic sign is the coarse white fan-shaped mycelial mat carrying tan-to-brown, mustard-seed-sized sclerotia on the lower stem and surrounding soil/debris. Once the stem base is girdled the plant wilts and dies, but there is no internal vascular streaming. It thrives in hot, humid weather with surface organic matter and is most common across the warm southern US.",
+    "management_a": "No effective curative chemistry. Remove and destroy infected plants; do not compost. Use long rotations away from solanaceous and other hosts, plant resistant/grafted rootstocks where available, manage soil drainage and avoid moving water/soil/tools between infested and clean areas, and sanitize equipment. In confirmed fields, exclude the pathogen \u2014 start with clean transplants and avoid replanting susceptible crops.",
+    "management_b": "Reduce surface organic debris and avoid heavy mulch against stems; bury residue with deep plowing. Rotate to non-host crops (grasses/corn), use raised well-drained beds, and remove infected plants plus surrounding soil/sclerotia. Soil solarization reduces sclerotia in hot regions; labeled fungicides or biocontrols (Trichoderma) applied to the crown can help as preventives. Sanitize to limit sclerotia spread.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "A healthy, fast-growing tomato plant suddenly flopped over and wilted on a hot, muggy day, even though most of the leaves were still green when it first collapsed. The trouble seems to be starting down at the base of the stem near the soil and the roots, not from spots working up the leaves.",
+      "decisive_lay_a": "The lower stem at the soil line looks clean and bare with no fuzzy growth, no white threads, and no little seed-like balls on it. (A clue you can confirm: cut the stem near the base, put it in a glass of clear water, and watch for a milky, cloudy stream oozing out of the cut.)",
+      "decisive_lay_b": "A white, fan-shaped or cottony mat of growth on the lower stem and the soil right around it, dotted with tiny tan to reddish-brown round balls about the size of mustard seeds.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

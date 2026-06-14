@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__bacterial-pustule-of-soybean-disease__downy-mildew",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bacterial Pustule Of Soybean Disease",
+  "member_b_label": "Downy Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small, pale-to-yellowish angular/spotty lesions on soybean leaves that fade to brown, and at a casual glance a scout may confuse early bacterial pustule flecks with the chlorotic upper-surface spots of downy mildew. They diverge decisively on the sign present: bacterial pustule forms a raised erumpent pustule on the LOWER leaf surface with NO mold, whereas downy mildew forms a fuzzy gray-to-purple sporulation (fungal growth) on the LOWER surface directly beneath the chlorotic spot. Flipping the leaf and examining the underside resolves them.",
+    "shared_presentation": "Small foliar lesions on soybean leaflets appearing as pale-green to yellow chlorotic flecks or angular spots, often a few millimeters across, that later turn tan to brown and may coalesce; both occur during the vegetative-to-reproductive canopy, are favored by warm-to-moist conditions, and can cause a peppered or mottled appearance of the upper leaf surface that prompts confusion.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Turn the leaflet over and inspect the lower surface directly beneath a lesion: is there a fuzzy mold or a raised bump?",
+        "a_signal": "A small raised, erumpent PUSTULE (volcano-like bump) at the lesion center on the lower surface, with NO mold, fuzz, or spores; pustule is dry and may rupture.",
+        "b_signal": "A downy, fuzzy patch of gray, grayish-violet to purple SPORULATION (tufts of fungal growth) covering the lower surface beneath the chlorotic spot, especially in dew/humid mornings.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the upper-surface spot look like in color and margin?",
+        "a_signal": "Spots are small angular-to-irregular flecks, often with a reddish-brown center and a narrow yellow halo; lesions tied to a raised pustule.",
+        "b_signal": "Spots are pale-green to bright-yellow indefinite chlorotic blotches with diffuse margins, later turning brown; no raised center.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under a hand lens, is the lesion center raised or flat?",
+        "a_signal": "Distinctly raised/erumpent center (the pustule) breaking through the epidermis.",
+        "b_signal": "Lesion is flat on top; any texture is the mold on the underside, not a raised epidermal pustule.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What moisture/temperature conditions preceded the outbreak?",
+        "a_signal": "Favored by warm temperatures (around 30 C / 86 F) with rain, wind-driven splash, and humid conditions.",
+        "b_signal": "Favored by cool-to-moderate temperatures with prolonged leaf wetness, heavy dew, and high humidity; sporulation flushes after dewy nights.",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are pods or seeds involved, and how?",
+        "a_signal": "Primarily leaves; severe cases may show small lesions on pods/stems but seed is rarely overtly molded.",
+        "b_signal": "Can systemically infect pods and seed, leaving a white-to-gray crusty oospore-laden coating on seed coats inside infected pods.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do affected leaves age and senesce?",
+        "a_signal": "Pustules and flecks remain discrete; severe infection causes ragged tearing/defoliation as lesions dry and drop out.",
+        "b_signal": "Chlorotic blotches enlarge and merge into large yellow-to-brown areas; heavy infection yellows and prematurely drops leaves with persistent mold underneath.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial pustule (Xanthomonas axonopodis pv. glycines) produces small chlorotic specks on the upper leaf surface, each with a characteristic minute, raised, erumpent pustule on the LOWER surface at the lesion center. Lesions have reddish-brown centers with narrow yellow halos and remain angular-to-irregular. There is NEVER mold or fuzz, only the dry raised pustule which may later rupture. It is favored by warm, humid, wind-and-rain-splashed conditions. As lesions dry, centers drop out giving leaves a ragged, torn appearance. It is bacterial, spread by splashing water and infested seed/residue, and is the classic look-alike that distinguishes susceptible cultivars (the rxp resistance gene controls it).",
+    "narrative_b": "Downy mildew (Peronospora manshurica) is an oomycete that produces pale-green to bright-yellow indefinite chlorotic blotches on the upper leaf surface, beneath which a downy, fuzzy gray-to-grayish-violet/purple sporulation develops on the LOWER surface, most visible after dewy, humid nights. The presence of this mold (sporangiophores and sporangia) on the leaf underside is diagnostic. It favors cool-to-moderate temperatures with prolonged leaf wetness and heavy dew. The pathogen can become systemic, infecting young leaves (which may be stunted and uniformly chlorotic) and infecting pods and seeds, leaving a white-to-gray crusty oospore mass on the seed coat. Premature yellowing and leaf drop occur in severe cases.",
+    "management_a": "Plant resistant cultivars (rxp gene) where available; use clean, certified disease-free seed and rotate away from soybean to reduce infested residue inoculum. Avoid working fields when foliage is wet to limit bacterial spread by splash and contact. Copper-based bactericides give only limited suppression and are rarely economical; cultural controls and resistance are the mainstays. Manage volunteer soybeans and incorporate residue to speed breakdown.",
+    "management_b": "Use resistant varieties and clean, treated seed since the pathogen is seedborne via oospores on the seed coat; apply a seed-treatment fungicide effective on oomycetes (e.g., metalaxyl/mefenoxam) to reduce systemic seedling infection. Rotate crops and bury infested residue to lower overwintering oospore inoculum. Foliar fungicides are seldom warranted because yield loss is usually minor, but oomycete-active products can be used under prolonged cool, wet, high-humidity conditions in seed-production fields.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My soybean leaves have a scattering of small pale-green to yellow specks and little angular spots, just a few millimeters across, that give the leaves a peppered, mottled look. Some of the older spots are turning tan to brown and starting to run together. It showed up as the plants were bulking up in warm, damp weather.",
+      "decisive_lay_a": "Flip the leaf over and look at the center of a spot: you'll find a tiny dry, raised bump like a little volcano that can crack open, with no fuzz, mold, or powder on it at all.",
+      "decisive_lay_b": "Flip the leaf over (best on a dewy or humid morning) and look right under the yellow spot for a downy, fuzzy patch of soft growth that's gray, grayish-purple, or violet, like fine fur.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

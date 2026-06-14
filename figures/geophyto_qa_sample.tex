@@ -1,0 +1,189 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}
+\usepackage[margin=0.9in]{geometry}\usepackage{graphicx}\usepackage{longtable}
+\usepackage{xcolor}\usepackage{enumitem}\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue!60!black}
+\definecolor{lav}{RGB}{205,205,244}\definecolor{grn}{RGB}{200,230,201}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\begin{document}
+\begin{center}{\LARGE\bfseries GeoPhyto-QA}\\[2pt]{\large Geography-aware look-alike diagnosis VQA from Bugwood imagery}\\[4pt]\small Two-level (CLIP image $\wedge$ web-verified) look-alike confirmation \,$\cdot$\, decision-graph CoT \,$\cdot$\, farmer--expert dialogue\end{center}
+\vspace{4pt}\hrule\vspace{6pt}
+\textbf{What this is.} Each item is a multi-turn, image-grounded farmer$\leftrightarrow$agricultural-expert dialogue where the expert reasons through a \emph{look-alike decision graph} to tell apart two confusable diseases on the same crop, and the reasoning is \emph{geography-aware} (region/season/local disease pressure from a contributor-de-biased oracle drive the answer). A pair becomes a look-alike only if it is BOTH visually entangled (CLIP, organ-matched) AND documented as confused by a credible web source.
+\vspace{2pt}\textbf{Latest build.} \textbf{465} dialogue items over \textbf{19} confirmed look-alike pairs. Two reasoning lanes: \textbf{118} \emph{image-decisive} (Lane A --- the deciding sign is visible, so the answer is read from the photo and geography is a swap \emph{control}) and \textbf{347} \emph{image-ambiguous} (Lane B --- the sign is absent, so a contributor-de-biased regional prior breaks the tie and the location swap is \emph{expected to flip} the answer). 118 counterfactual controls. Splits: test\_heldout\_region 28, test\_heldout\_species 203, test\_random 26, train 208.
+\begin{center}\includegraphics[width=\textwidth]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/geophyto_qa_pipeline.png}\end{center}
+\begin{center}\small\textit{Pipeline: (a) two-level look-alike verification; (b) geography-aware dialogue synthesis.}\end{center}
+\vspace{2pt}\textbf{\large Confirmed look-alike pairs (image $\wedge$ web): 23}
+\\[2pt]\small Each pair passed CLIP organ-matched cross-kNN entanglement \emph{and} carries a verbatim quote from a credible source. (Sweep in progress; count grows.)
+{\footnotesize
+\begin{longtable}{p{2.4cm}p{6.6cm}cp{4.0cm}}
+\textbf{Crop} & \textbf{Look-alike pair} & \textbf{kNN} & \textbf{Source} \\\hline\endhead
+Corn & Common Corn Rust \emph{vs} Southern Corn Rust & 0.31 & Southern Rust and Common Rust on Hybrid Co \\
+Corn & Corn Smut \emph{vs} Fusarium Graminearum Schwabe & 0.24 & Scout for Corn Molds and Ear Rots This Har \\
+Corn & Anthracnose \emph{vs} Gray Leaf Spot & 0.20 & Anthracnose in Corn | CropWatch | Universi \\
+Cucumber & Anthracnose \emph{vs} Corynespora Leaf Spot & 0.29 & Corynespora cassiicola  \\
+Cucumber & Angular Leaf Spot Of Cucumber \emph{vs} Cucurbit Downy Mildew & 0.26 & Cucurbit Downy Mildew | NC State Extension \\
+Cucumber & Anthracnose \emph{vs} Gummy Stem Blight & 0.25 & Gummy Stem Blight of Cucurbits | NC State  \\
+Cucumber & Corynespora Leaf Spot \emph{vs} Cucurbit Downy Mildew & 0.25 & Corynespora cassiicola  \\
+Cucumber & Angular Leaf Spot Of Cucumber \emph{vs} Corynespora Leaf Spot & 0.23 & Key to Common Problems of Cucumbers | Univ \\
+Cucumber & Anthracnose \emph{vs} Cucurbit Downy Mildew & 0.22 & Cucurbit Downy Mildew | NC State Extension \\
+Cucumber & Angular Leaf Spot Of Cucumber \emph{vs} Anthracnose & 0.21 & Anthracnose of Cucurbits | NC State Extens \\
+Highbush Blueberry & Anthracnose \emph{vs} Twig Canker & 0.23 & FS1361: Anthracnose Fruit Rot in Highbush  \\
+Hosta & Hosta Virus X \emph{vs} Tobacco Rattle Virus & 0.21 & What's wrong with my plant? Hosta - Spots  \\
+Juniper & Kabatina Blight \emph{vs} Phomopsis Cankers And Twig Blights & 0.28 & Kabatina and Phomopsis Tip Blight | Yard a \\
+Melon & Anthracnose \emph{vs} Cucurbit Downy Mildew & 0.23 & Under the Microscope: Melon Growers Should \\
+Soybean & Bacterial Blight \emph{vs} Bacterial Pustule Of Soybean Disease & 0.25 & Bacterial Blight and Bacterial Pustule  \\
+Soybean & Frogeye Leaf Spot \emph{vs} Septoria Leaf Spot & 0.24 & Frogeye Leaf Spot on Soybean | Cooperative \\
+Soybean & Bacterial Pustule Of Soybean Disease \emph{vs} Septoria Leaf Spot & 0.23 & Soybean Disease Diagnostic Series | NDSU A \\
+Soybean & Bacterial Pustule Of Soybean Disease \emph{vs} Downy Mildew & 0.21 & Soybean Disease Diagnostic Series | NDSU A \\
+Strawberry & Phomopsis Leaf Blight And Fruit Rot \emph{vs} Ramularia Grevilleana Verkley \& U. Braun & 0.30 & PP359: Leaf Spot Diseases of Strawberry \\
+Tomato & Early Blight \emph{vs} Verticillium Wilts & 0.30 & Verticillium Wilt of Tomato --- Cornell Coop \\
+Wheat & Tan Spot \emph{vs} Zymoseptoria Tritici & 0.25 & Fungal, Bacterial, and Physiological Leaf  \\
+Wheat & Barley Yellow Dwarf Virus \emph{vs} Wheat Streak Mosaic Virus & 0.23 & Barley Yellow Dwarf | CropWatch | Universi \\
+Wheat & Stripe Rust \emph{vs} Wheat Leaf Rust & 0.23 & An Overview of Stripe Rust of Wheat --- Crop \\
+\end{longtable}}
+\vspace{2pt}\textbf{\large Web evidence (verbatim)}
+\begin{itemize}[leftmargin=1.2em,itemsep=3pt]
+\item \textbf{Juniper: Kabatina Blight vs Phomopsis Cankers And Twig Blights} --- ``\emph{Tip blight of junipers is caused by two different species of fungi, Phomopsis juniperovora and Kabatina juniperi, which cause similar symptoms in the affected plants.}'' \\ \footnotesize\url{https://yardandgarden.extension.iastate.edu/encyclopedia/kabatina-and-phomopsis-tip-blight}
+\item \textbf{Wheat: Barley Yellow Dwarf Virus vs Wheat Streak Mosaic Virus} --- ``\emph{Symptoms of barley yellow dwarf are highly variable and can be confused with those of wheat streak mosaic, nutrient deficiency, root and crown diseases, and environmental stress.}'' \\ \footnotesize\url{https://cropwatch.unl.edu/plant-disease/wheat/barley-yellow-dwarf/}
+\item \textbf{Cucumber: Anthracnose vs Corynespora Leaf Spot} --- ``\emph{The spots can be mistaken for insect damage or anthracnose.}'' \\ \footnotesize\url{https://wiki.bugwood.org/Corynespora_cassiicola_(target_spot_of_cucurbits)}
+\item \textbf{Wheat: Stripe Rust vs Wheat Leaf Rust} --- ``\emph{The pustules occur in a random pattern and can be confused with other rust diseases, such as leaf rust.}'' \\ \footnotesize\url{https://cropprotectionnetwork.org/publications/an-overview-of-stripe-rust-of-wheat}
+\end{itemize}
+\newpage\textbf{\large Look-alike image pairs (12)}\\[2pt]
+\small Real Bugwood photos of each member, drawn from a shared organ/presentation bucket so the two are genuinely comparable. Left = member A, right = member B.\par\vspace{4pt}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/5505081.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/5368395.jpg} \\
+{\footnotesize\textbf{A: Common Corn Rust}} & {\footnotesize\textbf{B: Southern Corn Rust}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Corn} \,$\cdot$\, CLIP kNN $=0.31$, bucket=symptom \,$\cdot$\, ``\emph{Based on the fact that they both produce rusty looking pustules on the leaves, producers may actually be confusing common rust with southern rust, esp}''}
+\end{center}\vspace{2pt}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/5368725.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/5368469.jpg} \\
+{\footnotesize\textbf{A: Corn Smut}} & {\footnotesize\textbf{B: Fusarium Graminearum Schwabe}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Corn} \,$\cdot$\, CLIP kNN $=0.24$, bucket=sign \,$\cdot$\, ``\emph{Corn smut can be confused with other corn molds and fungal ear rot organisms that can produce dangerous mycotoxins.}''}
+\end{center}\vspace{2pt}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/5626116.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/5607308.jpg} \\
+{\footnotesize\textbf{A: Anthracnose}} & {\footnotesize\textbf{B: Gray Leaf Spot}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Corn} \,$\cdot$\, CLIP kNN $=0.20$, bucket=symptom \,$\cdot$\, ``\emph{Immature lesions are not diagnostic and can easily be confused with Gray Leaf Spot or Eye spot.}''}
+\end{center}\vspace{2pt}
+\newpage
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563001.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563094.jpg} \\
+{\footnotesize\textbf{A: Anthracnose}} & {\footnotesize\textbf{B: Corynespora Leaf Spot}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Cucumber} \,$\cdot$\, CLIP kNN $=0.29$, bucket=symptom \,$\cdot$\, ``\emph{The spots can be mistaken for insect damage or anthracnose.}''}
+\end{center}\vspace{2pt}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563017.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563024.jpg} \\
+{\footnotesize\textbf{A: Angular Leaf Spot Of Cucumber}} & {\footnotesize\textbf{B: Cucurbit Downy Mildew}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Cucumber} \,$\cdot$\, CLIP kNN $=0.26$, bucket=symptom \,$\cdot$\, ``\emph{Downy mildew is often confused with other foliar diseases such as: Alternaria leaf blight, caused by Alternaria cucumerina... Angular leaf spot, cause}''}
+\end{center}\vspace{2pt}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563001.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563054.jpg} \\
+{\footnotesize\textbf{A: Anthracnose}} & {\footnotesize\textbf{B: Gummy Stem Blight}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Cucumber} \,$\cdot$\, CLIP kNN $=0.25$, bucket=symptom \,$\cdot$\, ``\emph{Gummy stem blight and black rot can look like other plant diseases that affect cucurbits; however, this pathogen can be distinguished by stem and vine}''}
+\end{center}\vspace{2pt}
+\newpage
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563094.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563024.jpg} \\
+{\footnotesize\textbf{A: Corynespora Leaf Spot}} & {\footnotesize\textbf{B: Cucurbit Downy Mildew}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Cucumber} \,$\cdot$\, CLIP kNN $=0.25$, bucket=symptom \,$\cdot$\, ``\emph{Target spot occurs sporadically and can be confused with downy mildew and other leaf spotting diseases.}''}
+\end{center}\vspace{2pt}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563017.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563094.jpg} \\
+{\footnotesize\textbf{A: Angular Leaf Spot Of Cucumber}} & {\footnotesize\textbf{B: Corynespora Leaf Spot}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Cucumber} \,$\cdot$\, CLIP kNN $=0.23$, bucket=symptom \,$\cdot$\, ``\emph{Several different fungal and bacterial pathogens cause these symptoms and these diseases may occur simultaneously. It is challenging to tell them apar}''}
+\end{center}\vspace{2pt}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563001.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563024.jpg} \\
+{\footnotesize\textbf{A: Anthracnose}} & {\footnotesize\textbf{B: Cucurbit Downy Mildew}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Cucumber} \,$\cdot$\, CLIP kNN $=0.22$, bucket=symptom \,$\cdot$\, ``\emph{Downy mildew is often confused with other foliar diseases such as: ... Anthracnose, caused by Colletotrichum orbiculare}''}
+\end{center}\vspace{2pt}
+\newpage
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563017.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/1563001.jpg} \\
+{\footnotesize\textbf{A: Angular Leaf Spot Of Cucumber}} & {\footnotesize\textbf{B: Anthracnose}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Cucumber} \,$\cdot$\, CLIP kNN $=0.21$, bucket=symptom \,$\cdot$\, ``\emph{Anthracnose is often confused with other foliar diseases such as: ... Angular leaf spot, caused by Pseudomonas psyringae pv. lachrymans}''}
+\end{center}\vspace{2pt}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/5503876.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/5535512.jpg} \\
+{\footnotesize\textbf{A: Anthracnose}} & {\footnotesize\textbf{B: Twig Canker}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Highbush Blueberry} \,$\cdot$\, CLIP kNN $=0.23$, bucket=sign \,$\cdot$\, ``\emph{These symptoms can often be confused with other fungal diseases of highbush blueberry, including Phomopsis canker and twig blight and Botrytis blossom}''}
+\end{center}\vspace{2pt}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/5408669.jpg} & \includegraphics[width=6.4cm,height=4.3cm,keepaspectratio]{/work/mech-ai-scratch/tirtho/GeoPlantPath/figures/img_cache/5460009.jpg} \\
+{\footnotesize\textbf{A: Hosta Virus X}} & {\footnotesize\textbf{B: Tobacco Rattle Virus}} \\
+\end{tabular}\\[1pt]
+{\footnotesize\textbf{Hosta} \,$\cdot$\, CLIP kNN $=0.21$, bucket=symptom \,$\cdot$\, ``\emph{Hosta Virus X, Tobacco Rattle virus, and others ... Lab test required to distinguish between viruses and to verify infection}''}
+\end{center}\vspace{2pt}
+\newpage
+\newpage
+\textbf{\large Sample items (real records, both lanes)}\\[2pt]
+\textbf{Lane A --- image-decisive (sign visible)}\\[2pt]
+\colorbox{lav}{\parbox{\dimexpr\textwidth-2\fboxsep}{\textbf{gpqa-1573508-a} \hfill split: test\_heldout\_species\\\textbf{Anthracnose} \emph{vs} Cucurbit Downy Mildew \quad @ North Carolina (South) \,$\cdot$\, part: leaf}}
+\vspace{4pt}\textbf{Dialogue}
+\begin{itemize}[leftmargin=1.1em,itemsep=2pt,label={}]
+\item \textbf{[F1] Farmer:}\,\textcolor{grn}{[image]} My cucumber leaf --- the plant has spots with fuzzy stuff and a yucky ooze on it, which is making it look sick. What is this?
+\item \textbf{[E1] Expert:} Looking at your photo, I can see sunken spots that ooze a slimy pink to salmon-orange goo in damp weather. That points to Anthracnose rather than Cucurbit Downy Mildew, which would instead show a fuzzy gray-to-purple downy growth.
+\item \textbf{[F2] Farmer:} Will it spread, and what should I do about it?
+\item \textbf{[E2] Expert:} Use pathogen-free seed and resistant varieties; rotate out of cucurbits 2-3 years; avoid working in wet fields and overhead irrigation to limit splash; bury or remove crop debris. Apply protectant fungicides (chlorothalonil, mancozeb) on a preventive schedule, rotating in QoI/SDHI chemistries per resistance-management guidelines.
+\item \textbf{[F3] Farmer:} My neighbor says it's just the weather and nothing to worry about.
+\item \textbf{[E3] Expert:} Weather can play a part, but the sunken spots that ooze a slimy pink to salmon-orange goo in damp weather I can see in your photo is what makes this Anthracnose and not Cucurbit Downy Mildew, so it's worth acting on.
+\end{itemize}
+\textbf{Decision-graph CoT}
+\begin{itemize}[leftmargin=1.1em,itemsep=1pt]
+\item \textbf{PERCEIVE} {\footnotesize\textit{(image (VLM lay observation))}} --- On the cucumber leaf: the plant has spots with fuzzy stuff and a yucky ooze on it, which is making it look sick.
+\item \textbf{READ\_SIGN} {\footnotesize\textit{(image (decisive sign visible))}} --- The photo shows sunken spots that ooze a slimy pink to salmon-orange goo in damp weather --- the deciding sign.
+\item \textbf{RULE\_OUT} {\footnotesize\textit{(decision graph)}} --- Cucurbit Downy Mildew would instead show a fuzzy gray-to-purple downy growth, which is not present.
+\item \textbf{CONCLUDE} {\footnotesize\textit{(image)}} --- From the visible sign this is Anthracnose, not Cucurbit Downy Mildew. Geography is not needed.
+\end{itemize}
+\textbf{Gold:} dx = Anthracnose; ruled out Cucurbit Downy Mildew; geography\_used = ; answerable\_from\_image = True.\\
+\textbf{Decisive cue:} \emph{Look on the fruit and stems for sunken spots that ooze a slimy pink to salmon-orange goo in damp weather; that pinkish ooze on the cukes is the giveaway, and there's no fuzzy growth underneath the leaves}\\
+\textbf{Counterfactual (control):} swap $\rightarrow$ Iowa. No change --- the decisive sign is visible in the photo, so the diagnosis is from the image and location is irrelevant.\\
+\textbf{Two-level evidence:} CLIP organ-matched cross-kNN $=0.2242$; web: ``\emph{Downy mildew is often confused with other foliar diseases such as: ... Anthracnose, caused by Colletotrichum orbiculare}'' \footnotesize\url{https://content.ces.ncsu.edu/cucurbit-downy-mildew}
+\vspace{8pt}\hrule\vspace{6pt}
+\textbf{Lane B --- image-ambiguous (geography breaks the tie)}\\[2pt]
+\colorbox{lav}{\parbox{\dimexpr\textwidth-2\fboxsep}{\textbf{gpqa-1563005-a} \hfill split: test\_heldout\_species\\\textbf{Anthracnose} \emph{vs} Cucurbit Downy Mildew \quad @ North Carolina (South) \,$\cdot$\, part: leaf}}
+\vspace{4pt}\textbf{Dialogue}
+\begin{itemize}[leftmargin=1.1em,itemsep=2pt,label={}]
+\item \textbf{[F1] Farmer:}\,\textcolor{grn}{[image]} My cucumber leaf --- the leaves look sick with spots and some are wilting. I'm farming in North Carolina. What is this?
+\item \textbf{[E1] Expert:} From the photo I can see the general problem, but the feature that separates Anthracnose from Cucurbit Downy Mildew --- sunken spots that ooze a slimy pink to salmon-orange goo in damp weather vs a fuzzy gray-to-purple downy growth --- isn't visible here. Given you're in the South, where anthracnose is well established in the South this season, it's more likely Anthracnose.
+\item \textbf{[F2] Farmer:} So what should I do, and how can I be sure?
+\item \textbf{[E2] Expert:} To confirm, look on the fruit and stems for sunken spots that ooze a slimy pink to salmon-orange goo in damp weather; that pinkish ooze on the cukes is the giveaway, and there's no fuzzy growth underneath the leaves. In the meantime, manage for Anthracnose: use pathogen-free seed and resistant varieties; rotate out of cucurbits 2-3 years; avoid working in wet fields and overhead irrigation to limit splash; bury or remove crop debris. Apply protectant fungicides (chlorothalonil, mancozeb) on a preventive schedule, rotating in QoI/SDHI chemistries per resistance-management guidelines.
+\item \textbf{[F3] Farmer:} A friend thinks it's just fertilizer burn.
+\item \textbf{[E3] Expert:} Without the deciding sign in the photo, location is the best guide: in the South anthracnose is well established in the South this season, so Anthracnose is the call until a check of sunken spots that ooze a slimy pink to salmon-orange goo in damp weather says otherwise.
+\end{itemize}
+\textbf{Decision-graph CoT}
+\begin{itemize}[leftmargin=1.1em,itemsep=1pt]
+\item \textbf{PERCEIVE} {\footnotesize\textit{(image (VLM lay observation))}} --- On the cucumber leaf: the leaves look sick with spots and some are wilting.
+\item \textbf{SIGN\_ABSENT} {\footnotesize\textit{(image (decisive sign NOT visible))}} --- The deciding sign (sunken spots that ooze a slimy pink to salmon-orange goo in damp weather vs a fuzzy gray-to-purple downy growth) is not visible in this photo.
+\item \textbf{GEO} {\footnotesize\textit{(contributor-de-biased TRAIN prior)}} --- In the South, anthracnose is well established in the South this season (prior weight 12 vs 3 for Cucurbit Downy Mildew).
+\item \textbf{CONCLUDE} {\footnotesize\textit{(geographic prior)}} --- Photo underdetermines it, so geography tips it to Anthracnose; confirm by checking sunken spots that ooze a slimy pink to salmon-orange goo in damp weather.
+\end{itemize}
+\textbf{Gold:} dx = Anthracnose; ruled out Cucurbit Downy Mildew; geography\_used = True; answerable\_from\_image = .\\
+\textbf{Region prior (TRAIN):} South favors Anthracnose \,(12 vs 3).\\
+\textbf{Decisive cue:} \emph{Look on the fruit and stems for sunken spots that ooze a slimy pink to salmon-orange goo in damp weather; that pinkish ooze on the cukes is the giveaway, and there's no fuzzy growth underneath the leaves}\\
+\textbf{Counterfactual (expect shift):} swap $\rightarrow$ Colorado. Answer should flip toward Cucurbit Downy Mildew (or to uncertainty): the photo lacks the deciding sign, so a region where Anthracnose is implausible removes the only basis for it.\\
+\textbf{Two-level evidence:} CLIP organ-matched cross-kNN $=0.2242$; web: ``\emph{Downy mildew is often confused with other foliar diseases such as: ... Anthracnose, caused by Colletotrichum orbiculare}'' \footnotesize\url{https://content.ces.ncsu.edu/cucurbit-downy-mildew}
+\end{document}

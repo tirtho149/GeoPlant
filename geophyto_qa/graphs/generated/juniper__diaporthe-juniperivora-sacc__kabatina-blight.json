@@ -1,0 +1,63 @@
+{
+  "pair_id": "juniper__diaporthe-juniperivora-sacc__kabatina-blight",
+  "kind": "disease",
+  "crop": "Juniper",
+  "member_a_label": "Diaporthe Juniperivora Sacc.",
+  "member_b_label": "Kabatina Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause browning/dieback of juniper twig tips with a similar gray-brown ashen color and a lesion at the base of killed shoots, so on a casual glance the symptomatic foliage looks identical. They are classically separated by the season of damage and the exact branch tissue attacked: Phomopsis (Diaporthe juniperivora) kills young succulent new growth and advances into older tissue, whereas Kabatina kills 1-year-old (last season's) shoots and is incapable of infecting current succulent growth.",
+    "shared_presentation": "Scattered dead, ash-gray to reddish-brown twig tips on juniper (especially eastern redcedar and ornamental Juniperus/Chamaecyparis), with a definite girdling lesion/canker at the junction of dead and living tissue, tiny black fruiting bodies erupting on the killed bark, and a tendency to be worse on dense, young nursery stock and lower/inner crown.",
+    "forks": [
+      {
+        "axis": "progression",
+        "question": "What time of year did the tips turn brown and which growth gets killed?",
+        "a_signal": "New, succulent spring/summer growth blights progressively through the growing season; tips first turn dull green, then reddish-brown, then ash-gray, and disease keeps spreading in warm wet weather",
+        "b_signal": "Damage appears as last year's (1-year-old) shoots that are found already dead/dull-brown in late winter to early spring (Feb-Apr); current succulent new growth is NOT attacked",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Is the killed tissue this season's new growth or the previous season's wood?",
+        "a_signal": "Lesions begin in tender young shoot tips and girdle there, killing current-year growth and advancing basipetally into older twigs",
+        "b_signal": "Lesions sit on 1-year-old shoots at the base of the killed tip; new growth survives and elongates past the dead older shoots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What do the black fruiting bodies look like under a hand lens / what spore form is produced?",
+        "a_signal": "Pycnidia (and later perithecia of Diaporthe) embedded in bark, exuding sticky spore tendrils; alpha/beta conidia typical of Phomopsis/Diaporthe",
+        "b_signal": "Black, cushion-like acervuli of Kabatina rupturing the epidermis, releasing hyaline one-septate conidia; no true pycnidia or perithecial stage",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Where on the shoot is the girdling lesion and is there a wound association?",
+        "a_signal": "Canker/lesion at or near the actively growing tip on succulent tissue, no wound needed; infection through young soft tissue",
+        "b_signal": "Lesion at the base of the 1-year-old shoot, often associated with wounds/winter or insect injury serving as entry points",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Does the problem intensify with warm wet weather in the growing season or appear after winter?",
+        "a_signal": "Intensifies during warm, wet, humid spring-summer periods that keep new flushes wet (favors repeated infection of new growth)",
+        "b_signal": "Becomes evident at winter's end / spring green-up as overwintered infections express; tied to prior fall-winter wounding and stress rather than summer wetness",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Diaporthe juniperivora (Phomopsis tip/twig blight) is primarily a disease of young, succulent juniper growth. It infects current-season tender shoot tips, producing small lesions that girdle the stem; affected tips fade from green to reddish-brown to ash-gray, and the fungus advances into older tissue, sometimes killing whole branches on highly susceptible cultivars and seedlings. Black pycnidia (and the Diaporthe perithecial stage) become embedded in the killed bark. It is most damaging in warm, wet weather that keeps repeated new flushes wet, making it a recurring summer problem in nurseries and on young eastern redcedar.",
+    "narrative_b": "Kabatina juniperi causes a blight of 1-year-old (overwintered) juniper shoots that is typically discovered in late winter to early spring. Unlike Phomopsis, it cannot infect current succulent growth; instead it colonizes last season's shoots, frequently entering through wounds caused by winter injury, insects, or mechanical damage. A lesion girdles the base of the affected shoot, the tip dies and turns dull gray-green to brown, and the new spring flush grows out past the dead tissue. Diagnostic black acervuli (not pycnidia) rupture the epidermis on the killed shoots, releasing one-septate hyaline conidia. The disease is largely self-limiting once new growth resumes.",
+    "management_a": "On susceptible junipers, plant resistant cultivars and avoid overhead irrigation and crowding that keep new growth wet. Prune out and destroy blighted tips during dry weather, cutting well below visible lesions. Protect flushing new growth with timely fungicide applications (e.g., copper, mancozeb, or thiophanate-methyl) repeated through the growing season during warm wet periods when succulent tips are at risk.",
+    "management_b": "Reduce wounding and winter/stress injury (avoid late-season shearing, minimize mechanical and insect damage, manage winter desiccation). Prune out dead 1-year-old shoots in dry weather and improve air circulation. Because infection of overwintered shoots occurs in fall, target protective fungicide sprays (e.g., copper or mancozeb) to late summer/fall rather than to spring new growth, and choose less susceptible cultivars for replanting.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "Scattered twig tips on my junipers are dying back, turning dull green, then reddish-brown and finally ash-gray. Right where the dead part meets the still-green wood there's a pinched, sunken dead spot ringing the twig, and the dead bark has tiny black specks erupting all over it. It's worst on the crowded young plants and the lower, inside branches.",
+      "decisive_lay_a": "Watch the brand-new soft spring and summer growth: with this one the fresh tips themselves get killed and the dieback keeps marching down and spreading through the season, especially in warm, wet, humid weather. The newest growth is clearly under attack.",
+      "decisive_lay_b": "Look in late winter to early spring (roughly February through April): with this one it's last year's older shoots that are already dead and dull brown, while this season's tender new growth is left alone and stays healthy.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

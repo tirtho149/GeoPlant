@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__gray-mold__tomato-leaf-mould",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Gray Mold",
+  "member_b_label": "Tomato Leaf Mould",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are fungal diseases favored by high humidity and poor air circulation (greenhouse/high tunnel tomatoes especially), and both produce a visible fuzzy/velvety fungal coating on tomato leaves. A grower seeing grayish fungal growth on foliage can easily mix them up, and both worsen in the same cool-to-warm humid, condensation-prone conditions.",
+    "shared_presentation": "Foliar fungal growth on tomato under high humidity and free moisture, often in protected culture (greenhouse/high tunnel). Both can show a fuzzy or velvety mold layer and lead to leaf yellowing, decline, and defoliation, and both spread by airborne spores in dense, poorly ventilated canopies.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Which plant tissues are colonized \u2014 green foliage only, or also stems, blossoms, and fruit?",
+        "a_signal": "Gray mold attacks senescing/wounded tissue broadly: stems (with girdling cankers and ghost spots), blossoms, pruning wounds, and fruit, not just leaves.",
+        "b_signal": "Leaf mould is essentially confined to leaves (occasionally blossoms/fruit in severe cases) and does not produce stem cankers or fruit rot.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion character \u2014 a soft watery rot/dieback, or discrete yellow leaf spots?",
+        "a_signal": "Gray mold causes soft, watery, collapsing rot of tissue and dieback of stems and blossoms; tissue disintegrates.",
+        "b_signal": "Leaf mould begins as pale green to yellow diffuse spots on the UPPER leaf surface that stay relatively dry and do not rot/collapse the tissue.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "On which leaf surface does the mold form and what color is it \u2014 gray on any wounded/dying surface, or olive-brown velvet on the leaf underside opposite a yellow spot?",
+        "a_signal": "Botrytis produces a profuse gray-brown, dusty/fuzzy mold (conidiophores) on the surface of any decaying tissue regardless of leaf side; puffs of dust when disturbed.",
+        "b_signal": "Fulvia produces a distinctive olive-green to grayish-brown velvety mold on the LOWER leaf surface directly beneath the yellow upper-surface spot.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under the hand lens/microscope, what do the spore structures look like?",
+        "a_signal": "Branched, tree-like conidiophores bearing grape-like clusters of one-celled ovoid conidia; black sclerotia may form on old tissue.",
+        "b_signal": "Pale brown, septate (multi-celled) cylindrical to oval conidia produced on loose, branching conidiophores; no sclerotia.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does damage progress through the canopy and season?",
+        "a_signal": "Starts on wounded, senescing, or damaged tissue and on fruit (ghost spot rings), spreading via wounds and dead blossoms; can kill stems by girdling.",
+        "b_signal": "Starts on oldest/lowest leaves and moves upward as a leaf-by-leaf yellowing and browning, causing progressive defoliation but rarely killing the plant.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What moisture and temperature regime drives the outbreak?",
+        "a_signal": "Favored by cool, wet conditions (around 18-23C) with free water and wounds; thrives on debris and harvested/handled fruit even in storage.",
+        "b_signal": "Favored by sustained very high relative humidity (>85-90%) and warmth in enclosed greenhouses; leaf wetness not strictly required, condensation suffices.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Gray mold (Botrytis cinerea) is an aggressive, broad-host necrotroph that colonizes senescing, wounded, or dead tissue. On tomato it rots blossoms, pruning wounds, and stems (producing girdling tan cankers that can kill the section above), and causes fruit rot plus pale 'ghost spot' halos. Its hallmark is a profuse, dusty gray-brown fungal mass that erupts on the surface of any decaying tissue and releases a visible cloud of spores when disturbed. It does not respect a particular leaf surface and is not limited to leaves.",
+    "narrative_b": "Tomato leaf mould (Fulvia fulva, syn. Passalora/Cladosporium fulvum) is a specialized foliar pathogen of tomato, overwhelmingly a greenhouse/high-tunnel problem. It begins as diffuse pale-green to yellow blotches on the UPPER leaf surface; directly beneath each blotch on the LOWER surface develops a characteristic olive-green to grayish velvety mold. Affected leaves yellow, brown, curl, and drop, progressing from the oldest lower leaves upward, causing heavy defoliation but not the stem cankers or fruit/blossom rot typical of Botrytis.",
+    "management_a": "Reduce humidity and leaf wetness via ventilation, wider spacing, and avoiding overhead irrigation; remove and destroy senescent leaves, dead blossoms, and pruning debris; prune in dry conditions and avoid wounding. Sanitize tools and remove crop residue. Apply botrytis-targeted fungicides (e.g., fenhexamid, fludioxonil, boscalid/pyraclostrobin) rotating FRAC groups to limit resistance, and cool/handle fruit carefully to prevent storage rot.",
+    "management_b": "Lower relative humidity below ~85% through aggressive ventilation, heating with venting at dusk to prevent condensation, wider plant spacing, and removing lower leaves to improve airflow. Avoid overhead watering. Plant resistant cultivars (Cf-resistance genes) where available; rogue heavily infected leaves. Apply protectant/foliar fungicides (chlorothalonil, mancozeb, or labeled systemics like difenoconazole) on a preventive schedule, rotating modes of action, and sanitize greenhouse structures between crops.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My greenhouse tomatoes have leaves with yellow blotches and a fuzzy mold growing on them, and the affected leaves are wilting and dropping off. It's been damp and humid with poor air movement, and the problem seems to be spreading from plant to plant.",
+      "decisive_lay_a": "Look for a heavy gray-brown, dusty, fuzzy mold that grows on any rotting or dying part of the plant (leaves, stems, or fruit), on either side of the leaf, and that puffs up in a little cloud of dust when you bump or brush it.",
+      "decisive_lay_b": "Look on the UNDERSIDE of the leaf, directly behind a yellow spot on the top side, for a patch of olive-green to grayish-brown velvety mold.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

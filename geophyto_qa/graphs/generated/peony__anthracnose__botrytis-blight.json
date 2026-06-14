@@ -1,0 +1,63 @@
+{
+  "pair_id": "peony__anthracnose__botrytis-blight",
+  "kind": "disease",
+  "crop": "Peony",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Botrytis Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce brown necrotic lesions/blight on peony leaves, stems, and buds, both cause shoot dieback and can blight flower buds before opening, and both are favored by cool wet spring conditions. Early lesions look similar (water-soaked turning brown), so they are routinely confused until the diagnostic sporulation sign is examined.",
+    "shared_presentation": "Brown to reddish-brown necrotic lesions on leaves, petioles, and stems; bud and shoot blight with collapse of young growth; both worsen in cool, wet, humid spring weather and on crowded plantings with poor air circulation; both can girdle stems causing wilt of the tissue above.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What weather and season is driving the outbreak?",
+        "a_signal": "Lesions expand most during warm, wet, humid mid-to-late season periods; spreads via rain-splashed conidia in warm rain",
+        "b_signal": "Damage peaks in cool, wet early spring as shoots emerge (classic 'spring blight'); strongly tied to cold damp weather",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the primary damage concentrated?",
+        "a_signal": "Sunken anthracnose lesions and dieback on stems, petioles, and leaves; less tied to emerging shoot bases",
+        "b_signal": "Young emerging shoots rot and collapse at the base near the soil line ('damping-off' of shoots); flower buds blast and turn brown/black before opening",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion morphology?",
+        "a_signal": "Distinct sunken, circular-to-irregular reddish-brown lesions with darker margins, often dry and well-defined",
+        "b_signal": "Soft, water-soaked brown rot that turns tissue mushy and blighted; cankers at shoot bases turn dark and may girdle",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does the fungal sporulation look like under a hand lens (the decisive sign)?",
+        "a_signal": "Salmon-pink to orange slimy spore masses (conidia in acervuli), sometimes with tiny black setae/dots in the lesion center",
+        "b_signal": "Fuzzy gray-brown mold (botrytis 'gray mold') covering rotted buds/stems; in older tissue hard black sclerotia embedded in pith",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease overwinter and re-initiate?",
+        "a_signal": "Overwinters in infected stem debris and lesions; reinfection mainly from rain-splashed conidia later in season",
+        "b_signal": "Overwinters as black sclerotia in crowns/debris that germinate in cool spring to infect emerging shoots first",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Peony anthracnose, caused by Colletotrichum spp., produces sunken, well-defined reddish-brown lesions on stems, petioles, and leaves, often with darker margins and stem dieback. The defining sign is salmon-pink to orange slimy spore masses (acervuli) that ooze from lesion centers in humid weather, sometimes accompanied by tiny black setae. It tends to develop and spread during warmer, wet, humid periods later in the season via rain-splashed conidia, and overwinters in infected stem debris. It is generally a secondary concern relative to botrytis on peony but can cause significant defoliation and cane lesions in wet years.",
+    "narrative_b": "Botrytis blight, caused by Botrytis paeoniae (with B. cinerea contributing), is the most common and serious peony disease. It strikes in cool, wet early spring as shoots emerge: young shoots rot and collapse at the base, flower buds blast and turn brown/black before opening, and a soft water-soaked brown rot spreads through buds, stems, and leaves. The diagnostic sign is a fuzzy gray-brown mold (gray mold) covering rotted tissue, and hard black sclerotia form in the pith of older infected stems. It overwinters as sclerotia in the crown and debris that germinate in cool spring conditions to attack emerging growth.",
+    "management_a": "Remove and destroy infected canes and leaf debris; improve air circulation through spacing and weed control; avoid overhead irrigation and wet foliage; apply protectant fungicides (e.g., chlorothalonil or labeled products) during warm wet periods if recurring. Fall sanitation by cutting stems to the ground and removing debris reduces overwintering inoculum.",
+    "management_b": "Cut peony stems to the ground in fall and remove all debris to eliminate sclerotia; improve drainage and air circulation; avoid overhead watering and wet, crowded conditions; remove blighted shoots and blasted buds promptly. Apply protectant fungicides at shoot emergence and through bloom in cool wet springs (e.g., chlorothalonil, mancozeb, or botrytis-specific products), rotating modes of action to avoid resistance.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My peonies have brown to reddish-brown dead spots on the leaves, leaf stalks, and stems, and some of the young buds and new shoots are turning brown and flopping over. It got worse during the cool, wet, rainy spring, especially where the plants are crowded together with poor air flow, and a few stems are dying back above where they've been pinched off.",
+      "decisive_lay_a": "Look for a salmon-pink to orange slimy ooze sitting in the dead spots (it looks like wet pinkish-orange paste), sometimes with a few tiny black dots or whiskers right in the center of the spot.",
+      "decisive_lay_b": "Look for fuzzy gray-brown mold, like a dusty gray fur, covering the rotted buds and stems; in older rotted tissue you may find hard little black specks (like tiny seeds) buried inside the stem.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

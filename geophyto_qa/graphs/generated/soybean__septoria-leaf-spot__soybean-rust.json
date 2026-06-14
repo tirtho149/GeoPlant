@@ -1,0 +1,63 @@
+{
+  "pair_id": "soybean__septoria-leaf-spot__soybean-rust",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Septoria Leaf Spot",
+  "member_b_label": "Soybean Rust",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small foliar lesions on soybean that begin in the lower canopy and can cause premature defoliation, so at a distance or in early stages they are easily confused. The decisive separation is the sign on the leaf underside: rust forms raised erupting pustules (uredinia/tan-to-rust spores), whereas Septoria (brown spot) produces flat angular brown necrotic lesions with no pustules.",
+    "shared_presentation": "Small (1-5 mm) lesions on soybean leaflets, first appearing in the lower/inner canopy, often beginning at or after flowering, capable of progressing upward and triggering premature yellowing and defoliation under favorable warm, wet conditions.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant do lesions first concentrate and how do they spread?",
+        "a_signal": "Septoria brown spot starts on the lowest (unifoliate and lowest trifoliate) leaves near the soil from splashed residue inoculum and creeps upward slowly over the season",
+        "b_signal": "Soybean rust also starts in the lower/inner canopy but typically arrives mid-to-late season via wind-blown spores and can move up the canopy more rapidly once established",
+        "weight": "weak"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and color of the upper-leaf-surface lesion?",
+        "a_signal": "Irregular to angular reddish-brown to dark-brown spots, 1-5 mm, often coalescing into blotches with a rusty-brown cast and surrounding chlorosis",
+        "b_signal": "Very small (under 1 mm) tan to reddish-brown angular flecks delimited by leaf veins, easy to overlook from the top early on",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaf and examine the underside with a hand lens (10-20x): are there raised pustules?",
+        "a_signal": "No pustules; the underside shows only flat brown necrotic tissue, sometimes with tiny dark pycnidia embedded in lesions but no erupting spore masses",
+        "b_signal": "Distinct raised, volcano-like uredinia (pustules) that rupture to release tan to cinnamon-brown urediniospores; a sheet of paper tapped under the leaf collects spore dust",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does defoliation develop and at what crop stage?",
+        "a_signal": "Gradual chronic decline; lower leaves yellow and drop slowly through the season, rarely an explosive epidemic",
+        "b_signal": "Can explode rapidly under warm humid conditions, causing severe rapid defoliation within weeks of detection during pod fill",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather and regional pattern favors the disease?",
+        "a_signal": "Favored by warm wet weather and rain-splash; endemic and present every season across US soybean areas wherever residue persists",
+        "b_signal": "Requires inoculum that overwinters on living legumes (e.g., kudzu) in the Gulf/Deep South and blows northward; outbreaks track seasonal spore movement and prolonged leaf wetness",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Septoria brown spot (Septoria glycines) is the most common and earliest-appearing foliar disease of US soybean. It survives on infested residue and infects the lowest leaves first via rain splash, producing irregular reddish-brown angular spots 1-5 mm across that coalesce and are surrounded by chlorosis. Embedded pycnidia may be visible with magnification, but there are no raised pustules and no spore dust on the underside. Damage is usually a slow chronic lower-canopy defoliation rather than an explosive epidemic; economic loss is typically modest unless conditions stay persistently wet.",
+    "narrative_b": "Soybean rust (Phakopsora pachyrhizi) is a high-consequence, potentially explosive foliar disease. Tiny tan to reddish-brown angular flecks on the upper surface are easy to miss, but the diagnostic feature is on the underside: raised volcano-shaped uredinia that erupt to release cinnamon-brown urediniospores, readily seen with a hand lens and confirmable by tapping spores onto paper. Because the pathogen does not overwinter in most of the US, epidemics depend on wind-borne spores moving north from overwintering hosts (notably kudzu) in the Gulf Coast/Deep South. Under warm, humid, extended-leaf-wetness conditions during pod fill it can cause rapid severe defoliation and major yield loss.",
+    "management_a": "Manage with resistant/tolerant varieties, residue management and rotation to reduce overwintering inoculum, and well-timed foliar fungicides (strobilurin/triazole) at R3-R5 only if disease pressure and wet weather warrant; scout lower canopy from flowering onward.",
+    "management_b": "Track regional sentinel-plot/IPM-PIPE spore-movement reports; scout the lower canopy from flowering through pod fill with a hand lens for underside pustules. Apply triazole or strobilurin+triazole fungicides preventively or at first detection (R1-R5), since once severe defoliation begins control is poor; confirm suspect samples through a diagnostic lab.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My soybeans have a bunch of small brown spots showing up on the leaves, mostly down low and inside the canopy, and it started around the time the plants flowered. The lower leaves are starting to turn yellow and drop, and with all this warm, wet weather it looks like it's creeping up the plants.",
+      "decisive_lay_a": "Flip a leaf over and the spots are just flat, dry brown patches with nothing raised or bumpy on them. There's no dust or ooze that comes off, and if anything you might see only a few tiny dark specks buried in the spots. Tapping the leaf over a sheet of paper leaves no powder behind.",
+      "decisive_lay_b": "Flip a leaf over and look for tiny raised bumps, like little volcanoes, that break open and release a tan to cinnamon-brown powder. If you tap the leaf over a sheet of white paper, you'll see fine rusty-colored dust collect on it.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

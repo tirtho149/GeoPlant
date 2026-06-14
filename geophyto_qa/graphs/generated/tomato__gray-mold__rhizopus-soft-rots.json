@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__gray-mold__rhizopus-soft-rots",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Gray Mold",
+  "member_b_label": "Rhizopus Soft Rots",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are opportunistic, wound-associated fungal rots that produce soft, watery breakdown of ripe or injured tomato fruit, frequently in storage/transit, and both develop a visible aerial mold. At a glance a moldy collapsing fruit can be assigned to either, so they are routinely confused until the mold's color and architecture (and the rot's odor/texture) are examined.",
+    "shared_presentation": "Soft, watery to mushy decay of mature/ripe or wounded tomato fruit, typically beginning at a wound or the stem scar, with surface collapse and an aerial fungal mold; common as a post-harvest / transit rot under warm, humid, poorly ventilated conditions.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Is the disease confined to fruit only, or does it also attack stems, leaves, blossoms and foliage in the field?",
+        "a_signal": "Botrytis is a broad pathogen: besides fruit rot it causes stem cankers, blighted blossoms, leaf lesions, and 'ghost spot' halos on green fruit in the field/greenhouse.",
+        "b_signal": "Rhizopus is essentially a fruit/post-harvest rot only; it does not produce leaf lesions, stem cankers, or blossom blight on living plants.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "Under what temperature and setting is the rot spreading?",
+        "a_signal": "Favored by cool, humid conditions (roughly 60-75F), greenhouses, and high-humidity field canopies; active even at refrigeration-cool temperatures.",
+        "b_signal": "Favored by warm to hot conditions (80-95F) during ripening, transit, and unrefrigerated storage; nearly stops when fruit is held cold.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the fruit collapse and how does the tissue hold together?",
+        "a_signal": "Decay is comparatively slower and firmer-watery; the rotted tissue retains some structure rather than instantly liquefying.",
+        "b_signal": "Decay is extremely rapid; fruit collapses into a leaky, watery 'sloppy' bag within a day or two and skin slips/ruptures easily.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Does the rot give off a sour/fermented odor and does mold spread between touching fruit by coarse strands?",
+        "a_signal": "Odor is mild/musty, not strongly fermented; spread is by airborne conidia and contact, without conspicuous coarse aerial strands bridging fruit.",
+        "b_signal": "Produces a sour, fermented, sometimes alcoholic/yeasty odor and coarse whiskery aerial hyphae that bridge from fruit to fruit, causing 'nesting' clusters of rotted fruit.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the COLOR and ARCHITECTURE of the mold growing on the rotted surface (examine the sporulating mold, ideally with a hand lens)?",
+        "a_signal": "Dense gray to gray-brown velvety/dusty mold (botrytis = 'bunch of grapes'); short branched conidiophores bearing clustered grape-like spore heads; tan-brown firm-watery rot beneath.",
+        "b_signal": "Coarse, tall, fluffy whitish 'bread-mold' growth that turns gray-black, dotted with conspicuous black pinhead sporangia on tall stalks; underlying tissue liquefied and leaky.",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Gray mold (Botrytis cinerea) is a versatile, cool-weather pathogen of tomato that attacks far more than just fruit. In greenhouses and humid field canopies it causes blighted blossoms, girdling gray-brown stem cankers at pruning wounds, V-shaped leaf lesions, and the characteristic 'ghost spot' (small white halos with a tiny necrotic center) on green fruit. Fruit rot is a firm-to-watery tan-brown decay, usually starting at the stem scar or a wound, overgrown by a dense gray, dusty/velvety mold of grape-like conidial clusters. It thrives at cool, humid conditions (about 60-75F) and remains active even at refrigeration temperatures, making it a key storage rot.",
+    "narrative_b": "Rhizopus soft rot (Rhizopus spp.) is a classic warm-temperature, wound-initiated post-harvest 'bread mold' rot. It requires a wound or the stem scar and explodes during ripening, transit, and unrefrigerated storage at 80-95F, collapsing fruit into a leaky, watery mush within a day or two. The fruit ruptures and oozes, gives off a sour, fermented/yeasty odor, and is covered by coarse, fast-growing whitish-to-gray aerial hyphae studded with tall stalks bearing visible black pinhead sporangia. The whiskery growth bridges between touching fruit, producing 'nests' of rotted fruit. Unlike Botrytis it does not attack living foliage, stems, or blossoms.",
+    "management_a": "Reduce humidity and improve air circulation (ventilate/vent greenhouses, wider spacing, prune in dry conditions and remove crop debris). Avoid wounding; sanitize pruning tools. Apply Botrytis-effective fungicides (e.g., rotation of FRAC groups such as fenhexamid, fludioxonil, boscalid/SDHIs, or biologicals like Bacillus/Gliocladium) on a preventive schedule, rotating modes of action to manage resistance. Cool and dry fruit promptly; cold storage slows but does not stop it.",
+    "management_b": "Primarily managed culturally because it is a wound/temperature-driven post-harvest problem: harvest carefully to avoid bruising and punctures, cull injured/overripe fruit, sanitize bins and packing surfaces, and\u2014most importantly\u2014cool fruit rapidly and hold below about 50F, which arrests Rhizopus. Maintain good ventilation to remove field heat and prevent 'nesting.' Field/foliar fungicides are not relevant; post-harvest fungicide dips and sanitation of handling equipment can help where permitted.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "Some of my ripe tomatoes are going soft and mushy, with a watery rotten patch that usually starts at a wound or where the stem was, and the skin caves in. There's some moldy growth on the surface, and it's spreading fast in the warm, humid bins after picking.",
+      "decisive_lay_a": "Look for a dense, dusty gray to grayish-brown velvety mold coating the rotten area, with the rot underneath being a firm but watery tan-brown.",
+      "decisive_lay_b": "Look for tall, coarse, fluffy whitish growth like bread mold that darkens to gray-black, topped with tiny black pinhead dots on little stalks, while the flesh below turns to leaky liquid mush.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

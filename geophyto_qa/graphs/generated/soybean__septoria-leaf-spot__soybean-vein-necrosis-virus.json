@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__septoria-leaf-spot__soybean-vein-necrosis-virus",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Septoria Leaf Spot",
+  "member_b_label": "Soybean Vein Necrosis Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce brown-to-rusty foliar lesions on soybean leaves that begin in the lower-to-mid canopy and intensify mid-to-late season, and both can cause chlorosis and premature defoliation. Scouts frequently mistake early angular SVNV vein-associated necrosis for the spreading spots of Septoria (brown spot), especially when lesions coalesce into irregular blotches.",
+    "shared_presentation": "Irregular brown/rusty-brown necrotic patches on trifoliate leaves, often starting in the lower canopy, with surrounding yellowing and the potential for premature leaf drop during R-stage reproductive growth.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the lesion a discrete small spot bounded by veins, or does the necrosis track ALONG the veins?",
+        "a_signal": "Many small (1-5 mm) tan-to-dark-brown angular spots scattered across the leaf, each delimited by minor veins, often coalescing",
+        "b_signal": "Initial chlorotic/clearing patches adjacent to and following the main veins, with necrosis radiating outward from the veins (vein-centric)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Where does symptom expression begin relative to the vein architecture and over the season?",
+        "a_signal": "Starts lowest leaves first and climbs the canopy as inoculum splashes upward; tied to wet weather",
+        "b_signal": "Often appears mid-to-upper canopy on younger trifoliates too; intervein and vein areas turn reddish-brown to rusty, expanding into large necrotic blotches",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "On a backlit or hand-lens leaf, are fungal fruiting bodies (pycnidia) present in the lesions?",
+        "a_signal": "Tiny dark pinpoint pycnidia visible within the tan lesion centers under a hand lens; fungal sign present",
+        "b_signal": "No fruiting bodies, no mold, no spores \u2014 viral disease with NO pathogen sign on the leaf; thrips (vector) may be present",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the overall color and texture of advanced lesions?",
+        "a_signal": "Lesions stay fairly small, angular, dark-brown with a tan center; defined margins",
+        "b_signal": "Large diffuse rusty-bronze to reddish-brown necrotic areas, sometimes with a translucent/clearing halo; leathery appearance",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions are driving the outbreak?",
+        "a_signal": "Favored by prolonged leaf wetness, warm humid rainy periods, dense canopy and splash dispersal",
+        "b_signal": "Favored by thrips activity and their movement; not directly weather/wetness driven",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are pods, petioles, or stems involved?",
+        "a_signal": "Largely confined to leaves (brown spot); can occasionally mark petioles/pods late",
+        "b_signal": "Strictly a foliar viral expression along veins; systemic but symptoms are leaf/vein focused",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Septoria brown spot (Septoria glycines) is a splash-dispersed fungal disease that colonizes the lowest leaves first early in the season and progresses up the canopy under warm, wet, humid conditions. It produces numerous small (1-5 mm), angular, tan-to-dark-brown spots delimited by minor veins; lesions coalesce into irregular blotches and drive early-season lower-canopy yellowing and defoliation. The diagnostic confirmation is the presence of tiny dark pycnidia (fruiting bodies) embedded in lesion centers, visible with a hand lens. It is essentially ubiquitous in soybean-growing regions and is favored by extended leaf wetness.",
+    "narrative_b": "Soybean vein necrosis virus (SVNV, an orthotospovirus) is transmitted by thrips and produces symptoms that initiate as chlorotic clearing along the main and minor veins, which then progress to reddish-brown to rusty-bronze necrosis that radiates from and tracks along the veins. Lesions enlarge into diffuse necrotic blotches and can affect upper-canopy younger trifoliates as well as lower leaves. Critically there is NO fungal sign \u2014 no pycnidia, mold, or spores \u2014 which separates it from Septoria. SVNV is now widespread across US soybean regions but expression varies with thrips populations rather than leaf wetness.",
+    "management_a": "Confirm via hand-lens pycnidia in lesions. Manage with residue management/rotation to reduce overwintering inoculum, resistant/tolerant varieties where available, and foliar fungicides (e.g., QoI/DMI/SDHI) applied around R3 if disease pressure and yield risk are high. Fungicides are effective because it is fungal.",
+    "management_b": "No fungicide response \u2014 it is viral. Management focuses on the thrips vector and overall plant health; insecticide control of thrips has inconsistent benefit and is rarely economical for SVNV alone. Use tolerant varieties where identified, monitor thrips, and avoid misapplying fungicide (which wastes input cost). Confirm by absence of fungal signs and vein-centric necrosis pattern; lab RT-PCR/ELISA can verify.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My soybeans have ragged rusty-brown to dark brown patches on the leaves, mostly down in the lower part of the canopy, with yellowing around the dead spots. It started low and seems to be working its way up, and some of the lower leaves are starting to drop early now that the plants are setting pods.",
+      "decisive_lay_a": "Look very closely at the tan center of a dead spot: you should see tiny dark pinpoint dots, like specks of black pepper, scattered in the spot. These tiny dots are the disease's own fruiting structures, so seeing them tells you it's a fungus.",
+      "decisive_lay_b": "There is no fuzzy growth, no mold, no powdery coating, and none of those tiny dark pinpoint dots anywhere on or in the spots, because nothing is actually growing on the leaf. The only living thing you might catch are tiny slender bugs (the insects that spread it) crawling on the leaves.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "sweet-potato__black-rot__java-black-rot",
+  "kind": "disease",
+  "crop": "Sweet Potato",
+  "member_a_label": "Black Rot",
+  "member_b_label": "Java Black Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are dark, firm storage/root rots of sweet potato that produce sunken, blackish lesions on the fleshy root and can be confused at the gross level, especially in storage. Both impart off-flavors and both can show black fungal fruiting structures on the surface, so a quick visual exam without examining sign morphology, lesion depth, and progression can lead to misdiagnosis.",
+    "shared_presentation": "Dark brown to black, firm, sunken lesions on storage roots that enlarge during storage and transit. Both rots can show black surface structures (signs) on aging lesions, both spread root-to-root in storage, both are favored by wounding at harvest, and both can render roots inedible with a bitter or off taste. Field-to-storage carryover and warm temperatures aggravate both.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the rot firm/dry and relatively shallow, or rapidly soft-to-firm and penetrating deeply through the whole root?",
+        "a_signal": "Black Rot forms firm, dry, greenish-black to black sunken lesions that stay relatively shallow early and are sharply margined",
+        "b_signal": "Java Black Rot begins firm but progresses to a deeper, end-to-end dry rot that mummifies the entire root",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Where does the rot typically initiate and how does it advance?",
+        "a_signal": "Black Rot often initiates at growth cracks, wounds, or the stem (root) end as discrete circular spots that coalesce",
+        "b_signal": "Java Black Rot characteristically enters at the broken ends (cut/stem ends) and advances inward, rotting the root end-to-end",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What is the color and structure of any fungal growth produced on/just under the lesion surface?",
+        "a_signal": "Black Rot produces grayish mycelium with erect, dark, long-necked perithecia bearing hat-shaped (galeate) ascospores, often with a gray fuzzy aspect and a fruity odor",
+        "b_signal": "Java Black Rot produces black, carbonaceous pycnidia and dark mycelium, with mature dark, septate, longitudinally striate two-celled conidia",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under magnification, what spore type dominates oozing from the fruiting bodies?",
+        "a_signal": "Black Rot shows one-celled hat-shaped ascospores plus barrel-shaped/cylindrical endoconidia and chlamydospores",
+        "b_signal": "Java Black Rot shows initially hyaline then dark, two-celled, striate conidia from pycnidia",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature and storage conditions accompanied disease onset?",
+        "a_signal": "Black Rot develops across cool-to-warm storage and is a classic curing/storage-house problem aggravated by moderate temperatures",
+        "b_signal": "Java Black Rot is strongly favored by high temperatures (warm, ~28-32C) and is most damaging on heat-stressed or sun-scalded roots and in warm climates",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Besides storage roots, are field symptoms on slips, stems, or vines present?",
+        "a_signal": "Black Rot also causes black lesions on underground stems and dark cankers on slips/sprouts, producing weak, yellowed plants in the field",
+        "b_signal": "Java Black Rot is primarily a postharvest root rot with little distinctive slip/stem cankering",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Black Rot, caused by Ceratocystis fimbriata, is one of the most historically important sweet potato diseases. It infects through wounds and growth cracks, producing firm, dry, sharply-margined sunken lesions that are greenish-black to black. The diagnostic clincher is the sign: gray mycelium bearing erect, dark, long-necked perithecia (sexual fruiting bodies) that exude one-celled, hat-shaped (galeate) ascospores, alongside barrel-shaped endoconidia and chlamydophores. Infected lesions often emit a characteristic fruity odor. It also attacks underground stems and slips, causing black cankers that yield weak, stunted transplants, so it carries from the seed-bed into storage. It is a contaminant of slips and roots and is favored by curing/storage conditions.",
+    "narrative_b": "Java Black Rot, caused by Lasiodiplodia theobromae (syn. Botryodiplodia/Diplodia theobromae), is primarily a warm-climate postharvest root rot. It typically enters at the broken stem or cut ends and advances inward, eventually rotting the root end-to-end and mummifying it into a hard, dry, black mass. The diagnostic sign is black, carbonaceous pycnidia embedded in the surface that ooze conidia which are initially hyaline and one-celled but mature into dark, two-celled, longitudinally striate spores. It is strongly heat-favored, so sun-scalded, heat-stressed, or warm-stored roots are most affected. Unlike Black Rot, it does not produce the distinctive slip/stem canker phase in the field.",
+    "management_a": "Use disease-free seed roots and certified slips; cut slips well above the soil line to avoid the cankered base. Practice crop rotation (3-4 years), sanitize storage houses and crates, and avoid wounding at harvest. Cure roots promptly (around 29-30C, high humidity for 4-7 days) to heal wounds, then store cool (~13-16C). Fungicide dips (e.g., labeled thiabendazole/dicloran where registered) on seed roots reduce carryover. Rogue infected plants in the seedbed.",
+    "management_b": "Minimize harvest and handling wounds, especially at cut/stem ends where infection initiates. Avoid sun-scald by not leaving roots exposed in the field heat after digging; harvest in cooler conditions. Cure properly then store at recommended cool temperatures (~13-16C) to suppress this heat-loving fungus. Sanitize storage facilities, discard mummified roots, and use postharvest fungicide dips where labeled. Because it is warm-climate driven, prompt cooling is the key cultural control.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Some of my stored sweet potatoes have firm, dark brown to black sunken patches that keep getting bigger while they sit in storage, and the rot seems to be spreading from root to root. The bad ones taste bitter and off, and it looks worse on roots that got nicked or bruised at harvest.",
+      "decisive_lay_a": "Look for a grayish fuzzy coating over the rotted area, and on older spots tiny dark pinhead bumps with thin necks sticking up like little whiskers; rubbing or cutting a fresh rot may give off a sweet, fruity smell.",
+      "decisive_lay_b": "Look for hard, gritty, coal-black specks embedded in the skin and dark flesh of the rotted area that feel like black soot or grit when you scrape them.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

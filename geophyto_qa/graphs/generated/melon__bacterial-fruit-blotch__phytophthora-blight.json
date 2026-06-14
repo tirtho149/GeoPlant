@@ -1,0 +1,70 @@
+{
+  "pair_id": "melon__bacterial-fruit-blotch__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Bacterial Fruit Blotch",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause rapidly expanding water-soaked lesions on melon fruit during warm, wet weather and can produce sudden fruit rot in the field. Early water-soaked fruit blotches plus foliar/water-soaked spotting overlap superficially, so growers and even scouts confuse them before the diagnostic signs (bacterial ooze vs white sporangial mold) develop.",
+    "shared_presentation": "Water-soaked, expanding lesions on melon fruit and foliage in hot, humid/rainy conditions, leading to fruit rot and potential crop loss; both favored by overhead irrigation, splashing rain, and warm temperatures, and both can collapse fruit quickly once established.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where does the disease center its damage \u2014 fruit/seedlings versus crown, vines, and fruit at the soil contact point?",
+        "a_signal": "Damage concentrated on the upper fruit surface and on seedling cotyledons/leaves (seedborne); lesions appear on the rind regardless of soil contact",
+        "b_signal": "Damage centers on crown, lower stems/vines, and the underside of fruit resting on wet soil; often a root/crown rot and vine collapse component",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion character on the fruit surface?",
+        "a_signal": "Olive-green to dark, irregular water-soaked blotch on the rind that stays relatively firm initially, with skin cracking and amber bacterial ooze; internal flesh may stay intact early",
+        "b_signal": "Soft, rapidly spreading watery rot, often starting where fruit touches soil, with mushy collapse of the flesh",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What pathogen sign appears on the lesion surface in humidity?",
+        "a_signal": "Sticky amber-to-cream bacterial ooze/streaming from cracks; no mold; bacterial streaming visible under microscope from cut tissue in water",
+        "b_signal": "Dense white, cottony sporangial mold (sugary/powdered-sugar look) on the fruit surface under high humidity",
+        "weight": "decisive"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At which stage does the problem first surface in the operation?",
+        "a_signal": "Often traces to transplant/seedling stage with cotyledon water-soaking and seedborne spread, then reappears on fruit near maturity",
+        "b_signal": "Typically appears post-establishment on crowns/vines and on fruit during fruit fill, tied to soil moisture rather than seedlots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "How is field distribution patterned relative to water and soil?",
+        "a_signal": "Spread follows overhead/splash and seedlot contamination \u2014 can appear on plants on raised, well-drained ground; pattern tracks rain splash from infected debris/transplants",
+        "b_signal": "Spread follows surface water and poor drainage \u2014 hotspots in low, ponded, or saturated areas and along irrigation furrows; classic 'follows the water' pattern",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does microscopic/lab examination reveal?",
+        "a_signal": "Gram-negative rod bacteria; bacterial streaming; confirmed by immunostrip or PCR for Acidovorax citrulli; no fungal structures",
+        "b_signal": "Coenocytic (aseptate) hyphae with lemon-shaped papillate sporangia and motile zoospores; oomycete confirmed by isolation or PCR for Phytophthora capsici",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Bacterial Fruit Blotch (Acidovorax citrulli) is a seedborne bacterial disease of cucurbits. It often begins at the seedling stage with water-soaked lesions on cotyledons and along leaf veins, then becomes economically devastating on fruit near maturity. On fruit, it produces an olive-green to brownish irregular water-soaked blotch on the upper rind that enlarges, cracks, and exudes a sticky amber bacterial ooze. The rind lesion can precede obvious internal rot, and secondary organisms often invade the cracked tissue. Confirmation is by bacterial streaming, immunostrip, or PCR for A. citrulli.",
+    "narrative_b": "Phytophthora Blight (Phytophthora capsici) is an oomycete (water mold) disease driven by soil and surface water. On melon it causes crown and root rot, vine collapse, and a rapid, watery soft rot of fruit \u2014 characteristically where fruit contacts saturated soil. Under high humidity, lesions become covered with a dense white cottony layer of sporangia. The disease spreads explosively via motile zoospores in standing water, so hotspots track low, poorly drained, or flooded field areas. Confirmation is by observing coenocytic hyphae with papillate, lemon-shaped sporangia or by PCR for P. capsici.",
+    "management_a": "Plant certified pathogen-tested/treated seed and disease-free transplants; rogue and destroy symptomatic seedlings. Avoid overhead irrigation and minimize leaf/fruit wetness and splash. Sanitize greenhouse benches, trays, and tools; do not work plants when wet. Rotate away from cucurbits and manage volunteer/weed cucurbit hosts. Copper-based bactericides (with mancozeb) can suppress spread but will not cure infected seedlots; integrate with strict seed and transplant sanitation.",
+    "management_b": "Improve drainage and avoid planting in low or poorly drained ground; use raised, domed beds and drip rather than furrow/overhead irrigation to limit standing water and splash. Rotate (3+ years) out of cucurbits, peppers, and other hosts; avoid moving infested soil/equipment. Apply oomycete-specific fungicides (e.g., mefenoxam, plus FRAC-rotated materials such as cyazofamid, mandipropamid, oxathiapiprolin) preventively, and manage resistance by rotating modes of action. Remove and destroy infected fruit and crowns promptly.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "After the hot, rainy spell my melons are showing dark, wet-looking, water-soaked patches that keep spreading on the rind and on some leaves. The soft spots are getting bigger fast and the fruit is starting to rot and collapse, and it's worse where the overhead watering hits.",
+      "decisive_lay_a": "Look for a sticky, clear-to-cream or amber ooze seeping out of the cracks in the rind, with no fuzzy or moldy growth on top.",
+      "decisive_lay_b": "Look for a thick white, cottony, fuzzy growth on the fruit surface that looks like it's dusted with powdered sugar, showing up in muggy weather.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

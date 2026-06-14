@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__genus-diaporthe__southern-blight",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Genus Diaporthe",
+  "member_b_label": "Southern Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both attack the lower stem/crown region of soybean, cause wilting and plant death often in patches in the field, and produce light-colored fungal growth near the soil line. Diaporthe (stem canker / pod & stem blight phase) and Southern blight both show stem lesions with wilting, so casual inspection of a dying plant near the soil line can confuse them. The resolving difference lies in the fungal signs (black pycnidia/perithecia vs. white mycelial fan with tan sclerotia).",
+    "shared_presentation": "Wilting, yellowing, and death of individual soybean plants, frequently in patches, with discolored/lesioned lower stems near the soil line and light-colored fungal growth visible on or around the stem base during warm, humid conditions; both can kill plants prematurely from mid-season onward.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "What is the color and structure of the fungal growth at the base of the stem and on the soil/debris?",
+        "a_signal": "Tiny embedded BLACK fruiting bodies (pycnidia in rows for pod & stem blight, or perithecia for stem canker) in the stem tissue; no surface mycelial mat",
+        "b_signal": "Conspicuous WHITE, coarse, fan-shaped mycelial mat radiating over the stem base and onto soil/debris",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Are there spherical, mustard-seed-like bodies (sclerotia) on or near the infected stem?",
+        "a_signal": "Absent \u2014 no round tan/brown sclerotia; only flask-shaped black fruiting bodies embedded in tissue",
+        "b_signal": "Present \u2014 numerous spherical sclerotia (~1-3 mm) starting white then maturing to tan/reddish-brown like mustard seeds on the white mat",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the lesion/decay concentrated?",
+        "a_signal": "Cankers can occur on the main stem at nodes (stem canker) or pycnidia scattered on stems and pods (pod & stem blight); lesions often above soil line",
+        "b_signal": "Decay concentrated at the very base/crown right at the soil line, often girdling the stem with soft rot",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion appearance on the stem?",
+        "a_signal": "Reddish-brown to dark sunken canker (stem canker) or speckled dark pycnidia in linear rows on dead tissue (pod & stem blight)",
+        "b_signal": "Light brown, watery, soft rot at the base with shredded/macerated bark, not a discrete sunken canker",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What soil and temperature conditions accompany the outbreak?",
+        "a_signal": "Favored by frequent rainfall and extended wet periods; canker phase linked to early-season infection and susceptible varieties across humid regions",
+        "b_signal": "Favored by hot temperatures (28-35C), high moisture, and presence of surface crop residue/organic mulch at the soil surface",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How does foliar death proceed?",
+        "a_signal": "Leaves may yellow/brown but often remain attached (especially stem canker interveinal chlorosis/necrosis); decline over weeks",
+        "b_signal": "Rapid wilt and death of the whole plant once the base is girdled, leaves often staying attached but plant collapsing quickly",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Genus Diaporthe encompasses the Diaporthe/Phomopsis complex on soybean, including Diaporthe stem canker (caused by D. caulivora and D. aspalathi) and Phomopsis/Diaporthe pod and stem blight (D. longicolla and others). Symptoms include reddish-brown sunken cankers at stem nodes, interveinal chlorosis and necrosis of leaves that often remain attached, and\u2014diagnostic for the complex\u2014small black fruiting bodies: linear rows of pycnidia on stems and pods (pod & stem blight) or beaked perithecia in canker tissue (stem canker). The fungus overwinters in residue and seed; disease is favored by prolonged wet weather. Confusion with southern blight arises because both kill plants at or near the stem base, but Diaporthe produces black, tissue-embedded fruiting structures rather than a white surface mycelial mat.",
+    "narrative_b": "Southern blight, caused by Athelia rolfsii (formerly Sclerotium rolfsii), is a soilborne fungus that attacks the stem base and crown of soybean right at the soil line, especially under hot, humid conditions with abundant surface residue. The hallmark signs are a coarse white fan-shaped mycelial mat growing over the lower stem and adjacent soil/debris, and numerous small spherical sclerotia that begin white and mature to tan or reddish-brown, resembling mustard seeds. The pathogen girdles the stem with a soft, watery rot, causing rapid wilting and collapse of individual plants, often in patches. It is distinguished from Diaporthe by the white mycelium and round sclerotia versus Diaporthe's black, embedded pycnidia/perithecia.",
+    "management_a": "Plant resistant/tolerant varieties (especially for stem canker), use high-quality pathogen-free seed and seed treatment fungicides for pod & stem blight, rotate away from soybean, manage residue through tillage where appropriate, harvest promptly to limit seed infection, and apply foliar fungicides (e.g., strobilurin/triazole) at R3-R5 in high-risk fields for the pod & stem blight phase.",
+    "management_b": "Manage through deep burial of crop residue via tillage to reduce surface inoculum, crop rotation with non-host grasses (corn, small grains), avoid excessive surface organic mulch, improve soil drainage and reduce plant stress, and consider in-furrow or banded fungicides in chronically affected fields; sclerotia are long-lived so multi-year rotation is key.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Scattered soybean plants, often in patches, are wilting, turning yellow, and dying earlier than they should from mid-season on. The lower stems right at the soil line look darkened and rotted, and during the warm, humid stretch I can see some light-colored, whitish growth on or around the base of the stems.",
+      "decisive_lay_a": "No little round tan or brown seed-like balls on the stem; if you look very closely (a hand lens helps) at the dead stem you only see tiny black flask- or pimple-shaped specks buried in the tissue, not loose round balls.",
+      "decisive_lay_b": "Lots of tiny round balls about the size of mustard seeds (roughly 1-3 mm) sitting on the white mat at the stem base and nearby soil; they start out white and ripen to tan or reddish-brown, looking just like scattered mustard seeds.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

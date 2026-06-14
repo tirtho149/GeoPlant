@@ -1,0 +1,70 @@
+{
+  "pair_id": "wheat__barley-yellow-dwarf-virus__fusarium-graminearum-schwabe",
+  "kind": "disease",
+  "crop": "Wheat",
+  "member_a_label": "Barley Yellow Dwarf Virus",
+  "member_b_label": "Fusarium Graminearum Schwabe",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are confused only in a narrow window: foliar discoloration and premature ripening/whitening. BYDV causes leaf yellowing/reddening with stunting in tillering-to-jointing stages, while Fusarium graminearum head blight produces bleached, prematurely-senescing spikes at heading/grain-fill that can be mistaken at a distance for the patchy chlorosis/early ripening of a BYDV-infected stand. Field scouts viewing canopy discoloration from afar, or seeing premature death of tillers, may conflate the two. Up close they diverge sharply (leaf-tip color vs. bleached spikelets with pink sporulation), so confusion is real but resolves quickly on the right plant part.",
+    "shared_presentation": "Patchy stand discoloration and premature, uneven ripening/senescence of wheat \u2014 affected plants stand out as off-color (yellow/tan) against a green canopy, with reduced yield and shriveled grain.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where does the primary, most striking symptom localize \u2014 on the leaves or on the spike/head?",
+        "a_signal": "Discoloration centered on leaves, especially leaf tips and margins moving inward/downward; heads if formed are small but not bleached",
+        "b_signal": "Discoloration centered on the spike \u2014 individual bleached/tan spikelets or whole heads while flag leaf may still be green",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At what crop stage are symptoms most evident?",
+        "a_signal": "Tillering to jointing; early-infected plants are severely stunted with discoloration well before heading",
+        "b_signal": "Anthesis (flowering) through grain fill; symptoms appear on heads after heading",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the color and pattern of the leaf/tissue discoloration?",
+        "a_signal": "Bright golden-yellow to reddish/purple discoloration starting at leaf tips, often blotchy and beginning in patches/spreading from field margins",
+        "b_signal": "Straw/tan bleaching of spikelets (premature whitening) rather than yellow/red leaf coloration; green leaves persist",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is there visible fungal sign on the heads (the decisive sign-vector check)?",
+        "a_signal": "No fungal growth anywhere; a virus produces no signs \u2014 only host discoloration and stunting; aphids may be present as vector",
+        "b_signal": "Salmon-pink to orange sporodochia in the spikelet bracts/rachis (and blue-black perithecia later); pink-tinged shriveled 'tombstone' kernels",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the discoloration develop and distribute over time?",
+        "a_signal": "Stunting plus discoloration that is persistent and tied to early infection; whole plant dwarfed, reddening intensifies with cool weather",
+        "b_signal": "Bleaching spreads up or down from the point of infection within a head; partial heads (some spikelets dead, others green) are classic",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather/conditions preceded symptom onset?",
+        "a_signal": "Mild fall/spring favoring aphid flights and feeding; symptoms after aphid colonization, worse in cool sunny weather (color intensifies)",
+        "b_signal": "Warm, wet/humid conditions during flowering (anthesis); rain-splash and prolonged wetness at heading drive infection",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Barley Yellow Dwarf Virus is an aphid-vectored luteovirus that infects phloem and disrupts carbohydrate movement, producing the classic triad of stunting, leaf discoloration, and reduced tillering/heading. Discoloration begins at leaf tips and margins, golden-yellow in wheat and often with reddish-purple tints, progressing inward and downward; early-infected plants are dramatically dwarfed. Symptoms emerge from tillering through jointing and frequently appear in patches or spreading from field edges following aphid arrival. Critically, a virus produces no fungal signs \u2014 there is no mold, no pink sporulation, no perithecia \u2014 only host responses. Aphids (bird cherry-oat, English grain, greenbug) may be found and serve as the vector clue.",
+    "narrative_b": "Fusarium graminearum on wheat most conspicuously causes Fusarium Head Blight (scab): after infection during warm, humid flowering, individual spikelets or whole heads bleach to a straw/tan color while the rest of the plant and even the flag leaf can remain green. The diagnostic sign is salmon-pink to orange sporodochia in the bracts and at the base of spikelets along the rachis, with blue-black perithecia developing later; infected kernels become shriveled, chalky-white to pink 'tombstones' and may carry deoxynivalenol (DON) mycotoxin. The same fungus also causes seedling blight and crown/root rot, but the head phase is what overlaps superficially with BYDV's premature-ripening appearance.",
+    "management_a": "Manage BYDV through cultural and vector tactics: delay fall planting to avoid peak aphid flights, plant tolerant/resistant varieties (Bdv2 and other tolerance genes), control volunteer cereals and grassy 'green bridge' hosts, and use insecticidal seed treatments (neonicotinoid) or scout-and-spray foliar insecticides targeting aphids before they colonize. No curative options exist once plants are infected; prevention of aphid feeding is the lever.",
+    "management_b": "Manage Fusarium head blight with an integrated program: moderately resistant varieties, avoid planting wheat into corn or wheat residue (rotation/tillage to reduce inoculum), and apply a triazole fungicide (e.g., prothioconazole + tebuconazole, metconazole) at early anthesis (Feekes 10.5.1) timed to predicted wet flowering weather using FHB risk forecasting tools. Harvest promptly, adjust combine to blow out lightweight scabby kernels, and test grain for DON.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "I've got patches in the field where the wheat is turning yellow and tan and ripening way too early, while the rest of the field is still green. Those off-color plants look a little stunted and stand out, and the grain heads there are filling poorly with shriveled, lightweight kernels.",
+      "decisive_lay_a": "No fuzz or growth of any kind on the plants at all, just the yellowing and stunting itself, and you may spot small soft-bodied bugs (aphids) on the leaves that brought the trouble in.",
+      "decisive_lay_b": "Salmon-pink to orange coloring on the heads, right in the little chaffy parts of the grain head, sometimes with tiny blue-black specks later, plus pinkish, shriveled, chalky \"tombstone\" kernels.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

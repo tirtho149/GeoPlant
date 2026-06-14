@@ -1,0 +1,63 @@
+{
+  "pair_id": "pepper__bacterial-spot__tomato-spotted-wilt-virus",
+  "kind": "disease",
+  "crop": "Pepper",
+  "member_a_label": "Bacterial Spot",
+  "member_b_label": "Tomato Spotted Wilt Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small dark/necrotic leaf spots on pepper that can be circular with concentric or ringed appearance, and both cause leaf yellowing, defoliation, and blemished fruit. Early-stage foliar lesions of bacterial spot and the necrotic ringspots of TSWV are routinely confused in the field, especially before systemic or sign-based features develop.",
+    "shared_presentation": "Dark necrotic leaf spots (often with chlorotic halos or ring patterns), foliar yellowing and premature leaf drop, stunted plants, and distorted/discolored fruit with surface blemishes. Both can appear scattered across the canopy on field and greenhouse pepper.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Are the leaf spots discrete water-soaked/angular lesions, or do they form concentric chlorotic-necrotic ringspots and line patterns?",
+        "a_signal": "Small (1-3 mm) angular-to-circular spots, initially water-soaked, becoming brown to black with a greasy translucent margin; often coalescing along veins and leaf margins",
+        "b_signal": "Concentric necrotic ringspots, oak-leaf line patterns, and mosaic mottling rather than discrete water-soaked spots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Does the disease stay as localized leaf/fruit lesions, or progress to systemic plant-wide wilting, bronzing, and tip dieback?",
+        "a_signal": "Damage remains a localized leaf-spotting and fruit-spotting disease; no systemic wilting; lower/older leaves and outer canopy affected first",
+        "b_signal": "Systemic infection with bronzing of young leaves, growing-tip necrosis, one-sided stunting, and overall plant wilt/decline",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "What do the fruit lesions look like - raised scabby spots, or concentric chlorotic rings and uneven ripening?",
+        "a_signal": "Raised, brown, scabby/corky spots on fruit surface, sometimes with a water-soaked halo, roughening the skin",
+        "b_signal": "Flat concentric chlorotic or necrotic rings and blotches with uneven (mosaic) color ripening, fruit not scabby",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is the agent a bacterium spread by water/rain-splash, or a virus transmitted by thrips - is thrips feeding/scarring present?",
+        "a_signal": "No insect vector; bacterial ooze, spread by rain-splash, overhead irrigation and handling; lesions worst after warm wet weather",
+        "b_signal": "Thrips present (silvery feeding scars, frass); virus is thrips-transmitted (Frankliniella spp.); spread tracks thrips activity not rainfall",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Decisive test - does a fresh cut lesion margin in water release a milky bacterial stream, and do leaf spots show shot-hole/water-soaking versus virus showing no streaming and ELISA/lateral-flow positive for TSWV?",
+        "a_signal": "Cut lesion margin placed in water shows bacterial streaming/ooze under hand lens or microscope; lesion centers may dry and tear (shot-hole); negative for TSWV in immunostrip",
+        "b_signal": "No bacterial streaming from lesions; TSWV lateral-flow immunostrip/ELISA positive; ringspots are sterile necrosis",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Bacterial spot (Xanthomonas euvesicatoria/vesicatoria) is a splash-dispersed bacterial disease. On pepper it begins as small water-soaked spots that turn brown-black and angular, often with a narrow yellow halo; lesions concentrate along veins and leaf margins, coalesce, and cause yellowing and defoliation. Fruit develop raised, scabby, corky brown spots. It flares in warm, humid, rainy conditions and with overhead irrigation, and is moved by rain-splash, contaminated seed/transplants, and handling. There is no insect vector and no systemic bronzing or wilt.",
+    "narrative_b": "Tomato spotted wilt virus is a thrips-transmitted tospovirus. On pepper it causes systemic symptoms: concentric chlorotic and necrotic ringspots, oak-leaf line patterns and mosaic on leaves, bronzing and necrosis of young leaves and growing tips, one-sided stunting, and plant decline. Fruit show flat concentric chlorotic/necrotic rings with uneven ripening (no scabby raised spots). It is spread only by thrips (Frankliniella occidentalis and others), so its distribution tracks thrips populations and nearby virus reservoirs rather than rainfall. Confirmation is by TSWV immunostrip or ELISA.",
+    "management_a": "Use certified disease-free, hot-water or bleach-treated seed and clean transplants; rotate 2-3 years away from pepper/tomato. Avoid overhead irrigation and working plants when wet; minimize handling. Apply copper-based bactericides (often tank-mixed with mancozeb) preventively, mindful of copper-resistant strains; consider actigard/SAR inducers and resistant varieties where available. Remove and destroy infected debris and volunteers.",
+    "management_b": "Manage the thrips vector and inoculum: use TSWV-resistant pepper cultivars (Tsw gene) where available, reflective mulches and insecticides/biologicals to suppress thrips, and UV-reflective or insect-screen exclusion in greenhouses. Rogue and destroy infected plants promptly, control weed and crop reservoir hosts around fields, and use virus-tested transplants. Bactericides and copper have no effect on this virus, so accurate diagnosis prevents wasted sprays.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My pepper plants have dark spots scattered all over the leaves, some with yellow rings or halos around them, and the leaves are yellowing and dropping early. The plants look stunted and the fruit has off-color blemishes and odd shapes.",
+      "decisive_lay_a": "Cut a piece of leaf right at the edge of a dark spot and drop it in a clear glass of water. If it's this problem, you'll see milky, cloudy threads streaming out into the water (you usually need a hand lens to see it well). The spot centers may also dry out and tear away, leaving little holes like buckshot. A quick test strip for the virus comes back negative.",
+      "decisive_lay_b": "Drop a cut spot edge into water and nothing milky streams out. A quick lateral-flow test strip (or a lab test) for the virus comes back positive. The ring-shaped dead spots are just dead tissue with no ooze or living bug coming out of them.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "pair_id": "watermelon__gummy-stem-blight__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Gummy Stem Blight",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (validated)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both blight watermelon vines and rot fruit, so a collapsing vine with rotting fruit is ambiguous at a glance.",
+    "shared_presentation": "Vine blight with stem lesions and fruit rot, leading to collapse.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Examine the stem lesions versus the crown and fruit.",
+        "a_signal": "Dry tan-to-brown stem cankers that exude amber gummy ooze.",
+        "b_signal": "Soft, water-soaked watery rot of the crown and fruit.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Look for fruiting bodies or sporulation in the lesions.",
+        "a_signal": "Tiny black pycnidia and perithecia studding the cankered tissue.",
+        "b_signal": "White cottony sporangial growth on the rotting surface.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions preceded it?",
+        "a_signal": "Warm, humid weather with dense foliage and prolonged leaf wetness.",
+        "b_signal": "Saturated soils, heavy rain, and standing water in low field spots.",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Because the stems bear dry cankers with amber gum and black pycnidia rather than watery crown rot, I classify this as gummy stem blight rather than Phytophthora blight.",
+    "narrative_b": "Because the crown and fruit show soft water-soaked rot with white cottony growth tied to saturated soil, I classify this as Phytophthora blight rather than gummy stem blight.",
+    "management_a": "Gummy stem blight: use clean seed and transplants, rotate, manage canopy wetness, and apply labeled fungicides protectively.",
+    "management_b": "Phytophthora blight: improve drainage, avoid overwatering, rotate out of cucurbits/solanaceous crops, and apply soil-targeted oomycete fungicides.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My watermelon vines are dying back, with dark, sunken patches on the stems and rotting fruit, and whole runners are wilting and collapsing in the field.",
+      "decisive_lay_a": "Look for dry tan-to-brown sunken patches on the stems that leak a sticky amber, gum-like ooze (like dried sap beads) at the wound.",
+      "decisive_lay_b": "Look for soft, mushy, water-soaked wet rot at the base/crown of the plant and on the fruit, where the tissue turns slimy and squishy rather than dry.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

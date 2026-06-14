@@ -1,0 +1,63 @@
+{
+  "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__bacterial-wilt",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Bacterial Canker And Wilt Of Tomato",
+  "member_b_label": "Bacterial Wilt",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are bacterial vascular diseases of tomato that cause wilting and vascular browning, and both can present as a sudden or progressive wilt with internal stem discoloration. In the field a wilting tomato plant with discolored vascular tissue can be either disease, so they are genuinely confused without examining external signs, leaf-margin symptoms, and the milky-ooze test.",
+    "shared_presentation": "Wilting tomato plants, often during fruiting, with browning/discoloration of the internal vascular tissue when the stem is cut. Both can kill plants and both spread in warm conditions, so a generic \"wilting plant with stained vascular ring\" looks identical at first glance.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the wilt one-sided/progressive with marginal leaf scorch, or a rapid total collapse of green foliage?",
+        "a_signal": "Unilateral wilting that often starts on one side of a leaflet or one side of the plant; lower-leaf margins develop a brown necrotic 'firing' or scorch with a yellow halo; decline is relatively gradual",
+        "b_signal": "Rapid, complete wilting of the whole plant while leaves stay green (no marginal scorch); plant can collapse within days",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are there external symptoms on the stem and fruit (cankers, lesions, spots), or only internal/foliar wilt?",
+        "a_signal": "External light streaks or open cankers (cracks) on stems and petioles; characteristic 'bird's-eye' spots on fruit (small white spots with raised brown centers)",
+        "b_signal": "No external stem cankers or bird's-eye fruit spots; stem may show water-soaked appearance but external signs are minimal; adventitious roots may form on lower stem",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "When a leaflet is examined, does discoloration follow vascular margins with curling, or is the whole plant flagging at once?",
+        "a_signal": "Leaflets curl upward and wilt unevenly; vascular browning extends up from cut stem in streaks; symptoms march upward over weeks",
+        "b_signal": "Uniform sudden flagging of upper foliage; pith may become water-soaked, yellow-brown, and hollow",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Does a cut stem suspended in clear water release a milky bacterial ooze stream?",
+        "a_signal": "No spontaneous milky ooze stream from a stem in water; vascular browning present but the streaming test is negative (Clavibacter is Gram-positive, does not stream this way)",
+        "b_signal": "Within minutes a thread of milky-white bacterial ooze flows from the cut vascular bundles into the water (positive Ralstonia streaming test)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What soil and temperature regime favors the outbreak?",
+        "a_signal": "Favored by moderate temperatures and spread by contaminated seed, transplants, tools, and splashing/handling; problematic in greenhouse and field transplant production nationwide",
+        "b_signal": "Favored by hot, humid conditions and warm, wet soils; soilborne and water-spread, strongly tied to high soil temperatures",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Bacterial canker (Clavibacter michiganensis ssp. michiganensis) is a Gram-positive vascular pathogen that typically produces unilateral, progressive wilting with brown marginal leaf scorch ('firing') and upward leaflet curling. Diagnostic external clues include light-colored streaks or open cankers on stems and petioles and 'bird's-eye' spots on fruit (small white-haloed lesions with tan raised centers). Internal vascular tissue browns and may turn mealy, but a cut stem in water does NOT produce the milky streaming ooze typical of Ralstonia. It is largely seed- and transplant-borne and spreads by tools, handling, and splashing.",
+    "narrative_b": "Bacterial wilt (Ralstonia solanacearum) is a soilborne, Gram-negative pathogen that causes rapid, complete wilting of plants whose leaves remain green, with no marginal scorch or external cankers. The pith becomes water-soaked, brown, and may hollow; adventitious roots can form on the lower stem. The hallmark confirmatory test is the streaming test: a cut infected stem suspended in clear water releases a milky-white thread of bacterial ooze within minutes. It thrives in hot, humid climates and warm, wet soils and spreads via soil, water, and roots.",
+    "management_a": "Use certified pathogen-free seed and transplants; hot-water or disinfectant seed treatment. Rogue and destroy symptomatic plants, sanitize tools and stakes between plants/houses, avoid working plants when wet, and rotate away from solanaceous crops. Copper-based bactericides offer only limited suppression; emphasis is on exclusion and sanitation.",
+    "management_b": "Focus on exclusion and soil management since it is soilborne: plant in well-drained soil, avoid fields with a history of bacterial wilt, use resistant rootstocks/grafted plants where available, and rotate with non-host crops. Remove and destroy infected plants, manage irrigation water sources, and avoid moving infested soil. No effective chemical cure exists once plants are infected.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomato plants are wilting and drooping, mostly right when they're setting fruit, and they end up dying. When I cut a stem open I see brown staining in a ring inside the stem. It's been hot and humid, and it seems to be spreading to nearby plants.",
+      "decisive_lay_a": "When you cut a wilted stem and stick it in a clear glass of water, NO milky white string of ooze comes out on its own. You still see the brown staining inside the stem, but it doesn't bleed that cloudy thread into the water. (This points to the canker-type problem.)",
+      "decisive_lay_b": "Cut a piece of wilted stem and dangle it in a clear glass of water. Within a few minutes you see a milky-white, smoky thread of ooze streaming out of the cut end into the water all by itself. (This points to bacterial wilt.)",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

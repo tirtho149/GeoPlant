@@ -1,0 +1,70 @@
+{
+  "pair_id": "highbush-blueberry__mummy-berry__phomopsis-cankers-and-twig-blights",
+  "kind": "disease",
+  "crop": "Highbush Blueberry",
+  "member_a_label": "Mummy Berry",
+  "member_b_label": "Phomopsis Cankers And Twig Blights",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause early-season shoot/blossom blighting on highbush blueberry in spring, producing wilted, browning, dying young shoots (\"flagging\") that look similar at a glance. Both can cause sudden collapse of succulent new growth. Growers commonly confuse the primary infection shoot blight of mummy berry with the twig blight phase of Phomopsis. They diverge sharply on the fruit phase, the presence of cankers, and the diagnostic pathogen signs.",
+    "shared_presentation": "Spring blighting and wilting of young succulent shoots, with browning and dieback of new growth and flowers; both can cause shoots to suddenly droop and turn brown (\"shepherd's crook\" or flagging), and both may infect through blossoms, leading to confusion during the bloom-to-early-fruit window.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the most diagnostic damage on the fruit or on woody stems/twigs?",
+        "a_signal": "Green berries turn tan/pink, become ridged, shrivel, and drop as hard gray-black 'mummies' that fall to the ground",
+        "b_signal": "No mummified fruit; damage centers on twig dieback and sunken cankers on canes, with berries (if affected) showing soft rot near harvest",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "When shoots blight, is there a fungal sign at the base of the wilted tissue or a defined canker on the stem?",
+        "a_signal": "Wilted shoots show a powdery gray-brown mass of spores (conidia) on the blighted midrib/petiole and base; tissue collapses with a sooty appearance",
+        "b_signal": "Stem shows a sunken, tan-to-brown canker with a distinct margin, often girdling the twig; dead tissue dotted with tiny black pycnidia",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Does blight start at the shoot tip and move down, or originate from a canker and kill tissue above it?",
+        "a_signal": "Infection enters expanding leaf/flower buds; whole shoot/blossom cluster wilts and browns at once from the new growth",
+        "b_signal": "Dieback progresses from a canker upward/downward as the lesion girdles the cane; wilting is above the girdling point",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What overwintering/reproductive structures are present and where (split the affected tissue and inspect the ground beneath the bush)?",
+        "a_signal": "Brown trumpet-shaped apothecia (mushroom cups) emerge in spring from mummified berries on the soil surface; conidia on blighted shoots smell to attract insects and mimic flowers",
+        "b_signal": "Pycnidia (tiny black flask-shaped fruiting bodies) embedded in canker/dead bark and dead twigs; no apothecia and no ground mummies",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions trigger the outbreak?",
+        "a_signal": "Cool, wet spring at budbreak; apothecia require chilling then moist soil; primary infection tied tightly to early shoot/bloom phenology",
+        "b_signal": "Favored by warm, wet weather and by wounds, winter injury, or stress; canker infection often through wounded or weakened wood",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are flowers/blossoms the entry point leading to fruit infection, or are older canes the focus?",
+        "a_signal": "Secondary infection via flowers (conidia carried by pollinators) leads directly to mummified fruit",
+        "b_signal": "Older and stressed canes bear cankers; blossom blight occurs but does not produce mummies, and cane cankers persist year over year",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Mummy berry, caused by Monilinia vaccinii-corymbosi, has a two-stage life cycle keyed to host phenology. In spring, apothecia (small brown trumpet/cup-shaped mushrooms) arise from mummified berries on the ground and discharge ascospores that infect young expanding leaf and flower tissue, causing a sudden primary shoot blight: shoots wilt, browning radiates along the midrib, and a powdery gray mass of conidia forms on the blighted tissue. These conidia smell sweet and reflect UV to mimic flowers, attracting pollinators that carry them to open blossoms (secondary infection). Infected berries appear normal until they begin to ripen, then turn tan/pink, become ridged, shrivel into hard tan-gray 'mummies,' and drop to the ground where they overwinter to complete the cycle.",
+    "narrative_b": "Phomopsis (Phomopsis vaccinii) causes twig blight and stem cankers on highbush blueberry. The fungus infects through wounds, winter-injured wood, or weakened/stressed canes, producing sunken tan-to-brown cankers with defined margins that can girdle and kill twigs and canes; wilting and dieback occur above the girdling lesion, often appearing as flagging of individual stems. Dead bark and twigs become studded with tiny black pycnidia, the asexual fruiting bodies that release conidia in wet weather to spread to new wounds and blossoms. Phomopsis can also cause a soft fruit rot late in the season, but it never produces apothecia or mummified, ground-dropping berries. Cankers persist on canes year to year, serving as inoculum reservoirs.",
+    "management_a": "Sanitation is key: remove and bury or disrupt mummified berries on the ground (cultivation, mulching, or raking) to prevent apothecia from forming. Apply fungicides (e.g., DMIs, fenbuconazole, or others labeled for mummy berry) at green tip through bloom to protect against primary shoot blight and secondary blossom infection, timed to apothecial development and wet periods. Choose less-susceptible cultivars where mummy berry is chronic.",
+    "management_b": "Prune out and destroy cankered and dead canes well below the lesion during dry weather to reduce pycnidial inoculum. Minimize wounding and winter injury through proper site selection, balanced fertility (avoid late-season succulent growth), and frost protection. Maintain plant vigor; remove stressed/old canes. Fungicide applications during bloom and after pruning, and protecting pruning wounds, help limit twig blight and canker spread.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "In spring my young blueberry shoots and blossom clusters suddenly droop, turn brown, and die back, with some new growth bending over like a candy cane. It's happening right around bloom into early fruit set and I can't tell what's causing it.",
+      "decisive_lay_a": "Look down at the ground under the bushes for old shriveled, hardened berries from last year (mummies). In spring these sprout tiny tan or brown trumpet- or mushroom-cup-shaped growths popping up out of them on the soil surface. The blighted shoots may also give off a faint sweetish flowery smell that draws insects.",
+      "decisive_lay_b": "Look on the dead twigs and on sunken dead patches of bark on the canes for sprinklings of tiny black pinhead-like dots embedded in the dead wood. There are NO mushroom cups coming up from the ground and no shriveled mummy berries on the soil.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

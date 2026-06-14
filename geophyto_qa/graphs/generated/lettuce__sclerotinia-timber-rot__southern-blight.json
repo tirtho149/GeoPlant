@@ -1,0 +1,63 @@
+{
+  "pair_id": "lettuce__sclerotinia-timber-rot__southern-blight",
+  "kind": "disease",
+  "crop": "Lettuce",
+  "member_a_label": "Sclerotinia Timber Rot",
+  "member_b_label": "Southern Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne fungi that attack the lettuce crown/lower stem and outer leaves at the soil line, producing a soft watery basal rot, wilt, and collapse of the head, with conspicuous white mycelium and hard survival sclerotia. From a distance both look like a \"head rot / crown collapse,\" so they are routinely confused in the field; resolution requires examining the mycelial texture and the size/color of the sclerotia.",
+    "shared_presentation": "A maturing lettuce plant wilts and the whole head collapses; the lower stem and outer wrapper leaves at the soil line turn into a soft, watery, brown rot. White cottony fungal growth appears on affected tissue and on the adjacent soil, and small hard fungal resting bodies (sclerotia) form in or on the decayed tissue. Often appears in patches in the field, especially in cool/warm moist conditions near harvest.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What soil temperature/season conditions favored the outbreak?",
+        "a_signal": "Cool to mild, moist conditions (roughly 50-70F); damage common in spring, fall, and cool coastal production",
+        "b_signal": "Hot weather with warm soil (roughly 80-95F); damage flares in mid-to-late summer and in warm southern regions",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where does the rot and fungal growth concentrate?",
+        "a_signal": "Stem/crown and lower leaf bases; can also girdle the main stem producing the classic watery 'timber rot' of the stem",
+        "b_signal": "Strictly at the soil line / crown and the very base of outer petioles in contact with soil",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does the white mycelium look like on the tissue and soil?",
+        "a_signal": "Dense, fluffy, cottony white mycelium that mats over the rotted tissue, without an obvious radiating fan pattern",
+        "b_signal": "Coarse, white, distinctly fan-like/strand-like mycelial mat radiating across crown and onto surrounding soil and debris",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the plant collapse after symptoms appear?",
+        "a_signal": "Wilt and watery soft rot progress over several days as the stem is girdled",
+        "b_signal": "Very rapid wilt and complete collapse within 1-3 days once the crown is girdled in hot weather",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the sclerotia formed in/on the rotted tissue: what size and color are they?",
+        "a_signal": "Large, irregular, black sclerotia 2-10+ mm (pea-to-bean sized), formed inside and on the stem/tissue",
+        "b_signal": "Numerous tiny, uniform, round sclerotia 0.5-2 mm that mature from white/cream to tan/reddish-brown like mustard seeds",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Sclerotinia Timber Rot (lettuce drop, Sclerotinia sclerotiorum) is favored by cool, moist conditions. The fungus rots the lower stem, crown, and outer leaf bases, often girdling and hollowing the main stem (the \"timber rot\" stage in stem crops) and causing the whole head to wilt and drop. Affected tissue becomes soft and watery and is covered by dense, fluffy white cottony mycelium. The diagnostic sign is the formation of large, irregular, hard BLACK sclerotia (2-10+ mm, pea- to bean-sized) on and inside the decayed tissue. It is a broad-host-range pathogen damaging lettuce, beans, brassicas, and many vegetables.",
+    "narrative_b": "Southern Blight (Athelia/Sclerotium rolfsii) is a hot-weather, warm-soil pathogen that attacks the lettuce crown right at the soil line. It produces a coarse white mycelium that grows in a characteristic fan-like radiating pattern across the crown and onto the surrounding soil surface and debris, causing rapid wilt and collapse. Its diagnostic sign is masses of tiny, uniform, round sclerotia (0.5-2 mm) that begin white/cream and mature to tan or reddish-brown, resembling mustard seeds scattered over the crown and soil. It has a very wide host range and thrives in warm, humid southern US conditions.",
+    "management_a": "Improve airflow and drainage; avoid dense canopies and excess irrigation that keep the crown wet. Use wider spacing and well-drained beds; rotate away from highly susceptible broadleaf hosts (beans, brassicas, sunflower). Deep plowing to bury sclerotia, sanitation of infected debris, and targeted fungicides (e.g., boscalid, fluazinam, or fluopyram-based products) at canopy closure. Biocontrols such as Coniothyrium minitans can degrade sclerotia in soil. Time plantings to avoid prolonged cool, wet, dense-canopy periods near harvest.",
+    "management_b": "Reduce warm-season inoculum at the soil line: deep-bury or remove infested residue, since sclerotia survive in the top few inches of soil. Avoid mulching crowns with undecomposed organic matter in hot weather. Use long rotations with non-hosts (grasses/cereals), promote drainage, and consider soil solarization in fallow. Fungicides such as flutolanil, PCNB, or azoxystrobin applied to the crown/soil line, plus calcium amendments and good sanitation, help. Manage planting dates so the crop matures before peak hot, humid conditions.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "A maturing head wilts and the whole plant flops down, and the lower stem and outer wrapper leaves right at the soil line turn into a soft, watery, brown mush. White cottony growth shows up on the rotting tissue and on the dirt right next to it, and I'm seeing this pop up in patches across the field as we get close to harvest.",
+      "decisive_lay_a": "Look for big, irregular, coal-black hard lumps about the size of a pea up to a bean (roughly 1/8 to 1/2 inch), formed inside the split-open stem and on the rotted tissue.",
+      "decisive_lay_b": "Look for lots of tiny, round, uniform hard balls about the size of mustard or radish seeds (less than 1/16 inch) scattered on the rot and nearby soil, starting white or cream and ripening to tan or reddish-brown.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

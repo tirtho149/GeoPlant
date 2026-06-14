@@ -1,0 +1,49 @@
+{
+  "pair_id": "insect__western-corn-rootworm__striped-cucumber-beetle",
+  "kind": "insect",
+  "crop": "Striped yellow beetles on corn / cucurbits",
+  "member_a_label": "Western corn rootworm",
+  "member_b_label": "Striped cucumber beetle",
+  "source": "gold (docx exemplar)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Adult western corn rootworm and striped cucumber beetle are both elongate yellow beetles with longitudinal dark stripes on the elytra.",
+    "shared_presentation": "An elongated yellow beetle with longitudinal dark stripes on the wing covers (elytra).",
+    "forks": [
+      {
+        "axis": "morphology",
+        "question": "Examine the stripe pattern on the elytra.",
+        "a_signal": "Stripes broader, mottled or blurry, sometimes merging so the back looks darker, and often not extending all the way to the elytra tip.",
+        "b_signal": "Three clean, narrow, high-contrast stripes extending nearly to the tip of the elytra.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Zoom on the legs: are they black or yellow?",
+        "a_signal": "Legs entirely or almost entirely black.",
+        "b_signal": "Legs mostly yellow with only the joints darkened.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "If visible, check the underside of the abdomen.",
+        "a_signal": "Underside of the abdomen yellow.",
+        "b_signal": "Underside of the abdomen black.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "habit",
+        "question": "Judge overall body size and color.",
+        "a_signal": "Slightly larger, often with darker overall elytra in males.",
+        "b_signal": "Slightly smaller, bright lemon-yellow with very crisp stripes.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Because the beetle has mottled stripes that do not reach the elytra tip, all-black legs, and a yellow underside, I classify it as western corn rootworm rather than striped cucumber beetle.",
+    "narrative_b": "Because the beetle has three crisp narrow stripes reaching the elytra tip, yellow legs with darkened joints only, and a black underside, I classify it as a striped cucumber beetle rather than western corn rootworm.",
+    "management_a": "Western corn rootworm: manage larvae in corn with rotation and Bt/soil insecticide; adults on silks seldom need treatment.",
+    "management_b": "Striped cucumber beetle: protect seedling cucurbits with row covers or labeled insecticide because it vectors bacterial wilt.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false
+  }
+}

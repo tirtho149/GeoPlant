@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__bacterial-pustule-of-soybean-disease__soybean-rust",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bacterial Pustule Of Soybean Disease",
+  "member_b_label": "Soybean Rust",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small, raised lesions on soybean foliage that scouts frequently mistake at a glance, especially early. Bacterial pustule forms tiny pale pustules with chlorotic halos centered on small lesions, while rust forms tan-to-reddish-brown raised pustules (uredinia). Distance viewing and small lesion size make them easy to confuse, and both are favored by warm, wet conditions during reproductive stages. The decisive separator is what erupts from the pustule: bacterial pustule has no fungal spores (a slimy/dry bacterial center), whereas rust uredinia rupture to release masses of tan urediniospores visible with a hand lens.",
+    "shared_presentation": "Small angular-to-rounded raised lesions on the foliage of soybean during mid-to-late season, often beginning on lower/middle canopy leaves under warm, humid conditions. Both can produce a peppered appearance of many tiny pustule-like spots and lead to premature defoliation when severe, and both are most conspicuous on the abaxial (lower) leaf surface.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "On which leaf surface and tissue do the pustules predominantly erupt, and is there an associated lesion pattern?",
+        "a_signal": "Small pale pustules erupt most on the lower leaf surface, each centered in a small lesion that is often surrounded by a yellow (chlorotic) halo; pustules are raised but lack spore masses.",
+        "b_signal": "Raised pustules (uredinia) cluster densely on the lower leaf surface within angular lesions bounded by leaf veins, often without a prominent chlorotic halo, giving a tan-to-rust-brown speckling.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What color and texture is the lesion/pustule complex on close inspection?",
+        "a_signal": "Lesions are small with tan-to-brown necrotic centers and a raised, pale, blister-like pustule; chlorotic halo common; no rusty coloration.",
+        "b_signal": "Lesions are tan, reddish-brown, or gray-brown; pustules are volcano-shaped uredinia that turn cinnamon/rust colored as spores mature.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When a pustule is opened or rubbed under a hand lens (10-20x), does it release dry powdery spores or a wet bacterial center?",
+        "a_signal": "No spores; the pustule center is a small erupted bacterial mass, sometimes with bacterial ooze under moisture, and the raised tissue is plant-derived with no powdery discharge.",
+        "b_signal": "Rupturing the uredinium releases abundant dry, tan-to-cinnamon urediniospores (a clear powdery spore mass), confirming a fungal sign.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How do lesions develop and coalesce over time across the canopy?",
+        "a_signal": "Small lesions enlarge slowly and may coalesce into ragged necrotic patches; centers can fall out giving a torn/shot-hole look; spread tied to splashing rain and wounds.",
+        "b_signal": "Lesions multiply explosively under humid conditions with successive spore generations, rapidly increasing density and causing fast premature defoliation from the lower canopy upward.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather and regional conditions precede the outbreak?",
+        "a_signal": "Favored by warm temperatures with rain/wind-driven splash and overhead wetness; bacterium overwinters in residue and seed; occurs nationwide where soybeans grow.",
+        "b_signal": "Requires extended leaf wetness and moderate temperatures with viable airborne inoculum that must blow in from southern overwintering hosts (e.g., kudzu) each season.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Under magnification, what is the fine structure of an individual pustule?",
+        "a_signal": "A small, irregular, raised pale blister on epidermis with a central rupture but no defined fruiting body.",
+        "b_signal": "A discrete, cone/volcano-shaped uredinium with a central ostiole through which spores extrude.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial pustule, caused by Xanthomonas axonopodis pv. glycines, produces tiny raised pustules most prominent on the lower leaf surface, each typically at the center of a small lesion ringed by a chlorotic (yellow) halo. The lesion centers become tan to brown and necrotic; with age, centers can tear away, giving a ragged or shot-hole appearance. Crucially, the pustule is bacterial in origin and never releases powdery spores. The pathogen survives in crop residue and infested seed and spreads by wind-driven rain and splashing during warm, wet weather, entering through stomata and wounds. It is often confused with rust and with bacterial blight, but the chlorotic halo, lack of spore masses, and slightly raised pale pustule center help separate it.",
+    "narrative_b": "Soybean rust, caused by the obligate fungus Phakopsora pachyrhizi, produces angular lesions bounded by leaf veins, mainly on the lower leaf surface, with dense clusters of raised uredinia. The lesions are tan to reddish-brown or gray-brown, and the uredinia are cone-shaped fruiting bodies that rupture through a central ostiole to release abundant dry, tan-to-cinnamon urediniospores. This powdery spore mass, easily seen with a hand lens, is the definitive sign. Under extended leaf wetness and moderate temperatures, the disease cycles rapidly with successive spore generations, causing fast, severe premature defoliation that progresses up the canopy. Because the fungus does not overwinter in most of the soybean belt, epidemics depend on airborne inoculum spreading northward each season from southern overwintering hosts such as kudzu.",
+    "management_a": "Use pathogen-free certified seed and resistant/tolerant varieties; rotate away from soybean and manage residue to reduce inoculum; avoid working fields when foliage is wet to limit mechanical spread. Copper-based bactericides give only limited suppression and are not the primary tool\u2014genetic resistance is the mainstay. Foliar fungicides do NOT control this bacterial disease, so accurate diagnosis (no spores) prevents wasted fungicide applications.",
+    "management_b": "Scout the lower canopy from late vegetative through reproductive stages and confirm with a hand lens for urediniospores. Apply triazole and/or QoI (strobilurin) foliar fungicides preventively or at first detection during R1-R3, guided by regional spore-tracking and sentinel-plot/IPM PIPE alerts. Time applications to canopy risk and weather; resistant varieties offer partial help. Because rust inoculum moves north seasonally, regional advisories drive spray decisions.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My soybeans have a bunch of tiny raised bumps and small spots peppered across the leaves, worst on the underside of the lower and middle leaves. It showed up in the warm, humid stretch mid-season, and the leaves are starting to yellow and drop early.",
+      "decisive_lay_a": "Pop open one of the little bumps: it's just raised plant tissue with a small broken-open center, and in wet weather you might see a clear-to-milky watery ooze. There is NO dry powder that puffs out or rubs off on your finger.",
+      "decisive_lay_b": "Pop open or rub one of the little bumps and a dry, tan-to-cinnamon-brown powder puffs out or smears on your finger like dust. That powdery discharge is the giveaway.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

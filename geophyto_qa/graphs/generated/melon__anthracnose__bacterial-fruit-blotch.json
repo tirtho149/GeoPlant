@@ -1,0 +1,70 @@
+{
+  "pair_id": "melon__anthracnose__bacterial-fruit-blotch",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Bacterial Fruit Blotch",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce dark, sunken or water-soaked lesions on melon fruit and foliar spotting, and both can spread explosively under warm, wet, splashing conditions, so early-stage fruit and leaf lesions are routinely confused in the field. They diverge on lesion sign (fungal acervuli/salmon spore masses vs. bacterial ooze and rind cracking) and on epidemiology (seedborne, transplant-onset bacterial blotch vs. residue/rain-driven anthracnose).",
+    "shared_presentation": "Dark, sunken or water-soaked lesions on the upper fruit surface plus angular-to-irregular necrotic leaf spots on a warm-season cucurbit; both worsen with rain, overhead irrigation, and dense canopy, and both can rot fruit before or at harvest.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "At what crop stage did symptoms first appear?",
+        "a_signal": "Onset typically mid-to-late season on maturing foliage and developing/maturing fruit after canopy closure and rain events",
+        "b_signal": "Onset very early \u2014 water-soaked cotyledon and seedling lesions in the transplant house or just after transplant, traceable to infested seed",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the fruit is the lesion centered and how does it relate to the rind?",
+        "a_signal": "Circular, sunken, dark lesions that deepen into the flesh as a soft rot, often on the side/underside, with concentric appearance",
+        "b_signal": "Olive-green to brown water-soaked blotch on the UPPER (sun-exposed) rind surface that later cracks and weeps amber bacterial ooze",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the leaf lesion morphology?",
+        "a_signal": "Roundish tan-to-brown spots that enlarge, dry, crack and shatter ('shot-hole'), sometimes with yellow halo",
+        "b_signal": "Small angular dark lesions delimited by leaf veins, often with a chlorotic halo and water-soaked margin",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens / on incubation in a moist chamber, what sign emerges from the lesion?",
+        "a_signal": "Black fruiting bodies (acervuli) with dark setae, exuding salmon-to-pink, gelatinous spore masses (conidia in slime)",
+        "b_signal": "No fungal structures; pressed cut lesion yields cloudy bacterial streaming/ooze and a milky exudate, rind surface beaded with droplets",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the fruit lesion progress after appearing?",
+        "a_signal": "Lesion deepens into a firm-to-soft dry rot with sunken concentric rings and visible spore pustules in the center",
+        "b_signal": "Blotch spreads rapidly across the rind, the surface cracks/splits, and internal flesh rot follows with foul ooze, often collapsing the fruit",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and inputs preceded the outbreak?",
+        "a_signal": "Favored by prolonged leaf wetness, warm temps, infested crop residue and cucurbit rotation history; rain-splash dispersal",
+        "b_signal": "Favored by high temperature and high humidity in transplant production; strongly tied to contaminated seed lot or volunteer/host bridge, with rapid transplant-house spread",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Melon anthracnose is caused by the fungus Colletotrichum orbiculare. It typically builds mid-season as the canopy closes and rains arrive, producing roundish tan-to-brown leaf spots that dry, crack and shatter, plus circular sunken dark lesions on fruit that deepen into a rot. The diagnostic confirmation is fungal: black acervuli bearing dark setae and salmon-pink gelatinous spore masses appearing in the lesion center, especially after incubation in a moist chamber. It survives in crop residue and seed and is dispersed by rain-splash.",
+    "narrative_b": "Bacterial fruit blotch is caused by Acidovorax avenae ssp. citrulli (A. citrulli). It is classically seedborne, so the earliest tell is water-soaked cotyledon and seedling lesions in the transplant greenhouse, followed in the field by olive-to-brown water-soaked blotches on the upper, sun-exposed rind that crack and weep amber bacterial ooze. Leaf lesions are small, angular and vein-delimited with chlorotic halos. Confirmation is the absence of fungal structures and the presence of bacterial streaming/ooze from cut lesions. Warm, humid transplant conditions and contaminated seed lots drive explosive early spread.",
+    "management_a": "Use clean/treated seed and resistant cultivars where available; rotate out of cucurbits 2-3 years; bury or destroy infested residue; improve airflow and avoid prolonged leaf wetness and overhead irrigation; apply protectant fungicides (chlorothalonil, mancozeb) or strobilurin/DMI products on a preventive schedule tied to rain/wetness forecasts.",
+    "management_b": "Start with pathogen-tested, certified seed and disinfested transplant facilities; rogue and discard symptomatic seedlings and avoid overhead watering in the transplant house; sanitize trays, benches and tools; control volunteer cucurbits and weeds; apply copper-based bactericides preventively in the field; there is no curative spray, so seed health and greenhouse sanitation are paramount.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My melons have dark, sunken spots on top of the fruit that look wet or water-soaked, and some are starting to rot. The leaves have irregular brown dead patches too. It got worse after the rains and with the overhead watering, especially where the vines are thick and crowded.",
+      "decisive_lay_a": "Look in the dark sunken spots for tiny black specks or bristly dots, and when it's damp you'll see salmon-to-pink slimy ooze sitting in those spots.",
+      "decisive_lay_b": "No fuzz or pink slime at all; instead the rind sweats little beads or droplets, and if you cut into a spot and press it, a cloudy, milky juice oozes or streams out.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

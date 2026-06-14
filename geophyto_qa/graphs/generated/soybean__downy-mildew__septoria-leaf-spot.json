@@ -1,0 +1,63 @@
+{
+  "pair_id": "soybean__downy-mildew__septoria-leaf-spot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Downy Mildew",
+  "member_b_label": "Septoria Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce foliar lesions on soybean during the season and are frequently scouted together. Early downy mildew chlorotic flecks and early septoria angular brown specks can look similar at a glance on upper canopy leaves, and both can give a generally spotted/blotchy leaf appearance. The decisive separation is the pathogen sign on the leaf underside: downy mildew yields a fuzzy gray-violet sporulation tuft beneath chlorotic spots (an oomycete), whereas septoria produces sharp angular brown lesions with no downy growth and tiny black pycnidia.",
+    "shared_presentation": "Spotted soybean leaves during vegetative-to-reproductive growth, with chlorotic to brown lesions scattered across the leaflet that can coalesce and, in heavy cases, cause premature yellowing and defoliation. Both are favored by wet, humid conditions and both can appear on the same plant.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the canopy do lesions concentrate first?",
+        "a_signal": "Upper (younger) leaves of the canopy show pale green to yellow blotches; can also infect pods/seeds internally with white crust on seed",
+        "b_signal": "Lower (older) leaves of the canopy first, progressing upward as the season advances",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion shape and color on the upper leaf surface?",
+        "a_signal": "Indefinite pale-green to light-yellow blotches/flecks that turn grayish-brown, often with diffuse irregular margins",
+        "b_signal": "Small (1-4 mm) angular dark-brown to rust-colored specks, often vein-limited, with surrounding chlorosis",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Flip the leaf: what grows on the UNDERSIDE beneath the lesion?",
+        "a_signal": "A downy fuzzy tuft of gray to pale-violet sporulation (sporangiophores) directly under the chlorotic spot in humid conditions",
+        "b_signal": "No downy growth; surface is dry with tiny dark-brown to black pinpoint pycnidia embedded in the lesion (visible with a hand lens)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease advance over the season?",
+        "a_signal": "Often peaks in cool, wet early/mid season; can systemically infect pods and seed (seed-borne)",
+        "b_signal": "Steadily climbs the canopy from bottom to top, intensifying in late vegetative through reproductive stages, driving lower-leaf defoliation",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions trigger the worst outbreaks?",
+        "a_signal": "Cool, moist, humid weather with extended leaf wetness; an oomycete favored by cooler temps",
+        "b_signal": "Warm, wet, rainy periods with prolonged humidity; rain-splash spread of pycnidial spores up the canopy",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Soybean downy mildew (Peronospora manshurica) is an obligate oomycete that produces indefinite pale-green to light-yellow blotches on the upper surface of younger, upper-canopy leaves. The diagnostic sign is on the leaf underside: under humid conditions a downy, fuzzy tuft of gray to pale-violet sporulation forms directly beneath the chlorotic spot. The pathogen is favored by cool, moist weather and can systemically infect pods, leaving a whitish crust of oospores on the seed surface, making it seed-borne. It is widespread but rarely yield-limiting on its own.",
+    "narrative_b": "Septoria leaf spot (brown spot, Septoria glycines) is a fungal disease that appears first on the lowest, oldest leaves as small angular dark-brown to rust-colored specks (1-4 mm), often limited by veins and ringed by chlorosis. Lesions bear tiny black pycnidia visible with a hand lens and there is no downy growth on the underside. It is favored by warm, wet weather and rain-splash, and it progresses up the canopy through the reproductive stages, causing lower-leaf yellowing and premature defoliation that can erode yield in wet years.",
+    "management_a": "Most resistant varieties carry adequate tolerance, so management is rarely needed for foliar downy mildew alone. Use clean, certified seed to limit seed-borne oospore introduction, rotate away from soybean, and incorporate residue. Foliar fungicides are seldom economically justified for downy mildew specifically; integrated reproductive-stage fungicide programs aimed at other foliar diseases will incidentally suppress it.",
+    "management_b": "Reduce inoculum with crop rotation (1-2 years out of soybean) and residue management since the fungus overwinters on debris. Plant less-susceptible varieties and avoid excessive canopy density that prolongs leaf wetness. Where disease climbs into the upper canopy by R3-R5 under wet conditions, a strobilurin/triazole foliar fungicide at R3 can protect yield; scout lower canopy early to time applications.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My soybean leaves have a bunch of pale-green to yellow and brown spots scattered across them. In the wetter spots of the field the spots are running together and some lower leaves are yellowing and starting to drop early.",
+      "decisive_lay_a": "Flip the leaf over: right under the yellow spot you'll see a soft, fuzzy tuft of grayish to pale-purple growth, like fine downy lint, that shows up most after dewy or humid weather.",
+      "decisive_lay_b": "No fuzz at all \u2014 the spot is dry, and right in the middle you'll see tiny dark-brown to black pinpoint dots, like someone tapped it with a fine pen tip (easiest to see with a hand lens).",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

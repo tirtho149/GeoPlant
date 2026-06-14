@@ -1,0 +1,63 @@
+{
+  "pair_id": "apple__apple-scab__cedar-apple-rust",
+  "kind": "disease",
+  "crop": "Apple",
+  "member_a_label": "Apple Scab",
+  "member_b_label": "Cedar-Apple Rust",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce discrete leaf spots on apple in spring and can cause early defoliation, so a quick glance at a single spotted leaf can be ambiguous. They diverge clearly on lesion color, the surface vs underside signs they produce, and whether an alternate juniper host is nearby.",
+    "shared_presentation": "Foliar leaf spotting and fruit blemishing on apple appearing in spring to early summer, both favored by wet weather, both capable of premature leaf drop and downgraded fruit. On young leaves either can begin as small chlorotic or dull flecks before the diagnostic color and texture develop.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the dominant color and texture of the leaf lesions?",
+        "a_signal": "Olive-green to brown-black, fuzzy/velvety smudges with feathery indistinct margins on upper leaf surface",
+        "b_signal": "Bright yellow-orange to orange spots, often with a reddish border and small black pycnidial dots in the center",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is there a cedar/juniper host (eastern red cedar) within roughly a few hundred meters?",
+        "a_signal": "No juniper required; disease cycles entirely on apple via overwintered leaf litter",
+        "b_signal": "Requires nearby juniper/cedar host; gelatinous orange telial galls (cedar-apple galls) form on those junipers in wet spring",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the UNDERSIDE of an orange/affected leaf spot in late spring to summer: what structure is present?",
+        "a_signal": "No tube-like outgrowths; underside shows the same velvety olive-brown fungal growth as the top, no cluster of cups or tubes",
+        "b_signal": "Cluster of small finger-like tubular aecia (cup/tube structures, aecial 'fringe') protruding from the underside directly beneath the orange spot",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "How does the fruit symptom appear?",
+        "a_signal": "Olive-brown to black scabby, corky, sometimes cracked lesions anywhere on the fruit",
+        "b_signal": "Yellow-orange spots with tube-like aecia, typically near the calyx/blossom end, fruit often deformed",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the lesion margin behave as the season progresses?",
+        "a_signal": "Lesions enlarge and coalesce into diffuse blotches; leaves may curl and become distorted with heavy infection",
+        "b_signal": "Spots remain discrete and roughly circular, intensifying in orange color and thickening before tube structures emerge",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Apple scab, caused by Venturia inaequalis, overwinters in fallen apple leaves and releases ascospores during spring rains. Infections produce olive-green to brown-black velvety lesions with feathery margins on leaves and dark, corky, scabby lesions on fruit. It does not need an alternate host and cycles entirely on apple/crabapple. Severe infection causes distortion and premature defoliation. The fungal growth (conidia) is on the lesion surface itself, not in protruding tubes.",
+    "narrative_b": "Cedar-apple rust, caused by Gymnosporangium juniperi-virginianae, is a heteroecious rust requiring both apple and an Eastern red cedar/juniper host. On apple it produces bright yellow-orange leaf spots, often ringed in red with tiny black pycnidia on top, and a diagnostic cluster of tube-like aecia projecting from the leaf underside in early summer. Galls on junipers swell into gelatinous orange horns during wet spring weather, releasing spores that infect nearby apples. Fruit lesions concentrate near the calyx end.",
+    "management_a": "Apply protectant/systemic fungicides (e.g., captan, myclobutanil, or DMI/SDHI products) on a schedule from green tip through primary ascospore season; rake and destroy or hasten decomposition of fallen leaves to reduce overwintering inoculum; plant scab-resistant cultivars; improve canopy airflow with pruning.",
+    "management_b": "Remove juniper galls or, where practical, eliminate Eastern red cedars within a few hundred yards of the orchard to break the cycle; apply fungicides (e.g., myclobutanil or other DMIs) on apples from pink through early cover sprays timed to spring rains and gall sporulation; choose rust-resistant apple cultivars.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My apple leaves are showing dull, off-color spots that are turning darker, and some leaves are starting to drop early. A few of the developing fruit have rough blemishes on the skin. It started up in spring during all the wet, rainy weather.",
+      "decisive_lay_a": "Flip the leaf over and look at the underside of the spot: with scab you'll see the same velvety, olive-to-brownish fuzzy coating on the bottom as on the top, and there are NO little cups, tubes, or finger-like growths poking out.",
+      "decisive_lay_b": "Flip the leaf over and look right beneath the orange spot: with cedar-apple rust you'll see a cluster of tiny finger-like or cup-like tubes (a little fringe of bristly tubes) sticking out from the underside.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

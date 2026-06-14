@@ -1,0 +1,70 @@
+{
+  "pair_id": "wheat__fusarium-wilts--blights--rots-and-damping-off__parastagonospora-nodorum",
+  "kind": "disease",
+  "crop": "Wheat",
+  "member_a_label": "Fusarium Wilts, Blights, Rots And Damping-Off",
+  "member_b_label": "Parastagonospora Nodorum",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce head blight/glume symptoms and seedling-to-mature damage on wheat, and both Fusarium head blight (FHB) and Stagonospora glume blotch (SNB) bleach the head and infect glumes, so field scouts frequently confuse the two on the spike. Both are favored by warm, wet weather and overlap on residue. The decisive separators are the pathogen sign (salmon-pink sporodochia vs dark pycnidia) and the lesion vector (head/floret-down vs leaf/lower-canopy-up).",
+    "shared_presentation": "On wheat heads both cause premature bleaching and discoloration of spikelets and glumes, and both are associated with shriveled, lightweight kernels and warm humid conditions during anthesis/grain fill, making spike symptoms look alike from a distance.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant did symptoms first concentrate?",
+        "a_signal": "Roots, crown, subcrown internode and stem base discolored/rotted, often with seedling damping-off and whole-tiller wilt; head blight a secondary expression",
+        "b_signal": "Leaves and glumes; disease climbs the canopy from lower leaves to the flag leaf and then onto the head",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion character on green tissue?",
+        "a_signal": "Vascular/crown rot and wilt; bleached whitehead with no discrete leaf-spot lesions",
+        "b_signal": "Discrete lens-shaped tan-brown leaf blotches with yellow halos, often with a darker center, on leaves and glumes (glume blotch)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do bleached heads appear in the field pattern?",
+        "a_signal": "Partial bleaching of individual spikelets or half-heads (scab) appearing rapidly after flowering, scattered florets",
+        "b_signal": "Gradual glume discoloration spreading from lesions upward through the canopy over weeks",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What fruiting structure is visible on the affected tissue with a hand lens?",
+        "a_signal": "Salmon-pink to orange sporodochia/mycelium in infected florets and at the rachis, sometimes with blue-black perithecia later",
+        "b_signal": "Tiny dark-brown to black pycnidia embedded within the tan lesions on glumes and leaves, exuding cirri when wet",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What inoculum source and weather drove the outbreak?",
+        "a_signal": "Corn or small-grain residue and warm (25-30C) humid weather precisely at anthesis",
+        "b_signal": "Wheat stubble/seedborne inoculum with repeated rain-splash events through stem elongation and heading",
+        "weight": "weak"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At what stage was the crop most affected?",
+        "a_signal": "Seedling stage (damping-off, crown rot) AND anthesis (head scab) \u2014 bimodal",
+        "b_signal": "Mainly stem-elongation to soft-dough as the pathogen ascends to flag leaf and head",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Fusarium species (e.g., F. graminearum, F. culmorum, F. pseudograminearum) cause a complex on wheat spanning seedling damping-off, crown/foot rot with browning of the stem base and subcrown internode, whole-tiller wilt producing scattered whiteheads, and Fusarium head blight (scab) at flowering. The hallmark sign is salmon-pink/orange sporodochia in bleached florets and along the rachis, and infection is favored by warm humid weather coinciding with anthesis, often on corn or cereal residue. Scabby kernels (tombstones) carry mycotoxins such as DON.",
+    "narrative_b": "Parastagonospora nodorum (Stagonospora/Septoria nodorum blotch, SNB) is a leaf-and-glume blotch disease. It produces lens-shaped tan-to-brown lesions with chlorotic halos and often a darker center on leaves, then advances up the canopy via rain-splash to infect the flag leaf and the glumes (glume blotch), discoloring and bleaching the head from the spikelet surfaces inward. The diagnostic sign is small dark pycnidia embedded in the lesions, releasing spore cirri in wet conditions. It is seedborne and residue-borne and driven by repeated rainfall through stem elongation and heading.",
+    "management_a": "Rotate away from corn and cereals and bury infested residue; plant moderately resistant cultivars; time a triazole (e.g., prothioconazole/metconazole or tebuconazole) fungicide at early anthesis (Feekes 10.5.1) for head scab; use a DON-prediction/FHB risk tool to decide spraying; clean/treat seed and harvest promptly to limit toxin accumulation.",
+    "management_b": "Use certified clean or treated seed (seedborne pathogen), rotate and bury wheat stubble, plant resistant cultivars, and apply protectant/triazole or QoI+triazole fungicides at flag-leaf emergence (Feekes 8-9) timed to canopy/head protection during rainy heading periods; avoid excessive nitrogen and dense canopies that hold moisture; monitor QoI resistance.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "Scattered heads in the field are bleaching out early, turning tan or straw-colored while the rest of the crop is still green, and the affected spikelets and chaff look discolored. When I thresh those heads the kernels are shriveled and lightweight. It showed up after a stretch of warm, humid weather around flowering.",
+      "decisive_lay_a": "Look for a salmon-pink to orange slimy or moldy coating down in the bleached florets and along the central stem of the head; sometimes tiny blue-black specks show up later.",
+      "decisive_lay_b": "Look on the tan blotches on the chaff and leaves for tiny dark-brown to black pinhead specks embedded in the spots, which ooze little curly threads or tendrils when wet.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pair_id": "cucumber__pythium-diseases__rhizoctonia-damping-off--blight-and-rot",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Pythium Diseases",
+  "member_b_label": "Rhizoctonia Damping-Off, Blight And Rot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne fungal-like pathogens that cause cucumber seedling damping-off, root rot, and stem lesions, producing nearly identical stand loss and toppled seedlings. Growers and even agronomists routinely confuse them because the gross symptom (collapsed, rotted seedlings) is the same; resolution requires examining the lesion location, texture, and presence of mycelial signs.",
+    "shared_presentation": "Poor or patchy stand establishment with pre- and post-emergence damping-off of cucumber seedlings, water-soaked stem constrictions near the soil line, toppled or wilted plants, and rotting of roots/lower stem; both worsen in heavy, compacted, or poorly drained seedbeds and can also rot fruit in contact with soil.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What moisture and temperature conditions preceded the collapse?",
+        "a_signal": "Outbreak tied to waterlogged, saturated, poorly drained soil and cool-to-moderate wet conditions; spreads in standing water/splash and through irrigation",
+        "b_signal": "Outbreak in moderately moist but not saturated soil, often warm; favored by moderate moisture rather than free water, common at/just below the soil surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the seedling is the rot or lesion concentrated?",
+        "a_signal": "Rot involves the root tips and lower root system plus a soft, slimy collapse at and below the soil line; whole root may turn mushy with sloughing outer cortex",
+        "b_signal": "Lesion is a sharply defined, sunken, reddish-brown to brown dry canker right at the soil line (wire-stem), with roots often comparatively intact",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and color of the rotted tissue?",
+        "a_signal": "Soft, watery, mushy, greasy/slimy rot; tissue collapses and the root cortex slips off easily leaving a thread-like vascular strand",
+        "b_signal": "Dry, firm, brown sunken lesion that pinches the stem into a tough, wiry constriction (classic wire-stem); tissue is shrunken not slimy",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the seedling fail mechanically?",
+        "a_signal": "Seedling becomes water-soaked and flops over with a soft pinched-off base; pre-emergence seed/seedling rot is common (seeds turn to mush before emerging)",
+        "b_signal": "Seedling stays standing on a hardened, girdled, wiry stem that remains upright for a time before the top dies; characteristic wire-stem persistence",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens or in a moist chamber, what mycelial sign is present on the lesion or adjacent soil?",
+        "a_signal": "No visible aerial mycelium on the lesion; if cultured, produces fine non-septate hyphae and (in water) swimming zoospores/oospores; lesion looks bare and watery",
+        "b_signal": "Coarse, brown, right-angle-branched septate mycelium with constrictions at branch points visible on the lesion/soil surface; brown hyphal webbing binds soil particles to the stem",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Pythium spp. are oomycete (water mold) pathogens that thrive in saturated, poorly drained, cool-to-moderate seedbeds. On cucumber they cause pre-emergence seed/seedling rot and post-emergence damping-off, with a soft, watery, slimy collapse of the lower stem and a mushy rot of the root tips and cortex (the outer root tissue slips off leaving a bare vascular thread). Spread is driven by motile zoospores in free water, so problems track with overwatering, low spots, and contaminated irrigation. There is no coarse aerial mycelium on the lesion; diagnosis is supported by watery soft rot plus non-septate hyphae and zoospores/oospores in culture.",
+    "narrative_b": "Rhizoctonia solani is a true fungus that attacks cucumber at and just below the soil line under moderate (not saturated) moisture, often in warmer conditions than Pythium. Its signature is wire-stem: a dry, firm, sunken reddish-brown to brown canker that girdles and constricts the hypocotyl into a tough, wiry strand, so seedlings frequently remain upright for a time before the top dies. Roots are often relatively intact compared with the stem lesion. The decisive sign is its coarse brown, septate mycelium that branches at near right angles with a constriction at the branch point, often webbing soil particles onto the lower stem. It also causes belly rot of fruit in soil contact and aerial blight under crowded, humid canopies.",
+    "management_a": "Improve drainage and avoid overwatering; plant into warm, well-drained beds on raised beds where possible. Use high-quality, fungicide-treated seed and oomycete-specific seed treatments/drenches (e.g., mefenoxam/metalaxyl, or phosphonates; products in FRAC group 4) since Pythium is not controlled by most broad-spectrum fungicides effective on Rhizoctonia. Manage irrigation water source and sanitation, and rotate to avoid inoculum buildup.",
+    "management_b": "Avoid deep planting and soil crusting; promote rapid emergence with warm, well-prepared seedbeds. Use seed treatments and in-furrow fungicides active against Rhizoctonia (e.g., azoxystrobin/QoI, pencycuron, flutolanil, or thiophanate-methyl/PCNB-type products) rather than oomycete-targeted mefenoxam, which does not control it. Reduce soil contact of fruit (mulch, trellising) to limit belly rot, manage residue, and rotate out of susceptible hosts.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My cucumber stand came up thin and patchy, with a lot of seedlings either never breaking ground or keeling over soon after. The ones that topple have a dark, water-soaked pinched spot on the stem right at the soil line, and the roots and lower stem are rotting and mushy. It's worst in the heavy, wet, packed parts of the bed, and a few fruit lying on the ground are rotting too.",
+      "decisive_lay_a": "The rotted spot looks bare, slimy, and wet with no fuzz or webbing on it. There's nothing visible growing on the surface; to really confirm it you'd need a lab to find the threadlike growth or the tiny swimming spores it makes in water.",
+      "decisive_lay_b": "Look for coarse brown threads and a brown cobwebby growth on the stem and soil surface that glue dirt particles right onto the stem near the soil line. The brown webbing binding soil to the stem is visible to the naked eye, though a hand lens helps you see the right-angle branching of the threads.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

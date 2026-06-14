@@ -1,0 +1,63 @@
+{
+  "pair_id": "grape__black-rot__grape-anthracnose",
+  "kind": "disease",
+  "crop": "Grape",
+  "member_a_label": "Black Rot",
+  "member_b_label": "Grape Anthracnose",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small circular reddish-brown spots on young grape leaves and dark sunken lesions on shoots and berries early in the season, and both can leave shriveled dark berries; growers routinely confuse the early leaf-spot and cane-lesion stages.",
+    "shared_presentation": "Small circular reddish to reddish-brown spots on young grape leaves, dark depressed lesions on green shoots/canes, and circular spots on green berries that darken and shrink, all developing during warm wet spring/early-summer weather on new-season tissue.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are lesions concentrated on green shoots/canes or primarily on leaves and fruit?",
+        "a_signal": "Black rot lesions are most damaging on leaves and berries; cane lesions are minor and shallow.",
+        "b_signal": "Anthracnose produces prominent deeply sunken cane/shoot lesions ('bird's-eye'), making canes a primary site.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Is the leaf lesion margin smoothly circular or angular/irregular, and does the center drop out?",
+        "a_signal": "Black rot leaf spots stay roundish, tan-centered with a dark brown ring, and tissue does NOT fall out.",
+        "b_signal": "Anthracnose leaf spots become angular with gray sunken centers that dry, crack, and drop out leaving a shot-hole.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "On green shoots, are lesions superficial flecks or deeply sunken craters with raised dark margins?",
+        "a_signal": "Black rot causes only small black superficial cane spots, not strongly depressed.",
+        "b_signal": "Anthracnose causes deeply sunken, ash-gray-centered lesions with raised dark/violet margins (classic 'bird's-eye' cankers).",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "What happens to infected berries over time?",
+        "a_signal": "Black rot berries rot, shrivel, and become hard coal-black mummies covered in pimple-like pycnidia.",
+        "b_signal": "Anthracnose berries develop round sunken spots with whitish-gray centers and dark margins ('bird's-eye'), not whole-berry hard mummies.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the fruiting bodies in a lesion under a hand lens: are they discrete pimple-like black pycnidia or a slimy/acervular spore mass?",
+        "a_signal": "Black rot shows abundant well-defined, evenly spaced black globose pycnidia erupting through the surface (mummies and leaf spots studded with them).",
+        "b_signal": "Anthracnose lesions lack neat globose pycnidia; in wet conditions they ooze a creamy/pinkish acervulus-borne conidial mass from the sunken gray center.",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Black Rot (Phyllosticta ampelicida) infects new tissue in warm, humid spring weather. On leaves it makes tan, roughly circular spots ringed in dark brown, peppered with tiny black pycnidia that erupt in a near-ring inside the spot; leaf tissue stays intact (no shot-hole). The hallmark is on fruit: berries develop a light-brown spot, rot rapidly, then shrivel into hard, coal-black mummies densely studded with pycnidia that persist as overwintering inoculum. Cane lesions are minor. The decisive sign is the abundant discrete globose black pycnidia on leaf spots and especially on hard berry mummies.",
+    "narrative_b": "Grape Anthracnose (Elsinoe ampelina) is most striking on green shoots and canes, producing deeply sunken, ash-gray-centered lesions with raised dark brown to violet-black margins ('bird's-eye'). On leaves, spots become angular with gray dry centers that crack and fall out, leaving shot-holes. Berries show round sunken 'bird's-eye' spots (gray-white center, dark rim) rather than whole-berry hard mummies. Crucially, lesions lack the neat pimple-like pycnidia of black rot; instead, in wet weather the sunken centers ooze a creamy-to-pinkish conidial mass from acervuli. Severe shoot dieback and the bird's-eye cankers separate it from black rot.",
+    "management_a": "Sanitation is central: remove and destroy mummified berries and infected cluster stems/leaves, since mummies are the primary overwintering inoculum source. Improve airflow via canopy management. Apply protectant/systemic fungicides (e.g., mancozeb, captan, or sterol-inhibitor/strobilurin programs) from early shoot growth through 3-4 weeks post-bloom, the critical fruit-susceptibility window. Choose resistant cultivars where available.",
+    "management_b": "Remove and destroy infected canes during dormant pruning to reduce overwintering inoculum in cane lesions. A delayed-dormant liquid lime sulfur spray at bud swell is a classic, highly effective anthracnose treatment. Follow with protectant fungicides (mancozeb, captan, ziram) during wet spring growth. Promote drying through canopy/airflow management and avoid overhead irrigation, since spores spread by rain splash.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My young grape leaves have small round reddish-brown spots, and there are dark sunken marks on the green shoots and canes. Some of the green berries have round spots that are turning dark and shriveling up. It all started showing up during the warm, wet spring weather.",
+      "decisive_lay_a": "Look closely at the spots and the dried-up, shriveled berries: they are peppered with lots of tiny, evenly spaced black pimple-like bumps that poke up through the surface, like fine black dots sprinkled all over.",
+      "decisive_lay_b": "The spots have sunken gray centers and lack the neat black dots; instead, in wet weather they ooze a creamy or pinkish paste or goo from the center.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

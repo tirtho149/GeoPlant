@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__bacterial-pustule-of-soybean-disease__soybean-vein-necrosis-virus",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bacterial Pustule Of Soybean Disease",
+  "member_b_label": "Soybean Vein Necrosis Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce foliar lesions on soybean leaflets during reproductive stages that can be vein-associated and interveinal, with chlorotic-to-necrotic patches that scouts conflate from a distance. SVNV's early chlorotic vein clearing and BP's halo-rimmed spots both start as small pale leaf flecks, and late-season both can coalesce into brown necrotic blotches with leaf tatter, blurring the call without a hand-lens or leaf flip.",
+    "shared_presentation": "Scattered chlorotic-to-necrotic foliar lesions on upper-canopy trifoliolate leaflets appearing mid-to-late season (R-stages), often with yellow halos and patches that can follow or surround veins, eventually turning brown and causing premature leaf necrosis or defoliation.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Are the lesions discrete bordered leaf spots, or diffuse vein-centered chlorosis/necrosis?",
+        "a_signal": "Small angular-to-round spots (1-3 mm) with yellowish halos, lesion-by-lesion distribution, tending to coalesce into ragged dead patches",
+        "b_signal": "Symptoms initiate as chlorotic clearing/yellowing immediately ALONG the veins (vein-net pattern), spreading outward interveinally rather than as discrete spots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Where in the canopy and in what pattern do symptoms first appear and move?",
+        "a_signal": "Lower-to-mid canopy spots driven by rain-splash and overhead wetness, lesions enlarging individually",
+        "b_signal": "Often appears first on upper/younger leaves, systemic vein-following spread, frequently associated with leaves where thrips fed",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "On the LOWER leaf surface, is there a raised pustule with a central erumpent bump, or only flat discoloration plus possible thrips?",
+        "a_signal": "A small raised PUSTULE (volcano-like) erupts on the underside center of the lesion, no ooze, scrapes to reveal a tan crater; no insect vector",
+        "b_signal": "No pustule whatsoever; surface stays flat with reddish-brown vein necrosis; thrips (the Tospovirus vector) may be present feeding",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "Does the lesion center remain intact-but-raised, or thin and tear out?",
+        "a_signal": "Pustule center stays as a raised tan/brown wart; older lesions may drop out giving a slightly ragged hole but rimmed by halo",
+        "b_signal": "Necrotic vein tissue becomes brittle reddish-brown to dark, leaf takes on a bronzed/scorched interveinal look, no raised structures",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather/conditions precede the outbreak?",
+        "a_signal": "Warm, wet, windblown-rain or overhead-irrigation periods favoring bacterial splash and infection through stomata/wounds",
+        "b_signal": "Conditions favoring thrips activity (warm, sometimes drought-stressed plants) driving vector-borne spread",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are pods and stems involved, or symptoms confined to leaves?",
+        "a_signal": "Can extend to pods and petioles with raised pustule-like lesions in severe cases",
+        "b_signal": "Essentially leaf/vein-limited; no characteristic pod pustules, though systemic infection affects whole-plant vigor",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial pustule (Xanthomonas axonopodis pv. glycines) is a bacterial leaf-spot disease. It produces small angular lesions with a yellow-green halo, and the diagnostic feature is a tiny raised pustule erupting on the LOWER leaf surface at the lesion center. It spreads by rain-splash and windblown rain in warm wet weather, entering through stomata and wounds. Lesions coalesce, centers may tear out, and severe infection reaches petioles and pods. No insect vector and no systemic vein-necrosis network.",
+    "narrative_b": "Soybean vein necrosis virus (SVNV, an orthotospovirus) is an insect-vectored systemic virus transmitted by thrips. It begins as chlorotic clearing/yellowing along leaf veins, progressing to reddish-brown vein and interveinal necrosis that gives a bronzed, scorched appearance. There are no raised pustules and no bacterial ooze; symptoms are flat and vein-centered, often starting on upper/younger leaves where thrips fed. Spread depends on vector populations rather than rain-splash.",
+    "management_a": "Use pathogen-free, resistant varieties (the rxp resistance gene is effective); rotate out of soybean and incorporate residue; avoid working fields when foliage is wet to limit mechanical spread. Copper-based bactericides give only marginal suppression\u2014genetic resistance is the primary tool. Manage overhead irrigation timing to reduce leaf wetness.",
+    "management_b": "Manage as a vector/virus problem: control soybean thrips populations and weed/alternative virus reservoirs, plant during windows that avoid peak thrips flights, and use tolerant varieties where available. Fungicides/bactericides are ineffective. Scout early-planted and field-edge plants where thrips colonize first; insecticide value is limited once virus is established.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "Up in the top of the canopy, the newer leaves have scattered yellow patches and spots that turn brown over time, often with a yellow ring around them and some discoloration running along or around the veins. It showed up mid-to-late season, and the worst leaves are browning out and dropping early.",
+      "decisive_lay_a": "Look on the underside, right in the middle of a spot, for a tiny raised bump that looks like a little volcano. There's no ooze, and if you scrape the bump off it leaves a small tan crater behind. No bugs are needed for this one to show up.",
+      "decisive_lay_b": "The leaf surface stays completely flat with no raised bumps at all, just reddish-brown streaking along the veins. You may spot tiny slender insects (thrips) crawling and feeding on the leaves.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__early-blight__late-blight",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Early Blight",
+  "member_b_label": "Late Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are foliar/fruit \"blights\" of tomato producing brown-black necrotic leaf lesions that can defoliate the plant, and both are widely scouted-for in the same growing season, so growers routinely mistake one for the other on first glance. They diverge sharply on lesion morphology, sporulation sign, weather drivers, and tissue affinity.",
+    "shared_presentation": "Dark brown to black necrotic lesions on tomato foliage with progressive blighting and defoliation; lesions can also affect stems and fruit, and severe cases collapse the canopy from the bottom up or rapidly throughout, leading growers to call both simply \"blight.\"",
+    "forks": [
+      {
+        "axis": "morphology",
+        "question": "What is the shape and internal pattern of the leaf lesion?",
+        "a_signal": "Discrete, dry, leathery brown spots with concentric rings (a target/bullseye pattern) surrounded by a yellow halo, often starting on older lower leaves.",
+        "b_signal": "Irregular, water-soaked, greasy gray-green to brown blotches with diffuse undefined margins that expand quickly, often starting at leaf tips/margins or upper canopy.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is there sporulation on the underside of lesions, especially after dew or in humid mornings?",
+        "a_signal": "No white fuzzy growth; lesions stay dry and the dark concentric rings are the diagnostic feature (Alternaria conidia are dark and not visible as bloom).",
+        "b_signal": "Delicate white-to-grayish downy/fuzzy mold (sporangia) at the lesion margin on the leaf underside, visible under high humidity, sometimes ringing the lesion.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather conditions preceded the outbreak?",
+        "a_signal": "Favored by warm temperatures (24-29C/75-85F), alternating wet-dry periods, dews, and plant stress; common in mid-to-late season and in warmer regions.",
+        "b_signal": "Favored by cool, moist conditions (10-21C/50-70F) with prolonged leaf wetness, fog, or extended rainy/overcast spells; explosive after such fronts.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the disease spread through the planting?",
+        "a_signal": "Relatively slow, steady progression upward from the oldest foliage over weeks; chronic decline.",
+        "b_signal": "Extremely rapid; can destroy whole plants or fields within days under favorable cool-wet weather (true epidemic potential).",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "How does the fruit symptom appear and where on the fruit?",
+        "a_signal": "Dark, leathery, sunken spots with concentric rings, typically at the stem-end/calyx attachment of the fruit.",
+        "b_signal": "Large, firm, greasy brown-to-bronze blotches on the upper shoulders/sides of the fruit, with a rough/leathery surface; can show white sporulation when humid.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the stem lesion like?",
+        "a_signal": "Dark, dry, slightly sunken lesions sometimes with concentric rings; can cause collar rot on stems/seedling base.",
+        "b_signal": "Brown-black greasy lesions on stems and petioles that may girdle and collapse the stem, often with white sporulation in humidity.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Early Blight (Alternaria solani) is a fungal disease that typically begins on the older, lower leaves of stressed or maturing plants in warm weather with alternating wet and dry cycles. Its hallmark is the dry, leathery brown leaf spot with concentric \"target\" rings and a surrounding yellow halo. The fungus overwinters in soil and crop debris, splashing onto lower foliage, so it progresses gradually upward. Fruit infection appears as sunken, dark, ringed lesions at the stem end. It is chronic rather than explosive and rarely produces visible white mold.",
+    "narrative_b": "Late Blight (Phytophthora infestans) is an oomycete (water mold) and the most destructive tomato/potato disease historically (the Irish famine pathogen). It thrives in cool, wet, humid conditions and spreads with terrifying speed, capable of killing plants within days. Lesions are irregular, water-soaked, greasy gray-green to brown blotches with indistinct margins, and under humidity a delicate white downy sporulation appears on the leaf underside at lesion edges. Fruit develop firm greasy brown shoulder blotches. It does not survive well in soil between seasons in most US regions and typically arrives via airborne sporangia or infected transplants/cull piles.",
+    "management_a": "Reduce leaf wetness via drip irrigation and good spacing; rotate crops (2-3 yr) and remove infected debris; mulch to limit soil splash; maintain plant vigor with adequate nitrogen and avoid stress. Apply protectant fungicides (chlorothalonil, mancozeb) or strobilurins/SDHIs on a preventive schedule starting at first sign or when conditions favor; remove lower infected leaves. Plant tolerant cultivars where available.",
+    "management_b": "Treat as a community-level emergency: scout aggressively, destroy infected plants and volunteer/cull potatoes promptly to remove inoculum. Use preventive protectant fungicides (chlorothalonil, mancozeb) before infection and switch to oomycete-specific actives (e.g., mandipropamid, cymoxanil, fluopicolide, phosphorous acid) under high pressure; rotate modes of action to manage resistance. Improve airflow, avoid overhead irrigation, and plant resistant varieties. Report outbreaks to extension/USAblight tracking, as the airborne spores threaten neighboring growers.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomato plants are getting dark brown to black dead spots and patches on the leaves, and the leaves are browning and dying off. It started low on the plant and is spreading, with some browning showing up on stems and fruit too, and the whole plant looks like it's collapsing.",
+      "decisive_lay_a": "The dead spots stay dry with no fuzzy or moldy growth, and you'll see a target-like pattern of dark rings inside the brown spots, like a bullseye.",
+      "decisive_lay_b": "A delicate white-to-grayish fuzzy or downy mold growing right at the edge of the dead patches, usually on the underside of the leaf, showing up best in cool, damp, humid weather.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

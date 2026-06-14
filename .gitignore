@@ -1,0 +1,29 @@
+# Heavy third-party pipeline INPUTS — not redistributed (own licenses):
+# WorldClim/Köppen rasters, PlantVillage paths, Bugwood image cache.
+data/
+extracted_diseases/
+*.tif
+
+# Raw / intermediate Bugwood tables — keep only BugWood_Diseases_enriched.csv
+BugWood_Diseases.csv
+BugWood_Diseases_usable.csv
+
+# Local archive of deprecated/scratch files
+_archive/
+
+# Caches, logs, bytecode
+__pycache__/
+*.pyc
+*.pyo
+geophyto_qa/logs/
+geophyto_qa/lookalike/emb_cache/
+figures/img_cache/
+
+# Regenerable audit intermediates (rebuilt by the audit/ steps)
+geophyto_qa/audit/pathogen_worklist.json
+geophyto_qa/audit/pair_claims.json
+geophyto_qa/audit/prior_audit.json
+geophyto_qa/audit/lane_b_corrections.json
+
+# SLURM run logs
+*.out

@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__southern-blight__verticillium-wilts",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Southern Blight",
+  "member_b_label": "Verticillium Wilts",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both diseases cause a tomato plant to wilt and decline, and both can produce a one-sided or whole-plant collapse with yellowing foliage that a grower easily mistakes for \"the plant is dying.\" The confusion is greatest before the diagnostic signs are sought: Southern blight is a soilline rot caused by Athelia (Sclerotium) rolfsii, while Verticillium is a vascular wilt. The resolving evidence sits at the stem base versus inside the vascular tissue, so without splitting the stem and inspecting the soil line the two presentations overlap.",
+    "shared_presentation": "A mid- to late-season tomato plant showing wilting, foliar yellowing, and progressive decline, often appearing to \"give up\" suddenly. Both can kill or severely stunt the plant, and casual inspection of the canopy alone does not distinguish a root/crown rot from a vascular wilt.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the collapse a sudden wilt of the whole plant from a rotted base, or a slower wilt with foliar yellowing and dieback?",
+        "a_signal": "Sudden, complete wilt of an otherwise green plant within days, as if cut off at the soil line; foliage often still green when it collapses",
+        "b_signal": "Gradual wilt; lower/older leaves yellow first, often in a V-shaped or one-sided pattern, with slow dieback over weeks",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where does the damage localize \u2014 the stem base/crown at the soil line, or the vascular system throughout the stem?",
+        "a_signal": "A soft, brown to tan girdling lesion (rot/canker) on the stem at and just below the soil line; lesion encircles the base",
+        "b_signal": "No external basal rot; stem looks intact externally while the plant wilts from internal vascular dysfunction",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Are there fungal signs at the stem base \u2014 white mycelium and seed-like sclerotia?",
+        "a_signal": "Conspicuous white, fan-like mycelial mat on the lower stem and adjacent soil/debris, with tan-to-reddish-brown round sclerotia the size of mustard seeds",
+        "b_signal": "No surface mycelium and no sclerotia; no visible external fungal growth on the stem base",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "When the lower stem is split lengthwise, is the internal vascular tissue discolored?",
+        "a_signal": "Vascular tissue largely normal; damage is a surface/cortical rot at the base, not internal browning extending up the stem",
+        "b_signal": "Tan-to-brown vascular (xylem) discoloration visible in a continuous streak when the stem is split, often extending well up from the base",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the plant die and at what scale in the planting?",
+        "a_signal": "Rapid death of individual plants, often scattered, especially where organic debris/mulch contacts the stem; collapse over a few days",
+        "b_signal": "Slow, chronic decline across the season; plants stunted and may partially recover turgor at night before final decline",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and prior cropping favor the problem?",
+        "a_signal": "Hot, humid weather with warm, moist soils and abundant surface organic matter/mulch; favored by high temperatures (about 85-95F)",
+        "b_signal": "Cool to moderate soil temperatures (about 70-80F optimum); favored by cooler conditions and a history of susceptible crops in infested soil",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Southern blight (Athelia/Sclerotium rolfsii) is a warm-soil, debris-driven crown and stem-base rot. The fungus attacks the tomato at the soil line, producing a girdling soft rot that kills the plant suddenly, often while the canopy is still green. The unmistakable diagnostic is the white, coarse, fan-shaped mycelial mat on the lower stem and surrounding soil, studded with small spherical sclerotia that start white and mature to tan-reddish-brown like mustard seeds. It is favored by hot, humid weather, high soil moisture, and abundant surface organic matter that gives the fungus a food base. Individual plants collapse rapidly and are usually scattered through the row.",
+    "narrative_b": "Verticillium wilt (Verticillium dahliae/albo-atrum) is a soilborne vascular disease. The fungus invades the roots and colonizes the xylem, plugging water-conducting tissue so the plant wilts gradually. Classic symptoms are lower-leaf yellowing\u2014often in a V-shaped pattern toward leaf margins\u2014one-sided decline, stunting, and slow dieback over the season. There is no external rot or fungal sign at the stem base; the telltale evidence is tan-to-brown vascular discoloration revealed when the lower stem is split. It is favored by cooler soils than southern blight and persists in soil for years via microsclerotia, so fields with a history of susceptible crops are at higher risk.",
+    "management_a": "Avoid mechanical/soil-line injury and reduce surface organic debris contact with stems; remove and destroy infected plants plus surrounding soil to limit sclerotia spread. Deep burial of residue, soil solarization in hot regions, and longer rotations with non-host (e.g., grass/cereal) crops reduce inoculum. Maintain good drainage and avoid heavy mulch directly against stems. Fungicide/biological soil drenches (e.g., flutolanil, PCNB, or biocontrols like Trichoderma) can help in high-pressure situations.",
+    "management_b": "Plant resistant varieties (tomatoes labeled \"V\" for Verticillium resistance, race 1) as the primary control. Use long rotations (3-4+ years) out of susceptible hosts, manage soil to avoid stress, and remove/destroy crop debris. Soil solarization can lower microsclerotia in warm regions. There is no effective in-season cure; sanitation and starting clean transplants in non-infested or fumigated/solarized soil are key.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomato plant looked fine and then suddenly started wilting and yellowing in the heat of the season, like it just gave up. The leaves are drooping and dying back and the whole plant is going downhill fast even though I've been watering it.",
+      "decisive_lay_a": "Look right at the bottom of the stem where it meets the soil: with Southern Blight you'll see a white, fuzzy, fan-shaped webbing spreading over the lower stem and onto the dirt and old leaf litter around it, dotted with tiny tan-to-reddish-brown round balls about the size of mustard seeds.",
+      "decisive_lay_b": "With Verticillium there is NOTHING growing on the outside of the stem base, no white fuzzy webbing and no little tan balls; the bottom of the stem looks clean on the surface even though the plant is dying.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

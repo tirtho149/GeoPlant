@@ -1,0 +1,63 @@
+{
+  "pair_id": "cucumber__angular-leaf-spot-of-cucumber__anthracnose",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Angular Leaf Spot Of Cucumber",
+  "member_b_label": "Anthracnose",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-irregular necrotic leaf lesions bounded by veins on cucurbit foliage, both can cause water-soaked margins early, and both are favored by warm wet weather, so early foliar lesions are routinely confused in the field.",
+    "shared_presentation": "Tan-to-brown angular or irregular leaf spots, often vein-delimited, with water-soaked or yellow halos, appearing on cucumber foliage during warm, wet, high-humidity periods; both can progress to leaf tattering and affect fruit.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "On the underside of a fresh lesion in the morning (or after incubating a leaf in a moist chamber), is there milky/whitish bacterial ooze that dries to a white crust, or are there pinkish-orange spore masses (acervuli)?",
+        "a_signal": "Bacterial exudate: cloudy droplets of ooze on the lower lesion surface that dry to a thin white scale; no fruiting bodies",
+        "b_signal": "Fungal acervuli: black dot-like fruiting structures producing salmon-pink to orange gelatinous spore masses, often in concentric rings",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "How do the mature lesions terminate at the leaf surface and over time?",
+        "a_signal": "Necrotic angular tissue dries, falls out, and leaves shot-hole/tattered windows bounded sharply by veins",
+        "b_signal": "Lesions enlarge into rounder, sometimes zonate brown blotches that crack but tend to retain tissue and coalesce",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "What do the fruit lesions look like?",
+        "a_signal": "Small superficial white/tan circular spots with possible bacterial ooze and shallow cracking; minor",
+        "b_signal": "Sunken, circular, water-soaked fruit cankers that develop pink-to-black sporulating centers (anthracnose rot)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Is the lesion margin strictly straight-edged along veins or does it round out beyond veinlets?",
+        "a_signal": "Strongly vein-limited, sharply angular geometric outline",
+        "b_signal": "Initially vein-influenced but expands into more rounded/irregular lesions that cross minor veins",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and inoculum source preceded the outbreak?",
+        "a_signal": "Splashing rain/overhead irrigation, cool-to-warm wet foliage, infected seed or crop debris spreading bacteria",
+        "b_signal": "Prolonged leaf wetness with warm temperatures (24-27C) favoring fungal sporulation and rain-splashed conidia",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Angular leaf spot is a bacterial disease (Pseudomonas syringae pv. lachrymans). Lesions begin as water-soaked spots on the lower leaf surface that become sharply angular because they are confined by leaf veins. In humid mornings, bacterial ooze exudes from the underside and dries to a whitish crust; necrotic centers later dry, drop out, and leave shot-hole/tattered leaves. Fruit spots are small and superficial. It spreads via rain splash, overhead irrigation, infected seed, and crop debris, and there are no fungal fruiting bodies.",
+    "narrative_b": "Anthracnose is a fungal disease (Colletotrichum orbiculare). Leaf lesions start as water-soaked spots that enlarge into tan-to-brown, somewhat rounded or irregular blotches that may show concentric zonation and crack. The diagnostic sign is the production of acervuli bearing salmon-pink to orange spore masses, especially in moist conditions and on fruit. Fruit lesions are the hallmark: sunken, circular, water-soaked cankers with pink-to-dark sporulating centers. It is favored by warm, wet weather and spreads by rain-splashed conidia from infected debris and seed.",
+    "management_a": "Use pathogen-free/treated seed and resistant varieties; rotate out of cucurbits 2 years; avoid overhead irrigation and working in wet fields; remove infected debris. Copper-based bactericides (often with mancozeb) applied preventively can suppress spread; fungicides alone are ineffective because the cause is bacterial.",
+    "management_b": "Plant resistant cultivars and clean/treated seed; rotate 2-3 years away from cucurbits; bury or remove infected debris and improve airflow/drainage to reduce leaf wetness. Apply protectant and systemic fungicides (e.g., chlorothalonil, mancozeb, strobilurins/QoIs, or DMIs) preventively on a schedule during warm wet periods, with attention to fruit protection.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My cucumber leaves have tan-to-brown spots with kind of straight, blocky edges that follow the veins, and a lot of them have a wet, water-soaked look or a yellow ring around them. It showed up during the warm, muggy, rainy stretch and some leaves are starting to tear up and fall apart. I'm worried it'll get onto the fruit too.",
+      "decisive_lay_a": "Flip the leaf over and check the underside of the spots early in the morning: you'll see cloudy, milky droplets of ooze sitting on the surface. As they dry out, they leave behind a thin, crusty white film or flaky white scale, and there are no little dots, bumps, or fuzzy growth in the spots.",
+      "decisive_lay_b": "Look for tiny black dot-like specks inside the spots, often arranged in rings like a target. In wet weather these specks push out a salmon-pink to orange slimy, jelly-like goo of spores.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

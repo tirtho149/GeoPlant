@@ -1,0 +1,70 @@
+{
+  "pair_id": "blue-spruce__ceropsora-weirii__spruce-needle-rusts",
+  "kind": "disease",
+  "crop": "Blue Spruce",
+  "member_a_label": "Ceropsora Weirii",
+  "member_b_label": "Spruce Needle Rusts",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are Chrysomyxa-complex rusts producing orange/yellow spore masses and rust-colored sporulation on blue spruce needles, both cause needle yellowing, browning, and premature drop, both are favored by cool wet spring weather and affect lower branches first. A homeowner or scout seeing 'orange rusty spruce needles' cannot distinguish them without noting needle age, aecial morphology, and season.",
+    "shared_presentation": "Orange-to-yellow discoloration and rust-colored, powdery spore masses on Colorado blue spruce needles, with yellowing, browning, and premature needle drop that thins the crown; both worsen in cool, wet weather and typically start on lower/inner foliage before spreading upward via wind-blown spores.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "What time of year are the orange spore structures and bands first visible on the needles?",
+        "a_signal": "Symptoms and waxy pustules appear in late winter to early spring (roughly April-May, around budbreak); spores are released only in spring.",
+        "b_signal": "Orange spore structures appear in mid-to-late summer (July-August), with infected needles dropping in September.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which age class of needles bears the active spore-producing lesions?",
+        "a_signal": "Lesions and pustules form on one-year-old (previous-season) needles; current-year needles are infected but stay symptomless until the next spring.",
+        "b_signal": "Lesions form on the current-year needles at the branch tips that same season.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the gross pattern of discoloration on an infected one-year-old needle before sporulation?",
+        "a_signal": "Distinct yellow-orange transverse spots or BANDS that swell into raised, waxy cushion-like pustules girdling the needle.",
+        "b_signal": "More diffuse general yellowing of the young needle rather than discrete banding.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the fruiting bodies under a hand lens: what is the shape of the aecia erupting from the needle?",
+        "a_signal": "Waxy, blister-like yellow-orange CUSHIONS (pustules) flush with or swelling from the needle surface, releasing yellow-orange spores at budbreak.",
+        "b_signal": "Pale orange to white, elongate TUBE-LIKE or column projections standing up from the needle, shedding powdery orange spores.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is there an Ericaceous alternate host (Labrador tea, leatherleaf, bearberry, Rhododendron/Ledum) growing nearby, and does the rust require it?",
+        "a_signal": "Autoecious: completes its entire life cycle on Picea alone; no alternate host needed and disease persists year to year on isolated spruce.",
+        "b_signal": "Heteroecious: requires an Ericaceous alternate host nearby to complete the cycle, so outbreaks track proximity to bogs/heath plants.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Does the disease intensify and recur on the same tree even when no other host plants are present?",
+        "a_signal": "Yes; repeated self-reinfection thins the crown progressively year after year on the same isolated spruce.",
+        "b_signal": "No; severity fluctuates year to year and depends on spore showers from the alternate host, often sporadic.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Weir's cushion rust (Ceropsora/Chrysomyxa weirii) is an autoecious rust completing its whole life cycle on spruce, with Colorado blue spruce highly susceptible. Current-year needles are infected at budbreak in spring but remain symptomless for about 10 months; the following late winter to early spring, yellow-orange transverse bands appear on the now one-year-old needles and swell into waxy, blister-like 'cushion' pustules that erupt at budbreak (about April-May) to release yellow-orange spores onto the newly emerging needles. Affected one-year-old needles then turn rusty brown and drop through summer, thinning the crown over successive years. Because no alternate host is needed, it can build up and persist on isolated spruce.",
+    "narrative_b": "Spruce needle rusts caused by heteroecious Chrysomyxa species (e.g. C. ledicola) require an Ericaceous alternate host such as Labrador tea (Ledum/Rhododendron groenlandicum), leatherleaf, or bearberry. In spring, cool wet weather lets spores from the alternate host infect young, current-year spruce needles. By July-August those needles yellow and produce pale orange to white, tube-like aecial columns that shed powdery orange spores, which blow back to the alternate host rather than to spruce. Infected current-year needles drop in September. Severity is sporadic and tied to proximity of the alternate host; healthy trees usually tolerate it with mostly aesthetic damage.",
+    "management_a": "Usually cosmetic on established trees; avoid overhead irrigation and improve air circulation to shorten leaf-wetness periods. For high-value specimens, protective fungicide (e.g. chlorothalonil or appropriate labeled product) timed to budbreak when pustules are erupting and spores dispersing in spring; repeat per label during the spring spore-release window. Remove and dispose of heavily infected interior/lower branches; maintain tree vigor. Source disease-free nursery stock since the pathogen persists on spruce alone.",
+    "management_b": "Often not damaging enough to warrant control on otherwise healthy trees; manage chiefly for aesthetics. Where feasible, remove nearby Ericaceous alternate hosts (Labrador tea, leatherleaf, bearberry, Rhododendron) to break the cycle, though this is impractical near natural bog/heath areas. For valued trees, apply a protective fungicide in spring during young-needle emergence and cool wet periods to protect current-year growth from alternate-host spores. Maintain tree vigor; infected needles will shed by fall.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "The needles on my blue spruce are turning yellow and orange, with a rusty, orange powdery dust that rubs off on my fingers. The needles are browning and dropping early, thinning out the tree, and it started on the lower, inner branches in cool, wet weather before working its way up.",
+      "decisive_lay_a": "Look for waxy, blister-like yellow-orange bumps or cushions sitting right on the needle surface (or swelling up out of it) that burst open and release yellow-orange dust around the time new buds open.",
+      "decisive_lay_b": "Look for pale orange to white, skinny tube-like or column-shaped stalks standing straight up off the needle, which shed an orange powder when bumped.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

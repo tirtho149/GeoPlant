@@ -1,0 +1,70 @@
+{
+  "pair_id": "watermelon__bacterial-fruit-blotch__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Bacterial Fruit Blotch",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both diseases produce dark, water-soaked-to-necrotic lesions on watermelon foliage and can severely damage fruit, and both are seed/seedling-borne problems that show up early in transplant production. In the field, leaf spotting and fruit rot from the two can be mistaken for one another, especially before a definitive sign (bacterial ooze vs fungal pycnidia) is examined.",
+    "shared_presentation": "Dark, water-soaked angular-to-irregular foliar lesions; problems traceable to infested seed and crowded, humid transplant greenhouses; cotyledon and seedling symptoms; and economically damaging rind/fruit lesions. Both spread in warm, wet, splashing-rain conditions and can cause stand loss in seedling trays.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the most damaging/diagnostic symptom expressed \u2014 on the fruit rind or on the main stem/crown?",
+        "a_signal": "Primary damage on the FRUIT: olive-green to dark water-soaked blotch on the upper rind surface that enlarges and may crack and ooze; flesh underneath stays firmer initially",
+        "b_signal": "Primary damage on the STEM/CROWN: water-soaked to tan cankers at nodes and crown, often girdling, with characteristic amber-to-reddish gummy exudate",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the character of the foliar lesions?",
+        "a_signal": "Angular, dark-brown to black water-soaked lesions delimited by leaf veins, often with a faint yellow halo, no fungal fruiting bodies",
+        "b_signal": "Larger circular-to-irregular tan/brown necrotic spots, often starting at the leaf margin in a V-shape or wedge, with concentric zonation",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine a fresh lesion margin: cut and place in water for streaming, then inspect dried tissue with a hand lens \u2014 bacterial ooze or fungal pycnidia?",
+        "a_signal": "Milky bacterial streaming from a cut lesion in a water-mount; no fruiting bodies; cotyledon lesions ooze when crushed",
+        "b_signal": "Tiny black pinpoint pycnidia (and sometimes pseudothecia) embedded in necrotic tissue; gummy ooze on stem cankers; no bacterial streaming",
+        "weight": "decisive"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "How does the fruit-stage damage relate to fruit maturity?",
+        "a_signal": "Rind blotch becomes severe as fruit approaches maturity/sizing; the disease is notorious for striking just before harvest",
+        "b_signal": "Fruit rot (black rot) more often enters through wounds/blossom end and at handling, with internal black decay and pycnidia on the rotted surface",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the lesion advance over time?",
+        "a_signal": "Foliar lesions stay relatively small and vein-limited; the dramatic phase is rapid rind blotch expansion under warm wet conditions",
+        "b_signal": "Stem canker progressively girdles, causing whole-vine wilt and collapse from the crown outward; lesions enlarge into broad necrotic zones",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions drive the worst outbreaks?",
+        "a_signal": "Warm temperatures with overhead irrigation/rain and high humidity in transplant houses; thrives at high temperature (~30C) with leaf wetness",
+        "b_signal": "Prolonged leaf wetness and moderate-to-warm humid weather; favored by dense canopies and is also strongly tied to crown/stem wounding and pruning",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial Fruit Blotch (BFB), caused by Acidovorax citrulli (formerly Acidovorax avenae ssp. citrulli), is the single most feared bacterial disease of watermelon. It is overwhelmingly seedborne and seedling-borne: contaminated seed produces water-soaked cotyledon and seedling lesions in transplant houses, where overhead irrigation splashes the bacterium across trays and creates symptomless carriers. The signature symptom is on the fruit \u2014 an irregular olive-green to dark, greasy water-soaked blotch on the upper rind that enlarges, may crack, and exudes bacterial ooze, often appearing just as fruit approaches maturity and devastating an otherwise marketable crop. Foliar lesions are dark, angular, and vein-delimited, sometimes with a yellow halo, but lack any fungal fruiting bodies. The definitive confirmation is bacterial streaming from a cut lesion margin in a water mount and the absence of pycnidia.",
+    "narrative_b": "Gummy Stem Blight, caused by the fungus Stagonosporopsis cucurbitacearum (anamorph Phoma/Didymella complex), attacks watermelon at all stages but is named for its hallmark: water-soaked to tan stem and crown cankers that exude an amber, reddish-brown gummy resin and tend to girdle the vine, causing wilt and collapse. On leaves it produces larger circular-to-irregular tan necrotic spots, frequently wedge-shaped from the margin inward and showing concentric zonation, dotted with tiny black pycnidia. Its fruit phase, often called black rot, enters through wounds or the blossom end and produces internal black decay studded with fruiting bodies. The disease is seedborne and favored by prolonged leaf wetness and dense, humid canopies, and is aggravated by stem wounding from pruning or handling. The decisive diagnostic is the presence of pinpoint black pycnidia in necrotic tissue together with gummy stem exudate and no bacterial streaming.",
+    "management_a": "Start with pathogen-tested (seed-health assayed) seed and transplants; this is the foremost control because the disease is seedborne. Avoid overhead irrigation in transplant production, reduce plant density, and rogue symptomatic seedlings aggressively. Apply copper bactericides preventively in the greenhouse and field, rotate out of cucurbits, sanitize trays/tools, and manage volunteer cucurbits and weeds. There is no rescue treatment once fruit blotch appears, so prevention and clean seed are paramount.",
+    "management_b": "Use pathogen-tested seed and resistant/tolerant varieties where available; treat or hot-water-treat seed to reduce seedborne inoculum. Rotate at least 2-3 years away from cucurbits, improve air circulation and avoid prolonged leaf wetness, and avoid unnecessary stem wounding. Apply protectant and systemic fungicides (e.g., chlorothalonil plus QoI/SDHI or DMI products) on a preventive schedule, rotating FRAC groups to manage resistance, and incorporate or remove infected crop debris promptly.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My watermelon seedlings and young plants have dark, wet-looking blotches on the leaves and the baby seed-leaves, and the spots have odd angular or ragged edges like they're soaked with water. It started showing up in the crowded, humid greenhouse trays and seems worse after warm rainy spells, and now I'm seeing damaged, sunken marks on some of the rinds too.",
+      "decisive_lay_a": "Cut into a fresh wet spot and set the piece in a clear glass of water: if a milky, cloudy thread or haze streams out and clouds the water, and crushing a spotted seed-leaf gives a slimy ooze, that points to the bacterial problem. You will NOT see any tiny black specks or bumps in the spots.",
+      "decisive_lay_b": "Look closely at dead, dried-out brown tissue and especially at stem cracks: you will see lots of tiny black pinpoint dots or specks peppered in the dead tissue, often with a gummy, amber, sap-like ooze seeping from splits in the stem. There is no milky cloud when you put a cut spot in water.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

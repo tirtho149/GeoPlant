@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__downy-mildew__soybean-vein-necrosis-virus",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Downy Mildew",
+  "member_b_label": "Soybean Vein Necrosis Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-irregular chlorotic/pale-green to yellow foliar lesions on upper soybean leaves during mid-to-late vegetative and reproductive stages, and both can look like a diffuse mottling/vein-associated discoloration from a distance, leading scouts to confuse them\u2014especially before sporulation or necrosis develops.",
+    "shared_presentation": "Scattered pale-green to yellow chlorotic blotches on upper canopy leaves that can appear angular or vein-delimited, often noticed during R-stage scouting and easily mistaken for one another at a glance.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Turn the leaf over and inspect the underside of the chlorotic spots with a hand lens (or after a dew period): is there a fuzzy growth versus none?",
+        "a_signal": "Pale gray to purplish downy fungal growth (sporangiophores/sporangia) on the LOWER leaf surface directly beneath the chlorotic spots",
+        "b_signal": "No fungal growth on the underside; lesions are dry with no fuzz, only discoloration and possible necrosis",
+        "weight": "decisive"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "How is the chlorosis/necrosis arranged relative to the leaf veins?",
+        "a_signal": "Diffuse pale-green to yellow angular blotches bounded by veinlets, not following a single vein line",
+        "b_signal": "Chlorosis and reddish-brown necrosis that begins along and clears/spreads from the main veins (vein-associated necrosis)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do affected lesions evolve over the following 1-2 weeks?",
+        "a_signal": "Spots stay yellow then turn grayish-brown; underside remains the diagnostic feature; rarely systemic",
+        "b_signal": "Vein clearing progresses to vein necrosis, intervein chlorosis, then bronzing/reddish-brown necrotic patches and leaf death",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Is an arthropod vector association evident (thrips presence/feeding scars)?",
+        "a_signal": "No insect vector; spread is by airborne/splash-dispersed sporangia favored by free moisture",
+        "b_signal": "Thrips-vectored (e.g., Neohydatothrips variabilis); thrips feeding and populations associated with onset",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What weather preceded symptom onset?",
+        "a_signal": "Cool, wet, humid conditions with prolonged leaf wetness/dew favor sporulation and new infection",
+        "b_signal": "Onset tracks thrips activity and warm conditions rather than leaf-wetness events",
+        "weight": "weak"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are pods/seeds affected with any crusty residue?",
+        "a_signal": "Pods/seeds can be infected; seeds may show a white to tan crust of oospores (mildew encrustation)",
+        "b_signal": "Symptoms confined to foliage; no pod/seed encrustation attributable to this virus",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Downy Mildew (Peronospora manshurica) is an oomycete disease favored by cool, humid weather and prolonged leaf wetness. On upper-canopy leaves it produces pale-green to light-yellow angular spots bounded by veinlets; the diagnostic sign is the pale gray to purplish downy sporulation (sporangiophores and sporangia) on the LOWER leaf surface directly beneath each chlorotic spot, best seen after dew or in a moist chamber. Spots later turn grayish-brown. Infected pods/seeds may carry a white-to-tan crust of oospores. Spread is by airborne and splash-dispersed sporangia\u2014no insect vector. It is generally cosmetic in the US with little yield impact.",
+    "narrative_b": "Soybean Vein Necrosis Virus (SVNV, an orthotospovirus) is a thrips-transmitted virus, vectored chiefly by Neohydatothrips variabilis and other thrips species. Symptoms begin as vein clearing along main leaf veins, progressing to vein-associated reddish-brown necrosis, intervein chlorosis, bronzing, and eventually large necrotic patches and premature leaf death. There is NO fungal growth on the leaf underside\u2014lesions are dry. Symptoms are foliar only, with no pod/seed encrustation. SVNV is now widespread across US soybean regions; its onset and severity track thrips populations and movement rather than leaf-wetness events. Yield effects are generally limited but it is increasingly common.",
+    "management_a": "Downy mildew rarely warrants treatment in commercial soybeans. Use resistant varieties where available, rotate crops, and rely on clean (oospore-free) seed; fungicide seed treatments and foliar fungicides are seldom economically justified given minimal yield impact.",
+    "management_b": "No curative treatment for SVNV. Management is indirect: plant tolerant/less-susceptible varieties where identified, manage thrips and weed/volunteer reservoirs, and avoid relying on insecticides for control since thrips management has not reliably reduced virus incidence. Confirm diagnosis (RT-PCR/ELISA) since field symptoms overlap with other stresses.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "During R-stage scouting I'm seeing scattered pale-green to yellow blotches on the upper leaves. Some of the patches look angular or seem to follow the veins, and I can't tell what's causing it.",
+      "decisive_lay_a": "Flip the leaf over and look right under the yellow spots for a pale gray to purplish fuzzy or downy growth on the underside.",
+      "decisive_lay_b": "Flip the leaf over and the underside is dry with no fuzz at all, just discoloration and some browning or dead patches.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

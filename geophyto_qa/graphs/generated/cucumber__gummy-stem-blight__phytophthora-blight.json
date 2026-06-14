@@ -1,0 +1,63 @@
+{
+  "pair_id": "cucumber__gummy-stem-blight__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Gummy Stem Blight",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce water-soaked, rapidly expanding lesions on cucumber stems, crowns, and fruit, can cause vine collapse, and thrive in warm wet weather, so early-stage stem/fruit rot is easily confused in the field. They diverge on the cardinal sign: Gummy Stem Blight exudes amber gummy ooze and forms black pycnidia/perithecia on tan dry-rotting tissue, while Phytophthora Blight produces a wet, soft, often water-soaked rot with white cottony sporangial growth and no gum.",
+    "shared_presentation": "Warm-season cucurbit collapse: water-soaked stem and crown lesions, fruit rot, and rapid wilting of vines after periods of high humidity, rain, or overhead irrigation. Both can girdle the stem and kill plants, and both attack fruit in contact with wet soil or splashed by rain.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the rot centered and how does it relate to the soil line?",
+        "a_signal": "Lesions concentrated on aerial stems, nodes, leaf margins, and crown; not necessarily soil-contact driven; cankers at pruning wounds or leaf scars",
+        "b_signal": "Rot initiates at or near the soil line, on crown/roots and on fruit lying on wet soil; clearly tied to saturated soil and splash",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and color of the rotting tissue?",
+        "a_signal": "Tan-to-brown dry-firm lesions that crack; lesions often start at leaf margins as V-shaped tan blotches",
+        "b_signal": "Soft, wet, mushy, dark water-soaked collapse of tissue; greasy appearance, rapid soft rot",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions preceded the outbreak and where in the field?",
+        "a_signal": "Follows prolonged leaf wetness/high humidity; spreads via splash and handling; not specifically low spots",
+        "b_signal": "Flares in low, poorly drained, flooded areas after heavy rain or irrigation; standing water and saturated soil are key",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the lesion and plant collapse develop?",
+        "a_signal": "Cankers and leaf blight develop over days; stem girdling is progressive with visible gumming",
+        "b_signal": "Extremely rapid (hours to a day or two) wilt and collapse once crown is infected; whole-plant blight can sweep a low area",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the lesion surface and margin closely (hand lens): is there amber gum with embedded black fruiting bodies, or white cottony growth with no gum?",
+        "a_signal": "Amber/reddish-brown gummy exudate beads from stem cankers; tiny black pycnidia and perithecia (speckling) stud the tan tissue",
+        "b_signal": "White, cottony, downy sporangial growth on the lesion surface under humid conditions; NO gum and NO black pycnidia; tissue is water-soaked",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Gummy Stem Blight (Stagonosporopsis cucurbitacearum, formerly Didymella bryoniae) is an Ascomycete that attacks all aboveground parts. Leaf infections begin as tan, V-shaped lesions at the margin, often with concentric zonation, sometimes confused with Alternaria. The diagnostic signature is on the stem: elongated cankers, frequently at nodes, pruning wounds, or leaf scars, that exude amber to reddish-brown gummy ooze. As lesions mature the tan, dry, cracking tissue becomes studded with minute black pycnidia (asexual) and perithecia (sexual stage), visible as dark speckling with a hand lens. Stem girdling causes wilting and death. The black fruiting bodies (Black Rot when on fruit) and gum distinguish it from oomycete rots.",
+    "narrative_b": "Phytophthora Blight (Phytophthora capsici) is an oomycete (water mold) favored by saturated soils and warm, wet weather. On cucumber it causes crown and root rot at the soil line, rapid wilt, and a destructive wet fruit rot on fruit contacting wet soil. Infected tissue is soft, dark, and water-soaked, and under high humidity the lesion surface is covered with a characteristic white, cottony to powdery growth of sporangia (a sugar-coated appearance on fruit). There is no gum and no black pycnidia. Spread is by splashing rain and water-borne motile zoospores, so outbreaks center on low, poorly drained, or flooded areas and can collapse whole sections of a field within days. The pathogen produces long-lived oospores that persist in soil.",
+    "management_a": "Use pathogen-free seed and transplants; rotate out of cucurbits 2-3 years; improve air circulation and avoid prolonged leaf wetness; remove and destroy infected debris. Protectant and systemic fungicides (e.g., chlorothalonil tank-mixed with FRAC-7 SDHIs or FRAC-11 QoIs, rotating modes of action to manage resistance, which is common in this pathogen) on a preventive schedule. Avoid working plants when wet.",
+    "management_b": "Manage water first: plant on raised beds, ensure excellent drainage, avoid overhead/excess irrigation, and never allow standing water. Long rotations (3-4+ years) away from cucurbits and other hosts (peppers, tomatoes, eggplant); do not move soil/water from infested fields. Oomycete-specific fungicides (mefenoxam/metalaxyl where not resistance-compromised, plus FRAC-21 cyazofamid, FRAC-40 dimethomorph/mandipropamid, FRAC-49 oxathiapiprolin, phosphonates) applied preventively and directed at the crown. Harvest fruit before contact rot; cull infected fruit.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "After some hot, rainy, humid weather my cucumber vines started wilting fast and dying back. The stems and the base of the plant have dark, wet-looking soft patches like they got soaked, and the fruit touching the ground is rotting. Whole plants are collapsing within a day or two.",
+      "decisive_lay_a": "Look for sticky amber or reddish-brown gummy beads or ooze drying on the cracked stem, and tiny black specks like ground pepper peppered across the tan, dried-out bark.",
+      "decisive_lay_b": "Look for a white, cottony or fuzzy growth, almost like cobwebs or dusty mold, on the surface of the wet rotting spots when it stays damp and humid; no gum and no black specks, just soft water-soaked tissue.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

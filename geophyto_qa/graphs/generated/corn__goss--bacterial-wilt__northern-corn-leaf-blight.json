@@ -1,0 +1,70 @@
+{
+  "pair_id": "corn__goss--bacterial-wilt__northern-corn-leaf-blight",
+  "kind": "disease",
+  "crop": "Corn",
+  "member_a_label": "Goss' Bacterial Wilt",
+  "member_b_label": "Northern Corn Leaf Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce long, tan-to-gray necrotic leaf lesions on corn that run parallel to the veins and can be confused at a roadside glance, especially mid-to-late season. Scouts frequently mistake elongating Goss's wilt streaks for NCLB cigar lesions and vice versa, and both are favored by similar humid summer weather, so a reliable split requires examining lesion margins, the presence of bacterial ooze/freckles versus fungal sporulation, and how the lesion follows the veins.",
+    "shared_presentation": "Long tan-to-grayish necrotic foliar lesions on corn leaves that develop after canopy closure, can coalesce to blight large portions of the leaf, look water-soaked early, and are promoted by warm, humid/wet weather. Both can cause significant yield loss and premature leaf death, and both lesions tend to elongate down the leaf blade.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and margin of the lesion relative to the leaf veins?",
+        "a_signal": "Lesions are linear, wavy-margined streaks that run ALONG the veins with irregular, water-soaked leading edges, often starting from a leaf wound or wind-injury site",
+        "b_signal": "Lesions are classic cigar/canoe-shaped elliptical blotches (1-6 inches) that are NOT confined by veins, with smooth tapering ends",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Are there dark, glistening 'freckles' (water-soaked spots) within and ahead of the lesion when backlit?",
+        "a_signal": "Dark green to black, shiny, translucent freckles/water-soaked flecks scattered within and just ahead of the advancing lesion margin (pathognomonic)",
+        "b_signal": "No freckles; lesion margin is a uniform necrotic front without discrete translucent flecks",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What appears on the lesion surface \u2014 shiny dried bacterial exudate or dark fuzzy fungal sporulation?",
+        "a_signal": "Surface shows a glistening, varnish-like sheen of dried bacterial ooze that flakes off; NO spores, even in a humid chamber",
+        "b_signal": "Olive-green to grayish-black dusty fungal sporulation (conidia) develops on lesion surface, especially under high humidity or after incubation",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "Did symptoms follow a hail, wind, or sand-blasting injury event?",
+        "a_signal": "Outbreak strongly tied to recent hail/wind injury that created wounds for bacterial entry; often in a storm-track pattern across the field",
+        "b_signal": "Develops without a wounding event; favored simply by extended leaf wetness, dew, and moderate temperatures regardless of storm damage",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "Does the disease progress into a systemic vascular wilt?",
+        "a_signal": "Can advance to systemic infection \u2014 cut the stalk and vascular bundles are discolored (orange/brown), with slimy ooze; seedling wilt and plant death possible",
+        "b_signal": "Remains a foliar blight; no vascular discoloration or stalk ooze, plant does not systemically wilt from this pathogen",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Does a cut leaf section ooze bacterial streaming in a water drop under a hand lens/microscope?",
+        "a_signal": "Cut lesion edge in water produces visible bacterial streaming/cloudiness (bacterial pathogen)",
+        "b_signal": "No bacterial streaming; wet-mount or incubation reveals large multi-septate fungal conidia instead",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Goss's bacterial wilt and leaf blight is caused by the Gram-positive bacterium Clavibacter michiganensis ssp. nebraskensis. It enters through wounds (hail, wind, sand abrasion) and infested residue, producing long, wavy, water-soaked-to-tan leaf streaks that run along the veins. Two near-diagnostic features set it apart: dark, glistening 'freckles' (discrete water-soaked flecks) within and ahead of the lesion, and a shiny, varnish-like film of dried bacterial exudate on the leaf surface that flakes off when scratched. Because it is bacterial, there is never fungal sporulation, and cut tissue streams bacteria in water. Severe infections become systemic, discoloring vascular bundles and causing seedling wilt and stalk rot. It overwinters in corn residue and is favored by continuous corn, reduced tillage, and storm injury.",
+    "narrative_b": "Northern corn leaf blight is caused by the fungus Exserohilum turcicum (Setosphaeria turcica). It produces the classic large, elliptical, cigar- or canoe-shaped gray-green to tan lesions, typically 1-6 inches long, that are not bounded by veins and that taper at both ends. Under humid conditions or after incubation, olive-green to dark gray dusty sporulation (multi-septate conidia) develops on the lesion surface \u2014 the key sign distinguishing it from bacterial Goss's wilt. Lesions usually appear first on lower leaves and move upward; severe blighting before grain fill causes major yield loss. The fungus survives in residue, is favored by moderate temperatures (65-80F) and extended leaf wetness/dew, and is managed largely through resistant hybrids (including Ht genes) and fungicides.",
+    "management_a": "No fungicides work \u2014 it is bacterial. Manage with resistant/tolerant hybrids (the primary tool), crop rotation away from corn (1-2 years), tillage to break down infested residue, and control of grassy weed/volunteer hosts. Avoid spreading via equipment after storms. Scouting after hail events is key; there is no effective in-season rescue treatment.",
+    "management_b": "Use resistant hybrids (partial/quantitative resistance and race-specific Ht genes), rotation and residue management (tillage/decomposition) to reduce inoculum, and well-timed foliar fungicides (e.g., strobilurin/triazole/SDHI mixes) applied around tasseling/silking when disease appears on lower leaves under conducive weather, particularly on susceptible hybrids and in continuous corn.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "After the canopy closed in, my corn leaves started showing long tan-to-grayish dead streaks that run lengthwise down the blade. They looked wet or water-soaked at first, and now several are running together and killing off big patches of the leaf. It's been warm and humid/wet, and the lower leaves are dying back early.",
+      "decisive_lay_a": "Look for a shiny, glassy, varnish-like crust or glaze on the surface of the dead streaks, almost like dried, polished ooze that you can flake or scratch off with a fingernail. Even if you seal a leaf in a damp bag overnight, NO fuzzy or dusty growth shows up.",
+      "decisive_lay_b": "Look for a dusty, olive-green to grayish-black fuzz or smudge growing right on top of the dead streaks, especially in muggy weather or after you keep a leaf in a damp bag overnight. It will smear or rub off like powder on your finger.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

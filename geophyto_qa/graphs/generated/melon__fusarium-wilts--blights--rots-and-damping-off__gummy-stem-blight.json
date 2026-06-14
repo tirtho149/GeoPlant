@@ -1,0 +1,70 @@
+{
+  "pair_id": "melon__fusarium-wilts--blights--rots-and-damping-off__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Fusarium Wilts, Blights, Rots And Damping-Off",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are economically important melon (cucurbit) diseases that can produce stem cankers, vascular/internal discoloration, plant collapse, and damping-off of seedlings. In the field a wilting/declining melon vine with a basal stem lesion can be caused by either Fusarium oxysporum f. sp. melonis (Fusarium wilt) or Stagonosporopsis cucurbitacearum (gummy stem blight / black rot). Both can produce amber gum exudation from the crown/stem, attack the same crop, and cause sudden vine death near fruiting, so they are genuinely confused without examining signs and symptom distribution.",
+    "shared_presentation": "Wilting, declining or collapsing melon vines, often appearing near flowering/fruit set; stem lesions/cankers at or near the crown; amber gum exudate possible from cracked stem tissue; seedling damping-off; internal stem/vascular discoloration; reduced vigor and possible whole-plant death in patches across the field.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Examine lesions and stem surface for fruiting bodies: are there tiny black pycnidia/perithecia speckling the canker, or pinkish-white fungal growth on cut vascular tissue?",
+        "a_signal": "No black pycnidia; in humid conditions whitish to pink mycelial/sporodochial growth (Fusarium) may appear on the surface of cut, rotting tissue, and vascular streaks are tan/brown",
+        "b_signal": "Numerous minute black pycnidia (and later perithecia) embedded in tan-to-bleached cankers on the stem, leaves and crown, giving a peppered appearance",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where is the primary lesion/discoloration located and does it follow the vascular system or the stem surface?",
+        "a_signal": "Internal browning of the vascular bundles (xylem) extending up the stem from the roots/crown; a one-sided wilt and brown vascular streak when stem is split lengthwise",
+        "b_signal": "Surface canker on the stem/crown and water-soaked spots/blights on leaf margins; lesion is in cortical/epidermal tissue, not confined to vascular strands",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is the dominant symptom a systemic vascular wilt or a localized stem canker plus foliar blight?",
+        "a_signal": "Systemic wilt: yellowing then wilting of whole runners or the entire plant, often starting on one side, driven from roots upward",
+        "b_signal": "Stem canker with characteristic gummy amber ooze plus tan leaf-margin blight and circular leaf spots; wilting is secondary to girdling cankers",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Does the gummy/amber exudation come from a discrete cracked canker or is it incidental?",
+        "a_signal": "Gumming is uncommon and not the hallmark; decline is driven by vascular plugging rather than a gummy canker",
+        "b_signal": "Reddish-amber to brown gummy beads ooze from cracked stem cankers (the namesake 'gummy stem'), classic at nodes and crown",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "On melon fruit, is there a rind/flesh rot and what does it look like?",
+        "a_signal": "Fruit rot less typical; if present, associated with root/crown decay and may show pink/white mold",
+        "b_signal": "Black rot of fruit: firm dark sunken decay with pycnidia, often originating at the blossom or stem end (caused by the same fungus)",
+        "weight": "weak"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease spread and progress through the field and season?",
+        "a_signal": "Soilborne, persists in soil for years; spreads via roots/soil, worsens with monoculture and warm soils; once-planted fields stay infested",
+        "b_signal": "Spreads above-ground by rain-splashed and wind-blown spores from infected debris/seed; favored by extended leaf wetness and humid canopies, can move rapidly leaf-to-leaf",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Fusarium wilt of melon (Fusarium oxysporum f. sp. melonis, with related Fusarium spp. causing blights, fruit/root rots and damping-off) is a soilborne, host-specific vascular pathogen. It infects through roots, colonizes the xylem, and plugs the vascular system. Classic field signs are runner-by-runner or one-sided yellowing and wilting, frequently appearing as plants approach fruit load. Splitting the lower stem reveals brown-streaked vascular bundles rather than a surface canker. In humid weather, pink-white mycelium or sporodochia may form on dead/cut tissue, but there are NO black pycnidia. Seedlings can damp-off. The fungus survives in soil for many years as chlamydospores, so infested fields show recurring, patchy decline tied to soil and to specific physiologic races; resistance and grafting are the key controls.",
+    "narrative_b": "Gummy stem blight (Stagonosporopsis cucurbitacearum, anamorph Didymella/Phoma; the fruit phase is 'black rot') is an above-ground, debris- and seedborne fungus favored by warm, wet, humid conditions and prolonged leaf wetness. Its hallmark is a tan-to-bleached stem/crown canker that cracks and exudes reddish-amber gummy beads, peppered with minute black pycnidia (later perithecia). It also produces circular leaf spots, V-shaped tan leaf-margin blight, and a firm black fruit rot studded with pycnidia. Girdling cankers at the crown can cause wilting that mimics a vascular wilt, but the disease lives in cortical/surface tissue, not confined to the xylem, and spreads rapidly by splashing/wind-blown spores within a humid canopy. Confirming the black pycnidia in the gummy canker is diagnostic.",
+    "management_a": "Use resistant/tolerant cultivars matched to the local Fusarium race and grafting onto resistant rootstocks. Practice long rotations (4+ years) out of cucurbits, since the fungus persists in soil; avoid moving infested soil. Manage soil pH (raising toward neutral) and use nitrate rather than ammonium nitrogen to suppress disease. Plant in well-drained soil, avoid root stress and root-knot nematodes (which worsen wilt), and use clean transplants and sanitized equipment. Soil solarization or fumigation can reduce inoculum in high-value plantings. No effective foliar fungicide cure once vascular infection is established.",
+    "management_b": "Start with certified disease-free, treated seed and resistant cultivars where available; the fungus is seed- and debris-borne. Rotate 2-3 years out of cucurbits and deep-bury or destroy infected crop residue. Reduce leaf wetness and canopy humidity: wider spacing, drip irrigation, trellising, and avoiding overhead irrigation late in the day. Apply protectant and systemic fungicides preventively (e.g., chlorothalonil, plus FRAC-rotated DMI, QoI and SDHI products), scouting for early cankers and managing resistance by alternating modes of action. Promptly remove and destroy infected plants and practice strict greenhouse/transplant sanitation since the pathogen spreads readily in transplant houses.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My melon vines are wilting and collapsing right around flowering and fruit set, with some plants dying out in patches across the field. There are sunken, cracked, discolored areas on the stems near the base, sometimes oozing a sticky amber gum, and when I cut a stem open the inside is streaked brown.",
+      "decisive_lay_a": "Look at the cut, rotting stem and crown tissue: there are NO tiny black specks. Instead, in damp or humid weather you may see whitish to pinkish fuzzy or moldy growth on the surface of the cut, rotting tissue, and the streaks inside the stem are tan to brown.",
+      "decisive_lay_b": "Look at the tan-to-bleached dead patches on stems, leaves and crown: they are dotted with lots of tiny black specks (pinhead-sized or smaller) embedded in the tissue, giving it a peppered, sprinkled-with-black-pepper look.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

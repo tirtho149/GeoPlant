@@ -1,0 +1,70 @@
+{
+  "pair_id": "eggplant__diaporthe-vexans-gratz__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Eggplant",
+  "member_a_label": "Diaporthe Vexans Gratz",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause fruit rot, leaf lesions, and stem/dieback symptoms on eggplant, and both can collapse plants in warm wet weather. Field diagnosticians frequently confuse the fruit-rot phase in particular, but the sign vectors (pycnidia vs. white sporangial growth) and tissue behavior differ fundamentally.",
+    "shared_presentation": "Dark, sunken to spreading lesions on fruit, leaf spotting, and stem cankers/dieback during warm, humid weather, with both capable of causing rapid fruit rot and plant collapse in the field and in storage/transit.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What moisture and temperature conditions preceded the outbreak?",
+        "a_signal": "Develops in warm, humid, rainy weather generally; favored by overhead moisture and crowded canopies but not dependent on standing water or saturated soil.",
+        "b_signal": "Erupts explosively after heavy rain, flooding, or poorly drained/saturated soil (waterlogging), with disease following surface-water and splash patterns from the soil line.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where does the disease begin and concentrate on the plant?",
+        "a_signal": "Lesions appear on leaves, stems, and especially fruit anywhere on the plant; seedling damping-off and stem girdling at soil line also occur (seedborne pathway).",
+        "b_signal": "Begins low on the plant near the soil line as crown/stem rot and rapidly girdles, plus fruit rot on low-hanging fruit splashed from soil; classic wilting from a basal stem lesion.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and margin of the fruit lesion?",
+        "a_signal": "Tan to brown circular/oval sunken lesions that become dry and corky, often coalescing into large rotted zones with a firm-to-mummified texture.",
+        "b_signal": "Soft, watery, rapidly spreading rot that keeps the fruit relatively soft and mushy, with diffuse advancing margins rather than discrete corky spots.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the lesion and plant collapse advance?",
+        "a_signal": "Comparatively slower, lesions enlarge over days and fruit dries/mummifies; chronic dieback and progressive blighting.",
+        "b_signal": "Extremely rapid; plants can wilt and collapse within 1-3 days of basal infection and fruit can rot within a day or two after heavy rain.",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What pathogen sign appears on the lesion when examined closely or after incubation in a moist chamber?",
+        "a_signal": "Numerous tiny black pycnidia (pimple-like fruiting bodies) embedded in the lesion, often in concentric rings, exuding cream/amber spore tendrils (cirrhi) when moist; no white fuzzy growth.",
+        "b_signal": "White, cottony to powdery sporangial growth (mold) over the lesion surface under humid conditions; no embedded black pycnidia, no dry tendrils.",
+        "weight": "decisive"
+      },
+      {
+        "axis": "habit",
+        "question": "Does the fruit symptom persist into storage/transit and mummify, or liquefy?",
+        "a_signal": "Infected fruit dry down and mummify, frequently developing in storage/transit and remaining firm/corky with abundant pycnidia.",
+        "b_signal": "Infected fruit break down into a soft, leaking rot that liquefies and is often colonized by secondary soft-rot organisms.",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Diaporthe vexans (anamorph Phomopsis vexans) is a seedborne and residue-borne fungus causing Phomopsis blight of eggplant. It produces tan-brown, dry, sunken, corky lesions on leaves, stems, and fruit, with seedling damping-off and stem girdling at the soil line. The diagnostic sign is abundant tiny black pycnidia embedded in the lesions, often arranged in concentric rings, exuding cream to amber spore tendrils under moisture. Fruit lesions enlarge slowly and the fruit dries and mummifies, frequently worsening in storage and transit. It thrives in warm, humid weather but does not require soil saturation.",
+    "narrative_b": "Phytophthora capsici is a soilborne oomycete (water mold) causing Phytophthora blight. It is driven by heavy rain, flooding, and saturated, poorly drained soils, and typically begins as crown/stem rot at the soil line that rapidly girdles and wilts the plant, plus a soft, watery rot of low-hanging fruit splashed from the soil. Collapse can occur within days. Under humidity the pathogen produces white, cottony to powdery sporangial growth on lesion surfaces, with no black pycnidia. The rot stays soft and watery, liquefying rather than mummifying.",
+    "management_a": "Use certified disease-free or hot-water-treated seed and resistant cultivars; rotate out of eggplant/Solanaceae for 2-3 years; remove and destroy crop debris and mummified fruit; improve air circulation and avoid prolonged leaf wetness; apply protectant fungicides (e.g., chlorothalonil, mancozeb, or labeled DMI/strobilurin products) preventively starting early.",
+    "management_b": "Prioritize water management: plant on raised beds with excellent drainage, avoid overwatering and flooding, and never let water move from infested to clean blocks; rotate with non-host crops (avoid cucurbits, peppers, tomato) for 3+ years; apply oomycete-specific products (mefenoxam/metalaxyl, with care for resistance; cyazofamid, mandipropamid, oxathiapiprolin, phosphonates) and rotate FRAC groups; remove infected plants and avoid harvesting/handling wet fruit.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My eggplants are getting dark, sunken, spreading spots on the fruit, with some spotting on the leaves and dieback on the stems. It's been warm and muggy, and the affected fruit are rotting fast, both out in the field and after I pick them.",
+      "decisive_lay_a": "Look closely at the dark spots for lots of tiny black pimple-like specks set into the surface, often arranged in rings; when it's damp these bumps push out little cream-to-amber threads or beads of ooze. No white fuzzy mold.",
+      "decisive_lay_b": "Look for a white, cottony to powdery mold growing right on top of the rotted area, especially in humid weather. No tiny black specks or dry threads embedded in the spot.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

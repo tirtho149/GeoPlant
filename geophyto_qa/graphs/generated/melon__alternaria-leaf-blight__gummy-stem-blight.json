@@ -1,0 +1,70 @@
+{
+  "pair_id": "melon__alternaria-leaf-blight__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Alternaria Leaf Blight",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce tan-to-brown necrotic foliar lesions with concentric zonation and chlorotic halos on melon/cantaloupe in warm humid conditions, often appearing mid-to-late season and causing defoliation. Early foliar symptoms overlap heavily, and both can carry small dark pycnidia/conidiophore-bearing structures visible only with a hand lens, so field misdiagnosis on leaves alone is common.",
+    "shared_presentation": "Circular to angular tan-brown necrotic leaf spots with concentric rings and yellow halos, beginning on older crown leaves, coalescing into large blighted areas with progressive defoliation that exposes fruit to sunscald; both favor warm, wet, humid weather and dense canopies, and both produce tiny dark fungal fruiting structures in lesions detectable with magnification.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the disease concentrated \u2014 confined to leaf blades, or also involving the main stem/crown and crown joints?",
+        "a_signal": "Strictly foliar; lesions on leaf blades and occasionally petioles, no main-stem cankers",
+        "b_signal": "Affects leaves but characteristically also forms cankers on the main stem, crown, and at nodes/leaf axils",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "On the leaf, what is the lesion architecture?",
+        "a_signal": "Distinct concentric target-board (bullseye) rings of dark and light brown, often with a chlorotic halo, starting on oldest leaves near crown",
+        "b_signal": "More diffuse tan-to-reddish-brown lesions, often starting at leaf margins or as water-soaked V-shaped wedges, with less pronounced concentric ringing",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the disease move and what tissue does it ultimately kill?",
+        "a_signal": "Progresses leaf-to-leaf, oldest to youngest; vines remain alive even after heavy defoliation",
+        "b_signal": "Stem/crown girdling can wilt and kill whole vines beyond the leaf damage; runners collapse from a stem lesion",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Split or scrape the stem/crown lesion and inspect a cut canker \u2014 is there an amber gummy exudate seeping from the stem, and are black pycnidia embedded in stem tissue?",
+        "a_signal": "No stem gumming; on leaves, signs are sooty olive-brown conidiophores/conidia (large muriform Alternaria spores) on lesion surface, never an amber stem ooze",
+        "b_signal": "Reddish-amber gummy ooze exudes from stem cankers; black pycnidia (and pseudothecia) studded in stem and crown tissue release spores; diagnostic gummy droplets",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Examine the fruit \u2014 what does rot look like if present?",
+        "a_signal": "Fruit lesions are dark, sunken, firm concentric spots (Alternaria fruit rot), surface conidial growth",
+        "b_signal": "Black rot of fruit: internal/external dark decay with black pycnidia and sometimes gummy exudate; tied to stem/peduncle infection",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and inoculum sources precede the outbreak?",
+        "a_signal": "Favored by warm temperatures, prolonged leaf wetness/dew; overwinters on cucurbit debris and seed, leaf-focused",
+        "b_signal": "Favored by warm wet weather plus wounds and dense canopy; strongly seedborne and debris-borne, infection often enters at pruning/handling wounds on stems",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Alternaria Leaf Blight (Alternaria cucumerina) is a foliage-focused disease of melon/cantaloupe. It begins as small water-soaked specks on the oldest, lowest leaves that enlarge into tan-to-brown spots with classic concentric target-board rings and a yellow halo. Lesions coalesce, leaves curl and die, and severe defoliation exposes fruit to sunscald and lowers sugar content \u2014 but the vines themselves stay alive because the pathogen does not girdle the stem. Diagnostic signs are sooty olive-brown sporulation (large, beaked, muriform Alternaria conidia) on the lesion surface, with no amber stem ooze. It overwinters on crop debris and seed and is driven by warm temperatures and long leaf-wetness periods.",
+    "narrative_b": "Gummy Stem Blight (Stagonosporopsis cucurbitacearum, the Didymella/Phoma complex) attacks leaves, stems, crown, and fruit. Foliar lesions are tan-to-reddish-brown, often beginning at leaf margins or as V-shaped wedges with less crisp ring patterning than Alternaria. Its defining feature is stem and crown involvement: cankers develop at nodes and the crown, exuding a characteristic reddish-amber gummy ooze, and these girdling lesions can wilt and kill entire runners \u2014 damage beyond what leaf loss alone explains. Black pycnidia (and pseudothecia) stud infected stem, crown, and fruit tissue (black rot of fruit). It is highly seedborne and debris-borne and frequently enters through wounds in warm, wet, dense canopies.",
+    "management_a": "Use disease-free/treated seed and 2-3 year rotation away from cucurbits; destroy and bury crop debris. Promote airflow and avoid prolonged leaf wetness (drip vs overhead, wider spacing). Protect foliage with chlorothalonil or mancozeb on a preventive schedule; rotate in QoI/SDHI or DMI products per resistance-management guidelines once disease appears. Maintain plant vigor and adequate potassium/nitrogen to slow senescence-linked susceptibility.",
+    "management_b": "Start with pathogen-tested, treated seed (seedborne is a major source) and rotate 2+ years out of cucurbits; remove and destroy infected debris. Minimize stem wounds during pruning/handling, manage canopy humidity, and avoid overhead irrigation. Apply protectant fungicides (chlorothalonil, mancozeb) and rotate effective FRAC groups (SDHIs, DMIs, QoIs) noting widespread QoI resistance in this pathogen; prioritize stem/crown coverage. Sanitize tools and avoid working wet fields.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My older melon leaves down near the crown are covered in tan-to-brown spots, a lot of them with little rings inside like a target and a yellow ring around the edge. The spots are running together into big dead patches, the leaves are dying off, and now the fruit is getting exposed to the sun. It really took off after this run of warm, wet, humid weather with the vines so thick.",
+      "decisive_lay_a": "Look closely at the dead spots on the leaves: you'll see a dusty, sooty olive-brown to black coating on the surface of the spot, but the stems stay clean and dry with NO sticky ooze anywhere.",
+      "decisive_lay_b": "Check the main stems and crown for sunken, cracked sore spots that weep a sticky, reddish-amber gummy ooze (like dried sap or gum droplets), often with tiny black specks studded in the stem tissue.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": false
+    }
+  }
+}

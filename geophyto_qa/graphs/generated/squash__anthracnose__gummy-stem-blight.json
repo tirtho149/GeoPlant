@@ -1,0 +1,70 @@
+{
+  "pair_id": "squash__anthracnose__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Squash",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are fungal diseases of cucurbits that produce tan-to-brown necrotic leaf lesions and can attack stems and fruit, with overlapping spread in warm, wet weather. Early foliar lesions look similar, and both fruit back young to mature plantings, so field-level confusion is common until fruiting bodies or stem behavior are examined.",
+    "shared_presentation": "Circular-to-angular tan/brown necrotic leaf spots, sometimes with concentric zonation and yellow halos, that coalesce and blight foliage; lesions also appear on petioles, stems, and developing fruit; both favor warm temperatures and prolonged leaf wetness or high humidity.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the overall lesion distribution and what tissue is preferentially attacked first?",
+        "a_signal": "Lesions concentrated on leaf blades and fruit, expanding as roughly circular water-soaked spots that turn brown and may drop out (shot-hole); fruit develops sunken rot",
+        "b_signal": "Lesions often begin at leaf margins as wedge-shaped V dieback and quickly involve the main stem/crown, with stem cankers a prominent early feature",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Examine the stem and crown: is there a girdling canker with exudate?",
+        "a_signal": "Stem lesions are elongate, dry, sunken and tan with little or no ooze; girdling is uncommon and secondary to foliar/fruit damage",
+        "b_signal": "Stem shows a water-soaked-to-tan canker at nodes or crown that cracks and exudes a reddish-brown to amber gummy beads (the gummy exudate that names the disease)",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens, what fruiting bodies and spore masses are present in the lesions?",
+        "a_signal": "Acervuli producing salmon-to-pink, slimy spore masses, often with dark bristly setae visible in older lesions",
+        "b_signal": "Numerous tiny black pycnidia (and pseudothecia) embedded in tissue, exuding whitish-to-amber spore tendrils when wet; no pink spore mass",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "On infected fruit, what type of rot develops?",
+        "a_signal": "Sunken, circular, dark lesions that under moisture produce pink/salmon spore ooze (typical anthracnose fruit rot)",
+        "b_signal": "Black rot of fruit: tan-to-black decay dotted with black pycnidia, often beginning at blossom end or wounds, sometimes with gummy ooze",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does whole-plant collapse proceed?",
+        "a_signal": "Progressive defoliation and fruit rot driven by leaf and fruit lesions; vine death usually follows heavy foliar loss",
+        "b_signal": "Rapid wilt and collapse driven by girdling crown/stem cankers, often killing the whole vine while some foliage is still present",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature and moisture conditions are driving the outbreak?",
+        "a_signal": "Favored by warm, wet weather (roughly 75-85F) with frequent rain splash dispersing conidia",
+        "b_signal": "Favored by warm, very humid conditions and dense canopies; strongly associated with overhead irrigation, dew, and greenhouse/high-tunnel humidity",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Anthracnose on squash, caused by Colletotrichum orbiculare, presents chiefly as circular water-soaked leaf spots that turn brown, develop a yellow halo, and frequently tear out to leave shot-holes; veins on leaves can also blacken. The hallmark is on fruit and in older lesions: under moist conditions acervuli produce salmon-to-pink, slimy conidial masses, and a hand lens reveals dark setae. Fruit rot is sunken and circular with pink ooze. Stem lesions, when present, are dry and sunken without gummy exudate. The disease is splash-dispersed and intensifies in warm, wet weather.",
+    "narrative_b": "Gummy Stem Blight, caused by Stagonosporopsis cucurbitacearum (anamorph Phoma/Didymella), is distinguished by its stem and crown phase: water-soaked-to-tan cankers at nodes or the crown that crack and exude characteristic reddish-brown to amber gummy beads, leading to wilting and vine collapse. Leaf lesions often start as marginal, wedge-shaped V dieback with concentric rings. The diagnostic sign is abundant tiny black pycnidia (and pseudothecia) embedded in cankers and lesions, releasing whitish spore tendrils when wet. On fruit it causes black rot studded with pycnidia. It thrives in warm, very humid, dense-canopy or protected-culture conditions.",
+    "management_a": "Use pathogen-free or treated seed and resistant cultivars where available; rotate out of cucurbits 2-3 years and remove infected debris. Avoid overhead irrigation and working plants when wet to limit splash dispersal. Apply protectant fungicides (chlorothalonil, mancozeb) on a preventive schedule, rotating in QoI/strobilurin or other site-specific actives with attention to resistance management; begin sprays at first sign or during warm, wet periods.",
+    "management_b": "Start with disease-free seed (hot-water treat if needed) and resistant varieties; practice 2-3 year cucurbit rotation and deep-bury or remove crop residue, which harbors pseudothecia. Reduce canopy humidity through wider spacing, good drainage, and improved airflow, and avoid overhead watering, especially in high tunnels/greenhouses. Manage with preventive fungicides (chlorothalonil, mancozeb) rotated with site-specific products (e.g., boscalid/SDHI, QoI, DMI), noting documented resistance to several classes; protect stems and crowns, not just foliage.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My squash leaves are covered in roundish tan-to-brown spots, some with a yellow ring around them and faint target-like rings inside; they're running together and killing whole leaves, and now I'm seeing the same kind of spots showing up on the leaf stems, vines, and even the young fruit. It really took off in the warm, muggy, wet weather.",
+      "decisive_lay_a": "On the stems, look for long, dry, sunken tan streaks or patches that stay dry. They don't ooze and usually don't choke off the whole stem.",
+      "decisive_lay_b": "On the stems, near the joints or down at the base, look for a water-soaked or tan cracked area that weeps sticky reddish-brown to amber gummy beads or droplets, like dried sap.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

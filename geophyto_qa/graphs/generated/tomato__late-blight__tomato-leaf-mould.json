@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__late-blight__tomato-leaf-mould",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Late Blight",
+  "member_b_label": "Tomato Leaf Mould",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce pale-green to yellow patches on the upper leaf surface with corresponding growth visible on the underside, and both favor cool-to-moderate temperatures with high humidity/leaf wetness, so early lesions on foliage can be mistaken for one another by growers and even at a glance in the field or greenhouse.",
+    "shared_presentation": "Irregular pale-green to yellowish blotches on the upper surface of leaves, often appearing first on older/lower foliage, with a fuzzy or felty growth developing on the corresponding lower leaf surface; both thrive under prolonged leaf wetness and high humidity and can cause leaf yellowing, necrosis, and defoliation.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "Where is the crop growing and what are the conditions?",
+        "a_signal": "Field or open production during cool, wet, rainy weather (broad outbreaks favored by moist, moderate-temperature periods)",
+        "b_signal": "Greenhouse, high tunnel, or densely planted humid enclosure with poor air circulation and persistent >85% humidity",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Which plant parts are affected and how do lesions look on the upper leaf surface?",
+        "a_signal": "Leaves, petioles, stems, and fruit all affected; large water-soaked greasy-gray to brown blotches, often starting at leaf tips/margins, with stem and fruit lesions common",
+        "b_signal": "Largely confined to leaves; diffuse pale-green to yellow spots with indistinct margins, fruit rarely affected",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the lesion border and texture look like as it expands?",
+        "a_signal": "Rapidly enlarging water-soaked necrotic lesions, often with a pale yellow-green halo and a delicate white ring of growth at the lesion edge in humid mornings",
+        "b_signal": "Yellow upper-surface patches that stay relatively diffuse, later turning brown; lesions do not appear greasy or water-soaked",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the growth on the underside of the lesion with a hand lens: what color and texture is the sporulation?",
+        "a_signal": "Sparse white, downy/cottony sporulation (sporangiophores) on the underside, typically at lesion margins, often fading by midday",
+        "b_signal": "Dense, velvety olive-green to grayish-brown to purplish-brown felty mold patch directly beneath the yellow upper spot",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the disease spread through the canopy or planting?",
+        "a_signal": "Explosively destructive; can blight foliage, stems, and fruit and kill plants within days under favorable cool-wet weather",
+        "b_signal": "Slower, progressive yellowing and decline of leaves leading to defoliation; rarely kills plants outright",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Does the disease attack stems and fruit, and how do those lesions appear?",
+        "a_signal": "Dark brown-black firm greasy lesions on stems and petioles; firm brown greasy blotches on green fruit (often shoulders)",
+        "b_signal": "No characteristic stem or fruit lesions; symptoms essentially leaf-limited (occasional flower/fruit infection is rare)",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Late blight, caused by the oomycete Phytophthora infestans, is an aggressive, weather-driven disease of tomato (and potato). It begins as water-soaked, greasy gray-green blotches on leaves, often at tips and margins, that rapidly enlarge into brown necrotic areas surrounded by a pale halo. Under cool, wet conditions a fine white downy sporulation appears on the lower leaf surface at lesion edges, usually in humid mornings. Unlike leaf mould, it attacks stems, petioles, and fruit, producing firm dark-brown greasy lesions, and can destroy a planting within days. It is favored by cool (roughly 50-78F), moist, rainy weather and spreads via wind- and rain-dispersed sporangia, with regional outbreaks tracked because inoculum can blow in from infected potato/tomato sources and overwinter in cull piles or volunteers.",
+    "narrative_b": "Tomato leaf mould, caused by the fungus Fulvia fulva (syn. Cladosporium fulvum / Passalora fulva), is primarily a greenhouse and high-tunnel disease driven by persistently high humidity and poor air movement. It produces diffuse pale-green to bright-yellow patches on the upper surface of leaves, beginning on older lower foliage. The diagnostic feature is the dense, velvety olive-green to grayish/purplish-brown mold that develops directly beneath each yellow spot on the lower leaf surface. Affected leaves yellow, curl, brown, wither, and drop, causing progressive defoliation; stems and fruit are seldom affected. Disease advances more slowly than late blight and rarely kills the plant outright, but heavy infection reduces yield. It thrives at humidity above about 85% and moderate temperatures, and survives on crop debris and as long-lived conidia and sclerotium-like structures.",
+    "management_a": "Use resistant/tolerant varieties where available, eliminate cull piles and volunteer tomato/potato that harbor inoculum, and scout intensively during cool wet periods. Apply protectant fungicides (e.g., chlorothalonil, mancozeb) preventively, switching to oomycete-targeted materials (e.g., products with cymoxanil, mandipropamid, oxathiapiprolin, or fluopicolide) when late blight is reported regionally; rotate FRAC groups to avoid resistance. Improve drainage and airflow, avoid overhead irrigation, and promptly remove and destroy infected plants. Monitor regional late blight forecasting/alerts and the USAblight network to time sprays.",
+    "management_b": "Focus on humidity and airflow management: ventilate and heat greenhouses to keep relative humidity below about 85%, increase plant spacing, prune and stake for air circulation, and avoid wetting foliage (use drip irrigation, water early in the day). Plant resistant cultivars (many carry Cf resistance genes, though races vary), remove and destroy infected leaves and crop debris, and sanitize structures between crops. Apply labeled fungicides (e.g., chlorothalonil, mancozeb, or copper, and greenhouse-labeled materials) preventively when conditions favor disease, rotating modes of action.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My older, lower tomato leaves are getting irregular pale-green to yellowish blotches on top, and when I flip the leaves over there's a fuzzy growth on the underside in those same spots. It's been wet and humid, and now leaves are yellowing and starting to die back.",
+      "decisive_lay_a": "On the underside, look for a thin, sparse, white cottony or downy fuzz, mostly along the edges of the blotches where the healthy green meets the dying tissue. It's wispy and faint, and often dries up and disappears by the middle of the day.",
+      "decisive_lay_b": "On the underside, look for a thick, velvety, felt-like patch of mold that sits right under the yellow spot. Its color is olive-green at first, then turns grayish-brown to purplish-brown as it ages.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

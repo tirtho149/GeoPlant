@@ -1,0 +1,70 @@
+{
+  "pair_id": "sweet-potato__black-rot__scurf",
+  "kind": "disease",
+  "crop": "Sweet Potato",
+  "member_a_label": "Black Rot",
+  "member_b_label": "Scurf",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce dark, superficial-looking discolorations on the surface of sweet potato storage roots and are often noticed at harvest, washing, or in storage. Both can darken large areas of the skin and reduce market grade, so a grower scanning roots for \"dark patches\" can readily confuse them. The decisive difference is depth: Black Rot lesions are firm, sunken, and penetrate into the flesh (with greenish-black perithecia/spore masses and a bitter taint), whereas Scurf is strictly a cosmetic surface blemish confined to the periderm that does not enter the flesh.",
+    "shared_presentation": "Dark to brownish-black discoloration on the periderm (skin) of sweet potato storage roots, most apparent after harvest, washing, curing, or in storage; both degrade the cosmetic appearance and marketability of the root and both are favored by warm, moist soil/storage conditions and can be carried on infected seed roots/slips and contaminated soil.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Is the problem confined to the storage root surface, or does it also affect slips/stems and the vascular base of the plant?",
+        "a_signal": "Black Rot can also blacken the underground stem and slip bases, causing yellowing, stunting, and wilting of transplants in the field; cuttings rot at the cut end",
+        "b_signal": "Scurf is essentially restricted to the storage root periderm; it does not cause field wilt, slip collapse, or vascular symptoms",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and contour of the lesion on the root?",
+        "a_signal": "Firm, circular, sunken/depressed dark lesions with a defined margin that enlarge and may become spongy; flesh underneath is discolored",
+        "b_signal": "Flat to slightly roughened, superficial grayish-brown to black blotches that follow no depression and stay level with the skin surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "Does the discoloration deepen into the flesh over time or remain skin-deep?",
+        "a_signal": "Lesion progresses inward, rotting the flesh; cut root shows greenish-black to brown discolored tissue extending beneath the surface",
+        "b_signal": "Discoloration remains confined to the skin/periderm even as patches coalesce; the underlying flesh stays sound and white/normal-colored",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Are fungal fruiting structures and a distinctive odor/taste present?",
+        "a_signal": "Grayish-black mycelium and, with age, dark perithecia with long necks bearing sticky spore masses; lesions emit a fruity/bitter odor and impart a bitter taste",
+        "b_signal": "Fine dark superficial mycelial mats and tiny dark setae/conidiophores on the skin; no rot odor, no bitter taste",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "When the root is cut through the lesion, is the internal flesh rotted or completely clean?",
+        "a_signal": "Cut reveals brown to greenish-black necrotic flesh penetrating below the lesion \u2014 internal decay confirms Black Rot",
+        "b_signal": "Cut reveals clean, normal white/orange flesh directly beneath the dark skin \u2014 discoloration is only skin-deep, confirming Scurf",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "Where did symptoms intensify \u2014 in the field/curing or progressively during cold storage?",
+        "a_signal": "Develops and rots actively at warm temperatures during curing and early storage; wounds at harvest are key entry points",
+        "b_signal": "Often spreads and darkens further during long-term storage, especially under high humidity, causing shriveling and moisture loss but no rot",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Black Rot, caused by the fungus Ceratocystis fimbriata, is a destructive disease affecting both transplants and storage roots. On roots it produces firm, circular, sunken dark lesions with sharp margins; the rot penetrates into the flesh, turning it greenish-black to brown, and imparts a characteristic bitter taste and fruity odor. With age, lesions bear dark long-necked perithecia exuding sticky spores. In the field it can blacken slip bases and underground stems, causing yellowing, stunting, and wilting of transplants. It enters through wounds, spreads on contaminated knives, seed roots, and storage crates, and is favored by warm temperatures during curing and early storage.",
+    "narrative_b": "Scurf, caused by Monilochaetes infuscans, is a strictly cosmetic disease of the storage root periderm. It produces flat, superficial grayish-brown to black blotches that remain level with the skin and never penetrate the flesh \u2014 a cut through a scurfy patch reveals clean, sound tissue beneath. Because it is confined to the skin, it causes no field wilt, vascular decay, or rot odor, but it disfigures roots and increases moisture loss and shriveling during prolonged, humid storage. It survives in soil and on infected seed roots/slips and is most damaging on heavy, organic-matter-rich soils.",
+    "management_a": "Plant only certified, disease-free seed roots and slips; cut slips above the soil line rather than pulling rooted transplants to avoid carrying the pathogen. Practice 3-4 year rotation away from sweet potato, sanitize all cutting tools, crates, and storage rooms (e.g., with approved disinfectants), handle roots gently to minimize wounds, cure promptly at recommended temperature/humidity, and discard infected roots. Fungicide seed-root or slip treatments can reduce inoculum.",
+    "management_b": "Use clean, certified seed roots and disease-free slips taken from the upper, soil-free portion of bedded roots; rotate out of sweet potato for 3-4 years since the fungus persists in soil. Avoid fields with heavy, high-organic-matter soils where scurf is severe, store roots under good ventilation to limit humidity-driven spread and shriveling, and sanitize storage facilities. Because damage is cosmetic, control focuses on clean planting stock and rotation rather than salvage of affected roots.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My sweet potatoes are coming out of the field (and looking worse after washing and in storage) with dark brown to nearly black blotches on the skin. The roots still look firm enough, but those ugly dark patches on the outside are hurting how they look and whether I can sell them.",
+      "decisive_lay_a": "Cut or slice the potato open: if the flesh underneath the dark patch is rotted brown to greenish-black and the decay reaches down into the inside of the root, it's the worse rot.",
+      "decisive_lay_b": "Cut or slice the potato open: if the flesh right under the dark skin is clean, normal white or orange and the discoloration is only skin-deep (just on the surface), it's the harmless skin blemish.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

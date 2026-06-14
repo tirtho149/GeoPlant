@@ -1,0 +1,70 @@
+{
+  "pair_id": "cucumber__phytophthora-blight__pythium-diseases",
+  "kind": "disease",
+  "crop": "Cucumber",
+  "member_a_label": "Phytophthora Blight",
+  "member_b_label": "Pythium Diseases",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne oomycetes that thrive in saturated, poorly drained soils and warm wet conditions, and both produce water-soaked, soft-rotting lesions on cucumber fruit and crown/lower stem. In low-lying wet field areas a collapsed plant with a rotting crown and a slimy fruit rot could be attributed to either. They overlap heavily on damping-off of seedlings and on contact (belly) fruit rot, so growers and even agronomists frequently lump them together as generic 'water mold' problems.",
+    "shared_presentation": "Wilting, collapse, and crown/root rot of cucumber plants in wet, low spots of the field; water-soaked soft rot of fruit resting on saturated soil; seedling damping-off in cool wet or overwatered conditions; both favored by heavy rain, ponding, irrigation, and warm-to-moderate soil moisture; both are oomycetes with motile zoospores spread by splashing and surface water.",
+    "forks": [
+      {
+        "axis": "growth_stage",
+        "question": "At what crop stage is the damage concentrated?",
+        "a_signal": "Strikes established/mature plants and developing fruit at any stage; epidemics often explode at fruiting in mid-to-late season after heavy rain",
+        "b_signal": "Most destructive at germination and seedling stage (pre- and post-emergence damping-off) plus chronic root rot of stressed plants",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the dominant lesion pattern on the plant?",
+        "a_signal": "Distinct dark, water-soaked stem/crown cankers and aerial blight; rapid one-sided or whole-plant wilt with girdling lesions at the soil line",
+        "b_signal": "Soft, mushy root and lower-stem rot with sloughing of the outer cortex ('rat-tail' roots); brown necrosis of feeder roots rather than a defined canker",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are above-ground and aerial parts blighted, or is damage confined to roots/crown?",
+        "a_signal": "Affects fruit, vines, runners and crown; can blight foliage and produce aerial lesions when humidity is high",
+        "b_signal": "Largely confined to roots, hypocotyl, and the crown right at the soil line; little true aerial blighting",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What sign and sporangia type appear on infected fruit/tissue under moisture?",
+        "a_signal": "Dense white, powdery-to-cottony yeast-like growth covering the fruit surface; lemon-shaped (papillate) caducous sporangia of P. capsici on short stalks",
+        "b_signal": "Sparse, fine white cottony mycelium; non-papillate sporangia and characteristic Pythium oospores/sporangia, no dense powdery fruit bloom",
+        "weight": "decisive"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast and how far does the outbreak spread across the field?",
+        "a_signal": "Explosive, rapidly enlarging foci that spread plant-to-plant and along water flow within days, often killing whole sections",
+        "b_signal": "Slower, more diffuse stand thinning and stunting; chronic decline rather than dramatic blight fronts",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What soil temperature regime accompanies the worst losses?",
+        "a_signal": "Worst in warm soils (roughly 75-85F) combined with saturation after summer storms",
+        "b_signal": "Damping-off species often worst in cool, wet soils, though warm-loving Pythium spp. cause summer root rot too",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Phytophthora blight caused by Phytophthora capsici is an aggressive, water-driven disease of cucurbits that attacks fruit, vines, crowns, and roots. After heavy summer rains or in ponded field areas, it produces dark, water-soaked stem and crown cankers that girdle and rapidly wilt established plants, and a fruit rot covered in a conspicuous dense white powdery-to-cottony bloom of sporangia. It spreads explosively along surface water and from plant to plant, often wiping out low-lying sections of a field within days. The lemon-shaped papillate, deciduous sporangia are diagnostic under the microscope.",
+    "narrative_b": "Pythium diseases on cucumber are dominated by seed rot and pre/post-emergence damping-off, plus a chronic soft root and crown rot of older plants in saturated soil. Infected roots turn brown and mushy, the outer cortex sloughs off leaving a thread-like 'rat-tail' stele, and stands thin out and stunt rather than collapse in dramatic blight fronts. Contact fruit rot can occur where fruit sits on wet soil, but it shows only sparse fine mycelium without the dense powdery sporangial bloom of Phytophthora. Microscopically Pythium shows non-papillate sporangia and oospores rather than the lemon-shaped caducous sporangia of P. capsici.",
+    "management_a": "Improve drainage and avoid planting in low/ponding ground; use raised beds and drip irrigation; rotate 3+ years away from cucurbits, peppers, tomatoes, and eggplant; do not move soil or water from infested areas; apply oomycete-specific fungicides (mefenoxam, with rotation partners such as cyazofamid, fluopicolide, or oxathiapiprolin) and resistance-management; remove and destroy infected fruit promptly.",
+    "management_b": "Plant high-quality, fungicide-treated seed (metalaxyl/mefenoxam or ethaboxam seed treatments) into warm, well-drained, well-prepared seedbeds; avoid overwatering and compaction; ensure good drainage and avoid cool wet planting windows; manage soil moisture and improve internal drainage to reduce chronic root rot; in-furrow or transplant-drench oomycete fungicides where Pythium pressure is high.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": false,
+    "lay": {
+      "farmer_lay_report": "My cucumber plants in the low, wet spots of the field are wilting and collapsing, with the crown and roots rotting out. Fruit lying on the soggy ground turns soft and water-soaked, and young seedlings are falling over and dying after all this heavy rain.",
+      "decisive_lay_a": "Look for a thick, dense white powdery-to-cottony coating completely blanketing the fruit surface, like a heavy bloom of mold sitting right on top of the cucumber.",
+      "decisive_lay_b": "Look for only sparse, fine, thin wispy white cottony threads on the rotted tissue, with no thick powdery bloom covering the fruit.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

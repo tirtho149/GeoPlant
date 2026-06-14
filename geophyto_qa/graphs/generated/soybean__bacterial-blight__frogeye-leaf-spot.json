@@ -1,0 +1,70 @@
+{
+  "pair_id": "soybean__bacterial-blight__frogeye-leaf-spot",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Bacterial Blight",
+  "member_b_label": "Frogeye Leaf Spot",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce small angular-to-circular foliar lesions on soybean leaves that early on look like brown necrotic spots with lighter centers and darker borders, and both are commonly scouted during similar mid-season growth stages, so a quick glance at young lesions can easily mislead a scout.",
+    "shared_presentation": "Small (1-5 mm) necrotic leaf spots with a pale tan-to-gray center and a darker margin, often with a yellowish halo, distributed on upper canopy leaves of vegetative-to-reproductive soybean.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What weather preceded the outbreak and where on the canopy did spots appear first?",
+        "a_signal": "Spots flared after cool, rainy, windy weather and appear on the youngest upper leaves; favored by 75-80F and storms that wound tissue",
+        "b_signal": "Spots intensified during warm, humid weather (80-85F) with prolonged leaf wetness; favored by warm season and dense canopy",
+        "weight": "weak"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the texture and margin of the lesion?",
+        "a_signal": "Angular lesions bounded by leaf veins, water-soaked margin when fresh, with a translucent yellow halo; lesions feel slightly greasy/water-soaked early",
+        "b_signal": "Circular lesions not constrained by veins, dry from the start, with a reddish-brown to purple raised border",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do mature lesions evolve over time?",
+        "a_signal": "Small angular spots coalesce into large irregular dead brown patches; dead centers tear away leaving a ragged, tattered leaf",
+        "b_signal": "Spots stay discrete and circular with a clean gray-to-tan center and a distinct dark ring (frogeye appearance), centers do not shred",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "What is the shape and center color of a fully developed lesion?",
+        "a_signal": "Irregular angular dark-brown necrosis, center concolorous with rest of lesion, no contrasting bleached center",
+        "b_signal": "Round lesion with a bleached ash-gray center sharply ringed by a narrow reddish-brown to purplish-brown border (classic frogeye)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the gray center of a lesion under a hand lens or after a humid chamber: are there fungal structures?",
+        "a_signal": "No fungal growth; center remains dull, dry necrotic tissue with no fuzz or specks (bacterium produces no visible signs)",
+        "b_signal": "Gray center bears tufts of dark conidiophores/conidia (Cercospora sojina), giving a faint velvety or speckled appearance under magnification",
+        "weight": "decisive"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Are stems, pods, and seeds also affected?",
+        "a_signal": "Largely confined to leaves; bacterial blight rarely shows distinctive pod/seed lesions",
+        "b_signal": "Can also produce elongate reddish lesions on stems and circular gray-bordered spots on pods, plus discolored/cracked seeds",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial blight is the early-season, cool-wet disease of soybean. It is driven by Pseudomonas savastanoi pv. glycinea, which enters through wounds and stomata after wind-driven rain, so the youngest expanding leaves at the top of the canopy show the first symptoms. Lesions begin as small water-soaked angular spots delimited by veins, surrounded by a translucent yellow halo. As they age, the dead angular centers turn dark brown, coalesce, and fall out, leaving the leaf with a ragged, tattered, shot-hole appearance. Critically, there is no fungal growth in the lesions, the spots are dry-greasy not fuzzy, and the disease is a bacterium so it produces no spores.",
+    "narrative_b": "Frogeye leaf spot is the warm, humid mid-to-late-season disease caused by the fungus Cercospora sojina. Lesions are circular and not limited by veins, developing the diagnostic frogeye look: a bleached ash-gray center sharply ringed by a narrow reddish-brown to purplish border. Under a hand lens or after incubation in a humid chamber, the gray centers reveal dark fungal conidiophores and conidia, the definitive sign. Beyond leaves, it can lesion stems and pods and infect seeds, and it is strongly tied to susceptible varieties and QoI-fungicide resistance management.",
+    "management_a": "Plant clean, high-quality seed and use less-susceptible varieties; rotate away from soybean and incorporate residue to reduce inoculum; avoid working fields when foliage is wet to limit wound spread. Foliar fungicides do NOT control this bacterial disease, so correct diagnosis prevents wasted sprays; the disease usually self-limits as weather turns hot and dry.",
+    "management_b": "Use resistant varieties (Rcs3 gene) as the foundation, rotate crops and bury residue to lower overwintering inoculum, and plant pathogen-free seed. Apply QoI/triazole or mixed-mode foliar fungicides at R3-R5 where pressure warrants, but rotate FRAC modes of action because Cercospora sojina has widespread QoI (strobilurin) resistance in the US.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My upper soybean leaves have lots of small spots, about pinhead to match-head size, with a pale tan-to-gray center and a darker brown edge, and many of them have a yellow ring around them.",
+      "decisive_lay_a": "The center of the spot stays dry, dull, and dead-looking with nothing growing on it, no fuzz, no specks, no powder, just flat dead tissue.",
+      "decisive_lay_b": "Looking close with a hand lens, the gray center has tiny dark fuzz or dark speckles that give it a faint velvety, whiskery look.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

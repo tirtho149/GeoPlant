@@ -1,0 +1,63 @@
+{
+  "pair_id": "soybean__sclerotinia-timber-rot__southern-blight",
+  "kind": "disease",
+  "crop": "Soybean",
+  "member_a_label": "Sclerotinia Timber Rot",
+  "member_b_label": "Southern Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are soilborne fungi causing soybean wilt and stem rot with white cottony mycelium and sclerotia. Field scouts confuse them because both produce fluffy white fungal growth on the stem and both kill plants in patches. The pathogens differ sharply in temperature optima, lesion height on the stem, and sclerotium size/shape, but a casual look at \"white mold plus survival bodies on a wilting soybean\" can fit either.",
+    "shared_presentation": "Wilting and dying soybean plants, often in patches, bearing white cottony/fluffy mycelium on the lower-to-mid stem along with hardened fungal survival structures (sclerotia), leading to stem girdling and plant death.",
+    "forks": [
+      {
+        "axis": "environment",
+        "question": "What temperature and canopy moisture conditions accompanied the outbreak?",
+        "a_signal": "Cool, moist conditions during/after flowering (R1-R3), dense closed canopy, optimum ~15-24C; favored by cool wet summers in northern regions",
+        "b_signal": "Hot, humid conditions; optimum ~27-35C; favored by warm soils and high temperatures typical of southern/late-season heat",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where on the plant is the white mycelium and rot concentrated?",
+        "a_signal": "Mid-to-upper stem and nodes/branch axils, often well above the soil line, starting at flower-infested nodes ('timber rot' \u2014 stem bleaches and shreds like weathered timber)",
+        "b_signal": "Crown and lower stem right at the soil line, with mycelium fanning out over the soil surface and lower stem base",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At what growth stage did symptoms appear?",
+        "a_signal": "Onset tied to flowering (R1-R3); senescing flowers/petals are the infection court",
+        "b_signal": "Can strike at any stage including seedlings and vegetative plants; not tied to flowering",
+        "weight": "weak"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the affected stem tissue look like as it dries?",
+        "a_signal": "Stem becomes bleached white/tan, dry and shredded/stringy with a 'timber' or weathered-wood appearance; pith disintegrates",
+        "b_signal": "Crown and lower stem develop a soft brown rot/girdle at the base; foliage yellows and wilts from the bottom up",
+        "weight": "supporting"
+      },
+      {
+        "axis": "morphology",
+        "question": "Split the stem (or examine the mycelium): what do the sclerotia look like in size, shape, and location?",
+        "a_signal": "Large (3-10+ mm), irregular, black, rat-dropping-shaped sclerotia formed INSIDE the hollowed pith and on the stem surface",
+        "b_signal": "Numerous tiny (0.5-2 mm), uniform, round, tan-to-reddish-brown sclerotia resembling mustard seeds, formed ON the surface of stem base and surrounding soil/debris",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Sclerotinia Timber Rot (white mold) is driven by cool, moist conditions during flowering. Senescing soybean flowers serve as the infection court, so disease begins at nodes and branch axils in the mid-to-upper canopy. Infected stems bleach to a white/tan color and dry into a shredded, weathered 'timber' appearance. Splitting the stem reveals the pith hollowed out and packed with large (several mm), irregular, black, rat-dropping-shaped sclerotia \u2014 the definitive sign. A dense, lodged, high-yield-potential canopy that closes early and stays wet sets the stage.",
+    "narrative_b": "Southern Blight (Athelia/Sclerotium rolfsii) is a hot-weather, soil-line disease. White mycelial fans spread across the lower stem and adjacent soil surface, girdling the crown and causing a basal rot with bottom-up wilting and yellowing. The diagnostic sign is a profusion of tiny, uniform, round, tan-to-reddish-brown sclerotia the size of mustard seeds, formed on the stem base and surrounding soil/debris (not inside a hollow pith). It attacks plants at any stage and thrives where soils are warm and organic debris is abundant.",
+    "management_a": "Manage canopy moisture: wider rows, lower seeding rates, and varieties with less dense canopies improve airflow. Plant partially resistant/tolerant cultivars. Apply foliar fungicides at R1-R2 targeting the flowering infection window. Rotate to non-host crops (corn, small grains) for 2-3 years; control broadleaf weed hosts. Avoid moving sclerotia-contaminated soil/equipment; consider Coniothyrium minitans biocontrol to degrade sclerotia.",
+    "management_b": "Reduce inoculum at the soil line: deep-bury crop residue and surface debris by tillage to break down sclerotia, since they are short-lived when buried. Rotate with non-host grasses/cereals. Avoid excessive surface residue near the row. Maintain good drainage and avoid mechanical injury to crowns. Some fungicides/biocontrols (e.g., Trichoderma) applied to the soil/lower stem can help; manage in warm-soil seasons and fields with history of the disease.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "I've got soybean plants wilting and dying in patches, and the lower stems have a white, cottony, fluffy growth on them. The stems look rotted and pinched off near the base so the whole plant is collapsing.",
+      "decisive_lay_a": "Look inside the stem (split it open) and on the stem surface for large, hard, black chunks shaped like irregular rat droppings, often sitting in the hollowed-out center of the stem.",
+      "decisive_lay_b": "Look at the very base of the stem and the soil right around it for lots of tiny, round, even-sized tan to reddish-brown balls that look just like mustard seeds.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

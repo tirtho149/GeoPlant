@@ -1,0 +1,70 @@
+{
+  "pair_id": "watermelon__anthracnose__gummy-stem-blight",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Gummy Stem Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are fungal diseases producing dark, expanding foliar lesions on watermelon, both damage stems and fruit, both favor warm wet weather, and both produce small black fruiting bodies on lesions. On a quick scan a tan-to-brown leaf spot with black specks could be either, and growers routinely confuse them because the early leaf phase looks similar and both can be devastating in the same humid conditions.",
+    "shared_presentation": "Circular to irregular dark brown/tan necrotic leaf lesions that may coalesce and cause blighting; stem cankering; fruit rot; abundant tiny black fruiting bodies (acervuli vs pycnidia) embedded in lesion tissue; both spread by splashing water and warm humid weather and overwinter on crop debris and seed.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the disease concentrated and does it center on the crown/stem node?",
+        "a_signal": "Lesions distributed on leaves, vines and fruit fairly uniformly; veinal/water-soaked leaf spotting prominent",
+        "b_signal": "Damage strongly centered at the crown and stem nodes with a characteristic basal stem canker, often girdling the main stem",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and edge character of the leaf lesions?",
+        "a_signal": "Roughly circular spots that turn dark brown to black, often with a yellow halo, tissue becomes papery and tears out leaving shot-holes; veins blacken and angular vein-delimited necrosis on leaves",
+        "b_signal": "Lesions start as water-soaked V-shaped wedges from the leaf margin, tan to dark brown, fan inward; less shot-holing",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Under a hand lens, what do the black fruiting bodies and their exudate look like in moist conditions?",
+        "a_signal": "Acervuli producing salmon-pink to orange spore masses (conidial ooze) on lesions when wet; setae may be visible",
+        "b_signal": "Pycnidia exuding a creamy-white to amber spore tendril (cirrhus); no pink spore mass",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does the stem canker exudate look like?",
+        "a_signal": "Stem lesions sunken and dark but without a conspicuous gummy ooze",
+        "b_signal": "Stem canker oozes a reddish-brown to amber gummy/gelatinous exudate ('gummy stem'), the diagnostic gumming",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What does the fruit rot look like?",
+        "a_signal": "Sunken, circular, water-soaked dark fruit lesions with concentric salmon-pink spore masses in the center under humidity",
+        "b_signal": "Fruit rot (black rot) is firm, dark, with black pycnidia and a gummy exudate, often starting at blossom end",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature/moisture regime is driving the outbreak?",
+        "a_signal": "Favored by warm (24-30C) very wet, prolonged leaf-wetness periods; explosive in mid-summer rains",
+        "b_signal": "Favored by moderate-warm temps (20-24C optimum) with high humidity; severe in dense canopies and on stressed/older plantings",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Watermelon anthracnose (Colletotrichum orbiculare) produces circular dark brown-to-black leaf spots that often have a yellow halo; necrotic tissue becomes papery, cracks and falls out leaving ragged shot-holes, and veins can blacken. It attacks leaves, petioles, vines and fruit. The diagnostic sign is the acervulus: in humid weather lesions ooze salmon-pink to orange masses of conidia, and on fruit the sunken circular lesions develop pink-centered spore masses arranged in concentric rings. It overwinters on debris and seed and explodes during warm, wet mid-summer weather.",
+    "narrative_b": "Gummy stem blight (Stagonosporopsis cucurbitacearum), whose fruit phase is called black rot, centers its worst damage at the crown and stem nodes, where it forms a tan-to-dark basal canker that exudes a reddish-brown to amber gummy ooze and can girdle and kill the vine. Leaf lesions typically begin as water-soaked, V-shaped wedges from the margin that fan inward, tan to brown, dotted with black pycnidia. Those pycnidia exude creamy-white to amber spore tendrils (cirrhi) rather than pink masses. The seedborne, debris-borne fungus thrives in humid, dense canopies and on stressed plants.",
+    "management_a": "Use disease-free or treated seed and resistant cultivars where available; rotate out of cucurbits 2-3 years; avoid overhead irrigation and working plants when wet; bury or remove debris. Apply protectant fungicides (chlorothalonil, mancozeb) on a preventive schedule with strobilurin/QoI or other targeted modes during high-risk warm wet periods, rotating FRAC groups to avoid resistance.",
+    "management_b": "Plant pathogen-tested seed (hot-water treat if needed) and rotate 2-3 years away from cucurbits; improve airflow with wider spacing and weed control; avoid overhead watering and reduce plant stress. Protect crowns/stems with preventive fungicides; note QoI/strobilurin resistance is widespread in this pathogen, so rotate with chlorothalonil, tebuconazole/DMI, and SDHI products per FRAC guidance and treat at canopy closure before symptoms peak.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My watermelon leaves have round to ragged dark brown and tan spots that are running together and killing patches of the leaves, and I'm seeing dark cankers on the stems and some rotting on the fruit. It's been hot and humid, and the trouble seems to spread after rain or watering.",
+      "decisive_lay_a": "Look on the spots when they're wet for a salmon-pink to orange slimy ooze or gooey blobs sitting on top of the damaged tissue; you may also spot tiny dark hairs or bristles poking out of the spots.",
+      "decisive_lay_b": "Look for tiny black specks in the spots that push out a creamy-white to amber colored worm-like thread or curl of ooze, with NO pink color at all.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

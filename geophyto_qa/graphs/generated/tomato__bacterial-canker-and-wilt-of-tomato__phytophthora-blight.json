@@ -1,0 +1,70 @@
+{
+  "pair_id": "tomato__bacterial-canker-and-wilt-of-tomato__phytophthora-blight",
+  "kind": "disease",
+  "crop": "Tomato",
+  "member_a_label": "Bacterial Canker And Wilt Of Tomato",
+  "member_b_label": "Phytophthora Blight",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both can cause rapid wilting and collapse of tomato plants, with stem/vascular involvement and a wet/declining appearance, so a grower seeing a wilting, dying tomato could plausibly confuse them. However, the underlying nature (systemic vascular bacterium vs soilborne water mold) and the diagnostic signs are quite different on close inspection.",
+    "shared_presentation": "Wilting and decline of tomato plants, often progressing to death; stem lesions/discoloration and a generally water-soaked, deteriorating appearance of affected tissue. Both can show wilting that starts on part of the plant and spreads, and both can produce stem cankers or rot that compromise the vascular/structural integrity of the plant.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "Is the wilt accompanied by interveinal leaf-margin scorching with a slow unilateral (one-sided) decline, or by sudden water-soaked stem/crown rot and fruit rot?",
+        "a_signal": "Marginal leaf scorch, downward curling, and one-sided wilting of leaflets that desiccate but stay attached ('firing'); systemic chronic decline",
+        "b_signal": "Sudden water-soaked dark lesions on stem, crown, and fruit; rapid soft rot and collapse, especially after wet weather",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Where does the primary damage concentrate?",
+        "a_signal": "Internal vascular tissue and stem; leaflets and petioles; later open stem cankers and 'bird's-eye' spots on fruit",
+        "b_signal": "Crown, lower stem, roots, and fruit in contact with or splashed from soil; girdling lesion at soil line",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions preceded the outbreak?",
+        "a_signal": "Often introduced on contaminated seed/transplants; spread by handling, pruning, and overhead irrigation; not strictly tied to flooding",
+        "b_signal": "Strongly favored by saturated soil, heavy rain, poor drainage, and warm temperatures; appears in low/flooded areas of the field",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast and in what pattern does the plant decline?",
+        "a_signal": "Slow, progressive, often one-sided wilt over weeks; lower leaves first; plant may linger",
+        "b_signal": "Rapid collapse of the whole plant within days once the crown/stem is girdled",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "When you split the lower stem lengthwise and examine the vascular tissue and any crown rot, what do you see (and is there bacterial ooze)?",
+        "a_signal": "Yellow-to-brown discoloration of the vascular ring, often with a mealy/creamy yellow pith breakdown and cream-colored bacterial ooze/streaming from cut vessels; cavities in pith",
+        "b_signal": "Brown, water-soaked cortical/crown rot with NO bacterial streaming; chocolate-brown firm-to-mushy decay; under moisture, white cottony mycelium and oospores microscopically",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What do fruit symptoms look like?",
+        "a_signal": "Small raised white spots with tan/brown centers ('bird's-eye' spots) scattered on fruit surface",
+        "b_signal": "Large firm water-soaked brown rot, often on fruit shoulders or soil-contact side, sometimes with white mold under humidity",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Bacterial canker (Clavibacter michiganensis ssp. michiganensis) is a systemic vascular bacterial disease, frequently seed- or transplant-borne. It produces a characteristic chronic, often one-sided wilt with marginal leaf scorch ('firing') where leaflets desiccate but remain attached. Splitting the stem reveals discolored vascular tissue, a mealy yellow-brown pith breakdown, and creamy bacterial ooze that streams from cut vessels. Open stem cankers and 'bird's-eye' fruit spots (white halos with tan centers) are diagnostic. Spread is by water, handling, and pruning, and the bacterium can move long distances on contaminated seed.",
+    "narrative_b": "Phytophthora blight (Phytophthora nicotianae) is a soilborne oomycete (water mold) disease that thrives in saturated, warm soils. It typically attacks the crown, lower stem, roots, and fruit, producing sudden water-soaked, dark brown lesions and a firm-to-mushy rot. A girdling crown/stem-base lesion leads to rapid whole-plant collapse, especially after heavy rain or in poorly drained, flooded areas. There is no bacterial streaming; under humid conditions white cottony mycelium may appear, and microscopy reveals sporangia/oospores. Fruit develop large firm water-soaked brown rots, often on the soil-contact side or shoulders.",
+    "management_a": "Use certified pathogen-free seed and transplants; hot-water or chlorine seed treatment. Practice strict sanitation (disinfect tools, avoid working plants when wet), rotate out of solanaceous crops for 2-3 years, remove and destroy infected plants and debris, and minimize overhead irrigation. No cure once systemic; copper sprays only suppress secondary spread. Avoid clipping/handling transplants in greenhouses.",
+    "management_b": "Improve drainage and avoid waterlogging; plant on raised beds, avoid low spots, and manage irrigation to prevent saturated soil. Rotate with non-host crops, use resistant rootstocks/varieties where available, and apply oomycete-specific fungicides (e.g., mefenoxam/metalaxyl, phosphonates, mandipropamid) preventively. Avoid moving infested soil and irrigation water; remove and destroy infected plants and fruit.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My tomato plants are wilting and going downhill, often starting on just one side or part of the plant and then spreading until the whole plant collapses and dies. The stems are darkening and rotting in places and the affected tissue looks wet, soft, and water-soaked.",
+      "decisive_lay_a": "Slice the stem open lengthwise: look for a brownish-yellow stained ring just under the skin, a mushy creamy-yellow center that may be hollowed out, and a cream-colored milky ooze or slime that beads up or strings out from the cut.",
+      "decisive_lay_b": "Look at the crown and lower stem for a firm-to-mushy chocolate-brown rot that is water-soaked but does NOT leak any milky ooze when cut; in wet weather you may see white cottony fuzzy growth on the rotted area.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

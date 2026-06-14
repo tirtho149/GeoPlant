@@ -1,0 +1,63 @@
+{
+  "pair_id": "watermelon__anthracnose__cucurbit-downy-mildew",
+  "kind": "disease",
+  "crop": "Watermelon",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Cucurbit Downy Mildew",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce angular-to-irregular brown foliar lesions on watermelon vines that can look similar at a glance, especially early on warm, wet days, leading growers to confuse the two until lesion character, fruit involvement, and the underside sign (sporulation type) are examined.",
+    "shared_presentation": "Yellow-to-brown foliar spots and blighting on watermelon leaves during warm, humid, wet weather; both spread rapidly under prolonged leaf wetness, both can defoliate vines from older leaves upward, and both first appear as small chlorotic flecks that enlarge and coalesce, causing field-scale loss of canopy and reduced fruit quality.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Are fruit also affected with sunken lesions, or is damage confined to the foliage?",
+        "a_signal": "Sunken, circular, water-soaked-to-tan fruit lesions develop, often with salmon/pink spore masses in the center; petioles and stems also cankered",
+        "b_signal": "Strictly a foliar disease \u2014 fruit are not directly infected; only leaves show symptoms (fruit losses are indirect from sunscald after defoliation)",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the shape and pattern of the leaf lesions relative to leaf veins?",
+        "a_signal": "Roughly circular to irregular tan-to-dark-brown spots, not strongly vein-limited; centers may crack, dry, and tear out leaving shot-holes",
+        "b_signal": "Angular lesions sharply bounded by leaf veins, appearing blocky/mosaic; yellow on the upper surface turning brown",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Examine the lesion underside with a hand lens on a dewy morning \u2014 what sporulation sign is present?",
+        "a_signal": "Salmon-colored to pinkish slimy spore masses (acervuli) ooze from lesion centers in wet weather; tiny black setae/dots in dry lesions",
+        "b_signal": "Downy grayish-purple to dark fuzzy growth (sporangiophores) on the lower leaf surface beneath the angular yellow patches",
+        "weight": "decisive"
+      },
+      {
+        "axis": "environment",
+        "question": "What temperature/moisture regime is driving the outbreak?",
+        "a_signal": "Favored by warm temperatures (~75-85F) WITH free moisture; rain-splashed spores; persists through hot summer",
+        "b_signal": "Favored by cool-to-moderate, very humid/wet nights with long dew periods; pressure tied to airborne inoculum arriving on regional wind currents",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How does the epidemic move through the field and from where does inoculum originate?",
+        "a_signal": "Builds locally from infested seed, crop debris, or volunteers; spreads short distances by rain splash and equipment",
+        "b_signal": "Sudden field-wide onset following arrival of wind-dispersed sporangia from southern overwintering sources; does not survive cold winters locally",
+        "weight": "supporting"
+      }
+    ],
+    "narrative_a": "Anthracnose (Colletotrichum orbiculare) attacks all above-ground parts of watermelon. On leaves it produces circular to irregular tan-to-dark-brown spots that are not strictly vein-limited; centers dry, crack, and fall out to leave ragged shot-holes. The diagnostic sign is salmon-pink to orange slimy spore masses (acervuli) oozing from lesion centers, especially on fruit and stems during wet weather; sunken, water-soaked-to-tan circular lesions on the fruit are characteristic and cause direct marketable loss. Inoculum comes from infested seed and crop debris, building locally and spreading by rain splash. It tolerates hot summer temperatures as long as moisture is present.",
+    "narrative_b": "Cucurbit downy mildew (Pseudoperonospora cubensis) is an obligate, strictly foliar disease. Symptoms begin as angular chlorotic patches on the upper leaf surface that are sharply delimited by the leaf veins, giving a blocky, mosaic appearance; these turn brown and coalesce, blighting and crinkling the leaf. The confirming sign is a downy gray-to-purplish fuzz of sporangiophores on the LOWER leaf surface beneath the yellow patches, visible on dewy mornings. Fruit are never directly infected, but rapid defoliation exposes fruit to sunscald. The pathogen does not overwinter in cold regions; epidemics begin abruptly when wind-borne sporangia arrive from southern source populations, favored by cool, very humid nights with long dew periods.",
+    "management_a": "Plant certified disease-free seed and resistant cultivars; rotate out of cucurbits 2-3 years and bury or destroy crop debris and volunteers. Use protectant fungicides (chlorothalonil, mancozeb) on a preventive schedule, rotating in QoI/strobilurin or DMI materials with attention to resistance management; avoid overhead irrigation and working fields when wet. Hot-water or fungicide seed treatment reduces seedborne carryover.",
+    "management_b": "Monitor the national Cucurbit Downy Mildew ipmPIPE forecast and scout intensively once spore arrival is predicted for your region. Apply downy-mildew-specific fungicides (oxathiapiprolin, cyazofamid, fluopicolide, mandipropamid, ametoctradin) tank-mixed with a chlorothalonil/mancozeb protectant, beginning before or at first detection and rotating FRAC groups; protectants alone give weak control. Improve air movement and reduce leaf-wetness duration; broad-spectrum anthracnose fungicides like DMIs do not control this oomycete.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My watermelon vines are getting yellow-to-brown spots on the leaves that keep growing and running together, and during this warm, wet, humid stretch they're spreading fast. The older leaves down low are browning and dying off first, the canopy is thinning out, and I'm worried about losing leaf cover and hurting my fruit quality.",
+      "decisive_lay_a": "Look in the center of the spots after a rain or heavy dew for a salmon-pink to orange slimy ooze; in dry weather those same spots may show tiny black dots or whiskers in the middle.",
+      "decisive_lay_b": "Flip the leaves over and look on the underside, right beneath the yellow blocky patches, for a grayish-purple to dark fuzzy or downy growth (most visible early in the morning when leaves are still damp).",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}

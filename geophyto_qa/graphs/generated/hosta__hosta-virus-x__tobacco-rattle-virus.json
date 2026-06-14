@@ -1,0 +1,63 @@
+{
+  "pair_id": "hosta__hosta-virus-x__tobacco-rattle-virus",
+  "kind": "disease",
+  "crop": "Hosta",
+  "member_a_label": "Hosta Virus X",
+  "member_b_label": "Tobacco Rattle Virus",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both are viruses producing foliar mottling, color-breaking, and chlorotic/necrotic patterning on Hosta leaves with no fungal signs to see. HVX is by far the most common hosta virus and its classic \"ink-bleed\"/mosaic mottling can superficially resemble the irregular ringspots, mottle, and line patterns TRV causes, so a grower seeing patterned leaf discoloration without other signs can easily confuse the two.",
+    "shared_presentation": "Mottled, blotchy, or color-broken hosta foliage with chlorotic-to-necrotic patterning, tissue-collapse or \"puckered\" areas, and no visible pathogen structures (no spores, mildew, or fruiting bodies). Both are graft/mechanically and (for TRV) nematode/vegetatively transmitted, systemic, and incurable\u2014infected plants must be rogued. Both lack any sign vector you can see with a hand lens, so diagnosis rests on the pattern and distribution of symptoms plus the typical transmission context.",
+    "forks": [
+      {
+        "axis": "symptom_class",
+        "question": "What is the dominant foliar pattern\u2014tissue-following mottle/ink-bleed versus discrete rings and wavy line patterns?",
+        "a_signal": "Color-breaking and mottling that follows leaf veins/tissue, often described as 'ink-bleed' or blue/green bleeding along veins, with mosaic and tissue lumpiness",
+        "b_signal": "Discrete chlorotic/necrotic ringspots, arcs, oak-leaf and wavy line patterns scattered across the blade, often more random and ring-like than vein-following",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What is the plausible transmission/spread context for this planting?",
+        "a_signal": "Spread by sap on contaminated tools, dividing/cutting, and plant-to-plant handling; clusters trace to propagation or a division line, no soil association",
+        "b_signal": "Soil-borne via Trichodorus/Paratrichodorus stubby-root nematodes (and infected stock); cases may map to specific soil patches and the virus has a very broad weed/host reservoir",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How do symptoms behave across the season and across successive flushes of leaves?",
+        "a_signal": "Symptoms persist and typically intensify over years, consistently expressed in every leaf as the plant grows; classic stable mottle",
+        "b_signal": "Symptoms can be erratic\u2014'shock' early then partial recovery, with newer leaves sometimes masking or varying in expression (rattle viruses are notorious for variable/recovery symptoms)",
+        "weight": "weak"
+      },
+      {
+        "axis": "morphology",
+        "question": "Is there tissue distortion/thickening accompanying the color change?",
+        "a_signal": "Often raised, lumpy, puckered or thickened tissue and 'melting'/collapse along the mottled zones",
+        "b_signal": "Patterning tends to be flatter\u2014rings and lines on a relatively normal leaf surface, with less of the lumpy tissue-collapse seen in HVX",
+        "weight": "weak"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What does a laboratory pathogen-specific test (ELISA/RT-PCR strip) detect?",
+        "a_signal": "Positive for Potexvirus Hosta virus X antigen/RNA on a HVX-specific immunostrip or RT-PCR; negative for tobravirus",
+        "b_signal": "Positive for Tobacco rattle virus (Tobravirus) by ELISA/RT-PCR; negative on HVX immunostrip",
+        "weight": "decisive"
+      }
+    ],
+    "narrative_a": "Hosta Virus X (HVX) is a Potexvirus and the single most prevalent virus of hosta in the US nursery and landscape trade. It is mechanically/sap transmitted\u2014primarily through contaminated cutting tools during division and through handling\u2014so it spreads readily in propagation but is not vectored by an insect or nematode and is not soil-borne. Diagnostic foliar symptoms are color-breaking and mottling that follow the leaf tissue and veins, often described as blue or green 'ink-bleed,' along with mosaic, lumpy/puckered tissue, and tissue collapse ('melting') in some cultivars. Symptoms are systemic and persistent, generally intensifying over years. There is no cure; infected plants should be rogued and tools disinfected. Because spread is by handling rather than environment, distribution clusters trace to propagation lines rather than to soil patches.",
+    "narrative_b": "Tobacco Rattle Virus (TRV) is a Tobravirus with an extremely broad host range across ornamentals, vegetables, and weeds, and it is the cause of conditions like potato spraing and ornamental ringspot/mottle diseases. On hosta it produces discrete chlorotic to necrotic ringspots, arcs, oak-leaf and wavy line patterns, and mottle. Its defining epidemiological feature is soil-borne transmission by stubby-root nematodes (Trichodorus and Paratrichodorus spp.), in addition to spread through infected propagation stock; this means symptomatic plants may map to particular soil areas where vector nematodes occur. TRV is also notorious for variable and 'recovery'-type symptom expression, where new growth may show reduced or shifting symptoms. As with HVX there is no cure\u2014rogue infected plants, manage the nematode vector and weed reservoirs, and use clean stock. Confirmation is by TRV-specific serology or RT-PCR.",
+    "management_a": "No cure: rogue and destroy symptomatic plants (do not compost into the landscape). Disinfect cutting/dividing tools between plants (e.g., 10% bleach or virucidal disinfectant) since sap transmission via tools is the main spread route. Buy and propagate only from indexed/virus-tested clean stock; index suspect plants with HVX-specific immunostrips. No insect/nematode vector control needed.",
+    "management_b": "No cure: rogue and destroy infected plants and use virus-tested clean stock. Unlike HVX, manage the soil-borne route\u2014control stubby-root nematode vectors (Trichodorus/Paratrichodorus) through fallowing, avoiding movement of infested soil, and weed control to remove the broad TRV/weed reservoir that sustains both virus and vector. Disinfect tools as a secondary measure. Confirm with TRV-specific ELISA/RT-PCR before basing nematode management on a diagnosis.",
+    "geo_localizable_a": false,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My hostas have leaves that look mottled and blotchy, with the color broken up into uneven green and pale-yellow patches almost like ink that bled along the veins. Some spots are dying out to brown, and there are puckered, sunken, or collapsed areas, but I don't see any fuzzy growth, powder, or bumps on the leaves.",
+      "decisive_lay_a": "A lab test strip (or PCR test) sent off for this specific hosta virus comes back positive, while the test for the other virus comes back negative. There is nothing extra you can see by eye that confirms it.",
+      "decisive_lay_b": "A lab test (ELISA or PCR) comes back positive for the rattle virus, while the hosta-specific test strip comes back negative. Often the only field clue is that this one can spread through tiny soil worms, but you can't see anything on the plant that confirms it without the lab.",
+      "decisive_micro_a": true,
+      "decisive_micro_b": true
+    }
+  }
+}

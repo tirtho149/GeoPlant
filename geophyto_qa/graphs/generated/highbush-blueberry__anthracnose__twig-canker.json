@@ -1,0 +1,70 @@
+{
+  "pair_id": "highbush-blueberry__anthracnose__twig-canker",
+  "kind": "disease",
+  "crop": "Highbush Blueberry",
+  "member_a_label": "Anthracnose",
+  "member_b_label": "Twig Canker",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both produce lesions and dieback on blueberry stems/twigs and can be confused on dormant or weak canes. Anthracnose (Colletotrichum) primarily attacks ripening fruit, flowers, and young shoots producing salmon-orange spore masses, while Gibbera twig canker forms discrete perennial cankers with black fungal stroma on twigs. Overlap occurs because both cause twig dieback and dark lesions, but the fruiting structures and the distribution of damage differ decisively.",
+    "shared_presentation": "Dark sunken lesions and dieback on blueberry twigs/canes, leading to wilting of distal foliage and loss of fruiting wood, often noticed during or after winter on weakened or stressed bushes.",
+    "forks": [
+      {
+        "axis": "plant_part",
+        "question": "Where is the primary damage concentrated?",
+        "a_signal": "Ripening and harvested fruit (soft rot at blossom end), blossoms, and succulent young shoot tips",
+        "b_signal": "Lignified twigs and small-diameter canes forming discrete localized cankers; fruit rarely directly affected",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "What is the lesion form and how does it progress?",
+        "a_signal": "Soft watery fruit rot and shoot blight/anthracnose tip dieback; lesions expand rapidly in warm wet weather",
+        "b_signal": "Discrete swollen or sunken perennial canker that girdles the twig slowly over a season, killing the distal portion",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At what stage/season is the disease most evident?",
+        "a_signal": "Most damaging at fruit ripening and post-harvest (warm, humid summer); latent until fruit sugars rise",
+        "b_signal": "Most evident on dormant or older wood; cankers conspicuous in late winter to spring as new growth fails",
+        "weight": "supporting"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "What fungal fruiting structures appear on the lesion under a hand lens or after incubation?",
+        "a_signal": "Salmon-pink to orange gelatinous spore masses (acervuli oozing conidia) on fruit and lesions in humid conditions",
+        "b_signal": "Black, roughened, raised fruiting bodies (perithecia/stroma of Gibbera) embedded in the canker surface; no orange ooze",
+        "weight": "decisive"
+      },
+      {
+        "axis": "morphology",
+        "question": "What does the lesion margin and surface texture look like on the woody stem?",
+        "a_signal": "Lesions superficial on green/young tissue, often with reddish to brown blighting and no swelling",
+        "b_signal": "Canker may be slightly swollen/cracked with a defined raised black crusty stroma; rough warty surface",
+        "weight": "supporting"
+      },
+      {
+        "axis": "environment",
+        "question": "What conditions and host status precede the outbreak?",
+        "a_signal": "Warm, wet, humid summers with overhead irrigation drive fruit infection across vigorous and stressed bushes",
+        "b_signal": "Favored on stressed, winter-injured, or low-vigor bushes; cooler humid sites and older plantings",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Anthracnose, caused by Colletotrichum (chiefly C. fioriniae/C. acutatum complex and C. gloeosporioides), is foremost a fruit rot of highbush blueberry. Infections are latent: spores land on flowers and young fruit early but symptoms erupt as berries ripen, producing a soft, sunken, watery rot at the blossom end. In humid conditions the hallmark salmon-orange to pink slimy spore masses (acervuli) ooze from infected fruit and from blighted blossom clusters and shoot tips. Twig and shoot dieback can occur on succulent tissue, which is why it overlaps superficially with canker diseases, but the disease is driven by warm, wet, humid weather at and after harvest and by overhead irrigation. The orange conidial ooze is the diagnostic giveaway.",
+    "narrative_b": "Twig canker caused by Gibbera vaccinicola (formerly associated with Physalospora/Botryosphaeria-like dieback descriptions) is a wood disease producing discrete perennial cankers on twigs and small canes. The fungus colonizes lignified tissue, forming swollen or sunken lesions that slowly girdle the twig and kill the distal portion, leaving conspicuous dead shoots most evident on dormant wood in late winter and spring. The canker surface develops black, roughened, raised fungal stroma (perithecia) embedded in the bark, with no orange spore ooze. It is favored by plant stress, winter injury, and low vigor in older plantings, and unlike anthracnose it does not rot the fruit. The black crusty stroma on a localized woody canker distinguishes it.",
+    "management_a": "Manage fruit infection through harvest timing and sanitation: pick frequently and cool berries promptly, remove mummified/rotted fruit, prune for airflow, and avoid overhead irrigation late in the day. Apply protectant/systemic fungicides (e.g., pyraclostrobin, fenbuconazole, captan) from bloom through fruit development per regional spray guides, rotating FRAC groups to manage resistance. Choose less susceptible cultivars where anthracnose pressure is high.",
+    "management_b": "Manage twig canker culturally: prune out and destroy cankered twigs and dead wood well below visible lesions during dry dormant-season pruning, improve plant vigor with proper fertility and irrigation, and reduce winter injury and stress. Maintain open canopy airflow. Fungicides are of limited value; emphasis is on sanitation pruning of infected wood and removing the perennial stroma-bearing canes that serve as inoculum.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "I've got dark, sunken sunken patches on my blueberry twigs and canes, and the shoot tips above them are wilting and dying back. It showed up on stressed, weaker bushes during and after winter, and I'm losing fruiting wood.",
+      "decisive_lay_a": "Look for salmon-pink to orange slimy, jelly-like ooze or gummy droplets sitting on the fruit and on the dark sunken spots, especially in warm, humid, wet weather.",
+      "decisive_lay_b": "Look for tiny black, rough, raised bumps or pimple-like specks crusted into the surface of the dead bark area, with NO pink or orange ooze present.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": true
+    }
+  }
+}

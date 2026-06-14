@@ -1,0 +1,77 @@
+{
+  "pair_id": "melon__bacterial-wilt__fusarium-wilts--blights--rots-and-damping-off",
+  "kind": "disease",
+  "crop": "Melon",
+  "member_a_label": "Bacterial Wilt",
+  "member_b_label": "Fusarium Wilts, Blights, Rots And Damping-Off",
+  "source": "llm-generated (workflow sweep)",
+  "graph": {
+    "confusable": true,
+    "confusable_reason": "Both cause whole-plant or runner wilting in melon (especially muskmelon/cantaloupe) that can look identical from a distance: green foliage that flags, droops, and collapses. Both eventually kill the vine. The vascular-versus-bacterial-ooze distinction and vector association are not visible at a glance, so field misdiagnosis between Erwinia bacterial wilt and Fusarium wilt is common.",
+    "shared_presentation": "Sudden or progressive wilting of melon vines with initially green (not yet chlorotic) leaves, drooping runners, and eventual plant death. Both can affect plants from seedling through fruiting stages and produce a generalized loss of turgor that mimics drought stress.",
+    "forks": [
+      {
+        "axis": "sign_vector",
+        "question": "Cut a wilting stem near the crown, press the two cut faces together, and slowly pull them apart. Do fine, sticky, ropy threads of milky bacterial ooze string between the surfaces?",
+        "a_signal": "Viscous white-to-clear bacterial strands stretch and string out between the cut stem halves (positive 'ooze string test')",
+        "b_signal": "No stringing ooze; cut surface may be dry, with internal vascular browning instead",
+        "weight": "decisive"
+      },
+      {
+        "axis": "sign_vector",
+        "question": "Are cucumber beetles (striped or spotted) present feeding on the plants, and did the wilt follow beetle activity?",
+        "a_signal": "Cucumber beetles present/abundant; wilt onset tracks beetle feeding (beetles vector Erwinia)",
+        "b_signal": "Beetle presence incidental; wilt occurs independent of beetle pressure",
+        "weight": "supporting"
+      },
+      {
+        "axis": "progression",
+        "question": "How fast does the wilt advance once symptoms begin?",
+        "a_signal": "Rapid: individual leaves/runners flag and the whole plant collapses within days, often before any yellowing",
+        "b_signal": "Slower, progressive: lower/older leaves yellow first, one side or runner declines over a week or more",
+        "weight": "supporting"
+      },
+      {
+        "axis": "symptom_class",
+        "question": "Is the wilt symmetric (whole plant at once) or one-sided/sectored?",
+        "a_signal": "Often whole-vine or runner-by-runner collapse; can recover turgor briefly at night early on",
+        "b_signal": "Frequently one-sided or single-runner wilt with corresponding unilateral vascular discoloration",
+        "weight": "supporting"
+      },
+      {
+        "axis": "plant_part",
+        "question": "Split the lower stem and crown lengthwise: what does the internal vascular tissue look like?",
+        "a_signal": "Vascular tissue may appear water-soaked/discolored but the diagnostic feature is bacterial ooze, not a sharp brown streak",
+        "b_signal": "Distinct reddish-brown to dark vascular discoloration streaking up from the crown/roots",
+        "weight": "supporting"
+      },
+      {
+        "axis": "growth_stage",
+        "question": "At what stage and on what tissue do you see disease beyond wilt?",
+        "a_signal": "Primarily a wilt of established/vining plants; no damping-off or seedling rot phase",
+        "b_signal": "Can also cause seedling damping-off, root and crown rot, and fruit rot in addition to vascular wilt",
+        "weight": "weak"
+      },
+      {
+        "axis": "environment",
+        "question": "What soil and weather conditions accompanied onset?",
+        "a_signal": "Onset linked to beetle activity rather than soil; favored by conditions that boost beetle populations",
+        "b_signal": "Favored by warm soils, sandy/acidic or stressed soils, and recurs in the same field (soilborne, persistent inoculum)",
+        "weight": "weak"
+      }
+    ],
+    "narrative_a": "Bacterial wilt of melon, caused by Erwinia tracheiphila, is transmitted by striped and spotted cucumber beetles that introduce the bacterium during feeding. The pathogen multiplies in and plugs the xylem, causing rapid wilting that often progresses runner-by-runner to whole-plant collapse, frequently while foliage is still green. The hallmark diagnostic is the bacterial ooze 'string test': cut a wilting stem and pull the halves apart to see sticky bacterial strands. Muskmelon and cucumber are highly susceptible; watermelon is largely resistant.",
+    "narrative_b": "Fusarium diseases of melon (notably Fusarium oxysporum f. sp. melonis causing Fusarium wilt) are soilborne and infect through roots, colonizing the vascular system to produce a slower, often one-sided wilt with yellowing of older leaves and a characteristic reddish-brown internal vascular streak in the crown and stem. The same genus also causes damping-off of seedlings, root/crown rots, and fruit rots. Inoculum (chlamydospores) persists in soil for years, so disease recurs in infested fields, especially under warm, sandy, or acidic and stress conditions. No bacterial ooze is produced.",
+    "management_a": "Manage the cucumber beetle vector: monitor early and use timely insecticides or row covers (removed at flowering for pollination), perimeter trap cropping, and prompt removal/destruction of infected plants to reduce inoculum. There is no cure once a plant is infected; resistant species (e.g., watermelon) and tolerant cultivars help. Reflective mulches can reduce beetle colonization.",
+    "management_b": "Use resistant/tolerant cultivars matched to the local race, long rotations (3-4+ years) out of cucurbits, and grafting onto resistant rootstocks. Plant into well-drained soil, avoid acidic conditions (lime to optimal pH), manage nitrogen form, and reduce plant stress. Sanitize equipment and use clean transplants/treated seed to limit spread; soil solarization or fumigation may help in heavily infested ground. No rescue treatment exists for infected plants.",
+    "geo_localizable_a": true,
+    "geo_localizable_b": true,
+    "lay": {
+      "farmer_lay_report": "My melon vines are wilting and drooping like they're bone dry, even though the soil has plenty of moisture. The leaves are still green, not yellow, but the runners are going limp and some plants are collapsing and dying. It started on a few plants and seems to be spreading.",
+      "decisive_lay_a": "Cut through a wilting stem near the base, gently press the two cut halves together, then slowly pull them apart. If you see sticky, slimy white-to-clear threads stringing out between the halves like thin strands of glue, that points to this one.",
+      "decisive_lay_b": "Cut through a wilting stem near the base. The cut surface stays dry with no sticky stringing threads, and instead you see brownish staining or streaking inside the stem where the water-carrying channels are.",
+      "decisive_micro_a": false,
+      "decisive_micro_b": false
+    }
+  }
+}
