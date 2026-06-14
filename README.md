@@ -20,22 +20,44 @@ a **citation-based prior-validation audit** (Phase D) to test that prior before 
 ## Repository layout
 
 ```
-geophyto_qa/            the package
-  mine_pairs.py         candidate look-alike pairs
-  lookalike/            confirmation (web gate) + CLIP router + per-image VLM labels
-  graphgen.py schema.py decision-graph authoring + validation
-  geo_oracle.py         contributor-de-biased regional prior
-  render_two_lane.py    two-lane dialogue/CoT renderer
-  build.py              assemble dataset + self-check
-  audit/                Phase D prior validation (resolve / research / score / apply)
+geophyto_qa/            the package — one module per curation step
+  mine_pairs.py         (1) candidate look-alike pairs
+  lookalike/            (2-4) web-confirm gate + CLIP router + per-image VLM labels
+  graphgen.py schema.py (5) decision-graph authoring + validation
+  geo_oracle.py               contributor-de-biased regional prior
+  render_two_lane.py          two-lane dialogue/CoT renderer
+  build.py              (6) assemble dataset + self-check
+  audit/                (7) prior validation: resolve / research / score / apply
   slurm/                one .slurm per step + submit_audit_chain.sh   <-- run here
-graphs/                 decision graphs (gold exemplars + generated)
+  graphs/               decision graphs (gold exemplars + generated)
 geophyto_qa.jsonl       the built dataset (4,956 items)
+BugWood_Diseases_enriched.csv   source disease table (host, disease, state, sci-name)
 GEOPHYTO_QA_README.md   full pipeline design + per-step I/O contracts
+docs/                   design notes, paper outline, decision-graph source
 ```
 
 > Heavy third-party inputs (WorldClim/Köppen rasters, PlantVillage, raw Bugwood
 > tables) are **not** in this repo — see [Data & attribution](#data--attribution).
+
+## Step-by-step data curation
+
+The simplest linear recipe (each step = one SLURM file in `geophyto_qa/slurm/`):
+
+| # | step | command (module) | output |
+|---|------|------------------|--------|
+| 0 | source table | *(provided)* `BugWood_Diseases_enriched.csv` | host/disease/state/sci-name rows |
+| 1 | mine pairs | `geophyto_qa.mine_pairs` | `pairs/candidates.json` |
+| 2 | web-confirm look-alikes ⚙ | `geophyto_qa.lookalike.gen_sweep_workflow` → Workflow → `persist_sweep` | `lookalike/web_evidence.json` |
+| 3 | CLIP route (GPU) | `geophyto_qa.lookalike.clip_confuse` | `lookalike/clip_scores.json` |
+| 4 | confirm + lane | `geophyto_qa.lookalike.verify_pairs` | `lookalike/confirmed_lookalikes.json` |
+| 5 | author graphs ⚙ | `geophyto_qa.gen_lay_workflow` → Workflow → `persist_lay` | `graphs/generated/*.json` |
+| 6 | VLM labels (GPU) | `geophyto_qa.lookalike.vlm_label` | `lookalike/vlm_labels.json` |
+| 7 | **build** | `geophyto_qa.build` | **`geophyto_qa.jsonl`** |
+| 8 | prior audit | `geophyto_qa.audit.{resolve_pathogens,research_ranges,score_prior,apply_audit}` | `audit/prior_audit.json` |
+| 9 | rebuild + check | `geophyto_qa.build --corrections …` ; `geophyto_qa.audit.check_splits` | corrected `geophyto_qa.jsonl` |
+
+⚙ = LLM/web step run through the Claude Code Workflow engine (generates a script, you
+execute it, then a `persist_*` step writes results). All others are plain batch jobs.
 
 ## Setup
 
