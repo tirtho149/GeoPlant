@@ -670,7 +670,7 @@
     "wheat__fusarium-graminearum-schwabe__fusarium-wilts--blights--rots-and-damping-off (web\u2717)"
   ],
   "summary": {
-    "n_items": 4956,
+    "n_items": 1505,
     "pairs_with_graph": 188,
     "pairs_total_candidates": 853,
     "pairs_pending_graph": 662,
@@ -678,16 +678,22 @@
     "pairs_unconfirmed_lookalike": 3,
     "require_evidence": true,
     "splits": {
-      "train": 3113,
-      "test_random": 432,
-      "test_heldout_species": 1227,
-      "test_heldout_region": 184
+      "train": 892,
+      "test_random": 167,
+      "test_heldout_species": 393,
+      "test_heldout_region": 53
     },
     "lanes": {
-      "image_ambiguous": 3503,
-      "image_decisive": 1453
+      "image_decisive": 1453,
+      "image_ambiguous": 52
     },
     "counterfactual_controls": 1453,
+    "lane_b_dropped_clip_disagree": 3154,
+    "lane_b_dropped_organ_mismatch": 13,
+    "lane_b_dropped_no_flip": 295,
+    "audit_corrections_applied": false,
+    "audit_lane_b_dropped": 0,
+    "audit_lane_b_flagged": 0,
     "selfcheck": "PASS",
     "selfcheck_fails": []
   }

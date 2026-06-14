@@ -61,6 +61,17 @@ def _lc(s: str) -> str:
     return s[:1].lower() + s[1:] if s else s
 
 
+def _clean_mgmt(mgmt: str, disease: str) -> str:
+    """Drop a leading "<disease>:" the graph sometimes prepends, so the dialogue
+    doesn't double-name the disease ("manage for X: x: ...")."""
+    s = (mgmt or "").strip()
+    if ":" in s:
+        head, rest = s.split(":", 1)
+        if head.strip().lower() == (disease or "").strip().lower():
+            return rest.strip()
+    return s
+
+
 def _region_prior(oracle, disease, region):
     return oracle.region_w.get(disease, {}).get(region, 0)
 
@@ -83,7 +94,7 @@ def render(rec: Dict[str, Any], graph: Dict[str, Any], img: Dict[str, Any],
     dec_dist_full = lay["decisive_lay_a"] if true_member == "b" else lay["decisive_lay_b"]
     dec_true = _sign(dec_true_full)        # short noun phrase for the dialogue
     dec_dist = _sign(dec_dist_full)
-    mgmt = graph["management_a"] if true_member == "a" else graph["management_b"]
+    mgmt = _clean_mgmt(graph["management_a"] if true_member == "a" else graph["management_b"], true_lab)
 
     state = img["state"]; region = region_of(state)
     host = img.get("host_common") or rec["crop"]

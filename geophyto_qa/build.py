@@ -149,6 +149,18 @@ def build(csv_path, min_imgs, seed, out_path, report=False, max_items=None,
         by_cd[(r["crop"], r["disease"])].append(r)
         idx_of[id(r)] = i
 
+    # (crop, disease) -> set of organs the disease is actually photographed on
+    # (from the per-image VLM labels). Used to gate Lane B: a look-alike only holds
+    # on an organ where BOTH members occur, so the distractor must appear on the
+    # photographed organ — otherwise the organ alone rules it out (no geography needed).
+    disease_organs = collections.defaultdict(set)
+    for (crop, dis), rws in by_cd.items():
+        for r in rws:
+            v = vlm_labels.get(r["img"])
+            if v and v.get("anatomical_part"):
+                disease_organs[(crop, dis)].add(v["anatomical_part"].strip().lower())
+    laneb_clip_drop = laneb_organ_drop = laneb_noflip_drop = 0
+
     items = []
     used_pairs = 0
     pending = []
@@ -191,6 +203,28 @@ def build(csv_path, min_imgs, seed, out_path, report=False, max_items=None,
                 it = render_two_lane(rec, g, r, member, oracle, sp, vlm, seed)
                 if it is None:                       # dropped (no close-up / no lane / geo not decisive)
                     continue
+                # Tighten Lane B: keep ONLY where CLIP and the VLM agree the photo is
+                # ambiguous. The VLM already said the deciding sign is not visible (that
+                # is why render made it Lane B); now also require the pair's CLIP lane to
+                # be image_ambiguous (intrinsically entangled), not image_decisive
+                # ("sign exists, just not in THIS photo") — and require the distractor to
+                # actually occur on the photographed organ.
+                if it.get("lane") == "image_ambiguous":
+                    if (evidence or {}).get("clip_lane_hint") != "image_ambiguous":
+                        laneb_clip_drop += 1
+                        continue
+                    dist_disease = mb if member == "a" else ma
+                    part = (it["grounding"].get("anatomical_part") or "").strip().lower()
+                    dorg = disease_organs.get((p["crop"], dist_disease), set())
+                    if part and dorg and part not in dorg:
+                        laneb_organ_drop += 1
+                        continue
+                    # A genuine Lane-B item MUST flip under region swap; if no region
+                    # honestly favors the distractor (S13 made it a control), geography
+                    # is not actually load-bearing here -> drop, don't ship a contradiction.
+                    if it["counterfactual"].get("control"):
+                        laneb_noflip_drop += 1
+                        continue
                 if corrections and it.get("lane") == "image_ambiguous":
                     gd = it["grounding"]; gl = it["gold"]
                     key = f"{gd['host']}|{gl['diagnosis']}|{gl['ruled_out']}|{gd['region']}"
@@ -232,6 +266,9 @@ def build(csv_path, min_imgs, seed, out_path, report=False, max_items=None,
         "splits": dict(collections.Counter(it["split"] for it in items)),
         "lanes": dict(collections.Counter(it["lane"] for it in items)),
         "counterfactual_controls": sum(1 for it in items if it["counterfactual"]["control"]),
+        "lane_b_dropped_clip_disagree": laneb_clip_drop,
+        "lane_b_dropped_organ_mismatch": laneb_organ_drop,
+        "lane_b_dropped_no_flip": laneb_noflip_drop,
         "audit_corrections_applied": bool(corrections),
         "audit_lane_b_dropped": corr_dropped,
         "audit_lane_b_flagged": corr_flagged,

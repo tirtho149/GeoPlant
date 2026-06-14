@@ -30,7 +30,7 @@ geophyto_qa/            the package — one module per curation step
   audit/                (7) prior validation: resolve / research / score / apply
   slurm/                one .slurm per step + submit_audit_chain.sh   <-- run here
   graphs/               decision graphs (gold exemplars + generated)
-geophyto_qa.jsonl       the built dataset (4,956 items)
+geophyto_qa.jsonl       the built dataset (1,505 items: 1,453 Lane A + 52 Lane B)
 BugWood_Diseases_enriched.csv   source disease table (host, disease, state, sci-name)
 GEOPHYTO_QA_README.md   full pipeline design + per-step I/O contracts
 docs/                   design notes, paper outline, decision-graph source

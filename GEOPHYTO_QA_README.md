@@ -23,24 +23,31 @@ regional prior. Validating that prior (Phase D) is the current critical path.
 
 ---
 
-## Current state (build of 2026-06-14)
+## Current state (tightened build of 2026-06-14)
 
-- **`geophyto_qa.jsonl` — 4,956 items**, 2,335 distinct Bugwood images.
-- Lanes: **Lane B (image_ambiguous) 3,503 (71%)** · Lane A (image_decisive) 1,453.
-- Splits: train 3,113 · test_random 432 · test_heldout_species 1,227 · test_heldout_region 184.
-- Region mix (Lane B): **South 2,740 (78%)** · Midwest 381 · West 205 · Northeast 177.
-- Lane-B pairs span **107 distinct pathogens** / **230 (pair × region) prior-claims**; 1 combo unresolvable (`watermelon / Unknown Virus`, 32 items).
+- **`geophyto_qa.jsonl` — 1,505 items**, self-check **PASS**.
+- Lanes: **Lane A (image_decisive) 1,453** · **Lane B (image_ambiguous) 52**.
+- Splits: train 892 · test_random 167 · test_heldout_species 393 · test_heldout_region 53.
+- Every Lane-B item now genuinely **flips** under region swap (0 Lane-B controls); no image spans two splits.
+
+> **Why Lane B collapsed 3,503 → 52.** Tightening (below) keeps a Lane-B item only when
+> *all* hold: CLIP says the pair is intrinsically entangled (`image_ambiguous`), the VLM
+> says the deciding sign isn't visible in that photo, the distractor actually occurs on the
+> photographed organ, **and** some region honestly favors the distractor (a real flip). The
+> old Lane B was ~90% photo-quality ambiguity / organ-mismatch / fake flips. **52 is the
+> honest count of "geography genuinely breaks the tie" in this corpus** — a key result for
+> the paper decision (the geography novelty is small; the dataset is Lane-A-heavy).
 
 ### Known blockers (from review) — status
 1. **Lane-B gold rides on an unvalidated prior** (contributor-counts, not epidemiology).
-   → **Phase D** (S09/S11/S16 built & verified; S10 range-research pending — it's the LLM/web step).
-   Early signal: the 2 seeded pathogens already score **5 combos / 121 items `non_discriminative`** (geography can't break the tie).
-2. **Invalid counterfactual swap** (demoted the true member without checking the distractor was plausible).
-   → **FIXED in code (S13)**: `geo_oracle.swap_to_distractor_region` + `render_two_lane.py`; takes effect on rebuild (S15).
-3. **Decisive sign leaks into Lane-B text** (72% of Lane-B dialogues printed the "not visible" sign).
-   → **FIXED in code (S14)**: sign wording removed from all Lane-B dialogue/CoT; survives only in hidden `gold.confirm_action`. Rebuild to apply.
-4. **Split hygiene** (8 images spanned train + test_random).
-   → **FIXED in code (S16)**: `build.make_splits` collapses to image level; `audit.check_splits` gates it. Rebuild to apply.
+   → **Phase D** (S09/S11/S16 built & verified; S10 range-research pending — the LLM/web step).
+2. **Invalid counterfactual swap** → **FIXED (S13)**: `geo_oracle.swap_to_distractor_region` only
+   swaps to a region where the distractor genuinely beats the true member, else no-flip control.
+3. **Decisive sign leaked into Lane-B text** (was 72%) → **FIXED (S14)**: removed from all Lane-B
+   dialogue/CoT; survives only in hidden `gold.confirm_action`.
+4. **Split leakage** (8 images) → **FIXED (S16)**: `build.make_splits` collapses to image level.
+5. **Lane incoherence** (81% of old Lane B was CLIP-`image_decisive`; 44% organ-mismatched) →
+   **FIXED**: build now drops Lane-B items that fail CLIP+VLM agreement, organ-compat, or can't flip.
 
 ---
 
