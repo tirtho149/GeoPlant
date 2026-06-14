@@ -1,10 +1,11 @@
 #!/bin/bash
 #SBATCH --job-name=gpqa-s03-webgen
+#SBATCH --output=geophyto_qa/logs/step03_web_confirm_gen_%j.out
+#SBATCH --error=geophyto_qa/logs/step03_web_confirm_gen_%j.err
 #SBATCH --partition=nova
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=4G
 #SBATCH --time=00:15:00
-#SBATCH --output=geophyto_qa/logs/s03_%j.out
 # S03 [LLM/web] THE GATE: web-confirm look-alikes.
 # This batch only GENERATES the workflow script over ALL candidates. The actual
 # web verification (quote+URL per pair) is executed by the Claude Code Workflow

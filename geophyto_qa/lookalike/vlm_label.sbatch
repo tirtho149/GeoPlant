@@ -1,11 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name=gpqa-vlm
+#SBATCH --output=geophyto_qa/logs/vlm_label_%j.out
+#SBATCH --error=geophyto_qa/logs/vlm_label_%j.err
 #SBATCH --partition=scavenger
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
 #SBATCH --time=03:00:00
-#SBATCH --output=geophyto_qa/lookalike/vlm_label_%j.out
 set -e
 cd /work/mech-ai-scratch/tirtho/GeoPlantPath
 source /work/mech-ai-scratch/tirtho/.venv/bin/activate

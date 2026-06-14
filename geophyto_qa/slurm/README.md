@@ -1,7 +1,8 @@
 # SLURM runbook — GeoPhyto-QA full-dataset pipeline
 
 One `.slurm` per step (full dataset). Submit from the repo root:
-`sbatch geophyto_qa/slurm/stepNN_*.slurm`. Logs land in `geophyto_qa/logs/`.
+`sbatch geophyto_qa/slurm/stepNN_*.slurm`. Every job writes both stdout and stderr
+to `geophyto_qa/logs/` as `<stepname>_%j.out` and `<stepname>_%j.err` (`%j` = job id).
 Full design + I/O contracts: `../../GEOPHYTO_QA_README.md`.
 
 | step | file | node | what |

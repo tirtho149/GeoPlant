@@ -1,10 +1,11 @@
 #!/bin/bash
 #SBATCH --job-name=gpqa-s09-resolve
+#SBATCH --output=geophyto_qa/logs/step09_resolve_pathogens_%j.out
+#SBATCH --error=geophyto_qa/logs/step09_resolve_pathogens_%j.err
 #SBATCH --partition=nova
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=8G
 #SBATCH --time=00:15:00
-#SBATCH --output=geophyto_qa/logs/s09_%j.out
 # S09 [CPU] resolve Lane-B (host,disease) -> pathogen binomial; emit worklist + claims.
 set -euo pipefail
 cd /work/mech-ai-scratch/tirtho/GeoPlantPath
