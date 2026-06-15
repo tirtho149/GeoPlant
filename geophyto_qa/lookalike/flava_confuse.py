@@ -52,10 +52,10 @@ PKG = os.path.dirname(HERE)
 ROOT = os.path.dirname(PKG)
 sys.path.insert(0, ROOT)
 
-# Reuse the encoder-agnostic machinery (organ buckets, image fetch, class roster).
-from geophyto_qa.lookalike.clip_confuse import (   # noqa: E402
-    organ_bucket, _fetch, load_class_images, DEFAULT_CSV,
-)
+# Reuse the encoder-agnostic machinery + the source-agnostic loaders.
+from geophyto_qa.lookalike.clip_confuse import organ_bucket, _cache_key  # noqa: E402
+from geophyto_qa.data_source import (              # noqa: E402
+    DEFAULT_SOURCE, load_class_images as ds_class_images, fetch_locator, read_image_bytes)
 
 MODEL_ID = "facebook/flava-full"
 EMB_CACHE = os.path.join(HERE, "emb_cache_flava")   # FLAVA-namespaced; never mixes with CLIP
@@ -71,22 +71,23 @@ def _load_flava(device):
     return model, proc, torch
 
 
-def embed_images(imgnums, model, proc, torch, device, log_every=50, workers=12):
-    """{imgnum: 1-D np.float32 FLAVA image embedding (CLS, L2-normalized)} with cache."""
+def embed_images(imgnums, locator, model, proc, torch, device, log_every=50, workers=12):
+    """{img_id: 1-D np.float32 FLAVA image embedding (CLS, L2-normalized)} with cache.
+    `locator` maps img_id -> local path (or URL)."""
     os.makedirs(EMB_CACHE, exist_ok=True)
     from io import BytesIO
     from concurrent.futures import ThreadPoolExecutor, as_completed
     from PIL import Image
     out, todo = {}, []
     for n in imgnums:
-        cp = os.path.join(EMB_CACHE, f"{n}.npy")
+        cp = os.path.join(EMB_CACHE, f"{_cache_key(n)}.npy")
         if os.path.exists(cp):
             out[n] = np.load(cp)
         else:
             todo.append(n)
     done = 0
     with ThreadPoolExecutor(max_workers=workers) as ex:
-        futs = {ex.submit(_fetch, n): n for n in todo}
+        futs = {ex.submit(read_image_bytes, locator[n]): n for n in todo}
         for fut in as_completed(futs):
             n = futs[fut]
             raw = fut.result()
@@ -99,7 +100,7 @@ def embed_images(imgnums, model, proc, torch, device, log_every=50, workers=12):
                     feats = model.get_image_features(pixel_values=inputs["pixel_values"])
                 v = feats[0, 0].float().cpu().numpy()        # CLS token of the image encoder
                 v = v / (np.linalg.norm(v) + 1e-8)
-                np.save(os.path.join(EMB_CACHE, f"{n}.npy"), v.astype(np.float32))
+                np.save(os.path.join(EMB_CACHE, f"{_cache_key(n)}.npy"), v.astype(np.float32))
                 out[n] = v.astype(np.float32)
             except Exception:
                 continue
@@ -174,7 +175,8 @@ def bidir_whole(A: np.ndarray, B: np.ndarray) -> dict:
 # --------------------------------------------------------------------------- #
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--csv", default=DEFAULT_CSV)
+    ap.add_argument("--source", default=DEFAULT_SOURCE,
+                    help="ImageFolder dataset dir (default: GPQA_SOURCE / CyAg)")
     ap.add_argument("--pairs", default=os.path.join(PKG, "pairs", "candidates.json"))
     ap.add_argument("--per-class", type=int, default=24, help="image cap per class (0=all)")
     ap.add_argument("--top", type=int, default=None, help="only score the top-N ranked pairs")
@@ -197,13 +199,14 @@ def main():
           f"metric=bidirectional_entailment_knn", flush=True)
     model, proc, torch = _load_flava(device)
 
-    class_imgs = load_class_images(args.csv, cap)
+    class_imgs = ds_class_images(args.source, cap)
+    locator = fetch_locator(args.source)
     need = set()
     for p in pairs:
         for m in ("member_a", "member_b"):
             need |= {n for n, _ in class_imgs.get((p["crop"], p[m]["disease"]), [])}
     print(f"embedding up to {len(need)} images ...", flush=True)
-    emb = embed_images(sorted(need), model, proc, torch, device)
+    emb = embed_images(sorted(need), locator, model, proc, torch, device)
 
     def mat(crop, dis):
         v = [emb[n] for n, _ in class_imgs.get((crop, dis), []) if n in emb]

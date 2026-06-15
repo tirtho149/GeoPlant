@@ -18,7 +18,6 @@ from __future__ import annotations
 
 import argparse
 import collections
-import csv as csvmod
 import json
 import os
 import random
@@ -28,21 +27,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, ROOT)
 
-from utils.geo import decode_state                       # noqa: E402
-from geophyto_qa.regions import CENSUS_DIVISION           # noqa: E402
 from geophyto_qa.graphgen import load_gold, load_generated, GEN_DIR  # noqa: E402
 from geophyto_qa.schema import validate_graph, decisive_fork  # noqa: E402
 from geophyto_qa.mine_pairs import mine, pair_key        # noqa: E402
 from geophyto_qa.render_item import render as render_item  # noqa: E402
-from geophyto_qa.data_source import load_rows             # noqa: E402
+from geophyto_qa.data_source import load_rows, DEFAULT_SOURCE  # noqa: E402
 
 VLM_LABELS = os.path.join(HERE, "lookalike", "vlm_labels.json")
 
 
 def load_vlm_labels():
     return json.load(open(VLM_LABELS)) if os.path.exists(VLM_LABELS) else {}
-
-DEFAULT_CSV = os.path.join(ROOT, "BugWood_Diseases_enriched.csv")
 
 
 # load_rows now lives in geophyto_qa.data_source (handles both an image directory
@@ -97,13 +92,13 @@ def load_confirmed():
 
 
 # --------------------------------------------------------------------------- #
-def select_items(csv_path, min_imgs, seed, require_evidence=True):
+def select_items(source, min_imgs, seed, require_evidence=True):
     """Pick which (pair x member x image) become items, with split + evidence +
     technical sign. Shared by the template build() and the dynamic farmer_sim, so
     both produce the SAME item set (only the dialogue differs). Filtering by image
     quality (close-up / sign-visible) happens later in item_skeleton.
     Returns (selected, coverage)."""
-    rows = load_rows(csv_path)
+    rows = load_rows(source)
     rng = random.Random(seed)
     split = make_splits(rows, rng)
 
@@ -166,9 +161,9 @@ def select_items(csv_path, min_imgs, seed, require_evidence=True):
     return selected, coverage
 
 
-def build(csv_path, min_imgs, seed, out_path, report=False, max_items=None,
+def build(source, min_imgs, seed, out_path, report=False, max_items=None,
           require_evidence=True):
-    selected, cov = select_items(csv_path, min_imgs, seed, require_evidence)
+    selected, cov = select_items(source, min_imgs, seed, require_evidence)
     pairs, used_pairs = cov["pairs"], cov["used_pairs"]
     pending = cov["pending"]
     dropped_nonconfusable, unconfirmed = cov["dropped_nonconfusable"], cov["unconfirmed"]
@@ -277,16 +272,17 @@ def _print_sample(it):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--csv", default=DEFAULT_CSV)
+    ap.add_argument("--source", default=DEFAULT_SOURCE,
+                    help="ImageFolder dataset dir (default: GPQA_SOURCE / CyAg)")
     ap.add_argument("--min-imgs", type=int, default=12)
     ap.add_argument("--seed", type=int, default=20260613)
     ap.add_argument("--out", default=os.path.join(ROOT, "geophyto_qa.jsonl"))
     ap.add_argument("--max", type=int, default=None, help="cap items (smoke test)")
     ap.add_argument("--report", action="store_true")
     ap.add_argument("--no-require-evidence", action="store_true",
-                    help="skip the CLIP+web look-alike gate (debug only)")
+                    help="skip the web look-alike gate (debug only)")
     args = ap.parse_args()
-    build(args.csv, args.min_imgs, args.seed, args.out, args.report, args.max,
+    build(args.source, args.min_imgs, args.seed, args.out, args.report, args.max,
           require_evidence=not args.no_require_evidence)
 
 

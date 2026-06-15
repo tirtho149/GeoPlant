@@ -47,17 +47,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PKG = os.path.dirname(HERE)
 ROOT = os.path.dirname(PKG)
 sys.path.insert(0, ROOT)
-from utils.geo import decode_state                      # noqa: E402
-from geophyto_qa.regions import CENSUS_DIVISION         # noqa: E402
+from geophyto_qa.data_source import (                   # noqa: E402
+    DEFAULT_SOURCE, load_class_images as ds_class_images, fetch_locator, read_image_bytes)
 
-DEFAULT_CSV = os.path.join(ROOT, "BugWood_Diseases_enriched.csv")
 EMB_CACHE = os.path.join(HERE, "emb_cache")
-THUMB = "https://bugwoodcloud.org/images/768x512/{}.jpg"
 
-# Coarse organ / presentation bucket per Bugwood Descriptor Name. Organ-matched
-# confusability only compares images SHARING a bucket, so a class photographed
-# mostly on fruit is not wrongly "separated" from one photographed on leaves —
-# we compare like presentation with like.
+# Coarse organ / presentation bucket per descriptor. Organ-matched confusability
+# only compares images SHARING a bucket. (An ImageFolder has no organ metadata, so
+# everything falls in one "symptom" bucket and organ-matching is a no-op there.)
 ORGAN_BUCKET = {
     "Foliage": "leaf", "Symptoms": "symptom", "Sign": "sign",
     "Fruit(s)": "fruit", "Fruiting Bodies": "sign",
@@ -81,20 +78,17 @@ def _load_model(model_name, pretrained, device):
     return model, preprocess, torch
 
 
-def _fetch(imgnum: str, timeout: float = 10.0) -> bytes | None:
-    try:
-        req = urllib.request.Request(THUMB.format(imgnum), headers={"User-Agent": "geophyto-qa/1.0"})
-        return urllib.request.urlopen(req, timeout=timeout).read()
-    except Exception:
-        return None
+def _cache_key(n):
+    import hashlib
+    return hashlib.sha1(str(n).encode()).hexdigest()
 
 
-def embed_images(imgnums, model, preprocess, torch, device, log_every=50, workers=12):
-    """Return {imgnum: 1-D np.float32 embedding} with on-disk caching.
+def embed_images(imgnums, locator, model, preprocess, torch, device, log_every=50, workers=12):
+    """Return {img_id: 1-D np.float32 embedding} with on-disk caching.
 
-    Downloads are I/O-bound and run concurrently in a thread pool; CLIP encoding
-    runs on the main thread as each image arrives.
-    """
+    Image reads (local disk) are I/O-bound and run concurrently in a thread pool;
+    CLIP encoding runs on the main thread as each image arrives. `locator` maps
+    img_id -> local path (or URL)."""
     os.makedirs(EMB_CACHE, exist_ok=True)
     from io import BytesIO
     from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -102,14 +96,14 @@ def embed_images(imgnums, model, preprocess, torch, device, log_every=50, worker
     out = {}
     todo = []
     for n in imgnums:
-        cp = os.path.join(EMB_CACHE, f"{n}.npy")
+        cp = os.path.join(EMB_CACHE, f"{_cache_key(n)}.npy")
         if os.path.exists(cp):
             out[n] = np.load(cp)
         else:
             todo.append(n)
     done = 0
     with ThreadPoolExecutor(max_workers=workers) as ex:
-        futs = {ex.submit(_fetch, n): n for n in todo}
+        futs = {ex.submit(read_image_bytes, locator[n]): n for n in todo}
         for fut in as_completed(futs):
             n = futs[fut]
             raw = fut.result()
@@ -121,7 +115,7 @@ def embed_images(imgnums, model, preprocess, torch, device, log_every=50, worker
                 with torch.no_grad():
                     v = model.encode_image(x)[0].float().cpu().numpy()
                 v = v / (np.linalg.norm(v) + 1e-8)
-                np.save(os.path.join(EMB_CACHE, f"{n}.npy"), v.astype(np.float32))
+                np.save(os.path.join(EMB_CACHE, f"{_cache_key(n)}.npy"), v.astype(np.float32))
                 out[n] = v.astype(np.float32)
             except Exception:
                 continue
@@ -208,28 +202,10 @@ def confusability(A: np.ndarray, B: np.ndarray) -> dict:
             "within_sim": round(mw, 4), "cross_sim": round(mc, 4)}
 
 
-def load_class_images(csv_path, per_class_cap):
-    """{(crop,disease): [(imgnum, organ_bucket), ...]} for contiguous-US rows."""
-    import csv as csvmod
-    by = collections.defaultdict(list)
-    with open(csv_path, newline="") as fh:
-        for r in csvmod.DictReader(fh):
-            st = decode_state(r.get("Location (State)")) or (r.get("Location") or "").strip()
-            crop = (r.get("NormCrop") or "").strip()
-            dis = (r.get("NormDisease") or "").strip()
-            num = (r.get("Image Number") or "").strip()
-            org = organ_bucket(r.get("Descriptor Name") or "Symptoms")
-            if crop and dis and num and st in CENSUS_DIVISION:
-                by[(crop, dis)].append((num, org))
-    if per_class_cap:
-        # deterministic head sample (sorted by imgnum) — reproducible
-        by = {k: sorted(v)[:per_class_cap] for k, v in by.items()}
-    return by
-
-
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--csv", default=DEFAULT_CSV)
+    ap.add_argument("--source", default=DEFAULT_SOURCE,
+                    help="ImageFolder dataset dir (default: GPQA_SOURCE / CyAg)")
     ap.add_argument("--pairs", default=os.path.join(PKG, "pairs", "candidates.json"))
     ap.add_argument("--per-class", type=int, default=24, help="image cap per class (None=all via 0)")
     ap.add_argument("--top", type=int, default=None, help="only score the top-N ranked candidate pairs")
@@ -255,14 +231,15 @@ def main():
           f"(per_class={cap})", flush=True)
     model, preprocess, torch = _load_model(args.model, args.pretrained, device)
 
-    class_imgs = load_class_images(args.csv, cap)
+    class_imgs = ds_class_images(args.source, cap)
+    locator = fetch_locator(args.source)
     # gather every image we need
     need = set()
     for p in pairs:
         for m in ("member_a", "member_b"):
             need |= {n for n, _ in class_imgs.get((p["crop"], p[m]["disease"]), [])}
     print(f"embedding up to {len(need)} images ...", flush=True)
-    emb = embed_images(sorted(need), model, preprocess, torch, device)
+    emb = embed_images(sorted(need), locator, model, preprocess, torch, device)
 
     def mat(crop, dis):
         v = [emb[n] for n, _ in class_imgs.get((crop, dis), []) if n in emb]

@@ -79,12 +79,17 @@ def same_organism(a_sci: str, b_sci: str) -> bool:
     return _species_agree(sa, sb)
 
 
-def build_sci_map(csv_path: str) -> Dict[Tuple[str, str], str]:
-    """(crop, NormDisease) -> most common Scientific Name."""
-    import csv as csvmod, collections
+def build_sci_map(source: str = None) -> Dict[Tuple[str, str], str]:
+    """(crop, disease) -> most common scientific name. Sourced from the active
+    dataset via data_source; for an ImageFolder (no taxonomy) this is empty, so
+    same-organism synonym dropping simply no-ops."""
+    import collections
+    from geophyto_qa.data_source import load_rows
     c = collections.defaultdict(collections.Counter)
-    for r in csvmod.DictReader(open(csv_path, newline="")):
-        c[(r["NormCrop"], r["NormDisease"])][r["Scientific Name"]] += 1
+    for r in load_rows(source):
+        sci = (r.get("path_sci") or r.get("path_common") or "").strip()
+        if sci:
+            c[(r["crop"], r["disease"])][sci] += 1
     return {k: v.most_common(1)[0][0] for k, v in c.items() if v}
 
 

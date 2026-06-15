@@ -34,7 +34,8 @@ PKG = os.path.dirname(HERE)
 ROOT = os.path.dirname(PKG)
 sys.path.insert(0, ROOT)
 
-from geophyto_qa.mine_pairs import mine, load_rows, DEFAULT_CSV  # noqa: E402
+from geophyto_qa.mine_pairs import mine                          # noqa: E402
+from geophyto_qa.data_source import load_rows, DEFAULT_SOURCE    # noqa: E402
 from geophyto_qa.lookalike.verify_pairs import clip_lane_hint, KNN_GATE  # noqa: E402
 
 PAIRS_DIR = os.path.join(PKG, "pairs")
@@ -49,9 +50,9 @@ def _load(path, key=None):
     return d.get(key, {}) if key else d
 
 
-def identify(csv_path=DEFAULT_CSV, min_imgs=12, knn_gate=KNN_GATE,
+def identify(source=DEFAULT_SOURCE, min_imgs=12, knn_gate=KNN_GATE,
              web_path=WEB_PATH, clip_path=CLIP_PATH):
-    rows = load_rows(csv_path)
+    rows = load_rows(source)
     pairs = mine(rows, min_imgs)                 # deterministic, sorted by prior
     web = _load(web_path)
     clip = _load(clip_path, "scores")
@@ -145,12 +146,13 @@ def summarize(manifest):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--csv", default=DEFAULT_CSV)
+    ap.add_argument("--source", default=DEFAULT_SOURCE,
+                    help="ImageFolder dataset dir (default: GPQA_SOURCE / CyAg)")
     ap.add_argument("--min-imgs", type=int, default=12)
     ap.add_argument("--out-dir", default=PAIRS_DIR)
     args = ap.parse_args()
 
-    manifest = identify(args.csv, args.min_imgs)
+    manifest = identify(args.source, args.min_imgs)
     write_outputs(manifest, args.min_imgs, args.out_dir)
     summarize(manifest)
     print(f"  wrote: {args.out_dir}/candidates.json, pair_manifest.json, "

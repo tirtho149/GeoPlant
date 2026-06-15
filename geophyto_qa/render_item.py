@@ -123,7 +123,7 @@ def item_skeleton(rec, graph, img, true_member, split, vlm):
         "item_id": f"gpqa-{img['img']}-{true_member}",
         "kind": rec.get("kind", "disease"),
         "image": {"url": img["url"], "image_number": img["img"],
-                  "attribution": img.get("cite", ""), "license_note": "per-image CC; see Bugwood"},
+                  "attribution": img.get("cite", ""), "license_note": "see source dataset"},
         "lookalike": {"pair_id": rec["pair_id"], "crop": rec["crop"],
                       "true": gr["true"], "distractor": gr["distractor"]},
         "grounding": {"host": host, "disease": gr["true"],

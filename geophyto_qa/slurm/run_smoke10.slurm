@@ -15,11 +15,12 @@
 set -euo pipefail
 cd /work/mech-ai-scratch/tirtho/GeoPlantPath
 source /work/mech-ai-scratch/tirtho/.venv/bin/activate
+export GPQA_SOURCE="${GPQA_SOURCE:-/work/mech-ai-scratch/tirtho/CyAg/Curated_Dataset/Images}"
 
 OUT=geophyto_qa_smoke10.jsonl
-echo "==== build 10 image->label items ===="
+echo "==== build 10 image->label items (template baseline; needs upstream graphs+confirmed+VLM for this source) ===="
 python -m geophyto_qa.build \
-    --csv BugWood_Diseases_enriched.csv --min-imgs 12 --seed 20260613 \
+    --min-imgs 12 --seed 20260613 \
     --max 10 --report --out "$OUT"
 
 echo "==== split-hygiene check ===="

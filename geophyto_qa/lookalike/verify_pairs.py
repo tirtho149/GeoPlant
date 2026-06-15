@@ -50,8 +50,6 @@ PKG = os.path.dirname(HERE)
 ROOT = os.path.dirname(PKG)
 sys.path.insert(0, ROOT)
 from geophyto_qa.disease_norm import build_sci_map, same_organism_drops  # noqa: E402
-
-DEFAULT_CSV = os.path.join(ROOT, "BugWood_Diseases_enriched.csv")
 # CLIP no longer GATES — it ROUTES. The organ-matched cross-kNN threshold now
 # only splits web-confirmed pairs into lanes: >= gate -> visually entangled
 # (image_ambiguous / Lane B); < gate -> separable (image_decisive / Lane A).
@@ -67,7 +65,7 @@ def clip_lane_hint(mk, knn_gate=KNN_GATE):
     return "image_ambiguous" if mk >= knn_gate else "image_decisive"
 
 
-def combine(clip_path, web_path, knn_gate=KNN_GATE, csv_path=DEFAULT_CSV):
+def combine(clip_path, web_path, knn_gate=KNN_GATE, source=None):
     clip = json.load(open(clip_path)).get("scores", {}) if os.path.exists(clip_path) else {}
     web = json.load(open(web_path)) if os.path.exists(web_path) else {}
     pair_ids = set(clip) | set(web)
@@ -102,7 +100,7 @@ def combine(clip_path, web_path, knn_gate=KNN_GATE, csv_path=DEFAULT_CSV):
         }
     # label hygiene: drop same-organism (disease-vs-itself) confirmed pairs.
     confirmed = {p: d for p, d in out.items() if d["confirmed"]}
-    sci = build_sci_map(csv_path)
+    sci = build_sci_map(source)
     for pid in same_organism_drops(confirmed, sci):
         out[pid]["confirmed"] = False
         out[pid]["dropped_reason"] = "same organism (synonym)"

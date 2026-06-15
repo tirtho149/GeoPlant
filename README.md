@@ -2,14 +2,15 @@
 
 An image-grounded benchmark for telling **confusable plant diseases apart from a
 photo**. Each item is a multi-turn farmer↔ag-expert dialogue anchored on one real
-Bugwood image of a disease; the expert reads the **decisive visible sign** from the
+image of a disease; the expert reads the **decisive visible sign** from the
 photo, gives the diagnosis, and **rules out the look-alike** it is most confused with.
 
 > Pure image → label: the task is visual diagnosis between two documented look-alikes.
-> Bugwood-only, USA-only. (The package name `geophyto_qa` is legacy — earlier versions
-> explored geography; that idea was dropped in favor of image+label only.)
+> Source = the **CyAg curated ImageFolder** dataset (`<Host>/<Disease>/<*.jpg>`, ~1.1M
+> images / 552 hosts). Set `GPQA_SOURCE` to use another directory. (The package name
+> `geophyto_qa` is legacy — earlier versions explored geography; dropped for image+label.)
 
-Each item carries: the Bugwood image (URL + CC attribution), `host`/`organ`,
+Each item carries: the local image path, `host`/`organ`,
 the **look-alike pair** (`true` vs `distractor`), a dynamic persona-driven dialogue, a grounded
 chain-of-thought (PERCEIVE → READ_SIGN → RULE_OUT → CONCLUDE), and the gold
 (`diagnosis`, `ruled_out`, `evidence_from_image`, `management`).
@@ -35,13 +36,13 @@ geophyto_qa/            the package — one module per curation step
   audit/check_splits.py       split-hygiene gate (no image spans two splits)
   slurm/                one .slurm per step + run_smoke10.slurm   <-- run here
   graphs/               decision graphs (gold exemplars + generated)
-geophyto_qa.jsonl       the built dataset (1,453 items)
-BugWood_Diseases_enriched.csv   source table (host, disease, sci-name, image URL)
+geophyto_qa.jsonl       the built dataset
+data_source.py          ImageFolder loader (GPQA_SOURCE; default = CyAg curated)
 GEOPHYTO_QA_README.md   pipeline design + per-step I/O contracts
 docs/                   design notes, decision-graph source
 ```
 
-> Heavy third-party inputs (rasters, PlantVillage, raw Bugwood tables) are **not** in
+> Heavy third-party inputs (the image dataset, rasters, PlantVillage) are **not** in
 > this repo — see [Data & attribution](#data--attribution).
 
 ## Step-by-step data curation
@@ -50,7 +51,7 @@ Each step = one SLURM file in `geophyto_qa/slurm/` (logs → `geophyto_qa/logs/`
 
 | # | step | command (module) | output |
 |---|------|------------------|--------|
-| 0 | source table | *(provided)* `BugWood_Diseases_enriched.csv` | host/disease/sci-name/URL rows |
+| 0 | source dataset | ImageFolder `<Host>/<Disease>/<*.jpg>` via `data_source` (`GPQA_SOURCE`, default = CyAg curated) | rows: img id + local path + crop + disease |
 | 1 | mine pairs | `geophyto_qa.mine_pairs` | `pairs/candidates.json` |
 | 2 | web-confirm look-alikes ⚙ | `geophyto_qa.lookalike.gen_sweep_workflow` → Workflow → `persist_sweep` | `lookalike/web_evidence.json` |
 | 3 | FLAVA bidir-entailment confusability (GPU) | `geophyto_qa.lookalike.flava_confuse` | `lookalike/flava_scores.json` |
@@ -134,8 +135,9 @@ READ_SIGN step, diagnosis ≠ distractor, answerable-from-image, F1 carries the 
 
 ## Data & attribution
 
-- Images are hosted by **Bugwood.org** under **per-image CC licenses**; the dataset
-  references image URLs + attribution, it does not redistribute the images.
+- Images come from the **CyAg curated ImageFolder** dataset (local; `GPQA_SOURCE`).
+  Each item records the local image path + the source-dataset prefix from the file
+  name (e.g. `Bugwood_`, `CDDM_`) as provenance. The dataset is **not** redistributed
+  in this repo; it is subject to its constituent sources' own licenses.
 - Look-alike confirmation cites a credible extension/university/peer-reviewed source.
-- Heavy inputs (raw Bugwood tables, PlantVillage, rasters) are excluded; subject to
-  their own licenses. *No code license set yet (defaults to all-rights-reserved).*
+- *No code license set yet (defaults to all-rights-reserved).*

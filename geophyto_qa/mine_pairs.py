@@ -28,10 +28,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, ROOT)
-from geophyto_qa.data_source import load_rows               # noqa: E402
+from geophyto_qa.data_source import load_rows, DEFAULT_SOURCE  # noqa: E402
 from geophyto_qa.regions import pathogen_class, region_of    # noqa: E402  (taxonomy + geo metadata)
-
-DEFAULT_CSV = os.path.join(ROOT, "BugWood_Diseases_enriched.csv")
 
 
 def pair_key(crop: str, a: str, b: str) -> str:
@@ -89,12 +87,13 @@ def mine(rows, min_imgs: int = 12):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--csv", default=DEFAULT_CSV)
+    ap.add_argument("--source", default=DEFAULT_SOURCE,
+                    help="ImageFolder dataset dir (default: GPQA_SOURCE / CyAg)")
     ap.add_argument("--min-imgs", type=int, default=12)
     ap.add_argument("--out", default=os.path.join(HERE, "pairs", "candidates.json"))
     args = ap.parse_args()
 
-    rows = load_rows(args.csv)
+    rows = load_rows(args.source)
     pairs = mine(rows, args.min_imgs)
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     with open(args.out, "w") as fh:

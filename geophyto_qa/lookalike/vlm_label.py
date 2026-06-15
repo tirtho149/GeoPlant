@@ -31,11 +31,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PKG = os.path.dirname(HERE)
 ROOT = os.path.dirname(PKG)
 sys.path.insert(0, ROOT)
-from geophyto_qa.lookalike.clip_confuse import _fetch                 # noqa: E402
+from geophyto_qa.data_source import (                                 # noqa: E402
+    load_class_images as ds_class_images, fetch_locator, read_image_bytes)
 from geophyto_qa.build import graphs_by_pair, load_confirmed          # noqa: E402
 from geophyto_qa.schema import decisive_fork                          # noqa: E402
 
-CSV = os.path.join(ROOT, "BugWood_Diseases_enriched.csv")
 OUT = os.path.join(HERE, "vlm_labels.json")
 MODEL = os.environ.get("VLLM_MODEL", "Qwen/Qwen2.5-VL-7B-Instruct")
 
@@ -72,16 +72,11 @@ def member_signs():
 
 
 def gather_images(members, cap):
-    import csv as csvmod
-    by = collections.defaultdict(list)
-    for r in csvmod.DictReader(open(CSV, newline="")):
-        k = (r["NormCrop"], r["NormDisease"])
-        if k in members:
-            by[k].append((r["Image Number"], r.get("Descriptor Name", "")))
+    ci = ds_class_images(cap=cap)
     items = []
-    for k, rows in by.items():
-        for num, desc in sorted(set(rows))[:cap]:
-            items.append({"img": num, "crop": k[0], "disease": k[1], "descriptor": desc})
+    for k in members:
+        for num, _org in ci.get(k, []):
+            items.append({"img": num, "crop": k[0], "disease": k[1], "descriptor": "Symptoms"})
     return items
 
 
@@ -113,6 +108,7 @@ def main():
     items = gather_images(members, args.cap)
     if args.limit:
         items = items[:args.limit]
+    locator = fetch_locator()
     print(f"VLM labeling {len(items)} images across {len(members)} member classes", flush=True)
 
     from PIL import Image
@@ -120,10 +116,10 @@ def main():
     from vllm import LLM, SamplingParams
     from vllm.sampling_params import StructuredOutputsParams
 
-    # download + decode (concurrent)
+    # read + decode (concurrent, local disk)
     from concurrent.futures import ThreadPoolExecutor
     def fetch(it):
-        raw = _fetch(it["img"], timeout=15)
+        raw = read_image_bytes(locator.get(it["img"], ""), timeout=15)
         if not raw:
             return None
         try:

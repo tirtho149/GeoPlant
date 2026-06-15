@@ -1,9 +1,10 @@
 # GeoPlant / `geophyto_qa` — pipeline & per-step contracts
 
 Image-grounded **look-alike plant-disease diagnosis** VQA. Each item = one real
-Bugwood photo of a disease + a farmer↔expert dialogue where the expert reads the
+photo of a disease + a farmer↔expert dialogue where the expert reads the
 **decisive visible sign** and tells the disease apart from its documented look-alike.
-Pure image → label. (Package name is legacy; the earlier geography idea was dropped.)
+Pure image → label. Source = the **CyAg curated ImageFolder** (`<Host>/<Disease>/<*.jpg>`,
+`GPQA_SOURCE`). (Package name is legacy; geography and the Bugwood CSV were dropped.)
 
 See [`README.md`](README.md) for the quickstart. This file is the step-by-step
 contract (inputs → command → outputs). Each step is one `.slurm` in
@@ -16,7 +17,7 @@ contract (inputs → command → outputs). Each step is one `.slurm` in
 ```json
 {
   "item_id": "gpqa-<imgnum>-<a|b>",
-  "image": {"url": "...bugwoodcloud.org/...", "image_number": "...", "attribution": "...", "license_note": "per-image CC; see Bugwood"},
+  "image": {"url": "<local image path>", "image_number": "<Host>__<Disease>__<stem>", "attribution": "<source-prefix> (CyAg curated)", "license_note": "see source dataset"},
   "lookalike": {"pair_id": "...", "crop": "...", "true": "<diagnosis>", "distractor": "<look-alike>",
                 "evidence": {"web_verified": true, "web_quote": "...", "web_source_url": "...", "clip": {...}}},
   "grounding": {"host": "...", "disease": "<true>", "anatomical_part": "...", "descriptor": "...", "state": "<provenance only>"},
@@ -34,7 +35,7 @@ contract (inputs → command → outputs). Each step is one `.slurm` in
 ## Pipeline
 
 ```
-BugWood_Diseases_enriched.csv
+CyAg ImageFolder  <Host>/<Disease>/<*.jpg>   (GPQA_SOURCE; via data_source.py)
    │
  1 mine_pairs ............ within-crop candidate look-alike pairs  -> pairs/candidates.json
  2 web-confirm (GATE) .... credible source quote+URL that the two are confused -> lookalike/web_evidence.json

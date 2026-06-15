@@ -21,7 +21,7 @@ Item selection (which pair x image becomes an item), CoT, gold and the per-item
 self-check are shared with geophyto_qa.build (select_items / item_skeleton /
 selfcheck), so the ONLY difference from the baseline is the dialogue.
 
-    BugWood CSV + graphs + vlm_labels  --(persona farmer sim)-->  geophyto_qa.jsonl
+    ImageFolder (CyAg) + graphs + vlm_labels  --(persona farmer sim)-->  geophyto_qa.jsonl
 
 Run on a GPU node:
     sbatch geophyto_qa/slurm/step08_build.slurm
@@ -41,6 +41,7 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, ROOT)
 from geophyto_qa.render_item import item_skeleton, _strip, _lc   # noqa: E402
 from geophyto_qa.build import select_items, selfcheck            # noqa: E402
+from geophyto_qa.data_source import DEFAULT_SOURCE               # noqa: E402
 from geophyto_qa import personas                                 # noqa: E402
 
 MODEL = os.environ.get("FARMER_MODEL", "Qwen/Qwen2.5-7B-Instruct")
@@ -183,7 +184,8 @@ def make_vllm_farmer(model=MODEL, temperature=0.8, max_tokens=80):
 # --------------------------------------------------------------------------- #
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--csv", default=os.path.join(ROOT, "BugWood_Diseases_enriched.csv"))
+    ap.add_argument("--source", default=DEFAULT_SOURCE,
+                    help="ImageFolder dataset dir (default: GPQA_SOURCE / CyAg)")
     ap.add_argument("--min-imgs", type=int, default=12)
     ap.add_argument("--out", default=os.path.join(ROOT, "geophyto_qa.jsonl"))
     ap.add_argument("--backend", choices=["vllm", "stub"], default="vllm")
@@ -196,7 +198,7 @@ def main():
                     help="skip the web look-alike gate (debug only)")
     args = ap.parse_args()
 
-    selected, cov = select_items(args.csv, args.min_imgs, args.seed,
+    selected, cov = select_items(args.source, args.min_imgs, args.seed,
                                  require_evidence=not args.no_require_evidence)
     farmer_fn = make_stub_farmer() if args.backend == "stub" else \
         make_vllm_farmer(args.model, args.temperature, args.max_tokens)

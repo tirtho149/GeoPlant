@@ -15,8 +15,9 @@ set -euo pipefail
 cd /work/mech-ai-scratch/tirtho/GeoPlantPath
 source /work/mech-ai-scratch/tirtho/.venv/bin/activate
 export FARMER_MODEL="${FARMER_MODEL:-Qwen/Qwen2.5-7B-Instruct}"
+export GPQA_SOURCE="${GPQA_SOURCE:-/work/mech-ai-scratch/tirtho/CyAg/Curated_Dataset/Images}"
 python -m geophyto_qa.farmer_sim \
     --backend vllm --model "$FARMER_MODEL" \
-    --csv BugWood_Diseases_enriched.csv --min-imgs 12 \
+    --min-imgs 12 \
     --seed 20260613 --temperature 0.8 --max-tokens 80 \
     --out geophyto_qa.jsonl
