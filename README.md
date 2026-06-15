@@ -126,6 +126,22 @@ sbatch geophyto_qa/slurm/step08_build.slurm            # GPU  -> geophyto_qa.jso
 sbatch geophyto_qa/slurm/step09_check_splits.slurm     # CPU
 ```
 
+### Full sweep for ONE crop (e.g. soybean) — single self-contained job
+
+`sweep_soybean.slurm` runs the **entire** pipeline (steps 0→9) for soybean in one
+GPU job. It sets `GPQA_CROP=Soybean` (restricts the ImageFolder to the Soybean
+host), runs the LLM/web steps via the `claude` CLI (`web_confirm_cli`,
+`graph_gen_cli`) instead of the Workflow engine, and the GPU steps (FLAVA, VLM,
+build) on the node. Resumable — each step writes its own artifact.
+
+```bash
+sbatch geophyto_qa/slurm/sweep_soybean.slurm     # -> geophyto_qa_soybean.jsonl
+```
+
+To sweep a different crop, copy that slurm and change `GPQA_CROP` (any host folder
+name, e.g. `Corn`, `Wheat`). The same knob works per-step too:
+`GPQA_CROP=Soybean sbatch geophyto_qa/slurm/step01_mine_pairs.slurm`.
+
 ### 10-sample smoke (one batch, no GPU/LLM, non-destructive)
 ```bash
 sbatch geophyto_qa/slurm/run_smoke10.slurm     # template build of 10 items + split check

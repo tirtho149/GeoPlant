@@ -41,11 +41,17 @@ def _disp(name: str) -> str:
 
 def load_rows(source: str = None):
     """Scan <root>/<Host>/<Disease>/<*.img> into pipeline rows. Defaults to
-    DEFAULT_SOURCE (GPQA_SOURCE env, else the CyAg curated dataset)."""
+    DEFAULT_SOURCE (GPQA_SOURCE env, else the CyAg curated dataset).
+
+    Set GPQA_CROP to restrict to a single host/crop (e.g. "Soybean") — used by the
+    per-crop sweep. Matches the host folder name or its display form, case-insensitive."""
     root = source or DEFAULT_SOURCE
+    crop_filter = os.environ.get("GPQA_CROP", "").strip().lower()
     rows = []
     for host in sorted(os.scandir(root), key=lambda d: d.name):
         if not host.is_dir():
+            continue
+        if crop_filter and host.name.lower() != crop_filter and _disp(host.name).lower() != crop_filter:
             continue
         crop = _disp(host.name)
         for dis in os.scandir(host.path):
