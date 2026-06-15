@@ -37,8 +37,8 @@ BugWood_Diseases_enriched.csv
    │
  1 mine_pairs ............ within-crop candidate look-alike pairs  -> pairs/candidates.json
  2 web-confirm (GATE) .... credible source quote+URL that the two are confused -> lookalike/web_evidence.json
- 3 clip_confuse (ROUTER).. CLIP cross-kNN confusability per pair  -> lookalike/clip_scores.json
- 4 verify_pairs .......... confirmed = web; CLIP attached         -> lookalike/confirmed_lookalikes.json
+ 3 flava_confuse (ROUTER). FLAVA bidirectional-entailment confusability -> lookalike/flava_scores.json
+ 4 verify_pairs .......... confirmed = web; FLAVA score attached   -> lookalike/confirmed_lookalikes.json
  5 graphgen .............. one discriminator decision graph / pair (decisive visible sign) -> graphs/generated/
  6 vlm_label ............. per-image: is the deciding sign visible?-> lookalike/vlm_labels.json
  7 build ................. confirmed pair + graph + sign-visible image -> render item -> geophyto_qa.jsonl
@@ -49,8 +49,8 @@ BugWood_Diseases_enriched.csv
 |------|--------|------|------|
 | 1 | `mine_pairs` | CPU | within-crop confusable candidate pairs (ranked) |
 | 2 | `lookalike.gen_sweep_workflow` → Workflow → `lookalike.persist_sweep` | LLM/web | **the gate**: a pair counts only if a credible source says the two are confused |
-| 3 | `lookalike.clip_confuse` | GPU | CLIP cross-kNN confusability (organ-matched); attached as evidence |
-| 4 | `lookalike.verify_pairs` | CPU | `confirmed = web`; CLIP score attached |
+| 3 | `lookalike.flava_confuse` | GPU | FLAVA (natively-multimodal) **bidirectional-entailment** confusability, organ-matched; attached as evidence. CLIP (`clip_confuse`) kept as a baseline/ablation |
+| 4 | `lookalike.verify_pairs` | CPU | `confirmed = web`; FLAVA bidir score attached |
 | 5 | `gen_lay_workflow` → Workflow → `persist_lay` | LLM/web | per-pair decision graph: the decisive sign + lay layer + management |
 | 6 | `lookalike.vlm_label` | GPU | per-image: deciding sign visible? close-up? organ? |
 | 7 | `build` | CPU | render image→label items (sign must be visible) + self-check |

@@ -1,7 +1,14 @@
 """
 geophyto_qa.lookalike.verify_pairs
 =================================
-WEB-FIRST confirmation: the credible web source is the GATE; CLIP is the ROUTER.
+WEB-FIRST confirmation: the credible web source is the GATE; the image-encoder
+confusability is the ROUTER.
+
+ROUTER source = FLAVA bidirectional-entailment confusability (flava_scores.json,
+written by geophyto_qa.lookalike.flava_confuse), replacing the old CLIP cross-kNN.
+The score lives under the same key (`matched.matched_cross_knn`), so nothing here
+changed except where the score comes from. (Pass --clip clip_scores.json to fall
+back to the CLIP baseline for an ablation.)
 
     confirmed   = web_verified (an extension / university / gov / peer-reviewed
                   source states the two are confused)              <- the GATE
@@ -104,7 +111,9 @@ def combine(clip_path, web_path, knn_gate=KNN_GATE, csv_path=DEFAULT_CSV):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--clip", default=os.path.join(HERE, "clip_scores.json"))
+    ap.add_argument("--clip", default=os.path.join(HERE, "flava_scores.json"),
+                    help="image-encoder confusability scores (default: FLAVA bidirectional; "
+                         "pass clip_scores.json for the CLIP baseline)")
     ap.add_argument("--web", default=os.path.join(HERE, "web_evidence.json"))
     ap.add_argument("--out", default=os.path.join(HERE, "confirmed_lookalikes.json"))
     args = ap.parse_args()

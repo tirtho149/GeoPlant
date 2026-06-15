@@ -53,7 +53,7 @@ Each step = one SLURM file in `geophyto_qa/slurm/` (logs → `geophyto_qa/logs/`
 | 0 | source table | *(provided)* `BugWood_Diseases_enriched.csv` | host/disease/sci-name/URL rows |
 | 1 | mine pairs | `geophyto_qa.mine_pairs` | `pairs/candidates.json` |
 | 2 | web-confirm look-alikes ⚙ | `geophyto_qa.lookalike.gen_sweep_workflow` → Workflow → `persist_sweep` | `lookalike/web_evidence.json` |
-| 3 | CLIP confusability (GPU) | `geophyto_qa.lookalike.clip_confuse` | `lookalike/clip_scores.json` |
+| 3 | FLAVA bidir-entailment confusability (GPU) | `geophyto_qa.lookalike.flava_confuse` | `lookalike/flava_scores.json` |
 | 4 | confirm pairs | `geophyto_qa.lookalike.verify_pairs` | `lookalike/confirmed_lookalikes.json` |
 | 5 | author graphs ⚙ | `geophyto_qa.gen_lay_workflow` → Workflow → `persist_lay` | `graphs/generated/*.json` |
 | 6 | VLM sign-visibility labels (GPU) | `geophyto_qa.lookalike.vlm_label` | `lookalike/vlm_labels.json` |
@@ -67,7 +67,7 @@ Each step = one SLURM file in `geophyto_qa/slurm/` (logs → `geophyto_qa/logs/`
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install numpy requests                 # CPU steps (mine/confirm/build/check)
-pip install torch open_clip_torch          # step 3  CLIP (GPU)
+pip install torch transformers pillow      # step 3  FLAVA (GPU); add open_clip_torch for the CLIP baseline
 pip install vllm transformers pillow       # step 6  VLM labels (GPU)
 ```
 
@@ -98,7 +98,7 @@ sbatch geophyto_qa/slurm/step01_mine_pairs.slurm
 sbatch geophyto_qa/slurm/step02_identify_pairs.slurm
 # step03 web-confirm + step05 graph-gen: generate a Workflow script you run in the
 # Claude Code Workflow engine, then persist (see geophyto_qa/slurm/README.md).
-sbatch geophyto_qa/slurm/step04_clip_sweep.slurm        # GPU
+sbatch geophyto_qa/slurm/step04_flava_sweep.slurm       # GPU (FLAVA bidir-entailment; step04_clip_sweep = CLIP baseline)
 sbatch geophyto_qa/slurm/step05_verify_pairs.slurm
 sbatch geophyto_qa/slurm/step07_vlm_label.slurm         # GPU
 sbatch geophyto_qa/slurm/step08_build.slurm             # -> geophyto_qa.jsonl
