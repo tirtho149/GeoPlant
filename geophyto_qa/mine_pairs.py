@@ -28,36 +28,9 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, ROOT)
-from utils.geo import decode_state            # noqa: E402
-from geophyto_qa.regions import (             # noqa: E402
-    CENSUS_DIVISION, region_of, pathogen_class,
-)
+from geophyto_qa.data_source import load_rows   # noqa: E402
 
 DEFAULT_CSV = os.path.join(ROOT, "BugWood_Diseases_enriched.csv")
-
-
-def load_rows(csv_path: str):
-    import csv as csvmod
-    rows = []
-    with open(csv_path, newline="") as fh:
-        for r in csvmod.DictReader(fh):
-            st = decode_state(r.get("Location (State)")) or (r.get("Location") or "").strip()
-            crop = (r.get("NormCrop") or "").strip()
-            dis = (r.get("NormDisease") or "").strip()
-            if not (st and crop and dis and (r.get("Image URL") or "").strip()):
-                continue
-            if st not in CENSUS_DIVISION:          # contiguous-US admin1 tier only
-                continue
-            rows.append({
-                "img": (r.get("Image Number") or "").strip(),
-                "state": st, "crop": crop, "disease": dis,
-                "path_sci": (r.get("Scientific Name") or "").strip(),
-                "path_common": (r.get("Common Name") or "").strip(),
-                "descriptor": (r.get("Descriptor Name") or "Symptoms").strip(),
-                "photographer": (r.get("Photographer") or "").strip(),
-                "org": (r.get("Organization") or "").strip(),
-            })
-    return rows
 
 
 def pair_key(crop: str, a: str, b: str) -> str:

@@ -34,6 +34,7 @@ from geophyto_qa.graphgen import load_gold, load_generated, GEN_DIR  # noqa: E40
 from geophyto_qa.schema import validate_graph, decisive_fork  # noqa: E402
 from geophyto_qa.mine_pairs import mine, pair_key        # noqa: E402
 from geophyto_qa.render_item import render as render_item  # noqa: E402
+from geophyto_qa.data_source import load_rows             # noqa: E402
 
 VLM_LABELS = os.path.join(HERE, "lookalike", "vlm_labels.json")
 
@@ -44,32 +45,8 @@ def load_vlm_labels():
 DEFAULT_CSV = os.path.join(ROOT, "BugWood_Diseases_enriched.csv")
 
 
-def load_rows(csv_path):
-    rows = []
-    with open(csv_path, newline="") as fh:
-        for r in csvmod.DictReader(fh):
-            st = decode_state(r.get("Location (State)")) or (r.get("Location") or "").strip()
-            crop = (r.get("NormCrop") or "").strip()
-            dis = (r.get("NormDisease") or "").strip()
-            if not (st and crop and dis and (r.get("Image URL") or "").strip()):
-                continue
-            if st not in CENSUS_DIVISION:
-                continue
-            rows.append({
-                "img": (r.get("Image Number") or "").strip(),
-                "url": (r.get("Image URL") or "").strip(),
-                "cite": (r.get("Citation") or "").strip(),
-                "state": st, "crop": crop, "disease": dis,
-                "host_common": (r.get("Host Name") or crop).strip(),
-                "host_sci": (r.get("Host Scientific Name") or "").strip(),
-                "path_sci": (r.get("Scientific Name") or "").strip(),
-                "path_common": (r.get("Common Name") or "").strip(),
-                "descriptor": (r.get("Descriptor Name") or "Symptoms").strip(),
-                "koppen_major": (r.get("koppen_major") or "").strip(),
-                "photographer": (r.get("Photographer") or "").strip(),
-                "org": (r.get("Organization") or "").strip(),
-            })
-    return rows
+# load_rows now lives in geophyto_qa.data_source (handles both an image directory
+# and the legacy Bugwood CSV; imported above).
 
 
 def make_splits(rows, rng, n_region_states=6, n_species_frac=0.12, random_frac=0.12):
