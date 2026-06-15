@@ -10,7 +10,7 @@ photo, gives the diagnosis, and **rules out the look-alike** it is most confused
 > explored geography; that idea was dropped in favor of image+label only.)
 
 Each item carries: the Bugwood image (URL + CC attribution), `host`/`organ`,
-the **look-alike pair** (`true` vs `distractor`), a 6-turn dialogue, a grounded
+the **look-alike pair** (`true` vs `distractor`), a dynamic persona-driven dialogue, a grounded
 chain-of-thought (PERCEIVE → READ_SIGN → RULE_OUT → CONCLUDE), and the gold
 (`diagnosis`, `ruled_out`, `evidence_from_image`, `management`).
 
@@ -57,7 +57,7 @@ Each step = one SLURM file in `geophyto_qa/slurm/` (logs → `geophyto_qa/logs/`
 | 4 | confirm pairs | `geophyto_qa.lookalike.verify_pairs` | `lookalike/confirmed_lookalikes.json` |
 | 5 | author graphs ⚙ | `geophyto_qa.gen_lay_workflow` → Workflow → `persist_lay` | `graphs/generated/*.json` |
 | 6 | VLM sign-visibility labels (GPU) | `geophyto_qa.lookalike.vlm_label` | `lookalike/vlm_labels.json` |
-| 7 | **build** | `geophyto_qa.build` | **`geophyto_qa.jsonl`** |
+| 7 | **build = dynamic dialogue** (GPU) | `geophyto_qa.farmer_sim` (baseline: `geophyto_qa.build`) | **`geophyto_qa.jsonl`** |
 | 8 | split-hygiene check | `geophyto_qa.audit.check_splits` | pass/fail gate |
 
 ⚙ = LLM/web step run through the Claude Code Workflow engine; all others are plain batch.
@@ -66,9 +66,9 @@ Each step = one SLURM file in `geophyto_qa/slurm/` (logs → `geophyto_qa/logs/`
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install numpy requests                 # CPU steps (mine/confirm/build/check)
+pip install numpy requests                 # CPU steps (mine/confirm/check + template baseline)
 pip install torch transformers pillow      # step 3  FLAVA (GPU); add open_clip_torch for the CLIP baseline
-pip install vllm transformers pillow       # step 6  VLM labels (GPU)
+pip install vllm transformers pillow       # step 6 VLM labels + step 7 farmer_sim build (GPU)
 ```
 
 ## Quickstart — use the dataset
@@ -101,22 +101,24 @@ sbatch geophyto_qa/slurm/step02_identify_pairs.slurm
 sbatch geophyto_qa/slurm/step04_flava_sweep.slurm       # GPU (FLAVA bidir-entailment; step04_clip_sweep = CLIP baseline)
 sbatch geophyto_qa/slurm/step05_verify_pairs.slurm
 sbatch geophyto_qa/slurm/step07_vlm_label.slurm         # GPU
-sbatch geophyto_qa/slurm/step08_build.slurm             # -> geophyto_qa.jsonl
+sbatch geophyto_qa/slurm/step08_build.slurm             # GPU: dynamic dialogue -> geophyto_qa.jsonl
 sbatch geophyto_qa/slurm/step09_check_splits.slurm
-sbatch geophyto_qa/slurm/step10_simulate_dialogues.slurm  # GPU, optional: dynamic dialogue
 ```
 
-### Dynamic (PatientSim-style) dialogue — optional
+### Build = dynamic (PatientSim-style) dialogue
 
-The base build renders a fixed 6-turn template. To instead get a **dynamic,
-persona-driven** farmer↔expert consultation (farmer = vLLM agent with one of ~37
-personas along PatientSim's four axes; expert stays graph-grounded so gold is
-unchanged):
+Step 7/`step08_build` IS the dynamic builder: each item's farmer↔expert
+consultation is generated live — farmer = vLLM agent with one of ~37 personas
+along PatientSim's four axes; expert stays graph-grounded so gold is unchanged;
+turn count varies by persona. Item selection / CoT / gold / self-check are shared
+with the baseline, so only the dialogue differs.
 
 ```bash
-sbatch geophyto_qa/slurm/step10_simulate_dialogues.slurm  # geophyto_qa.jsonl -> geophyto_qa_sim.jsonl
+sbatch geophyto_qa/slurm/step08_build.slurm     # GPU -> geophyto_qa.jsonl (PASS + coverage)
 # offline plumbing smoke (no GPU, templated stub farmer):
-python -m geophyto_qa.farmer_sim --backend stub --limit 5 --out /tmp/sim.jsonl
+python -m geophyto_qa.farmer_sim --backend stub --max 20 --out /tmp/smoke.jsonl
+# fixed-template BASELINE (CPU, ablation only):
+python -m geophyto_qa.build --min-imgs 12 --seed 20260613 --out geophyto_qa_template.jsonl
 ```
 
 ### Manual review PDF (paired look-alikes, one pair per page)

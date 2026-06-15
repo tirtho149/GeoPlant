@@ -21,7 +21,8 @@ contract (inputs → command → outputs). Each step is one `.slurm` in
                 "evidence": {"web_verified": true, "web_quote": "...", "web_source_url": "...", "clip": {...}}},
   "grounding": {"host": "...", "disease": "<true>", "anatomical_part": "...", "descriptor": "...", "state": "<provenance only>"},
   "split": "train | test_random | test_heldout_species | test_heldout_region",
-  "dialogue": [ /* F1..E3, 6 turns; F1 carries the image */ ],
+  "dialogue": [ /* dynamic length (persona-driven); F1 carries the image */ ],
+  "dialogue_meta": {"mode": "sim", "persona": "...", "n_turns": 0, "leak_repairs": 0, "persona_axes": {}},
   "cot": [ {"step": "PERCEIVE|READ_SIGN|RULE_OUT|CONCLUDE", "cites": "...", "text": "..."} ],
   "gold": {"diagnosis": "...", "ruled_out": "...", "evidence_from_image": "<the visible decisive sign>",
            "management": "...", "answerable_from_image": true}
@@ -41,17 +42,17 @@ BugWood_Diseases_enriched.csv
  4 verify_pairs .......... confirmed = web; FLAVA score attached   -> lookalike/confirmed_lookalikes.json
  5 graphgen .............. one discriminator decision graph / pair (decisive visible sign) -> graphs/generated/
  6 vlm_label ............. per-image: is the deciding sign visible?-> lookalike/vlm_labels.json
- 7 build ................. confirmed pair + graph + sign-visible image -> render item -> geophyto_qa.jsonl
+ 7 build (farmer_sim) ... DYNAMIC dialogue: persona farmer (vLLM) + grounded expert
+                          + CoT/gold/self-check -> geophyto_qa.jsonl   [GPU]
  8 check_splits .......... assert no image spans two splits
- 9 farmer_sim (opt) ...... PatientSim-style dynamic dialogue: persona farmer (vLLM)
-                          + grounded expert -> geophyto_qa_sim.jsonl
 ```
 
-### Step 9 (optional) — dynamic dialogue, PatientSim-style
+### Step 7 — BUILD = dynamic dialogue, PatientSim-style
 
-`geophyto_qa.build` renders a fixed 6-turn template. `geophyto_qa.farmer_sim`
-replaces that with a DYNAMIC two-agent consultation (adapted from
-[PatientSim](https://github.com/dek924/PatientSim)):
+The dataset builder is `geophyto_qa.farmer_sim` (it replaces the old fixed 6-turn
+template; `geophyto_qa.build` is kept only as a CPU baseline/ablation). It is a
+DYNAMIC two-agent consultation adapted from
+[PatientSim](https://github.com/dek924/PatientSim):
 
 - **Farmer = LLM agent** (local model via vLLM), controlled by a persona along the
   four PatientSim axes (`geophyto_qa.personas`): personality · language
@@ -61,9 +62,11 @@ replaces that with a DYNAMIC two-agent consultation (adapted from
 - **Expert = grounded** — its turns are derived from the decision graph (decisive
   sign, distractor sign, gold diagnosis, management), so the gold answer is
   unchanged. Conversation length is dynamic (anxious/talkative growers talk longer).
-- Standalone transform `geophyto_qa.jsonl -> geophyto_qa_sim.jsonl`; the template
-  build remains the baseline. Anti-leakage is enforced per farmer turn (label /
-  technical sign never appears; offending turns fall back to a clean line).
+- Item selection / CoT / gold / self-check are SHARED with the baseline
+  (`build.select_items` + `render_item.item_skeleton` + `build.selfcheck`), so the
+  only difference from the template is the dialogue. Anti-leakage is enforced per
+  farmer turn (label / technical sign never appears; offending turns fall back to a
+  clean line).
 
 | step | module | node | role |
 |------|--------|------|------|
@@ -73,7 +76,7 @@ replaces that with a DYNAMIC two-agent consultation (adapted from
 | 4 | `lookalike.verify_pairs` | CPU | `confirmed = web`; FLAVA bidir score attached |
 | 5 | `gen_lay_workflow` → Workflow → `persist_lay` | LLM/web | per-pair decision graph: the decisive sign + lay layer + management |
 | 6 | `lookalike.vlm_label` | GPU | per-image: deciding sign visible? close-up? organ? |
-| 7 | `build` | CPU | render image→label items (sign must be visible) + self-check |
+| 7 | `farmer_sim` | GPU | BUILD: select items + dynamic persona dialogue (farmer=vLLM, expert=graph-grounded) + CoT/gold + self-check. Baseline = `build` (CPU template) |
 | 8 | `audit.check_splits` | CPU | image-level split-leakage gate |
 
 ## The decision graph (step 5)
@@ -95,9 +98,15 @@ Gold exemplars: `graphs/gold/`; LLM-authored: `graphs/generated/`.
 
 ```bash
 source /work/mech-ai-scratch/tirtho/.venv/bin/activate
-python -m geophyto_qa.build --csv BugWood_Diseases_enriched.csv --min-imgs 12 \
-    --seed 20260613 --report --out geophyto_qa.jsonl     # prints PASS + coverage
+# BUILD = dynamic dialogue (GPU; prints PASS + coverage)
+python -m geophyto_qa.farmer_sim --backend vllm --min-imgs 12 \
+    --seed 20260613 --out geophyto_qa.jsonl
 python -m geophyto_qa.audit.check_splits --jsonl geophyto_qa.jsonl
+
+# offline plumbing smoke (no GPU, templated stub farmer):
+python -m geophyto_qa.farmer_sim --backend stub --max 20 --out /tmp/smoke.jsonl
+# fixed-template BASELINE (CPU, for ablation only):
+python -m geophyto_qa.build --min-imgs 12 --seed 20260613 --out geophyto_qa_template.jsonl
 ```
 
 Coverage (`geophyto_qa.coverage.json`) lists every confirmed pair still **pending a

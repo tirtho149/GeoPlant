@@ -28,7 +28,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, ROOT)
-from geophyto_qa.data_source import load_rows   # noqa: E402
+from geophyto_qa.data_source import load_rows               # noqa: E402
+from geophyto_qa.regions import pathogen_class, region_of    # noqa: E402  (taxonomy + geo metadata)
 
 DEFAULT_CSV = os.path.join(ROOT, "BugWood_Diseases_enriched.csv")
 

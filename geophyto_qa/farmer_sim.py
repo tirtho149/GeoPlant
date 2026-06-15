@@ -1,8 +1,9 @@
 """
 geophyto_qa.farmer_sim
 ======================
-Dynamic farmer<->expert dialogue simulation (PatientSim-style), replacing the
-fixed 6-turn template in render_item.
+Dynamic farmer<->expert dialogue builder (PatientSim-style). This IS the dataset
+builder now — it replaces the fixed 6-turn template (geophyto_qa.build, which is
+kept only as a baseline).
 
   * EXPERT  = GROUNDED. Its turns are derived deterministically from the decision
               graph (decisive sign, distractor sign, gold diagnosis, management),
@@ -16,14 +17,16 @@ The conversation length is DYNAMIC: the persona decides how many times the farme
 reacts, so anxious/talkative growers produce longer consultations than reticent
 ones (the expert always delivers the diagnosis+rule-out at minimum).
 
-This is a standalone transform:
-    geophyto_qa.jsonl  --(persona farmer sim)-->  geophyto_qa_sim.jsonl
-The template build is untouched and remains the baseline.
+Item selection (which pair x image becomes an item), CoT, gold and the per-item
+self-check are shared with geophyto_qa.build (select_items / item_skeleton /
+selfcheck), so the ONLY difference from the baseline is the dialogue.
+
+    BugWood CSV + graphs + vlm_labels  --(persona farmer sim)-->  geophyto_qa.jsonl
 
 Run on a GPU node:
-    sbatch geophyto_qa/slurm/step10_simulate_dialogues.slurm
+    sbatch geophyto_qa/slurm/step08_build.slurm
 Offline smoke (no GPU, templated stub farmer):
-    python -m geophyto_qa.farmer_sim --backend stub --limit 5 --out /tmp/sim.jsonl
+    python -m geophyto_qa.farmer_sim --backend stub --max 5 --out /tmp/sim.jsonl
 """
 from __future__ import annotations
 
@@ -31,51 +34,16 @@ import argparse
 import collections
 import json
 import os
-import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, ROOT)
-from geophyto_qa.render_item import _sign, _strip, _lc          # noqa: E402
-from geophyto_qa.schema import decisive_fork                    # noqa: E402
-from geophyto_qa.build import graphs_by_pair                    # noqa: E402
-from geophyto_qa import personas                                # noqa: E402
+from geophyto_qa.render_item import item_skeleton, _strip, _lc   # noqa: E402
+from geophyto_qa.build import select_items, selfcheck            # noqa: E402
+from geophyto_qa import personas                                 # noqa: E402
 
 MODEL = os.environ.get("FARMER_MODEL", "Qwen/Qwen2.5-7B-Instruct")
-
-
-# --------------------------------------------------------------------------- #
-# Grounding: everything the farmer (lay) and the grounded expert need, pulled
-# from a built template item + its decision graph.
-def grounding_for(item, graphs):
-    pid = item["lookalike"]["pair_id"]
-    rec = graphs.get(pid)
-    if not rec:
-        return None
-    g = rec["graph"]
-    lay = g.get("lay") or {}
-    true_member = item["item_id"].rsplit("-", 1)[-1]          # 'a' or 'b'
-    dec_true_full = item["gold"]["evidence_from_image"]
-    dec_dist_full = lay.get("decisive_lay_a") if true_member == "b" else lay.get("decisive_lay_b")
-    fk = decisive_fork(g) or {}
-    # lay observation: stored in the PERCEIVE CoT step as "On the host part: <obs>."
-    perceive = next((c["text"] for c in item.get("cot", []) if c["step"] == "PERCEIVE"), "")
-    lay_obs = perceive.split(":", 1)[1].strip().rstrip(".") if ":" in perceive else \
-        (lay.get("farmer_lay_report") or "something looks wrong")
-    return {
-        "item_id": item["item_id"],
-        "host": item["grounding"]["host"],
-        "part": item["grounding"].get("anatomical_part", ""),
-        "lay_observation": lay_obs,
-        "true": item["gold"]["diagnosis"],
-        "distractor": item["gold"]["ruled_out"],
-        "dec_true": _sign(dec_true_full),
-        "dec_dist": _sign(dec_dist_full or ""),
-        "management": item["gold"].get("management", ""),
-        # technical decisive signs (BOTH members) — used only for anti-leakage
-        "tech": [t for t in (fk.get("a_signal"), fk.get("b_signal")) if t],
-    }
 
 
 # --------------------------------------------------------------------------- #
@@ -215,52 +183,66 @@ def make_vllm_farmer(model=MODEL, temperature=0.8, max_tokens=80):
 # --------------------------------------------------------------------------- #
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--in", dest="inp", default=os.path.join(ROOT, "geophyto_qa.jsonl"))
-    ap.add_argument("--out", default=os.path.join(ROOT, "geophyto_qa_sim.jsonl"))
+    ap.add_argument("--csv", default=os.path.join(ROOT, "BugWood_Diseases_enriched.csv"))
+    ap.add_argument("--min-imgs", type=int, default=12)
+    ap.add_argument("--out", default=os.path.join(ROOT, "geophyto_qa.jsonl"))
     ap.add_argument("--backend", choices=["vllm", "stub"], default="vllm")
     ap.add_argument("--model", default=MODEL)
     ap.add_argument("--temperature", type=float, default=0.8)
     ap.add_argument("--max-tokens", type=int, default=80)
     ap.add_argument("--seed", type=int, default=20260613)
-    ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--max", type=int, default=None, help="cap items (smoke test)")
+    ap.add_argument("--no-require-evidence", action="store_true",
+                    help="skip the web look-alike gate (debug only)")
     args = ap.parse_args()
 
-    items = [json.loads(l) for l in open(args.inp)]
-    if args.limit:
-        items = items[:args.limit]
-    graphs = graphs_by_pair()
+    selected, cov = select_items(args.csv, args.min_imgs, args.seed,
+                                 require_evidence=not args.no_require_evidence)
     farmer_fn = make_stub_farmer() if args.backend == "stub" else \
         make_vllm_farmer(args.model, args.temperature, args.max_tokens)
+    print(f"[farmer_sim build] {len(selected)} candidate (pair x image) | "
+          f"backend={args.backend} | {len(personas.PERSONAS)} personas", flush=True)
 
-    print(f"[farmer_sim] {len(items)} items | backend={args.backend} | "
-          f"{len(personas.PERSONAS)} personas", flush=True)
+    items, total_repairs = [], 0
+    pcount, turnhist = collections.Counter(), collections.Counter()
+    for c in selected:
+        res = item_skeleton(c["rec"], c["g"], c["r"], c["member"], c["split"], c["vlm"])
+        if res is None:                       # dropped (no close-up / sign not visible)
+            continue
+        sk, gr = res
+        persona = personas.assign(sk["item_id"], args.seed)
+        turns, meta = simulate(gr, persona, farmer_fn)
+        sk["dialogue"] = turns
+        sk["dialogue_meta"] = {**meta, "persona_axes": {k: persona[k] for k in
+                               ("personality", "language_proficiency", "recall", "confusion")}}
+        sk["lookalike"]["evidence"] = c["evidence"]
+        sk["_tech_decisive"] = c["tech"]      # anti-leakage check; stripped before write
+        items.append(sk)
+        total_repairs += meta["leak_repairs"]
+        pcount[persona["personality"]] += 1
+        turnhist[meta["n_turns"]] += 1
+        if args.max and len(items) >= args.max:
+            break
+        if len(items) % 200 == 0:
+            print(f"  built {len(items)} ...", flush=True)
 
-    n_ok, n_skip, total_repairs = 0, 0, 0
-    pcount = collections.Counter()
-    turnhist = collections.Counter()
+    fails = selfcheck(items)
+    for it in items:
+        it.pop("_tech_decisive", None)
+    status = "PASS" if not fails else "FAIL"
     with open(args.out, "w") as fh:
-        for i, it in enumerate(items):
-            gr = grounding_for(it, graphs)
-            if gr is None:
-                n_skip += 1
-                continue
-            persona = personas.assign(it["item_id"], args.seed)
-            turns, meta = simulate(gr, persona, farmer_fn)
-            it["dialogue"] = turns
-            it["dialogue_meta"] = {**meta, "persona_axes": {k: persona[k] for k in
-                                   ("personality", "language_proficiency", "recall", "confusion")}}
+        for it in items:
             fh.write(json.dumps(it) + "\n")
-            n_ok += 1
-            total_repairs += meta["leak_repairs"]
-            pcount[persona["personality"]] += 1
-            turnhist[meta["n_turns"]] += 1
-            if (i + 1) % 100 == 0:
-                print(f"  {i+1}/{len(items)} ...", flush=True)
 
-    print(f"[farmer_sim] wrote {n_ok} items -> {args.out}  (skipped {n_skip} w/o graph)")
+    print(f"[{status}] farmer_sim build wrote {len(items)} items -> {args.out}")
+    print(f"  graphs used: {cov['used_pairs']} | pending: {len(cov['pending'])} | "
+          f"unconfirmed: {len(cov['unconfirmed'])}")
+    print(f"  splits: {dict(collections.Counter(it['split'] for it in items))}")
     print(f"  anti-leakage repairs: {total_repairs}")
     print(f"  turn-count distribution: {dict(sorted(turnhist.items()))}")
     print(f"  personality distribution: {dict(pcount)}")
+    if fails:
+        print(f"  selfcheck FAILS (first 10): {fails[:10]}")
 
 
 if __name__ == "__main__":

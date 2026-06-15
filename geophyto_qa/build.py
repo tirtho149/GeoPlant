@@ -97,8 +97,12 @@ def load_confirmed():
 
 
 # --------------------------------------------------------------------------- #
-def build(csv_path, min_imgs, seed, out_path, report=False, max_items=None,
-          require_evidence=True):
+def select_items(csv_path, min_imgs, seed, require_evidence=True):
+    """Pick which (pair x member x image) become items, with split + evidence +
+    technical sign. Shared by the template build() and the dynamic farmer_sim, so
+    both produce the SAME item set (only the dialogue differs). Filtering by image
+    quality (close-up / sign-visible) happens later in item_skeleton.
+    Returns (selected, coverage)."""
     rows = load_rows(csv_path)
     rng = random.Random(seed)
     split = make_splits(rows, rng)
@@ -115,7 +119,7 @@ def build(csv_path, min_imgs, seed, out_path, report=False, max_items=None,
         by_cd[(r["crop"], r["disease"])].append(r)
         idx_of[id(r)] = i
 
-    items = []
+    selected = []
     used_pairs = 0
     pending = []
     dropped_nonconfusable = []
@@ -132,7 +136,7 @@ def build(csv_path, min_imgs, seed, out_path, report=False, max_items=None,
         if not g.get("confusable", False):
             dropped_nonconfusable.append(p["pair_id"])
             continue
-        # WEB-GATE look-alike confirmation (CLIP no longer vetoes; it routes).
+        # WEB-GATE look-alike confirmation (FLAVA bidir no longer vetoes; it routes).
         ev = confirmed.get(p["pair_id"])
         if require_evidence and not (ev and ev.get("confirmed")):
             why = "no evidence" if not ev else "web✗"
@@ -152,18 +156,31 @@ def build(csv_path, min_imgs, seed, out_path, report=False, max_items=None,
         tech = {"a": decisive_fork(g)["a_signal"], "b": decisive_fork(g)["b_signal"]}
         for member, dis in (("a", ma), ("b", mb)):
             for r in by_cd[(p["crop"], dis)]:
-                sp = split[idx_of[id(r)]]
-                vlm = vlm_labels.get(r["img"])
-                it = render_item(rec, g, r, member, sp, vlm, seed)
-                if it is None:                       # dropped (no close-up / deciding sign not visible)
-                    continue
-                it["lookalike"]["evidence"] = evidence
-                it["_tech_decisive"] = tech[member]   # for anti-leakage check; stripped before write
-                items.append(it)
-                if max_items and len(items) >= max_items:
-                    break
-            if max_items and len(items) >= max_items:
-                break
+                selected.append({
+                    "rec": rec, "g": g, "r": r, "member": member,
+                    "split": split[idx_of[id(r)]], "vlm": vlm_labels.get(r["img"]),
+                    "evidence": evidence, "tech": tech[member],
+                })
+    coverage = {"pairs": pairs, "used_pairs": used_pairs, "pending": pending,
+                "dropped_nonconfusable": dropped_nonconfusable, "unconfirmed": unconfirmed}
+    return selected, coverage
+
+
+def build(csv_path, min_imgs, seed, out_path, report=False, max_items=None,
+          require_evidence=True):
+    selected, cov = select_items(csv_path, min_imgs, seed, require_evidence)
+    pairs, used_pairs = cov["pairs"], cov["used_pairs"]
+    pending = cov["pending"]
+    dropped_nonconfusable, unconfirmed = cov["dropped_nonconfusable"], cov["unconfirmed"]
+
+    items = []
+    for c in selected:
+        it = render_item(c["rec"], c["g"], c["r"], c["member"], c["split"], c["vlm"], seed)
+        if it is None:                       # dropped (no close-up / deciding sign not visible)
+            continue
+        it["lookalike"]["evidence"] = c["evidence"]
+        it["_tech_decisive"] = c["tech"]     # for anti-leakage check; stripped before write
+        items.append(it)
         if max_items and len(items) >= max_items:
             break
 

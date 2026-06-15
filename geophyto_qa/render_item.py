@@ -62,10 +62,11 @@ def _clean_mgmt(mgmt: str, disease: str) -> str:
     return s
 
 
-def render(rec: Dict[str, Any], graph: Dict[str, Any], img: Dict[str, Any],
-           true_member: str, split: str, vlm: Dict[str, Any],
-           seed_salt: int) -> Optional[Dict[str, Any]]:
-    """Render one image->label item, or None if the image can't form a clean item."""
+def grounding(rec: Dict[str, Any], graph: Dict[str, Any], img: Dict[str, Any],
+              true_member: str, vlm: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Per-item grounding (signs, labels, lay observation), or None if the image
+    can't form a clean item. Shared by both the template renderer and the dynamic
+    farmer_sim, so they build the SAME item set."""
     if not vlm or not vlm.get("is_closeup"):
         return None                        # drop wide field/landscape shots
     if not vlm.get("decisive_sign_visible"):
@@ -74,14 +75,11 @@ def render(rec: Dict[str, Any], graph: Dict[str, Any], img: Dict[str, Any],
     if not lay:
         return None
 
-    rng = random.Random(f"{img['img']}|{seed_salt}")
     a_lab, b_lab = rec["member_a_label"], rec["member_b_label"]
     true_lab = a_lab if true_member == "a" else b_lab
     dist_lab = b_lab if true_member == "a" else a_lab
     dec_true_full = lay["decisive_lay_a"] if true_member == "a" else lay["decisive_lay_b"]
     dec_dist_full = lay["decisive_lay_a"] if true_member == "b" else lay["decisive_lay_b"]
-    dec_true = _sign(dec_true_full)
-    dec_dist = _sign(dec_dist_full)
     mgmt = _clean_mgmt(graph["management_a"] if true_member == "a" else graph["management_b"], true_lab)
 
     host = img.get("host_common") or rec["crop"]
@@ -92,50 +90,87 @@ def render(rec: Dict[str, Any], graph: Dict[str, Any], img: Dict[str, Any],
     if any(s and s.lower() in farmer_obs.lower() for s in (_dfk.get("a_signal"), _dfk.get("b_signal"))):
         farmer_obs = _strip(lay["farmer_lay_report"])
 
-    F1 = f"My {host} {part or 'plant'} — {_lc(farmer_obs)}. What is this?"
-    E1 = (f"Looking at your photo, I can see {_lc(_strip(dec_true))}. "
-          f"That points to {true_lab} rather than {dist_lab}, "
-          f"which would instead show {_lc(_strip(dec_dist))}.")
-    F2 = "Will it spread, and what should I do about it?"
-    _m = _strip(mgmt)
-    E2 = (_m[:1].upper() + _m[1:] + ".") if _m else "Manage it promptly with the labeled control for this disease."
-    F3 = rng.choice(_PUSHBACK)
-    E3 = (f"Weather can play a part, but what I can see in your photo — {_lc(_strip(dec_true))} — "
-          f"is what makes this {true_lab} and not {dist_lab}, so it's worth acting on.")
+    return {
+        "host": host, "part": part,
+        "lay_observation": farmer_obs,
+        "true": true_lab, "distractor": dist_lab,
+        "dec_true": _sign(dec_true_full), "dec_dist": _sign(dec_dist_full),
+        "dec_true_full": dec_true_full, "dec_dist_full": dec_dist_full,
+        "management": _strip(mgmt),
+        "tech": [s for s in (_dfk.get("a_signal"), _dfk.get("b_signal")) if s],
+    }
 
+
+def item_skeleton(rec, graph, img, true_member, split, vlm):
+    """The full item EXCEPT the dialogue: image / lookalike / grounding / split /
+    CoT / gold. Returns (skeleton, grounding) or None. The dialogue is attached
+    by the caller (template_dialogue or the dynamic farmer_sim)."""
+    gr = grounding(rec, graph, img, true_member, vlm)
+    if gr is None:
+        return None
+    host, part = gr["host"], gr["part"]
     cot = [
         {"step": "PERCEIVE", "cites": "image (VLM lay observation)",
-         "text": f"On the {host} {part}: {_lc(farmer_obs)}."},
+         "text": f"On the {host} {part}: {_lc(gr['lay_observation'])}."},
         {"step": "READ_SIGN", "cites": "image (decisive sign visible)",
-         "text": f"The photo shows {_lc(_strip(dec_true))} — the deciding sign."},
+         "text": f"The photo shows {_lc(_strip(gr['dec_true']))} — the deciding sign."},
         {"step": "RULE_OUT", "cites": "decision graph",
-         "text": f"{dist_lab} would instead show {_lc(_strip(dec_dist))}, which is not present."},
+         "text": f"{gr['distractor']} would instead show {_lc(_strip(gr['dec_dist']))}, which is not present."},
         {"step": "CONCLUDE", "cites": "image",
-         "text": f"From the visible sign this is {true_lab}, not {dist_lab}."},
+         "text": f"From the visible sign this is {gr['true']}, not {gr['distractor']}."},
     ]
-
-    return {
+    skeleton = {
         "item_id": f"gpqa-{img['img']}-{true_member}",
         "kind": rec.get("kind", "disease"),
         "image": {"url": img["url"], "image_number": img["img"],
                   "attribution": img.get("cite", ""), "license_note": "per-image CC; see Bugwood"},
         "lookalike": {"pair_id": rec["pair_id"], "crop": rec["crop"],
-                      "true": true_lab, "distractor": dist_lab},
-        "grounding": {"host": host, "disease": true_lab,
+                      "true": gr["true"], "distractor": gr["distractor"]},
+        "grounding": {"host": host, "disease": gr["true"],
                       "anatomical_part": part, "descriptor": img.get("descriptor", ""),
                       "state": img.get("state", "")},   # provenance metadata only (not used)
         "split": split,
-        "dialogue": [
-            {"turn": "F1", "speaker": "farmer", "text": F1, "has_image": True},
-            {"turn": "E1", "speaker": "expert", "text": E1, "has_image": False},
-            {"turn": "F2", "speaker": "farmer", "text": F2, "has_image": False},
-            {"turn": "E2", "speaker": "expert", "text": E2, "has_image": False},
-            {"turn": "F3", "speaker": "farmer", "text": F3, "has_image": False},
-            {"turn": "E3", "speaker": "expert", "text": E3, "has_image": False},
-        ],
         "cot": cot,
-        "gold": {"diagnosis": true_lab, "ruled_out": dist_lab,
-                 "evidence_from_image": _strip(dec_true_full),
-                 "management": _strip(mgmt),
+        "gold": {"diagnosis": gr["true"], "ruled_out": gr["distractor"],
+                 "evidence_from_image": _strip(gr["dec_true_full"]),
+                 "management": gr["management"],
                  "answerable_from_image": True},
     }
+    return skeleton, gr
+
+
+def template_dialogue(gr: Dict[str, Any], rng: random.Random):
+    """The fixed 6-turn template (kept as the BASELINE; the default pipeline now
+    uses the dynamic farmer_sim instead)."""
+    host, part = gr["host"], gr["part"]
+    F1 = f"My {host} {part or 'plant'} — {_lc(gr['lay_observation'])}. What is this?"
+    E1 = (f"Looking at your photo, I can see {_lc(_strip(gr['dec_true']))}. "
+          f"That points to {gr['true']} rather than {gr['distractor']}, "
+          f"which would instead show {_lc(_strip(gr['dec_dist']))}.")
+    F2 = "Will it spread, and what should I do about it?"
+    _m = _strip(gr["management"])
+    E2 = (_m[:1].upper() + _m[1:] + ".") if _m else "Manage it promptly with the labeled control for this disease."
+    F3 = rng.choice(_PUSHBACK)
+    E3 = (f"Weather can play a part, but what I can see in your photo — {_lc(_strip(gr['dec_true']))} — "
+          f"is what makes this {gr['true']} and not {gr['distractor']}, so it's worth acting on.")
+    return [
+        {"turn": "F1", "speaker": "farmer", "text": F1, "has_image": True},
+        {"turn": "E1", "speaker": "expert", "text": E1, "has_image": False},
+        {"turn": "F2", "speaker": "farmer", "text": F2, "has_image": False},
+        {"turn": "E2", "speaker": "expert", "text": E2, "has_image": False},
+        {"turn": "F3", "speaker": "farmer", "text": F3, "has_image": False},
+        {"turn": "E3", "speaker": "expert", "text": E3, "has_image": False},
+    ]
+
+
+def render(rec: Dict[str, Any], graph: Dict[str, Any], img: Dict[str, Any],
+           true_member: str, split: str, vlm: Dict[str, Any],
+           seed_salt: int) -> Optional[Dict[str, Any]]:
+    """BASELINE template renderer = item_skeleton + the fixed 6-turn template."""
+    res = item_skeleton(rec, graph, img, true_member, split, vlm)
+    if res is None:
+        return None
+    skeleton, gr = res
+    rng = random.Random(f"{img['img']}|{seed_salt}")
+    skeleton["dialogue"] = template_dialogue(gr, rng)
+    return skeleton
