@@ -51,7 +51,8 @@ Each step = one SLURM file in `geophyto_qa/slurm/` (logs → `geophyto_qa/logs/`
 
 | # | step | command (module) | output |
 |---|------|------------------|--------|
-| 0 | source dataset | ImageFolder `<Host>/<Disease>/<*.jpg>` via `data_source` (`GPQA_SOURCE`, default = CyAg curated) | rows: img id + local path + crop + disease |
+| input | source dataset | ImageFolder `<Host>/<Disease>/<*.jpg>` via `data_source` (`GPQA_SOURCE`, default = CyAg curated) | rows: img id + local path + crop + disease |
+| 0 | **label QA** (LLM-as-judge) ⚙ | `geophyto_qa.quality.disease_label_judge` | `quality/disease_label_full_report.json` (gates mining) |
 | 1 | mine pairs | `geophyto_qa.mine_pairs` | `pairs/candidates.json` |
 | 2 | web-confirm look-alikes ⚙ | `geophyto_qa.lookalike.gen_sweep_workflow` → Workflow → `persist_sweep` | `lookalike/web_evidence.json` |
 | 3 | FLAVA bidir-entailment confusability (GPU) | `geophyto_qa.lookalike.flava_confuse` | `lookalike/flava_scores.json` |
@@ -86,24 +87,48 @@ print("sign:", it["gold"]["evidence_from_image"])
 PY
 ```
 
-## Running it
+## Running it — one SLURM job per step, run in order
 
-### 10-sample smoke (one batch, ~1 min, no GPU/LLM, non-destructive)
+Every step is its **own** `sbatch` script in `geophyto_qa/slurm/`. Run them **one at
+a time, in order**, waiting for each to finish before launching the next (each step
+consumes the previous step's output). All steps read the dataset through
+`GPQA_SOURCE` (default = the CyAg ImageFolder); set it once to switch datasets. Logs
+land in `geophyto_qa/logs/<step>_%j.{out,err}`.
+
+| order | `sbatch geophyto_qa/slurm/…` | node | does | output |
+|---|---|---|---|---|
+| 0 | `step00_label_judge.slurm` | CPU + `claude` | LLM-as-judge crop+disease **label QA**; gates mining | `quality/disease_label_full_report.json` |
+| 1 | `step01_mine_pairs.slurm` | CPU | mine within-crop candidate pairs (honors step-0 gate) | `pairs/candidates.json` |
+| 2 | `step02_identify_pairs.slurm` | CPU | pair manifest + web work-list | `pairs/pair_manifest.*`, `needs_web.json` |
+| 3 | `step03_web_confirm_gen.slurm` ⚙ | LLM/web | **GATE**: web-confirm each pair is a documented look-alike | `lookalike/web_evidence.json` |
+| 4 | `step04_flava_sweep.slurm` | GPU | **ROUTER**: FLAVA bidirectional-entailment confusability | `lookalike/flava_scores.json` |
+| 5 | `step05_verify_pairs.slurm` | CPU | confirmed = web; attach FLAVA score; drop synonyms | `lookalike/confirmed_lookalikes.json` |
+| 6 | `step06_graph_gen.slurm` ⚙ | LLM/web | author one discriminator decision graph per pair | `graphs/generated/*.json` |
+| 7 | `step07_vlm_label.slurm` | GPU | per-image: deciding sign visible? + lay observation | `lookalike/vlm_labels.json` |
+| 8 | `step08_build.slurm` | GPU | **BUILD** = dynamic persona dialogue + CoT/gold + self-check | `geophyto_qa.jsonl` |
+| 9 | `step09_check_splits.slurm` | CPU | assert no image spans two splits | PASS/FAIL |
+
+⚙ = run through the Claude Code Workflow engine (generate a Workflow script, run it,
+then persist — see `geophyto_qa/slurm/README.md`). `step04_clip_sweep.slurm` is the
+CLIP baseline/ablation for step 4.
+
 ```bash
-sbatch geophyto_qa/slurm/run_smoke10.slurm     # -> geophyto_qa_smoke10.jsonl + split check
+# run each separately, in order (wait for each to complete first)
+sbatch geophyto_qa/slurm/step00_label_judge.slurm      # CPU + claude  (label QA)
+sbatch geophyto_qa/slurm/step01_mine_pairs.slurm       # CPU
+sbatch geophyto_qa/slurm/step02_identify_pairs.slurm   # CPU
+sbatch geophyto_qa/slurm/step03_web_confirm_gen.slurm  # ⚙ Workflow (web GATE)
+sbatch geophyto_qa/slurm/step04_flava_sweep.slurm      # GPU  (CLIP baseline: step04_clip_sweep)
+sbatch geophyto_qa/slurm/step05_verify_pairs.slurm     # CPU
+sbatch geophyto_qa/slurm/step06_graph_gen.slurm        # ⚙ Workflow (decision graphs)
+sbatch geophyto_qa/slurm/step07_vlm_label.slurm        # GPU
+sbatch geophyto_qa/slurm/step08_build.slurm            # GPU  -> geophyto_qa.jsonl
+sbatch geophyto_qa/slurm/step09_check_splits.slurm     # CPU
 ```
 
-### Full sweep
+### 10-sample smoke (one batch, no GPU/LLM, non-destructive)
 ```bash
-sbatch geophyto_qa/slurm/step01_mine_pairs.slurm
-sbatch geophyto_qa/slurm/step02_identify_pairs.slurm
-# step03 web-confirm + step05 graph-gen: generate a Workflow script you run in the
-# Claude Code Workflow engine, then persist (see geophyto_qa/slurm/README.md).
-sbatch geophyto_qa/slurm/step04_flava_sweep.slurm       # GPU (FLAVA bidir-entailment; step04_clip_sweep = CLIP baseline)
-sbatch geophyto_qa/slurm/step05_verify_pairs.slurm
-sbatch geophyto_qa/slurm/step07_vlm_label.slurm         # GPU
-sbatch geophyto_qa/slurm/step08_build.slurm             # GPU: dynamic dialogue -> geophyto_qa.jsonl
-sbatch geophyto_qa/slurm/step09_check_splits.slurm
+sbatch geophyto_qa/slurm/run_smoke10.slurm     # template build of 10 items + split check
 ```
 
 ### Build = dynamic (PatientSim-style) dialogue

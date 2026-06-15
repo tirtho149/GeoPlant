@@ -32,6 +32,7 @@ from geophyto_qa.schema import validate_graph, decisive_fork  # noqa: E402
 from geophyto_qa.mine_pairs import mine, pair_key        # noqa: E402
 from geophyto_qa.render_item import render as render_item  # noqa: E402
 from geophyto_qa.data_source import load_rows, DEFAULT_SOURCE  # noqa: E402
+from geophyto_qa.quality.label_gate import filter_rows      # noqa: E402  (step-0 gate; no-op if absent)
 
 VLM_LABELS = os.path.join(HERE, "lookalike", "vlm_labels.json")
 
@@ -98,7 +99,7 @@ def select_items(source, min_imgs, seed, require_evidence=True):
     both produce the SAME item set (only the dialogue differs). Filtering by image
     quality (close-up / sign-visible) happens later in item_skeleton.
     Returns (selected, coverage)."""
-    rows = load_rows(source)
+    rows, gate = filter_rows(load_rows(source))
     rng = random.Random(seed)
     split = make_splits(rows, rng)
 
@@ -157,7 +158,8 @@ def select_items(source, min_imgs, seed, require_evidence=True):
                     "evidence": evidence, "tech": tech[member],
                 })
     coverage = {"pairs": pairs, "used_pairs": used_pairs, "pending": pending,
-                "dropped_nonconfusable": dropped_nonconfusable, "unconfirmed": unconfirmed}
+                "dropped_nonconfusable": dropped_nonconfusable, "unconfirmed": unconfirmed,
+                "label_gate": gate}
     return selected, coverage
 
 

@@ -18,7 +18,13 @@ __pycache__/
 geophyto_qa/logs/*
 !geophyto_qa/logs/.gitkeep
 geophyto_qa/lookalike/emb_cache/
+geophyto_qa/lookalike/emb_cache_flava/
 figures/img_cache/
+
+# step-0 label-judge outputs (regenerable)
+geophyto_qa/quality/disease_label_full_report.json
+geophyto_qa/quality/disease_label_full_progress.txt
+geophyto_qa/quality/crop_disease_registry.csv
 
 # Regenerable audit intermediates (rebuilt by the audit/ steps)
 geophyto_qa/audit/pathogen_worklist.json

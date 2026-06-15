@@ -37,6 +37,9 @@ contract (inputs → command → outputs). Each step is one `.slurm` in
 ```
 CyAg ImageFolder  <Host>/<Disease>/<*.jpg>   (GPQA_SOURCE; via data_source.py)
    │
+ 0 label_judge (LLM) .... crop+disease LABEL quality check -> quality/disease_label_full_report.json
+   │                       (quality.label_gate drops INVALID/NON_CROP crops + INCORRECT diseases
+   │                        and renames misspelled crops BEFORE mining)
  1 mine_pairs ............ within-crop candidate look-alike pairs  -> pairs/candidates.json
  2 web-confirm (GATE) .... credible source quote+URL that the two are confused -> lookalike/web_evidence.json
  3 flava_confuse (ROUTER). FLAVA bidirectional-entailment confusability -> lookalike/flava_scores.json
@@ -71,6 +74,7 @@ DYNAMIC two-agent consultation adapted from
 
 | step | module | node | role |
 |------|--------|------|------|
+| 0 | `quality.disease_label_judge` | CPU + `claude` | LLM-as-judge crop+disease LABEL QA (ported from SAGE); report gates mining via `quality.label_gate` |
 | 1 | `mine_pairs` | CPU | within-crop confusable candidate pairs (ranked) |
 | 2 | `lookalike.gen_sweep_workflow` → Workflow → `lookalike.persist_sweep` | LLM/web | **the gate**: a pair counts only if a credible source says the two are confused |
 | 3 | `lookalike.flava_confuse` | GPU | FLAVA (natively-multimodal) **bidirectional-entailment** confusability, organ-matched; attached as evidence. CLIP (`clip_confuse`) kept as a baseline/ablation |

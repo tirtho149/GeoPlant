@@ -30,6 +30,7 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, ROOT)
 from geophyto_qa.data_source import load_rows, DEFAULT_SOURCE  # noqa: E402
 from geophyto_qa.regions import pathogen_class, region_of    # noqa: E402  (taxonomy + geo metadata)
+from geophyto_qa.quality.label_gate import filter_rows       # noqa: E402  (step-0 gate; no-op if absent)
 
 
 def pair_key(crop: str, a: str, b: str) -> str:
@@ -93,7 +94,9 @@ def main():
     ap.add_argument("--out", default=os.path.join(HERE, "pairs", "candidates.json"))
     args = ap.parse_args()
 
-    rows = load_rows(args.source)
+    rows, gate = filter_rows(load_rows(args.source))
+    if gate.get("applied"):
+        print(f"[label-gate / step 0] {gate}")
     pairs = mine(rows, args.min_imgs)
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     with open(args.out, "w") as fh:
