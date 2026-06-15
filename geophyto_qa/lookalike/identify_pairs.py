@@ -92,13 +92,9 @@ def identify(source=DEFAULT_SOURCE, min_imgs=12, knn_gate=KNN_GATE,
 
 def write_outputs(manifest, min_imgs, out_dir=PAIRS_DIR):
     os.makedirs(out_dir, exist_ok=True)
-    # restore the full candidates.json (it had been overwritten to 3 entries)
-    cand = [{k: m[k] for k in ("pair_id", "crop", "member_a", "member_b",
-                               "n_imgs_a", "n_imgs_b", "lookalike_prior",
-                               "same_pathogen_class", "shared_descriptors")}
-            for m in manifest]
-    with open(os.path.join(out_dir, "candidates.json"), "w") as fh:
-        json.dump({"min_imgs": min_imgs, "n_pairs": len(cand), "pairs": cand}, fh, indent=2)
+    # NOTE: candidates.json is owned by mine_pairs (step 1, rich schema with
+    # member_a/b as dicts). Do NOT rewrite it here — the manifest's flat schema
+    # (member_a/b as strings) would break flava_confuse / web_confirm / graphgen.
     with open(os.path.join(out_dir, "pair_manifest.json"), "w") as fh:
         json.dump({"min_imgs": min_imgs, "knn_gate": KNN_GATE,
                    "n_pairs": len(manifest), "pairs": manifest}, fh, indent=2)
