@@ -103,6 +103,20 @@ sbatch geophyto_qa/slurm/step05_verify_pairs.slurm
 sbatch geophyto_qa/slurm/step07_vlm_label.slurm         # GPU
 sbatch geophyto_qa/slurm/step08_build.slurm             # -> geophyto_qa.jsonl
 sbatch geophyto_qa/slurm/step09_check_splits.slurm
+sbatch geophyto_qa/slurm/step10_simulate_dialogues.slurm  # GPU, optional: dynamic dialogue
+```
+
+### Dynamic (PatientSim-style) dialogue — optional
+
+The base build renders a fixed 6-turn template. To instead get a **dynamic,
+persona-driven** farmer↔expert consultation (farmer = vLLM agent with one of ~37
+personas along PatientSim's four axes; expert stays graph-grounded so gold is
+unchanged):
+
+```bash
+sbatch geophyto_qa/slurm/step10_simulate_dialogues.slurm  # geophyto_qa.jsonl -> geophyto_qa_sim.jsonl
+# offline plumbing smoke (no GPU, templated stub farmer):
+python -m geophyto_qa.farmer_sim --backend stub --limit 5 --out /tmp/sim.jsonl
 ```
 
 ### Manual review PDF (paired look-alikes, one pair per page)

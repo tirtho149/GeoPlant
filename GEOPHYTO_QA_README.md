@@ -43,7 +43,27 @@ BugWood_Diseases_enriched.csv
  6 vlm_label ............. per-image: is the deciding sign visible?-> lookalike/vlm_labels.json
  7 build ................. confirmed pair + graph + sign-visible image -> render item -> geophyto_qa.jsonl
  8 check_splits .......... assert no image spans two splits
+ 9 farmer_sim (opt) ...... PatientSim-style dynamic dialogue: persona farmer (vLLM)
+                          + grounded expert -> geophyto_qa_sim.jsonl
 ```
+
+### Step 9 (optional) — dynamic dialogue, PatientSim-style
+
+`geophyto_qa.build` renders a fixed 6-turn template. `geophyto_qa.farmer_sim`
+replaces that with a DYNAMIC two-agent consultation (adapted from
+[PatientSim](https://github.com/dek924/PatientSim)):
+
+- **Farmer = LLM agent** (local model via vLLM), controlled by a persona along the
+  four PatientSim axes (`geophyto_qa.personas`): personality · language
+  proficiency (CEFR) · history recall · confusion — a curated ~37-combo set, one
+  assigned per item by a stable hash so it is reproducible. The farmer is grounded
+  ONLY on the lay observation and is never told the diagnosis, so it cannot leak it.
+- **Expert = grounded** — its turns are derived from the decision graph (decisive
+  sign, distractor sign, gold diagnosis, management), so the gold answer is
+  unchanged. Conversation length is dynamic (anxious/talkative growers talk longer).
+- Standalone transform `geophyto_qa.jsonl -> geophyto_qa_sim.jsonl`; the template
+  build remains the baseline. Anti-leakage is enforced per farmer turn (label /
+  technical sign never appears; offending turns fall back to a clean line).
 
 | step | module | node | role |
 |------|--------|------|------|
